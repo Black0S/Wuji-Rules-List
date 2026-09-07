@@ -5,31 +5,32 @@
   "source_version": "2.0.25.39",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/227.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:07:29+00:00",
+  "converted_at": "2026-09-07T09:23:46+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 4394,
   "rules_in": 4054,
-  "rules_out": 2238,
-  "coverage_pct": 76.3,
+  "rules_out": 2178,
+  "coverage_pct": 74.74,
   "breakdown": {
-    "block": 1436,
+    "block": 1386,
     "block_document": 13,
     "block_cookies": 0,
-    "css_display_none": 740,
-    "css_selectors": 1596,
+    "css_display_none": 730,
+    "css_selectors": 1583,
     "ignore_previous_rules": 48
   },
-  "skipped_total": 925,
+  "skipped_total": 967,
   "skipped_reasons": {
     "injection de style / scriptlet (#$#)": 233,
     "selecteur CSS etendu (#?#)": 168,
+    "$domain inexprimable (regex ou joker)": 165,
     "JavaScript / scriptlet (#%#)": 160,
-    "$domain inexprimable (regex ou joker)": 146,
     "modificateur non supporte: $path": 102,
-    "regex hors du sous-ensemble WebKit": 39,
+    "regex hors du sous-ensemble WebKit": 49,
     "injection de style etendue (#$?#)": 34,
     "modificateur non supporte: $redirect": 24,
+    "domaine cosmetique non exprimable (joker de TLD)": 13,
     "ancre `^` ou `$` mal placee": 7,
     "$domain melange inclusions et exclusions": 4,
     "modificateur non supporte: $denyallow": 2,
@@ -40,30 +41,16 @@
     "modificateur non supporte: $removeparam": 1
   },
   "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 14,
     "unless-domain abandonne (incompatible avec if-domain)": 12,
     "doublon fusionne": 10,
-    "alternation eclatee en 2 regles": 7,
-    "alternation eclatee en 4 regles": 1,
-    "alternation eclatee en 12 regles": 1,
-    "domaine ignore (joker ou regex dans $domain)": 1,
     "$domain abandonne (une seule condition par trigger)": 1
   },
   "outputs": [
     {
       "file": "Webkit-filterslist-KO-Classic-filter-list.json",
-      "rules": 2238,
-      "bytes": 399997
+      "rules": 2178,
+      "bytes": 336672
     }
-  ],
-  "extended": {
-    "file": "Extended-filterslist-KO-Classic-filter-list.json",
-    "total": 596,
-    "counts": {
-      "scriptlets": 160,
-      "procedural": 169,
-      "styles": 267,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

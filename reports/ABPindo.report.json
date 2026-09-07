@@ -5,48 +5,40 @@
   "source_version": "2.0.10.36",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/102.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:01:44+00:00",
+  "converted_at": "2026-09-07T09:18:33+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 10283,
   "rules_in": 10205,
-  "rules_out": 4911,
-  "coverage_pct": 99.05,
+  "rules_out": 4844,
+  "coverage_pct": 97.79,
   "breakdown": {
-    "block": 4227,
+    "block": 4224,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 668,
-    "css_selectors": 5866,
+    "css_display_none": 604,
+    "css_selectors": 5740,
     "ignore_previous_rules": 15
   },
-  "skipped_total": 86,
+  "skipped_total": 215,
   "skipped_reasons": {
+    "domaine cosmetique non exprimable (joker de TLD)": 126,
     "JavaScript / scriptlet (#%#)": 48,
     "injection de style / scriptlet (#$#)": 14,
     "modificateur non supporte: $redirect": 12,
     "selecteur CSS etendu (#?#)": 10,
-    "$domain inexprimable (regex ou joker)": 2
+    "$domain inexprimable (regex ou joker)": 5
   },
   "notes": {
-    "modificateur sans effet sous WebKit: $all": 5
+    "domaine ignore (joker) dans une regle cosmetique": 169,
+    "modificateur sans effet sous WebKit: $all": 5,
+    "domaine ignore (joker ou regex dans $domain)": 2
   },
   "outputs": [
     {
       "file": "Webkit-ABPindo.json",
-      "rules": 4911,
-      "bytes": 1217753
+      "rules": 4844,
+      "bytes": 788368
     }
-  ],
-  "extended": {
-    "file": "Extended-ABPindo.json",
-    "total": 72,
-    "counts": {
-      "scriptlets": 48,
-      "procedural": 10,
-      "styles": 14,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

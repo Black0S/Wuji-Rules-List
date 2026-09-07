@@ -5,60 +5,48 @@
   "source_version": "2.0.53.31",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/6.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:02:28+00:00",
+  "converted_at": "2026-09-07T09:19:10+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 12233,
   "rules_in": 11232,
-  "rules_out": 5703,
-  "coverage_pct": 88.79,
+  "rules_out": 5680,
+  "coverage_pct": 88.41,
   "breakdown": {
-    "block": 2573,
+    "block": 2562,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 2629,
-    "css_selectors": 6900,
+    "css_display_none": 2617,
+    "css_selectors": 6868,
     "ignore_previous_rules": 500
   },
-  "skipped_total": 1028,
+  "skipped_total": 1061,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 599,
     "JavaScript / scriptlet (#%#)": 185,
     "injection de style / scriptlet (#$#)": 153,
+    "domaine cosmetique non exprimable (joker de TLD)": 32,
     "modificateur non supporte: $redirect": 30,
     "injection de style etendue (#$?#)": 20,
-    "regex hors du sous-ensemble WebKit": 10,
+    "regex hors du sous-ensemble WebKit": 12,
     "modificateur non supporte: $path": 9,
-    "directive $badfilter (retractation appliquee)": 7,
+    "modificateur non supporte: $badfilter": 7,
     "regle cosmetique entierement exceptee": 5,
     "selecteur CSS etendu (#@?#)": 4,
     "injection de style (non supportee)": 2,
     "exception de scriptlet": 2,
-    "retiree par $badfilter (retractation amont)": 1,
     "modificateur non supporte: $csp": 1
   },
   "notes": {
     "doublon fusionne": 110,
-    "modificateur sans effet sous WebKit: $important": 10,
-    "alternation eclatee en 2 regles": 1,
-    "alternation eclatee en 10 regles": 1
+    "domaine ignore (joker) dans une regle cosmetique": 52,
+    "modificateur sans effet sous WebKit: $important": 10
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-German-filter.json",
-      "rules": 5703,
-      "bytes": 987624
+      "rules": 5680,
+      "bytes": 954485
     }
-  ],
-  "extended": {
-    "file": "Extended-AdGuard-German-filter.json",
-    "total": 951,
-    "counts": {
-      "scriptlets": 173,
-      "procedural": 605,
-      "styles": 173,
-      "html": 0,
-      "raw_js": 14
-    }
-  }
+  ]
 }

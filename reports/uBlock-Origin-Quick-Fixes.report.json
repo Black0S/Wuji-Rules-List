@@ -5,59 +5,51 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/quick-fixes.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:07:32+00:00",
+  "converted_at": "2026-09-07T09:23:48+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 529,
   "rules_in": 325,
-  "rules_out": 53,
-  "coverage_pct": 24.62,
+  "rules_out": 48,
+  "coverage_pct": 23.08,
   "breakdown": {
-    "block": 13,
+    "block": 10,
     "block_document": 5,
     "block_cookies": 0,
-    "css_display_none": 13,
-    "css_selectors": 41,
-    "ignore_previous_rules": 21
+    "css_display_none": 12,
+    "css_selectors": 40,
+    "ignore_previous_rules": 20
   },
-  "skipped_total": 232,
+  "skipped_total": 237,
   "skipped_reasons": {
     "scriptlet ou filtrage HTML": 160,
     "pseudo-classe CSS etendue": 17,
     "modificateur non supporte: $replace": 16,
     "modificateur non supporte: $redirect": 12,
-    "directive $badfilter (retractation appliquee)": 5,
+    "$domain inexprimable (regex ou joker)": 7,
+    "modificateur non supporte: $badfilter": 5,
     "modificateur non supporte: $redirect-rule": 4,
     "modificateur non supporte: $denyallow": 3,
     "modificateur non supporte: $header": 3,
     "modificateur non supporte: $method": 2,
-    "regex hors du sous-ensemble WebKit": 2,
     "ancre `|` en milieu de motif": 2,
     "modificateur non supporte: $to": 2,
-    "$domain inexprimable (regex ou joker)": 2,
+    "regex hors du sous-ensemble WebKit": 1,
+    "domaine cosmetique non exprimable (joker de TLD)": 1,
     "modificateur non supporte: $strict1p": 1,
     "modificateur non supporte: $strict3p": 1
   },
   "notes": {
-    "modificateur sans effet sous WebKit: $important": 10,
+    "modificateur sans effet sous WebKit: $important": 7,
+    "domaine ignore (joker ou regex dans $domain)": 6,
+    "domaine ignore (joker) dans une regle cosmetique": 1,
     "modificateur sans effet sous WebKit: $all": 1
   },
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Quick-Fixes.json",
-      "rules": 53,
-      "bytes": 37903
+      "rules": 48,
+      "bytes": 10559
     }
-  ],
-  "extended": {
-    "file": "Extended-uBlock-Origin-Quick-Fixes.json",
-    "total": 177,
-    "counts": {
-      "scriptlets": 155,
-      "procedural": 17,
-      "styles": 0,
-      "html": 5,
-      "raw_js": 0
-    }
-  }
+  ]
 }

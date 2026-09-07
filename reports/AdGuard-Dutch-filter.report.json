@@ -5,27 +5,28 @@
   "source_version": "2.0.9.43",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/8.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:02:26+00:00",
+  "converted_at": "2026-09-07T09:19:08+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 2180,
   "rules_in": 1965,
-  "rules_out": 1240,
-  "coverage_pct": 91.35,
+  "rules_out": 1239,
+  "coverage_pct": 91.25,
   "breakdown": {
     "block": 508,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 676,
-    "css_selectors": 1232,
+    "css_display_none": 675,
+    "css_selectors": 1230,
     "ignore_previous_rules": 55
   },
-  "skipped_total": 110,
+  "skipped_total": 112,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 50,
     "JavaScript / scriptlet (#%#)": 36,
     "injection de style / scriptlet (#$#)": 12,
     "modificateur non supporte: $redirect": 7,
+    "domaine cosmetique non exprimable (joker de TLD)": 2,
     "injection de style etendue (#$?#)": 2,
     "regex hors du sous-ensemble WebKit": 1,
     "regle cosmetique entierement exceptee": 1,
@@ -33,24 +34,14 @@
   },
   "notes": {
     "doublon fusionne": 29,
+    "domaine ignore (joker) dans une regle cosmetique": 2,
     "modificateur sans effet sous WebKit: $important": 2
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Dutch-filter.json",
-      "rules": 1240,
-      "bytes": 191165
+      "rules": 1239,
+      "bytes": 188817
     }
-  ],
-  "extended": {
-    "file": "Extended-AdGuard-Dutch-filter.json",
-    "total": 99,
-    "counts": {
-      "scriptlets": 34,
-      "procedural": 51,
-      "styles": 14,
-      "html": 0,
-      "raw_js": 2
-    }
-  }
+  ]
 }

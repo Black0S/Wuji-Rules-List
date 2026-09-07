@@ -5,7 +5,7 @@
   "source_version": "",
   "source_url": "https://raw.githubusercontent.com/easylist/ruadlist/master/RuAdList-uBO.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:06:51+00:00",
+  "converted_at": "2026-09-07T09:23:12+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 30,
@@ -23,16 +23,5 @@
   "skipped_total": 0,
   "skipped_reasons": {},
   "notes": {},
-  "outputs": [],
-  "extended": {
-    "file": null,
-    "total": 0,
-    "counts": {
-      "scriptlets": 0,
-      "procedural": 0,
-      "styles": 0,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  "outputs": []
 }

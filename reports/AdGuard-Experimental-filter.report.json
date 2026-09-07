@@ -5,7 +5,7 @@
   "source_version": "2.0.2.1",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/5.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:02:26+00:00",
+  "converted_at": "2026-09-07T09:19:08+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 234,
@@ -34,16 +34,5 @@
       "rules": 7,
       "bytes": 945
     }
-  ],
-  "extended": {
-    "file": "Extended-AdGuard-Experimental-filter.json",
-    "total": 6,
-    "counts": {
-      "scriptlets": 0,
-      "procedural": 2,
-      "styles": 4,
-      "html": 0,
-      "raw_js": 1
-    }
-  }
+  ]
 }

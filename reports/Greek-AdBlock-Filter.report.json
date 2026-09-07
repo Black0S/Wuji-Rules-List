@@ -5,7 +5,7 @@
   "source_version": "2.0.1.26",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/121.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:04:20+00:00",
+  "converted_at": "2026-09-07T09:20:52+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1254,
@@ -31,16 +31,5 @@
       "rules": 670,
       "bytes": 106376
     }
-  ],
-  "extended": {
-    "file": "Extended-Greek-AdBlock-Filter.json",
-    "total": 10,
-    "counts": {
-      "scriptlets": 0,
-      "procedural": 10,
-      "styles": 0,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

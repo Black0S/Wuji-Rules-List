@@ -2,63 +2,55 @@
   "source_file": "AdGuard-French-filter.txt",
   "source_name": "AdGuard French filter",
   "source_title": "AdGuard French filter",
-  "source_version": "2.0.57.62",
+  "source_version": "2.0.57.63",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/16.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:02:27+00:00",
+  "converted_at": "2026-09-07T09:19:10+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 16317,
   "rules_in": 15348,
-  "rules_out": 11653,
-  "coverage_pct": 94.23,
+  "rules_out": 11654,
+  "coverage_pct": 94.25,
   "breakdown": {
-    "block": 9894,
+    "block": 9920,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 1226,
-    "css_selectors": 4037,
-    "ignore_previous_rules": 532
+    "css_display_none": 1219,
+    "css_selectors": 4032,
+    "ignore_previous_rules": 514
   },
-  "skipped_total": 714,
+  "skipped_total": 711,
   "skipped_reasons": {
     "JavaScript / scriptlet (#%#)": 192,
     "selecteur CSS etendu (#?#)": 182,
-    "directive $badfilter (retractation appliquee)": 147,
+    "modificateur non supporte: $badfilter": 146,
     "injection de style / scriptlet (#$#)": 73,
     "modificateur non supporte: $redirect": 57,
-    "retiree par $badfilter (retractation amont)": 29,
-    "modificateur non supporte: $csp": 10,
+    "$domain inexprimable (regex ou joker)": 22,
+    "modificateur non supporte: $csp": 11,
+    "domaine cosmetique non exprimable (joker de TLD)": 5,
     "selecteur CSS etendu (#@?#)": 5,
     "injection de style etendue (#$?#)": 4,
     "modificateur non supporte: $path": 4,
-    "regex hors du sous-ensemble WebKit": 3,
     "modificateur non supporte: $redirect-rule": 2,
     "modificateur non supporte: $denyallow": 2,
+    "regex hors du sous-ensemble WebKit": 2,
     "regle cosmetique entierement exceptee": 2,
     "modificateur inconnu: $_____": 1,
     "modificateur non supporte: $removeparam": 1
   },
   "notes": {
     "doublon fusionne": 22,
-    "modificateur sans effet sous WebKit: $important": 5
+    "domaine ignore (joker) dans une regle cosmetique": 9,
+    "modificateur sans effet sous WebKit: $important": 3,
+    "domaine ignore (joker ou regex dans $domain)": 3
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-French-filter.json",
-      "rules": 11653,
-      "bytes": 1628886
+      "rules": 11654,
+      "bytes": 1541633
     }
-  ],
-  "extended": {
-    "file": "Extended-AdGuard-French-filter.json",
-    "total": 444,
-    "counts": {
-      "scriptlets": 180,
-      "procedural": 187,
-      "styles": 77,
-      "html": 0,
-      "raw_js": 12
-    }
-  }
+  ]
 }

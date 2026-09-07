@@ -2,14 +2,14 @@
   "source_file": "AdGuard-URL-Tracking-filter.txt",
   "source_name": "AdGuard URL Tracking filter",
   "source_title": "AdGuard URL Tracking filter",
-  "source_version": "2.0.14.12",
+  "source_version": "2.0.14.13",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/17.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:03:07+00:00",
+  "converted_at": "2026-09-07T09:19:45+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 3903,
-  "rules_in": 2636,
+  "lines_total": 3906,
+  "rules_in": 2638,
   "rules_out": 1,
   "coverage_pct": 0.08,
   "breakdown": {
@@ -20,9 +20,9 @@
     "css_selectors": 2,
     "ignore_previous_rules": 0
   },
-  "skipped_total": 2634,
+  "skipped_total": 2636,
   "skipped_reasons": {
-    "modificateur non supporte: $removeparam": 2632,
+    "modificateur non supporte: $removeparam": 2634,
     "modificateur non supporte: $removeheader": 1,
     "modificateur non supporte: $app": 1
   },
@@ -33,16 +33,5 @@
       "rules": 1,
       "bytes": 205
     }
-  ],
-  "extended": {
-    "file": null,
-    "total": 0,
-    "counts": {
-      "scriptlets": 0,
-      "procedural": 0,
-      "styles": 0,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

@@ -5,7 +5,7 @@
   "source_version": "2.0.12.93",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/233.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:03:08+00:00",
+  "converted_at": "2026-09-07T09:19:45+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1264,
@@ -40,16 +40,5 @@
       "rules": 584,
       "bytes": 108062
     }
-  ],
-  "extended": {
-    "file": "Extended-Adblock-List-for-Finland.json",
-    "total": 127,
-    "counts": {
-      "scriptlets": 17,
-      "procedural": 65,
-      "styles": 45,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

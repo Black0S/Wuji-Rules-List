@@ -5,22 +5,22 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/privacy.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:07:32+00:00",
+  "converted_at": "2026-09-07T09:23:48+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 3323,
   "rules_in": 1750,
-  "rules_out": 906,
-  "coverage_pct": 51.89,
+  "rules_out": 904,
+  "coverage_pct": 51.71,
   "breakdown": {
-    "block": 885,
+    "block": 884,
     "block_document": 4,
     "block_cookies": 0,
-    "css_display_none": 13,
-    "css_selectors": 16,
+    "css_display_none": 12,
+    "css_selectors": 14,
     "ignore_previous_rules": 3
   },
-  "skipped_total": 842,
+  "skipped_total": 845,
   "skipped_reasons": {
     "scriptlet ou filtrage HTML": 303,
     "modificateur non supporte: $removeparam": 216,
@@ -30,38 +30,29 @@
     "modificateur non supporte: $permissions": 10,
     "modificateur non supporte: $uritransform": 9,
     "modificateur non supporte: $method": 8,
-    "directive $badfilter (retractation appliquee)": 6,
+    "modificateur non supporte: $badfilter": 6,
     "modificateur non supporte: $strict3p": 6,
     "regex hors du sous-ensemble WebKit": 6,
     "modificateur non supporte: $reason": 5,
     "modificateur non supporte: $replace": 3,
+    "domaine cosmetique non exprimable (joker de TLD)": 2,
     "modificateur non supporte: $strict1p": 2,
     "modificateur non supporte: $csp": 2,
+    "$domain inexprimable (regex ou joker)": 2,
     "modificateur non supporte: $header": 2,
     "modificateur non supporte: $redirect-rule": 1,
     "modificateur non supporte: $denyallow": 1,
-    "$domain inexprimable (regex ou joker)": 1,
     "pseudo-classe CSS etendue": 1
   },
   "notes": {
-    "modificateur sans effet sous WebKit: $important": 18
+    "modificateur sans effet sous WebKit: $important": 18,
+    "domaine ignore (joker) dans une regle cosmetique": 2
   },
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Privacy.json",
-      "rules": 906,
-      "bytes": 115489
+      "rules": 904,
+      "bytes": 109200
     }
-  ],
-  "extended": {
-    "file": "Extended-uBlock-Origin-Privacy.json",
-    "total": 304,
-    "counts": {
-      "scriptlets": 289,
-      "procedural": 1,
-      "styles": 0,
-      "html": 14,
-      "raw_js": 0
-    }
-  }
+  ]
 }

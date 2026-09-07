@@ -5,7 +5,7 @@
   "source_version": "2.0.3.71",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/218.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:04:15+00:00",
+  "converted_at": "2026-09-07T09:20:47+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 458,
@@ -34,16 +34,5 @@
       "rules": 329,
       "bytes": 44632
     }
-  ],
-  "extended": {
-    "file": "Extended-Estonian-List.json",
-    "total": 3,
-    "counts": {
-      "scriptlets": 0,
-      "procedural": 3,
-      "styles": 0,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

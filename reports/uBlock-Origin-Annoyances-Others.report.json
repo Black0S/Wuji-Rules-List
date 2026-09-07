@@ -5,27 +5,28 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/annoyances-others.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:07:30+00:00",
+  "converted_at": "2026-09-07T09:23:47+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 8236,
   "rules_in": 3600,
-  "rules_out": 602,
-  "coverage_pct": 20.17,
+  "rules_out": 594,
+  "coverage_pct": 19.69,
   "breakdown": {
     "block": 137,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 364,
-    "css_selectors": 489,
+    "css_display_none": 356,
+    "css_selectors": 472,
     "ignore_previous_rules": 100
   },
-  "skipped_total": 2849,
+  "skipped_total": 2866,
   "skipped_reasons": {
     "scriptlet ou filtrage HTML": 2149,
     "pseudo-classe CSS etendue": 623,
     "modificateur non supporte: $redirect-rule": 24,
     "modificateur non supporte: $redirect": 22,
+    "domaine cosmetique non exprimable (joker de TLD)": 18,
     "modificateur non supporte: $replace": 8,
     "modificateur non supporte: $csp": 7,
     "modificateur non supporte: $uritransform": 5,
@@ -33,32 +34,20 @@
     "modificateur non supporte: $removeparam": 2,
     "modificateur non supporte: $strict1p": 1,
     "selecteur CSS etendu (#?#)": 1,
-    "directive $badfilter (retractation appliquee)": 1,
-    "domaine cosmetique non exprimable (joker de TLD)": 1,
+    "modificateur non supporte: $badfilter": 1,
     "selecteur CSS etendu (#@?#)": 1,
     "injection de style (non supportee)": 1
   },
   "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 19,
     "modificateur sans effet sous WebKit: $important": 2,
-    "modificateur sans effet sous WebKit: $all": 1,
-    "domaine ignore (joker) dans une regle cosmetique": 1
+    "modificateur sans effet sous WebKit: $all": 1
   },
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Annoyances-Others.json",
-      "rules": 602,
-      "bytes": 112618
+      "rules": 594,
+      "bytes": 93091
     }
-  ],
-  "extended": {
-    "file": "Extended-uBlock-Origin-Annoyances-Others.json",
-    "total": 2775,
-    "counts": {
-      "scriptlets": 2097,
-      "procedural": 626,
-      "styles": 0,
-      "html": 52,
-      "raw_js": 0
-    }
-  }
+  ]
 }

@@ -2,48 +2,38 @@
   "source_file": "EasyList-Spanish.txt",
   "source_name": "EasyList Spanish",
   "source_title": "EasyList Spanish",
-  "source_version": "2.1.97.26",
+  "source_version": "2.1.97.28",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/231.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:03:59+00:00",
+  "converted_at": "2026-09-07T09:20:33+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 2722,
   "rules_in": 2644,
-  "rules_out": 1725,
-  "coverage_pct": 98.41,
+  "rules_out": 1715,
+  "coverage_pct": 97.96,
   "breakdown": {
-    "block": 637,
+    "block": 629,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 1027,
-    "css_selectors": 1905,
+    "css_display_none": 1025,
+    "css_selectors": 1901,
     "ignore_previous_rules": 60
   },
-  "skipped_total": 37,
+  "skipped_total": 42,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 30,
-    "regex hors du sous-ensemble WebKit": 7
+    "regex hors du sous-ensemble WebKit": 8,
+    "domaine cosmetique non exprimable (joker de TLD)": 4
   },
   "notes": {
-    "alternation eclatee en 8 regles": 1
+    "domaine ignore (joker) dans une regle cosmetique": 4
   },
   "outputs": [
     {
       "file": "Webkit-EasyList-Spanish.json",
-      "rules": 1725,
-      "bytes": 284278
+      "rules": 1715,
+      "bytes": 276380
     }
-  ],
-  "extended": {
-    "file": "Extended-EasyList-Spanish.json",
-    "total": 30,
-    "counts": {
-      "scriptlets": 0,
-      "procedural": 30,
-      "styles": 0,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

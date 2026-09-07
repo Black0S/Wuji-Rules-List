@@ -5,50 +5,39 @@
   "source_version": "2.0.0.79",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/252.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:03:54+00:00",
+  "converted_at": "2026-09-07T09:20:28+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 565,
   "rules_in": 493,
-  "rules_out": 262,
-  "coverage_pct": 95.33,
+  "rules_out": 261,
+  "coverage_pct": 94.52,
   "breakdown": {
     "block": 92,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 166,
-    "css_selectors": 375,
+    "css_display_none": 165,
+    "css_selectors": 371,
     "ignore_previous_rules": 3
   },
-  "skipped_total": 22,
+  "skipped_total": 26,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 9,
     "injection de style / scriptlet (#$#)": 7,
+    "domaine cosmetique non exprimable (joker de TLD)": 5,
     "$domain inexprimable (regex ou joker)": 2,
     "regex hors du sous-ensemble WebKit": 1,
-    "domaine cosmetique non exprimable (joker de TLD)": 1,
     "JavaScript / scriptlet (#%#)": 1,
     "injection de style etendue (#$?#)": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 1
+    "domaine ignore (joker) dans une regle cosmetique": 6
   },
   "outputs": [
     {
       "file": "Webkit-Dandelion-Sprout-s-Serbo-Croatian-List.json",
-      "rules": 262,
-      "bytes": 45332
+      "rules": 261,
+      "bytes": 41867
     }
-  ],
-  "extended": {
-    "file": "Extended-Dandelion-Sprout-s-Serbo-Croatian-List.json",
-    "total": 18,
-    "counts": {
-      "scriptlets": 1,
-      "procedural": 9,
-      "styles": 8,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

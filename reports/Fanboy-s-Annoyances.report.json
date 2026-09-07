@@ -5,52 +5,44 @@
   "source_version": "2.1.66.94",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/122.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:04:19+00:00",
+  "converted_at": "2026-09-07T09:20:51+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 60289,
   "rules_in": 57297,
-  "rules_out": 18088,
-  "coverage_pct": 86.38,
+  "rules_out": 18057,
+  "coverage_pct": 86.31,
   "breakdown": {
-    "block": 3592,
+    "block": 3591,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 13943,
-    "css_selectors": 45347,
+    "css_display_none": 13913,
+    "css_selectors": 45309,
     "ignore_previous_rules": 552
   },
-  "skipped_total": 6798,
+  "skipped_total": 6838,
   "skipped_reasons": {
     "JavaScript / scriptlet (#%#)": 5437,
     "injection de style / scriptlet (#$#)": 934,
     "selecteur CSS etendu (#?#)": 411,
+    "domaine cosmetique non exprimable (joker de TLD)": 39,
     "injection de style etendue (#$?#)": 9,
     "modificateur non supporte: $path": 4,
     "regle cosmetique entierement exceptee": 2,
+    "$domain inexprimable (regex ou joker)": 1,
     "injection de style (non supportee)": 1
   },
   "notes": {
-    "doublon fusionne": 573,
-    "modificateur sans effet sous WebKit: $important": 2,
-    "domaine ignore (joker) dans une regle cosmetique": 2
+    "doublon fusionne": 572,
+    "domaine ignore (joker) dans une regle cosmetique": 58,
+    "domaine ignore (joker ou regex dans $domain)": 3,
+    "modificateur sans effet sous WebKit: $important": 2
   },
   "outputs": [
     {
       "file": "Webkit-Fanboy-s-Annoyances.json",
-      "rules": 18088,
-      "bytes": 3522911
+      "rules": 18057,
+      "bytes": 3422151
     }
-  ],
-  "extended": {
-    "file": "Extended-Fanboy-s-Annoyances.json",
-    "total": 6792,
-    "counts": {
-      "scriptlets": 5437,
-      "procedural": 412,
-      "styles": 943,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

@@ -2,25 +2,25 @@
   "source_file": "AdGuard-Japanese-filter.txt",
   "source_name": "AdGuard Japanese filter",
   "source_title": "AdGuard Japanese filter",
-  "source_version": "2.0.76.24",
+  "source_version": "2.0.76.25",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/7.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:02:28+00:00",
+  "converted_at": "2026-09-07T09:19:11+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 12790,
   "rules_in": 12084,
-  "rules_out": 5995,
-  "coverage_pct": 85.57,
+  "rules_out": 5989,
+  "coverage_pct": 85.49,
   "breakdown": {
-    "block": 1676,
+    "block": 1674,
     "block_document": 217,
     "block_cookies": 0,
-    "css_display_none": 3818,
-    "css_selectors": 8164,
+    "css_display_none": 3814,
+    "css_selectors": 8157,
     "ignore_previous_rules": 283
   },
-  "skipped_total": 1608,
+  "skipped_total": 1616,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 854,
     "injection de style / scriptlet (#$#)": 339,
@@ -29,8 +29,9 @@
     "$domain inexprimable (regex ou joker)": 43,
     "modificateur non supporte: $redirect": 40,
     "modificateur non supporte: $path": 40,
-    "regex hors du sous-ensemble WebKit": 16,
+    "regex hors du sous-ensemble WebKit": 17,
     "modificateur non supporte: $redirect-rule": 9,
+    "domaine cosmetique non exprimable (joker de TLD)": 7,
     "modificateur non supporte: $removeparam": 2,
     "modificateur non supporte: $denyallow": 2,
     "modificateur inconnu: $_____": 1,
@@ -38,26 +39,15 @@
   },
   "notes": {
     "modificateur sans effet sous WebKit: $all": 28,
+    "domaine ignore (joker) dans une regle cosmetique": 16,
     "modificateur sans effet sous WebKit: $important": 5,
-    "domaine ignore (joker ou regex dans $domain)": 4,
-    "alternation eclatee en 2 regles": 1
+    "domaine ignore (joker ou regex dans $domain)": 4
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Japanese-filter.json",
-      "rules": 5995,
-      "bytes": 1103889
+      "rules": 5989,
+      "bytes": 1079557
     }
-  ],
-  "extended": {
-    "file": "Extended-AdGuard-Japanese-filter.json",
-    "total": 1453,
-    "counts": {
-      "scriptlets": 213,
-      "procedural": 854,
-      "styles": 386,
-      "html": 0,
-      "raw_js": 1
-    }
-  }
+  ]
 }

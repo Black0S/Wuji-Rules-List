@@ -5,7 +5,7 @@
   "source_version": "2.0.5.34",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/203.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:05:54+00:00",
+  "converted_at": "2026-09-07T09:22:18+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 2254,
@@ -40,16 +40,5 @@
       "rules": 841,
       "bytes": 140386
     }
-  ],
-  "extended": {
-    "file": "Extended-Hungarian-filter.json",
-    "total": 119,
-    "counts": {
-      "scriptlets": 51,
-      "procedural": 30,
-      "styles": 38,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

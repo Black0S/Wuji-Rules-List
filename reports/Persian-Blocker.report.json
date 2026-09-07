@@ -5,7 +5,7 @@
   "source_version": "2.0.6.35",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/235.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:06:24+00:00",
+  "converted_at": "2026-09-07T09:22:46+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 3577,
@@ -32,7 +32,7 @@
     "modificateur non supporte: $redirect": 5,
     "modificateur non supporte: $removeheader": 2,
     "$domain melange inclusions et exclusions": 1,
-    "directive $badfilter (retractation appliquee)": 1,
+    "modificateur non supporte: $badfilter": 1,
     "ancre `^` ou `$` mal placee": 1,
     "modificateur non supporte: $csp": 1
   },
@@ -47,16 +47,5 @@
       "rules": 1415,
       "bytes": 208728
     }
-  ],
-  "extended": {
-    "file": "Extended-Persian-Blocker.json",
-    "total": 649,
-    "counts": {
-      "scriptlets": 154,
-      "procedural": 136,
-      "styles": 359,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

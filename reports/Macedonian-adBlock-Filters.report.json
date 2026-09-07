@@ -5,7 +5,7 @@
   "source_version": "2.0.0.14",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/254.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:06:00+00:00",
+  "converted_at": "2026-09-07T09:22:23+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 773,
@@ -29,16 +29,5 @@
       "rules": 415,
       "bytes": 95803
     }
-  ],
-  "extended": {
-    "file": null,
-    "total": 0,
-    "counts": {
-      "scriptlets": 0,
-      "procedural": 0,
-      "styles": 0,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

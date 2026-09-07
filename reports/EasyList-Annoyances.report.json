@@ -5,46 +5,37 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-annoyances.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:03:55+00:00",
+  "converted_at": "2026-09-07T09:20:28+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 4302,
   "rules_in": 4014,
-  "rules_out": 2484,
-  "coverage_pct": 94.17,
+  "rules_out": 2481,
+  "coverage_pct": 94.07,
   "breakdown": {
     "block": 734,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 1730,
-    "css_selectors": 3027,
+    "css_display_none": 1727,
+    "css_selectors": 3023,
     "ignore_previous_rules": 19
   },
-  "skipped_total": 213,
+  "skipped_total": 217,
   "skipped_reasons": {
     "scriptlet ou filtrage HTML": 100,
     "pseudo-classe CSS etendue": 59,
-    "selecteur CSS etendu (#?#)": 54
+    "selecteur CSS etendu (#?#)": 54,
+    "domaine cosmetique non exprimable (joker de TLD)": 4
   },
   "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 8,
     "doublon fusionne": 4
   },
   "outputs": [
     {
       "file": "Webkit-EasyList-Annoyances.json",
-      "rules": 2484,
-      "bytes": 379452
+      "rules": 2481,
+      "bytes": 369155
     }
-  ],
-  "extended": {
-    "file": "Extended-EasyList-Annoyances.json",
-    "total": 213,
-    "counts": {
-      "scriptlets": 100,
-      "procedural": 113,
-      "styles": 0,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

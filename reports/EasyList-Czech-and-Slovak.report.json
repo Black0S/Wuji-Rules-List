@@ -5,7 +5,7 @@
   "source_version": "2.0.3.34",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/105.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:03:58+00:00",
+  "converted_at": "2026-09-07T09:20:31+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 778,
@@ -28,7 +28,7 @@
     "modificateur non supporte: $redirect": 5,
     "modificateur non supporte: $csp": 2,
     "modificateur non supporte: $redirect-rule": 2,
-    "directive $badfilter (retractation appliquee)": 1,
+    "modificateur non supporte: $badfilter": 1,
     "injection de style etendue (#$?#)": 1,
     "selecteur CSS etendu (#@?#)": 1
   },
@@ -41,16 +41,5 @@
       "rules": 419,
       "bytes": 58355
     }
-  ],
-  "extended": {
-    "file": "Extended-EasyList-Czech-and-Slovak.json",
-    "total": 97,
-    "counts": {
-      "scriptlets": 48,
-      "procedural": 28,
-      "styles": 21,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }

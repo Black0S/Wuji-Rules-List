@@ -5,7 +5,7 @@
   "source_version": "2.0.0.68",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/111.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:05:58+00:00",
+  "converted_at": "2026-09-07T09:22:22+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 473,
@@ -32,16 +32,5 @@
       "rules": 271,
       "bytes": 38917
     }
-  ],
-  "extended": {
-    "file": "Extended-Latvian-List.json",
-    "total": 9,
-    "counts": {
-      "scriptlets": 5,
-      "procedural": 4,
-      "styles": 0,
-      "html": 0,
-      "raw_js": 0
-    }
-  }
+  ]
 }
