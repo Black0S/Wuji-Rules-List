@@ -1,6 +1,6 @@
 # Rapport de conversion WebKit
 
-Genere le 2026-09-06T23:56:17+00:00 — profil modern (Safari 15+).
+Genere le 2026-09-07T00:29:42+00:00 — profil modern (Safari 15+).
 
 | Liste | Version | Entrees | Regles WebKit | Couverture | Fichiers |
 |---|---|---:|---:|---:|---:|
@@ -14,7 +14,7 @@ Genere le 2026-09-06T23:56:17+00:00 — profil modern (Safari 15+).
 | POL: CERT Polska List of malicious domains | 1.1.54.64 | 107575 | 107576 | 100.0% | 1 |
 | 1Hosts (Lite) | 1.0.26.81 | 102241 | 102242 | 100.0% | 1 |
 | CHN: anti-AD | 1.0.18.18 | 100932 | 100933 | 100.0% | 1 |
-| AdGuard Base filter | 2.4.88.61 | 137939 | 92326 | 86.8% | 1 |
+| AdGuard Base filter | 2.4.88.62 | 137949 | 92336 | 86.8% | 1 |
 | Steven Black's List | 1.0.16.67 | 79994 | 79995 | 100.0% | 1 |
 | Phishing URL Blocklist | 2.0.17.20 | 65952 | 65947 | 100.0% | 1 |
 | OISD Blocklist Small | 1.1.3.18 | 63468 | 63469 | 100.0% | 1 |
@@ -35,7 +35,7 @@ Genere le 2026-09-06T23:56:17+00:00 — profil modern (Safari 15+).
 | Dandelion Sprout's Anti-Malware List | 2.0.0.26 | 13308 | 12719 | 98.3% | 1 |
 | Dandelion Sprout's Anti-Malware List | 1.0.15.32 | 12573 | 12460 | 99.1% | 1 |
 | AdGuard French filter | 2.0.57.62 | 15348 | 11650 | 93.9% | 1 |
-| AdGuard Cookie Notices filter | 2.0.93.65 | 21539 | 11625 | 63.7% | 1 |
+| AdGuard Cookie Notices filter | 2.0.93.66 | 21540 | 11625 | 63.7% | 1 |
 | AdGuard Popups filter | 2.0.82.18 | 22030 | 11190 | 69.0% | 1 |
 | Liste FR | 2.1.97.25 | 13534 | 10905 | 98.7% | 1 |
 | AdGuard Russian filter | 2.1.8.43 | 17329 | 10084 | 84.0% | 1 |
@@ -171,7 +171,7 @@ Genere le 2026-09-06T23:56:17+00:00 — profil modern (Safari 15+).
 | Motif | Occurrences |
 |---|---:|
 | injection de style / scriptlet (#$#) | 23310 |
-| JavaScript / scriptlet (#%#) | 22624 |
+| JavaScript / scriptlet (#%#) | 22625 |
 | selecteur CSS etendu (#?#) | 13993 |
 | pseudo-classe :has() (activer --allow-has) | 13948 |
 | modificateur non supporte: $removeparam | 9326 |

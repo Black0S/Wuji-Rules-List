@@ -2,18 +2,18 @@
   "source_file": "AdGuard-Base-filter.txt",
   "source_name": "AdGuard Base filter",
   "source_title": "AdGuard Base filter",
-  "source_version": "2.4.88.61",
+  "source_version": "2.4.88.62",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/2.txt",
   "format": "adblock",
-  "converted_at": "2026-09-06T23:51:05+00:00",
+  "converted_at": "2026-09-07T00:24:59+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 153831,
-  "rules_in": 137939,
-  "rules_out": 92326,
+  "lines_total": 153841,
+  "rules_in": 137949,
+  "rules_out": 92336,
   "coverage_pct": 86.78,
   "breakdown": {
-    "block": 73020,
+    "block": 73030,
     "block_document": 633,
     "block_cookies": 0,
     "css_display_none": 14598,
@@ -64,8 +64,8 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Base-filter.json",
-      "rules": 92326,
-      "bytes": 12345753
+      "rules": 92336,
+      "bytes": 12346875
     }
   ]
 }
