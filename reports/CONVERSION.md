@@ -1,20 +1,20 @@
 # Rapport de conversion WebKit
 
-Genere le 2026-09-07T01:05:47+00:00 — profil modern (Safari 15+).
+Genere le 2026-09-07T01:23:28+00:00 — profil modern (Safari 15+).
 
 | Liste | Version | Entrees | Regles WebKit | Couverture | Fichiers |
 |---|---|---:|---:|---:|---:|
 | HaGeZi's Gambling Blocklist | 1.0.30.99 | 469516 | 469517 | 100.0% | 4 |
 | AdGuard Tracking Protection filter | 2.1.10.85 | 327285 | 325106 | 99.3% | 3 |
-| CHN: AdRules DNS List | 1.0.40.23 | 199905 | 199906 | 100.0% | 2 |
+| CHN: AdRules DNS List | 1.0.40.24 | 199971 | 199972 | 100.0% | 2 |
 | HaGeZi's Normal Blocklist | 1.0.32.43 | 192712 | 192713 | 100.0% | 2 |
 | AdGuard DNS filter | 1.0.78.47 | 180800 | 180776 | 100.0% | 2 |
-| Phishing Army | 1.0.44.4 | 156553 | 156554 | 100.0% | 2 |
+| Phishing Army | 1.0.44.5 | 156362 | 156363 | 100.0% | 2 |
 | ShadowWhisperer Tracking List | 1.0.4.59 | 115423 | 115424 | 100.0% | 1 |
 | POL: CERT Polska List of malicious domains | 1.1.54.64 | 107575 | 107576 | 100.0% | 1 |
 | 1Hosts (Lite) | 1.0.26.81 | 102241 | 102242 | 100.0% | 1 |
 | CHN: anti-AD | 1.0.18.18 | 100932 | 100933 | 100.0% | 1 |
-| AdGuard Base filter | 2.4.88.62 | 137939 | 92841 | 88.5% | 1 |
+| AdGuard Base filter | 2.4.88.62 | 137949 | 92851 | 88.5% | 1 |
 | Steven Black's List | 1.0.16.67 | 79994 | 79995 | 100.0% | 1 |
 | Phishing URL Blocklist | 2.0.17.20 | 65952 | 65947 | 100.0% | 1 |
 | OISD Blocklist Small | 1.1.3.18 | 63468 | 63469 | 100.0% | 1 |
@@ -22,7 +22,7 @@ Genere le 2026-09-07T01:05:47+00:00 — profil modern (Safari 15+).
 | EasyPrivacy | 2.1.70.97 | 56030 | 55960 | 99.9% | 1 |
 | HaGeZi's Anti-Piracy Blocklist | 1.0.27.9 | 48957 | 48958 | 100.0% | 1 |
 | ShadowWhisperer's Malware List | 1.0.21.74 | 44116 | 44117 | 100.0% | 1 |
-| Phishing URL Blocklist (PhishTank and OpenPhish) | 1.0.29.0 | 37808 | 37809 | 100.0% | 1 |
+| Phishing URL Blocklist (PhishTank and OpenPhish) | 1.0.29.1 | 37849 | 37850 | 100.0% | 1 |
 | KAD - Anti-Scam | 2.0.88.18 | 21102 | 21043 | 99.7% | 1 |
 | VNM: ABPVN List | 1.0.17.70 | 19114 | 19113 | 100.0% | 1 |
 | Fanboy's Annoyances | 2.1.66.94 | 57297 | 18057 | 86.3% | 1 |
@@ -34,7 +34,7 @@ Genere le 2026-09-07T01:05:47+00:00 — profil modern (Safari 15+).
 | Dan Pollock's List | 1.0.19.69 | 13057 | 13058 | 100.0% | 1 |
 | Dandelion Sprout's Anti-Malware List | 2.0.0.26 | 13308 | 12626 | 98.0% | 1 |
 | Dandelion Sprout's Anti-Malware List | 1.0.15.32 | 12573 | 12460 | 99.1% | 1 |
-| AdGuard Cookie Notices filter | 2.0.93.66 | 21539 | 11848 | 65.0% | 1 |
+| AdGuard Cookie Notices filter | 2.0.93.66 | 21540 | 11848 | 65.0% | 1 |
 | AdGuard Popups filter | 2.0.82.18 | 22030 | 11661 | 73.7% | 1 |
 | AdGuard French filter | 2.0.57.62 | 15348 | 11654 | 94.2% | 1 |
 | Liste FR | 2.1.97.25 | 13534 | 10914 | 99.0% | 1 |
@@ -49,7 +49,7 @@ Genere le 2026-09-07T01:05:47+00:00 — profil modern (Safari 15+).
 | AdGuard Japanese filter | 2.0.76.24 | 12084 | 5988 | 85.5% | 1 |
 | AdGuard German filter | 2.0.53.31 | 11232 | 5680 | 88.4% | 1 |
 | ABPindo | 2.0.10.36 | 10205 | 4844 | 97.8% | 1 |
-| Malicious URL Blocklist (URLHaus) | 1.0.28.90 | 4655 | 4656 | 100.0% | 1 |
+| Malicious URL Blocklist (URLHaus) | 1.0.28.91 | 4616 | 4617 | 100.0% | 1 |
 | AdGuard Mobile Ads filter | 2.0.71.76 | 7889 | 4546 | 85.3% | 1 |
 | AdGuard Ukrainian filter | 2.0.9.23 | 5478 | 3961 | 94.4% | 1 |
 | AdGuard Other Annoyances filter | 2.0.47.93 | 8424 | 3953 | 70.9% | 1 |
@@ -171,7 +171,7 @@ Genere le 2026-09-07T01:05:47+00:00 — profil modern (Safari 15+).
 | Motif | Occurrences |
 |---|---:|
 | injection de style / scriptlet (#$#) | 23310 |
-| JavaScript / scriptlet (#%#) | 22624 |
+| JavaScript / scriptlet (#%#) | 22625 |
 | selecteur CSS etendu (#?#) | 13993 |
 | modificateur non supporte: $removeparam | 9324 |
 | scriptlet ou filtrage HTML | 7837 |

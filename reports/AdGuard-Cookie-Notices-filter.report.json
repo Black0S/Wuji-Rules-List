@@ -5,11 +5,11 @@
   "source_version": "2.0.93.66",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/18.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:00:17+00:00",
+  "converted_at": "2026-09-07T01:17:08+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 24555,
-  "rules_in": 21539,
+  "lines_total": 24556,
+  "rules_in": 21540,
   "rules_out": 11848,
   "coverage_pct": 65.04,
   "breakdown": {
@@ -20,10 +20,10 @@
     "css_selectors": 11250,
     "ignore_previous_rules": 1494
   },
-  "skipped_total": 6269,
+  "skipped_total": 6270,
   "skipped_reasons": {
     "injection de style / scriptlet (#$#)": 3075,
-    "JavaScript / scriptlet (#%#)": 2654,
+    "JavaScript / scriptlet (#%#)": 2655,
     "selecteur CSS etendu (#?#)": 310,
     "injection de style etendue (#$?#)": 116,
     "domaine cosmetique non exprimable (joker de TLD)": 71,

@@ -5,15 +5,15 @@
   "source_version": "2.4.88.62",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/2.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:00:14+00:00",
+  "converted_at": "2026-09-07T01:17:05+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 153831,
-  "rules_in": 137939,
-  "rules_out": 92841,
+  "lines_total": 153841,
+  "rules_in": 137949,
+  "rules_out": 92851,
   "coverage_pct": 88.55,
   "breakdown": {
-    "block": 72992,
+    "block": 73002,
     "block_document": 633,
     "block_cookies": 0,
     "css_display_none": 15159,
@@ -64,8 +64,8 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Base-filter.json",
-      "rules": 92841,
-      "bytes": 12565238
+      "rules": 92851,
+      "bytes": 12566360
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T00:24:36+00:00",
+  "generated_at": "2026-09-07T01:16:35+00:00",
   "generator": "fetch_filters.py",
   "count": 161,
   "summary": {
@@ -37,7 +37,7 @@
       "version": "2.4.88.62",
       "list_updated": "2026-09-06T23:11:35+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:19+00:00",
       "status": "updated"
     },
     "adguard-11": {
@@ -72,7 +72,7 @@
       "version": "2.0.71.76",
       "list_updated": "2026-09-06T10:13:04+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:18+00:00",
       "status": "updated"
     },
     "adguard-101": {
@@ -103,7 +103,7 @@
       "version": "2.1.74.28",
       "list_updated": "2026-09-06T20:32:38+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:19+00:00",
       "status": "updated"
     },
     "ubo-filters": {
@@ -132,7 +132,7 @@
       "version": "",
       "list_updated": "Wed, 02 Sep 2026 04:25:33 +0000",
       "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:27+00:00",
+      "fetched_at": "2026-09-07T01:16:17+00:00",
       "status": "updated"
     },
     "adguard-207": {
@@ -163,7 +163,7 @@
       "version": "2.1.97.26",
       "list_updated": "2026-09-06T20:33:14+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:18+00:00",
       "status": "updated"
     },
     "adguard-18": {
@@ -196,7 +196,7 @@
       "version": "2.0.93.66",
       "list_updated": "2026-09-06T23:12:26+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "adguard-20": {
@@ -229,7 +229,7 @@
       "version": "2.0.31.87",
       "list_updated": "2026-09-04T10:15:55+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:26+00:00",
       "status": "updated"
     },
     "adguard-21": {
@@ -262,7 +262,7 @@
       "version": "2.0.47.93",
       "list_updated": "2026-09-06T11:12:11+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:19+00:00",
       "status": "updated"
     },
     "adguard-19": {
@@ -295,7 +295,7 @@
       "version": "2.0.82.18",
       "list_updated": "2026-09-06T18:16:14+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:19+00:00",
       "status": "updated"
     },
     "adguard-22": {
@@ -328,7 +328,7 @@
       "version": "2.0.14.85",
       "list_updated": "2026-09-04T12:22:03+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:20+00:00",
       "status": "updated"
     },
     "adguard-250": {
@@ -360,7 +360,7 @@
       "version": "2.0.20.54",
       "list_updated": "2026-09-06T12:39:07+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "easylist-annoyances": {
@@ -389,7 +389,7 @@
       "version": "",
       "list_updated": "Mon, 31 Aug 2026 14:25:41 +0000",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:19+00:00",
       "status": "updated"
     },
     "easylist-ai": {
@@ -418,7 +418,7 @@
       "version": "",
       "list_updated": "Sun, 06 Sep 2026 15:48:06 +0000",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:19+00:00",
       "status": "updated"
     },
     "easylist-chat": {
@@ -447,7 +447,7 @@
       "version": "",
       "list_updated": "Wed, 02 Sep 2026 21:17:50 +0000",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:19+00:00",
       "status": "updated"
     },
     "easylist-newsletters": {
@@ -476,7 +476,7 @@
       "version": "",
       "list_updated": "Sun, 06 Sep 2026 15:48:06 +0000",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:19+00:00",
       "status": "updated"
     },
     "easylist-notifications": {
@@ -505,7 +505,7 @@
       "version": "",
       "list_updated": "Sun, 06 Sep 2026 15:48:06 +0000",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:19+00:00",
       "status": "updated"
     },
     "adguard-241": {
@@ -536,7 +536,7 @@
       "version": "2.1.70.71",
       "list_updated": "2026-09-06T12:39:00+00:00",
       "license": "http://creativecommons.org/licenses/by/3.0/",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:20+00:00",
       "status": "updated"
     },
     "adguard-122": {
@@ -568,7 +568,7 @@
       "version": "2.1.66.94",
       "list_updated": "2026-09-06T12:38:28+00:00",
       "license": "http://creativecommons.org/licenses/by/3.0/",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:20+00:00",
       "status": "updated"
     },
     "adguard-260": {
@@ -599,7 +599,7 @@
       "version": "2.0.1.77",
       "list_updated": "2026-09-06T20:34:00+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:20+00:00",
       "status": "updated"
     },
     "ubo-annoyances": {
@@ -628,7 +628,7 @@
       "version": "",
       "list_updated": "Mon, 04 Nov 2024 15:01:20 +0000",
       "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:19+00:00",
       "status": "updated"
     },
     "ubo-annoyances-others": {
@@ -657,7 +657,7 @@
       "version": "",
       "list_updated": "Sun, 06 Sep 2026 13:43:38 +0000",
       "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:20+00:00",
       "status": "updated"
     },
     "ubo-cookies": {
@@ -686,7 +686,7 @@
       "version": "",
       "list_updated": "Sat, 05 Sep 2026 22:51:39 +0000",
       "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:28+00:00",
+      "fetched_at": "2026-09-07T01:16:20+00:00",
       "status": "updated"
     },
     "adguard-201": {
@@ -717,7 +717,7 @@
       "version": "2.0.0.38",
       "list_updated": "2026-08-31T20:34:03+00:00",
       "license": "https://creativecommons.org/licenses/by-sa/4.0",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "adguard-dns-24": {
@@ -738,8 +738,8 @@
       "format": "adblock",
       "slug": "1Hosts-Lite",
       "file": "1Hosts-Lite.txt",
-      "etag": "\"6a9df417-23cfe8\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-23cfe8\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "e0c0dcadd6332435e00d11cc18e0795d49d01a2a4614065e09d878dd711d426d",
       "bytes": 2346984,
       "lines": 102250,
@@ -748,7 +748,7 @@
       "version": "1.0.26.81",
       "list_updated": "2026-09-03T13:18:06.316Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:20+00:00",
       "status": "updated"
     },
     "adguard-dns-1": {
@@ -769,8 +769,8 @@
       "format": "adblock",
       "slug": "AdGuard-DNS-filter",
       "file": "AdGuard-DNS-filter.txt",
-      "etag": "\"6a9df417-41df1f\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-41df1f\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "00fa1cc93ffbf7ee51d1125af6b7bf78fad7b7a96de9779bc9ca4d63e6fd2f89",
       "bytes": 4316959,
       "lines": 180809,
@@ -779,7 +779,7 @@
       "version": "1.0.78.47",
       "list_updated": "2026-09-06T22:14:51.557Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:20+00:00",
       "status": "updated"
     },
     "adguard-dns-59": {
@@ -800,8 +800,8 @@
       "format": "adblock",
       "slug": "AdGuard-DNS-Popup-Hosts-filter",
       "file": "AdGuard-DNS-Popup-Hosts-filter.txt",
-      "etag": "\"6a9df417-e3f1\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-e3f1\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "55a907b3bfdcc797334a774556bff7d74e6241e4389429604a35a79a17a9cc4e",
       "bytes": 58353,
       "lines": 1073,
@@ -810,7 +810,7 @@
       "version": "1.0.18.63",
       "list_updated": "2026-09-03T14:20:00.737Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:20+00:00",
       "status": "updated"
     },
     "adguard-dns-53": {
@@ -831,8 +831,8 @@
       "format": "adblock",
       "slug": "AWAvenue-Ads-Rule",
       "file": "AWAvenue-Ads-Rule.txt",
-      "etag": "\"6a9df417-4f60\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-4f60\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "c11285ade70565e9415f2c78c7d33ed76186b4d6edf15673a5ac0274bec2d818",
       "bytes": 20320,
       "lines": 861,
@@ -841,7 +841,7 @@
       "version": "1.0.15.77",
       "list_updated": "2026-08-20T04:17:08.555Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:20+00:00",
       "status": "updated"
     },
     "adguard-dns-4": {
@@ -862,8 +862,8 @@
       "format": "adblock",
       "slug": "Dan-Pollock-s-List",
       "file": "Dan-Pollock-s-List.txt",
-      "etag": "\"6a9df417-568d2\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-568d2\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "9d5c732cad0f201831fa790d748d636db5cb25b533b92735bdc805d27791d8a3",
       "bytes": 354514,
       "lines": 13067,
@@ -872,7 +872,7 @@
       "version": "1.0.19.69",
       "list_updated": "2026-09-04T19:12:28.794Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "adguard-dns-34": {
@@ -893,8 +893,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-Normal-Blocklist",
       "file": "HaGeZi-s-Normal-Blocklist.txt",
-      "etag": "\"6a9df417-425ac1\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-425ac1\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "21f3d8bb235602df552312ef5ffc66e12b0a87d2c493840156d56b1b7b594cf7",
       "bytes": 4348609,
       "lines": 192721,
@@ -903,7 +903,7 @@
       "version": "1.0.32.43",
       "list_updated": "2026-09-06T09:16:27.760Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "adguard-dns-5": {
@@ -924,8 +924,8 @@
       "format": "adblock",
       "slug": "OISD-Blocklist-Small",
       "file": "OISD-Blocklist-Small.txt",
-      "etag": "\"6a9df417-159aa8\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-159aa8\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "6c9d0a259bb000eeca9216451f2e053194914f8f89971be302248e831b2c2240",
       "bytes": 1415848,
       "lines": 63477,
@@ -934,7 +934,7 @@
       "version": "1.1.3.18",
       "list_updated": "2026-09-06T18:18:47.202Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "adguard-dns-3": {
@@ -955,8 +955,8 @@
       "format": "adblock",
       "slug": "Peter-Lowe-s-Blocklist-adguard-dns-3",
       "file": "Peter-Lowe-s-Blocklist-adguard-dns-3.txt",
-      "etag": "\"6a9df417-10ec5\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-10ec5\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "849d4e9ce9fbf350f615ab0455e792cce08493426678eab990b25644dab28dbb",
       "bytes": 69317,
       "lines": 3540,
@@ -965,7 +965,7 @@
       "version": "1.0.17.82",
       "list_updated": "2026-09-04T12:26:25.284Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "adguard-dns-69": {
@@ -986,8 +986,8 @@
       "format": "adblock",
       "slug": "ShadowWhisperer-Tracking-List",
       "file": "ShadowWhisperer-Tracking-List.txt",
-      "etag": "\"6a9df417-2b1bdf\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-2b1bdf\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "143b0de00aaedac54fac2e3276afa4c543ab7764c15d23be94a9fa81325f6cc9",
       "bytes": 2825183,
       "lines": 115445,
@@ -996,7 +996,7 @@
       "version": "1.0.4.59",
       "list_updated": "2026-09-06T19:12:05.702Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "adguard-dns-33": {
@@ -1017,8 +1017,8 @@
       "format": "adblock",
       "slug": "Steven-Black-s-List",
       "file": "Steven-Black-s-List.txt",
-      "etag": "\"6a9df417-2250af\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-2250af\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "e882cf5e93a96e4019875fc88478d57fb37c2ddf782dcccded3af1c118899ff3",
       "bytes": 2248879,
       "lines": 80004,
@@ -1027,7 +1027,7 @@
       "version": "1.0.16.67",
       "list_updated": "2026-09-04T14:16:53.687Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "adguard-102": {
@@ -1060,7 +1060,7 @@
       "version": "2.0.10.36",
       "list_updated": "2026-09-04T12:43:30+00:00",
       "license": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:30+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "adguard-214": {
@@ -1095,7 +1095,7 @@
       "version": "2.0.45.57",
       "list_updated": "2026-09-05T16:33:16+00:00",
       "license": "GPLv3 (https://github.com/abpvn/abpvn/blob/master/LICENSE)",
-      "fetched_at": "2026-09-07T00:24:30+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "albania-list": {
@@ -1124,7 +1124,7 @@
       "version": "",
       "list_updated": "10/07/2024",
       "license": "https://unlicense.org/",
-      "fetched_at": "2026-09-07T00:24:29+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "adguard-233": {
@@ -1159,7 +1159,7 @@
       "version": "2.0.12.93",
       "list_updated": "2026-09-06T16:33:21+00:00",
       "license": "https://unlicense.org/",
-      "fetched_at": "2026-09-07T00:24:30+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "adguard-120": {
@@ -1194,7 +1194,7 @@
       "version": "2.0.30.50",
       "list_updated": "2026-09-04T16:35:03+00:00",
       "license": "https://github.com/realodix/AdBlockID/blob/main/LICENSE",
-      "fetched_at": "2026-09-07T00:24:30+00:00",
+      "fetched_at": "2026-09-07T01:16:21+00:00",
       "status": "updated"
     },
     "adguard-224": {
@@ -1230,7 +1230,7 @@
       "version": "2.1.64.85",
       "list_updated": "2026-09-06T14:13:31+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:30+00:00",
+      "fetched_at": "2026-09-07T01:16:22+00:00",
       "status": "updated"
     },
     "adguard-8": {
@@ -1267,7 +1267,7 @@
       "version": "2.0.9.43",
       "list_updated": "2026-09-03T07:16:38+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:30+00:00",
+      "fetched_at": "2026-09-07T01:16:22+00:00",
       "status": "updated"
     },
     "adguard-16": {
@@ -1304,7 +1304,7 @@
       "version": "2.0.57.62",
       "list_updated": "2026-09-06T10:13:19+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:30+00:00",
+      "fetched_at": "2026-09-07T01:16:22+00:00",
       "status": "updated"
     },
     "adguard-6": {
@@ -1340,7 +1340,7 @@
       "version": "2.0.53.31",
       "list_updated": "2026-09-05T16:13:51+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:30+00:00",
+      "fetched_at": "2026-09-07T01:16:22+00:00",
       "status": "updated"
     },
     "adguard-7": {
@@ -1375,7 +1375,7 @@
       "version": "2.0.76.24",
       "list_updated": "2026-09-06T09:14:24+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:30+00:00",
+      "fetched_at": "2026-09-07T01:16:22+00:00",
       "status": "updated"
     },
     "adguard-1": {
@@ -1411,7 +1411,7 @@
       "version": "2.1.8.43",
       "list_updated": "2026-09-04T18:16:36+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:30+00:00",
+      "fetched_at": "2026-09-07T01:16:22+00:00",
       "status": "updated"
     },
     "adguard-9": {
@@ -1448,7 +1448,7 @@
       "version": "2.0.35.60",
       "list_updated": "2026-09-04T15:14:46+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:30+00:00",
+      "fetched_at": "2026-09-07T01:16:22+00:00",
       "status": "updated"
     },
     "adguard-13": {
@@ -1484,7 +1484,7 @@
       "version": "2.0.67.77",
       "list_updated": "2026-09-06T17:11:20+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:31+00:00",
+      "fetched_at": "2026-09-07T01:16:22+00:00",
       "status": "updated"
     },
     "adguard-23": {
@@ -1520,7 +1520,7 @@
       "version": "2.0.9.23",
       "list_updated": "2026-09-02T18:19:26+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:31+00:00",
+      "fetched_at": "2026-09-07T01:16:24+00:00",
       "status": "updated"
     },
     "adguard-103": {
@@ -1556,7 +1556,7 @@
       "version": "2.0.0.44",
       "list_updated": "2026-01-14T16:43:39+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:31+00:00",
+      "fetched_at": "2026-09-07T01:16:23+00:00",
       "status": "updated"
     },
     "adguard-220": {
@@ -1588,7 +1588,7 @@
       "version": "2.0.5.73",
       "list_updated": "2026-03-11T04:59:57+00:00",
       "license": "https://github.com/cjx82630/cjxlist/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:31+00:00",
+      "fetched_at": "2026-09-07T01:16:23+00:00",
       "status": "updated"
     },
     "adguard-249": {
@@ -1630,7 +1630,7 @@
       "version": "2.0.8.54",
       "list_updated": "2026-08-26T04:45:25+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:31+00:00",
+      "fetched_at": "2026-09-07T01:16:23+00:00",
       "status": "updated"
     },
     "adguard-252": {
@@ -1667,7 +1667,7 @@
       "version": "2.0.0.79",
       "list_updated": "2026-09-02T12:45:03+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:31+00:00",
+      "fetched_at": "2026-09-07T01:16:23+00:00",
       "status": "updated"
     },
     "adguard-104": {
@@ -1700,7 +1700,7 @@
       "version": "2.1.67.55",
       "list_updated": "2026-09-06T16:32:40+00:00",
       "license": "https://easylist.to/pages/licence.html",
-      "fetched_at": "2026-09-07T00:24:31+00:00",
+      "fetched_at": "2026-09-07T01:16:23+00:00",
       "status": "updated"
     },
     "adguard-105": {
@@ -1738,7 +1738,7 @@
       "version": "2.0.3.34",
       "list_updated": "2026-09-02T08:40:07+00:00",
       "license": "CC-BY-SA v4.0",
-      "fetched_at": "2026-09-07T00:24:31+00:00",
+      "fetched_at": "2026-09-07T01:16:23+00:00",
       "status": "updated"
     },
     "adguard-106": {
@@ -1771,7 +1771,7 @@
       "version": "2.1.97.24",
       "list_updated": "2026-09-06T20:32:43+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:31+00:00",
+      "fetched_at": "2026-09-07T01:16:24+00:00",
       "status": "updated"
     },
     "adguard-107": {
@@ -1804,7 +1804,7 @@
       "version": "2.0.17.72",
       "list_updated": "2026-09-03T20:33:50+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:31+00:00",
+      "fetched_at": "2026-09-07T01:16:23+00:00",
       "status": "updated"
     },
     "adguard-108": {
@@ -1840,7 +1840,7 @@
       "version": "2.0.6.46",
       "list_updated": "2026-09-06T01:10:55+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:32+00:00",
+      "fetched_at": "2026-09-07T01:16:24+00:00",
       "status": "updated"
     },
     "adguard-109": {
@@ -1876,7 +1876,7 @@
       "version": "2.1.97.26",
       "list_updated": "2026-09-06T20:32:46+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:32+00:00",
+      "fetched_at": "2026-09-07T01:16:24+00:00",
       "status": "updated"
     },
     "adguard-110": {
@@ -1912,7 +1912,7 @@
       "version": "2.0.2.99",
       "list_updated": "2026-06-19T01:37:34+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:31+00:00",
+      "fetched_at": "2026-09-07T01:16:24+00:00",
       "status": "updated"
     },
     "adguard-246": {
@@ -1945,7 +1945,7 @@
       "version": "2.1.93.32",
       "list_updated": "2026-09-06T20:33:44+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:32+00:00",
+      "fetched_at": "2026-09-07T01:16:24+00:00",
       "status": "updated"
     },
     "adguard-124": {
@@ -1979,7 +1979,7 @@
       "version": "2.0.69.0",
       "list_updated": "2026-09-06T20:33:06+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:32+00:00",
+      "fetched_at": "2026-09-07T01:16:24+00:00",
       "status": "updated"
     },
     "adguard-231": {
@@ -2012,7 +2012,7 @@
       "version": "2.1.97.26",
       "list_updated": "2026-09-06T20:33:27+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:32+00:00",
+      "fetched_at": "2026-09-07T01:16:24+00:00",
       "status": "updated"
     },
     "adguard-202": {
@@ -2047,7 +2047,7 @@
       "version": "2.0.0.32",
       "list_updated": "2026-09-02T16:37:11+00:00",
       "license": "https://github.com/easylist-thailand/easylist-thailand/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:32+00:00",
+      "fetched_at": "2026-09-07T01:16:25+00:00",
       "status": "updated"
     },
     "adguard-218": {
@@ -2082,7 +2082,7 @@
       "version": "2.0.3.71",
       "list_updated": "2025-11-28T16:39:25+00:00",
       "license": "CC0 1.0 Universal http://creativecommons.org/publicdomain/zero/1.0/legalcode",
-      "fetched_at": "2026-09-07T00:24:32+00:00",
+      "fetched_at": "2026-09-07T01:16:24+00:00",
       "status": "updated"
     },
     "adguard-227": {
@@ -2118,7 +2118,7 @@
       "version": "2.0.25.39",
       "list_updated": "2026-09-04T12:44:11+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:32+00:00",
+      "fetched_at": "2026-09-07T01:16:25+00:00",
       "status": "updated"
     },
     "adguard-243": {
@@ -2156,7 +2156,7 @@
       "version": "2.0.25.36",
       "list_updated": "2026-09-06T08:36:51+00:00",
       "license": "GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:32+00:00",
+      "fetched_at": "2026-09-07T01:16:25+00:00",
       "status": "updated"
     },
     "adguard-121": {
@@ -2189,7 +2189,7 @@
       "version": "2.0.1.26",
       "list_updated": "2026-07-04T20:46:41+00:00",
       "license": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "fetched_at": "2026-09-07T00:24:32+00:00",
+      "fetched_at": "2026-09-07T01:16:24+00:00",
       "status": "updated"
     },
     "adguard-203": {
@@ -2226,7 +2226,7 @@
       "version": "2.0.5.34",
       "list_updated": "2026-09-02T20:35:24+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:32+00:00",
+      "fetched_at": "2026-09-07T01:16:24+00:00",
       "status": "updated"
     },
     "adguard-119": {
@@ -2259,7 +2259,7 @@
       "version": "2.0.0.13",
       "list_updated": "2022-11-21T17:00:48+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:32+00:00",
+      "fetched_at": "2026-09-07T01:16:25+00:00",
       "status": "updated"
     },
     "adguard-253": {
@@ -2294,7 +2294,7 @@
       "version": "2.0.90.57",
       "list_updated": "2026-09-06T20:33:52+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-232": {
@@ -2326,7 +2326,7 @@
       "version": "2.0.88.18",
       "list_updated": "2026-09-06T20:33:29+00:00",
       "license": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:26+00:00",
       "status": "updated"
     },
     "adguard-111": {
@@ -2362,7 +2362,7 @@
       "version": "2.0.0.68",
       "list_updated": "2026-05-14T09:21:19+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:25+00:00",
       "status": "updated"
     },
     "adguard-112": {
@@ -2398,7 +2398,7 @@
       "version": "2.1.97.26",
       "list_updated": "2026-09-06T20:32:48+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:25+00:00",
       "status": "updated"
     },
     "adguard-113": {
@@ -2431,7 +2431,7 @@
       "version": "2.1.97.25",
       "list_updated": "2026-09-06T20:32:50+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:26+00:00",
       "status": "updated"
     },
     "adguard-254": {
@@ -2466,7 +2466,7 @@
       "version": "2.0.0.14",
       "list_updated": "2026-01-01T00:51:09+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:26+00:00",
       "status": "updated"
     },
     "adguard-216": {
@@ -2501,7 +2501,7 @@
       "version": "2.0.16.66",
       "list_updated": "2026-09-06T08:36:31+00:00",
       "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:26+00:00",
       "status": "updated"
     },
     "adguard-235": {
@@ -2540,7 +2540,7 @@
       "version": "2.0.6.35",
       "list_updated": "2026-06-17T13:45:02+00:00",
       "license": "https://codeberg.org/KhodeKiaa/PersianBlocker/src/branch/main/LICENSE",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:26+00:00",
       "status": "updated"
     },
     "adguard-237": {
@@ -2572,7 +2572,7 @@
       "version": "1.0.39.79",
       "list_updated": "2026-09-06T20:33:35+00:00",
       "license": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:26+00:00",
       "status": "updated"
     },
     "adguard-238": {
@@ -2607,7 +2607,7 @@
       "version": "2.0.3.58",
       "list_updated": "2026-09-02T08:40:55+00:00",
       "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:26+00:00",
       "status": "updated"
     },
     "adguard-247": {
@@ -2640,7 +2640,7 @@
       "version": "2.0.4.88",
       "list_updated": "2026-08-30T01:09:37+00:00",
       "license": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:26+00:00",
       "status": "updated"
     },
     "adguard-217": {
@@ -2672,7 +2672,7 @@
       "version": "2.0.5.56",
       "list_updated": "2026-08-16T12:45:13+00:00",
       "license": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0)",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-221": {
@@ -2704,7 +2704,7 @@
       "version": "2.0.5.23",
       "list_updated": "2026-08-16T12:45:16+00:00",
       "license": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0)",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-236": {
@@ -2736,7 +2736,7 @@
       "version": "2.0.4.32",
       "list_updated": "2026-08-31T20:34:29+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-114": {
@@ -2769,7 +2769,7 @@
       "version": "2.0.1.57",
       "list_updated": "2026-04-23T20:46:35+00:00",
       "license": "http://creativecommons.org/licenses/by/3.0/",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:26+00:00",
       "status": "updated"
     },
     "adguard-234": {
@@ -2803,7 +2803,7 @@
       "version": "2.0.0.80",
       "list_updated": "2026-06-01T06:13:55+00:00",
       "license": "http://creativecommons.org/licenses/by/3.0/",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "ruadlist-ubo": {
@@ -2832,7 +2832,7 @@
       "version": "",
       "list_updated": "%timestamp%",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:26+00:00",
       "status": "updated"
     },
     "adguard-212": {
@@ -2864,7 +2864,7 @@
       "version": "2.1.96.52",
       "list_updated": "2026-09-06T20:33:16+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "slovenian-list": {
@@ -2893,7 +2893,7 @@
       "version": "141",
       "list_updated": "",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:33+00:00",
+      "fetched_at": "2026-09-07T01:16:26+00:00",
       "status": "updated"
     },
     "adguard-206": {
@@ -2925,7 +2925,7 @@
       "version": "2.0.2.48",
       "list_updated": "2026-09-01T04:37:40+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-228": {
@@ -2958,7 +2958,7 @@
       "version": "2.0.3.30",
       "list_updated": "2025-12-24T16:40:11+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-244": {
@@ -2990,7 +2990,7 @@
       "version": "2.0.11.32",
       "list_updated": "2026-08-18T12:46:39+00:00",
       "license": "https://github.com/yous/YousList#license",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-5": {
@@ -3021,7 +3021,7 @@
       "version": "2.0.2.1",
       "list_updated": "2026-06-30T11:06:40+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-39": {
@@ -3042,8 +3042,8 @@
       "format": "adblock",
       "slug": "Dandelion-Sprout-s-Anti-Push-Notifications",
       "file": "Dandelion-Sprout-s-Anti-Push-Notifications.txt",
-      "etag": "\"6a9df417-232a\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-232a\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "c86ca301bec5314d1c546c476ac14359f1241963f45b024f3e4650840607269c",
       "bytes": 9002,
       "lines": 489,
@@ -3052,7 +3052,7 @@
       "version": "1.0.14.65",
       "list_updated": "2026-05-05T05:10:31.411Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-6": {
@@ -3073,8 +3073,8 @@
       "format": "adblock",
       "slug": "Dandelion-Sprout-s-Game-Console-Adblock-List",
       "file": "Dandelion-Sprout-s-Game-Console-Adblock-List.txt",
-      "etag": "\"6a9df417-315\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-315\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "346634a67216b54ae1831cb7147eccf8b37fbabd18330a295c254ed9efa2aae6",
       "bytes": 789,
       "lines": 24,
@@ -3083,7 +3083,7 @@
       "version": "1.0.14.55",
       "list_updated": "2026-04-17T10:06:25.121Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-239": {
@@ -3115,7 +3115,7 @@
       "version": "2.0.19.28",
       "list_updated": "2025-12-19T12:45:57+00:00",
       "license": "http://creativecommons.org/licenses/by/3.0/",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-10": {
@@ -3144,7 +3144,7 @@
       "version": "2.0.3.99",
       "list_updated": "2026-08-31T17:12:57+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-45": {
@@ -3165,8 +3165,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-Allowlist-Referral",
       "file": "HaGeZi-s-Allowlist-Referral.txt",
-      "etag": "\"6a9df417-528a\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-528a\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "a89b9069e62130c59d97b8e34f70aeaf33b32590b13e923aad229573f21e0835",
       "bytes": 21130,
       "lines": 941,
@@ -3175,7 +3175,7 @@
       "version": "1.0.15.41",
       "list_updated": "2026-08-30T09:16:40.272Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-46": {
@@ -3196,8 +3196,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-Anti-Piracy-Blocklist",
       "file": "HaGeZi-s-Anti-Piracy-Blocklist.txt",
-      "etag": "\"6a9df417-10ace0\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-10ace0\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "86289bd7b555680826666b48e2f94d74779c4964582c51bbd06982fee84a8737",
       "bytes": 1092832,
       "lines": 48966,
@@ -3206,7 +3206,7 @@
       "version": "1.0.27.9",
       "list_updated": "2026-09-06T09:16:49.483Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-67": {
@@ -3227,8 +3227,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-Apple-Tracker-Blocklist",
       "file": "HaGeZi-s-Apple-Tracker-Blocklist.txt",
-      "etag": "\"6a9df417-e1d\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-e1d\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "bb2f10757cf5f70fe27ed416a090aa8e5ccdc197731a334b3db0d89cac97adab",
       "bytes": 3613,
       "lines": 117,
@@ -3237,7 +3237,7 @@
       "version": "1.0.0.15",
       "list_updated": "2026-09-01T10:19:22.841Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-47": {
@@ -3258,8 +3258,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-Gambling-Blocklist",
       "file": "HaGeZi-s-Gambling-Blocklist.txt",
-      "etag": "\"6a9df417-8dee69\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-8dee69\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "37877c1cb371bd36e38215aee354fb983111fc507aa06be4e56746d19474d478",
       "bytes": 9301609,
       "lines": 469525,
@@ -3268,7 +3268,7 @@
       "version": "1.0.30.99",
       "list_updated": "2026-09-06T09:16:53.414Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-66": {
@@ -3289,8 +3289,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-OPPO-and-Realme-Tracker-Blocklist",
       "file": "HaGeZi-s-OPPO-and-Realme-Tracker-Blocklist.txt",
-      "etag": "\"6a9df417-3f33\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-3f33\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "4c58da3e5ba93e21d50b7108f20d07aba7ac0cf03761803436216d943918c220",
       "bytes": 16179,
       "lines": 493,
@@ -3299,7 +3299,7 @@
       "version": "1.0.0.24",
       "list_updated": "2026-08-03T11:46:53.636Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-61": {
@@ -3320,8 +3320,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-Samsung-Tracker-Blocklist",
       "file": "HaGeZi-s-Samsung-Tracker-Blocklist.txt",
-      "etag": "\"6a9df417-197c\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-197c\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "f76108bc13b050cf6aff83d3e9d41ec0783ebd231df038fe90a1f8831f508751",
       "bytes": 6524,
       "lines": 208,
@@ -3330,7 +3330,7 @@
       "version": "1.0.0.50",
       "list_updated": "2026-09-05T00:46:48.175Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-65": {
@@ -3351,8 +3351,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-Vivo-Tracker-Blocklist",
       "file": "HaGeZi-s-Vivo-Tracker-Blocklist.txt",
-      "etag": "\"6a9df417-1df1\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-1df1\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "4cfcfb67f3d70a0f9c616ca1be1fb7ae76d625004a796d64f0365cb30ddd2ded",
       "bytes": 7665,
       "lines": 238,
@@ -3361,7 +3361,7 @@
       "version": "1.0.0.41",
       "list_updated": "2026-08-15T09:09:54.129Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-63": {
@@ -3382,8 +3382,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-Windows-Office-Tracker-Blocklist",
       "file": "HaGeZi-s-Windows-Office-Tracker-Blocklist.txt",
-      "etag": "\"6a9df417-353d\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-353d\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "7c16d823ee2a14d7b74962a9c472b811a801d77e6b3cda727a6eb4c789fdcb01",
       "bytes": 13629,
       "lines": 397,
@@ -3392,7 +3392,7 @@
       "version": "1.0.1.28",
       "list_updated": "2026-09-05T00:46:48.198Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-60": {
@@ -3413,8 +3413,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-Xiaomi-Tracker-Blocklist",
       "file": "HaGeZi-s-Xiaomi-Tracker-Blocklist.txt",
-      "etag": "\"6a9df417-2747\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-2747\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "edaff6a80fec8b5b2527025567259392c936c416b15db93f01602e826da2a73c",
       "bytes": 10055,
       "lines": 355,
@@ -3423,7 +3423,7 @@
       "version": "1.0.15.4",
       "list_updated": "2026-08-15T09:09:54.059Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-37": {
@@ -3444,8 +3444,8 @@
       "format": "adblock",
       "slug": "No-Google",
       "file": "No-Google.txt",
-      "etag": "\"6a9df417-8162\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-8162\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "b8bdfad106a69748f9d62dce87e3369fc96ff2fa5987d8a647e02afda83f018c",
       "bytes": 33122,
       "lines": 1652,
@@ -3454,7 +3454,7 @@
       "version": "1.0.14.71",
       "list_updated": "2026-08-31T14:20:22.533Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-7": {
@@ -3475,8 +3475,8 @@
       "format": "adblock",
       "slug": "Perflyst-and-Dandelion-Sprout-s-Smart-TV-Blocklist",
       "file": "Perflyst-and-Dandelion-Sprout-s-Smart-TV-Blocklist.txt",
-      "etag": "\"6a9df417-1261\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-1261\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "6f3715c0267f41bfa205c9bd27b655e751215bdacfcd42e657b699e7352b02c6",
       "bytes": 4705,
       "lines": 168,
@@ -3485,7 +3485,7 @@
       "version": "1.0.14.54",
       "list_updated": "2026-04-17T10:06:25.128Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-dns-57": {
@@ -3506,8 +3506,8 @@
       "format": "adblock",
       "slug": "ShadowWhisperer-s-Dating-List",
       "file": "ShadowWhisperer-s-Dating-List.txt",
-      "etag": "\"6a9df417-6705\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-6705\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "9c546823d3096a8429de44ecc402d8b7fa6ec8c73287fd0c1bd777b030cb071d",
       "bytes": 26373,
       "lines": 1371,
@@ -3516,7 +3516,7 @@
       "version": "1.0.15.43",
       "list_updated": "2026-08-24T19:15:24.770Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "ubo-quick-fixes": {
@@ -3545,7 +3545,7 @@
       "version": "",
       "list_updated": "Sun, 06 Sep 2026 20:24:07 +0000",
       "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "ubo-unbreak": {
@@ -3574,7 +3574,7 @@
       "version": "",
       "list_updated": "Sun, 06 Sep 2026 01:47:52 +0000",
       "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:27+00:00",
       "status": "updated"
     },
     "adguard-25": {
@@ -3606,7 +3606,7 @@
       "version": "2.0.0.9",
       "list_updated": "2026-08-26T08:18:51+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-3": {
@@ -3638,7 +3638,7 @@
       "version": "2.1.10.85",
       "list_updated": "2026-09-05T18:15:11+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:36+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-17": {
@@ -3669,7 +3669,7 @@
       "version": "2.0.14.12",
       "list_updated": "2026-09-04T15:15:07+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-118": {
@@ -3700,7 +3700,7 @@
       "version": "2.1.70.97",
       "list_updated": "2026-09-06T20:32:55+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-225": {
@@ -3732,7 +3732,7 @@
       "version": "2.0.22.80",
       "list_updated": "2025-12-19T12:45:48+00:00",
       "license": "http://creativecommons.org/licenses/by/3.0/",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-251": {
@@ -3763,7 +3763,7 @@
       "version": "2.0.10.22",
       "list_updated": "2026-08-31T20:34:44+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-204": {
@@ -3794,7 +3794,7 @@
       "version": "2.0.20.4",
       "list_updated": "2026-09-04T12:44:00+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "ubo-lan-block": {
@@ -3823,7 +3823,7 @@
       "version": "",
       "list_updated": "",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "ubo-privacy": {
@@ -3852,7 +3852,7 @@
       "version": "",
       "list_updated": "Sun, 06 Sep 2026 20:05:03 +0000",
       "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:34+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-258": {
@@ -3883,7 +3883,7 @@
       "version": "2.0.0.26",
       "list_updated": "2026-05-08T12:58:35+00:00",
       "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-29": {
@@ -3901,21 +3901,21 @@
       "languages": [],
       "deprecated": false,
       "expires": 345600,
-      "registry_version": "1.0.40.23",
+      "registry_version": "1.0.40.24",
       "format": "adblock",
       "slug": "CHN-AdRules-DNS-List",
       "file": "CHN-AdRules-DNS-List.txt",
-      "etag": "\"6a9df417-488ebe\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
-      "sha256": "1e17bd41fe5aeacf4192b16d1a12b7b7f5615bd99f14b69e06e46a21310242bc",
-      "bytes": 4755134,
-      "lines": 199914,
-      "rules": 199905,
+      "etag": "\"6a9e0b4e-48946f\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
+      "sha256": "baf92c652087f29a00ac604b0cfc289a5dc1b7b75e31ffe5445e5f215d1eb461",
+      "bytes": 4756591,
+      "lines": 199980,
+      "rules": 199971,
       "title": "CHN: AdRules DNS List",
-      "version": "1.0.40.23",
-      "list_updated": "2026-09-06T20:16:25.137Z",
+      "version": "1.0.40.24",
+      "list_updated": "2026-09-07T00:53:07.393Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-21": {
@@ -3937,8 +3937,8 @@
       "format": "adblock",
       "slug": "CHN-anti-AD",
       "file": "CHN-anti-AD.txt",
-      "etag": "\"6a9df417-21ee35\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-21ee35\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "448755df7a5a229623f8cbe456e035cafbb185f12967d255f17773bfcb8e1ba8",
       "bytes": 2223669,
       "lines": 100941,
@@ -3947,7 +3947,7 @@
       "version": "1.0.18.18",
       "list_updated": "2026-09-04T21:14:51.314Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-35": {
@@ -3969,8 +3969,8 @@
       "format": "adblock",
       "slug": "HUN-Hufilter",
       "file": "HUN-Hufilter.txt",
-      "etag": "\"6a9df417-834\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-834\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "7620614f1f6540d6c965d24d7a68b9abce59189f14e0eef47358729ee01cc74f",
       "bytes": 2100,
       "lines": 103,
@@ -3979,7 +3979,7 @@
       "version": "1.0.15.27",
       "list_updated": "2026-05-19T11:11:50.504Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-22": {
@@ -4001,8 +4001,8 @@
       "format": "adblock",
       "slug": "IDN-ABPindo",
       "file": "IDN-ABPindo.txt",
-      "etag": "\"6a9df417-c1f\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-c1f\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "5a84bcddd4789e6c92f46739380fcd889d1b2f3f5f1e0887a940190f368a67d0",
       "bytes": 3103,
       "lines": 163,
@@ -4011,7 +4011,7 @@
       "version": "1.0.14.85",
       "list_updated": "2026-08-20T12:13:27.376Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-19": {
@@ -4033,8 +4033,8 @@
       "format": "adblock",
       "slug": "IRN-PersianBlocker-list",
       "file": "IRN-PersianBlocker-list.txt",
-      "etag": "\"6a9df417-109b\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-109b\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "c21ffb3ea82165f9b3587345b80fa297a1b84f8808dac5e56afac104b454a8df",
       "bytes": 4251,
       "lines": 267,
@@ -4043,7 +4043,7 @@
       "version": "1.0.14.80",
       "list_updated": "2026-04-17T10:06:33.989Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-43": {
@@ -4065,8 +4065,8 @@
       "format": "adblock",
       "slug": "ISR-EasyList-Hebrew",
       "file": "ISR-EasyList-Hebrew.txt",
-      "etag": "\"6a9df417-d56\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-d56\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "007fe6044a28efdb7696e0c3c7e6dfdfbdb3adbe0cb8b922b9f31d88e0aad775",
       "bytes": 3414,
       "lines": 185,
@@ -4075,7 +4075,7 @@
       "version": "1.0.14.83",
       "list_updated": "2026-09-04T07:19:41.504Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-25": {
@@ -4097,8 +4097,8 @@
       "format": "adblock",
       "slug": "KOR-filterslists-KO",
       "file": "KOR-filterslists-KO.txt",
-      "etag": "\"6a9df417-1e86\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-1e86\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "b7e8aaea75e716dfd5f43d07fcef056a13e684429400655eba316287125278fa",
       "bytes": 7814,
       "lines": 392,
@@ -4107,7 +4107,7 @@
       "version": "1.0.15.83",
       "list_updated": "2026-08-27T04:56:04.394Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-15": {
@@ -4129,8 +4129,8 @@
       "format": "adblock",
       "slug": "KOR-YousList",
       "file": "KOR-YousList.txt",
-      "etag": "\"6a9df417-4032\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-4032\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "07edc5c32c23844f9a5f24a4a3241b7eb9f572483b039e21fe81906e52359302",
       "bytes": 16434,
       "lines": 632,
@@ -4139,7 +4139,7 @@
       "version": "1.0.14.61",
       "list_updated": "2026-04-17T10:06:25.395Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-36": {
@@ -4161,8 +4161,8 @@
       "format": "adblock",
       "slug": "LIT-EasyList-Lithuania",
       "file": "LIT-EasyList-Lithuania.txt",
-      "etag": "\"6a9df417-3c3\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-3c3\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "522006be308b3419f96be7799f691f8a3ecbc193fd4d1061ceed6de555786c2c",
       "bytes": 963,
       "lines": 43,
@@ -4171,7 +4171,7 @@
       "version": "1.0.14.55",
       "list_updated": "2026-04-17T10:06:38.457Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-20": {
@@ -4193,8 +4193,8 @@
       "format": "adblock",
       "slug": "MKD-Macedonian-Pi-hole-Blocklist",
       "file": "MKD-Macedonian-Pi-hole-Blocklist.txt",
-      "etag": "\"6a9df417-f06\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-f06\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "722ceb8ac6eccf22b11edc9f64822edafe7a43991514af3c20b77a6462ae18ad",
       "bytes": 3846,
       "lines": 219,
@@ -4203,7 +4203,7 @@
       "version": "1.0.14.57",
       "list_updated": "2026-04-20T12:05:59.289Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-13": {
@@ -4225,8 +4225,8 @@
       "format": "adblock",
       "slug": "NOR-Dandelion-Sprouts-nordiske-filtre",
       "file": "NOR-Dandelion-Sprouts-nordiske-filtre.txt",
-      "etag": "\"6a9df417-2bbf\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-2bbf\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "9f2e6f4eaa4ceed28902fcd8679e66827d02cf1fcd69af2ba49cd2b25789a26e",
       "bytes": 11199,
       "lines": 522,
@@ -4235,7 +4235,7 @@
       "version": "1.0.14.81",
       "list_updated": "2026-08-26T01:34:05.824Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-41": {
@@ -4257,8 +4257,8 @@
       "format": "adblock",
       "slug": "POL-CERT-Polska-List-of-malicious-domains",
       "file": "POL-CERT-Polska-List-of-malicious-domains.txt",
-      "etag": "\"6a9df417-231031\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-231031\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "208e504ade3d8f24505f73ef7917ec384a1f9335a014bea03aa4a826957a9f9b",
       "bytes": 2297905,
       "lines": 107584,
@@ -4267,7 +4267,7 @@
       "version": "1.1.54.64",
       "list_updated": "2026-07-03T16:36:24.975Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-14": {
@@ -4289,8 +4289,8 @@
       "format": "adblock",
       "slug": "POL-Polish-filters-for-Pi-hole",
       "file": "POL-Polish-filters-for-Pi-hole.txt",
-      "etag": "\"6a9df417-1a67\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-1a67\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "e14d86689297f7b7371a17d3ba5f9e2c9af47c01dd130b86630ae6101df6d2c2",
       "bytes": 6759,
       "lines": 349,
@@ -4299,7 +4299,7 @@
       "version": "1.0.15.10",
       "list_updated": "2026-08-12T07:35:17.374Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-17": {
@@ -4321,8 +4321,8 @@
       "format": "adblock",
       "slug": "SWE-Frellwit-s-Swedish-Hosts-File",
       "file": "SWE-Frellwit-s-Swedish-Hosts-File.txt",
-      "etag": "\"6a9df417-8bbd\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-8bbd\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "c6caf5e8fb948057536f04feb3b178d98d45ded75abf74d344fe67ad6ab25f17",
       "bytes": 35773,
       "lines": 1164,
@@ -4331,7 +4331,7 @@
       "version": "1.0.15.64",
       "list_updated": "2026-09-03T08:25:25.684Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-26": {
@@ -4353,8 +4353,8 @@
       "format": "adblock",
       "slug": "TUR-turk-adlist",
       "file": "TUR-turk-adlist.txt",
-      "etag": "\"6a9df417-82c5\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-82c5\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "e2888d8778d9bfaab43178c77f5534893054b4a582c3a4eebc492bf0ba1c3605",
       "bytes": 33477,
       "lines": 1222,
@@ -4363,7 +4363,7 @@
       "version": "1.0.14.54",
       "list_updated": "2026-04-17T10:06:35.706Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-40": {
@@ -4385,8 +4385,8 @@
       "format": "adblock",
       "slug": "TUR-Turkish-Ad-Hosts",
       "file": "TUR-Turkish-Ad-Hosts.txt",
-      "etag": "\"6a9df417-bce4\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-bce4\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "1aeb119f9827e9a133b8d376de06ee22c084e48bb1753588dad1209415072a95",
       "bytes": 48356,
       "lines": 2080,
@@ -4395,7 +4395,7 @@
       "version": "1.0.14.78",
       "list_updated": "2026-09-04T18:20:26.728Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-62": {
@@ -4416,8 +4416,8 @@
       "format": "adblock",
       "slug": "Ukrainian-Security-Filter",
       "file": "Ukrainian-Security-Filter.txt",
-      "etag": "\"6a9df417-87ef\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-87ef\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "6d19c1dac3a56fa9b9d3e31c16bdb0611d85efa32acfbcc37ebe1284925499d2",
       "bytes": 34799,
       "lines": 1736,
@@ -4426,7 +4426,7 @@
       "version": "1.0.0.19",
       "list_updated": "2026-04-17T10:06:44.221Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:28+00:00",
       "status": "updated"
     },
     "adguard-dns-16": {
@@ -4448,8 +4448,8 @@
       "format": "adblock",
       "slug": "VNM-ABPVN-List",
       "file": "VNM-ABPVN-List.txt",
-      "etag": "\"6a9df417-7c751\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-7c751\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "bcbd81b6b678672036a19bbf37fea1ab1b5e63d694a4b4eb9c720247c406e791",
       "bytes": 509777,
       "lines": 19123,
@@ -4458,7 +4458,7 @@
       "version": "1.0.17.70",
       "list_updated": "2026-08-31T16:19:03.678Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-259": {
@@ -4489,7 +4489,7 @@
       "version": "2.0.0.26",
       "list_updated": "2026-08-30T08:36:29+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:30+00:00",
       "status": "updated"
     },
     "adguard-dns-12": {
@@ -4510,8 +4510,8 @@
       "format": "adblock",
       "slug": "Dandelion-Sprout-s-Anti-Malware-List-adguard-dns-12",
       "file": "Dandelion-Sprout-s-Anti-Malware-List-adguard-dns-12.txt",
-      "etag": "\"6a9df417-43e24\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-43e24\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "9444f0d6c02e0d4db8c214073531ba3dbf4cbff39066be866cf937351e95b6a6",
       "bytes": 278052,
       "lines": 12582,
@@ -4520,7 +4520,7 @@
       "version": "1.0.15.32",
       "list_updated": "2026-08-30T07:17:35.055Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-dns-55": {
@@ -4541,8 +4541,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-Badware-Hoster-Blocklist",
       "file": "HaGeZi-s-Badware-Hoster-Blocklist.txt",
-      "etag": "\"6a9df417-4641\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-4641\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "13854314f75058be9ef0a53abb6375d4282e554ff7dcdec135e91b43caedf1e5",
       "bytes": 17985,
       "lines": 1246,
@@ -4551,7 +4551,7 @@
       "version": "1.0.20.99",
       "list_updated": "2026-09-01T10:19:53.943Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-dns-71": {
@@ -4572,8 +4572,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-DNS-Rebind-Protection",
       "file": "HaGeZi-s-DNS-Rebind-Protection.txt",
-      "etag": "\"6a9df417-3b4\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-3b4\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "10e49d0f2596cf33c2aa0c038a1e9e761191f06023d6e6cd42ce69571ab11bc4",
       "bytes": 948,
       "lines": 26,
@@ -4582,7 +4582,7 @@
       "version": "1.0.0.7",
       "list_updated": "2026-05-26T13:15:16.644Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-dns-54": {
@@ -4603,8 +4603,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-DynDNS-Blocklist",
       "file": "HaGeZi-s-DynDNS-Blocklist.txt",
-      "etag": "\"6a9df417-6012\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-6012\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "afd52da227e3dc1242c2488a3e1764f0273db74ea32a09fbf99ace9524b37940",
       "bytes": 24594,
       "lines": 1543,
@@ -4613,7 +4613,7 @@
       "version": "1.0.17.14",
       "list_updated": "2026-09-02T09:21:33.210Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-dns-52": {
@@ -4634,8 +4634,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-Encrypted-DNS-VPN-TOR-Proxy-Bypass",
       "file": "HaGeZi-s-Encrypted-DNS-VPN-TOR-Proxy-Bypass.txt",
-      "etag": "\"6a9df417-5385d\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-5385d\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "e8b5ea20de1a4de366d6e16bb976fb3de36ef52097862865b9408f49a1971591",
       "bytes": 342109,
       "lines": 16470,
@@ -4644,7 +4644,7 @@
       "version": "1.0.27.56",
       "list_updated": "2026-09-06T09:17:27.384Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-dns-56": {
@@ -4666,8 +4666,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-The-World-s-Most-Abused-TLDs",
       "file": "HaGeZi-s-The-World-s-Most-Abused-TLDs.txt",
-      "etag": "\"6a9df417-5246\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-5246\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "4806722536d4f622b021650dc338e98aca6393f9b417b37a84c138e0f2180ba5",
       "bytes": 21062,
       "lines": 451,
@@ -4676,7 +4676,7 @@
       "version": "1.0.20.27",
       "list_updated": "2026-09-05T00:47:20.883Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-dns-68": {
@@ -4697,8 +4697,8 @@
       "format": "adblock",
       "slug": "HaGeZi-s-URL-Shortener-Blocklist",
       "file": "HaGeZi-s-URL-Shortener-Blocklist.txt",
-      "etag": "\"6a9df417-22283\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-22283\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "f4f60f439e818973a024626e248c9eba6f7c9c5fb9bc998ee5d5da2fcb9f37d1",
       "bytes": 139907,
       "lines": 9914,
@@ -4707,7 +4707,7 @@
       "version": "1.0.6.3",
       "list_updated": "2026-09-06T09:17:27.568Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-dns-11": {
@@ -4724,21 +4724,21 @@
       "languages": [],
       "deprecated": false,
       "expires": 345600,
-      "registry_version": "1.0.28.90",
+      "registry_version": "1.0.28.91",
       "format": "adblock",
       "slug": "Malicious-URL-Blocklist-URLHaus",
       "file": "Malicious-URL-Blocklist-URLHaus.txt",
-      "etag": "\"6a9df417-1e3fe\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
-      "sha256": "a27daf73b8de3b8447ecd12742c5a2ffcf870d477d9fcaa66cd6698ce07b45e4",
-      "bytes": 123902,
-      "lines": 4664,
-      "rules": 4655,
+      "etag": "\"6a9e0b4e-1e009\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
+      "sha256": "b841da8950e90780cad276fe1be57784958ca47e1ab773012a542c73f905b8b9",
+      "bytes": 122889,
+      "lines": 4625,
+      "rules": 4616,
       "title": "Malicious URL Blocklist (URLHaus)",
-      "version": "1.0.28.90",
-      "list_updated": "2026-09-06T13:14:39.522Z",
+      "version": "1.0.28.91",
+      "list_updated": "2026-09-07T00:53:08.680Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-dns-8": {
@@ -4759,8 +4759,8 @@
       "format": "adblock",
       "slug": "NoCoin-Filter-List",
       "file": "NoCoin-Filter-List.txt",
-      "etag": "\"6a9df417-1f98\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-1f98\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "8a80cefcdb6738dc53d30961ea81d455b091cf95aed233328662cca28ad2a269",
       "bytes": 8088,
       "lines": 322,
@@ -4769,7 +4769,7 @@
       "version": "1.0.14.56",
       "list_updated": "2026-04-17T10:06:58.179Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-208": {
@@ -4801,7 +4801,7 @@
       "version": "2.1.9.41",
       "list_updated": "2026-09-06T12:38:42+00:00",
       "license": "https://gitlab.com/malware-filter/urlhaus-filter#license",
-      "fetched_at": "2026-09-07T00:24:36+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-dns-18": {
@@ -4818,21 +4818,21 @@
       "languages": [],
       "deprecated": false,
       "expires": 345600,
-      "registry_version": "1.0.44.4",
+      "registry_version": "1.0.44.5",
       "format": "adblock",
       "slug": "Phishing-Army",
       "file": "Phishing-Army.txt",
-      "etag": "\"6a9df417-315995\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
-      "sha256": "b82239e12dfb9bb0bc478b287c224f1e85630f2d410e8cea67a752c71fe3d803",
-      "bytes": 3234197,
-      "lines": 156562,
-      "rules": 156553,
+      "etag": "\"6a9e0b4e-3145ee\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
+      "sha256": "93ddeb918b61c7365065fa0a77777aca3bc5c23eb4d798031ca74756b1d76474",
+      "bytes": 3229166,
+      "lines": 156371,
+      "rules": 156362,
       "title": "Phishing Army",
-      "version": "1.0.44.4",
-      "list_updated": "2026-09-06T17:13:00.539Z",
+      "version": "1.0.44.5",
+      "list_updated": "2026-09-07T00:53:09.744Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:36+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-255": {
@@ -4863,7 +4863,7 @@
       "version": "2.0.17.20",
       "list_updated": "2026-09-06T12:39:14+00:00",
       "license": "https://gitlab.com/malware-filter/phishing-filter#license",
-      "fetched_at": "2026-09-07T00:24:36+00:00",
+      "fetched_at": "2026-09-07T01:16:35+00:00",
       "status": "updated"
     },
     "adguard-dns-30": {
@@ -4880,21 +4880,21 @@
       "languages": [],
       "deprecated": false,
       "expires": 345600,
-      "registry_version": "1.0.29.0",
+      "registry_version": "1.0.29.1",
       "format": "adblock",
       "slug": "Phishing-URL-Blocklist-PhishTank-and-OpenPhish",
       "file": "Phishing-URL-Blocklist-PhishTank-and-OpenPhish.txt",
-      "etag": "\"6a9df417-125b1d\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
-      "sha256": "e496e1da5e62dc20db5e4031053be25c7f0596236793b7986c6205fde96b3514",
-      "bytes": 1202973,
-      "lines": 37817,
-      "rules": 37808,
+      "etag": "\"6a9e0b4e-125f6d\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
+      "sha256": "94b868e7c0a5f3e5bb4dc8eefe1fa857f9be8bea367621d4ebbd0a6fa3f883d9",
+      "bytes": 1204077,
+      "lines": 37858,
+      "rules": 37849,
       "title": "Phishing URL Blocklist (PhishTank and OpenPhish)",
-      "version": "1.0.29.0",
-      "list_updated": "2026-09-06T13:14:41.363Z",
+      "version": "1.0.29.1",
+      "list_updated": "2026-09-07T00:53:10.410Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-256": {
@@ -4925,7 +4925,7 @@
       "version": "2.0.8.78",
       "list_updated": "2026-09-06T04:37:00+00:00",
       "license": "MIT (https://mit-license.org/)",
-      "fetched_at": "2026-09-07T00:24:36+00:00",
+      "fetched_at": "2026-09-07T01:16:30+00:00",
       "status": "updated"
     },
     "adguard-dns-10": {
@@ -4946,8 +4946,8 @@
       "format": "adblock",
       "slug": "Scam-Blocklist-by-DurableNapkin-adguard-dns-10",
       "file": "Scam-Blocklist-by-DurableNapkin-adguard-dns-10.txt",
-      "etag": "\"6a9df417-4988\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-4988\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "3f1f707db07310c17984fefcafaadcf0f498b221f3fcf1849348523aff615a19",
       "bytes": 18824,
       "lines": 963,
@@ -4956,7 +4956,7 @@
       "version": "1.0.21.88",
       "list_updated": "2026-09-06T05:16:21.759Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:35+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-dns-42": {
@@ -4977,8 +4977,8 @@
       "format": "adblock",
       "slug": "ShadowWhisperer-s-Malware-List",
       "file": "ShadowWhisperer-s-Malware-List.txt",
-      "etag": "\"6a9df417-ec701\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-ec701\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "5e227a03e694a2dc22e617da4ac7aed6b5dbdef991c40e80783aaf9194677f7e",
       "bytes": 968449,
       "lines": 44125,
@@ -4987,7 +4987,7 @@
       "version": "1.0.21.74",
       "list_updated": "2026-09-06T19:12:27.782Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:36+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-dns-31": {
@@ -5008,8 +5008,8 @@
       "format": "adblock",
       "slug": "Stalkerware-Indicators-List",
       "file": "Stalkerware-Indicators-List.txt",
-      "etag": "\"6a9df417-4da3\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-4da3\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "f5a4c58b49be452b8006983b45b479cd668db500478f6d3c61b525e64c42bb28",
       "bytes": 19875,
       "lines": 934,
@@ -5018,7 +5018,7 @@
       "version": "1.0.14.64",
       "list_updated": "2026-06-21T21:36:07.043Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:36+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-dns-9": {
@@ -5039,8 +5039,8 @@
       "format": "adblock",
       "slug": "The-Big-List-of-Hacked-Malware-Web-Sites",
       "file": "The-Big-List-of-Hacked-Malware-Web-Sites.txt",
-      "etag": "\"6a9df417-57e9f\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-57e9f\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "7732e03699c11849eb791df6ad33d966822c945ece520b7badd294be4f82d3c7",
       "bytes": 360095,
       "lines": 13477,
@@ -5049,7 +5049,7 @@
       "version": "1.0.14.54",
       "list_updated": "2026-04-17T10:06:58.318Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:36+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "ubo-badware": {
@@ -5078,7 +5078,7 @@
       "version": "",
       "list_updated": "Fri, 04 Sep 2026 08:14:37 +0000",
       "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:36+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-257": {
@@ -5109,7 +5109,7 @@
       "version": "2.0.12.44",
       "list_updated": "2026-09-04T08:41:08+00:00",
       "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:36+00:00",
+      "fetched_at": "2026-09-07T01:16:30+00:00",
       "status": "updated"
     },
     "adguard-dns-50": {
@@ -5130,8 +5130,8 @@
       "format": "adblock",
       "slug": "uBlock0-filters-Badware-risks",
       "file": "uBlock0-filters-Badware-risks.txt",
-      "etag": "\"6a9df417-f689\"",
-      "last_modified": "Sun, 06 Sep 2026 23:15:35 GMT",
+      "etag": "\"6a9e0b4e-f689\"",
+      "last_modified": "Mon, 07 Sep 2026 00:54:38 GMT",
       "sha256": "9aaa9137e76d910e728ae4c8d92c22b7274a4aa80fb3705792c0e9526ff8c300",
       "bytes": 63113,
       "lines": 3077,
@@ -5140,7 +5140,7 @@
       "version": "1.0.22.62",
       "list_updated": "2026-09-04T08:24:50.808Z",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:36+00:00",
+      "fetched_at": "2026-09-07T01:16:29+00:00",
       "status": "updated"
     },
     "adguard-4": {
@@ -5172,7 +5172,7 @@
       "version": "2.1.32.2",
       "list_updated": "2026-09-06T21:11:39+00:00",
       "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
-      "fetched_at": "2026-09-07T00:24:36+00:00",
+      "fetched_at": "2026-09-07T01:16:30+00:00",
       "status": "updated"
     },
     "adguard-123": {
@@ -5204,7 +5204,7 @@
       "version": "2.1.68.31",
       "list_updated": "2026-09-06T20:33:05+00:00",
       "license": "",
-      "fetched_at": "2026-09-07T00:24:36+00:00",
+      "fetched_at": "2026-09-07T01:16:30+00:00",
       "status": "updated"
     }
   }
