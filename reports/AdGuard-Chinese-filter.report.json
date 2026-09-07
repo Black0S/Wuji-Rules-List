@@ -2,18 +2,18 @@
   "source_file": "AdGuard-Chinese-filter.txt",
   "source_name": "AdGuard Chinese filter",
   "source_title": "AdGuard Chinese filter",
-  "source_version": "2.1.64.85",
+  "source_version": "2.1.64.89",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/224.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:17:07+00:00",
+  "converted_at": "2026-09-07T09:18:46+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 23168,
-  "rules_in": 22388,
-  "rules_out": 16036,
-  "coverage_pct": 94.98,
+  "lines_total": 23175,
+  "rules_in": 22395,
+  "rules_out": 16043,
+  "coverage_pct": 94.99,
   "breakdown": {
-    "block": 12179,
+    "block": 12186,
     "block_document": 2,
     "block_cookies": 0,
     "css_display_none": 2785,
@@ -52,8 +52,8 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Chinese-filter.json",
-      "rules": 16036,
-      "bytes": 2032866
+      "rules": 16043,
+      "bytes": 2033627
     }
   ]
 }

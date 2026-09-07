@@ -2,28 +2,28 @@
   "source_file": "AdGuard-Cookie-Notices-filter.txt",
   "source_name": "AdGuard Cookie Notices filter",
   "source_title": "AdGuard Cookie Notices filter",
-  "source_version": "2.0.93.66",
+  "source_version": "2.0.93.75",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/18.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:17:08+00:00",
+  "converted_at": "2026-09-07T09:18:47+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 24556,
-  "rules_in": 21540,
-  "rules_out": 11848,
-  "coverage_pct": 65.04,
+  "lines_total": 24587,
+  "rules_in": 21570,
+  "rules_out": 11863,
+  "coverage_pct": 65.02,
   "breakdown": {
-    "block": 1265,
+    "block": 1267,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 9088,
-    "css_selectors": 11250,
-    "ignore_previous_rules": 1494
+    "css_display_none": 9100,
+    "css_selectors": 11263,
+    "ignore_previous_rules": 1495
   },
-  "skipped_total": 6270,
+  "skipped_total": 6284,
   "skipped_reasons": {
     "injection de style / scriptlet (#$#)": 3075,
-    "JavaScript / scriptlet (#%#)": 2655,
+    "JavaScript / scriptlet (#%#)": 2669,
     "selecteur CSS etendu (#?#)": 310,
     "injection de style etendue (#$?#)": 116,
     "domaine cosmetique non exprimable (joker de TLD)": 71,
@@ -46,8 +46,8 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Cookie-Notices-filter.json",
-      "rules": 11848,
-      "bytes": 1950900
+      "rules": 11863,
+      "bytes": 1953122
     }
   ]
 }

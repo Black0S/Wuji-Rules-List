@@ -2,27 +2,27 @@
   "source_file": "AdGuard-Popups-filter.txt",
   "source_name": "AdGuard Popups filter",
   "source_title": "AdGuard Popups filter",
-  "source_version": "2.0.82.18",
+  "source_version": "2.0.82.25",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/19.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:17:40+00:00",
+  "converted_at": "2026-09-07T09:19:12+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 23275,
-  "rules_in": 22030,
-  "rules_out": 11661,
-  "coverage_pct": 73.65,
+  "lines_total": 23291,
+  "rules_in": 22046,
+  "rules_out": 11667,
+  "coverage_pct": 73.66,
   "breakdown": {
-    "block": 1478,
+    "block": 1479,
     "block_document": 1,
     "block_cookies": 0,
-    "css_display_none": 9542,
-    "css_selectors": 14107,
+    "css_display_none": 9547,
+    "css_selectors": 14120,
     "ignore_previous_rules": 639
   },
-  "skipped_total": 5557,
+  "skipped_total": 5559,
   "skipped_reasons": {
-    "injection de style / scriptlet (#$#)": 2795,
+    "injection de style / scriptlet (#$#)": 2797,
     "JavaScript / scriptlet (#%#)": 1349,
     "selecteur CSS etendu (#?#)": 1018,
     "injection de style etendue (#$?#)": 163,
@@ -40,7 +40,7 @@
     "modificateur non supporte: $redirect-rule": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 150,
+    "domaine ignore (joker) dans une regle cosmetique": 151,
     "doublon fusionne": 11,
     "unless-domain abandonne (incompatible avec if-domain)": 2,
     "domaine ignore (joker ou regex dans $domain)": 2,
@@ -49,8 +49,8 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Popups-filter.json",
-      "rules": 11661,
-      "bytes": 1940125
+      "rules": 11667,
+      "bytes": 1941427
     }
   ]
 }

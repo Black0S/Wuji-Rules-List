@@ -2,14 +2,14 @@
   "source_file": "Polish-Annoyances-Filters.txt",
   "source_name": "Polish Annoyances Filters",
   "source_title": "Polish Annoyances Filters",
-  "source_version": "1.0.39.79",
+  "source_version": "1.0.39.80",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/237.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:22:40+00:00",
+  "converted_at": "2026-09-07T09:23:11+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 13731,
-  "rules_in": 13458,
+  "lines_total": 13733,
+  "rules_in": 13460,
   "rules_out": 8571,
   "coverage_pct": 83.02,
   "breakdown": {
@@ -17,14 +17,14 @@
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 8005,
-    "css_selectors": 10608,
+    "css_selectors": 10609,
     "ignore_previous_rules": 36
   },
-  "skipped_total": 2027,
+  "skipped_total": 2028,
   "skipped_reasons": {
     "domaine cosmetique non exprimable (joker de TLD)": 826,
     "injection de style / scriptlet (#$#)": 592,
-    "JavaScript / scriptlet (#%#)": 272,
+    "JavaScript / scriptlet (#%#)": 273,
     "selecteur CSS etendu (#?#)": 214,
     "injection de style etendue (#$?#)": 46,
     "$domain inexprimable (regex ou joker)": 27,
@@ -49,7 +49,7 @@
     {
       "file": "Webkit-Polish-Annoyances-Filters.json",
       "rules": 8571,
-      "bytes": 1415936
+      "bytes": 1415952
     }
   ]
 }

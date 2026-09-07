@@ -2,22 +2,22 @@
   "source_file": "AdGuard-Turkish-filter.txt",
   "source_name": "AdGuard Turkish filter",
   "source_title": "AdGuard Turkish filter",
-  "source_version": "2.0.67.77",
+  "source_version": "2.0.67.78",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/13.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:18:20+00:00",
+  "converted_at": "2026-09-07T09:19:44+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 7520,
-  "rules_in": 6378,
+  "lines_total": 7524,
+  "rules_in": 6381,
   "rules_out": 3083,
-  "coverage_pct": 78.0,
+  "coverage_pct": 77.98,
   "breakdown": {
     "block": 1452,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 1525,
-    "css_selectors": 3418,
+    "css_selectors": 3419,
     "ignore_previous_rules": 105
   },
   "skipped_total": 1346,
@@ -49,7 +49,7 @@
     {
       "file": "Webkit-AdGuard-Turkish-filter.json",
       "rules": 3083,
-      "bytes": 508995
+      "bytes": 509009
     }
   ]
 }

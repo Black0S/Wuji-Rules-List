@@ -2,27 +2,27 @@
   "source_file": "AdGuard-Base-filter.txt",
   "source_name": "AdGuard Base filter",
   "source_title": "AdGuard Base filter",
-  "source_version": "2.4.88.62",
+  "source_version": "2.4.88.71",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/2.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:17:05+00:00",
+  "converted_at": "2026-09-07T09:18:44+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 153841,
-  "rules_in": 137949,
-  "rules_out": 92851,
-  "coverage_pct": 88.55,
+  "lines_total": 149796,
+  "rules_in": 133900,
+  "rules_out": 88789,
+  "coverage_pct": 88.21,
   "breakdown": {
-    "block": 73002,
-    "block_document": 633,
+    "block": 68939,
+    "block_document": 630,
     "block_cookies": 0,
-    "css_display_none": 15159,
-    "css_selectors": 44468,
+    "css_display_none": 15163,
+    "css_selectors": 44484,
     "ignore_previous_rules": 4056
   },
-  "skipped_total": 13624,
+  "skipped_total": 13630,
   "skipped_reasons": {
-    "JavaScript / scriptlet (#%#)": 5185,
+    "JavaScript / scriptlet (#%#)": 5191,
     "selecteur CSS etendu (#?#)": 2584,
     "injection de style / scriptlet (#$#)": 1927,
     "modificateur non supporte: $stealth": 1824,
@@ -54,7 +54,7 @@
   },
   "notes": {
     "domaine ignore (joker) dans une regle cosmetique": 930,
-    "doublon fusionne": 777,
+    "doublon fusionne": 771,
     "modificateur sans effet sous WebKit: $all": 283,
     "modificateur sans effet sous WebKit: $important": 93,
     "domaine ignore (joker ou regex dans $domain)": 49,
@@ -64,8 +64,8 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Base-filter.json",
-      "rules": 92851,
-      "bytes": 12566360
+      "rules": 88789,
+      "bytes": 12116717
     }
   ]
 }

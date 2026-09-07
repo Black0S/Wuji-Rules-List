@@ -2,18 +2,18 @@
   "source_file": "EasyList-China.txt",
   "source_name": "EasyList China",
   "source_title": "EasyList China",
-  "source_version": "2.1.67.55",
+  "source_version": "2.1.67.57",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/104.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:19:17+00:00",
+  "converted_at": "2026-09-07T09:20:29+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 19472,
-  "rules_in": 19358,
-  "rules_out": 14621,
+  "lines_total": 19477,
+  "rules_in": 19363,
+  "rules_out": 14626,
   "coverage_pct": 98.09,
   "breakdown": {
-    "block": 11429,
+    "block": 11434,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 2216,
@@ -36,8 +36,8 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-China.json",
-      "rules": 14621,
-      "bytes": 1805146
+      "rules": 14626,
+      "bytes": 1805691
     }
   ]
 }

@@ -2,18 +2,18 @@
   "source_file": "CHN-AdRules-DNS-List.txt",
   "source_name": "CHN: AdRules DNS List",
   "source_title": "CHN: AdRules DNS List",
-  "source_version": "1.0.40.24",
+  "source_version": "1.0.40.25",
   "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_29.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:18:52+00:00",
+  "converted_at": "2026-09-07T09:20:09+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 199980,
-  "rules_in": 199971,
-  "rules_out": 199972,
+  "lines_total": 200016,
+  "rules_in": 200007,
+  "rules_out": 200008,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 199971,
+    "block": 200007,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -27,12 +27,12 @@
     {
       "file": "Webkit-CHN-AdRules-DNS-List-1.json",
       "rules": 150000,
-      "bytes": 17478042
+      "bytes": 17477937
     },
     {
       "file": "Webkit-CHN-AdRules-DNS-List-2.json",
-      "rules": 49972,
-      "bytes": 5805682
+      "rules": 50008,
+      "bytes": 5809841
     }
   ]
 }

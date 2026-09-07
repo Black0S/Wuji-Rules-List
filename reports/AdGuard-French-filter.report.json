@@ -2,10 +2,10 @@
   "source_file": "AdGuard-French-filter.txt",
   "source_name": "AdGuard French filter",
   "source_title": "AdGuard French filter",
-  "source_version": "2.0.57.62",
+  "source_version": "2.0.57.63",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/16.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:17:37+00:00",
+  "converted_at": "2026-09-07T09:19:10+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 16317,
@@ -50,7 +50,7 @@
     {
       "file": "Webkit-AdGuard-French-filter.json",
       "rules": 11654,
-      "bytes": 1541615
+      "bytes": 1541633
     }
   ]
 }

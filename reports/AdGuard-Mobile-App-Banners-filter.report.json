@@ -2,29 +2,29 @@
   "source_file": "AdGuard-Mobile-App-Banners-filter.txt",
   "source_name": "AdGuard Mobile App Banners filter",
   "source_title": "AdGuard Mobile App Banners filter",
-  "source_version": "2.0.31.87",
+  "source_version": "2.0.31.91",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/20.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:17:39+00:00",
+  "converted_at": "2026-09-07T09:19:11+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 4418,
-  "rules_in": 4141,
-  "rules_out": 2302,
-  "coverage_pct": 77.25,
+  "lines_total": 4425,
+  "rules_in": 4147,
+  "rules_out": 2304,
+  "coverage_pct": 77.26,
   "breakdown": {
     "block": 150,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 2144,
-    "css_selectors": 3042,
+    "css_display_none": 2146,
+    "css_selectors": 3047,
     "ignore_previous_rules": 7
   },
-  "skipped_total": 939,
+  "skipped_total": 940,
   "skipped_reasons": {
     "injection de style / scriptlet (#$#)": 402,
     "selecteur CSS etendu (#?#)": 226,
-    "JavaScript / scriptlet (#%#)": 222,
+    "JavaScript / scriptlet (#%#)": 223,
     "domaine cosmetique non exprimable (joker de TLD)": 55,
     "injection de style etendue (#$?#)": 19,
     "modificateur non supporte: $path": 11,
@@ -39,8 +39,8 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Mobile-App-Banners-filter.json",
-      "rules": 2302,
-      "bytes": 378543
+      "rules": 2304,
+      "bytes": 379049
     }
   ]
 }

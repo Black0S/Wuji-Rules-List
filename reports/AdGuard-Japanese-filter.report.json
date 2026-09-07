@@ -2,21 +2,21 @@
   "source_file": "AdGuard-Japanese-filter.txt",
   "source_name": "AdGuard Japanese filter",
   "source_title": "AdGuard Japanese filter",
-  "source_version": "2.0.76.24",
+  "source_version": "2.0.76.25",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/7.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:17:38+00:00",
+  "converted_at": "2026-09-07T09:19:11+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 12790,
   "rules_in": 12084,
-  "rules_out": 5988,
+  "rules_out": 5989,
   "coverage_pct": 85.49,
   "breakdown": {
     "block": 1674,
     "block_document": 217,
     "block_cookies": 0,
-    "css_display_none": 3813,
+    "css_display_none": 3814,
     "css_selectors": 8157,
     "ignore_previous_rules": 283
   },
@@ -46,8 +46,8 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Japanese-filter.json",
-      "rules": 5988,
-      "bytes": 1079430
+      "rules": 5989,
+      "bytes": 1079557
     }
   ]
 }

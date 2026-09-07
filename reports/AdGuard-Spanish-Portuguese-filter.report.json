@@ -2,29 +2,29 @@
   "source_file": "AdGuard-Spanish-Portuguese-filter.txt",
   "source_name": "AdGuard Spanish/Portuguese filter",
   "source_title": "AdGuard Spanish/Portuguese filter",
-  "source_version": "2.0.35.60",
+  "source_version": "2.0.35.64",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/9.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:17:42+00:00",
+  "converted_at": "2026-09-07T09:19:14+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 6605,
-  "rules_in": 5643,
+  "lines_total": 6606,
+  "rules_in": 5644,
   "rules_out": 2715,
-  "coverage_pct": 78.93,
+  "coverage_pct": 78.9,
   "breakdown": {
     "block": 839,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 1584,
-    "css_selectors": 3324,
+    "css_selectors": 3323,
     "ignore_previous_rules": 291
   },
-  "skipped_total": 1100,
+  "skipped_total": 1102,
   "skipped_reasons": {
-    "JavaScript / scriptlet (#%#)": 582,
+    "JavaScript / scriptlet (#%#)": 583,
     "injection de style / scriptlet (#$#)": 205,
-    "selecteur CSS etendu (#?#)": 196,
+    "selecteur CSS etendu (#?#)": 197,
     "modificateur non supporte: $redirect": 66,
     "domaine cosmetique non exprimable (joker de TLD)": 18,
     "injection de style etendue (#$?#)": 13,
@@ -48,7 +48,7 @@
     {
       "file": "Webkit-AdGuard-Spanish-Portuguese-filter.json",
       "rules": 2715,
-      "bytes": 443947
+      "bytes": 443921
     }
   ]
 }
