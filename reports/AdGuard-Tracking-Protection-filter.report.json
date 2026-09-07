@@ -2,40 +2,41 @@
   "source_file": "AdGuard-Tracking-Protection-filter.txt",
   "source_name": "AdGuard Tracking Protection filter",
   "source_title": "AdGuard Tracking Protection filter",
-  "source_version": "2.1.10.88",
+  "source_version": "2.1.10.89",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/3.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:19:44+00:00",
+  "converted_at": "2026-09-07T12:30:53+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 330891,
-  "rules_in": 327290,
-  "rules_out": 325111,
+  "lines_total": 330897,
+  "rules_in": 327294,
+  "rules_out": 325124,
   "coverage_pct": 99.35,
   "breakdown": {
-    "block": 322712,
+    "block": 322711,
     "block_document": 1,
     "block_cookies": 6,
-    "css_display_none": 197,
-    "css_selectors": 252,
-    "ignore_previous_rules": 2194
+    "css_display_none": 198,
+    "css_selectors": 253,
+    "ignore_previous_rules": 2207
   },
-  "skipped_total": 1934,
+  "skipped_total": 1925,
   "skipped_reasons": {
-    "$cookie avec valeur / en exception": 1087,
+    "$cookie avec valeur / en exception": 1089,
     "JavaScript / scriptlet (#%#)": 484,
     "modificateur non supporte: $redirect": 235,
     "selecteur CSS etendu (#?#)": 48,
-    "regex hors du sous-ensemble WebKit": 19,
+    "regex hors du sous-ensemble WebKit": 18,
     "injection de style / scriptlet (#$#)": 15,
-    "$domain inexprimable (regex ou joker)": 15,
     "modificateur non supporte: $permissions": 7,
-    "modificateur non supporte: $badfilter": 7,
+    "directive $badfilter (retractation appliquee)": 7,
     "modificateur non supporte: $redirect-rule": 6,
     "modificateur non supporte: $method": 4,
+    "retiree par $badfilter (retractation amont)": 3,
     "modificateur non supporte: $path": 2,
     "injection de style etendue (#$?#)": 2,
-    "domaine cosmetique non exprimable (joker de TLD)": 1,
+    "$domain inexprimable (regex ou joker)": 2,
+    "alternation sous quantificateur": 1,
     "exception de scriptlet": 1,
     "modificateur non supporte: $genericblock": 1
   },
@@ -43,25 +44,34 @@
     "doublon fusionne": 191,
     "modificateur sans effet sous WebKit: $all": 38,
     "modificateur sans effet sous WebKit: $important": 28,
-    "domaine ignore (joker ou regex dans $domain)": 7,
-    "domaine ignore (joker) dans une regle cosmetique": 1,
     "$domain abandonne (une seule condition par trigger)": 1
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-1.json",
       "rules": 150000,
-      "bytes": 17904859
+      "bytes": 17939864
     },
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-2.json",
       "rules": 150000,
-      "bytes": 17420376
+      "bytes": 17455493
     },
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-3.json",
-      "rules": 29499,
-      "bytes": 3526558
+      "rules": 29538,
+      "bytes": 3576950
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-AdGuard-Tracking-Protection-filter.json",
+    "total": 530,
+    "counts": {
+      "scriptlets": 465,
+      "procedural": 48,
+      "styles": 17,
+      "html": 0,
+      "raw_js": 20
+    }
+  }
 }

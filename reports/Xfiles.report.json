@@ -5,36 +5,45 @@
   "source_version": "2.0.2.48",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/206.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:23:46+00:00",
+  "converted_at": "2026-09-07T12:34:22+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 4835,
   "rules_in": 4808,
-  "rules_out": 2672,
-  "coverage_pct": 99.44,
+  "rules_out": 2673,
+  "coverage_pct": 99.48,
   "breakdown": {
     "block": 1397,
     "block_document": 6,
     "block_cookies": 0,
-    "css_display_none": 1255,
-    "css_selectors": 3365,
+    "css_display_none": 1256,
+    "css_selectors": 3367,
     "ignore_previous_rules": 13
   },
-  "skipped_total": 26,
+  "skipped_total": 24,
   "skipped_reasons": {
     "modificateur non supporte: $csp": 23,
-    "domaine cosmetique non exprimable (joker de TLD)": 2,
     "selecteur CSS etendu (#?#)": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 2,
     "doublon fusionne": 1
   },
   "outputs": [
     {
       "file": "Webkit-Xfiles.json",
-      "rules": 2672,
-      "bytes": 358797
+      "rules": 2673,
+      "bytes": 360339
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Xfiles.json",
+    "total": 1,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 1,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

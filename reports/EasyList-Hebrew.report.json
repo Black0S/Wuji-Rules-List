@@ -5,28 +5,28 @@
   "source_version": "2.0.6.46",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/108.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:20:32+00:00",
+  "converted_at": "2026-09-07T12:31:39+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1771,
   "rules_in": 1473,
-  "rules_out": 713,
-  "coverage_pct": 90.7,
+  "rules_out": 717,
+  "coverage_pct": 90.97,
   "breakdown": {
     "block": 291,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 260,
     "css_selectors": 884,
-    "ignore_previous_rules": 161
+    "ignore_previous_rules": 165
   },
-  "skipped_total": 103,
+  "skipped_total": 101,
   "skipped_reasons": {
     "JavaScript / scriptlet (#%#)": 41,
     "modificateur non supporte: $redirect": 33,
-    "regex hors du sous-ensemble WebKit": 12,
+    "regex hors du sous-ensemble WebKit": 10,
     "selecteur CSS etendu (#?#)": 8,
-    "modificateur non supporte: $badfilter": 3,
+    "directive $badfilter (retractation appliquee)": 3,
     "injection de style / scriptlet (#$#)": 3,
     "modificateur non supporte: $csp": 1,
     "modificateur non supporte: $redirect-rule": 1,
@@ -34,13 +34,25 @@
   },
   "notes": {
     "modificateur sans effet sous WebKit: $important": 16,
-    "doublon fusionne": 10
+    "doublon fusionne": 10,
+    "alternation eclatee en 2 regles": 2
   },
   "outputs": [
     {
       "file": "Webkit-EasyList-Hebrew.json",
-      "rules": 713,
-      "bytes": 140151
+      "rules": 717,
+      "bytes": 141149
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-EasyList-Hebrew.json",
+    "total": 53,
+    "counts": {
+      "scriptlets": 41,
+      "procedural": 8,
+      "styles": 4,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

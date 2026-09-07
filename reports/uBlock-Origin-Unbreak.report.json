@@ -5,30 +5,29 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/unbreak.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:23:48+00:00",
+  "converted_at": "2026-09-07T12:34:25+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 6056,
   "rules_in": 2553,
-  "rules_out": 1383,
-  "coverage_pct": 55.15,
+  "rules_out": 1398,
+  "coverage_pct": 55.74,
   "breakdown": {
-    "block": 148,
+    "block": 149,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 60,
     "css_selectors": 86,
-    "ignore_previous_rules": 1174
+    "ignore_previous_rules": 1188
   },
-  "skipped_total": 1006,
+  "skipped_total": 991,
   "skipped_reasons": {
     "scriptlet ou filtrage HTML": 319,
     "modificateur non supporte: $redirect": 237,
-    "modificateur non supporte: $badfilter": 212,
+    "directive $badfilter (retractation appliquee)": 212,
     "modificateur non supporte: $redirect-rule": 98,
     "pseudo-classe CSS etendue": 69,
     "modificateur non supporte: $cname": 27,
-    "$domain inexprimable (regex ou joker)": 15,
     "modificateur non supporte: $removeparam": 10,
     "modificateur non supporte: $csp": 5,
     "modificateur non supporte: $uritransform": 2,
@@ -42,15 +41,25 @@
     "modificateur non supporte: $replace": 1
   },
   "notes": {
-    "modificateur sans effet sous WebKit: $important": 72,
-    "domaine ignore (joker ou regex dans $domain)": 2,
+    "modificateur sans effet sous WebKit: $important": 73,
     "modificateur sans effet sous WebKit: $all": 1
   },
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Unbreak.json",
-      "rules": 1383,
-      "bytes": 266793
+      "rules": 1398,
+      "bytes": 324056
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-uBlock-Origin-Unbreak.json",
+    "total": 390,
+    "counts": {
+      "scriptlets": 301,
+      "procedural": 71,
+      "styles": 0,
+      "html": 18,
+      "raw_js": 0
+    }
+  }
 }

@@ -2,18 +2,18 @@
   "source_file": "HaGeZi-s-URL-Shortener-Blocklist.txt",
   "source_name": "HaGeZi's URL Shortener Blocklist",
   "source_title": "HaGeZi's URL Shortener Blocklist",
-  "source_version": "1.0.6.3",
+  "source_version": "1.0.6.4",
   "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_68.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:22:18+00:00",
+  "converted_at": "2026-09-07T12:33:06+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 9914,
-  "rules_in": 9905,
-  "rules_out": 9906,
+  "lines_total": 9962,
+  "rules_in": 9953,
+  "rules_out": 9954,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 9905,
+    "block": 9953,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -26,8 +26,19 @@
   "outputs": [
     {
       "file": "Webkit-HaGeZi-s-URL-Shortener-Blocklist.json",
-      "rules": 9906,
-      "bytes": 1043071
+      "rules": 9954,
+      "bytes": 1048033
     }
-  ]
+  ],
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

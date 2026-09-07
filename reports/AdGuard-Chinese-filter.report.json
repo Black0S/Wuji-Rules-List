@@ -2,58 +2,70 @@
   "source_file": "AdGuard-Chinese-filter.txt",
   "source_name": "AdGuard Chinese filter",
   "source_title": "AdGuard Chinese filter",
-  "source_version": "2.1.64.89",
+  "source_version": "2.1.64.91",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/224.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:18:46+00:00",
+  "converted_at": "2026-09-07T12:29:50+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 23175,
-  "rules_in": 22395,
-  "rules_out": 16043,
-  "coverage_pct": 94.99,
+  "lines_total": 23179,
+  "rules_in": 22399,
+  "rules_out": 16046,
+  "coverage_pct": 94.98,
   "breakdown": {
-    "block": 12186,
+    "block": 12187,
     "block_document": 2,
     "block_cookies": 0,
-    "css_display_none": 2785,
-    "css_selectors": 8015,
-    "ignore_previous_rules": 1069
+    "css_display_none": 2789,
+    "css_selectors": 8018,
+    "ignore_previous_rules": 1067
   },
-  "skipped_total": 865,
+  "skipped_total": 867,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 292,
     "JavaScript / scriptlet (#%#)": 289,
     "injection de style / scriptlet (#$#)": 123,
     "modificateur non supporte: $redirect": 53,
     "injection de style etendue (#$?#)": 21,
-    "regex hors du sous-ensemble WebKit": 16,
+    "regex hors du sous-ensemble WebKit": 15,
     "modificateur non supporte: $csp": 15,
     "modificateur non supporte: $denyallow": 15,
-    "modificateur non supporte: $badfilter": 11,
+    "directive $badfilter (retractation appliquee)": 11,
     "modificateur non supporte: $genericblock": 8,
     "$domain inexprimable (regex ou joker)": 7,
     "selecteur CSS etendu (#@?#)": 4,
     "modificateur non supporte: $removeparam": 4,
-    "domaine cosmetique non exprimable (joker de TLD)": 2,
+    "retiree par $badfilter (retractation amont)": 4,
     "regle cosmetique entierement exceptee": 2,
     "modificateur non supporte: $stealth": 1,
+    "domaine cosmetique non exprimable (joker de TLD)": 1,
     "modificateur inconnu: $_____": 1,
     "$domain melange inclusions et exclusions": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 20,
     "unless-domain abandonne (incompatible avec if-domain)": 4,
     "modificateur sans effet sous WebKit: $all": 3,
     "doublon fusionne": 3,
     "modificateur sans effet sous WebKit: $important": 2,
+    "domaine ignore (joker) dans une regle cosmetique": 1,
     "$domain abandonne (une seule condition par trigger)": 1
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Chinese-filter.json",
-      "rules": 16043,
-      "bytes": 2033627
+      "rules": 16046,
+      "bytes": 2046925
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-AdGuard-Chinese-filter.json",
+    "total": 719,
+    "counts": {
+      "scriptlets": 279,
+      "procedural": 296,
+      "styles": 144,
+      "html": 0,
+      "raw_js": 10
+    }
+  }
 }

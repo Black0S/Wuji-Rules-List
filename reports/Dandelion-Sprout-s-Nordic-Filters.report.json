@@ -5,45 +5,56 @@
   "source_version": "2.0.8.54",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/249.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:20:28+00:00",
+  "converted_at": "2026-09-07T12:31:36+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 3546,
   "rules_in": 2935,
-  "rules_out": 1435,
-  "coverage_pct": 84.19,
+  "rules_out": 1582,
+  "coverage_pct": 90.36,
   "breakdown": {
-    "block": 659,
-    "block_document": 50,
+    "block": 698,
+    "block_document": 141,
     "block_cookies": 0,
-    "css_display_none": 660,
-    "css_selectors": 1697,
+    "css_display_none": 677,
+    "css_selectors": 1748,
     "ignore_previous_rules": 65
   },
-  "skipped_total": 447,
+  "skipped_total": 266,
   "skipped_reasons": {
-    "$domain inexprimable (regex ou joker)": 204,
+    "$domain inexprimable (regex ou joker)": 74,
     "injection de style / scriptlet (#$#)": 71,
     "selecteur CSS etendu (#?#)": 66,
-    "domaine cosmetique non exprimable (joker de TLD)": 59,
     "JavaScript / scriptlet (#%#)": 31,
     "modificateur non supporte: $redirect": 9,
+    "domaine cosmetique non exprimable (joker de TLD)": 8,
     "regex hors du sous-ensemble WebKit": 5,
-    "modificateur non supporte: $badfilter": 1,
+    "directive $badfilter (retractation appliquee)": 1,
     "modificateur non supporte: $redirect-rule": 1
   },
   "notes": {
     "modificateur sans effet sous WebKit: $all": 226,
-    "domaine ignore (joker) dans une regle cosmetique": 75,
+    "domaine ignore (joker) dans une regle cosmetique": 18,
     "modificateur sans effet sous WebKit: $important": 6,
-    "domaine ignore (joker ou regex dans $domain)": 3,
-    "unless-domain abandonne (incompatible avec if-domain)": 1
+    "unless-domain abandonne (incompatible avec if-domain)": 1,
+    "domaine ignore (joker ou regex dans $domain)": 1
   },
   "outputs": [
     {
       "file": "Webkit-Dandelion-Sprout-s-Nordic-Filters.json",
-      "rules": 1435,
-      "bytes": 236978
+      "rules": 1582,
+      "bytes": 776068
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Dandelion-Sprout-s-Nordic-Filters.json",
+    "total": 168,
+    "counts": {
+      "scriptlets": 31,
+      "procedural": 66,
+      "styles": 71,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

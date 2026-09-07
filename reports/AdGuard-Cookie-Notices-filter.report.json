@@ -2,52 +2,61 @@
   "source_file": "AdGuard-Cookie-Notices-filter.txt",
   "source_name": "AdGuard Cookie Notices filter",
   "source_title": "AdGuard Cookie Notices filter",
-  "source_version": "2.0.93.75",
+  "source_version": "2.0.93.78",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/18.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:18:47+00:00",
+  "converted_at": "2026-09-07T12:29:51+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 24587,
-  "rules_in": 21570,
-  "rules_out": 11863,
-  "coverage_pct": 65.02,
+  "lines_total": 24608,
+  "rules_in": 21585,
+  "rules_out": 11945,
+  "coverage_pct": 65.37,
   "breakdown": {
-    "block": 1267,
+    "block": 1268,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 9100,
-    "css_selectors": 11263,
-    "ignore_previous_rules": 1495
+    "css_display_none": 9171,
+    "css_selectors": 11338,
+    "ignore_previous_rules": 1505
   },
-  "skipped_total": 6284,
+  "skipped_total": 6207,
   "skipped_reasons": {
-    "injection de style / scriptlet (#$#)": 3075,
-    "JavaScript / scriptlet (#%#)": 2669,
+    "injection de style / scriptlet (#$#)": 3077,
+    "JavaScript / scriptlet (#%#)": 2670,
     "selecteur CSS etendu (#?#)": 310,
     "injection de style etendue (#$?#)": 116,
-    "domaine cosmetique non exprimable (joker de TLD)": 71,
     "modificateur non supporte: $redirect": 13,
-    "$domain inexprimable (regex ou joker)": 10,
     "injection de style (non supportee)": 5,
     "modificateur non supporte: $path": 5,
     "regex hors du sous-ensemble WebKit": 4,
     "regle cosmetique entierement exceptee": 4,
+    "domaine cosmetique non exprimable (joker de TLD)": 1,
     "exception d'injection de style": 1,
     "exception de scriptlet": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 150,
-    "modificateur sans effet sous WebKit: $important": 12,
+    "modificateur sans effet sous WebKit: $important": 13,
     "doublon fusionne": 3,
-    "domaine ignore (joker ou regex dans $domain)": 2,
-    "unless-domain abandonne (incompatible avec if-domain)": 1
+    "unless-domain abandonne (incompatible avec if-domain)": 1,
+    "domaine ignore (joker) dans une regle cosmetique": 1
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Cookie-Notices-filter.json",
-      "rules": 11863,
-      "bytes": 1953122
+      "rules": 11945,
+      "bytes": 2344709
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-AdGuard-Cookie-Notices-filter.json",
+    "total": 6121,
+    "counts": {
+      "scriptlets": 2612,
+      "procedural": 315,
+      "styles": 3194,
+      "html": 0,
+      "raw_js": 59
+    }
+  }
 }

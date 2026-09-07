@@ -2,18 +2,18 @@
   "source_file": "HaGeZi-s-Gambling-Blocklist.txt",
   "source_name": "HaGeZi's Gambling Blocklist",
   "source_title": "HaGeZi's Gambling Blocklist",
-  "source_version": "1.0.30.99",
+  "source_version": "1.0.31.0",
   "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_47.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:21:54+00:00",
+  "converted_at": "2026-09-07T12:32:46+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 469525,
-  "rules_in": 469516,
-  "rules_out": 469517,
+  "lines_total": 471884,
+  "rules_in": 471875,
+  "rules_out": 471876,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 469516,
+    "block": 471875,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -27,22 +27,33 @@
     {
       "file": "Webkit-HaGeZi-s-Gambling-Blocklist-1.json",
       "rules": 150000,
-      "bytes": 16391794
+      "bytes": 16391982
     },
     {
       "file": "Webkit-HaGeZi-s-Gambling-Blocklist-2.json",
       "rules": 150000,
-      "bytes": 16719585
+      "bytes": 16720579
     },
     {
       "file": "Webkit-HaGeZi-s-Gambling-Blocklist-3.json",
       "rules": 150000,
-      "bytes": 16778054
+      "bytes": 16788113
     },
     {
       "file": "Webkit-HaGeZi-s-Gambling-Blocklist-4.json",
-      "rules": 19517,
-      "bytes": 2152007
+      "rules": 21876,
+      "bytes": 2409782
     }
-  ]
+  ],
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

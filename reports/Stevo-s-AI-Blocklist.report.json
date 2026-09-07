@@ -5,42 +5,50 @@
   "source_version": "2.0.1.77",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/260.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:23:41+00:00",
+  "converted_at": "2026-09-07T12:34:18+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 5088,
   "rules_in": 1642,
-  "rules_out": 570,
-  "coverage_pct": 87.58,
+  "rules_out": 576,
+  "coverage_pct": 90.13,
   "breakdown": {
-    "block": 81,
+    "block": 83,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 488,
-    "css_selectors": 1357,
+    "css_display_none": 492,
+    "css_selectors": 1397,
     "ignore_previous_rules": 0
   },
-  "skipped_total": 202,
+  "skipped_total": 160,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 71,
     "JavaScript / scriptlet (#%#)": 51,
-    "domaine cosmetique non exprimable (joker de TLD)": 40,
     "injection de style / scriptlet (#$#)": 20,
     "injection de style etendue (#$?#)": 13,
-    "$domain inexprimable (regex ou joker)": 2,
     "injection de style (non supportee)": 2,
     "exception d'injection de style etendue": 2,
     "selecteur CSS vide ou trop long": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 40,
     "doublon fusionne": 2
   },
   "outputs": [
     {
       "file": "Webkit-Stevo-s-AI-Blocklist.json",
-      "rules": 570,
-      "bytes": 151870
+      "rules": 576,
+      "bytes": 167437
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Stevo-s-AI-Blocklist.json",
+    "total": 160,
+    "counts": {
+      "scriptlets": 51,
+      "procedural": 74,
+      "styles": 35,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

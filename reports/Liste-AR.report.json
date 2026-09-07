@@ -2,10 +2,10 @@
   "source_file": "Liste-AR.txt",
   "source_name": "Liste AR",
   "source_title": "Liste AR",
-  "source_version": "2.1.97.28",
+  "source_version": "2.1.97.29",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/112.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:22:22+00:00",
+  "converted_at": "2026-09-07T12:33:09+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1680,
@@ -31,5 +31,16 @@
       "rules": 1240,
       "bytes": 170486
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Liste-AR.json",
+    "total": 6,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 6,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

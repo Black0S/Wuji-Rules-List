@@ -2,41 +2,50 @@
   "source_file": "Liste-FR.txt",
   "source_name": "Liste FR",
   "source_title": "Liste FR",
-  "source_version": "2.1.97.27",
+  "source_version": "2.1.97.28",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/113.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:22:23+00:00",
+  "converted_at": "2026-09-07T12:33:10+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 13659,
   "rules_in": 13534,
-  "rules_out": 10914,
-  "coverage_pct": 98.98,
+  "rules_out": 10916,
+  "coverage_pct": 99.0,
   "breakdown": {
     "block": 9815,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 944,
-    "css_selectors": 3427,
+    "css_display_none": 946,
+    "css_selectors": 3430,
     "ignore_previous_rules": 154
   },
-  "skipped_total": 130,
+  "skipped_total": 127,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 113,
     "modificateur non supporte: $csp": 6,
     "modificateur non supporte: $redirect": 6,
-    "domaine cosmetique non exprimable (joker de TLD)": 3,
     "regex hors du sous-ensemble WebKit": 2
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 3,
     "doublon fusionne": 1
   },
   "outputs": [
     {
       "file": "Webkit-Liste-FR.json",
-      "rules": 10914,
-      "bytes": 1416134
+      "rules": 10916,
+      "bytes": 1429484
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Liste-FR.json",
+    "total": 113,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 113,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

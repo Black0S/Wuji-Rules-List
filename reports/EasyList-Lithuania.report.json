@@ -5,7 +5,7 @@
   "source_version": "2.0.2.99",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/110.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:20:32+00:00",
+  "converted_at": "2026-09-07T12:31:39+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1202,
@@ -35,5 +35,16 @@
       "rules": 858,
       "bytes": 126093
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-EasyList-Lithuania.json",
+    "total": 23,
+    "counts": {
+      "scriptlets": 11,
+      "procedural": 5,
+      "styles": 7,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

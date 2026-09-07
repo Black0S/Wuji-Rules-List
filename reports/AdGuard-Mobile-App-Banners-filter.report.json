@@ -2,30 +2,29 @@
   "source_file": "AdGuard-Mobile-App-Banners-filter.txt",
   "source_name": "AdGuard Mobile App Banners filter",
   "source_title": "AdGuard Mobile App Banners filter",
-  "source_version": "2.0.31.91",
+  "source_version": "2.0.31.93",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/20.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:19:11+00:00",
+  "converted_at": "2026-09-07T12:30:14+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 4425,
-  "rules_in": 4147,
-  "rules_out": 2304,
-  "coverage_pct": 77.26,
+  "lines_total": 4426,
+  "rules_in": 4148,
+  "rules_out": 2341,
+  "coverage_pct": 78.59,
   "breakdown": {
     "block": 150,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 2146,
-    "css_selectors": 3047,
+    "css_display_none": 2183,
+    "css_selectors": 3103,
     "ignore_previous_rules": 7
   },
-  "skipped_total": 940,
+  "skipped_total": 885,
   "skipped_reasons": {
     "injection de style / scriptlet (#$#)": 402,
     "selecteur CSS etendu (#?#)": 226,
     "JavaScript / scriptlet (#%#)": 223,
-    "domaine cosmetique non exprimable (joker de TLD)": 55,
     "injection de style etendue (#$?#)": 19,
     "modificateur non supporte: $path": 11,
     "$domain inexprimable (regex ou joker)": 1,
@@ -33,14 +32,23 @@
     "injection de style (non supportee)": 1,
     "ancre `|` en milieu de motif": 1
   },
-  "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 70
-  },
+  "notes": {},
   "outputs": [
     {
       "file": "Webkit-AdGuard-Mobile-App-Banners-filter.json",
-      "rules": 2304,
-      "bytes": 379049
+      "rules": 2341,
+      "bytes": 490570
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-AdGuard-Mobile-App-Banners-filter.json",
+    "total": 862,
+    "counts": {
+      "scriptlets": 214,
+      "procedural": 227,
+      "styles": 421,
+      "html": 0,
+      "raw_js": 9
+    }
+  }
 }

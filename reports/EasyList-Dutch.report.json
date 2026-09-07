@@ -2,39 +2,47 @@
   "source_file": "EasyList-Dutch.txt",
   "source_name": "EasyList Dutch",
   "source_title": "EasyList Dutch",
-  "source_version": "2.1.97.26",
+  "source_version": "2.1.97.27",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/106.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:20:31+00:00",
+  "converted_at": "2026-09-07T12:31:39+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1582,
   "rules_in": 1526,
-  "rules_out": 1079,
-  "coverage_pct": 96.66,
+  "rules_out": 1080,
+  "coverage_pct": 96.79,
   "breakdown": {
     "block": 445,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 607,
-    "css_selectors": 1004,
+    "css_display_none": 608,
+    "css_selectors": 1006,
     "ignore_previous_rules": 26
   },
-  "skipped_total": 37,
+  "skipped_total": 35,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 33,
-    "domaine cosmetique non exprimable (joker de TLD)": 2,
     "modificateur non supporte: $redirect": 1,
     "regex hors du sous-ensemble WebKit": 1
   },
-  "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 2
-  },
+  "notes": {},
   "outputs": [
     {
       "file": "Webkit-EasyList-Dutch.json",
-      "rules": 1079,
-      "bytes": 159577
+      "rules": 1080,
+      "bytes": 161925
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-EasyList-Dutch.json",
+    "total": 33,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 33,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

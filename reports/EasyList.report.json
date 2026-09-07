@@ -2,44 +2,57 @@
   "source_file": "EasyList.txt",
   "source_name": "EasyList",
   "source_title": "EasyList",
-  "source_version": "2.1.74.30",
+  "source_version": "2.1.74.31",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/101.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T09:20:40+00:00",
+  "converted_at": "2026-09-07T12:31:46+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 77931,
-  "rules_in": 77682,
-  "rules_out": 58830,
-  "coverage_pct": 98.86,
+  "lines_total": 78035,
+  "rules_in": 77786,
+  "rules_out": 58980,
+  "coverage_pct": 99.15,
   "breakdown": {
-    "block": 51801,
+    "block": 51908,
     "block_document": 594,
     "block_cookies": 0,
-    "css_display_none": 5679,
-    "css_selectors": 23648,
+    "css_display_none": 5722,
+    "css_selectors": 23867,
     "ignore_previous_rules": 755
   },
-  "skipped_total": 547,
+  "skipped_total": 328,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 288,
-    "domaine cosmetique non exprimable (joker de TLD)": 220,
-    "regex hors du sous-ensemble WebKit": 21,
+    "regex hors du sous-ensemble WebKit": 18,
     "modificateur non supporte: $redirect": 7,
     "ancre `|` en milieu de motif": 3,
     "modificateur non supporte: $csp": 3,
     "injection de style etendue (#$?#)": 3,
-    "$domain inexprimable (regex ou joker)": 2
+    "$domain inexprimable (regex ou joker)": 2,
+    "expansion d'alternation trop large": 2,
+    "domaine cosmetique non exprimable (joker de TLD)": 2
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 285,
-    "doublon fusionne": 1
+    "domaine ignore (joker) dans une regle cosmetique": 2,
+    "doublon fusionne": 1,
+    "alternation eclatee en 4 regles": 1
   },
   "outputs": [
     {
       "file": "Webkit-EasyList.json",
-      "rules": 58830,
-      "bytes": 7417698
+      "rules": 58980,
+      "bytes": 7579900
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-EasyList.json",
+    "total": 291,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 288,
+      "styles": 3,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }
