@@ -5,31 +5,29 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-chat.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:26:35+00:00",
+  "converted_at": "2026-09-07T01:02:07+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 302,
   "rules_in": 282,
-  "rules_out": 259,
-  "coverage_pct": 98.94,
+  "rules_out": 262,
+  "coverage_pct": 100.0,
   "breakdown": {
     "block": 246,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 12,
-    "css_selectors": 33,
+    "css_display_none": 15,
+    "css_selectors": 36,
     "ignore_previous_rules": 0
   },
-  "skipped_total": 3,
-  "skipped_reasons": {
-    "pseudo-classe :has() (activer --allow-has)": 3
-  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
   "notes": {},
   "outputs": [
     {
       "file": "Webkit-EasyList-Chat-Widgets.json",
-      "rules": 259,
-      "bytes": 35504
+      "rules": 262,
+      "bytes": 35930
     }
   ]
 }

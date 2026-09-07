@@ -119,7 +119,7 @@ EXTENDED_CSS_TOKENS = (
     ":has-text(", ":contains(", ":matches-css", ":matches-attr", ":matches-path",
     ":matches-property", ":min-text-length(", ":xpath(", ":nth-ancestor(",
     ":upward(", ":watch-attr(", ":remove()", ":remove(", ":style(", ":-abp-",
-    ":if(", ":if-not(", ":properties(", ":others(", ":not(:has", "##^",
+    ":if(", ":if-not(", ":properties(", ":others(", "##^",
 )
 
 # Constructions regex hors du sous-ensemble accepte par WebKit.
@@ -180,6 +180,31 @@ def idna_normalize(pattern):
     return percent_encode_non_ascii(pattern)
 
 
+def misplaced_anchor(rx):
+    """`^` ailleurs qu'en tete, ou `$` ailleurs qu'en fin: refuses par WebKit.
+
+    Verifie sur le compilateur systeme (voir tools/wk_probe.swift).
+    """
+    i, in_class, esc = 0, False, False
+    while i < len(rx):
+        c = rx[i]
+        if esc:
+            esc = False
+        elif c == "\\":
+            esc = True
+        elif in_class:
+            if c == "]":
+                in_class = False
+        elif c == "[":
+            in_class = True
+        elif c == "^" and i != 0:
+            return True
+        elif c == "$" and i != len(rx) - 1:
+            return True
+        i += 1
+    return False
+
+
 def validate_raw_regex(rx):
     if not rx:
         raise Unsupported("regex vide")
@@ -187,6 +212,8 @@ def validate_raw_regex(rx):
         raise Unsupported("regex hors du sous-ensemble WebKit")
     if any(ord(c) > 127 for c in rx):
         raise Unsupported("regex non-ASCII")
+    if misplaced_anchor(rx):
+        raise Unsupported("ancre `^` ou `$` mal placee")
     try:
         re.compile(rx)
     except re.error:
@@ -262,13 +289,25 @@ def pattern_to_url_filter(pattern):
 def split_options(text):
     """Separe `pattern$opt1,opt2`. Gere les motifs regex `/.../$opts`."""
     if text.startswith("/"):
-        close = text.rfind("/")
-        if close > 0:
-            tail = text[close + 1:]
-            if tail.startswith("$"):
-                return text[:close + 1], tail[1:]
-            if tail == "":
-                return text, ""
+        # Le `/` fermant est le premier non echappe suivi de rien ou de `$`.
+        # `rfind` se ferait piéger par une regex dans la valeur d'un
+        # modificateur, ex. /re/$document,removeparam=/^=$/.
+        i, closers = 1, []
+        while i < len(text):
+            if text[i] == "\\":
+                i += 2
+                continue
+            if text[i] == "/":
+                closers.append(i)
+            i += 1
+        # Un `/` suivi de `$` prime sur le `/` final: sinon une valeur de
+        # modificateur qui est elle-meme une regex (ex. $domain=/re/) serait
+        # avalee dans le motif.
+        for i in closers:
+            if text[i + 1:].startswith("$"):
+                return text[:i + 1], text[i + 2:]
+        if closers and closers[-1] == len(text) - 1:
+            return text, ""
     idx = -1
     for m in re.finditer(r"(?<!\\)\$", text):
         rest = text[m.end():]
@@ -433,7 +472,7 @@ class Converter(object):
             if token in low:
                 raise Unsupported("pseudo-classe CSS etendue")
         if ":has(" in low and not self.allow_has:
-            raise Unsupported("pseudo-classe :has() (activer --allow-has)")
+            raise Unsupported("pseudo-classe :has() (desactivee par --no-has)")
         if any(ord(c) < 32 for c in sel):
             raise Unsupported("caractere de controle dans le selecteur")
         return sel
@@ -443,6 +482,7 @@ class Converter(object):
     VALID_TRIGGER_KEYS = frozenset((
         "url-filter", "url-filter-is-case-sensitive", "if-domain", "unless-domain",
         "if-top-url", "unless-top-url", "resource-type", "load-type", "load-context"))
+    CONDITION_KEYS = ("if-domain", "unless-domain", "if-top-url", "unless-top-url")
     VALID_ACTIONS = frozenset((
         "block", "block-cookies", "css-display-none", "ignore-previous-rules",
         "make-https"))
@@ -459,12 +499,26 @@ class Converter(object):
             raise Unsupported("url-filter non-ASCII")
         if any(tok in uf for tok in BAD_REGEX_TOKENS):
             raise Unsupported("regex hors du sous-ensemble WebKit")
-        if "if-domain" in trigger and "unless-domain" in trigger:
-            raise Unsupported("if-domain et unless-domain simultanes")
+        if misplaced_anchor(uf):
+            raise Unsupported("ancre `^` ou `$` mal placee")
+        # WebKit: "A trigger cannot have more than one condition
+        # (if-domain, unless-domain, if-top-url, or unless-top-url)".
+        present = [k for k in self.CONDITION_KEYS if k in trigger]
+        if len(present) > 1:
+            raise Unsupported("conditions multiples: %s" % ",".join(present))
+        for key in present:
+            if not trigger[key]:
+                raise Unsupported("condition %s vide" % key)
         for key in ("if-domain", "unless-domain"):
             for dom in trigger.get(key, []):
                 if dom != dom.lower() or any(ord(c) > 127 for c in dom):
                     raise Unsupported("domaine non normalise")
+        for key in ("if-top-url", "unless-top-url"):
+            for rx in trigger.get(key, []):
+                if (not rx or any(ord(c) > 127 for c in rx)
+                        or any(tok in rx for tok in BAD_REGEX_TOKENS)
+                        or misplaced_anchor(rx)):
+                    raise Unsupported("regex %s hors sous-ensemble WebKit" % key)
         if set(trigger.get("resource-type", [])) - set(self.all_types):
             raise Unsupported("resource-type hors profil")
         if set(trigger.get("load-type", [])) - {"first-party", "third-party"}:
@@ -514,6 +568,10 @@ class Converter(object):
 
             if name == "domain":
                 inc, exc, dropped = parse_domain_option(value)
+                if dropped and not inc and not exc:
+                    # Ex. $domain=/regex/ : la portee est inexprimable. Garder la
+                    # regle l'appliquerait partout au lieu d'un seul site.
+                    raise Unsupported("$domain inexprimable (regex ou joker)")
                 if dropped:
                     self.note("domaine ignore (joker ou regex dans $domain)")
                 if_dom.extend(inc)
@@ -595,10 +653,19 @@ class Converter(object):
 
         if exception:
             if elemhide_exception or (document_intent and not inc_types):
-                # Exception de page entiere: on neutralise tout sur ce site.
-                top = {"url-filter": ".*", "if-top-url": [url_filter]}
-                if if_dom:
+                # Exception de page entiere. WebKit n'accepte qu'une seule
+                # condition par trigger: on choisit la plus specifique.
+                top = {"url-filter": ".*"}
+                if url_filter != ".*":
+                    top["if-top-url"] = [url_filter]
+                    if if_dom or unless_dom:
+                        self.note("$domain abandonne (une seule condition par trigger)")
+                elif if_dom:
                     top["if-domain"] = trigger["if-domain"]
+                elif unless_dom:
+                    top["unless-domain"] = trigger["unless-domain"]
+                else:
+                    raise Unsupported("exception globale sans portee")
                 self.emit(self.doc_exceptions, top,
                           {"type": "ignore-previous-rules"})
             else:
@@ -817,7 +884,9 @@ def convert_file(path, meta, args):
     total = len(body) + len(tail)
     outputs = []
 
-    if total <= args.max_rules:
+    if total == 0:
+        chunks = []
+    elif total <= args.max_rules:
         chunks = [body + tail]
     else:
         # On duplique les exceptions dans chaque fichier: `ignore-previous-rules`
@@ -882,8 +951,9 @@ def main():
     ap.add_argument("--document-policy", choices=["guard", "enumerate", "allow"],
                     default="guard",
                     help="protection de la navigation principale (defaut: guard)")
-    ap.add_argument("--allow-has", action="store_true",
-                    help="autoriser :has() dans les selecteurs (Safari 16.4+)")
+    ap.add_argument("--no-has", dest="allow_has", action="store_false", default=True,
+                    help=":has() est accepte par defaut (verifie sur le compilateur "
+                         "WebKit); ce drapeau le desactive pour viser Safari < 16.4")
     ap.add_argument("--css-group-size", type=int, default=250,
                     help="selecteurs regroupes par regle css-display-none")
     ap.add_argument("--max-rules", type=int, default=WEBKIT_MAX_RULES,
@@ -950,6 +1020,17 @@ def main():
             "files": r["outputs"],
         } for r in reports],
     }
+    # Purge des fichiers d'une execution precedente qui n'ont plus de source
+    # (liste retiree du catalogue, ou decoupage devenu plus court). Un fichier
+    # orphelin ferait echouer la verification et resterait charge cote Safari.
+    produced = {o["file"] for r in reports for o in r["outputs"]}
+    stale = [f for f in os.listdir(args.out)
+             if f.startswith(PREFIX) and f.endswith(".json") and f not in produced]
+    if stale and not args.dry_run:
+        for f in stale:
+            os.remove(os.path.join(args.out, f))
+        print("  purge: %d fichier(s) obsolete(s) supprime(s)" % len(stale))
+
     if not args.dry_run:
         write_json_obj = os.path.join(args.out, "index.json")
         with open(write_json_obj, "w", encoding="utf-8") as fh:

@@ -5,43 +5,43 @@
   "source_version": "2.0.12.44",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/257.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:29:41+00:00",
+  "converted_at": "2026-09-07T01:05:46+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 10189,
   "rules_in": 4271,
-  "rules_out": 3934,
-  "coverage_pct": 93.7,
+  "rules_out": 3935,
+  "coverage_pct": 93.73,
   "breakdown": {
-    "block": 1582,
+    "block": 1581,
     "block_document": 2329,
     "block_cookies": 0,
-    "css_display_none": 21,
-    "css_selectors": 90,
+    "css_display_none": 23,
+    "css_selectors": 92,
     "ignore_previous_rules": 1
   },
-  "skipped_total": 261,
+  "skipped_total": 260,
   "skipped_reasons": {
     "modificateur non supporte: $to": 229,
     "regex hors du sous-ensemble WebKit": 13,
     "selecteur CSS etendu (#?#)": 9,
     "domaine cosmetique non exprimable (joker de TLD)": 3,
     "modificateur non supporte: $method": 3,
-    "pseudo-classe :has() (activer --allow-has)": 2,
     "accolade litterale (refusee par le parseur WebKit)": 1,
+    "$domain inexprimable (regex ou joker)": 1,
     "modificateur non supporte: $redirect": 1
   },
   "notes": {
     "modificateur sans effet sous WebKit: $all": 1348,
     "doublon fusionne": 8,
     "domaine ignore (joker) dans une regle cosmetique": 3,
-    "domaine ignore (joker ou regex dans $domain)": 2
+    "domaine ignore (joker ou regex dans $domain)": 1
   },
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Badware-risks.json",
-      "rules": 3934,
-      "bytes": 515379
+      "rules": 3935,
+      "bytes": 515613
     }
   ]
 }

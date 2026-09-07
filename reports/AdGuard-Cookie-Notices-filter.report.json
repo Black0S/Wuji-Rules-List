@@ -5,30 +5,30 @@
   "source_version": "2.0.93.66",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/18.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:25:01+00:00",
+  "converted_at": "2026-09-07T01:00:17+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 24556,
-  "rules_in": 21540,
-  "rules_out": 11625,
-  "coverage_pct": 63.74,
+  "lines_total": 24555,
+  "rules_in": 21539,
+  "rules_out": 11848,
+  "coverage_pct": 65.04,
   "breakdown": {
-    "block": 1266,
+    "block": 1265,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 8858,
-    "css_selectors": 10963,
-    "ignore_previous_rules": 1500
+    "css_display_none": 9088,
+    "css_selectors": 11250,
+    "ignore_previous_rules": 1494
   },
-  "skipped_total": 6547,
+  "skipped_total": 6269,
   "skipped_reasons": {
     "injection de style / scriptlet (#$#)": 3075,
-    "JavaScript / scriptlet (#%#)": 2655,
+    "JavaScript / scriptlet (#%#)": 2654,
     "selecteur CSS etendu (#?#)": 310,
-    "pseudo-classe :has() (activer --allow-has)": 293,
     "injection de style etendue (#$?#)": 116,
-    "domaine cosmetique non exprimable (joker de TLD)": 65,
+    "domaine cosmetique non exprimable (joker de TLD)": 71,
     "modificateur non supporte: $redirect": 13,
+    "$domain inexprimable (regex ou joker)": 10,
     "injection de style (non supportee)": 5,
     "modificateur non supporte: $path": 5,
     "regex hors du sous-ensemble WebKit": 4,
@@ -37,17 +37,17 @@
     "exception de scriptlet": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 144,
-    "modificateur sans effet sous WebKit: $important": 13,
-    "domaine ignore (joker ou regex dans $domain)": 12,
-    "doublon fusionne": 6,
+    "domaine ignore (joker) dans une regle cosmetique": 150,
+    "modificateur sans effet sous WebKit: $important": 12,
+    "doublon fusionne": 3,
+    "domaine ignore (joker ou regex dans $domain)": 2,
     "unless-domain abandonne (incompatible avec if-domain)": 1
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Cookie-Notices-filter.json",
-      "rules": 11625,
-      "bytes": 1899846
+      "rules": 11848,
+      "bytes": 1950900
     }
   ]
 }

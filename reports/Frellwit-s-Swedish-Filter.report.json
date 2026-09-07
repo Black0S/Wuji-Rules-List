@@ -5,24 +5,23 @@
   "source_version": "2.0.25.36",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/243.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:26:59+00:00",
+  "converted_at": "2026-09-07T01:02:32+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 3676,
   "rules_in": 3654,
-  "rules_out": 2513,
-  "coverage_pct": 77.72,
+  "rules_out": 2615,
+  "coverage_pct": 87.88,
   "breakdown": {
     "block": 1682,
     "block_document": 1,
     "block_cookies": 0,
-    "css_display_none": 806,
-    "css_selectors": 1134,
+    "css_display_none": 908,
+    "css_selectors": 1505,
     "ignore_previous_rules": 23
   },
-  "skipped_total": 808,
+  "skipped_total": 437,
   "skipped_reasons": {
-    "pseudo-classe :has() (activer --allow-has)": 371,
     "selecteur CSS etendu (#?#)": 225,
     "JavaScript / scriptlet (#%#)": 88,
     "injection de style / scriptlet (#$#)": 80,
@@ -41,8 +40,8 @@
   "outputs": [
     {
       "file": "Webkit-Frellwit-s-Swedish-Filter.json",
-      "rules": 2513,
-      "bytes": 380178
+      "rules": 2615,
+      "bytes": 414418
     }
   ]
 }

@@ -5,34 +5,33 @@
   "source_version": "2.0.67.77",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/13.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:25:55+00:00",
+  "converted_at": "2026-09-07T01:01:18+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 7520,
   "rules_in": 6378,
-  "rules_out": 3065,
-  "coverage_pct": 75.67,
+  "rules_out": 3083,
+  "coverage_pct": 78.0,
   "breakdown": {
-    "block": 1468,
+    "block": 1452,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 1490,
-    "css_selectors": 3252,
-    "ignore_previous_rules": 106
+    "css_display_none": 1525,
+    "css_selectors": 3418,
+    "ignore_previous_rules": 105
   },
-  "skipped_total": 1080,
+  "skipped_total": 1346,
   "skipped_reasons": {
+    "$domain inexprimable (regex ou joker)": 432,
     "injection de style / scriptlet (#$#)": 312,
     "JavaScript / scriptlet (#%#)": 282,
-    "pseudo-classe :has() (activer --allow-has)": 167,
     "selecteur CSS etendu (#?#)": 116,
-    "domaine cosmetique non exprimable (joker de TLD)": 88,
+    "domaine cosmetique non exprimable (joker de TLD)": 91,
     "injection de style etendue (#$?#)": 48,
     "modificateur non supporte: $redirect": 36,
     "regex hors du sous-ensemble WebKit": 18,
     "modificateur non supporte: $denyallow": 3,
     "modificateur non supporte: $path": 3,
-    "pseudo-classe CSS etendue": 2,
     "modificateur non supporte: $redirect-rule": 1,
     "modificateur inconnu: $_____": 1,
     "regle cosmetique entierement exceptee": 1,
@@ -40,17 +39,17 @@
     "modificateur non supporte: $url": 1
   },
   "notes": {
-    "domaine ignore (joker ou regex dans $domain)": 446,
-    "doublon fusionne": 416,
-    "domaine ignore (joker) dans une regle cosmetique": 134,
+    "domaine ignore (joker) dans une regle cosmetique": 146,
+    "domaine ignore (joker ou regex dans $domain)": 14,
     "modificateur sans effet sous WebKit: $all": 5,
-    "modificateur sans effet sous WebKit: $important": 1
+    "modificateur sans effet sous WebKit: $important": 1,
+    "doublon fusionne": 1
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Turkish-filter.json",
-      "rules": 3065,
-      "bytes": 495140
+      "rules": 3083,
+      "bytes": 508995
     }
   ]
 }

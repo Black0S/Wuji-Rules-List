@@ -5,33 +5,32 @@
   "source_version": "2.0.10.22",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/251.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:28:22+00:00",
+  "converted_at": "2026-09-07T01:04:14+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 4545,
   "rules_in": 2988,
-  "rules_out": 3,
-  "coverage_pct": 0.07,
+  "rules_out": 2,
+  "coverage_pct": 0.03,
   "breakdown": {
-    "block": 2,
+    "block": 1,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
     "css_selectors": 0,
     "ignore_previous_rules": 0
   },
-  "skipped_total": 2986,
+  "skipped_total": 2987,
   "skipped_reasons": {
-    "modificateur non supporte: $removeparam": 2986
+    "modificateur non supporte: $removeparam": 2985,
+    "$domain inexprimable (regex ou joker)": 2
   },
-  "notes": {
-    "domaine ignore (joker ou regex dans $domain)": 2
-  },
+  "notes": {},
   "outputs": [
     {
       "file": "Webkit-Legitimate-URL-Shortener.json",
-      "rules": 3,
-      "bytes": 311
+      "rules": 2,
+      "bytes": 213
     }
   ]
 }

@@ -5,30 +5,30 @@
   "source_version": "2.1.10.85",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/3.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:25:54+00:00",
+  "converted_at": "2026-09-07T01:01:17+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 330886,
   "rules_in": 327285,
-  "rules_out": 325105,
+  "rules_out": 325106,
   "coverage_pct": 99.35,
   "breakdown": {
-    "block": 322708,
+    "block": 322707,
     "block_document": 1,
     "block_cookies": 6,
-    "css_display_none": 181,
-    "css_selectors": 230,
-    "ignore_previous_rules": 2208
+    "css_display_none": 197,
+    "css_selectors": 252,
+    "ignore_previous_rules": 2194
   },
-  "skipped_total": 1941,
+  "skipped_total": 1934,
   "skipped_reasons": {
     "$cookie avec valeur / en exception": 1087,
     "JavaScript / scriptlet (#%#)": 484,
     "modificateur non supporte: $redirect": 235,
     "selecteur CSS etendu (#?#)": 48,
-    "pseudo-classe :has() (activer --allow-has)": 22,
     "regex hors du sous-ensemble WebKit": 19,
     "injection de style / scriptlet (#$#)": 15,
+    "$domain inexprimable (regex ou joker)": 15,
     "modificateur non supporte: $permissions": 7,
     "modificateur non supporte: $badfilter": 7,
     "modificateur non supporte: $redirect-rule": 6,
@@ -43,24 +43,25 @@
     "doublon fusionne": 191,
     "modificateur sans effet sous WebKit: $all": 38,
     "modificateur sans effet sous WebKit: $important": 28,
-    "domaine ignore (joker ou regex dans $domain)": 22,
-    "domaine ignore (joker) dans une regle cosmetique": 1
+    "domaine ignore (joker ou regex dans $domain)": 7,
+    "domaine ignore (joker) dans une regle cosmetique": 1,
+    "$domain abandonne (une seule condition par trigger)": 1
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-1.json",
       "rules": 150000,
-      "bytes": 17905248
+      "bytes": 17904865
     },
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-2.json",
       "rules": 150000,
-      "bytes": 17420915
+      "bytes": 17420362
     },
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-3.json",
-      "rules": 29521,
-      "bytes": 3527929
+      "rules": 29494,
+      "bytes": 3526066
     }
   ]
 }

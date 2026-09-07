@@ -5,25 +5,24 @@
   "source_version": "2.1.68.31",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/123.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:26:59+00:00",
+  "converted_at": "2026-09-07T01:02:31+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 14070,
   "rules_in": 13824,
-  "rules_out": 3274,
-  "coverage_pct": 98.59,
+  "rules_out": 3290,
+  "coverage_pct": 98.74,
   "breakdown": {
     "block": 585,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 2606,
-    "css_selectors": 12962,
+    "css_display_none": 2622,
+    "css_selectors": 12983,
     "ignore_previous_rules": 82
   },
-  "skipped_total": 71,
+  "skipped_total": 50,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 48,
-    "pseudo-classe :has() (activer --allow-has)": 21,
     "domaine cosmetique non exprimable (joker de TLD)": 2
   },
   "notes": {
@@ -32,8 +31,8 @@
   "outputs": [
     {
       "file": "Webkit-Fanboy-s-Social-Blocking-List.json",
-      "rules": 3274,
-      "bytes": 686981
+      "rules": 3290,
+      "bytes": 690133
     }
   ]
 }

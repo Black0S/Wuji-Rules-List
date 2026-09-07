@@ -5,30 +5,30 @@
   "source_version": "2.0.9.23",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/23.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:25:55+00:00",
+  "converted_at": "2026-09-07T01:01:18+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 6017,
   "rules_in": 5478,
-  "rules_out": 3953,
-  "coverage_pct": 93.34,
+  "rules_out": 3961,
+  "coverage_pct": 94.4,
   "breakdown": {
-    "block": 3192,
+    "block": 3191,
     "block_document": 4,
     "block_cookies": 0,
-    "css_display_none": 686,
-    "css_selectors": 1847,
+    "css_display_none": 695,
+    "css_selectors": 1906,
     "ignore_previous_rules": 70
   },
-  "skipped_total": 344,
+  "skipped_total": 287,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 119,
     "injection de style / scriptlet (#$#)": 67,
-    "pseudo-classe :has() (activer --allow-has)": 59,
     "JavaScript / scriptlet (#%#)": 39,
-    "regex hors du sous-ensemble WebKit": 18,
     "modificateur non supporte: $redirect": 18,
+    "regex hors du sous-ensemble WebKit": 17,
     "injection de style etendue (#$?#)": 11,
+    "$domain inexprimable (regex ou joker)": 3,
     "modificateur non supporte: $removeparam": 3,
     "modificateur non supporte: $redirect-rule": 2,
     "modificateur non supporte: $denyallow": 2,
@@ -39,16 +39,15 @@
   },
   "notes": {
     "modificateur sans effet sous WebKit: $all": 30,
-    "domaine ignore (joker) dans une regle cosmetique": 8,
-    "doublon fusionne": 5,
-    "domaine ignore (joker ou regex dans $domain)": 3,
+    "domaine ignore (joker) dans une regle cosmetique": 9,
+    "doublon fusionne": 4,
     "modificateur sans effet sous WebKit: $important": 1
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Ukrainian-filter.json",
-      "rules": 3953,
-      "bytes": 522051
+      "rules": 3961,
+      "bytes": 527159
     }
   ]
 }

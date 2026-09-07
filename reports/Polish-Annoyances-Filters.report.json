@@ -5,32 +5,31 @@
   "source_version": "1.0.39.79",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/237.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:29:07+00:00",
+  "converted_at": "2026-09-07T01:05:06+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 13731,
   "rules_in": 13458,
-  "rules_out": 8336,
-  "coverage_pct": 79.56,
+  "rules_out": 8571,
+  "coverage_pct": 83.02,
   "breakdown": {
-    "block": 553,
+    "block": 529,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 7744,
-    "css_selectors": 10116,
-    "ignore_previous_rules": 38
+    "css_display_none": 8005,
+    "css_selectors": 10608,
+    "ignore_previous_rules": 36
   },
-  "skipped_total": 2493,
+  "skipped_total": 2027,
   "skipped_reasons": {
-    "domaine cosmetique non exprimable (joker de TLD)": 817,
+    "domaine cosmetique non exprimable (joker de TLD)": 826,
     "injection de style / scriptlet (#$#)": 592,
-    "pseudo-classe :has() (activer --allow-has)": 496,
     "JavaScript / scriptlet (#%#)": 272,
     "selecteur CSS etendu (#?#)": 214,
     "injection de style etendue (#$?#)": 46,
+    "$domain inexprimable (regex ou joker)": 27,
     "modificateur non supporte: $redirect": 15,
     "exception d'injection de style": 7,
-    "pseudo-classe CSS etendue": 6,
     "modificateur non supporte: $path": 6,
     "exception d'injection de style etendue": 5,
     "modificateur non supporte: $badfilter": 5,
@@ -40,17 +39,17 @@
     "selecteur CSS etendu (#@?#)": 2
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 844,
-    "domaine ignore (joker ou regex dans $domain)": 28,
-    "unless-domain abandonne (incompatible avec if-domain)": 23,
+    "domaine ignore (joker) dans une regle cosmetique": 853,
+    "unless-domain abandonne (incompatible avec if-domain)": 29,
     "doublon fusionne": 13,
-    "modificateur sans effet sous WebKit: $important": 5
+    "modificateur sans effet sous WebKit: $important": 5,
+    "domaine ignore (joker ou regex dans $domain)": 1
   },
   "outputs": [
     {
       "file": "Webkit-Polish-Annoyances-Filters.json",
-      "rules": 8336,
-      "bytes": 1330580
+      "rules": 8571,
+      "bytes": 1415936
     }
   ]
 }

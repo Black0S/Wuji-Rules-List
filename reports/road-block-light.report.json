@@ -5,42 +5,42 @@
   "source_version": "2.0.4.32",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/236.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:29:40+00:00",
+  "converted_at": "2026-09-07T01:05:45+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 2068,
   "rules_in": 1966,
-  "rules_out": 1019,
-  "coverage_pct": 77.52,
+  "rules_out": 1129,
+  "coverage_pct": 92.52,
   "breakdown": {
-    "block": 501,
+    "block": 500,
     "block_document": 4,
     "block_cookies": 0,
-    "css_display_none": 446,
-    "css_selectors": 952,
+    "css_display_none": 557,
+    "css_selectors": 1248,
     "ignore_previous_rules": 67
   },
-  "skipped_total": 439,
+  "skipped_total": 144,
   "skipped_reasons": {
-    "pseudo-classe :has() (activer --allow-has)": 296,
     "selecteur CSS etendu (#?#)": 85,
     "JavaScript / scriptlet (#%#)": 36,
     "injection de style / scriptlet (#$#)": 8,
     "modificateur non supporte: $redirect": 5,
     "modificateur non supporte: $redirect-rule": 4,
     "injection de style etendue (#$?#)": 3,
-    "pseudo-classe CSS etendue": 1,
+    "$domain inexprimable (regex ou joker)": 1,
+    "domaine cosmetique non exprimable (joker de TLD)": 1,
     "modificateur non supporte: $denyallow": 1
   },
   "notes": {
-    "domaine ignore (joker ou regex dans $domain)": 1,
-    "modificateur sans effet sous WebKit: $important": 1
+    "modificateur sans effet sous WebKit: $important": 1,
+    "domaine ignore (joker) dans une regle cosmetique": 1
   },
   "outputs": [
     {
       "file": "Webkit-road-block-light.json",
-      "rules": 1019,
-      "bytes": 154798
+      "rules": 1129,
+      "bytes": 185479
     }
   ]
 }

@@ -5,39 +5,38 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/annoyances-cookies.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:29:41+00:00",
+  "converted_at": "2026-09-07T01:05:46+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 5743,
   "rules_in": 2381,
-  "rules_out": 135,
-  "coverage_pct": 5.96,
+  "rules_out": 139,
+  "coverage_pct": 6.17,
   "breakdown": {
     "block": 19,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 80,
-    "css_selectors": 88,
+    "css_display_none": 84,
+    "css_selectors": 93,
     "ignore_previous_rules": 35
   },
-  "skipped_total": 2228,
+  "skipped_total": 2223,
   "skipped_reasons": {
     "scriptlet ou filtrage HTML": 2149,
     "pseudo-classe CSS etendue": 48,
-    "domaine cosmetique non exprimable (joker de TLD)": 22,
-    "pseudo-classe :has() (activer --allow-has)": 7,
+    "domaine cosmetique non exprimable (joker de TLD)": 24,
     "modificateur non supporte: $badfilter": 2
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 30,
+    "domaine ignore (joker) dans une regle cosmetique": 32,
     "modificateur sans effet sous WebKit: $important": 4,
     "domaine ignore (joker ou regex dans $domain)": 2
   },
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Cookie-Notices.json",
-      "rules": 135,
-      "bytes": 24047
+      "rules": 139,
+      "bytes": 24912
     }
   ]
 }

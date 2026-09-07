@@ -5,27 +5,26 @@
   "source_version": "2.0.0.32",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/202.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:26:40+00:00",
+  "converted_at": "2026-09-07T01:02:12+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1459,
   "rules_in": 1337,
-  "rules_out": 948,
-  "coverage_pct": 99.33,
+  "rules_out": 949,
+  "coverage_pct": 99.4,
   "breakdown": {
     "block": 764,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 182,
-    "css_selectors": 563,
+    "css_display_none": 183,
+    "css_selectors": 564,
     "ignore_previous_rules": 1
   },
-  "skipped_total": 7,
+  "skipped_total": 6,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 2,
     "JavaScript / scriptlet (#%#)": 2,
-    "modificateur non supporte: $redirect": 2,
-    "pseudo-classe :has() (activer --allow-has)": 1
+    "modificateur non supporte: $redirect": 2
   },
   "notes": {
     "doublon fusionne": 1
@@ -33,8 +32,8 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-Thailand.json",
-      "rules": 948,
-      "bytes": 118363
+      "rules": 949,
+      "bytes": 118544
     }
   ]
 }

@@ -11,10 +11,10 @@ sources.json ──> fetch_filters.py ──> filters/ ──> convert_webkit.py
 | | |
 |---|---|
 | Listes suivies | **161** |
-| Fichiers WebKit générés | **170** |
-| Règles WebKit | **2 951 211** |
+| Fichiers WebKit générés | **167** |
+| Règles WebKit | **2 955 252** |
 | Entrées sources analysées | **3 268 178** |
-| Entrées non convertibles | **108 408** (détail dans `reports/CONVERSION.md`) |
+| Entrées non convertibles | **95 998** (détail dans `reports/CONVERSION.md`) |
 
 > Les règles converties sont publiées sur la branche **`dist`**, réécrite à
 > chaque exécution — `main` ne contient que les scripts et les rapports.
@@ -89,8 +89,12 @@ JSON produit ne peut faire échouer la compilation Safari.
 python3 convert_webkit.py
 python3 convert_webkit.py --only AdGuard-Base --pretty
 python3 convert_webkit.py --legacy               # profil WebKit ancien
-python3 convert_webkit.py --allow-has            # autoriser :has() (Safari 16.4+)
+python3 convert_webkit.py --no-has               # exclure :has() (Safari < 16.4)
 ```
+
+`:has()` est accepté par défaut : le compilateur de content blocker de WebKit
+le valide nativement (vérifié, voir plus bas). Cela représente ~14 000 règles
+qui seraient sinon perdues.
 
 ### Ce qui est converti
 
@@ -168,6 +172,48 @@ percent-encodé ; ce qui reste non-ASCII est écarté (WebKit le refuse).
 
 ---
 
+## Vérification par le compilateur de Safari
+
+La validation Python ne fait qu'*approcher* les contraintes de WebKit. Deux
+outils Swift interrogent le compilateur réel du système — le même que celui
+qu'utilise Safari, via `WKContentRuleListStore` :
+
+```bash
+make probe      # sonde: ce que WebKit accepte vraiment (batterie de cas)
+make verify     # compile chacun des fichiers produits, echoue si l'un est rejete
+```
+
+macOS uniquement, donc en complément de `make check` (portable, exécuté en CI),
+pas à sa place.
+
+Contraintes établies par la sonde, et non par la documentation :
+
+| Construction | Verdict | Conséquence |
+|---|---|---|
+| `:has()`, `:is()`, `:where()`, `:nth-child()`, `::before` | accepté | `:has()` activé par défaut |
+| `:has-text()`, `:xpath()` et consorts | règle silencieusement jetée | écartées en amont, pour ne pas perdre sans le dire |
+| alternation `(a\|b)` | `Disjunctions are not supported yet` | rejetée |
+| `{n,m}` | `Arbitrary atom repetitions are not supported` | rejetée |
+| `\d` `\w` `\s` | `Character class is not supported` | rejetée |
+| `(?=…)` lookahead | refusé | rejetée |
+| `^` hors début, `$` hors fin | refusé | rejetée |
+| accolade échappée `\{` | accepté | conservée |
+| non-greedy `.*?` | accepté | conservée |
+| url-filter non-ASCII | refusé | punycode + percent-encoding |
+| **plus d'une** clé parmi `if-domain`, `unless-domain`, `if-top-url`, `unless-top-url` | **échec de compilation du fichier entier** | une seule condition émise |
+| condition `[]` vide | échec du fichier entier | jamais émise |
+| domaine majuscule ou Unicode | échec du fichier entier | minuscule + punycode |
+| `resource-type` / `load-context` inconnu | échec du fichier entier | liste blanche stricte |
+| tableau de règles vide | `Empty extension` | fichier non écrit |
+| clé de trigger inconnue | ignorée | filtrée quand même |
+
+Les quatre entrées marquées « échec du fichier entier » sont le piège
+principal : contrairement à un sélecteur CSS invalide qui est simplement
+ignoré, une seule règle fautive rend **tout le fichier** inutilisable dans
+Safari. C'est ce qui rend `make verify` nécessaire.
+
+---
+
 ## Volume et sélection
 
 Le catalogue complet pèse ~99 Mo de listes brutes et ~334 Mo de JSON WebKit.
@@ -211,7 +257,8 @@ Catalogue vérifié contre les deux références :
 fetch_filters.py        étape 1
 convert_webkit.py       étape 2
 sources.json            registres + sources supplémentaires + sélection
-Makefile                make / make update / make convert / make check
+Makefile                update / convert / check / verify / probe
+tools/                  sondes Swift du compilateur WebKit (macOS)
 filters/                listes brutes + index.json (état, ETag, sha256)
 webkit-rules/           Webkit-<Nom>.json + index.json (catalogue de sortie)
 reports/                rapport par liste + CONVERSION.md

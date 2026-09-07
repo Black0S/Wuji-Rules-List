@@ -19,6 +19,14 @@ check:                        ## Verifie que tous les JSON produits sont bien fo
 	[json.load(open(f)) for f in fs]; \
 	print('%d fichiers JSON valides' % len(fs))"
 
+verify:                       ## macOS uniquement: compile chaque fichier avec le WebKit systeme
+	@command -v swift >/dev/null || { echo "swift introuvable (macOS + Command Line Tools requis)"; exit 1; }
+	@WK_QUIET=1 swift tools/wk_probe.swift >/dev/null 2>&1 || true
+	swift tools/wk_compile.swift webkit-rules/Webkit-*.json
+
+probe:                        ## macOS uniquement: sonde les contraintes reelles de WebKit
+	swift tools/wk_probe.swift
+
 catalog:                      ## Affiche le catalogue sans rien telecharger
 	$(PY) fetch_filters.py --list
 

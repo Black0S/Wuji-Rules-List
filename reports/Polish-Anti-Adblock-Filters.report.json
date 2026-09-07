@@ -5,7 +5,7 @@
   "source_version": "2.0.3.58",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/238.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:29:07+00:00",
+  "converted_at": "2026-09-07T01:05:06+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 789,
@@ -23,25 +23,25 @@
   "skipped_total": 111,
   "skipped_reasons": {
     "JavaScript / scriptlet (#%#)": 52,
-    "modificateur non supporte: $redirect": 16,
+    "modificateur non supporte: $redirect": 15,
     "injection de style / scriptlet (#$#)": 14,
     "selecteur CSS etendu (#?#)": 9,
     "exception de scriptlet": 8,
     "exception d'injection de style": 6,
     "regex hors du sous-ensemble WebKit": 4,
     "regle cosmetique entierement exceptee": 1,
-    "modificateur non supporte: $badfilter": 1
+    "modificateur non supporte: $badfilter": 1,
+    "$domain inexprimable (regex ou joker)": 1
   },
   "notes": {
     "modificateur sans effet sous WebKit: $important": 4,
-    "domaine ignore (joker) dans une regle cosmetique": 2,
-    "domaine ignore (joker ou regex dans $domain)": 1
+    "domaine ignore (joker) dans une regle cosmetique": 2
   },
   "outputs": [
     {
       "file": "Webkit-Polish-Anti-Adblock-Filters.json",
       "rules": 416,
-      "bytes": 73188
+      "bytes": 73168
     }
   ]
 }

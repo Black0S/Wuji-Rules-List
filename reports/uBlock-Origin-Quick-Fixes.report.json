@@ -5,51 +5,51 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/quick-fixes.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:29:41+00:00",
+  "converted_at": "2026-09-07T01:05:47+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 529,
   "rules_in": 325,
-  "rules_out": 50,
-  "coverage_pct": 21.85,
+  "rules_out": 48,
+  "coverage_pct": 23.08,
   "breakdown": {
-    "block": 15,
+    "block": 10,
     "block_document": 5,
     "block_cookies": 0,
-    "css_display_none": 8,
-    "css_selectors": 30,
-    "ignore_previous_rules": 21
+    "css_display_none": 12,
+    "css_selectors": 40,
+    "ignore_previous_rules": 20
   },
-  "skipped_total": 241,
+  "skipped_total": 237,
   "skipped_reasons": {
     "scriptlet ou filtrage HTML": 160,
     "pseudo-classe CSS etendue": 17,
     "modificateur non supporte: $replace": 16,
     "modificateur non supporte: $redirect": 12,
-    "pseudo-classe :has() (activer --allow-has)": 10,
+    "$domain inexprimable (regex ou joker)": 7,
     "modificateur non supporte: $badfilter": 5,
-    "regex hors du sous-ensemble WebKit": 4,
     "modificateur non supporte: $redirect-rule": 4,
     "modificateur non supporte: $denyallow": 3,
+    "modificateur non supporte: $header": 3,
     "modificateur non supporte: $method": 2,
     "ancre `|` en milieu de motif": 2,
     "modificateur non supporte: $to": 2,
+    "regex hors du sous-ensemble WebKit": 1,
     "domaine cosmetique non exprimable (joker de TLD)": 1,
     "modificateur non supporte: $strict1p": 1,
-    "modificateur non supporte: $header": 1,
     "modificateur non supporte: $strict3p": 1
   },
   "notes": {
-    "domaine ignore (joker ou regex dans $domain)": 13,
-    "modificateur sans effet sous WebKit: $important": 10,
+    "modificateur sans effet sous WebKit: $important": 7,
+    "domaine ignore (joker ou regex dans $domain)": 6,
     "domaine ignore (joker) dans une regle cosmetique": 1,
     "modificateur sans effet sous WebKit: $all": 1
   },
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Quick-Fixes.json",
-      "rules": 50,
-      "bytes": 10046
+      "rules": 48,
+      "bytes": 10559
     }
   ]
 }

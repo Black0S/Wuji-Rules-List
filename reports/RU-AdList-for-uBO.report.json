@@ -5,7 +5,7 @@
   "source_version": "",
   "source_url": "https://raw.githubusercontent.com/easylist/ruadlist/master/RuAdList-uBO.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:29:08+00:00",
+  "converted_at": "2026-09-07T01:05:07+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 30,
@@ -23,11 +23,5 @@
   "skipped_total": 0,
   "skipped_reasons": {},
   "notes": {},
-  "outputs": [
-    {
-      "file": "Webkit-RU-AdList-for-uBO.json",
-      "rules": 0,
-      "bytes": 3
-    }
-  ]
+  "outputs": []
 }

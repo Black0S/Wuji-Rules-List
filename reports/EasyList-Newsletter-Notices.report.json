@@ -5,27 +5,26 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-newsletters.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:26:39+00:00",
+  "converted_at": "2026-09-07T01:02:11+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 6508,
   "rules_in": 6012,
-  "rules_out": 3350,
-  "coverage_pct": 90.09,
+  "rules_out": 3366,
+  "coverage_pct": 90.42,
   "breakdown": {
     "block": 180,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 3161,
-    "css_selectors": 5228,
+    "css_display_none": 3177,
+    "css_selectors": 5248,
     "ignore_previous_rules": 8
   },
-  "skipped_total": 591,
+  "skipped_total": 571,
   "skipped_reasons": {
-    "pseudo-classe CSS etendue": 237,
+    "pseudo-classe CSS etendue": 236,
     "selecteur CSS etendu (#?#)": 229,
     "scriptlet ou filtrage HTML": 100,
-    "pseudo-classe :has() (activer --allow-has)": 19,
     "domaine cosmetique non exprimable (joker de TLD)": 6
   },
   "notes": {
@@ -35,8 +34,8 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-Newsletter-Notices.json",
-      "rules": 3350,
-      "bytes": 554571
+      "rules": 3366,
+      "bytes": 557978
     }
   ]
 }

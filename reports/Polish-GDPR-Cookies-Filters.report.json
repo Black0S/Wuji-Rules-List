@@ -5,51 +5,49 @@
   "source_version": "2.0.5.56",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/217.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:29:07+00:00",
+  "converted_at": "2026-09-07T01:05:07+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 5643,
   "rules_in": 5556,
-  "rules_out": 3386,
-  "coverage_pct": 66.5,
+  "rules_out": 3562,
+  "coverage_pct": 70.79,
   "breakdown": {
-    "block": 184,
+    "block": 168,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 3165,
-    "css_selectors": 3475,
-    "ignore_previous_rules": 36
+    "css_display_none": 3359,
+    "css_selectors": 3731,
+    "ignore_previous_rules": 34
   },
-  "skipped_total": 1621,
+  "skipped_total": 1384,
   "skipped_reasons": {
-    "domaine cosmetique non exprimable (joker de TLD)": 726,
+    "domaine cosmetique non exprimable (joker de TLD)": 731,
     "injection de style / scriptlet (#$#)": 312,
-    "pseudo-classe :has() (activer --allow-has)": 260,
     "selecteur CSS etendu (#?#)": 149,
     "JavaScript / scriptlet (#%#)": 115,
     "injection de style etendue (#$?#)": 25,
+    "$domain inexprimable (regex ou joker)": 19,
     "modificateur non supporte: $redirect": 12,
     "modificateur non supporte: $badfilter": 5,
     "exception de scriptlet": 5,
     "exception d'injection de style": 4,
     "regle cosmetique entierement exceptee": 3,
     "selecteur CSS etendu (#@?#)": 2,
-    "pseudo-classe CSS etendue": 1,
     "exception d'injection de style etendue": 1,
     "modificateur non supporte: $path": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 727,
-    "domaine ignore (joker ou regex dans $domain)": 19,
-    "unless-domain abandonne (incompatible avec if-domain)": 3,
-    "doublon fusionne": 2,
-    "modificateur sans effet sous WebKit: $important": 2
+    "domaine ignore (joker) dans une regle cosmetique": 732,
+    "unless-domain abandonne (incompatible avec if-domain)": 5,
+    "modificateur sans effet sous WebKit: $important": 2,
+    "doublon fusionne": 1
   },
   "outputs": [
     {
       "file": "Webkit-Polish-GDPR-Cookies-Filters.json",
-      "rules": 3386,
-      "bytes": 535186
+      "rules": 3562,
+      "bytes": 595938
     }
   ]
 }

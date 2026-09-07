@@ -5,44 +5,42 @@
   "source_version": "2.0.1.77",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/260.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:29:35+00:00",
+  "converted_at": "2026-09-07T01:05:39+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 5088,
   "rules_in": 1642,
-  "rules_out": 456,
-  "coverage_pct": 56.52,
+  "rules_out": 570,
+  "coverage_pct": 87.58,
   "breakdown": {
-    "block": 83,
+    "block": 81,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 372,
-    "css_selectors": 845,
+    "css_display_none": 488,
+    "css_selectors": 1357,
     "ignore_previous_rules": 0
   },
-  "skipped_total": 713,
+  "skipped_total": 202,
   "skipped_reasons": {
-    "pseudo-classe :has() (activer --allow-has)": 525,
     "selecteur CSS etendu (#?#)": 71,
     "JavaScript / scriptlet (#%#)": 51,
-    "domaine cosmetique non exprimable (joker de TLD)": 23,
+    "domaine cosmetique non exprimable (joker de TLD)": 40,
     "injection de style / scriptlet (#$#)": 20,
     "injection de style etendue (#$?#)": 13,
-    "pseudo-classe CSS etendue": 5,
+    "$domain inexprimable (regex ou joker)": 2,
     "injection de style (non supportee)": 2,
     "exception d'injection de style etendue": 2,
     "selecteur CSS vide ou trop long": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 23,
-    "domaine ignore (joker ou regex dans $domain)": 2,
-    "doublon fusionne": 1
+    "domaine ignore (joker) dans une regle cosmetique": 40,
+    "doublon fusionne": 2
   },
   "outputs": [
     {
       "file": "Webkit-Stevo-s-AI-Blocklist.json",
-      "rules": 456,
-      "bytes": 94318
+      "rules": 570,
+      "bytes": 151870
     }
   ]
 }

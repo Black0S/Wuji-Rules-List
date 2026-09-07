@@ -5,24 +5,23 @@
   "source_version": "2.0.4.88",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/247.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:29:07+00:00",
+  "converted_at": "2026-09-07T01:05:06+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 770,
   "rules_in": 728,
-  "rules_out": 557,
-  "coverage_pct": 84.2,
+  "rules_out": 585,
+  "coverage_pct": 91.76,
   "breakdown": {
     "block": 52,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 504,
-    "css_selectors": 561,
+    "css_display_none": 532,
+    "css_selectors": 616,
     "ignore_previous_rules": 0
   },
-  "skipped_total": 114,
+  "skipped_total": 59,
   "skipped_reasons": {
-    "pseudo-classe :has() (activer --allow-has)": 55,
     "domaine cosmetique non exprimable (joker de TLD)": 34,
     "selecteur CSS etendu (#?#)": 10,
     "injection de style / scriptlet (#$#)": 9,
@@ -31,14 +30,15 @@
   },
   "notes": {
     "domaine ignore (joker) dans une regle cosmetique": 34,
+    "unless-domain abandonne (incompatible avec if-domain)": 2,
     "modificateur sans effet sous WebKit: $important": 1,
     "doublon fusionne": 1
   },
   "outputs": [
     {
       "file": "Webkit-Polish-Anti-Annoying-Special-Supplement.json",
-      "rules": 557,
-      "bytes": 87061
+      "rules": 585,
+      "bytes": 97479
     }
   ]
 }

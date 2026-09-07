@@ -5,28 +5,27 @@
   "source_version": "2.0.16.66",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/216.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:28:31+00:00",
+  "converted_at": "2026-09-07T01:04:24+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 6415,
   "rules_in": 6080,
-  "rules_out": 3912,
-  "coverage_pct": 93.14,
+  "rules_out": 3913,
+  "coverage_pct": 93.27,
   "breakdown": {
     "block": 958,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 2801,
-    "css_selectors": 4553,
+    "css_display_none": 2802,
+    "css_selectors": 4561,
     "ignore_previous_rules": 152
   },
-  "skipped_total": 385,
+  "skipped_total": 377,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 189,
     "injection de style / scriptlet (#$#)": 90,
     "regex hors du sous-ensemble WebKit": 50,
     "domaine cosmetique non exprimable (joker de TLD)": 30,
-    "pseudo-classe :has() (activer --allow-has)": 8,
     "JavaScript / scriptlet (#%#)": 6,
     "modificateur non supporte: $redirect": 4,
     "caractere de controle dans le selecteur": 2,
@@ -46,8 +45,8 @@
   "outputs": [
     {
       "file": "Webkit-Official-Polish-filters-for-AdBlock-uBlock-Origin-and-AdGuard.json",
-      "rules": 3912,
-      "bytes": 679374
+      "rules": 3913,
+      "bytes": 679830
     }
   ]
 }

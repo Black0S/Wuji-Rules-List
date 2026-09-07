@@ -5,7 +5,7 @@
   "source_version": "2.1.96.52",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/212.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:29:08+00:00",
+  "converted_at": "2026-09-07T01:05:07+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1732,
@@ -31,13 +31,14 @@
   "notes": {
     "domaine ignore (joker ou regex dans $domain)": 9,
     "modificateur sans effet sous WebKit: $important": 3,
-    "domaine ignore (joker) dans une regle cosmetique": 1
+    "domaine ignore (joker) dans une regle cosmetique": 1,
+    "$domain abandonne (une seule condition par trigger)": 1
   },
   "outputs": [
     {
       "file": "Webkit-RU-AdList-Counters.json",
       "rules": 1187,
-      "bytes": 154639
+      "bytes": 154578
     }
   ]
 }

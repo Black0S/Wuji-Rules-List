@@ -5,25 +5,24 @@
   "source_version": "2.1.97.25",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/113.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:28:23+00:00",
+  "converted_at": "2026-09-07T01:04:15+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 13659,
   "rules_in": 13534,
-  "rules_out": 10905,
-  "coverage_pct": 98.72,
+  "rules_out": 10914,
+  "coverage_pct": 98.98,
   "breakdown": {
     "block": 9815,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 935,
-    "css_selectors": 3392,
+    "css_display_none": 944,
+    "css_selectors": 3427,
     "ignore_previous_rules": 154
   },
-  "skipped_total": 165,
+  "skipped_total": 130,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 113,
-    "pseudo-classe :has() (activer --allow-has)": 35,
     "modificateur non supporte: $csp": 6,
     "modificateur non supporte: $redirect": 6,
     "domaine cosmetique non exprimable (joker de TLD)": 3,
@@ -36,8 +35,8 @@
   "outputs": [
     {
       "file": "Webkit-Liste-FR.json",
-      "rules": 10905,
-      "bytes": 1413200
+      "rules": 10914,
+      "bytes": 1416134
     }
   ]
 }

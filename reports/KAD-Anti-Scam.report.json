@@ -5,42 +5,42 @@
   "source_version": "2.0.88.18",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/232.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:28:21+00:00",
+  "converted_at": "2026-09-07T01:04:14+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 21147,
   "rules_in": 21102,
-  "rules_out": 21047,
+  "rules_out": 21043,
   "coverage_pct": 99.74,
   "breakdown": {
-    "block": 20997,
+    "block": 20990,
     "block_document": 44,
     "block_cookies": 0,
-    "css_display_none": 4,
-    "css_selectors": 6,
+    "css_display_none": 7,
+    "css_selectors": 12,
     "ignore_previous_rules": 1
   },
-  "skipped_total": 54,
+  "skipped_total": 55,
   "skipped_reasons": {
     "modificateur non supporte: $to": 36,
-    "pseudo-classe :has() (activer --allow-has)": 7,
+    "$domain inexprimable (regex ou joker)": 8,
     "injection de style etendue (#$?#)": 3,
+    "domaine cosmetique non exprimable (joker de TLD)": 3,
     "selecteur CSS etendu (#?#)": 3,
-    "regex hors du sous-ensemble WebKit": 2,
-    "domaine cosmetique non exprimable (joker de TLD)": 2,
-    "$domain melange inclusions et exclusions": 1
+    "$domain melange inclusions et exclusions": 1,
+    "regex hors du sous-ensemble WebKit": 1
   },
   "notes": {
     "modificateur sans effet sous WebKit: $all": 20991,
-    "domaine ignore (joker ou regex dans $domain)": 12,
     "modificateur sans effet sous WebKit: $important": 11,
-    "domaine ignore (joker) dans une regle cosmetique": 2
+    "domaine ignore (joker ou regex dans $domain)": 4,
+    "domaine ignore (joker) dans une regle cosmetique": 3
   },
   "outputs": [
     {
       "file": "Webkit-KAD-Anti-Scam.json",
-      "rules": 21047,
-      "bytes": 2393710
+      "rules": 21043,
+      "bytes": 2393869
     }
   ]
 }

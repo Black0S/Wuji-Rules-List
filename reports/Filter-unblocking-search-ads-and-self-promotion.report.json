@@ -5,7 +5,7 @@
   "source_version": "2.0.3.99",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/10.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:26:59+00:00",
+  "converted_at": "2026-09-07T01:02:31+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 392,
@@ -16,9 +16,9 @@
     "block": 0,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 1,
-    "css_selectors": 2,
-    "ignore_previous_rules": 11
+    "css_display_none": 2,
+    "css_selectors": 3,
+    "ignore_previous_rules": 10
   },
   "skipped_total": 59,
   "skipped_reasons": {
@@ -27,18 +27,17 @@
     "exception d'injection de style etendue": 3,
     "exception de scriptlet": 3,
     "modificateur non supporte: $path": 2,
-    "domaine cosmetique non exprimable (joker de TLD)": 1,
-    "pseudo-classe :has() (activer --allow-has)": 1
+    "$domain inexprimable (regex ou joker)": 1,
+    "domaine cosmetique non exprimable (joker de TLD)": 1
   },
   "notes": {
-    "domaine ignore (joker ou regex dans $domain)": 1,
-    "domaine ignore (joker) dans une regle cosmetique": 1
+    "domaine ignore (joker) dans une regle cosmetique": 2
   },
   "outputs": [
     {
       "file": "Webkit-Filter-unblocking-search-ads-and-self-promotion.json",
       "rules": 12,
-      "bytes": 2002
+      "bytes": 2078
     }
   ]
 }

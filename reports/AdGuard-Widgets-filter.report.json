@@ -5,24 +5,23 @@
   "source_version": "2.0.14.85",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/22.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:25:55+00:00",
+  "converted_at": "2026-09-07T01:01:18+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 2953,
   "rules_in": 2665,
-  "rules_out": 1761,
-  "coverage_pct": 86.79,
+  "rules_out": 1804,
+  "coverage_pct": 92.08,
   "breakdown": {
     "block": 801,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 925,
-    "css_selectors": 1478,
+    "css_display_none": 968,
+    "css_selectors": 1619,
     "ignore_previous_rules": 34
   },
-  "skipped_total": 350,
+  "skipped_total": 209,
   "skipped_reasons": {
-    "pseudo-classe :has() (activer --allow-has)": 141,
     "selecteur CSS etendu (#?#)": 139,
     "injection de style / scriptlet (#$#)": 37,
     "JavaScript / scriptlet (#%#)": 13,
@@ -41,8 +40,8 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Widgets-filter.json",
-      "rules": 1761,
-      "bytes": 272186
+      "rules": 1804,
+      "bytes": 288719
     }
   ]
 }

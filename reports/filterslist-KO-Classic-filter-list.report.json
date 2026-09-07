@@ -5,33 +5,33 @@
   "source_version": "2.0.25.39",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/227.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:29:40+00:00",
+  "converted_at": "2026-09-07T01:05:45+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 4394,
   "rules_in": 4054,
-  "rules_out": 2214,
-  "coverage_pct": 72.64,
+  "rules_out": 2178,
+  "coverage_pct": 74.74,
   "breakdown": {
-    "block": 1451,
+    "block": 1386,
     "block_document": 13,
     "block_cookies": 0,
-    "css_display_none": 701,
-    "css_selectors": 1433,
+    "css_display_none": 730,
+    "css_selectors": 1583,
     "ignore_previous_rules": 48
   },
-  "skipped_total": 947,
+  "skipped_total": 967,
   "skipped_reasons": {
     "injection de style / scriptlet (#$#)": 233,
     "selecteur CSS etendu (#?#)": 168,
+    "$domain inexprimable (regex ou joker)": 165,
     "JavaScript / scriptlet (#%#)": 160,
-    "pseudo-classe :has() (activer --allow-has)": 146,
     "modificateur non supporte: $path": 102,
-    "regex hors du sous-ensemble WebKit": 51,
+    "regex hors du sous-ensemble WebKit": 49,
     "injection de style etendue (#$?#)": 34,
     "modificateur non supporte: $redirect": 24,
-    "domaine cosmetique non exprimable (joker de TLD)": 12,
-    "pseudo-classe CSS etendue": 5,
+    "domaine cosmetique non exprimable (joker de TLD)": 13,
+    "ancre `^` ou `$` mal placee": 7,
     "$domain melange inclusions et exclusions": 4,
     "modificateur non supporte: $denyallow": 2,
     "$cookie avec valeur / en exception": 2,
@@ -41,16 +41,16 @@
     "modificateur non supporte: $removeparam": 1
   },
   "notes": {
-    "domaine ignore (joker ou regex dans $domain)": 137,
-    "doublon fusionne": 115,
-    "domaine ignore (joker) dans une regle cosmetique": 13,
-    "unless-domain abandonne (incompatible avec if-domain)": 6
+    "domaine ignore (joker) dans une regle cosmetique": 14,
+    "unless-domain abandonne (incompatible avec if-domain)": 12,
+    "doublon fusionne": 10,
+    "$domain abandonne (une seule condition par trigger)": 1
   },
   "outputs": [
     {
       "file": "Webkit-filterslist-KO-Classic-filter-list.json",
-      "rules": 2214,
-      "bytes": 329363
+      "rules": 2178,
+      "bytes": 336672
     }
   ]
 }

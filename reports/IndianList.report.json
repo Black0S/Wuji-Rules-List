@@ -5,26 +5,24 @@
   "source_version": "2.0.90.57",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/253.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:28:19+00:00",
+  "converted_at": "2026-09-07T01:04:11+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 10505,
   "rules_in": 10472,
-  "rules_out": 8850,
-  "coverage_pct": 96.32,
+  "rules_out": 8975,
+  "coverage_pct": 98.43,
   "breakdown": {
     "block": 5250,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 3517,
-    "css_selectors": 4755,
+    "css_display_none": 3642,
+    "css_selectors": 4976,
     "ignore_previous_rules": 82
   },
-  "skipped_total": 378,
+  "skipped_total": 157,
   "skipped_reasons": {
-    "pseudo-classe :has() (activer --allow-has)": 218,
     "selecteur CSS etendu (#?#)": 154,
-    "pseudo-classe CSS etendue": 3,
     "ancre `|` en milieu de motif": 2,
     "domaine cosmetique non exprimable (joker de TLD)": 1
   },
@@ -34,8 +32,8 @@
   "outputs": [
     {
       "file": "Webkit-IndianList.json",
-      "rules": 8850,
-      "bytes": 1428910
+      "rules": 8975,
+      "bytes": 1452910
     }
   ]
 }

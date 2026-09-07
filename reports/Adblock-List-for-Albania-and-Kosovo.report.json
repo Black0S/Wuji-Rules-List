@@ -5,36 +5,36 @@
   "source_version": "",
   "source_url": "https://raw.githubusercontent.com/AnXh3L0/blocklist/master/albanian-easylist-addition/Albania.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:25:55+00:00",
+  "converted_at": "2026-09-07T01:01:18+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 557,
   "rules_in": 305,
-  "rules_out": 142,
-  "coverage_pct": 92.13,
+  "rules_out": 137,
+  "coverage_pct": 90.49,
   "breakdown": {
-    "block": 33,
+    "block": 28,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 106,
     "css_selectors": 246,
     "ignore_previous_rules": 2
   },
-  "skipped_total": 24,
+  "skipped_total": 29,
   "skipped_reasons": {
     "domaine cosmetique non exprimable (joker de TLD)": 13,
     "pseudo-classe CSS etendue": 7,
+    "$domain inexprimable (regex ou joker)": 5,
     "selecteur CSS etendu (#?#)": 4
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 13,
-    "domaine ignore (joker ou regex dans $domain)": 5
+    "domaine ignore (joker) dans une regle cosmetique": 13
   },
   "outputs": [
     {
       "file": "Webkit-Adblock-List-for-Albania-and-Kosovo.json",
-      "rules": 142,
-      "bytes": 23571
+      "rules": 137,
+      "bytes": 22924
     }
   ]
 }

@@ -5,33 +5,31 @@
   "source_version": "2.0.1.26",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/121.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:26:59+00:00",
+  "converted_at": "2026-09-07T01:02:32+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1254,
   "rules_in": 1227,
-  "rules_out": 669,
-  "coverage_pct": 97.88,
+  "rules_out": 670,
+  "coverage_pct": 98.61,
   "breakdown": {
     "block": 447,
     "block_document": 2,
     "block_cookies": 0,
-    "css_display_none": 203,
-    "css_selectors": 736,
+    "css_display_none": 204,
+    "css_selectors": 745,
     "ignore_previous_rules": 16
   },
-  "skipped_total": 19,
+  "skipped_total": 10,
   "skipped_reasons": {
-    "selecteur CSS etendu (#?#)": 10,
-    "pseudo-classe :has() (activer --allow-has)": 8,
-    "pseudo-classe CSS etendue": 1
+    "selecteur CSS etendu (#?#)": 10
   },
   "notes": {},
   "outputs": [
     {
       "file": "Webkit-Greek-AdBlock-Filter.json",
-      "rules": 669,
-      "bytes": 105834
+      "rules": 670,
+      "bytes": 106376
     }
   ]
 }

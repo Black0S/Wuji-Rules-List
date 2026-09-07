@@ -5,24 +5,23 @@
   "source_version": "2.0.2.99",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/110.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:26:39+00:00",
+  "converted_at": "2026-09-07T01:02:11+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1202,
   "rules_in": 1169,
-  "rules_out": 850,
-  "coverage_pct": 95.89,
+  "rules_out": 858,
+  "coverage_pct": 97.69,
   "breakdown": {
     "block": 491,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 298,
-    "css_selectors": 570,
+    "css_display_none": 306,
+    "css_selectors": 591,
     "ignore_previous_rules": 60
   },
-  "skipped_total": 48,
+  "skipped_total": 27,
   "skipped_reasons": {
-    "pseudo-classe :has() (activer --allow-has)": 21,
     "JavaScript / scriptlet (#%#)": 11,
     "injection de style / scriptlet (#$#)": 7,
     "selecteur CSS etendu (#?#)": 5,
@@ -33,8 +32,8 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-Lithuania.json",
-      "rules": 850,
-      "bytes": 124271
+      "rules": 858,
+      "bytes": 126093
     }
   ]
 }

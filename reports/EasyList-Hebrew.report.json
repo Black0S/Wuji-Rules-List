@@ -5,27 +5,26 @@
   "source_version": "2.0.6.46",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/108.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:26:39+00:00",
+  "converted_at": "2026-09-07T01:02:11+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1771,
   "rules_in": 1473,
-  "rules_out": 712,
-  "coverage_pct": 90.09,
+  "rules_out": 713,
+  "coverage_pct": 90.7,
   "breakdown": {
     "block": 291,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 259,
-    "css_selectors": 875,
+    "css_display_none": 260,
+    "css_selectors": 884,
     "ignore_previous_rules": 161
   },
-  "skipped_total": 112,
+  "skipped_total": 103,
   "skipped_reasons": {
     "JavaScript / scriptlet (#%#)": 41,
     "modificateur non supporte: $redirect": 33,
     "regex hors du sous-ensemble WebKit": 12,
-    "pseudo-classe :has() (activer --allow-has)": 9,
     "selecteur CSS etendu (#?#)": 8,
     "modificateur non supporte: $badfilter": 3,
     "injection de style / scriptlet (#$#)": 3,
@@ -40,8 +39,8 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-Hebrew.json",
-      "rules": 712,
-      "bytes": 139306
+      "rules": 713,
+      "bytes": 140151
     }
   ]
 }

@@ -5,24 +5,23 @@
   "source_version": "141",
   "source_url": "https://raw.githubusercontent.com/betterwebleon/slovenian-list/master/filters.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:29:26+00:00",
+  "converted_at": "2026-09-07T01:05:28+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 530,
   "rules_in": 506,
   "rules_out": 275,
-  "coverage_pct": 98.81,
+  "coverage_pct": 99.41,
   "breakdown": {
     "block": 114,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 145,
-    "css_selectors": 371,
+    "css_selectors": 374,
     "ignore_previous_rules": 15
   },
-  "skipped_total": 6,
+  "skipped_total": 3,
   "skipped_reasons": {
-    "pseudo-classe :has() (activer --allow-has)": 3,
     "pseudo-classe CSS etendue": 2,
     "modificateur non supporte: $inline-script": 1
   },
@@ -31,7 +30,7 @@
     {
       "file": "Webkit-Slovenian-List.json",
       "rules": 275,
-      "bytes": 41658
+      "bytes": 41812
     }
   ]
 }

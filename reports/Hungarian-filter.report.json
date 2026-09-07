@@ -5,24 +5,23 @@
   "source_version": "2.0.5.34",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/203.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:28:18+00:00",
+  "converted_at": "2026-09-07T01:04:10+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 2254,
   "rules_in": 2009,
-  "rules_out": 830,
-  "coverage_pct": 89.05,
+  "rules_out": 841,
+  "coverage_pct": 91.79,
   "breakdown": {
     "block": 368,
     "block_document": 9,
     "block_cookies": 0,
-    "css_display_none": 437,
-    "css_selectors": 1397,
+    "css_display_none": 448,
+    "css_selectors": 1452,
     "ignore_previous_rules": 15
   },
-  "skipped_total": 215,
+  "skipped_total": 160,
   "skipped_reasons": {
-    "pseudo-classe :has() (activer --allow-has)": 55,
     "JavaScript / scriptlet (#%#)": 51,
     "domaine cosmetique non exprimable (joker de TLD)": 38,
     "injection de style / scriptlet (#$#)": 38,
@@ -38,8 +37,8 @@
   "outputs": [
     {
       "file": "Webkit-Hungarian-filter.json",
-      "rules": 830,
-      "bytes": 136513
+      "rules": 841,
+      "bytes": 140386
     }
   ]
 }

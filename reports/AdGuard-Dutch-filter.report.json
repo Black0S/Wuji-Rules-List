@@ -5,44 +5,43 @@
   "source_version": "2.0.9.43",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/8.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T00:25:21+00:00",
+  "converted_at": "2026-09-07T01:00:40+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 2180,
   "rules_in": 1965,
-  "rules_out": 1231,
-  "coverage_pct": 89.01,
+  "rules_out": 1239,
+  "coverage_pct": 91.25,
   "breakdown": {
     "block": 508,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 667,
-    "css_selectors": 1186,
+    "css_display_none": 675,
+    "css_selectors": 1230,
     "ignore_previous_rules": 55
   },
-  "skipped_total": 156,
+  "skipped_total": 112,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 50,
-    "pseudo-classe :has() (activer --allow-has)": 45,
     "JavaScript / scriptlet (#%#)": 36,
     "injection de style / scriptlet (#$#)": 12,
     "modificateur non supporte: $redirect": 7,
+    "domaine cosmetique non exprimable (joker de TLD)": 2,
     "injection de style etendue (#$?#)": 2,
     "regex hors du sous-ensemble WebKit": 1,
     "regle cosmetique entierement exceptee": 1,
-    "domaine cosmetique non exprimable (joker de TLD)": 1,
     "selecteur CSS etendu (#@?#)": 1
   },
   "notes": {
     "doublon fusionne": 29,
-    "modificateur sans effet sous WebKit: $important": 2,
-    "domaine ignore (joker) dans une regle cosmetique": 1
+    "domaine ignore (joker) dans une regle cosmetique": 2,
+    "modificateur sans effet sous WebKit: $important": 2
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Dutch-filter.json",
-      "rules": 1231,
-      "bytes": 185102
+      "rules": 1239,
+      "bytes": 188817
     }
   ]
 }
