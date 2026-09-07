@@ -10,6 +10,7 @@ on:
       - "fetch_filters.py"
       - "convert_webkit.py"
       - "sources.json"
+      - "tools/**"
 
 permissions:
   contents: write
@@ -20,7 +21,13 @@ concurrency:
 
 jobs:
   refresh:
-    runs-on: ubuntu-latest
+    # macOS est requis: `make verify` compile chaque fichier avec le WebKit du
+    # systeme, seule verification qui fasse autorite. Les runners macOS sont
+    # gratuits sur les depots publics. En echange, la file d'attente peut etre
+    # plus longue que sur ubuntu.
+    runs-on: macos-latest
+    timeout-minutes: 90
+
     steps:
       - uses: actions/checkout@v4
 
@@ -34,15 +41,19 @@ jobs:
       - name: Convertir en Content Blocker WebKit
         run: python3 convert_webkit.py
 
-      - name: Verifier les JSON produits
+      - name: Verifier la forme des JSON
         run: make check
+
+      # Barriere: rien n'est publie si un seul fichier est rejete par WebKit.
+      - name: Compiler avec le WebKit du systeme
+        run: make verify
 
       - name: Identite git
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      # main ne recoit que l'etat des sources et les rapports (quelques centaines de Ko).
+      # main ne recoit que l'etat des sources et les rapports (~1 Mo).
       - name: Commit de l'etat sur main
         run: |
           git add filters/index.json reports
@@ -53,12 +64,18 @@ jobs:
             git push
           fi
 
-      # Les regles converties vont sur une branche orpheline, reecrite a chaque
-      # run : le depot ne grossit pas avec l'historique des JSON.
-      - name: Publier les regles sur la branche dist
+      # Les sorties vont sur une branche orpheline reecrite a chaque run :
+      # le depot ne grossit pas avec l'historique des JSON.
+      - name: Publier sur la branche dist
         run: |
-          cp reports/CONVERSION.md webkit-rules/CONVERSION.md
-          cd webkit-rules
+          rm -rf dist-tree
+          mkdir -p dist-tree/extended
+          cp webkit-rules/Webkit-*.json webkit-rules/index.json dist-tree/
+          cp reports/CONVERSION.md dist-tree/
+          if ls extended-rules/Extended-*.json >/dev/null 2>&1; then
+            cp extended-rules/Extended-*.json dist-tree/extended/
+          fi
+          cd dist-tree
           git init -q -b dist
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

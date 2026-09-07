@@ -5,7 +5,7 @@
   "source_version": "2.0.10.22",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/251.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:04:14+00:00",
+  "converted_at": "2026-09-07T12:05:58+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 4545,
@@ -22,8 +22,7 @@
   },
   "skipped_total": 2987,
   "skipped_reasons": {
-    "modificateur non supporte: $removeparam": 2985,
-    "$domain inexprimable (regex ou joker)": 2
+    "modificateur non supporte: $removeparam": 2987
   },
   "notes": {},
   "outputs": [
@@ -32,5 +31,16 @@
       "rules": 2,
       "bytes": 213
     }
-  ]
+  ],
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

@@ -5,36 +5,43 @@
   "source_version": "",
   "source_url": "https://raw.githubusercontent.com/AnXh3L0/blocklist/master/albanian-easylist-addition/Albania.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:01:18+00:00",
+  "converted_at": "2026-09-07T12:03:07+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 557,
   "rules_in": 305,
-  "rules_out": 137,
-  "coverage_pct": 90.49,
+  "rules_out": 143,
+  "coverage_pct": 96.39,
   "breakdown": {
-    "block": 28,
+    "block": 33,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 106,
-    "css_selectors": 246,
+    "css_display_none": 107,
+    "css_selectors": 259,
     "ignore_previous_rules": 2
   },
-  "skipped_total": 29,
+  "skipped_total": 11,
   "skipped_reasons": {
-    "domaine cosmetique non exprimable (joker de TLD)": 13,
     "pseudo-classe CSS etendue": 7,
-    "$domain inexprimable (regex ou joker)": 5,
     "selecteur CSS etendu (#?#)": 4
   },
-  "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 13
-  },
+  "notes": {},
   "outputs": [
     {
       "file": "Webkit-Adblock-List-for-Albania-and-Kosovo.json",
-      "rules": 137,
-      "bytes": 22924
+      "rules": 143,
+      "bytes": 36405
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Adblock-List-for-Albania-and-Kosovo.json",
+    "total": 11,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 11,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

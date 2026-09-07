@@ -5,25 +5,25 @@
   "source_version": "2.0.3.30",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/228.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:05:47+00:00",
+  "converted_at": "2026-09-07T12:07:33+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1354,
   "rules_in": 1290,
-  "rules_out": 1248,
-  "coverage_pct": 97.6,
+  "rules_out": 1250,
+  "coverage_pct": 97.75,
   "breakdown": {
     "block": 1116,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 101,
-    "css_selectors": 113,
+    "css_display_none": 103,
+    "css_selectors": 115,
     "ignore_previous_rules": 30
   },
-  "skipped_total": 30,
+  "skipped_total": 28,
   "skipped_reasons": {
     "JavaScript / scriptlet (#%#)": 12,
-    "domaine cosmetique non exprimable (joker de TLD)": 7,
+    "domaine cosmetique non exprimable (joker de TLD)": 5,
     "injection de style / scriptlet (#$#)": 4,
     "selecteur CSS etendu (#?#)": 2,
     "modificateur non supporte: $csp": 2,
@@ -32,17 +32,27 @@
     "injection de style etendue (#$?#)": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 7,
+    "domaine ignore (joker) dans une regle cosmetique": 5,
     "doublon fusionne": 1,
-    "domaine ignore (joker ou regex dans $domain)": 1,
     "modificateur sans effet sous WebKit: $important": 1,
     "modificateur sans effet sous WebKit: $all": 1
   },
   "outputs": [
     {
       "file": "Webkit-xinggsf.json",
-      "rules": 1248,
-      "bytes": 127400
+      "rules": 1250,
+      "bytes": 137582
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-xinggsf.json",
+    "total": 19,
+    "counts": {
+      "scriptlets": 12,
+      "procedural": 2,
+      "styles": 5,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

@@ -5,26 +5,25 @@
   "source_version": "2.0.0.38",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/201.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:05:44+00:00",
+  "converted_at": "2026-09-07T12:07:28+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 17005,
   "rules_in": 16875,
-  "rules_out": 3845,
-  "coverage_pct": 47.78,
+  "rules_out": 3865,
+  "coverage_pct": 48.03,
   "breakdown": {
     "block": 88,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 3737,
-    "css_selectors": 7956,
+    "css_display_none": 3757,
+    "css_selectors": 7998,
     "ignore_previous_rules": 19
   },
-  "skipped_total": 8683,
+  "skipped_total": 8641,
   "skipped_reasons": {
     "injection de style / scriptlet (#$#)": 8466,
     "selecteur CSS etendu (#?#)": 151,
-    "domaine cosmetique non exprimable (joker de TLD)": 42,
     "injection de style etendue (#$?#)": 7,
     "JavaScript / scriptlet (#%#)": 7,
     "exception d'injection de style": 6,
@@ -32,15 +31,25 @@
     "modificateur non supporte: $csp": 2
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 63,
     "doublon fusionne": 11,
     "modificateur sans effet sous WebKit: $important": 6
   },
   "outputs": [
     {
       "file": "Webkit-Web-Annoyances-Ultralist.json",
-      "rules": 3845,
-      "bytes": 771051
+      "rules": 3865,
+      "bytes": 872003
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Web-Annoyances-Ultralist.json",
+    "total": 8639,
+    "counts": {
+      "scriptlets": 7,
+      "procedural": 153,
+      "styles": 8479,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

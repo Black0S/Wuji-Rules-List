@@ -5,7 +5,7 @@
   "source_version": "2.0.25.36",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/243.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:02:32+00:00",
+  "converted_at": "2026-09-07T12:04:20+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 3676,
@@ -30,7 +30,7 @@
     "modificateur non supporte: $removeparam": 5,
     "modificateur non supporte: $redirect-rule": 4,
     "modificateur non supporte: $csp": 4,
-    "modificateur non supporte: $badfilter": 1,
+    "directive $badfilter (retractation appliquee)": 1,
     "$domain melange inclusions et exclusions": 1
   },
   "notes": {
@@ -43,5 +43,16 @@
       "rules": 2615,
       "bytes": 414418
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Frellwit-s-Swedish-Filter.json",
+    "total": 411,
+    "counts": {
+      "scriptlets": 88,
+      "procedural": 225,
+      "styles": 98,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

@@ -5,7 +5,7 @@
   "source_version": "1.0.15.83",
   "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_25.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:04:14+00:00",
+  "converted_at": "2026-09-07T12:05:58+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 392,
@@ -29,5 +29,16 @@
       "rules": 384,
       "bytes": 43193
     }
-  ]
+  ],
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

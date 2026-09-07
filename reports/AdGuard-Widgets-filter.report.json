@@ -5,43 +5,52 @@
   "source_version": "2.0.14.85",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/22.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:01:18+00:00",
+  "converted_at": "2026-09-07T12:03:07+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 2953,
   "rules_in": 2665,
-  "rules_out": 1804,
-  "coverage_pct": 92.08,
+  "rules_out": 1806,
+  "coverage_pct": 92.2,
   "breakdown": {
     "block": 801,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 968,
-    "css_selectors": 1619,
+    "css_display_none": 970,
+    "css_selectors": 1622,
     "ignore_previous_rules": 34
   },
-  "skipped_total": 209,
+  "skipped_total": 206,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 139,
     "injection de style / scriptlet (#$#)": 37,
     "JavaScript / scriptlet (#%#)": 13,
     "modificateur non supporte: $path": 11,
     "injection de style etendue (#$?#)": 3,
-    "domaine cosmetique non exprimable (joker de TLD)": 3,
     "modificateur non supporte: $redirect": 1,
     "injection de style (non supportee)": 1,
     "modificateur non supporte: $removeparam": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 3,
     "modificateur sans effet sous WebKit: $important": 3,
     "doublon fusionne": 2
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Widgets-filter.json",
-      "rules": 1804,
-      "bytes": 288719
+      "rules": 1806,
+      "bytes": 292752
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-AdGuard-Widgets-filter.json",
+    "total": 193,
+    "counts": {
+      "scriptlets": 13,
+      "procedural": 140,
+      "styles": 40,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

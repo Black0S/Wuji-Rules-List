@@ -5,38 +5,49 @@
   "source_version": "2.0.17.72",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/107.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:02:11+00:00",
+  "converted_at": "2026-09-07T12:03:58+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 6018,
   "rules_in": 5957,
-  "rules_out": 3866,
-  "coverage_pct": 96.73,
+  "rules_out": 3886,
+  "coverage_pct": 97.4,
   "breakdown": {
-    "block": 2137,
+    "block": 2149,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 1566,
-    "css_selectors": 3463,
+    "css_display_none": 1574,
+    "css_selectors": 3491,
     "ignore_previous_rules": 162
   },
-  "skipped_total": 151,
+  "skipped_total": 121,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 112,
-    "domaine cosmetique non exprimable (joker de TLD)": 28,
-    "regex hors du sous-ensemble WebKit": 5,
     "modificateur non supporte: $redirect": 4,
+    "regex hors du sous-ensemble WebKit": 3,
     "modificateur non supporte: $csp": 1,
     "injection de style etendue (#$?#)": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 39
+    "alternation eclatee en 2 regles": 1,
+    "alternation eclatee en 10 regles": 1
   },
   "outputs": [
     {
       "file": "Webkit-EasyList-Germany.json",
-      "rules": 3866,
-      "bytes": 595594
+      "rules": 3886,
+      "bytes": 620010
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-EasyList-Germany.json",
+    "total": 113,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 112,
+      "styles": 1,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

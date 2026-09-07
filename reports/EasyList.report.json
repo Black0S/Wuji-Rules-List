@@ -5,41 +5,54 @@
   "source_version": "2.1.74.28",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/101.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:02:20+00:00",
+  "converted_at": "2026-09-07T12:04:08+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 82070,
   "rules_in": 81821,
-  "rules_out": 62969,
-  "coverage_pct": 98.92,
+  "rules_out": 63016,
+  "coverage_pct": 99.19,
   "breakdown": {
-    "block": 55937,
+    "block": 55941,
     "block_document": 597,
     "block_cookies": 0,
-    "css_display_none": 5679,
-    "css_selectors": 23648,
+    "css_display_none": 5722,
+    "css_selectors": 23866,
     "ignore_previous_rules": 755
   },
-  "skipped_total": 547,
+  "skipped_total": 328,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 288,
-    "domaine cosmetique non exprimable (joker de TLD)": 220,
-    "regex hors du sous-ensemble WebKit": 21,
+    "regex hors du sous-ensemble WebKit": 18,
     "modificateur non supporte: $redirect": 7,
     "ancre `|` en milieu de motif": 3,
     "modificateur non supporte: $csp": 3,
     "injection de style etendue (#$?#)": 3,
-    "$domain inexprimable (regex ou joker)": 2
+    "$domain inexprimable (regex ou joker)": 2,
+    "expansion d'alternation trop large": 2,
+    "domaine cosmetique non exprimable (joker de TLD)": 2
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 285,
-    "doublon fusionne": 1
+    "domaine ignore (joker) dans une regle cosmetique": 2,
+    "doublon fusionne": 1,
+    "alternation eclatee en 4 regles": 1
   },
   "outputs": [
     {
       "file": "Webkit-EasyList.json",
-      "rules": 62969,
-      "bytes": 7876834
+      "rules": 63016,
+      "bytes": 8027474
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-EasyList.json",
+    "total": 291,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 288,
+      "styles": 3,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

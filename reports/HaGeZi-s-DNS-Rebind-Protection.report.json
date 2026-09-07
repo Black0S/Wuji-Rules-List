@@ -5,31 +5,44 @@
   "source_version": "1.0.0.7",
   "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_71.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:02:38+00:00",
+  "converted_at": "2026-09-07T12:04:27+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 26,
   "rules_in": 17,
-  "rules_out": 10,
-  "coverage_pct": 52.94,
+  "rules_out": 13,
+  "coverage_pct": 70.59,
   "breakdown": {
-    "block": 5,
+    "block": 8,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
     "css_selectors": 0,
     "ignore_previous_rules": 4
   },
-  "skipped_total": 8,
+  "skipped_total": 7,
   "skipped_reasons": {
-    "regex hors du sous-ensemble WebKit": 8
+    "regex hors du sous-ensemble WebKit": 7
   },
-  "notes": {},
+  "notes": {
+    "alternation eclatee en 3 regles": 1
+  },
   "outputs": [
     {
       "file": "Webkit-HaGeZi-s-DNS-Rebind-Protection.json",
-      "rules": 10,
-      "bytes": 961
+      "rules": 13,
+      "bytes": 1228
     }
-  ]
+  ],
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

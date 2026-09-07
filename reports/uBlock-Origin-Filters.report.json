@@ -5,51 +5,59 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/filters.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:05:47+00:00",
+  "converted_at": "2026-09-07T12:07:31+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 10902,
   "rules_in": 6122,
-  "rules_out": 2060,
-  "coverage_pct": 42.75,
+  "rules_out": 2244,
+  "coverage_pct": 48.66,
   "breakdown": {
-    "block": 625,
+    "block": 642,
     "block_document": 2,
     "block_cookies": 0,
-    "css_display_none": 700,
-    "css_selectors": 1258,
-    "ignore_previous_rules": 732
+    "css_display_none": 856,
+    "css_selectors": 1592,
+    "ignore_previous_rules": 743
   },
-  "skipped_total": 3448,
+  "skipped_total": 3086,
   "skipped_reasons": {
     "scriptlet ou filtrage HTML": 2473,
-    "domaine cosmetique non exprimable (joker de TLD)": 334,
     "pseudo-classe CSS etendue": 220,
     "modificateur non supporte: $redirect": 163,
     "modificateur non supporte: $redirect-rule": 81,
-    "modificateur non supporte: $denyallow": 71,
-    "$domain inexprimable (regex ou joker)": 36,
+    "modificateur non supporte: $denyallow": 78,
     "modificateur non supporte: $replace": 21,
     "modificateur non supporte: $csp": 21,
-    "regex hors du sous-ensemble WebKit": 10,
+    "regex hors du sous-ensemble WebKit": 11,
     "injection de style (non supportee)": 6,
     "modificateur non supporte: $removeparam": 4,
     "selecteur CSS etendu (#?#)": 3,
-    "modificateur non supporte: $badfilter": 3,
+    "directive $badfilter (retractation appliquee)": 3,
     "selecteur CSS vide ou trop long": 1,
     "modificateur non supporte: $to": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 349,
     "modificateur sans effet sous WebKit: $important": 30,
-    "domaine ignore (joker ou regex dans $domain)": 16,
-    "modificateur sans effet sous WebKit: $all": 6
+    "modificateur sans effet sous WebKit: $all": 6,
+    "unless-domain abandonne (incompatible avec if-domain)": 1
   },
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Filters.json",
-      "rules": 2060,
-      "bytes": 333871
+      "rules": 2244,
+      "bytes": 919255
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-uBlock-Origin-Filters.json",
+    "total": 2703,
+    "counts": {
+      "scriptlets": 2445,
+      "procedural": 230,
+      "styles": 0,
+      "html": 28,
+      "raw_js": 0
+    }
+  }
 }

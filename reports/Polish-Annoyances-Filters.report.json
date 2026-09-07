@@ -5,41 +5,42 @@
   "source_version": "1.0.39.79",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/237.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:05:06+00:00",
+  "converted_at": "2026-09-07T12:06:50+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 13731,
   "rules_in": 13458,
-  "rules_out": 8571,
-  "coverage_pct": 83.02,
+  "rules_out": 8574,
+  "coverage_pct": 83.06,
   "breakdown": {
-    "block": 529,
+    "block": 530,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 8005,
-    "css_selectors": 10608,
-    "ignore_previous_rules": 36
+    "css_display_none": 8009,
+    "css_selectors": 10614,
+    "ignore_previous_rules": 34
   },
-  "skipped_total": 2027,
+  "skipped_total": 2022,
   "skipped_reasons": {
-    "domaine cosmetique non exprimable (joker de TLD)": 826,
+    "domaine cosmetique non exprimable (joker de TLD)": 820,
     "injection de style / scriptlet (#$#)": 592,
     "JavaScript / scriptlet (#%#)": 272,
     "selecteur CSS etendu (#?#)": 214,
     "injection de style etendue (#$?#)": 46,
-    "$domain inexprimable (regex ou joker)": 27,
+    "$domain inexprimable (regex ou joker)": 26,
     "modificateur non supporte: $redirect": 15,
     "exception d'injection de style": 7,
     "modificateur non supporte: $path": 6,
     "exception d'injection de style etendue": 5,
-    "modificateur non supporte: $badfilter": 5,
+    "directive $badfilter (retractation appliquee)": 5,
     "exception de scriptlet": 5,
     "regle cosmetique entierement exceptee": 3,
     "$domain melange inclusions et exclusions": 2,
+    "retiree par $badfilter (retractation amont)": 2,
     "selecteur CSS etendu (#@?#)": 2
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 853,
+    "domaine ignore (joker) dans une regle cosmetique": 846,
     "unless-domain abandonne (incompatible avec if-domain)": 29,
     "doublon fusionne": 13,
     "modificateur sans effet sous WebKit: $important": 5,
@@ -48,8 +49,19 @@
   "outputs": [
     {
       "file": "Webkit-Polish-Annoyances-Filters.json",
-      "rules": 8571,
-      "bytes": 1415936
+      "rules": 8574,
+      "bytes": 1431690
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Polish-Annoyances-Filters.json",
+    "total": 1143,
+    "counts": {
+      "scriptlets": 277,
+      "procedural": 216,
+      "styles": 650,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

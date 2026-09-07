@@ -5,7 +5,7 @@
   "source_version": "2.1.70.97",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/118.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:02:27+00:00",
+  "converted_at": "2026-09-07T12:04:15+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 56814,
@@ -32,14 +32,25 @@
   },
   "notes": {
     "modificateur sans effet sous WebKit: $important": 9,
-    "domaine ignore (joker ou regex dans $domain)": 3,
-    "doublon fusionne": 2
+    "doublon fusionne": 2,
+    "domaine ignore (joker ou regex dans $domain)": 2
   },
   "outputs": [
     {
       "file": "Webkit-EasyPrivacy.json",
       "rules": 55960,
-      "bytes": 6628146
+      "bytes": 6629909
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-EasyPrivacy.json",
+    "total": 32,
+    "counts": {
+      "scriptlets": 28,
+      "procedural": 0,
+      "styles": 4,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

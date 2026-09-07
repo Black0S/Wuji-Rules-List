@@ -5,33 +5,46 @@
   "source_version": "2.0.69.0",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/124.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:02:12+00:00",
+  "converted_at": "2026-09-07T12:03:59+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1728,
   "rules_in": 1658,
-  "rules_out": 950,
-  "coverage_pct": 97.65,
+  "rules_out": 962,
+  "coverage_pct": 98.37,
   "breakdown": {
-    "block": 297,
+    "block": 309,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 625,
     "css_selectors": 1295,
     "ignore_previous_rules": 27
   },
-  "skipped_total": 32,
+  "skipped_total": 31,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 27,
-    "regex hors du sous-ensemble WebKit": 4,
+    "regex hors du sous-ensemble WebKit": 3,
     "injection de style (non supportee)": 1
   },
-  "notes": {},
+  "notes": {
+    "alternation eclatee en 12 regles": 1
+  },
   "outputs": [
     {
       "file": "Webkit-EasyList-Portuguese.json",
-      "rules": 950,
-      "bytes": 151568
+      "rules": 962,
+      "bytes": 153609
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-EasyList-Portuguese.json",
+    "total": 28,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 28,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

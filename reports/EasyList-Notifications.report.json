@@ -5,38 +5,47 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-notifications.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:02:11+00:00",
+  "converted_at": "2026-09-07T12:03:59+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1838,
   "rules_in": 1673,
-  "rules_out": 1035,
-  "coverage_pct": 90.08,
+  "rules_out": 1037,
+  "coverage_pct": 90.44,
   "breakdown": {
     "block": 476,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 541,
-    "css_selectors": 1014,
+    "css_display_none": 543,
+    "css_selectors": 1020,
     "ignore_previous_rules": 17
   },
-  "skipped_total": 154,
+  "skipped_total": 148,
   "skipped_reasons": {
     "scriptlet ou filtrage HTML": 64,
     "pseudo-classe CSS etendue": 60,
     "selecteur CSS etendu (#?#)": 23,
-    "domaine cosmetique non exprimable (joker de TLD)": 6,
     "injection de style (non supportee)": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 6,
     "doublon fusionne": 3
   },
   "outputs": [
     {
       "file": "Webkit-EasyList-Notifications.json",
-      "rules": 1035,
-      "bytes": 155169
+      "rules": 1037,
+      "bytes": 158960
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-EasyList-Notifications.json",
+    "total": 148,
+    "counts": {
+      "scriptlets": 64,
+      "procedural": 84,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

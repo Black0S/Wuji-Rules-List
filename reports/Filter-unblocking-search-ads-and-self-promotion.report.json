@@ -5,39 +5,46 @@
   "source_version": "2.0.3.99",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/10.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:02:31+00:00",
+  "converted_at": "2026-09-07T12:04:20+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 392,
   "rules_in": 247,
-  "rules_out": 12,
-  "coverage_pct": 5.26,
+  "rules_out": 14,
+  "coverage_pct": 6.07,
   "breakdown": {
     "block": 0,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 2,
-    "css_selectors": 3,
-    "ignore_previous_rules": 10
+    "css_display_none": 3,
+    "css_selectors": 4,
+    "ignore_previous_rules": 11
   },
-  "skipped_total": 59,
+  "skipped_total": 57,
   "skipped_reasons": {
     "selecteur CSS etendu (#@?#)": 45,
     "exception d'injection de style": 4,
     "exception d'injection de style etendue": 3,
     "exception de scriptlet": 3,
-    "modificateur non supporte: $path": 2,
-    "$domain inexprimable (regex ou joker)": 1,
-    "domaine cosmetique non exprimable (joker de TLD)": 1
+    "modificateur non supporte: $path": 2
   },
-  "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 2
-  },
+  "notes": {},
   "outputs": [
     {
       "file": "Webkit-Filter-unblocking-search-ads-and-self-promotion.json",
-      "rules": 12,
-      "bytes": 2078
+      "rules": 14,
+      "bytes": 7355
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Filter-unblocking-search-ads-and-self-promotion.json",
+    "total": 55,
+    "counts": {
+      "scriptlets": 3,
+      "procedural": 45,
+      "styles": 7,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

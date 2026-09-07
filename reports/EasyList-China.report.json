@@ -5,7 +5,7 @@
   "source_version": "2.1.67.55",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/104.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:02:09+00:00",
+  "converted_at": "2026-09-07T12:03:56+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 19472,
@@ -39,5 +39,16 @@
       "rules": 14621,
       "bytes": 1805146
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-EasyList-China.json",
+    "total": 156,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 156,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

@@ -5,7 +5,7 @@
   "source_version": "141",
   "source_url": "https://raw.githubusercontent.com/betterwebleon/slovenian-list/master/filters.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:05:28+00:00",
+  "converted_at": "2026-09-07T12:07:13+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 530,
@@ -32,5 +32,16 @@
       "rules": 275,
       "bytes": 41812
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Slovenian-List.json",
+    "total": 2,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 2,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

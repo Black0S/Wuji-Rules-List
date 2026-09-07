@@ -5,7 +5,7 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-ai.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:02:07+00:00",
+  "converted_at": "2026-09-07T12:03:55+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 284,
@@ -31,5 +31,16 @@
       "rules": 137,
       "bytes": 22765
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-EasyList-Anti-AI-Suggestions.json",
+    "total": 31,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 31,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

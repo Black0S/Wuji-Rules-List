@@ -5,52 +5,61 @@
   "source_version": "2.0.82.18",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/19.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:00:44+00:00",
+  "converted_at": "2026-09-07T12:02:30+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 23275,
   "rules_in": 22030,
-  "rules_out": 11661,
-  "coverage_pct": 73.65,
+  "rules_out": 11728,
+  "coverage_pct": 74.11,
   "breakdown": {
-    "block": 1478,
+    "block": 1480,
     "block_document": 1,
     "block_cookies": 0,
-    "css_display_none": 9542,
-    "css_selectors": 14107,
+    "css_display_none": 9607,
+    "css_selectors": 14206,
     "ignore_previous_rules": 639
   },
-  "skipped_total": 5557,
+  "skipped_total": 5455,
   "skipped_reasons": {
     "injection de style / scriptlet (#$#)": 2795,
     "JavaScript / scriptlet (#%#)": 1349,
     "selecteur CSS etendu (#?#)": 1018,
     "injection de style etendue (#$?#)": 163,
-    "domaine cosmetique non exprimable (joker de TLD)": 100,
     "modificateur non supporte: $redirect": 68,
     "modificateur non supporte: $path": 38,
     "modificateur non supporte: $permissions": 8,
     "injection de style (non supportee)": 4,
-    "regex hors du sous-ensemble WebKit": 3,
     "$cookie avec valeur / en exception": 3,
-    "$domain inexprimable (regex ou joker)": 3,
+    "regex hors du sous-ensemble WebKit": 2,
     "modificateur non supporte: $removeparam": 2,
+    "$domain inexprimable (regex ou joker)": 2,
     "modificateur non supporte: $method": 1,
-    "modificateur non supporte: $badfilter": 1,
+    "directive $badfilter (retractation appliquee)": 1,
     "modificateur non supporte: $redirect-rule": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 150,
-    "doublon fusionne": 11,
+    "doublon fusionne": 12,
     "unless-domain abandonne (incompatible avec if-domain)": 2,
-    "domaine ignore (joker ou regex dans $domain)": 2,
-    "modificateur sans effet sous WebKit: $important": 1
+    "modificateur sans effet sous WebKit: $important": 1,
+    "domaine ignore (joker) dans une regle cosmetique": 1
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Popups-filter.json",
-      "rules": 11661,
-      "bytes": 1940125
+      "rules": 11728,
+      "bytes": 2177471
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-AdGuard-Popups-filter.json",
+    "total": 5301,
+    "counts": {
+      "scriptlets": 1321,
+      "procedural": 1022,
+      "styles": 2958,
+      "html": 0,
+      "raw_js": 28
+    }
+  }
 }

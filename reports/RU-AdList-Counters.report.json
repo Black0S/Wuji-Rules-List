@@ -5,7 +5,7 @@
   "source_version": "2.1.96.52",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/212.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:05:07+00:00",
+  "converted_at": "2026-09-07T12:06:51+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1732,
@@ -26,19 +26,28 @@
     "injection de style etendue (#$?#)": 12,
     "selecteur CSS etendu (#?#)": 11,
     "modificateur non supporte: $redirect": 7,
-    "modificateur non supporte: $badfilter": 1
+    "directive $badfilter (retractation appliquee)": 1
   },
   "notes": {
-    "domaine ignore (joker ou regex dans $domain)": 9,
     "modificateur sans effet sous WebKit: $important": 3,
-    "domaine ignore (joker) dans une regle cosmetique": 1,
     "$domain abandonne (une seule condition par trigger)": 1
   },
   "outputs": [
     {
       "file": "Webkit-RU-AdList-Counters.json",
       "rules": 1187,
-      "bytes": 154578
+      "bytes": 170684
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-RU-AdList-Counters.json",
+    "total": 23,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 11,
+      "styles": 12,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

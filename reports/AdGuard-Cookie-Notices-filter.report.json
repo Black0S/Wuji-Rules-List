@@ -5,49 +5,58 @@
   "source_version": "2.0.93.66",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/18.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:00:17+00:00",
+  "converted_at": "2026-09-07T12:02:01+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 24555,
   "rules_in": 21539,
-  "rules_out": 11848,
-  "coverage_pct": 65.04,
+  "rules_out": 11923,
+  "coverage_pct": 65.41,
   "breakdown": {
-    "block": 1265,
+    "block": 1266,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 9088,
-    "css_selectors": 11250,
-    "ignore_previous_rules": 1494
+    "css_display_none": 9153,
+    "css_selectors": 11320,
+    "ignore_previous_rules": 1503
   },
-  "skipped_total": 6269,
+  "skipped_total": 6189,
   "skipped_reasons": {
     "injection de style / scriptlet (#$#)": 3075,
     "JavaScript / scriptlet (#%#)": 2654,
     "selecteur CSS etendu (#?#)": 310,
     "injection de style etendue (#$?#)": 116,
-    "domaine cosmetique non exprimable (joker de TLD)": 71,
     "modificateur non supporte: $redirect": 13,
-    "$domain inexprimable (regex ou joker)": 10,
     "injection de style (non supportee)": 5,
     "modificateur non supporte: $path": 5,
     "regex hors du sous-ensemble WebKit": 4,
     "regle cosmetique entierement exceptee": 4,
+    "domaine cosmetique non exprimable (joker de TLD)": 1,
     "exception d'injection de style": 1,
     "exception de scriptlet": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 150,
-    "modificateur sans effet sous WebKit: $important": 12,
+    "modificateur sans effet sous WebKit: $important": 13,
     "doublon fusionne": 3,
-    "domaine ignore (joker ou regex dans $domain)": 2,
-    "unless-domain abandonne (incompatible avec if-domain)": 1
+    "unless-domain abandonne (incompatible avec if-domain)": 1,
+    "domaine ignore (joker) dans une regle cosmetique": 1
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Cookie-Notices-filter.json",
-      "rules": 11848,
-      "bytes": 1950900
+      "rules": 11923,
+      "bytes": 2341263
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-AdGuard-Cookie-Notices-filter.json",
+    "total": 6103,
+    "counts": {
+      "scriptlets": 2596,
+      "procedural": 315,
+      "styles": 3192,
+      "html": 0,
+      "raw_js": 59
+    }
+  }
 }

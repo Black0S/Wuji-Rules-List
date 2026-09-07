@@ -5,7 +5,7 @@
   "source_version": "2.1.93.32",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/246.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:02:12+00:00",
+  "converted_at": "2026-09-07T12:03:59+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 3344,
@@ -33,5 +33,16 @@
       "rules": 2268,
       "bytes": 404843
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-EasyList-Polish.json",
+    "total": 8,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 8,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

@@ -5,7 +5,7 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-chat.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:02:07+00:00",
+  "converted_at": "2026-09-07T12:03:55+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 302,
@@ -29,5 +29,16 @@
       "rules": 262,
       "bytes": 35930
     }
-  ]
+  ],
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

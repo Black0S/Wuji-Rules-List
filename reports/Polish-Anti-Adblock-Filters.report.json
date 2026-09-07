@@ -5,7 +5,7 @@
   "source_version": "2.0.3.58",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/238.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:05:06+00:00",
+  "converted_at": "2026-09-07T12:06:50+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 789,
@@ -30,7 +30,7 @@
     "exception d'injection de style": 6,
     "regex hors du sous-ensemble WebKit": 4,
     "regle cosmetique entierement exceptee": 1,
-    "modificateur non supporte: $badfilter": 1,
+    "directive $badfilter (retractation appliquee)": 1,
     "$domain inexprimable (regex ou joker)": 1
   },
   "notes": {
@@ -43,5 +43,16 @@
       "rules": 416,
       "bytes": 73168
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Polish-Anti-Adblock-Filters.json",
+    "total": 89,
+    "counts": {
+      "scriptlets": 60,
+      "procedural": 9,
+      "styles": 20,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

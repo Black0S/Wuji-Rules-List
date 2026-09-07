@@ -5,58 +5,74 @@
   "source_version": "2.1.8.43",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/1.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:00:45+00:00",
+  "converted_at": "2026-09-07T12:02:31+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 19786,
   "rules_in": 17329,
-  "rules_out": 10144,
-  "coverage_pct": 86.11,
+  "rules_out": 10284,
+  "coverage_pct": 87.23,
   "breakdown": {
-    "block": 5442,
+    "block": 5550,
     "block_document": 3,
     "block_cookies": 0,
-    "css_display_none": 4023,
-    "css_selectors": 8802,
-    "ignore_previous_rules": 675
+    "css_display_none": 4048,
+    "css_selectors": 8881,
+    "ignore_previous_rules": 682
   },
-  "skipped_total": 2196,
+  "skipped_total": 2081,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 835,
     "injection de style / scriptlet (#$#)": 681,
     "JavaScript / scriptlet (#%#)": 304,
-    "domaine cosmetique non exprimable (joker de TLD)": 80,
     "modificateur non supporte: $redirect": 73,
     "injection de style etendue (#$?#)": 64,
     "modificateur non supporte: $path": 58,
-    "regex hors du sous-ensemble WebKit": 54,
-    "$domain inexprimable (regex ou joker)": 19,
+    "regex hors du sous-ensemble WebKit": 24,
+    "$domain inexprimable (regex ou joker)": 13,
     "$cookie avec valeur / en exception": 9,
     "modificateur non supporte: $denyallow": 4,
     "modificateur non supporte: $redirect-rule": 3,
-    "modificateur non supporte: $badfilter": 3,
+    "directive $badfilter (retractation appliquee)": 3,
     "modificateur non supporte: $removeheader": 2,
     "modificateur inconnu: $_____": 2,
     "ancre `|` en milieu de motif": 1,
     "modificateur non supporte: $header": 1,
     "selecteur CSS etendu (#@?#)": 1,
+    "domaine cosmetique non exprimable (joker de TLD)": 1,
     "modificateur non supporte: $removeparam": 1,
     "modificateur non supporte: $genericblock": 1
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 129,
     "modificateur sans effet sous WebKit: $all": 32,
     "doublon fusionne": 7,
     "modificateur sans effet sous WebKit: $important": 6,
+    "alternation eclatee en 2 regles": 5,
+    "alternation eclatee en 4 regles": 5,
+    "alternation eclatee en 6 regles": 4,
+    "alternation eclatee en 3 regles": 3,
     "$domain abandonne (une seule condition par trigger)": 3,
     "unless-domain abandonne (incompatible avec if-domain)": 2,
-    "domaine ignore (joker ou regex dans $domain)": 1
+    "domaine ignore (joker) dans une regle cosmetique": 1,
+    "alternation eclatee en 24 regles": 1,
+    "alternation eclatee en 11 regles": 1
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Russian-filter.json",
-      "rules": 10144,
-      "bytes": 1523786
+      "rules": 10284,
+      "bytes": 1625662
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-AdGuard-Russian-filter.json",
+    "total": 1864,
+    "counts": {
+      "scriptlets": 283,
+      "procedural": 836,
+      "styles": 745,
+      "html": 0,
+      "raw_js": 21
+    }
+  }
 }

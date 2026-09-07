@@ -5,42 +5,53 @@
   "source_version": "2.0.88.18",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/232.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:04:14+00:00",
+  "converted_at": "2026-09-07T12:05:58+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 21147,
   "rules_in": 21102,
-  "rules_out": 21043,
+  "rules_out": 21044,
   "coverage_pct": 99.74,
   "breakdown": {
     "block": 20990,
     "block_document": 44,
     "block_cookies": 0,
-    "css_display_none": 7,
-    "css_selectors": 12,
+    "css_display_none": 8,
+    "css_selectors": 13,
     "ignore_previous_rules": 1
   },
-  "skipped_total": 55,
+  "skipped_total": 54,
   "skipped_reasons": {
     "modificateur non supporte: $to": 36,
     "$domain inexprimable (regex ou joker)": 8,
     "injection de style etendue (#$?#)": 3,
-    "domaine cosmetique non exprimable (joker de TLD)": 3,
     "selecteur CSS etendu (#?#)": 3,
+    "domaine cosmetique non exprimable (joker de TLD)": 2,
     "$domain melange inclusions et exclusions": 1,
     "regex hors du sous-ensemble WebKit": 1
   },
   "notes": {
     "modificateur sans effet sous WebKit: $all": 20991,
     "modificateur sans effet sous WebKit: $important": 11,
-    "domaine ignore (joker ou regex dans $domain)": 4,
-    "domaine ignore (joker) dans une regle cosmetique": 3
+    "domaine ignore (joker ou regex dans $domain)": 2,
+    "domaine ignore (joker) dans une regle cosmetique": 2
   },
   "outputs": [
     {
       "file": "Webkit-KAD-Anti-Scam.json",
-      "rules": 21043,
-      "bytes": 2393869
+      "rules": 21044,
+      "bytes": 2398924
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-KAD-Anti-Scam.json",
+    "total": 6,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 3,
+      "styles": 3,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

@@ -5,26 +5,26 @@
   "source_version": "2.0.16.66",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/216.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:04:24+00:00",
+  "converted_at": "2026-09-07T12:06:09+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 6415,
   "rules_in": 6080,
-  "rules_out": 3913,
-  "coverage_pct": 93.27,
+  "rules_out": 3919,
+  "coverage_pct": 93.37,
   "breakdown": {
-    "block": 958,
+    "block": 964,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 2802,
     "css_selectors": 4561,
     "ignore_previous_rules": 152
   },
-  "skipped_total": 377,
+  "skipped_total": 376,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 189,
     "injection de style / scriptlet (#$#)": 90,
-    "regex hors du sous-ensemble WebKit": 50,
+    "regex hors du sous-ensemble WebKit": 49,
     "domaine cosmetique non exprimable (joker de TLD)": 30,
     "JavaScript / scriptlet (#%#)": 6,
     "modificateur non supporte: $redirect": 4,
@@ -32,7 +32,7 @@
     "injection de style (non supportee)": 2,
     "injection de style etendue (#$?#)": 1,
     "regle cosmetique entierement exceptee": 1,
-    "modificateur non supporte: $badfilter": 1,
+    "directive $badfilter (retractation appliquee)": 1,
     "exception de scriptlet": 1
   },
   "notes": {
@@ -40,13 +40,25 @@
     "unless-domain abandonne (incompatible avec if-domain)": 11,
     "doublon fusionne": 4,
     "modificateur sans effet sous WebKit: $important": 4,
+    "alternation eclatee en 6 regles": 1,
     "domaine ignore (joker ou regex dans $domain)": 1
   },
   "outputs": [
     {
       "file": "Webkit-Official-Polish-filters-for-AdBlock-uBlock-Origin-and-AdGuard.json",
-      "rules": 3913,
-      "bytes": 679830
+      "rules": 3919,
+      "bytes": 684920
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Official-Polish-filters-for-AdBlock-uBlock-Origin-and-AdGuard.json",
+    "total": 291,
+    "counts": {
+      "scriptlets": 7,
+      "procedural": 193,
+      "styles": 91,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

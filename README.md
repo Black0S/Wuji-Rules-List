@@ -12,12 +12,14 @@ sources.json ──> fetch_filters.py ──> filters/ ──> convert_webkit.py
 |---|---|
 | Listes suivies | **161** |
 | Fichiers WebKit générés | **167** |
-| Règles WebKit | **2 955 252** |
+| Règles WebKit | **2 957 177** |
 | Entrées sources analysées | **3 268 178** |
-| Entrées non convertibles | **95 998** (détail dans `reports/CONVERSION.md`) |
+| Entrées non convertibles | **93 071** (détail dans `reports/CONVERSION.md`) |
+| Règles consignées pour un moteur à injection | **69 874** (`extended-rules/`) |
 
-> Les règles converties sont publiées sur la branche **`dist`**, réécrite à
-> chaque exécution — `main` ne contient que les scripts et les rapports.
+> Publié sur la branche **`dist`**, réécrite à chaque exécution, après
+> compilation effective par le WebKit du système — `main` ne contient que les
+> scripts et les rapports.
 
 ---
 
@@ -114,6 +116,10 @@ qui seraient sinon perdues.
 | `@@$document` / `$elemhide` | `ignore-previous-rules` + `if-top-url` (exception de page entière) |
 | `domaine##sélecteur` | `css-display-none` + `if-domain` |
 | `domaine#@#sélecteur` | retiré des `if-domain` / ajouté aux `unless-domain` de la règle visée |
+| `règle$badfilter` | **rétractation appliquée** : la règle visée est retirée de la sortie |
+| `\d` `\w` `\s` | réécrits en `[0-9]`, `[a-zA-Z0-9_]`, `[ ]` (synonymes exacts) |
+| `/(a\|b)/` alternation | éclatée en N règles distinctes (WebKit ne sait pas faire de disjonction) |
+| `exemple.*` joker de TLD | étendu vers ~115 extensions réellement rencontrées |
 | format `hosts` (`0.0.0.0 x.com`) | détecté automatiquement, converti en blocage de domaine |
 
 Alias reconnus : `$xhr`, `$css`, `$frame`, `$doc`, `$from`, `$3p`, `$1p`,
@@ -172,6 +178,39 @@ percent-encodé ; ce qui reste non-ASCII est écarté (WebKit le refuse).
 
 ---
 
+## Règles à injection : `extended-rules/`
+
+Ce qui ne peut pas devenir une règle WebKit n'est plus simplement compté puis
+jeté. Chaque liste produit un `extended-rules/Extended-<Nom>.json` qui consigne,
+sous forme structurée, les règles qu'un moteur à injection — c'est-à-dire une
+Safari Web Extension — saurait appliquer :
+
+```json
+{"name":"set-constant","args":["urlAds",""],"domains":["mphimtv.my"],
+ "excluded":[],"syntax":"adguard","exception":false}
+```
+
+Quatre familles, **69 874 entrées** au total :
+
+| Famille | Nombre | Mécanisme requis |
+|---|---:|---|
+| `scriptlets` | 29 842 | monde principal pour ~40 % d'entre eux, monde isolé pour le reste |
+| `styles` (injection `#$#`) | 24 439 | CSS arbitraire, monde isolé |
+| `procedural` (`:has-text()`, `:xpath()`…) | 15 474 | inspection DOM, monde isolé |
+| `html` (filtrage `$$`) | 119 | réécriture de la réponse |
+
+Le JavaScript libre (539 occurrences) est compté mais **pas** consigné : ce
+n'est pas une primitive nommée, le réutiliser reviendrait à exécuter du code
+arbitraire sans audit possible.
+
+Ces fichiers **ne sont pas chargeables par Safari**. Ils ne changent ni
+l'architecture ni les performances du content blocker ; ils existent pour que
+les données soient prêtes et à jour le jour où une extension les consomme, et
+pour rendre les rapports auditables plutôt que purement comptables.
+`--no-extended` les désactive.
+
+---
+
 ## Vérification par le compilateur de Safari
 
 La validation Python ne fait qu'*approcher* les contraintes de WebKit. Deux
@@ -183,8 +222,8 @@ make probe      # sonde: ce que WebKit accepte vraiment (batterie de cas)
 make verify     # compile chacun des fichiers produits, echoue si l'un est rejete
 ```
 
-macOS uniquement, donc en complément de `make check` (portable, exécuté en CI),
-pas à sa place.
+`make verify` est la barrière de publication en CI : le workflow tourne sur un
+runner macOS et ne pousse sur `dist` que si les 167 fichiers compilent.
 
 Contraintes établies par la sonde, et non par la documentation :
 
@@ -261,12 +300,14 @@ Makefile                update / convert / check / verify / probe
 tools/                  sondes Swift du compilateur WebKit (macOS)
 filters/                listes brutes + index.json (état, ETag, sha256)
 webkit-rules/           Webkit-<Nom>.json + index.json (catalogue de sortie)
+extended-rules/         Extended-<Nom>.json (regles a injection, hors WebKit)
 reports/                rapport par liste + CONVERSION.md
 .github/workflows/      mise à jour quotidienne automatique
 ```
 
-`filters/*.txt` et `webkit-rules/*.json` sont ignorés par git sur `main` :
-le premier est un cache régénérable en ~20 s, le second est publié sur `dist`.
+`filters/*.txt`, `webkit-rules/*.json` et `extended-rules/*.json` sont ignorés
+par git sur `main` : le premier est un cache régénérable en ~20 s, les deux
+autres sont publiés sur `dist`.
 
 ---
 
@@ -277,9 +318,16 @@ pipeline chaque jour à 04:17 UTC (et à chaque modification des scripts ou de
 `sources.json`). Il pousse ensuite :
 
 - sur **`main`** : `filters/index.json` et `reports/` — quelques centaines de Ko ;
-- sur **`dist`** : les fichiers `Webkit-*.json`, via une branche orpheline
+- sur **`dist`** : les fichiers `Webkit-*.json` à la racine, les
+  `Extended-*.json` sous `extended/`, via une branche orpheline
   **force-pushée** à chaque exécution. Un seul commit, pas d'historique : le
-  dépôt garde une taille constante malgré les ~334 Mo régénérés quotidiennement.
+  dépôt garde une taille constante malgré les ~360 Mo régénérés quotidiennement.
+
+Le job tourne sur **`macos-latest`** — nécessaire pour que `make verify`
+compile chaque fichier avec le WebKit du système avant publication. Rien n'est
+poussé sur `dist` si un seul fichier est rejeté. Les runners macOS sont
+gratuits sur les dépôts publics ; en contrepartie leur file d'attente peut être
+plus longue que celle d'ubuntu.
 
 Les fichiers sont donc consommables directement, avec des URL stables :
 

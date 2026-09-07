@@ -5,34 +5,42 @@
   "source_version": "2.1.68.31",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/123.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:02:31+00:00",
+  "converted_at": "2026-09-07T12:04:20+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 14070,
   "rules_in": 13824,
-  "rules_out": 3290,
-  "coverage_pct": 98.74,
+  "rules_out": 3292,
+  "coverage_pct": 98.76,
   "breakdown": {
     "block": 585,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 2622,
-    "css_selectors": 12983,
+    "css_display_none": 2624,
+    "css_selectors": 12985,
     "ignore_previous_rules": 82
   },
-  "skipped_total": 50,
+  "skipped_total": 48,
   "skipped_reasons": {
-    "selecteur CSS etendu (#?#)": 48,
-    "domaine cosmetique non exprimable (joker de TLD)": 2
+    "selecteur CSS etendu (#?#)": 48
   },
-  "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 2
-  },
+  "notes": {},
   "outputs": [
     {
       "file": "Webkit-Fanboy-s-Social-Blocking-List.json",
-      "rules": 3290,
-      "bytes": 690133
+      "rules": 3292,
+      "bytes": 694726
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-Fanboy-s-Social-Blocking-List.json",
+    "total": 48,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 48,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
 }

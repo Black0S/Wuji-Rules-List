@@ -35,7 +35,9 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_IN = os.path.join(ROOT, "filters")
 DEFAULT_OUT = os.path.join(ROOT, "webkit-rules")
 DEFAULT_REPORTS = os.path.join(ROOT, "reports")
+DEFAULT_EXTENDED = os.path.join(ROOT, "extended-rules")
 PREFIX = "Webkit-"
+EXT_PREFIX = "Extended-"
 
 # Limite dure de Safari: 150 000 regles par content blocker compile.
 WEBKIT_MAX_RULES = 150000
@@ -129,6 +131,20 @@ BAD_REGEX_TOKENS = ("{", "}", "(?", "\\d", "\\w", "\\s", "\\D", "\\W", "\\S",
 COSMETIC_MARKERS = ["#@$?#", "#@$#", "#@?#", "#@%#", "#@#",
                     "#$?#", "#$#", "#?#", "#%#", "##"]
 
+# `exemple.*` n'existe pas cote WebKit. On l'etend vers les extensions
+# reellement rencontrees dans l'ecosysteme adblock. C'est une approximation
+# bornee: elle peut viser un TLD inexistant (sans effet) mais ne peut pas
+# deborder sur un autre nom de domaine.
+TLD_EXPANSION = (
+    "com net org io co to me tv cc xyz top site online info biz club live fun "
+    "store art one pro vip ws la is in ru ua by kz de fr it es nl pl pt br mx "
+    "ar cl pe cn jp kr id vn th tw hk sg my ph se no dk fi cz sk hu ro bg gr "
+    "tr be ch at ie nz au ca us uk eu dev app link click space website host "
+    "press blog cyou icu buzz life world today news media digital cloud "
+    "network group agency plus best wiki quest sbs shop lat cfd bond "
+    "co.uk com.br com.mx com.ar com.tr com.ua com.au co.jp co.kr com.cn"
+).split()
+
 HOSTS_LINE = re.compile(r"^(?:0\.0\.0\.0|127\.0\.0\.1|::1?|::)[ \t]+(\S+)")
 DOMAIN_OK = re.compile(r"^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+\.?$")
 
@@ -180,6 +196,137 @@ def idna_normalize(pattern):
     return percent_encode_non_ascii(pattern)
 
 
+# WebKit refuse `\d` `\w` `\s` mais accepte les classes explicites: ce sont
+# des synonymes exacts, la reecriture ne perd rien. (Verifie: tools/wk_probe)
+SHORTHAND = {"d": ("[0-9]", "0-9"),
+             "w": ("[a-zA-Z0-9_]", "a-zA-Z0-9_"),
+             "s": ("[ ]", " ")}
+
+
+def rewrite_shorthand(rx):
+    """Remplace \d \w \s par leur classe equivalente, dedans comme dehors."""
+    out, i, in_class = [], 0, False
+    while i < len(rx):
+        c = rx[i]
+        if c == "\\" and i + 1 < len(rx):
+            nxt = rx[i + 1]
+            if nxt in SHORTHAND:
+                out.append(SHORTHAND[nxt][1 if in_class else 0])
+                i += 2
+                continue
+            out.append(c)
+            out.append(nxt)
+            i += 2
+            continue
+        if in_class:
+            if c == "]":
+                in_class = False
+        elif c == "[":
+            in_class = True
+        out.append(c)
+        i += 1
+    return "".join(out)
+
+
+def _split_top_level(text, sep="|"):
+    """Decoupe sur `sep` a profondeur 0, hors classes et hors echappements."""
+    parts, buf, depth, in_class, esc = [], [], 0, False, False
+    for ch in text:
+        if esc:
+            buf.append(ch); esc = False; continue
+        if ch == "\\":
+            buf.append(ch); esc = True; continue
+        if in_class:
+            buf.append(ch)
+            if ch == "]":
+                in_class = False
+            continue
+        if ch == "[":
+            in_class = True; buf.append(ch); continue
+        if ch == "(":
+            depth += 1
+        elif ch == ")":
+            depth -= 1
+        if ch == sep and depth == 0:
+            parts.append("".join(buf)); buf = []
+        else:
+            buf.append(ch)
+    parts.append("".join(buf))
+    return parts
+
+
+def _match_paren(rx, start):
+    depth, in_class, esc = 0, False, False
+    i = start
+    while i < len(rx):
+        c = rx[i]
+        if esc:
+            esc = False
+        elif c == "\\":
+            esc = True
+        elif in_class:
+            if c == "]":
+                in_class = False
+        elif c == "[":
+            in_class = True
+        elif c == "(":
+            depth += 1
+        elif c == ")":
+            depth -= 1
+            if depth == 0:
+                return i
+        i += 1
+    return None
+
+
+def expand_alternations(rx, limit=24):
+    """`(a|b)` -> deux regex distinctes. WebKit ne sait pas faire de disjonction,
+    mais deux regles valent exactement une alternation."""
+    top = _split_top_level(rx)
+    if len(top) > 1:
+        out = []
+        for alt in top:
+            out.extend(expand_alternations(alt, limit))
+            if len(out) > limit:
+                raise Unsupported("expansion d'alternation trop large")
+        return out
+
+    i, in_class, esc = 0, False, False
+    while i < len(rx):
+        c = rx[i]
+        if esc:
+            esc = False; i += 1; continue
+        if c == "\\":
+            esc = True; i += 1; continue
+        if in_class:
+            if c == "]":
+                in_class = False
+            i += 1; continue
+        if c == "[":
+            in_class = True; i += 1; continue
+        if c == "(":
+            j = _match_paren(rx, i)
+            if j is None:
+                raise Unsupported("parentheses desequilibrees")
+            alts = _split_top_level(rx[i + 1:j])
+            if len(alts) > 1:
+                # `(a|b)*` et `(a|b)+` ne se scindent pas sans perte
+                # ("ab" appartient a (a|b)+ mais ni a a+ ni a b+).
+                if rx[j + 1:j + 2] in ("*", "+", "{"):
+                    raise Unsupported("alternation sous quantificateur")
+                out = []
+                for a in alts:
+                    for v in expand_alternations(rx[:i] + "(" + a + ")" + rx[j + 1:], limit):
+                        out.append(v)
+                        if len(out) > limit:
+                            raise Unsupported("expansion d'alternation trop large")
+                return out
+            i = j + 1
+            continue
+        i += 1
+    return [rx]
+
+
 def misplaced_anchor(rx):
     """`^` ailleurs qu'en tete, ou `$` ailleurs qu'en fin: refuses par WebKit.
 
@@ -206,26 +353,33 @@ def misplaced_anchor(rx):
 
 
 def validate_raw_regex(rx):
+    """Retourne la liste des regex WebKit equivalentes (1, ou N si alternation)."""
     if not rx:
         raise Unsupported("regex vide")
-    if any(t in rx for t in BAD_REGEX_TOKENS):
-        raise Unsupported("regex hors du sous-ensemble WebKit")
     if any(ord(c) > 127 for c in rx):
         raise Unsupported("regex non-ASCII")
-    if misplaced_anchor(rx):
-        raise Unsupported("ancre `^` ou `$` mal placee")
-    try:
-        re.compile(rx)
-    except re.error:
-        raise Unsupported("regex invalide")
-    return rx
+    rx = rewrite_shorthand(rx)
+    variants = expand_alternations(rx)
+    out = []
+    for v in variants:
+        if any(t in v for t in BAD_REGEX_TOKENS):
+            raise Unsupported("regex hors du sous-ensemble WebKit")
+        if misplaced_anchor(v):
+            raise Unsupported("ancre `^` ou `$` mal placee")
+        try:
+            re.compile(v)
+        except re.error:
+            raise Unsupported("regex invalide")
+        out.append(v)
+    return out
 
 
 def pattern_to_url_filter(pattern):
-    """Traduit un motif adblock en `url-filter` WebKit. Leve Unsupported."""
+    """Traduit un motif adblock en liste d'`url-filter` WebKit (1, ou N si
+    l'alternation d'une regex a du etre eclatee). Leve Unsupported."""
     pattern = pattern.strip()
     if not pattern or pattern in ("*", "||", "|"):
-        return ".*"
+        return [".*"]
 
     if len(pattern) > 2 and pattern.startswith("/") and pattern.endswith("/"):
         return validate_raw_regex(pattern[1:-1])
@@ -274,12 +428,12 @@ def pattern_to_url_filter(pattern):
     while rx.startswith(".*") and not rx.startswith(".*$"):
         rx = rx[2:]
     if not rx:
-        return ".*"
+        return [".*"]
     try:
         re.compile(rx)
     except re.error:
         raise Unsupported("regex generee invalide")
-    return rx
+    return [rx]
 
 
 # --------------------------------------------------------------------------- #
@@ -348,19 +502,36 @@ def split_modifiers(opts):
     return [p.strip() for p in parts if p.strip()]
 
 
-def normalize_domain(d):
-    """Retourne le domaine WebKit (`*d` = domaine + sous-domaines) ou None."""
+def normalize_domain(d, expand_tld=True):
+    """Retourne la liste des domaines WebKit (`*d` = domaine + sous-domaines).
+
+    `exemple.*` est etendu vers TLD_EXPANSION; toute autre forme de joker est
+    inexprimable et renvoie une liste vide.
+    """
     d = d.strip().lower().rstrip(".")
-    if not d or d.startswith("/") or "*" in d or "~" in d[1:]:
-        return None
+    if not d or d.startswith("/"):
+        return []
+    if d.endswith(".*"):
+        if not expand_tld:
+            return []
+        base = d[:-2]
+        if "*" in base or not base:
+            return []
+        out = []
+        for tld in TLD_EXPANSION:
+            got = normalize_domain("%s.%s" % (base, tld), expand_tld=False)
+            out.extend(got)
+        return out
+    if "*" in d or "~" in d[1:]:
+        return []
     if any(ord(c) > 127 for c in d):
         try:
             d = d.encode("idna").decode("ascii")
         except Exception:  # noqa: BLE001
-            return None
+            return []
     if not DOMAIN_OK.match(d):
-        return None
-    return "*" + d
+        return []
+    return ["*" + d]
 
 
 def parse_domain_option(value):
@@ -371,11 +542,11 @@ def parse_domain_option(value):
         if not raw:
             continue
         neg = raw.startswith("~")
-        dom = normalize_domain(raw[1:] if neg else raw)
-        if dom is None:
+        doms = normalize_domain(raw[1:] if neg else raw)
+        if not doms:
             dropped += 1
             continue
-        (exc if neg else inc).append(dom)
+        (exc if neg else inc).extend(doms)
     return inc, exc, dropped
 
 
@@ -383,10 +554,87 @@ def parse_domain_option(value):
 # Convertisseur
 # --------------------------------------------------------------------------- #
 
+def normalize_modifiers(mods, drop=None):
+    """Cle canonique d'un jeu de modificateurs, pour apparier un $badfilter."""
+    out = []
+    for m in mods:
+        m = m.strip()
+        name = m.lstrip("~").split("=", 1)[0].strip().lower()
+        if drop and name == drop:
+            continue
+        if name in ("domain", "from") and "=" in m:
+            head, val = m.split("=", 1)
+            val = "|".join(sorted(v.strip() for v in val.split("|") if v.strip()))
+            m = "%s=%s" % (head, val)
+        out.append(m)
+    return tuple(sorted(out))
+
+
+def rule_key(line, drop=None):
+    """Identite d'une regle reseau, insensible a l'ordre des modificateurs."""
+    exception = line.startswith("@@")
+    if exception:
+        line = line[2:]
+    pattern, opts = split_options(line)
+    mods = split_modifiers(opts) if opts else []
+    return (exception, pattern, normalize_modifiers(mods, drop))
+
+
+SCRIPTLET_AG = re.compile(r"^//\s*scriptlet\s*\((.*)\)\s*;?\s*$", re.S)
+SCRIPTLET_UBO = re.compile(r"^\+js\((.*)\)\s*$", re.S)
+
+
+def parse_quoted_args(inner):
+    """Arguments d'un //scriptlet(...) AdGuard: quotes simples ou doubles,
+    echappements par backslash, virgules hors quotes."""
+    args, buf, quote, esc = [], [], None, False
+    started = False
+    for ch in inner:
+        if esc:
+            buf.append(ch); esc = False; continue
+        if ch == "\\":
+            if quote:
+                buf.append(ch)
+            esc = True
+            continue
+        if quote:
+            if ch == quote:
+                quote = None
+                args.append("".join(buf)); buf = []; started = False
+            else:
+                buf.append(ch)
+            continue
+        if ch in "'\"":
+            quote = ch; started = True; continue
+        if ch == "," or ch.isspace():
+            continue
+        # argument non quote (tolerance)
+        buf.append(ch); started = True
+    if started and buf:
+        args.append("".join(buf))
+    return args
+
+
+def parse_bare_args(inner):
+    """Arguments d'un ##+js(...) uBO: virgules non echappees, sans quotes."""
+    args, buf, esc = [], [], False
+    for ch in inner:
+        if esc:
+            buf.append(ch); esc = False; continue
+        if ch == "\\":
+            esc = True; buf.append(ch); continue
+        if ch == ",":
+            args.append("".join(buf).strip()); buf = []
+            continue
+        buf.append(ch)
+    args.append("".join(buf).strip())
+    return [a for a in args if a != ""] or [""]
+
+
 class Converter(object):
 
     def __init__(self, legacy=False, document_policy="guard", allow_has=False,
-                 css_group_size=250):
+                 css_group_size=250, keep_extended=True):
         self.legacy = legacy
         self.types_map = RESOURCE_TYPES_LEGACY if legacy else RESOURCE_TYPES_MODERN
         self.all_types = ALL_TYPES_LEGACY if legacy else ALL_TYPES_MODERN
@@ -395,6 +643,7 @@ class Converter(object):
         self.document_policy = document_policy
         self.allow_has = allow_has
         self.css_group_size = css_group_size
+        self.keep_extended = keep_extended
         self.reset()
 
     def reset(self):
@@ -407,7 +656,10 @@ class Converter(object):
         self.skipped = {}
         self.notes = {}
         self.counts = {"total": 0, "comments": 0, "converted": 0, "skipped": 0}
+        self.extended = {"scriptlets": [], "procedural": [], "styles": [],
+                         "html": [], "raw_js": 0}
         self._css_exceptions = {}
+        self._badfilters = set()
         self._seen = set()
 
     # -- comptabilite ------------------------------------------------------- #
@@ -419,7 +671,24 @@ class Converter(object):
     def note(self, reason):
         self.notes[reason] = self.notes.get(reason, 0) + 1
 
-    # -- passe 1: exceptions cosmetiques ------------------------------------ #
+    # -- passe 1a: retractations $badfilter --------------------------------- #
+
+    def collect_badfilters(self, lines):
+        """`regle$badfilter` annule la regle identique declaree ailleurs.
+
+        C'est une retractation explicite du mainteneur: l'ignorer reviendrait a
+        bloquer ce que la liste amont a desavoue.
+        """
+        for raw in lines:
+            line = raw.strip()
+            if not line or line[0] in "!#[" or "badfilter" not in line:
+                continue
+            try:
+                self._badfilters.add(rule_key(line, drop="badfilter"))
+            except Exception:  # noqa: BLE001
+                continue
+
+    # -- passe 1b: exceptions cosmetiques ----------------------------------- #
 
     def collect_css_exceptions(self, lines):
         for line in lines:
@@ -602,6 +871,8 @@ class Converter(object):
                 (exc_types if neg else inc_types).append(name)
             elif name in IGNORED_MODIFIERS:
                 self.note("modificateur sans effet sous WebKit: $%s" % name)
+            elif name == "badfilter":
+                raise Unsupported("directive $badfilter (retractation appliquee)")
             elif name in UNSUPPORTED_MODIFIERS:
                 raise Unsupported("modificateur non supporte: $%s" % name)
             else:
@@ -613,9 +884,9 @@ class Converter(object):
             elemhide_exception = True
             inc_types = [t for t in inc_types if t != "document"]
 
-        url_filter = pattern_to_url_filter(pattern)
+        url_filters = pattern_to_url_filter(pattern)
 
-        trigger = {"url-filter": url_filter}
+        trigger = {"url-filter": url_filters[0]}
         if case_sensitive:
             trigger["url-filter-is-case-sensitive"] = True
 
@@ -651,13 +922,22 @@ class Converter(object):
         elif unless_dom:
             trigger["unless-domain"] = sorted(set(unless_dom))
 
+        def emit_all(bucket, action):
+            """Une alternation eclatee donne N regles au trigger identique."""
+            for uf in url_filters:
+                t = dict(trigger)
+                t["url-filter"] = uf
+                self.emit(bucket, t, dict(action))
+            if len(url_filters) > 1:
+                self.note("alternation eclatee en %d regles" % len(url_filters))
+
         if exception:
             if elemhide_exception or (document_intent and not inc_types):
                 # Exception de page entiere. WebKit n'accepte qu'une seule
                 # condition par trigger: on choisit la plus specifique.
                 top = {"url-filter": ".*"}
-                if url_filter != ".*":
-                    top["if-top-url"] = [url_filter]
+                if url_filters != [".*"]:
+                    top["if-top-url"] = url_filters
                     if if_dom or unless_dom:
                         self.note("$domain abandonne (une seule condition par trigger)")
                 elif if_dom:
@@ -669,21 +949,73 @@ class Converter(object):
                 self.emit(self.doc_exceptions, top,
                           {"type": "ignore-previous-rules"})
             else:
-                self.emit(self.exceptions, trigger,
-                          {"type": "ignore-previous-rules"})
+                emit_all(self.exceptions, {"type": "ignore-previous-rules"})
             return
 
         if cookie_only:
-            self.emit(self.cookie_rules, trigger, {"type": "block-cookies"})
+            emit_all(self.cookie_rules, {"type": "block-cookies"})
             return
 
-        bucket = self.doc_blocks if document_intent else self.blocks
-        self.emit(bucket, trigger, {"type": "block"})
+        emit_all(self.doc_blocks if document_intent else self.blocks,
+                 {"type": "block"})
 
     # -- regles cosmetiques ------------------------------------------------- #
 
+    def capture_extended(self, domains, marker, body):
+        """Consigne une regle non convertible en WebKit mais exploitable par un
+        moteur a injection (extension). Ne modifie pas le comptage: la regle
+        reste ecartee de la sortie WebKit."""
+        if not self.keep_extended:
+            return
+        inc, exc, _ = parse_domain_option(domains.replace(",", "|"))
+        scope = {"domains": sorted(set(d[1:] for d in inc)),
+                 "excluded": sorted(set(d[1:] for d in exc))}
+        exception = "@" in marker
+
+        m = SCRIPTLET_AG.match(body.strip())
+        if marker in ("#%#", "#@%#") and m:
+            args = parse_quoted_args(m.group(1))
+            if args:
+                self.extended["scriptlets"].append(dict(
+                    scope, name=args[0], args=args[1:],
+                    syntax="adguard", exception=exception))
+            return
+        if marker in ("#%#", "#@%#"):
+            self.extended["raw_js"] += 1     # JS libre: non reutilisable tel quel
+            return
+
+        m = SCRIPTLET_UBO.match(body.strip())
+        if m:
+            args = parse_bare_args(m.group(1))
+            if args and args[0]:
+                self.extended["scriptlets"].append(dict(
+                    scope, name=args[0], args=args[1:],
+                    syntax="ubo", exception=exception))
+            return
+
+        if body.startswith("^"):
+            self.extended["html"].append(dict(scope, expression=body[1:],
+                                              exception=exception))
+            return
+
+        if marker in ("#$#", "#$?#", "#@$#", "#@$?#"):
+            if "{" in body and body.rstrip().endswith("}"):
+                sel, decl = body.split("{", 1)
+                self.extended["styles"].append(dict(
+                    scope, selector=sel.strip(),
+                    declarations=decl.rstrip().rstrip("}").strip(),
+                    extended=("?" in marker), exception=exception))
+            else:
+                self.extended["raw_js"] += 1
+            return
+
+        if marker in ("#?#", "#@?#") or marker == "##":
+            self.extended["procedural"].append(dict(
+                scope, selector=body.strip(), exception=exception))
+
     def convert_cosmetic(self, domains, marker, body):
         if marker != "##":
+            self.capture_extended(domains, marker, body)
             raise Unsupported({
                 "#@#": "exception cosmetique (traitee en amont)",
                 "#?#": "selecteur CSS etendu (#?#)",
@@ -697,9 +1029,14 @@ class Converter(object):
             }.get(marker, "syntaxe cosmetique non supportee"))
 
         if body.startswith("+js(") or body.startswith("^"):
+            self.capture_extended(domains, marker, body)
             raise Unsupported("scriptlet ou filtrage HTML")
 
-        selector = self.valid_selector(body)
+        try:
+            selector = self.valid_selector(body)
+        except Unsupported:
+            self.capture_extended(domains, marker, body)
+            raise
         inc, exc, dropped = parse_domain_option(domains.replace(",", "|"))
         if dropped:
             self.note("domaine ignore (joker) dans une regle cosmetique")
@@ -736,6 +1073,7 @@ class Converter(object):
     # -- boucle principale -------------------------------------------------- #
 
     def convert_lines(self, lines, hosts_mode=False):
+        self.collect_badfilters(lines)
         self.collect_css_exceptions(lines)
 
         for raw in lines:
@@ -775,6 +1113,9 @@ class Converter(object):
                     if line.startswith("#"):
                         self.counts["comments"] += 1
                         self.counts["total"] -= 1
+                        continue
+                    if self._badfilters and rule_key(line) in self._badfilters:
+                        self.skip("retiree par $badfilter (retractation amont)")
                         continue
                     self.convert_network(line)
             except Unsupported as e:
@@ -877,7 +1218,8 @@ def convert_file(path, meta, args):
     hosts_mode = fmt == "hosts" or detect_hosts(lines)
 
     conv = Converter(legacy=args.legacy, document_policy=args.document_policy,
-                     allow_has=args.allow_has, css_group_size=args.css_group_size)
+                     allow_has=args.allow_has, css_group_size=args.css_group_size,
+                     keep_extended=args.extended)
     conv.convert_lines(lines, hosts_mode=hosts_mode)
     body, tail = conv.assemble()
 
@@ -903,6 +1245,31 @@ def convert_file(path, meta, args):
             write_json(out_path, chunk, args.pretty)
         outputs.append({"file": name, "rules": len(chunk),
                         "bytes": os.path.getsize(out_path) if not args.dry_run else 0})
+
+    ext = conv.extended
+    ext_counts = {k: (v if isinstance(v, int) else len(v)) for k, v in ext.items()}
+    ext_total = sum(v for k, v in ext_counts.items() if k != "raw_js")
+    ext_file = None
+    if args.extended and ext_total and not args.dry_run:
+        ext_file = EXT_PREFIX + base + ".json"
+        payload = {
+            "source_file": os.path.basename(path),
+            "name": (meta or {}).get("name", base),
+            "version": (meta or {}).get("version", ""),
+            "generated_at": now_iso(),
+            "note": ("Regles non exprimables en Content Blocker WebKit mais "
+                     "exploitables par un moteur a injection (Safari Web "
+                     "Extension). Non chargeables telles quelles par Safari."),
+            "counts": ext_counts,
+            "scriptlets": ext["scriptlets"],
+            "procedural": ext["procedural"],
+            "styles": ext["styles"],
+            "html": ext["html"],
+        }
+        with open(os.path.join(args.extended_out, ext_file), "w",
+                  encoding="utf-8") as fh:
+            json.dump(payload, fh, separators=(",", ":"), ensure_ascii=False)
+            fh.write("\n")
 
     report = {
         "source_file": os.path.basename(path),
@@ -932,6 +1299,7 @@ def convert_file(path, meta, args):
                                        key=lambda kv: -kv[1])),
         "notes": dict(sorted(conv.notes.items(), key=lambda kv: -kv[1])),
         "outputs": outputs,
+        "extended": {"file": ext_file, "total": ext_total, "counts": ext_counts},
     }
     return report
 
@@ -944,6 +1312,10 @@ def main():
     ap.add_argument("--out", default=DEFAULT_OUT,
                     help="dossier de sortie (defaut: webkit-rules/)")
     ap.add_argument("--reports", default=DEFAULT_REPORTS, help="dossier des rapports")
+    ap.add_argument("--extended-out", default=DEFAULT_EXTENDED,
+                    help="dossier des regles a injection (defaut: extended-rules/)")
+    ap.add_argument("--no-extended", dest="extended", action="store_false", default=True,
+                    help="ne pas produire les fichiers Extended-*.json")
     ap.add_argument("--only", nargs="+", metavar="MOTIF",
                     help="ne convertir que les fichiers dont le nom contient ces motifs")
     ap.add_argument("--legacy", action="store_true",
@@ -975,6 +1347,8 @@ def main():
 
     os.makedirs(args.out, exist_ok=True)
     os.makedirs(args.reports, exist_ok=True)
+    if args.extended:
+        os.makedirs(args.extended_out, exist_ok=True)
     index_meta = read_index(args.in_dir)
 
     reports = []
@@ -1011,6 +1385,7 @@ def main():
             "rules_in": sum(r["rules_in"] for r in reports),
             "rules_out": sum(r["rules_out"] for r in reports),
             "skipped": sum(r["skipped_total"] for r in reports),
+            "extended": sum(r["extended"]["total"] for r in reports),
         },
         "lists": [{
             "name": r["source_name"],
@@ -1018,15 +1393,25 @@ def main():
             "version": r["source_version"],
             "coverage_pct": r["coverage_pct"],
             "files": r["outputs"],
+            "extended_file": r["extended"]["file"],
         } for r in reports],
     }
     # Purge des fichiers d'une execution precedente qui n'ont plus de source
     # (liste retiree du catalogue, ou decoupage devenu plus court). Un fichier
     # orphelin ferait echouer la verification et resterait charge cote Safari.
+    # La purge n'a de sens que sur un run complet: avec --only, les fichiers
+    # des autres listes sont legitimement absents de `reports`.
+    full_run = not args.only
+    if args.extended and full_run and not args.dry_run:
+        keep_ext = {r["extended"]["file"] for r in reports if r["extended"]["file"]}
+        for f in os.listdir(args.extended_out):
+            if f.startswith(EXT_PREFIX) and f.endswith(".json") and f not in keep_ext:
+                os.remove(os.path.join(args.extended_out, f))
+
     produced = {o["file"] for r in reports for o in r["outputs"]}
     stale = [f for f in os.listdir(args.out)
              if f.startswith(PREFIX) and f.endswith(".json") and f not in produced]
-    if stale and not args.dry_run:
+    if stale and full_run and not args.dry_run:
         for f in stale:
             os.remove(os.path.join(args.out, f))
         print("  purge: %d fichier(s) obsolete(s) supprime(s)" % len(stale))
@@ -1042,6 +1427,9 @@ def main():
     print("\n%s" % ("-" * 60))
     print("%d listes -> %d fichiers WebKit | %d regles retenues / %d entrees | %d ecartees"
           % (t["lists"], t["files"], t["rules_out"], t["rules_in"], t["skipped"]))
+    if t.get("extended"):
+        print("%d regles a injection consignees dans %s"
+              % (t["extended"], args.extended_out))
     return 0
 
 

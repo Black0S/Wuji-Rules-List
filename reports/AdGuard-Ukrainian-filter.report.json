@@ -5,49 +5,61 @@
   "source_version": "2.0.9.23",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/23.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T01:01:18+00:00",
+  "converted_at": "2026-09-07T12:03:07+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 6017,
   "rules_in": 5478,
-  "rules_out": 3961,
-  "coverage_pct": 94.4,
+  "rules_out": 3986,
+  "coverage_pct": 94.87,
   "breakdown": {
-    "block": 3191,
+    "block": 3215,
     "block_document": 4,
     "block_cookies": 0,
-    "css_display_none": 695,
-    "css_selectors": 1906,
+    "css_display_none": 696,
+    "css_selectors": 1908,
     "ignore_previous_rules": 70
   },
-  "skipped_total": 287,
+  "skipped_total": 279,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 119,
     "injection de style / scriptlet (#$#)": 67,
     "JavaScript / scriptlet (#%#)": 39,
     "modificateur non supporte: $redirect": 18,
-    "regex hors du sous-ensemble WebKit": 17,
+    "regex hors du sous-ensemble WebKit": 11,
     "injection de style etendue (#$?#)": 11,
     "$domain inexprimable (regex ou joker)": 3,
     "modificateur non supporte: $removeparam": 3,
     "modificateur non supporte: $redirect-rule": 2,
     "modificateur non supporte: $denyallow": 2,
-    "domaine cosmetique non exprimable (joker de TLD)": 2,
     "regle cosmetique entierement exceptee": 2,
     "ancre `|` en milieu de motif": 1,
     "modificateur inconnu: $_____": 1
   },
   "notes": {
     "modificateur sans effet sous WebKit: $all": 30,
-    "domaine ignore (joker) dans une regle cosmetique": 9,
     "doublon fusionne": 4,
+    "alternation eclatee en 3 regles": 3,
+    "alternation eclatee en 6 regles": 1,
+    "alternation eclatee en 8 regles": 1,
     "modificateur sans effet sous WebKit: $important": 1
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Ukrainian-filter.json",
-      "rules": 3961,
-      "bytes": 527159
+      "rules": 3986,
+      "bytes": 538514
     }
-  ]
+  ],
+  "extended": {
+    "file": "Extended-AdGuard-Ukrainian-filter.json",
+    "total": 235,
+    "counts": {
+      "scriptlets": 38,
+      "procedural": 119,
+      "styles": 78,
+      "html": 0,
+      "raw_js": 1
+    }
+  }
 }
