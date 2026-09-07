@@ -1,0 +1,53 @@
+{
+  "source_file": "AdGuard-Cookie-Notices-filter.txt",
+  "source_name": "AdGuard Cookie Notices filter",
+  "source_title": "AdGuard Cookie Notices filter",
+  "source_version": "2.0.93.65",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/18.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:51:08+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 24555,
+  "rules_in": 21539,
+  "rules_out": 11625,
+  "coverage_pct": 63.74,
+  "breakdown": {
+    "block": 1266,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 8858,
+    "css_selectors": 10963,
+    "ignore_previous_rules": 1500
+  },
+  "skipped_total": 6546,
+  "skipped_reasons": {
+    "injection de style / scriptlet (#$#)": 3075,
+    "JavaScript / scriptlet (#%#)": 2654,
+    "selecteur CSS etendu (#?#)": 310,
+    "pseudo-classe :has() (activer --allow-has)": 293,
+    "injection de style etendue (#$?#)": 116,
+    "domaine cosmetique non exprimable (joker de TLD)": 65,
+    "modificateur non supporte: $redirect": 13,
+    "injection de style (non supportee)": 5,
+    "modificateur non supporte: $path": 5,
+    "regex hors du sous-ensemble WebKit": 4,
+    "regle cosmetique entierement exceptee": 4,
+    "exception d'injection de style": 1,
+    "exception de scriptlet": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 144,
+    "modificateur sans effet sous WebKit: $important": 13,
+    "domaine ignore (joker ou regex dans $domain)": 12,
+    "doublon fusionne": 6,
+    "unless-domain abandonne (incompatible avec if-domain)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Cookie-Notices-filter.json",
+      "rules": 11625,
+      "bytes": 1899846
+    }
+  ]
+}

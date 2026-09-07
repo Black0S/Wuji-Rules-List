@@ -1,0 +1,37 @@
+{
+  "source_file": "YousList.txt",
+  "source_name": "YousList",
+  "source_title": "YousList",
+  "source_version": "2.0.11.32",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/244.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:56:14+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 7834,
+  "rules_in": 7794,
+  "rules_out": 3419,
+  "coverage_pct": 99.67,
+  "breakdown": {
+    "block": 1852,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1549,
+    "css_selectors": 5899,
+    "ignore_previous_rules": 17
+  },
+  "skipped_total": 4,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 2,
+    "caractere de controle dans le selecteur": 1,
+    "injection de style (non supportee)": 1
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-YousList.json",
+      "rules": 3419,
+      "bytes": 632932
+    }
+  ]
+}

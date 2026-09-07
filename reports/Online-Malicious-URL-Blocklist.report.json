@@ -1,0 +1,35 @@
+{
+  "source_file": "Online-Malicious-URL-Blocklist.txt",
+  "source_name": "Online Malicious URL Blocklist",
+  "source_title": "Online Malicious URL Blocklist",
+  "source_version": "2.1.9.41",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/208.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:55:01+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 9352,
+  "rules_in": 9338,
+  "rules_out": 9339,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 9338,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {
+    "modificateur sans effet sous WebKit: $all": 9338
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Online-Malicious-URL-Blocklist.json",
+      "rules": 9339,
+      "bytes": 1706765
+    }
+  ]
+}

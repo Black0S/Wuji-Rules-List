@@ -1,0 +1,38 @@
+{
+  "source_file": "HaGeZi-s-Normal-Blocklist.txt",
+  "source_name": "HaGeZi's Normal Blocklist",
+  "source_title": "HaGeZi's Normal Blocklist",
+  "source_version": "1.0.32.43",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_34.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:54:43+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 192721,
+  "rules_in": 192712,
+  "rules_out": 192713,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 192712,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-HaGeZi-s-Normal-Blocklist-1.json",
+      "rules": 150000,
+      "bytes": 17302810
+    },
+    {
+      "file": "Webkit-HaGeZi-s-Normal-Blocklist-2.json",
+      "rules": 42713,
+      "bytes": 4746061
+    }
+  ]
+}

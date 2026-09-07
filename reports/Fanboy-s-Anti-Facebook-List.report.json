@@ -1,0 +1,33 @@
+{
+  "source_file": "Fanboy-s-Anti-Facebook-List.txt",
+  "source_name": "Fanboy's Anti-Facebook List",
+  "source_title": "Fanboy's Anti-Facebook List",
+  "source_version": "2.0.22.80",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/225.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:53:16+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 106,
+  "rules_in": 69,
+  "rules_out": 70,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 39,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1,
+    "css_selectors": 1,
+    "ignore_previous_rules": 29
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-Fanboy-s-Anti-Facebook-List.json",
+      "rules": 70,
+      "bytes": 11465
+    }
+  ]
+}

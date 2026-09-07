@@ -1,0 +1,43 @@
+{
+  "source_file": "EasyList-China.txt",
+  "source_name": "EasyList China",
+  "source_title": "EasyList China",
+  "source_version": "2.1.67.55",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/104.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:54+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 19472,
+  "rules_in": 19358,
+  "rules_out": 14621,
+  "coverage_pct": 98.05,
+  "breakdown": {
+    "block": 11429,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 2216,
+    "css_selectors": 6576,
+    "ignore_previous_rules": 975
+  },
+  "skipped_total": 201,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 156,
+    "modificateur non supporte: $csp": 14,
+    "modificateur non supporte: $redirect": 11,
+    "pseudo-classe :has() (activer --allow-has)": 8,
+    "modificateur non supporte: $genericblock": 8,
+    "regex hors du sous-ensemble WebKit": 3,
+    "$domain melange inclusions et exclusions": 1
+  },
+  "notes": {
+    "unless-domain abandonne (incompatible avec if-domain)": 4
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-China.json",
+      "rules": 14621,
+      "bytes": 1804801
+    }
+  ]
+}

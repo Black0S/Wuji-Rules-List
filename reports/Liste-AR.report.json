@@ -1,0 +1,35 @@
+{
+  "source_file": "Liste-AR.txt",
+  "source_name": "Liste AR",
+  "source_title": "Liste AR",
+  "source_version": "2.1.97.26",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/112.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:54:49+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 1680,
+  "rules_in": 1605,
+  "rules_out": 1240,
+  "coverage_pct": 99.5,
+  "breakdown": {
+    "block": 999,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 208,
+    "css_selectors": 566,
+    "ignore_previous_rules": 32
+  },
+  "skipped_total": 6,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 6
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-Liste-AR.json",
+      "rules": 1240,
+      "bytes": 170486
+    }
+  ]
+}

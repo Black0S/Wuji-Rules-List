@@ -1,0 +1,38 @@
+{
+  "source_file": "Adblock-Warning-Removal-List.txt",
+  "source_name": "Adblock Warning Removal List",
+  "source_title": "Adblock Warning Removal List",
+  "source_version": "2.1.97.26",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/207.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:09+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 3032,
+  "rules_in": 2971,
+  "rules_out": 2773,
+  "coverage_pct": 98.92,
+  "breakdown": {
+    "block": 2458,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 245,
+    "css_selectors": 412,
+    "ignore_previous_rules": 69
+  },
+  "skipped_total": 4,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 3,
+    "regex hors du sous-ensemble WebKit": 1
+  },
+  "notes": {
+    "doublon fusionne": 5
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Adblock-Warning-Removal-List.json",
+      "rules": 2773,
+      "bytes": 324060
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "source_file": "AdBlockID.txt",
+  "source_name": "AdBlockID",
+  "source_title": "AdBlockID",
+  "source_version": "2.0.30.50",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/120.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:50:54+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 6924,
+  "rules_in": 6910,
+  "rules_out": 2470,
+  "coverage_pct": 87.93,
+  "breakdown": {
+    "block": 1417,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 965,
+    "css_selectors": 4572,
+    "ignore_previous_rules": 87
+  },
+  "skipped_total": 815,
+  "skipped_reasons": {
+    "pseudo-classe :has() (activer --allow-has)": 355,
+    "selecteur CSS etendu (#?#)": 134,
+    "JavaScript / scriptlet (#%#)": 95,
+    "domaine cosmetique non exprimable (joker de TLD)": 79,
+    "injection de style / scriptlet (#$#)": 45,
+    "modificateur non supporte: $redirect": 28,
+    "regex hors du sous-ensemble WebKit": 22,
+    "injection de style etendue (#$?#)": 19,
+    "modificateur non supporte: $path": 13,
+    "modificateur non supporte: $redirect-rule": 11,
+    "modificateur non supporte: $to": 7,
+    "ancre `|` en milieu de motif": 3,
+    "accolade litterale (refusee par le parseur WebKit)": 2,
+    "pseudo-classe CSS etendue": 1,
+    "modificateur non supporte: $badfilter": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 100,
+    "domaine ignore (joker ou regex dans $domain)": 5
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdBlockID.json",
+      "rules": 2470,
+      "bytes": 473880
+    }
+  ]
+}

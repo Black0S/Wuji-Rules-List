@@ -1,0 +1,33 @@
+{
+  "source_file": "ROLIST2.txt",
+  "source_name": "ROLIST2",
+  "source_title": "ROLIST2",
+  "source_version": "2.0.0.80",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/234.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:55:39+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 660,
+  "rules_in": 639,
+  "rules_out": 245,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 97,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 140,
+    "css_selectors": 535,
+    "ignore_previous_rules": 7
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-ROLIST2.json",
+      "rules": 245,
+      "bytes": 48155
+    }
+  ]
+}

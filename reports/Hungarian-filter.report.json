@@ -1,0 +1,45 @@
+{
+  "source_file": "Hungarian-filter.txt",
+  "source_name": "Hungarian filter",
+  "source_title": "Hungarian filter",
+  "source_version": "2.0.5.34",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/203.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:54:45+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 2254,
+  "rules_in": 2009,
+  "rules_out": 830,
+  "coverage_pct": 89.05,
+  "breakdown": {
+    "block": 368,
+    "block_document": 9,
+    "block_cookies": 0,
+    "css_display_none": 437,
+    "css_selectors": 1397,
+    "ignore_previous_rules": 15
+  },
+  "skipped_total": 215,
+  "skipped_reasons": {
+    "pseudo-classe :has() (activer --allow-has)": 55,
+    "JavaScript / scriptlet (#%#)": 51,
+    "domaine cosmetique non exprimable (joker de TLD)": 38,
+    "injection de style / scriptlet (#$#)": 38,
+    "selecteur CSS etendu (#?#)": 30,
+    "regex hors du sous-ensemble WebKit": 1,
+    "modificateur non supporte: $redirect": 1,
+    "$cookie avec valeur / en exception": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 39,
+    "doublon fusionne": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Hungarian-filter.json",
+      "rules": 830,
+      "bytes": 136513
+    }
+  ]
+}

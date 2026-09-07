@@ -1,0 +1,35 @@
+{
+  "source_file": "Scam-Blocklist-by-DurableNapkin.txt",
+  "source_name": "Scam Blocklist by DurableNapkin",
+  "source_title": "Scam Blocklist by DurableNapkin",
+  "source_version": "2.0.8.78",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/256.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:55:39+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 1942,
+  "rules_in": 963,
+  "rules_out": 964,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 963,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {
+    "modificateur sans effet sous WebKit: $all": 963
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Scam-Blocklist-by-DurableNapkin.json",
+      "rules": 964,
+      "bytes": 106769
+    }
+  ]
+}

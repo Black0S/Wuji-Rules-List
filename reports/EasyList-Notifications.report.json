@@ -1,0 +1,43 @@
+{
+  "source_file": "EasyList-Notifications.txt",
+  "source_name": "EasyList - Notifications",
+  "source_title": "EasyList – Notifications",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-notifications.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:56+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 1838,
+  "rules_in": 1673,
+  "rules_out": 1030,
+  "coverage_pct": 89.54,
+  "breakdown": {
+    "block": 476,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 536,
+    "css_selectors": 1005,
+    "ignore_previous_rules": 17
+  },
+  "skipped_total": 163,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 64,
+    "pseudo-classe CSS etendue": 60,
+    "selecteur CSS etendu (#?#)": 23,
+    "pseudo-classe :has() (activer --allow-has)": 10,
+    "domaine cosmetique non exprimable (joker de TLD)": 5,
+    "injection de style (non supportee)": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 5,
+    "doublon fusionne": 3
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Notifications.json",
+      "rules": 1030,
+      "bytes": 154062
+    }
+  ]
+}

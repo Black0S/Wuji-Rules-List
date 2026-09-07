@@ -1,0 +1,60 @@
+{
+  "source_file": "AdGuard-Chinese-filter.txt",
+  "source_name": "AdGuard Chinese filter",
+  "source_title": "AdGuard Chinese filter",
+  "source_version": "2.1.64.85",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/224.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:51:07+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 23168,
+  "rules_in": 22388,
+  "rules_out": 16013,
+  "coverage_pct": 94.35,
+  "breakdown": {
+    "block": 12182,
+    "block_document": 2,
+    "block_cookies": 0,
+    "css_display_none": 2759,
+    "css_selectors": 7870,
+    "ignore_previous_rules": 1069
+  },
+  "skipped_total": 1003,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 292,
+    "JavaScript / scriptlet (#%#)": 289,
+    "pseudo-classe :has() (activer --allow-has)": 143,
+    "injection de style / scriptlet (#$#)": 123,
+    "modificateur non supporte: $redirect": 53,
+    "injection de style etendue (#$?#)": 21,
+    "regex hors du sous-ensemble WebKit": 16,
+    "modificateur non supporte: $csp": 15,
+    "modificateur non supporte: $denyallow": 15,
+    "modificateur non supporte: $badfilter": 11,
+    "modificateur non supporte: $genericblock": 8,
+    "selecteur CSS etendu (#@?#)": 4,
+    "modificateur non supporte: $removeparam": 4,
+    "domaine cosmetique non exprimable (joker de TLD)": 2,
+    "regle cosmetique entierement exceptee": 2,
+    "pseudo-classe CSS etendue": 2,
+    "modificateur non supporte: $stealth": 1,
+    "modificateur inconnu: $_____": 1,
+    "$domain melange inclusions et exclusions": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 15,
+    "domaine ignore (joker ou regex dans $domain)": 7,
+    "doublon fusionne": 7,
+    "unless-domain abandonne (incompatible avec if-domain)": 4,
+    "modificateur sans effet sous WebKit: $all": 3,
+    "modificateur sans effet sous WebKit: $important": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Chinese-filter.json",
+      "rules": 16013,
+      "bytes": 2018600
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "source_file": "EasyList-Anti-AI-Suggestions.txt",
+  "source_name": "EasyList - Anti AI Suggestions",
+  "source_title": "EasyList – Anti AI Suggestions",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-ai.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:52+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 284,
+  "rules_in": 265,
+  "rules_out": 136,
+  "coverage_pct": 83.4,
+  "breakdown": {
+    "block": 21,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 114,
+    "css_selectors": 200,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 44,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 31,
+    "pseudo-classe :has() (activer --allow-has)": 13
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Anti-AI-Suggestions.json",
+      "rules": 136,
+      "bytes": 21849
+    }
+  ]
+}

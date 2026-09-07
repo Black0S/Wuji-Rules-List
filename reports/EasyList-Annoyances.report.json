@@ -1,0 +1,42 @@
+{
+  "source_file": "EasyList-Annoyances.txt",
+  "source_name": "EasyList - Annoyances",
+  "source_title": "EasyList – Annoyances",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-annoyances.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:52+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 4302,
+  "rules_in": 4014,
+  "rules_out": 2466,
+  "coverage_pct": 93.42,
+  "breakdown": {
+    "block": 734,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1712,
+    "css_selectors": 2997,
+    "ignore_previous_rules": 19
+  },
+  "skipped_total": 243,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 100,
+    "pseudo-classe CSS etendue": 59,
+    "selecteur CSS etendu (#?#)": 54,
+    "pseudo-classe :has() (activer --allow-has)": 28,
+    "domaine cosmetique non exprimable (joker de TLD)": 2
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 6,
+    "doublon fusionne": 4
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Annoyances.json",
+      "rules": 2466,
+      "bytes": 365280
+    }
+  ]
+}

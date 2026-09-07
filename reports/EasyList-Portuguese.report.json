@@ -1,0 +1,38 @@
+{
+  "source_file": "EasyList-Portuguese.txt",
+  "source_name": "EasyList Portuguese",
+  "source_title": "EasyList Portuguese",
+  "source_version": "2.0.69.0",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/124.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:56+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 1728,
+  "rules_in": 1658,
+  "rules_out": 946,
+  "coverage_pct": 96.14,
+  "breakdown": {
+    "block": 297,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 621,
+    "css_selectors": 1270,
+    "ignore_previous_rules": 27
+  },
+  "skipped_total": 57,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 27,
+    "pseudo-classe :has() (activer --allow-has)": 25,
+    "regex hors du sous-ensemble WebKit": 4,
+    "injection de style (non supportee)": 1
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Portuguese.json",
+      "rules": 946,
+      "bytes": 149727
+    }
+  ]
+}

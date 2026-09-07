@@ -1,0 +1,50 @@
+{
+  "source_file": "Dandelion-Sprout-s-Nordic-Filters.txt",
+  "source_name": "Dandelion Sprout's Nordic Filters",
+  "source_title": "Dandelion Sprout's Nordic Filters",
+  "source_version": "2.0.8.54",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/249.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:52+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 3546,
+  "rules_in": 2935,
+  "rules_out": 1567,
+  "coverage_pct": 81.23,
+  "breakdown": {
+    "block": 763,
+    "block_document": 149,
+    "block_cookies": 0,
+    "css_display_none": 589,
+    "css_selectors": 1407,
+    "ignore_previous_rules": 65
+  },
+  "skipped_total": 534,
+  "skipped_reasons": {
+    "pseudo-classe :has() (activer --allow-has)": 282,
+    "injection de style / scriptlet (#$#)": 71,
+    "selecteur CSS etendu (#?#)": 66,
+    "domaine cosmetique non exprimable (joker de TLD)": 51,
+    "JavaScript / scriptlet (#%#)": 31,
+    "pseudo-classe CSS etendue": 16,
+    "modificateur non supporte: $redirect": 9,
+    "regex hors du sous-ensemble WebKit": 6,
+    "modificateur non supporte: $badfilter": 1,
+    "modificateur non supporte: $redirect-rule": 1
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $all": 226,
+    "domaine ignore (joker ou regex dans $domain)": 207,
+    "domaine ignore (joker) dans une regle cosmetique": 67,
+    "modificateur sans effet sous WebKit: $important": 6,
+    "unless-domain abandonne (incompatible avec if-domain)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Dandelion-Sprout-s-Nordic-Filters.json",
+      "rules": 1567,
+      "bytes": 238560
+    }
+  ]
+}

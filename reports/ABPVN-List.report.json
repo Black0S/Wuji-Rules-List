@@ -1,0 +1,41 @@
+{
+  "source_file": "ABPVN-List.txt",
+  "source_name": "ABPVN List",
+  "source_title": "ABPVN List",
+  "source_version": "2.0.45.57",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/214.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:50:53+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 1199,
+  "rules_in": 1165,
+  "rules_out": 715,
+  "coverage_pct": 87.64,
+  "breakdown": {
+    "block": 334,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 326,
+    "css_selectors": 633,
+    "ignore_previous_rules": 54
+  },
+  "skipped_total": 127,
+  "skipped_reasons": {
+    "JavaScript / scriptlet (#%#)": 92,
+    "pseudo-classe :has() (activer --allow-has)": 13,
+    "injection de style / scriptlet (#$#)": 7,
+    "modificateur non supporte: $csp": 6,
+    "modificateur non supporte: $redirect": 6,
+    "regex hors du sous-ensemble WebKit": 2,
+    "selecteur CSS etendu (#?#)": 1
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-ABPVN-List.json",
+      "rules": 715,
+      "bytes": 109243
+    }
+  ]
+}

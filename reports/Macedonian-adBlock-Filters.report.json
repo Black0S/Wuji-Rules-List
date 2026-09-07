@@ -1,0 +1,33 @@
+{
+  "source_file": "Macedonian-adBlock-Filters.txt",
+  "source_name": "Macedonian adBlock Filters",
+  "source_title": "Macedonian adBlock Filters",
+  "source_version": "2.0.0.14",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/254.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:54:50+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 773,
+  "rules_in": 759,
+  "rules_out": 415,
+  "coverage_pct": 99.87,
+  "breakdown": {
+    "block": 293,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 121,
+    "css_selectors": 465,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-Macedonian-adBlock-Filters.json",
+      "rules": 415,
+      "bytes": 95803
+    }
+  ]
+}

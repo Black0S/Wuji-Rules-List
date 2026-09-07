@@ -1,0 +1,33 @@
+{
+  "source_file": "HaGeZi-s-Samsung-Tracker-Blocklist.txt",
+  "source_name": "HaGeZi's Samsung Tracker Blocklist",
+  "source_title": "HaGeZi's Samsung Tracker Blocklist",
+  "source_version": "1.0.0.50",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_61.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:54:43+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 208,
+  "rules_in": 199,
+  "rules_out": 200,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 199,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-HaGeZi-s-Samsung-Tracker-Blocklist.json",
+      "rules": 200,
+      "bytes": 25077
+    }
+  ]
+}

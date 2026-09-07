@@ -1,0 +1,33 @@
+{
+  "source_file": "HaGeZi-s-Anti-Piracy-Blocklist.txt",
+  "source_name": "HaGeZi's Anti-Piracy Blocklist",
+  "source_title": "HaGeZi's Anti-Piracy Blocklist",
+  "source_version": "1.0.27.9",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_46.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:53:22+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 48966,
+  "rules_in": 48957,
+  "rules_out": 48958,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 48957,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-HaGeZi-s-Anti-Piracy-Blocklist.json",
+      "rules": 48958,
+      "bytes": 5550916
+    }
+  ]
+}

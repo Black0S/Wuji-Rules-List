@@ -1,0 +1,47 @@
+{
+  "source_file": "Polish-Social-Filters.txt",
+  "source_name": "Polish Social Filters",
+  "source_title": "Polish Social Filters",
+  "source_version": "2.0.5.23",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/221.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:55:38+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 11672,
+  "rules_in": 11586,
+  "rules_out": 7661,
+  "coverage_pct": 82.36,
+  "breakdown": {
+    "block": 787,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 6823,
+    "css_selectors": 8705,
+    "ignore_previous_rules": 50
+  },
+  "skipped_total": 1830,
+  "skipped_reasons": {
+    "domaine cosmetique non exprimable (joker de TLD)": 688,
+    "pseudo-classe :has() (activer --allow-has)": 539,
+    "selecteur CSS etendu (#?#)": 435,
+    "injection de style / scriptlet (#$#)": 117,
+    "pseudo-classe CSS etendue": 20,
+    "injection de style etendue (#$?#)": 11,
+    "JavaScript / scriptlet (#%#)": 10,
+    "modificateur non supporte: $redirect": 4,
+    "modificateur non supporte: $path": 4,
+    "regle cosmetique entierement exceptee": 2
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 689,
+    "unless-domain abandonne (incompatible avec if-domain)": 17
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Polish-Social-Filters.json",
+      "rules": 7661,
+      "bytes": 1276968
+    }
+  ]
+}

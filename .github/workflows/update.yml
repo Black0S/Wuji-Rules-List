@@ -1,0 +1,70 @@
+name: Mise a jour des listes
+
+on:
+  schedule:
+    - cron: "17 4 * * *"      # tous les jours a 04:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:                    # rejouer si le pipeline lui-meme change
+      - "fetch_filters.py"
+      - "convert_webkit.py"
+      - "sources.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-lists
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Telecharger les listes
+        run: python3 fetch_filters.py
+
+      - name: Convertir en Content Blocker WebKit
+        run: python3 convert_webkit.py
+
+      - name: Verifier les JSON produits
+        run: make check
+
+      - name: Identite git
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      # main ne recoit que l'etat des sources et les rapports (quelques centaines de Ko).
+      - name: Commit de l'etat sur main
+        run: |
+          git add filters/index.json reports
+          if git diff --cached --quiet; then
+            echo "Rien a committer sur main."
+          else
+            git commit -m "chore: mise a jour des listes ($(date -u +%Y-%m-%d))"
+            git push
+          fi
+
+      # Les regles converties vont sur une branche orpheline, reecrite a chaque
+      # run : le depot ne grossit pas avec l'historique des JSON.
+      - name: Publier les regles sur la branche dist
+        run: |
+          cp reports/CONVERSION.md webkit-rules/CONVERSION.md
+          cd webkit-rules
+          git init -q -b dist
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Regles WebKit — $(date -u +%Y-%m-%d)"
+          git push -q --force \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
+            dist
+          echo "Publie sur la branche dist."

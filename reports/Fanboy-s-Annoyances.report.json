@@ -1,0 +1,49 @@
+{
+  "source_file": "Fanboy-s-Annoyances.txt",
+  "source_name": "Fanboy's Annoyances",
+  "source_title": "Fanboy's Annoyances",
+  "source_version": "2.1.66.94",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/122.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:53:16+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 60289,
+  "rules_in": 57297,
+  "rules_out": 17985,
+  "coverage_pct": 86.11,
+  "breakdown": {
+    "block": 3592,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 13840,
+    "css_selectors": 45197,
+    "ignore_previous_rules": 552
+  },
+  "skipped_total": 6956,
+  "skipped_reasons": {
+    "JavaScript / scriptlet (#%#)": 5437,
+    "injection de style / scriptlet (#$#)": 934,
+    "selecteur CSS etendu (#?#)": 411,
+    "pseudo-classe :has() (activer --allow-has)": 121,
+    "domaine cosmetique non exprimable (joker de TLD)": 35,
+    "injection de style etendue (#$?#)": 9,
+    "modificateur non supporte: $path": 4,
+    "regle cosmetique entierement exceptee": 2,
+    "pseudo-classe CSS etendue": 2,
+    "injection de style (non supportee)": 1
+  },
+  "notes": {
+    "doublon fusionne": 565,
+    "domaine ignore (joker) dans une regle cosmetique": 54,
+    "domaine ignore (joker ou regex dans $domain)": 4,
+    "modificateur sans effet sous WebKit: $important": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Fanboy-s-Annoyances.json",
+      "rules": 17985,
+      "bytes": 3405716
+    }
+  ]
+}

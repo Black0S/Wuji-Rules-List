@@ -1,0 +1,33 @@
+{
+  "source_file": "Bulgarian-list.txt",
+  "source_name": "Bulgarian list",
+  "source_title": "Bulgarian list",
+  "source_version": "2.0.0.44",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/103.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:09+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 1174,
+  "rules_in": 1149,
+  "rules_out": 892,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 687,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 186,
+    "css_selectors": 444,
+    "ignore_previous_rules": 18
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-Bulgarian-list.json",
+      "rules": 892,
+      "bytes": 125484
+    }
+  ]
+}

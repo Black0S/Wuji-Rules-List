@@ -1,0 +1,33 @@
+{
+  "source_file": "NoCoin-Filter-List.txt",
+  "source_name": "NoCoin Filter List",
+  "source_title": "NoCoin Filter List",
+  "source_version": "1.0.14.56",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_8.txt",
+  "format": "hosts",
+  "converted_at": "2026-09-06T23:54:51+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 322,
+  "rules_in": 313,
+  "rules_out": 314,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 313,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-NoCoin-Filter-List.json",
+      "rules": 314,
+      "bytes": 35159
+    }
+  ]
+}

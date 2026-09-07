@@ -1,0 +1,39 @@
+{
+  "source_file": "CJX-s-Annoyances-List.txt",
+  "source_name": "CJX's Annoyances List",
+  "source_title": "CJX's Annoyances List",
+  "source_version": "2.0.5.73",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/220.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:46+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 1870,
+  "rules_in": 1840,
+  "rules_out": 1229,
+  "coverage_pct": 99.46,
+  "breakdown": {
+    "block": 728,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 493,
+    "css_selectors": 1095,
+    "ignore_previous_rules": 7
+  },
+  "skipped_total": 9,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 8,
+    "modificateur non supporte: $csp": 1
+  },
+  "notes": {
+    "unless-domain abandonne (incompatible avec if-domain)": 7,
+    "doublon fusionne": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-CJX-s-Annoyances-List.json",
+      "rules": 1229,
+      "bytes": 161338
+    }
+  ]
+}

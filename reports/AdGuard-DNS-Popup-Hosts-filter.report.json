@@ -1,0 +1,35 @@
+{
+  "source_file": "AdGuard-DNS-Popup-Hosts-filter.txt",
+  "source_name": "AdGuard DNS Popup Hosts filter",
+  "source_title": "AdGuard DNS Popup Hosts filter",
+  "source_version": "1.0.18.63",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_59.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:51:08+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 1073,
+  "rules_in": 1064,
+  "rules_out": 0,
+  "coverage_pct": 0.0,
+  "breakdown": {
+    "block": 0,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 1064,
+  "skipped_reasons": {
+    "modificateur non supporte: $dnsrewrite": 1064
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-DNS-Popup-Hosts-filter.json",
+      "rules": 0,
+      "bytes": 3
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "source_file": "NOR-Dandelion-Sprouts-nordiske-filtre.txt",
+  "source_name": "NOR: Dandelion Sprouts nordiske filtre",
+  "source_title": "NOR: Dandelion Sprouts nordiske filtre",
+  "source_version": "1.0.14.81",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_13.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:54:51+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 522,
+  "rules_in": 513,
+  "rules_out": 488,
+  "coverage_pct": 94.93,
+  "breakdown": {
+    "block": 466,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 21
+  },
+  "skipped_total": 26,
+  "skipped_reasons": {
+    "modificateur non supporte: $dnstype": 13,
+    "regex hors du sous-ensemble WebKit": 12,
+    "modificateur non supporte: $ctag": 1
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-NOR-Dandelion-Sprouts-nordiske-filtre.json",
+      "rules": 488,
+      "bytes": 54444
+    }
+  ]
+}

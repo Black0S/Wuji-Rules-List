@@ -1,0 +1,48 @@
+{
+  "source_file": "Frellwit-s-Swedish-Filter.txt",
+  "source_name": "Frellwit's Swedish Filter",
+  "source_title": "Frellwit's Swedish Filter",
+  "source_version": "2.0.25.36",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/243.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:53:17+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 3676,
+  "rules_in": 3654,
+  "rules_out": 2513,
+  "coverage_pct": 77.72,
+  "breakdown": {
+    "block": 1682,
+    "block_document": 1,
+    "block_cookies": 0,
+    "css_display_none": 806,
+    "css_selectors": 1134,
+    "ignore_previous_rules": 23
+  },
+  "skipped_total": 808,
+  "skipped_reasons": {
+    "pseudo-classe :has() (activer --allow-has)": 371,
+    "selecteur CSS etendu (#?#)": 225,
+    "JavaScript / scriptlet (#%#)": 88,
+    "injection de style / scriptlet (#$#)": 80,
+    "injection de style etendue (#$?#)": 18,
+    "modificateur non supporte: $redirect": 11,
+    "modificateur non supporte: $removeparam": 5,
+    "modificateur non supporte: $redirect-rule": 4,
+    "modificateur non supporte: $csp": 4,
+    "modificateur non supporte: $badfilter": 1,
+    "$domain melange inclusions et exclusions": 1
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $important": 9,
+    "modificateur sans effet sous WebKit: $all": 7
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Frellwit-s-Swedish-Filter.json",
+      "rules": 2513,
+      "bytes": 380178
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "$comment": "Catalogue des sources. `registries` = decouverte automatique (AdGuard extension, AdGuard hostlists DNS, FilterLists.com). `extra` = ajouts manuels. `selection` = filtres globaux. Voir README.md.",
+  "registries": [
+    {
+      "id": "adguard",
+      "type": "adguard-registry",
+      "url": "https://filters.adtidy.org/extension/chromium/filters.json",
+      "enabled": true,
+      "comment": "Registre extension AdGuard: 88 listes (AdGuard + EasyList/EasyPrivacy/Fanboy/uBO/Peter Lowe/...)"
+    },
+    {
+      "id": "adguard-dns",
+      "type": "adguard-hostlists",
+      "url": "https://adguardteam.github.io/HostlistsRegistry/assets/filters.json",
+      "enabled": true,
+      "comment": "Registre Hostlists AdGuard: 64 blocklists DNS (OISD, HaGeZi, 1Hosts, StevenBlack, anti-AD...). Purement domaines: conversion WebKit ~100%."
+    },
+    {
+      "id": "filterlists",
+      "type": "filterlists",
+      "url": "https://api.filterlists.com/lists",
+      "enabled": false,
+      "syntaxes": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        14
+      ],
+      "max_lists": 0,
+      "comment": "Annuaire independant FilterLists.com: ~2300 listes, longue traine de qualite inegale. Un appel de detail par liste (~3 min). Mettre enabled=true pour l'activer, max_lists>0 pour plafonner."
+    }
+  ],
+  "selection": {
+    "include_deprecated": false,
+    "exclude_tags": [
+      "obsolete"
+    ],
+    "exclude_groups": [],
+    "exclude_ids": [
+      "adguard-dns-49",
+      "adguard-dns-51",
+      "adguard-dns-48",
+      "adguard-dns-27",
+      "adguard-dns-70",
+      "adguard-dns-44"
+    ],
+    "include_ids": [],
+    "only_recommended": false,
+    "_comment_exclude_ids": "Mega-listes DNS (HaGeZi Ultimate/Pro++/Pro, OISD Big, 1Hosts Xtra, Threat Intelligence Feeds): plusieurs centaines de milliers de domaines chacune. Retirer un id d'ici pour l'inclure."
+  },
+  "extra": [
+    {
+      "id": "ubo-filters",
+      "name": "uBlock Origin - Filters",
+      "url": "https://ublockorigin.github.io/uAssets/filters/filters.txt",
+      "group": "Ad blocking",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "ubo-privacy",
+      "name": "uBlock Origin - Privacy",
+      "url": "https://ublockorigin.github.io/uAssets/filters/privacy.txt",
+      "group": "Privacy",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "ubo-quick-fixes",
+      "name": "uBlock Origin - Quick Fixes",
+      "url": "https://ublockorigin.github.io/uAssets/filters/quick-fixes.txt",
+      "group": "Other",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "ubo-annoyances-others",
+      "name": "uBlock Origin - Annoyances Others",
+      "url": "https://ublockorigin.github.io/uAssets/filters/annoyances-others.txt",
+      "group": "Annoyances",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "adguard-mobile-safari",
+      "name": "AdGuard Safari Mobile",
+      "url": "https://filters.adtidy.org/ios/filters/2_optimized.txt",
+      "group": "Ad blocking",
+      "format": "adblock",
+      "enabled": false,
+      "comment": "Variante deja optimisee par AdGuard pour iOS. Desactivee: doublon de AdGuard Base."
+    },
+    {
+      "id": "ubo-unbreak",
+      "name": "uBlock Origin - Unbreak",
+      "url": "https://ublockorigin.github.io/uAssets/filters/unbreak.txt",
+      "group": "Other",
+      "format": "adblock",
+      "enabled": true,
+      "comment": "Corrige les sur-blocages des listes uBO: a garder avec ublock-filters."
+    },
+    {
+      "id": "ubo-annoyances",
+      "name": "uBlock Origin - Annoyances",
+      "url": "https://ublockorigin.github.io/uAssets/filters/annoyances.txt",
+      "group": "Annoyances",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "ubo-cookies",
+      "name": "uBlock Origin - Cookie Notices",
+      "url": "https://ublockorigin.github.io/uAssets/filters/annoyances-cookies.txt",
+      "group": "Annoyances",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "ubo-badware",
+      "name": "uBlock Origin - Badware risks",
+      "url": "https://ublockorigin.github.io/uAssets/filters/badware.txt",
+      "group": "Security",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "ubo-lan-block",
+      "name": "uBlock Origin - Block Outsider Intrusion into LAN",
+      "url": "https://ublockorigin.github.io/uAssets/filters/lan-block.txt",
+      "group": "Privacy",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "ubo-experimental",
+      "name": "uBlock Origin - Experimental",
+      "url": "https://ublockorigin.github.io/uAssets/filters/experimental.txt",
+      "group": "Other",
+      "format": "adblock",
+      "enabled": false,
+      "comment": "Filtres experimentaux, casse possible. Desactive par defaut."
+    },
+    {
+      "id": "easylist-annoyances",
+      "name": "EasyList - Annoyances",
+      "url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-annoyances.txt",
+      "group": "Annoyances",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "easylist-chat",
+      "name": "EasyList - Chat Widgets",
+      "url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-chat.txt",
+      "group": "Annoyances",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "easylist-newsletters",
+      "name": "EasyList - Newsletter Notices",
+      "url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-newsletters.txt",
+      "group": "Annoyances",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "easylist-notifications",
+      "name": "EasyList - Notifications",
+      "url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-notifications.txt",
+      "group": "Annoyances",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "easylist-ai",
+      "name": "EasyList - Anti AI Suggestions",
+      "url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-ai.txt",
+      "group": "Annoyances",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "ruadlist-ubo",
+      "name": "RU AdList for uBO",
+      "url": "https://raw.githubusercontent.com/easylist/ruadlist/master/RuAdList-uBO.txt",
+      "group": "Language-specific",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "albania-list",
+      "name": "Adblock List for Albania and Kosovo",
+      "url": "https://raw.githubusercontent.com/AnXh3L0/blocklist/master/albanian-easylist-addition/Albania.txt",
+      "group": "Language-specific",
+      "format": "adblock",
+      "enabled": true
+    },
+    {
+      "id": "slovenian-list",
+      "name": "Slovenian List",
+      "url": "https://raw.githubusercontent.com/betterwebleon/slovenian-list/master/filters.txt",
+      "group": "Language-specific",
+      "format": "adblock",
+      "enabled": true
+    }
+  ]
+}

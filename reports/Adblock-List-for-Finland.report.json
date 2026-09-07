@@ -1,0 +1,45 @@
+{
+  "source_file": "Adblock-List-for-Finland.txt",
+  "source_name": "Adblock List for Finland",
+  "source_title": "Adblock List for Finland",
+  "source_version": "2.0.12.93",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/233.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:09+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 1264,
+  "rules_in": 1190,
+  "rules_out": 531,
+  "coverage_pct": 72.94,
+  "breakdown": {
+    "block": 162,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 339,
+    "css_selectors": 677,
+    "ignore_previous_rules": 29
+  },
+  "skipped_total": 315,
+  "skipped_reasons": {
+    "pseudo-classe :has() (activer --allow-has)": 168,
+    "selecteur CSS etendu (#?#)": 65,
+    "injection de style / scriptlet (#$#)": 37,
+    "JavaScript / scriptlet (#%#)": 17,
+    "modificateur non supporte: $redirect": 10,
+    "injection de style etendue (#$?#)": 8,
+    "pseudo-classe CSS etendue": 6,
+    "regex hors du sous-ensemble WebKit": 3,
+    "modificateur non supporte: $removeparam": 1
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $important": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Adblock-List-for-Finland.json",
+      "rules": 531,
+      "bytes": 91488
+    }
+  ]
+}

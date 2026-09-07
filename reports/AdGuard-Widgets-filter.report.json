@@ -1,0 +1,48 @@
+{
+  "source_file": "AdGuard-Widgets-filter.txt",
+  "source_name": "AdGuard Widgets filter",
+  "source_title": "AdGuard Widgets filter",
+  "source_version": "2.0.14.85",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/22.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:09+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 2953,
+  "rules_in": 2665,
+  "rules_out": 1761,
+  "coverage_pct": 86.79,
+  "breakdown": {
+    "block": 801,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 925,
+    "css_selectors": 1478,
+    "ignore_previous_rules": 34
+  },
+  "skipped_total": 350,
+  "skipped_reasons": {
+    "pseudo-classe :has() (activer --allow-has)": 141,
+    "selecteur CSS etendu (#?#)": 139,
+    "injection de style / scriptlet (#$#)": 37,
+    "JavaScript / scriptlet (#%#)": 13,
+    "modificateur non supporte: $path": 11,
+    "injection de style etendue (#$?#)": 3,
+    "domaine cosmetique non exprimable (joker de TLD)": 3,
+    "modificateur non supporte: $redirect": 1,
+    "injection de style (non supportee)": 1,
+    "modificateur non supporte: $removeparam": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 3,
+    "modificateur sans effet sous WebKit: $important": 3,
+    "doublon fusionne": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Widgets-filter.json",
+      "rules": 1761,
+      "bytes": 272186
+    }
+  ]
+}

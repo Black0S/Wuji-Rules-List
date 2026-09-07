@@ -1,0 +1,39 @@
+{
+  "source_file": "Fanboy-s-Social-Blocking-List.txt",
+  "source_name": "Fanboy's Social Blocking List",
+  "source_title": "Fanboy's Social Blocking List",
+  "source_version": "2.1.68.31",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/123.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:53:16+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 14070,
+  "rules_in": 13824,
+  "rules_out": 3274,
+  "coverage_pct": 98.59,
+  "breakdown": {
+    "block": 585,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 2606,
+    "css_selectors": 12962,
+    "ignore_previous_rules": 82
+  },
+  "skipped_total": 71,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 48,
+    "pseudo-classe :has() (activer --allow-has)": 21,
+    "domaine cosmetique non exprimable (joker de TLD)": 2
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Fanboy-s-Social-Blocking-List.json",
+      "rules": 3274,
+      "bytes": 686981
+    }
+  ]
+}

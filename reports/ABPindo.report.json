@@ -1,0 +1,44 @@
+{
+  "source_file": "ABPindo.txt",
+  "source_name": "ABPindo",
+  "source_title": "ABPindo",
+  "source_version": "2.0.10.36",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/102.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:50:54+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 10283,
+  "rules_in": 10205,
+  "rules_out": 4834,
+  "coverage_pct": 97.42,
+  "breakdown": {
+    "block": 4229,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 589,
+    "css_selectors": 5698,
+    "ignore_previous_rules": 15
+  },
+  "skipped_total": 252,
+  "skipped_reasons": {
+    "domaine cosmetique non exprimable (joker de TLD)": 121,
+    "JavaScript / scriptlet (#%#)": 48,
+    "pseudo-classe :has() (activer --allow-has)": 47,
+    "injection de style / scriptlet (#$#)": 14,
+    "modificateur non supporte: $redirect": 12,
+    "selecteur CSS etendu (#?#)": 10
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 163,
+    "domaine ignore (joker ou regex dans $domain)": 7,
+    "modificateur sans effet sous WebKit: $all": 5
+  },
+  "outputs": [
+    {
+      "file": "Webkit-ABPindo.json",
+      "rules": 4834,
+      "bytes": 784960
+    }
+  ]
+}

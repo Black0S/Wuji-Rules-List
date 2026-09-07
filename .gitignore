@@ -1,0 +1,10 @@
+# Listes brutes : pur cache, regenerable en ~20 s via fetch_filters.py.
+filters/*.txt
+
+# Regles converties : publiees sur la branche orpheline `dist` par la CI,
+# pas sur `main`. Retirer cette ligne pour les versionner ici aussi.
+webkit-rules/*.json
+
+*.tmp
+.DS_Store
+__pycache__/

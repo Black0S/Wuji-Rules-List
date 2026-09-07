@@ -1,0 +1,42 @@
+{
+  "source_file": "EasyList-Newsletter-Notices.txt",
+  "source_name": "EasyList - Newsletter Notices",
+  "source_title": "EasyList – Newsletter Notices",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-newsletters.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:56+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 6508,
+  "rules_in": 6012,
+  "rules_out": 3350,
+  "coverage_pct": 90.09,
+  "breakdown": {
+    "block": 180,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 3161,
+    "css_selectors": 5228,
+    "ignore_previous_rules": 8
+  },
+  "skipped_total": 591,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 237,
+    "selecteur CSS etendu (#?#)": 229,
+    "scriptlet ou filtrage HTML": 100,
+    "pseudo-classe :has() (activer --allow-has)": 19,
+    "domaine cosmetique non exprimable (joker de TLD)": 6
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 9,
+    "doublon fusionne": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Newsletter-Notices.json",
+      "rules": 3350,
+      "bytes": 554571
+    }
+  ]
+}

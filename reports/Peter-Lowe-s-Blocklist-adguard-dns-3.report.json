@@ -1,0 +1,33 @@
+{
+  "source_file": "Peter-Lowe-s-Blocklist-adguard-dns-3.txt",
+  "source_name": "Peter Lowe's Blocklist",
+  "source_title": "Peter Lowe's Blocklist",
+  "source_version": "1.0.17.82",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_3.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:55:14+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 3540,
+  "rules_in": 3531,
+  "rules_out": 3532,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 3531,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-Peter-Lowe-s-Blocklist-adguard-dns-3.json",
+      "rules": 3532,
+      "bytes": 393507
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "source_file": "uBlock-Origin-Annoyances-Others.txt",
+  "source_name": "uBlock Origin - Annoyances Others",
+  "source_title": "uBlock filters – Other Annoyances",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/annoyances-others.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:56:15+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 8236,
+  "rules_in": 3600,
+  "rules_out": 586,
+  "coverage_pct": 19.06,
+  "breakdown": {
+    "block": 138,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 347,
+    "css_selectors": 448,
+    "ignore_previous_rules": 100
+  },
+  "skipped_total": 2889,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 2149,
+    "pseudo-classe CSS etendue": 624,
+    "pseudo-classe :has() (activer --allow-has)": 28,
+    "modificateur non supporte: $redirect-rule": 24,
+    "modificateur non supporte: $redirect": 22,
+    "domaine cosmetique non exprimable (joker de TLD)": 13,
+    "modificateur non supporte: $replace": 8,
+    "modificateur non supporte: $csp": 7,
+    "modificateur non supporte: $uritransform": 4,
+    "modificateur non supporte: $urlskip": 3,
+    "modificateur non supporte: $removeparam": 2,
+    "modificateur non supporte: $strict1p": 1,
+    "selecteur CSS etendu (#?#)": 1,
+    "modificateur non supporte: $badfilter": 1,
+    "selecteur CSS etendu (#@?#)": 1,
+    "injection de style (non supportee)": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 14,
+    "modificateur sans effet sous WebKit: $important": 2,
+    "modificateur sans effet sous WebKit: $all": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-Origin-Annoyances-Others.json",
+      "rules": 586,
+      "bytes": 89386
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "source_file": "CHN-anti-AD.txt",
+  "source_name": "CHN: anti-AD",
+  "source_title": "CHN: anti-AD",
+  "source_version": "1.0.18.18",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_21.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:45+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 100941,
+  "rules_in": 100932,
+  "rules_out": 100933,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 100885,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 47
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-CHN-anti-AD.json",
+      "rules": 100933,
+      "bytes": 11521848
+    }
+  ]
+}

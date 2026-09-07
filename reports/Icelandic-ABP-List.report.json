@@ -1,0 +1,37 @@
+{
+  "source_file": "Icelandic-ABP-List.txt",
+  "source_name": "Icelandic ABP List",
+  "source_title": "Icelandic ABP List",
+  "source_version": "2.0.0.13",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/119.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:54:45+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 207,
+  "rules_in": 194,
+  "rules_out": 109,
+  "coverage_pct": 98.97,
+  "breakdown": {
+    "block": 68,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 40,
+    "css_selectors": 124,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 1,
+  "skipped_reasons": {
+    "pseudo-classe :has() (activer --allow-has)": 1
+  },
+  "notes": {
+    "doublon fusionne": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Icelandic-ABP-List.json",
+      "rules": 109,
+      "bytes": 13816
+    }
+  ]
+}

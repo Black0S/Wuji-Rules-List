@@ -1,0 +1,47 @@
+{
+  "source_file": "AdGuard-Mobile-App-Banners-filter.txt",
+  "source_name": "AdGuard Mobile App Banners filter",
+  "source_title": "AdGuard Mobile App Banners filter",
+  "source_version": "2.0.31.87",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/20.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:51:34+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 4418,
+  "rules_in": 4141,
+  "rules_out": 2175,
+  "coverage_pct": 71.48,
+  "breakdown": {
+    "block": 151,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 2016,
+    "css_selectors": 2802,
+    "ignore_previous_rules": 7
+  },
+  "skipped_total": 1178,
+  "skipped_reasons": {
+    "injection de style / scriptlet (#$#)": 402,
+    "pseudo-classe :has() (activer --allow-has)": 245,
+    "selecteur CSS etendu (#?#)": 226,
+    "JavaScript / scriptlet (#%#)": 222,
+    "domaine cosmetique non exprimable (joker de TLD)": 50,
+    "injection de style etendue (#$?#)": 19,
+    "modificateur non supporte: $path": 11,
+    "modificateur non supporte: $removeparam": 1,
+    "injection de style (non supportee)": 1,
+    "ancre `|` en milieu de motif": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 62,
+    "domaine ignore (joker ou regex dans $domain)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Mobile-App-Banners-filter.json",
+      "rules": 2175,
+      "bytes": 339081
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "source_file": "Legitimate-URL-Shortener.txt",
+  "source_name": "Legitimate URL Shortener",
+  "source_title": "Legitimate URL Shortener",
+  "source_version": "2.0.10.22",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/251.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:54:48+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 4545,
+  "rules_in": 2988,
+  "rules_out": 3,
+  "coverage_pct": 0.07,
+  "breakdown": {
+    "block": 2,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 2986,
+  "skipped_reasons": {
+    "modificateur non supporte: $removeparam": 2986
+  },
+  "notes": {
+    "domaine ignore (joker ou regex dans $domain)": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Legitimate-URL-Shortener.json",
+      "rules": 3,
+      "bytes": 311
+    }
+  ]
+}

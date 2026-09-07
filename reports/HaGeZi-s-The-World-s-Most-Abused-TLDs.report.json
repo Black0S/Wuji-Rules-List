@@ -1,0 +1,35 @@
+{
+  "source_file": "HaGeZi-s-The-World-s-Most-Abused-TLDs.txt",
+  "source_name": "HaGeZi's The World's Most Abused TLDs",
+  "source_title": "HaGeZi's The World's Most Abused TLDs",
+  "source_version": "1.0.20.27",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_56.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:54:43+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 451,
+  "rules_in": 442,
+  "rules_out": 279,
+  "coverage_pct": 62.9,
+  "breakdown": {
+    "block": 278,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 164,
+  "skipped_reasons": {
+    "modificateur non supporte: $denyallow": 164
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-HaGeZi-s-The-World-s-Most-Abused-TLDs.json",
+      "rules": 279,
+      "bytes": 29850
+    }
+  ]
+}

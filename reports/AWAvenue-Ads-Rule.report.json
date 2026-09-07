@@ -1,0 +1,33 @@
+{
+  "source_file": "AWAvenue-Ads-Rule.txt",
+  "source_name": "AWAvenue Ads Rule",
+  "source_title": "AWAvenue Ads Rule",
+  "source_version": "1.0.15.77",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_53.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:50:54+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 861,
+  "rules_in": 852,
+  "rules_out": 853,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 852,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-AWAvenue-Ads-Rule.json",
+      "rules": 853,
+      "bytes": 99721
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "source_file": "AdGuard-DNS-filter.txt",
+  "source_name": "AdGuard DNS filter",
+  "source_title": "AdGuard DNS filter",
+  "source_version": "1.0.78.47",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:51:31+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 180809,
+  "rules_in": 180800,
+  "rules_out": 180776,
+  "coverage_pct": 99.99,
+  "breakdown": {
+    "block": 180570,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 205
+  },
+  "skipped_total": 24,
+  "skipped_reasons": {
+    "regex hors du sous-ensemble WebKit": 19,
+    "modificateur non supporte: $badfilter": 5
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $important": 5,
+    "doublon fusionne": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-DNS-filter-1.json",
+      "rules": 150000,
+      "bytes": 17554156
+    },
+    {
+      "file": "Webkit-AdGuard-DNS-filter-2.json",
+      "rules": 30981,
+      "bytes": 3527091
+    }
+  ]
+}

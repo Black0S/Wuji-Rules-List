@@ -1,0 +1,33 @@
+{
+  "source_file": "OISD-Blocklist-Small.txt",
+  "source_name": "OISD Blocklist Small",
+  "source_title": "OISD Blocklist Small",
+  "source_version": "1.1.3.18",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_5.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:54:58+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 63477,
+  "rules_in": 63468,
+  "rules_out": 63469,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 63468,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-OISD-Blocklist-Small.json",
+      "rules": 63469,
+      "bytes": 7227482
+    }
+  ]
+}

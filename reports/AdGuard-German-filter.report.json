@@ -1,0 +1,54 @@
+{
+  "source_file": "AdGuard-German-filter.txt",
+  "source_name": "AdGuard German filter",
+  "source_title": "AdGuard German filter",
+  "source_version": "2.0.53.31",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/6.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:51:33+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 12233,
+  "rules_in": 11232,
+  "rules_out": 5617,
+  "coverage_pct": 84.67,
+  "breakdown": {
+    "block": 2562,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 2554,
+    "css_selectors": 6448,
+    "ignore_previous_rules": 500
+  },
+  "skipped_total": 1481,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 599,
+    "pseudo-classe :has() (activer --allow-has)": 425,
+    "JavaScript / scriptlet (#%#)": 185,
+    "injection de style / scriptlet (#$#)": 153,
+    "modificateur non supporte: $redirect": 30,
+    "domaine cosmetique non exprimable (joker de TLD)": 23,
+    "injection de style etendue (#$?#)": 20,
+    "regex hors du sous-ensemble WebKit": 12,
+    "modificateur non supporte: $path": 9,
+    "modificateur non supporte: $badfilter": 7,
+    "regle cosmetique entierement exceptee": 5,
+    "pseudo-classe CSS etendue": 4,
+    "selecteur CSS etendu (#@?#)": 4,
+    "injection de style (non supportee)": 2,
+    "exception de scriptlet": 2,
+    "modificateur non supporte: $csp": 1
+  },
+  "notes": {
+    "doublon fusionne": 110,
+    "domaine ignore (joker) dans une regle cosmetique": 37,
+    "modificateur sans effet sous WebKit: $important": 10
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-German-filter.json",
+      "rules": 5617,
+      "bytes": 919773
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "source_file": "AdGuard-Other-Annoyances-filter.txt",
+  "source_name": "AdGuard Other Annoyances filter",
+  "source_title": "AdGuard Other Annoyances filter",
+  "source_version": "2.0.47.93",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/21.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:51:34+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 11544,
+  "rules_in": 8424,
+  "rules_out": 3798,
+  "coverage_pct": 66.01,
+  "breakdown": {
+    "block": 537,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 3256,
+    "css_selectors": 5020,
+    "ignore_previous_rules": 4
+  },
+  "skipped_total": 2856,
+  "skipped_reasons": {
+    "JavaScript / scriptlet (#%#)": 1060,
+    "injection de style / scriptlet (#$#)": 726,
+    "selecteur CSS etendu (#?#)": 464,
+    "pseudo-classe :has() (activer --allow-has)": 419,
+    "domaine cosmetique non exprimable (joker de TLD)": 73,
+    "injection de style etendue (#$?#)": 50,
+    "modificateur non supporte: $path": 45,
+    "pseudo-classe CSS etendue": 4,
+    "$cookie avec valeur / en exception": 3,
+    "modificateur non supporte: $removeparam": 3,
+    "regex hors du sous-ensemble WebKit": 3,
+    "injection de style (non supportee)": 2,
+    "modificateur non supporte: $removeheader": 2,
+    "ancre `|` en milieu de motif": 1,
+    "modificateur non supporte: $badfilter": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 95,
+    "doublon fusionne": 6,
+    "modificateur sans effet sous WebKit: $important": 5,
+    "unless-domain abandonne (incompatible avec if-domain)": 4,
+    "domaine ignore (joker ou regex dans $domain)": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Other-Annoyances-filter.json",
+      "rules": 3798,
+      "bytes": 610387
+    }
+  ]
+}

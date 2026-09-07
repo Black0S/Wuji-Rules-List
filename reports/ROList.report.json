@@ -1,0 +1,38 @@
+{
+  "source_file": "ROList.txt",
+  "source_name": "ROList",
+  "source_title": "ROList",
+  "source_version": "2.0.1.57",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/114.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:55:39+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 603,
+  "rules_in": 580,
+  "rules_out": 412,
+  "coverage_pct": 96.38,
+  "breakdown": {
+    "block": 285,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 113,
+    "css_selectors": 261,
+    "ignore_previous_rules": 13
+  },
+  "skipped_total": 15,
+  "skipped_reasons": {
+    "domaine cosmetique non exprimable (joker de TLD)": 12,
+    "pseudo-classe :has() (activer --allow-has)": 3
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 12
+  },
+  "outputs": [
+    {
+      "file": "Webkit-ROList.json",
+      "rules": 412,
+      "bytes": 63177
+    }
+  ]
+}

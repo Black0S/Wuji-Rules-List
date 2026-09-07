@@ -1,0 +1,44 @@
+{
+  "source_file": "Filter-unblocking-search-ads-and-self-promotion.txt",
+  "source_name": "Filter unblocking search ads and self-promotion",
+  "source_title": "Filter unblocking search ads and self-promotion",
+  "source_version": "2.0.3.99",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/10.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:53:16+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 392,
+  "rules_in": 247,
+  "rules_out": 12,
+  "coverage_pct": 5.26,
+  "breakdown": {
+    "block": 0,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1,
+    "css_selectors": 2,
+    "ignore_previous_rules": 11
+  },
+  "skipped_total": 59,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#@?#)": 45,
+    "exception d'injection de style": 4,
+    "exception d'injection de style etendue": 3,
+    "exception de scriptlet": 3,
+    "modificateur non supporte: $path": 2,
+    "domaine cosmetique non exprimable (joker de TLD)": 1,
+    "pseudo-classe :has() (activer --allow-has)": 1
+  },
+  "notes": {
+    "domaine ignore (joker ou regex dans $domain)": 1,
+    "domaine ignore (joker) dans une regle cosmetique": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Filter-unblocking-search-ads-and-self-promotion.json",
+      "rules": 12,
+      "bytes": 2002
+    }
+  ]
+}

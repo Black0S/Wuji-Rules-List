@@ -1,0 +1,33 @@
+{
+  "source_file": "HaGeZi-s-Allowlist-Referral.txt",
+  "source_name": "HaGeZi's Allowlist Referral",
+  "source_title": "HaGeZi's Allowlist Referral",
+  "source_version": "1.0.15.41",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_45.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:53:17+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 941,
+  "rules_in": 932,
+  "rules_out": 932,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 0,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 932
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-HaGeZi-s-Allowlist-Referral.json",
+      "rules": 932,
+      "bytes": 120094
+    }
+  ]
+}

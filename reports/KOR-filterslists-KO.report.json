@@ -1,0 +1,33 @@
+{
+  "source_file": "KOR-filterslists-KO.txt",
+  "source_name": "KOR: filterslists-KO",
+  "source_title": "KOR: filterslist-KO DNS",
+  "source_version": "1.0.15.83",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_25.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:54:48+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 392,
+  "rules_in": 383,
+  "rules_out": 384,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 383,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-KOR-filterslists-KO.json",
+      "rules": 384,
+      "bytes": 43193
+    }
+  ]
+}

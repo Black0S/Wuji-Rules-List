@@ -1,0 +1,48 @@
+{
+  "source_file": "Stevo-s-AI-Blocklist.txt",
+  "source_name": "Stevo's AI Blocklist",
+  "source_title": "Stevo's AI Blocklist",
+  "source_version": "2.0.1.77",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/260.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:56:08+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 5088,
+  "rules_in": 1642,
+  "rules_out": 456,
+  "coverage_pct": 56.52,
+  "breakdown": {
+    "block": 83,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 372,
+    "css_selectors": 845,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 713,
+  "skipped_reasons": {
+    "pseudo-classe :has() (activer --allow-has)": 525,
+    "selecteur CSS etendu (#?#)": 71,
+    "JavaScript / scriptlet (#%#)": 51,
+    "domaine cosmetique non exprimable (joker de TLD)": 23,
+    "injection de style / scriptlet (#$#)": 20,
+    "injection de style etendue (#$?#)": 13,
+    "pseudo-classe CSS etendue": 5,
+    "injection de style (non supportee)": 2,
+    "exception d'injection de style etendue": 2,
+    "selecteur CSS vide ou trop long": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 23,
+    "domaine ignore (joker ou regex dans $domain)": 2,
+    "doublon fusionne": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Stevo-s-AI-Blocklist.json",
+      "rules": 456,
+      "bytes": 94318
+    }
+  ]
+}

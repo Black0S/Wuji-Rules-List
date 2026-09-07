@@ -1,0 +1,40 @@
+{
+  "source_file": "EasyList-Lithuania.txt",
+  "source_name": "EasyList Lithuania",
+  "source_title": "EasyList Lithuania",
+  "source_version": "2.0.2.99",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/110.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:56+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 1202,
+  "rules_in": 1169,
+  "rules_out": 850,
+  "coverage_pct": 95.89,
+  "breakdown": {
+    "block": 491,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 298,
+    "css_selectors": 570,
+    "ignore_previous_rules": 60
+  },
+  "skipped_total": 48,
+  "skipped_reasons": {
+    "pseudo-classe :has() (activer --allow-has)": 21,
+    "JavaScript / scriptlet (#%#)": 11,
+    "injection de style / scriptlet (#$#)": 7,
+    "selecteur CSS etendu (#?#)": 5,
+    "modificateur non supporte: $redirect": 2,
+    "regex hors du sous-ensemble WebKit": 2
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Lithuania.json",
+      "rules": 850,
+      "bytes": 124271
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "source_file": "uBlock-Origin-Annoyances.txt",
+  "source_name": "uBlock Origin - Annoyances",
+  "source_title": "uBlock₀ filters – Annoyances",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/annoyances.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:56:15+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 9,
+  "rules_in": 0,
+  "rules_out": 0,
+  "coverage_pct": 0.0,
+  "breakdown": {
+    "block": 0,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-Origin-Annoyances.json",
+      "rules": 0,
+      "bytes": 3
+    }
+  ]
+}

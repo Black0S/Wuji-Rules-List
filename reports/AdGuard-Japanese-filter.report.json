@@ -1,0 +1,54 @@
+{
+  "source_file": "AdGuard-Japanese-filter.txt",
+  "source_name": "AdGuard Japanese filter",
+  "source_title": "AdGuard Japanese filter",
+  "source_version": "2.0.76.24",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/7.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:51:33+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 12790,
+  "rules_in": 12084,
+  "rules_out": 5793,
+  "coverage_pct": 78.14,
+  "breakdown": {
+    "block": 1678,
+    "block_document": 251,
+    "block_cookies": 0,
+    "css_display_none": 3580,
+    "css_selectors": 7230,
+    "ignore_previous_rules": 283
+  },
+  "skipped_total": 2505,
+  "skipped_reasons": {
+    "pseudo-classe :has() (activer --allow-has)": 918,
+    "selecteur CSS etendu (#?#)": 854,
+    "injection de style / scriptlet (#$#)": 339,
+    "JavaScript / scriptlet (#%#)": 214,
+    "injection de style etendue (#$?#)": 47,
+    "modificateur non supporte: $redirect": 40,
+    "modificateur non supporte: $path": 40,
+    "regex hors du sous-ensemble WebKit": 22,
+    "modificateur non supporte: $redirect-rule": 9,
+    "pseudo-classe CSS etendue": 9,
+    "domaine cosmetique non exprimable (joker de TLD)": 7,
+    "modificateur non supporte: $removeparam": 2,
+    "modificateur non supporte: $denyallow": 2,
+    "modificateur inconnu: $_____": 1,
+    "modificateur inconnu: $1": 1
+  },
+  "notes": {
+    "domaine ignore (joker ou regex dans $domain)": 47,
+    "modificateur sans effet sous WebKit: $all": 28,
+    "domaine ignore (joker) dans une regle cosmetique": 14,
+    "modificateur sans effet sous WebKit: $important": 5
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Japanese-filter.json",
+      "rules": 5793,
+      "bytes": 979320
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "source_file": "Fanboy-s-Anti-thirdparty-Fonts.txt",
+  "source_name": "Fanboy's Anti-thirdparty Fonts",
+  "source_title": "Fanboy's Anti-thirdparty Fonts",
+  "source_version": "2.0.19.28",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/239.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:53:16+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 90,
+  "rules_in": 58,
+  "rules_out": 59,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 50,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 8
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-Fanboy-s-Anti-thirdparty-Fonts.json",
+      "rules": 59,
+      "bytes": 9604
+    }
+  ]
+}

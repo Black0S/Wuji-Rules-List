@@ -1,0 +1,33 @@
+{
+  "source_file": "Malicious-URL-Blocklist-URLHaus.txt",
+  "source_name": "Malicious URL Blocklist (URLHaus)",
+  "source_title": "Malicious URL Blocklist (URLHaus)",
+  "source_version": "1.0.28.90",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_11.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:54:50+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 4664,
+  "rules_in": 4655,
+  "rules_out": 4656,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 4655,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-Malicious-URL-Blocklist-URLHaus.json",
+      "rules": 4656,
+      "bytes": 554714
+    }
+  ]
+}

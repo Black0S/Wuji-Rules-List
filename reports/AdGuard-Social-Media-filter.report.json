@@ -1,0 +1,50 @@
+{
+  "source_file": "AdGuard-Social-Media-filter.txt",
+  "source_name": "AdGuard Social Media filter",
+  "source_title": "AdGuard Social Media filter",
+  "source_version": "2.1.32.2",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/4.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:51:36+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 17155,
+  "rules_in": 16313,
+  "rules_out": 9610,
+  "coverage_pct": 84.66,
+  "breakdown": {
+    "block": 479,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 8980,
+    "css_selectors": 13182,
+    "ignore_previous_rules": 150
+  },
+  "skipped_total": 2214,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 1151,
+    "pseudo-classe :has() (activer --allow-has)": 660,
+    "injection de style / scriptlet (#$#)": 238,
+    "domaine cosmetique non exprimable (joker de TLD)": 77,
+    "JavaScript / scriptlet (#%#)": 58,
+    "injection de style etendue (#$?#)": 10,
+    "pseudo-classe CSS etendue": 8,
+    "modificateur non supporte: $path": 5,
+    "injection de style (non supportee)": 3,
+    "regle cosmetique entierement exceptee": 2,
+    "regex hors du sous-ensemble WebKit": 1,
+    "modificateur non supporte: $redirect": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 118,
+    "domaine ignore (joker ou regex dans $domain)": 7,
+    "doublon fusionne": 6
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Social-Media-filter.json",
+      "rules": 9610,
+      "bytes": 1591288
+    }
+  ]
+}

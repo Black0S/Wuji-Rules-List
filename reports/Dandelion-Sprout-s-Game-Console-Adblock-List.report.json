@@ -1,0 +1,35 @@
+{
+  "source_file": "Dandelion-Sprout-s-Game-Console-Adblock-List.txt",
+  "source_name": "Dandelion Sprout's Game Console Adblock List",
+  "source_title": "Dandelion Sprout's Game Console Adblock List",
+  "source_version": "1.0.14.55",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_6.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:52+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 24,
+  "rules_in": 15,
+  "rules_out": 15,
+  "coverage_pct": 93.33,
+  "breakdown": {
+    "block": 14,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 1,
+  "skipped_reasons": {
+    "modificateur non supporte: $ctag": 1
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-Dandelion-Sprout-s-Game-Console-Adblock-List.json",
+      "rules": 15,
+      "bytes": 1854
+    }
+  ]
+}

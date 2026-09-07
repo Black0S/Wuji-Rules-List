@@ -1,0 +1,39 @@
+{
+  "source_file": "Estonian-List.txt",
+  "source_name": "Estonian List",
+  "source_title": "Estonian List",
+  "source_version": "2.0.3.71",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/218.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:53:12+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 458,
+  "rules_in": 445,
+  "rules_out": 329,
+  "coverage_pct": 98.65,
+  "breakdown": {
+    "block": 239,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 70,
+    "css_selectors": 181,
+    "ignore_previous_rules": 19
+  },
+  "skipped_total": 6,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 3,
+    "modificateur non supporte: $removeparam": 2,
+    "pseudo-classe :has() (activer --allow-has)": 1
+  },
+  "notes": {
+    "unless-domain abandonne (incompatible avec if-domain)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Estonian-List.json",
+      "rules": 329,
+      "bytes": 44573
+    }
+  ]
+}

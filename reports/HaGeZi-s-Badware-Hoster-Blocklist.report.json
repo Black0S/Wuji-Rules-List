@@ -1,0 +1,33 @@
+{
+  "source_file": "HaGeZi-s-Badware-Hoster-Blocklist.txt",
+  "source_name": "HaGeZi's Badware Hoster Blocklist",
+  "source_title": "HaGeZi's Badware Hoster Blocklist",
+  "source_version": "1.0.20.99",
+  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_55.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:53:23+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 1246,
+  "rules_in": 1237,
+  "rules_out": 1238,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 1237,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-HaGeZi-s-Badware-Hoster-Blocklist.json",
+      "rules": 1238,
+      "bytes": 130433
+    }
+  ]
+}

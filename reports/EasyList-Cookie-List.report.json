@@ -1,0 +1,46 @@
+{
+  "source_file": "EasyList-Cookie-List.txt",
+  "source_name": "EasyList Cookie List",
+  "source_title": "EasyList Cookie List",
+  "source_version": "2.1.70.71",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/241.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:52:55+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 29029,
+  "rules_in": 27947,
+  "rules_out": 9364,
+  "coverage_pct": 89.26,
+  "breakdown": {
+    "block": 1678,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 7257,
+    "css_selectors": 22840,
+    "ignore_previous_rules": 428
+  },
+  "skipped_total": 2719,
+  "skipped_reasons": {
+    "JavaScript / scriptlet (#%#)": 2443,
+    "injection de style / scriptlet (#$#)": 159,
+    "selecteur CSS etendu (#?#)": 56,
+    "pseudo-classe :has() (activer --allow-has)": 40,
+    "domaine cosmetique non exprimable (joker de TLD)": 17,
+    "regle cosmetique entierement exceptee": 2,
+    "injection de style etendue (#$?#)": 2
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 25,
+    "domaine ignore (joker ou regex dans $domain)": 4,
+    "doublon fusionne": 2,
+    "modificateur sans effet sous WebKit: $important": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Cookie-List.json",
+      "rules": 9364,
+      "bytes": 1811404
+    }
+  ]
+}

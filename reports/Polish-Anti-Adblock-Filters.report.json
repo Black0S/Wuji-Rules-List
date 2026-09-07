@@ -1,0 +1,47 @@
+{
+  "source_file": "Polish-Anti-Adblock-Filters.txt",
+  "source_name": "Polish Anti Adblock Filters",
+  "source_title": "Polish Anti Adblock Filters",
+  "source_version": "2.0.3.58",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/238.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:55:38+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 789,
+  "rules_in": 643,
+  "rules_out": 416,
+  "coverage_pct": 67.19,
+  "breakdown": {
+    "block": 34,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 140,
+    "css_selectors": 157,
+    "ignore_previous_rules": 241
+  },
+  "skipped_total": 111,
+  "skipped_reasons": {
+    "JavaScript / scriptlet (#%#)": 52,
+    "modificateur non supporte: $redirect": 16,
+    "injection de style / scriptlet (#$#)": 14,
+    "selecteur CSS etendu (#?#)": 9,
+    "exception de scriptlet": 8,
+    "exception d'injection de style": 6,
+    "regex hors du sous-ensemble WebKit": 4,
+    "regle cosmetique entierement exceptee": 1,
+    "modificateur non supporte: $badfilter": 1
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $important": 4,
+    "domaine ignore (joker) dans une regle cosmetique": 2,
+    "domaine ignore (joker ou regex dans $domain)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Polish-Anti-Adblock-Filters.json",
+      "rules": 416,
+      "bytes": 73188
+    }
+  ]
+}

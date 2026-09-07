@@ -1,0 +1,40 @@
+{
+  "source_file": "Xfiles.txt",
+  "source_name": "Xfiles",
+  "source_title": "Xfiles",
+  "source_version": "2.0.2.48",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/206.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:56:14+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 4835,
+  "rules_in": 4808,
+  "rules_out": 2672,
+  "coverage_pct": 99.44,
+  "breakdown": {
+    "block": 1397,
+    "block_document": 6,
+    "block_cookies": 0,
+    "css_display_none": 1255,
+    "css_selectors": 3365,
+    "ignore_previous_rules": 13
+  },
+  "skipped_total": 26,
+  "skipped_reasons": {
+    "modificateur non supporte: $csp": 23,
+    "domaine cosmetique non exprimable (joker de TLD)": 2,
+    "selecteur CSS etendu (#?#)": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 2,
+    "doublon fusionne": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Xfiles.json",
+      "rules": 2672,
+      "bytes": 358797
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "source_file": "Polish-Anti-Annoying-Special-Supplement.txt",
+  "source_name": "Polish Anti-Annoying Special Supplement",
+  "source_title": "Polish Anti-Annoying Special Supplement",
+  "source_version": "2.0.4.88",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/247.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:55:38+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 770,
+  "rules_in": 728,
+  "rules_out": 557,
+  "coverage_pct": 84.2,
+  "breakdown": {
+    "block": 52,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 504,
+    "css_selectors": 561,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 114,
+  "skipped_reasons": {
+    "pseudo-classe :has() (activer --allow-has)": 55,
+    "domaine cosmetique non exprimable (joker de TLD)": 34,
+    "selecteur CSS etendu (#?#)": 10,
+    "injection de style / scriptlet (#$#)": 9,
+    "JavaScript / scriptlet (#%#)": 5,
+    "injection de style etendue (#$?#)": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 34,
+    "modificateur sans effet sous WebKit: $important": 1,
+    "doublon fusionne": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Polish-Anti-Annoying-Special-Supplement.json",
+      "rules": 557,
+      "bytes": 87061
+    }
+  ]
+}

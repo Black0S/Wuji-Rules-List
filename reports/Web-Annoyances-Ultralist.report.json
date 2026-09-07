@@ -1,0 +1,48 @@
+{
+  "source_file": "Web-Annoyances-Ultralist.txt",
+  "source_name": "Web Annoyances Ultralist",
+  "source_title": "Web Annoyances Ultralist",
+  "source_version": "2.0.0.38",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/201.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:56:14+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 17005,
+  "rules_in": 16875,
+  "rules_out": 3837,
+  "coverage_pct": 47.51,
+  "breakdown": {
+    "block": 88,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 3729,
+    "css_selectors": 7911,
+    "ignore_previous_rules": 19
+  },
+  "skipped_total": 8728,
+  "skipped_reasons": {
+    "injection de style / scriptlet (#$#)": 8466,
+    "selecteur CSS etendu (#?#)": 151,
+    "domaine cosmetique non exprimable (joker de TLD)": 42,
+    "pseudo-classe :has() (activer --allow-has)": 42,
+    "injection de style etendue (#$?#)": 7,
+    "JavaScript / scriptlet (#%#)": 7,
+    "exception d'injection de style": 6,
+    "pseudo-classe CSS etendue": 3,
+    "selecteur CSS vide ou trop long": 2,
+    "modificateur non supporte: $csp": 2
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 63,
+    "doublon fusionne": 11,
+    "modificateur sans effet sous WebKit: $important": 6
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Web-Annoyances-Ultralist.json",
+      "rules": 3837,
+      "bytes": 767382
+    }
+  ]
+}

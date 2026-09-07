@@ -1,0 +1,57 @@
+{
+  "source_file": "AdGuard-French-filter.txt",
+  "source_name": "AdGuard French filter",
+  "source_title": "AdGuard French filter",
+  "source_version": "2.0.57.62",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/16.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:51:32+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 16317,
+  "rules_in": 15348,
+  "rules_out": 11650,
+  "coverage_pct": 93.86,
+  "breakdown": {
+    "block": 9922,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1195,
+    "css_selectors": 3952,
+    "ignore_previous_rules": 532
+  },
+  "skipped_total": 771,
+  "skipped_reasons": {
+    "JavaScript / scriptlet (#%#)": 192,
+    "selecteur CSS etendu (#?#)": 182,
+    "modificateur non supporte: $badfilter": 147,
+    "pseudo-classe :has() (activer --allow-has)": 77,
+    "injection de style / scriptlet (#$#)": 73,
+    "modificateur non supporte: $redirect": 57,
+    "modificateur non supporte: $csp": 11,
+    "domaine cosmetique non exprimable (joker de TLD)": 5,
+    "selecteur CSS etendu (#@?#)": 5,
+    "injection de style etendue (#$?#)": 4,
+    "modificateur non supporte: $path": 4,
+    "regex hors du sous-ensemble WebKit": 3,
+    "pseudo-classe CSS etendue": 3,
+    "modificateur non supporte: $redirect-rule": 2,
+    "modificateur non supporte: $denyallow": 2,
+    "regle cosmetique entierement exceptee": 2,
+    "modificateur inconnu: $_____": 1,
+    "modificateur non supporte: $removeparam": 1
+  },
+  "notes": {
+    "domaine ignore (joker ou regex dans $domain)": 25,
+    "doublon fusionne": 22,
+    "domaine ignore (joker) dans une regle cosmetique": 9,
+    "modificateur sans effet sous WebKit: $important": 5
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-French-filter.json",
+      "rules": 11650,
+      "bytes": 1536724
+    }
+  ]
+}

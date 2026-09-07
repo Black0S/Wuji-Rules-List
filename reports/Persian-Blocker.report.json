@@ -1,0 +1,52 @@
+{
+  "source_file": "Persian-Blocker.txt",
+  "source_name": "Persian Blocker",
+  "source_title": "Persian Blocker",
+  "source_version": "2.0.6.35",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/235.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-06T23:55:13+00:00",
+  "profile": "modern (Safari 15+)",
+  "document_policy": "guard",
+  "lines_total": 3577,
+  "rules_in": 2717,
+  "rules_out": 1377,
+  "coverage_pct": 65.7,
+  "breakdown": {
+    "block": 867,
+    "block_document": 2,
+    "block_cookies": 3,
+    "css_display_none": 437,
+    "css_selectors": 846,
+    "ignore_previous_rules": 67
+  },
+  "skipped_total": 848,
+  "skipped_reasons": {
+    "injection de style / scriptlet (#$#)": 341,
+    "JavaScript / scriptlet (#%#)": 154,
+    "selecteur CSS etendu (#?#)": 136,
+    "pseudo-classe :has() (activer --allow-has)": 92,
+    "modificateur non supporte: $removeparam": 58,
+    "modificateur non supporte: $method": 20,
+    "injection de style etendue (#$?#)": 18,
+    "pseudo-classe CSS etendue": 11,
+    "modificateur non supporte: $path": 8,
+    "modificateur non supporte: $redirect": 5,
+    "modificateur non supporte: $removeheader": 2,
+    "$domain melange inclusions et exclusions": 1,
+    "modificateur non supporte: $badfilter": 1,
+    "modificateur non supporte: $csp": 1
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $all": 62,
+    "doublon fusionne": 33,
+    "domaine ignore (joker ou regex dans $domain)": 4
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Persian-Blocker.json",
+      "rules": 1377,
+      "bytes": 197580
+    }
+  ]
+}
