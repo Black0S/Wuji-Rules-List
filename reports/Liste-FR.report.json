@@ -1,31 +1,38 @@
 {
+  "id": "liste-fr",
   "source_file": "Liste-FR.txt",
   "source_name": "Liste FR",
+  "source_sha256": "9e7268a3b60af3be0f27280549aefa35b73ba89d9fbf4499c7ee93c0220ed923",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
   "source_title": "Liste FR",
-  "source_version": "2.1.97.33",
-  "source_url": "https://filters.adtidy.org/extension/chromium/filters/113.txt",
+  "source_version": "202609072332",
+  "source_url": "https://easylist-downloads.adblockplus.org/liste_fr.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:55:35+00:00",
+  "converted_at": "2026-09-08T13:23:14+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 13659,
-  "rules_in": 13534,
-  "rules_out": 10916,
+  "lines_total": 13664,
+  "rules_in": 13549,
+  "rules_out": 10930,
   "coverage_pct": 99.0,
   "breakdown": {
-    "block": 9815,
+    "block": 9825,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 946,
-    "css_selectors": 3430,
-    "ignore_previous_rules": 154
+    "css_display_none": 947,
+    "css_selectors": 3431,
+    "ignore_previous_rules": 157
   },
-  "skipped_total": 127,
+  "skipped_total": 132,
   "skipped_reasons": {
-    "selecteur CSS etendu (#?#)": 113,
+    "selecteur CSS etendu (#?#)": 115,
     "modificateur non supporte: $csp": 6,
-    "modificateur non supporte: $redirect": 6,
-    "regex hors du sous-ensemble WebKit": 2
+    "modificateur inconnu: $rewrite": 6,
+    "regex hors du sous-ensemble WebKit": 2,
+    "injection de style (non supportee)": 2,
+    "modificateur non supporte: $webrtc": 1
   },
   "notes": {
     "doublon fusionne": 1
@@ -33,16 +40,19 @@
   "outputs": [
     {
       "file": "Webkit-Liste-FR.json",
-      "rules": 10916,
-      "bytes": 1429484
+      "rules": 10930,
+      "bytes": 1431754
     }
   ],
+  "rules_emitted": 10930,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-Liste-FR.json",
-    "total": 113,
+    "file": "extended/Extended-Liste-FR.json",
+    "total": 117,
     "counts": {
       "scriptlets": 0,
-      "procedural": 113,
+      "procedural": 117,
       "styles": 0,
       "html": 0,
       "raw_js": 0

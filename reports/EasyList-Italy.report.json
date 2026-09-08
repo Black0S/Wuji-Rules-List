@@ -1,14 +1,19 @@
 {
+  "id": "easylist-italy",
   "source_file": "EasyList-Italy.txt",
   "source_name": "EasyList Italy",
+  "source_sha256": "a4ea8607180d0066689138ede2a8c7a0c4e2352740c79f30dc50ec7bd5bdc83b",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
   "source_title": "EasyList Italy",
-  "source_version": "2.1.97.34",
-  "source_url": "https://filters.adtidy.org/extension/chromium/filters/109.txt",
+  "source_version": "202609072332",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:53:25+00:00",
+  "converted_at": "2026-09-08T13:21:04+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 4258,
+  "lines_total": 4251,
   "rules_in": 4201,
   "rules_out": 2835,
   "coverage_pct": 99.31,
@@ -35,8 +40,11 @@
       "bytes": 442090
     }
   ],
+  "rules_emitted": 2835,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-EasyList-Italy.json",
+    "file": "extended/Extended-EasyList-Italy.json",
     "total": 26,
     "counts": {
       "scriptlets": 0,

@@ -41,12 +41,15 @@ jobs:
       - name: Convertir en Content Blocker WebKit
         run: python3 convert_webkit.py
 
-      - name: Verifier la forme des JSON
+      - name: Tests et controle structurel
         run: make check
 
       # Barriere: rien n'est publie si un seul fichier est rejete par WebKit.
       - name: Compiler avec le WebKit du systeme
         run: make verify
+
+      - name: Annoter la redondance entre listes
+        run: make redundancy
 
       - name: Identite git
         run: |
@@ -56,7 +59,7 @@ jobs:
       # main ne recoit que l'etat des sources et les rapports (~1 Mo).
       - name: Commit de l'etat sur main
         run: |
-          git add filters/index.json reports
+          git add filters/index.json reports sources.json
           if git diff --cached --quiet; then
             echo "Rien a committer sur main."
           else
@@ -69,12 +72,11 @@ jobs:
       - name: Publier sur la branche dist
         run: |
           rm -rf dist-tree
-          mkdir -p dist-tree/extended
-          cp webkit-rules/Webkit-*.json webkit-rules/index.json dist-tree/
+          mkdir -p dist-tree
+          # webkit-rules/ EST l'arborescence publiee: les chemins de index.json
+          # (dont extended/Extended-*.json) sont valables tels quels.
+          cp -R webkit-rules/. dist-tree/
           cp reports/CONVERSION.md dist-tree/
-          if ls extended-rules/Extended-*.json >/dev/null 2>&1; then
-            cp extended-rules/Extended-*.json dist-tree/extended/
-          fi
           cd dist-tree
           git init -q -b dist
           git config user.name  "github-actions[bot]"

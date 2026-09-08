@@ -1,17 +1,22 @@
 {
+  "id": "easylist-dutch",
   "source_file": "EasyList-Dutch.txt",
   "source_name": "EasyList Dutch",
+  "source_sha256": "5bb611604028520b062066715a396fd080e6a9d6ff3c1540486bc2026fde2a24",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
   "source_title": "EasyList Dutch",
-  "source_version": "2.1.97.32",
-  "source_url": "https://filters.adtidy.org/extension/chromium/filters/106.txt",
+  "source_version": "202609072332",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:53:25+00:00",
+  "converted_at": "2026-09-08T13:21:03+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 1582,
-  "rules_in": 1526,
+  "lines_total": 1576,
+  "rules_in": 1527,
   "rules_out": 1080,
-  "coverage_pct": 96.79,
+  "coverage_pct": 96.73,
   "breakdown": {
     "block": 445,
     "block_document": 0,
@@ -20,11 +25,12 @@
     "css_selectors": 1006,
     "ignore_previous_rules": 26
   },
-  "skipped_total": 35,
+  "skipped_total": 36,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 33,
-    "modificateur non supporte: $redirect": 1,
-    "regex hors du sous-ensemble WebKit": 1
+    "modificateur inconnu: $rewrite": 1,
+    "regex hors du sous-ensemble WebKit": 1,
+    "pseudo-classe CSS etendue": 1
   },
   "notes": {},
   "outputs": [
@@ -34,12 +40,15 @@
       "bytes": 161925
     }
   ],
+  "rules_emitted": 1080,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-EasyList-Dutch.json",
-    "total": 33,
+    "file": "extended/Extended-EasyList-Dutch.json",
+    "total": 34,
     "counts": {
       "scriptlets": 0,
-      "procedural": 33,
+      "procedural": 34,
       "styles": 0,
       "html": 0,
       "raw_js": 0

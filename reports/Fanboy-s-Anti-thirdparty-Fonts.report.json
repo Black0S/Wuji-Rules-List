@@ -1,14 +1,19 @@
 {
+  "id": "fanboy-anti-thirdparty-fonts",
   "source_file": "Fanboy-s-Anti-thirdparty-Fonts.txt",
   "source_name": "Fanboy's Anti-thirdparty Fonts",
+  "source_sha256": "816af36b0ba6b41de2d6ad32fbfdad4929763687b694efeb7d238da8c1ad17d9",
+  "source_group": "Fanboy",
+  "source_homepage": "https://www.fanboy.co.nz",
+  "source_license": "http://creativecommons.org/licenses/by/3.0/",
   "source_title": "Fanboy's Anti-thirdparty Fonts",
-  "source_version": "2.0.19.28",
-  "source_url": "https://filters.adtidy.org/extension/chromium/filters/239.txt",
+  "source_version": "",
+  "source_url": "https://fanboy.co.nz/fanboy-antifonts.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:53:47+00:00",
+  "converted_at": "2026-09-08T13:21:25+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 90,
+  "lines_total": 83,
   "rules_in": 58,
   "rules_out": 59,
   "coverage_pct": 100.0,
@@ -30,6 +35,9 @@
       "bytes": 9604
     }
   ],
+  "rules_emitted": 59,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
     "file": null,
     "total": 0,

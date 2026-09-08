@@ -1,30 +1,35 @@
 {
+  "id": "easylist-china",
   "source_file": "EasyList-China.txt",
   "source_name": "EasyList China",
+  "source_sha256": "8009ea951774a6bbceed074668b92843618aa772652fcb55e6f8f9ad809f4b29",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "https://easylist.to/pages/licence.html",
   "source_title": "EasyList China",
-  "source_version": "2.1.67.62",
-  "source_url": "https://filters.adtidy.org/extension/chromium/filters/104.txt",
+  "source_version": "202609072332",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:53:23+00:00",
+  "converted_at": "2026-09-08T13:21:02+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 19490,
-  "rules_in": 19376,
+  "lines_total": 19486,
+  "rules_in": 19378,
   "rules_out": 14638,
   "coverage_pct": 98.09,
   "breakdown": {
-    "block": 11445,
+    "block": 11443,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 2217,
-    "css_selectors": 6586,
-    "ignore_previous_rules": 975
+    "css_selectors": 6587,
+    "ignore_previous_rules": 977
   },
-  "skipped_total": 193,
+  "skipped_total": 195,
   "skipped_reasons": {
-    "selecteur CSS etendu (#?#)": 156,
+    "selecteur CSS etendu (#?#)": 158,
     "modificateur non supporte: $csp": 14,
-    "modificateur non supporte: $redirect": 11,
+    "modificateur inconnu: $rewrite": 11,
     "modificateur non supporte: $genericblock": 8,
     "regex hors du sous-ensemble WebKit": 3,
     "$domain melange inclusions et exclusions": 1
@@ -37,15 +42,18 @@
     {
       "file": "Webkit-EasyList-China.json",
       "rules": 14638,
-      "bytes": 1807125
+      "bytes": 1807379
     }
   ],
+  "rules_emitted": 14638,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-EasyList-China.json",
-    "total": 156,
+    "file": "extended/Extended-EasyList-China.json",
+    "total": 158,
     "counts": {
       "scriptlets": 0,
-      "procedural": 156,
+      "procedural": 158,
       "styles": 0,
       "html": 0,
       "raw_js": 0

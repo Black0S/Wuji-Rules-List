@@ -1,11 +1,16 @@
 {
+  "id": "adguard-spanish-portuguese",
   "source_file": "AdGuard-Spanish-Portuguese-filter.txt",
   "source_name": "AdGuard Spanish/Portuguese filter",
+  "source_sha256": "5ca86698958a54adc46d9c10df5106ad250c0d7007b4f1c2831e4473d77cc8df",
+  "source_group": "AdGuard (langues)",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Spanish/Portuguese filter",
   "source_version": "2.0.35.65",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/9.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:52:04+00:00",
+  "converted_at": "2026-09-08T13:20:21+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 6603,
@@ -24,14 +29,12 @@
   "skipped_reasons": {
     "JavaScript / scriptlet (#%#)": 582,
     "injection de style / scriptlet (#$#)": 205,
-    "selecteur CSS etendu (#?#)": 197,
+    "selecteur CSS etendu (#?#)": 198,
     "modificateur non supporte: $redirect": 66,
     "injection de style etendue (#$?#)": 13,
     "modificateur non supporte: $redirect-rule": 6,
+    "modificateur inconnu: $_____": 2,
     "regex hors du sous-ensemble WebKit": 1,
-    "modificateur inconnu: $_____": 1,
-    "modificateur non supporte: $denyallow": 1,
-    "$domain inexprimable (regex ou joker)": 1,
     "regle cosmetique entierement exceptee": 1,
     "directive $badfilter (retractation appliquee)": 1,
     "caractere de controle dans le selecteur": 1
@@ -48,12 +51,15 @@
       "bytes": 523932
     }
   ],
+  "rules_emitted": 2734,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-AdGuard-Spanish-Portuguese-filter.json",
-    "total": 964,
+    "file": "extended/Extended-AdGuard-Spanish-Portuguese-filter.json",
+    "total": 965,
     "counts": {
       "scriptlets": 548,
-      "procedural": 198,
+      "procedural": 199,
       "styles": 218,
       "html": 0,
       "raw_js": 34

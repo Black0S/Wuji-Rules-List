@@ -3,7 +3,7 @@ filters/*.txt
 
 # Sorties : publiees sur la branche orpheline `dist` par la CI, pas sur `main`.
 webkit-rules/*.json
-extended-rules/*.json
+webkit-rules/extended/*.json
 
 *.tmp
 .DS_Store

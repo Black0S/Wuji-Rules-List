@@ -1,11 +1,16 @@
 {
+  "id": "adguard-tracking-protection",
   "source_file": "AdGuard-Tracking-Protection-filter.txt",
   "source_name": "AdGuard Tracking Protection filter",
+  "source_sha256": "7099413ae08eb60d07dd2dab81b0f78a51eee2e877453b1fc6c71d5517e8ffbf",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Tracking Protection filter",
-  "source_version": "2.1.10.91",
+  "source_version": "2.1.10.90",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/3.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:52:38+00:00",
+  "converted_at": "2026-09-08T13:20:57+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 330899,
@@ -23,7 +28,7 @@
   "skipped_total": 1925,
   "skipped_reasons": {
     "$cookie avec valeur / en exception": 1089,
-    "JavaScript / scriptlet (#%#)": 484,
+    "JavaScript / scriptlet (#%#)": 486,
     "modificateur non supporte: $redirect": 235,
     "selecteur CSS etendu (#?#)": 48,
     "regex hors du sous-ensemble WebKit": 18,
@@ -33,7 +38,6 @@
     "modificateur non supporte: $redirect-rule": 6,
     "modificateur non supporte: $method": 4,
     "retiree par $badfilter (retractation amont)": 3,
-    "modificateur non supporte: $path": 2,
     "injection de style etendue (#$?#)": 2,
     "$domain inexprimable (regex ou joker)": 2,
     "alternation sous quantificateur": 1,
@@ -60,14 +64,17 @@
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-3.json",
       "rules": 29540,
-      "bytes": 3577198
+      "bytes": 3577170
     }
   ],
+  "rules_emitted": 329540,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-AdGuard-Tracking-Protection-filter.json",
-    "total": 530,
+    "file": "extended/Extended-AdGuard-Tracking-Protection-filter.json",
+    "total": 532,
     "counts": {
-      "scriptlets": 465,
+      "scriptlets": 467,
       "procedural": 48,
       "styles": 17,
       "html": 0,

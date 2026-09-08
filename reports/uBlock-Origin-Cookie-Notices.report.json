@@ -1,51 +1,57 @@
 {
+  "id": "ublock-origin-cookie-notices",
   "source_file": "uBlock-Origin-Cookie-Notices.txt",
   "source_name": "uBlock Origin - Cookie Notices",
+  "source_sha256": "96fcf7112ca0a57ff196afa41e7e8cf17894f629ef8f288e71ad4ea1b5805921",
+  "source_group": "uBlock Origin",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
   "source_title": "uBlock filters – Cookie Notices",
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/annoyances-cookies.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:56:59+00:00",
+  "converted_at": "2026-09-08T13:23:29+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 5743,
-  "rules_in": 2380,
-  "rules_out": 143,
-  "coverage_pct": 6.34,
+  "lines_total": 5702,
+  "rules_in": 2352,
+  "rules_out": 136,
+  "coverage_pct": 6.12,
   "breakdown": {
     "block": 19,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 88,
-    "css_selectors": 97,
-    "ignore_previous_rules": 35
+    "css_display_none": 82,
+    "css_selectors": 91,
+    "ignore_previous_rules": 34
   },
-  "skipped_total": 2218,
+  "skipped_total": 2197,
   "skipped_reasons": {
-    "scriptlet ou filtrage HTML": 2149,
+    "scriptlet ou filtrage HTML": 2147,
     "pseudo-classe CSS etendue": 48,
-    "domaine cosmetique non exprimable (joker de TLD)": 19,
     "directive $badfilter (retractation appliquee)": 2
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 24,
     "modificateur sans effet sous WebKit: $important": 4
   },
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Cookie-Notices.json",
-      "rules": 143,
-      "bytes": 56977
+      "rules": 136,
+      "bytes": 55807
     }
   ],
+  "rules_emitted": 136,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-uBlock-Origin-Cookie-Notices.json",
-    "total": 2197,
+    "file": "extended/Extended-uBlock-Origin-Cookie-Notices.json",
+    "total": 2195,
     "counts": {
-      "scriptlets": 2148,
+      "scriptlets": 2147,
       "procedural": 48,
       "styles": 0,
-      "html": 1,
+      "html": 0,
       "raw_js": 0
     }
   }

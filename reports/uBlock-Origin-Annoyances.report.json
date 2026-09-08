@@ -1,37 +1,69 @@
 {
+  "id": "ublock-origin-annoyances",
   "source_file": "uBlock-Origin-Annoyances.txt",
   "source_name": "uBlock Origin - Annoyances",
+  "source_sha256": "db2375507533a575456c48c8acc1b03c1ffbe7e9d419819d95b6e6bc1938c0a8",
+  "source_group": "uBlock Origin",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
   "source_title": "uBlock₀ filters – Annoyances",
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/annoyances.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:56:58+00:00",
+  "converted_at": "2026-09-08T13:23:28+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 9,
-  "rules_in": 0,
-  "rules_out": 0,
-  "coverage_pct": 0.0,
+  "lines_total": 8004,
+  "rules_in": 3517,
+  "rules_out": 587,
+  "coverage_pct": 19.87,
   "breakdown": {
-    "block": 0,
+    "block": 136,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 0,
-    "css_selectors": 0,
-    "ignore_previous_rules": 0
+    "css_display_none": 350,
+    "css_selectors": 463,
+    "ignore_previous_rules": 100
   },
-  "skipped_total": 0,
-  "skipped_reasons": {},
-  "notes": {},
-  "outputs": [],
+  "skipped_total": 2794,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 2117,
+    "pseudo-classe CSS etendue": 606,
+    "modificateur non supporte: $redirect-rule": 24,
+    "modificateur non supporte: $redirect": 22,
+    "modificateur non supporte: $csp": 7,
+    "modificateur non supporte: $uritransform": 5,
+    "modificateur non supporte: $urlskip": 3,
+    "modificateur non supporte: $replace": 3,
+    "modificateur non supporte: $removeparam": 2,
+    "modificateur non supporte: $strict1p": 1,
+    "selecteur CSS etendu (#?#)": 1,
+    "directive $badfilter (retractation appliquee)": 1,
+    "selecteur CSS etendu (#@?#)": 1,
+    "injection de style (non supportee)": 1
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $important": 2,
+    "modificateur sans effet sous WebKit: $all": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-Origin-Annoyances.json",
+      "rules": 587,
+      "bytes": 106038
+    }
+  ],
+  "rules_emitted": 587,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": null,
-    "total": 0,
+    "file": "extended/Extended-uBlock-Origin-Annoyances.json",
+    "total": 2726,
     "counts": {
-      "scriptlets": 0,
-      "procedural": 0,
+      "scriptlets": 2085,
+      "procedural": 609,
       "styles": 0,
-      "html": 0,
+      "html": 32,
       "raw_js": 0
     }
   }

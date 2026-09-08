@@ -1,11 +1,16 @@
 {
+  "id": "adguard-experimental",
   "source_file": "AdGuard-Experimental-filter.txt",
   "source_name": "AdGuard Experimental filter",
+  "source_sha256": "7965a36f256d63ea1232ed8ef0884b54b061c74b8c0e6ef952d9c7ba02decd8e",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Experimental filter",
   "source_version": "2.0.2.2",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/5.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:51:58+00:00",
+  "converted_at": "2026-09-08T13:20:13+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 239,
@@ -36,8 +41,11 @@
       "bytes": 945
     }
   ],
+  "rules_emitted": 7,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-AdGuard-Experimental-filter.json",
+    "file": "extended/Extended-AdGuard-Experimental-filter.json",
     "total": 6,
     "counts": {
       "scriptlets": 0,

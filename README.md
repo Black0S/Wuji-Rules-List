@@ -10,12 +10,12 @@ sources.json ──> fetch_filters.py ──> filters/ ──> convert_webkit.py
 
 | | |
 |---|---|
-| Listes suivies | **161** |
-| Fichiers WebKit générés | **167** |
-| Règles WebKit | **2 957 177** |
-| Entrées sources analysées | **3 268 178** |
-| Entrées non convertibles | **93 071** (détail dans `reports/CONVERSION.md`) |
-| Règles consignées pour un moteur à injection | **69 874** (`extended-rules/`) |
+| Listes au catalogue | **71** dans 11 groupes, toutes publiées |
+| Fichiers WebKit générés | **79** |
+| Règles WebKit | **1 856 029** distinctes (1 860 656 émises) |
+| Entrées sources analysées | **2 104 242** |
+| Entrées non convertibles | **68 437** (détail dans `reports/CONVERSION.md`) |
+| Règles consignées pour un moteur à injection | **58 675** (`webkit-rules/extended/`) |
 
 > Publié sur la branche **`dist`**, réécrite à chaque exécution, après
 > compilation effective par le WebKit du système — `main` ne contient que les
@@ -42,20 +42,53 @@ Aucune dépendance : Python 3.7+, bibliothèque standard uniquement.
 
 ## Étape 1 — `fetch_filters.py`
 
-Découvre automatiquement le catalogue via trois registres, déclarés dans
-`sources.json` :
+Le catalogue est **explicite** : une entrée par liste dans `sources.json`, avec
+l'URL complète du dépôt de son propre mainteneur. Aucune découverte
+automatique, aucun registre interrogé, aucun miroir, aucun CDN tiers — rien qui
+puisse changer sous les pieds sans apparaître dans un diff.
 
-| Registre | Type | Contenu | Défaut |
-|---|---|---|---|
-| `filters.adtidy.org/extension/chromium/filters.json` | `adguard-registry` | 88 listes : filtres AdGuard + EasyList, EasyPrivacy, Fanboy, uBO, Peter Lowe, Dandelion Sprout, listes par langue et sécurité | activé |
-| `adguardteam.github.io/HostlistsRegistry` | `adguard-hostlists` | 64 blocklists DNS : OISD, HaGeZi, 1Hosts, Steven Black, anti-AD, AdRules, Phishing Army… | activé |
-| `api.filterlists.com/lists` | `filterlists` | annuaire indépendant, ~2 300 listes (longue traîne, qualité inégale) | désactivé |
+| Groupe | Mainteneur | Listes |
+|---|---|---:|
+| `ublock` | uBlock Origin | 8 |
+| `adguard` | AdGuard | 13 |
+| `adguard-dns` | AdGuard DNS | 2 |
+| `adguard-lang` | AdGuard (langues) | 9 |
+| `easylist` | EasyList | 4 |
+| `easylist-lang` | EasyList (regions) | 17 |
+| `fanboy` | Fanboy | 4 |
+| `dandelion` | Dandelion Sprout | 2 |
+| `hagezi` | HaGeZi | 10 |
+| `phishing-army` | Phishing Army | 1 |
+| `stevo-ai` | Stevo's AI Blocklist | 2 |
 
-Les listes DNS sont de purs blocklists de domaines : elles se convertissent à
-~100 % en règles WebKit. Les doublons entre registres sont éliminés par URL.
-`extra` dans `sources.json` couvre les listes uBlock Origin absentes des
-registres (`unbreak`, `annoyances`, `annoyances-cookies`, les sous-listes
-EasyList granulaires…).
+**Ajouter une liste** — choisir le groupe, écrire trois champs :
+
+```json
+{ "id": "mon-id", "name": "Nom affiché", "url": "https://…/liste.txt" }
+```
+
+`"enabled": false` la désactive sans la supprimer ; `"format": "hosts"` pour un
+fichier hosts (la détection reste de toute façon automatique) ; `"note"` pour
+un commentaire. Les identifiants sont lisibles et servent de clé stable dans
+les index et les rapports.
+
+Le fichier étant fait pour être édité à la main, une erreur de syntaxe est
+signalée avec sa ligne, son contexte et un indice — une virgule en trop après
+la dernière entrée d'un tableau est le cas le plus fréquent.
+
+**Listes-manifestes.** Les directives `!#include` d'uBlock Origin sont résolues
+récursivement : sans cela, `uBlock filters – Annoyances` ou `RU AdList for uBO`
+ne sont que des sommaires et arrivent vides. Les blocs conditionnels `!#if`
+sont évalués pour la cible réelle — un content blocker Safari, donc
+`env_safari`, `adguard_ext_safari` et `adguard` vrais, tout le reste faux —
+pour ne pas importer les branches destinées à d'autres moteurs. Une liste à
+`!#include` ignore le cache `ETag` : son sommaire peut ne pas bouger alors que
+ses parties changent.
+
+**Doublons et orphelins.** Deux entrées qui livrent le même contenu sont
+détectées par un hachage des seules règles, en-têtes exclus. Un `.txt` dont la
+liste a été retirée du catalogue est supprimé automatiquement, pour ne pas être
+converti en liste fantôme.
 
 Mises à jour **incrémentales** : `filters/index.json` conserve `ETag`,
 `Last-Modified`, `sha256` et l'horodatage. Une liste inchangée renvoie un
@@ -63,18 +96,14 @@ HTTP 304 et n'est pas retéléchargée ; une liste encore dans sa fenêtre
 `! Expires:` n'est même pas interrogée.
 
 ```bash
-python3 fetch_filters.py --list                  # afficher le catalogue (161 listes)
-python3 fetch_filters.py --recommended           # seulement les listes "recommended"
-python3 fetch_filters.py --group Privacy Security
-python3 fetch_filters.py --tag lang:fr
-python3 fetch_filters.py --only easylist ublock  # par motif sur id/nom
+python3 fetch_filters.py --list                  # afficher le catalogue
+python3 fetch_filters.py --group ublock adguard  # un ou plusieurs groupes
+python3 fetch_filters.py --only easylist hagezi  # par motif sur id/nom
 python3 fetch_filters.py --force                 # ignorer cache et fraîcheur
 ```
 
 Sortie : `filters/<Nom-De-La-Liste>.txt` + `filters/index.json` (nom, version,
-homepage, licence, groupe, tags, sha256, nombre de règles).
-
----
+homepage, licence, groupe, sha256, nombre de règles).
 
 ## Étape 2 — `convert_webkit.py`
 
@@ -117,6 +146,9 @@ qui seraient sinon perdues.
 | `domaine##sélecteur` | `css-display-none` + `if-domain` |
 | `domaine#@#sélecteur` | retiré des `if-domain` / ajouté aux `unless-domain` de la règle visée |
 | `règle$badfilter` | **rétractation appliquée** : la règle visée est retirée de la sortie |
+| `$dnsrewrite=` vers une adresse de blocage | traduit en `block` (réécrire vers le trou noir d'un résolveur *est* un blocage) |
+| `[$path=/x]domaine##sélecteur` | `if-top-url` encodant domaine **et** chemin — une seule condition, comme l'exige WebKit |
+| `$denyallow=a\|b` | le blocage, suivi d'une exception par domaine placée **juste après** lui |
 | `\d` `\w` `\s` | réécrits en `[0-9]`, `[a-zA-Z0-9_]`, `[ ]` (synonymes exacts) |
 | `/(a\|b)/` alternation | éclatée en N règles distinctes (WebKit ne sait pas faire de disjonction) |
 | `exemple.*` joker de TLD | étendu vers ~115 extensions réellement rencontrées |
@@ -178,10 +210,36 @@ percent-encodé ; ce qui reste non-ASCII est écarté (WebKit le refuse).
 
 ---
 
+## Le catalogue `webkit-rules/index.json`
+
+`schema: 2`. Chaque entrée porte son identité complète — `id`, `source_sha256`,
+`version`, `converted_at`, `rules_in`, `rules_unique`, `rules_emitted`,
+`skipped`, `group`, `homepage`, `license` — de quoi distinguer deux listes de
+même nom et savoir exactement de quel instantané une conversion provient.
+
+**Les chemins sont relatifs à la racine du catalogue**, et valent tels quels
+sur la branche `dist` comme en local : `Webkit-<Nom>.json` à la racine,
+`extended/Extended-<Nom>.json` pour les annexes.
+
+**Deux comptages, volontairement distincts.** `rules_unique` compte les règles
+distinctes ; `rules_emitted` additionne les fichiers et inclut donc les
+exceptions répliquées dans chaque tranche d'une liste découpée. L'écart (4 627
+aujourd'hui) ne porte que sur les listes en plusieurs morceaux ; c'est correct
+pour WebKit, mais les deux chiffres ne sont pas comparables et le catalogue les
+expose séparément plutôt que d'en choisir un.
+
+**Listes non publiées.** Une liste dont le rendement est négligeable —
+`AdGuard URL Tracking`, 1 règle sur 2 638, tout en `$removeparam` — n'est pas
+écrite : la proposer inviterait à un clic sans effet. Elle apparaît dans
+`unpublished[]` avec son motif, jamais dans `lists[]`. Seuils réglables via
+`--min-rules` et `--min-yield`.
+
+---
+
 ## Règles à injection : `extended-rules/`
 
 Ce qui ne peut pas devenir une règle WebKit n'est plus simplement compté puis
-jeté. Chaque liste produit un `extended-rules/Extended-<Nom>.json` qui consigne,
+jeté. Chaque liste produit un `webkit-rules/extended/Extended-<Nom>.json` qui consigne,
 sous forme structurée, les règles qu'un moteur à injection — c'est-à-dire une
 Safari Web Extension — saurait appliquer :
 
@@ -253,61 +311,97 @@ Safari. C'est ce qui rend `make verify` nécessaire.
 
 ---
 
-## Volume et sélection
+## Redondance : le champ `covered_by`
 
-Le catalogue complet pèse ~99 Mo de listes brutes et ~334 Mo de JSON WebKit.
-Avec le workflow quotidien, l'historique git grossit vite. Trois leviers :
+Deux listes du catalogue peuvent bloquer largement la même chose. Rien ne le
+signalait, alors qu'un content blocker Safari ne compile que 150 000 règles :
+en activer deux qui se recouvrent gaspille ce budget sans rien ajouter.
 
-```bash
-python3 fetch_filters.py --recommended           # ~40 listes, le socle utile
-python3 fetch_filters.py --group "Ad blocking" Privacy Security
+`tools/redundancy.py` mesure, sur la sortie réelle, la part des règles de
+blocage d'une liste déjà présentes dans une autre, et l'écrit dans son entrée :
+
+```json
+{
+  "id": "easylist",
+  "name": "EasyList",
+  "url": "https://easylist.to/easylist/easylist.txt",
+  "covered_by": [
+    { "id": "adguard-base", "name": "AdGuard Base filter", "pct": 100 }
+  ]
+}
 ```
 
-ou dans `sources.json` : passer le registre `adguard-dns` à `"enabled": false`
-(il pèse à lui seul l'essentiel du volume), ou ajouter des identifiants à
-`selection.exclude_ids`. Six méga-listes DNS y sont déjà exclues par défaut
-(HaGeZi Ultimate / Pro++ / Pro, OISD Big, 1Hosts Xtra, Threat Intelligence
-Feeds) : plusieurs centaines de milliers de domaines chacune, largement
-redondantes entre elles. Retirer un identifiant de cette liste suffit à la
-réintégrer.
+**Huit listes sont couvertes à 100 %** — elles n'apportent rien si celle qui
+les contient est activée :
 
-## Couverture
+| Liste | Entièrement contenue dans |
+|---|---|
+| EasyList | AdGuard Base filter |
+| EasyList Cookie List | Fanboy's Annoyances |
+| Fanboy's Social Blocking List | Fanboy's Annoyances |
+| EasyList China / Dutch / Germany | AdGuard Chinese / Dutch / German |
+| Liste FR | AdGuard French filter |
+| Adblock Warning Removal List | RU AdList for uBO |
 
-Catalogue vérifié contre les deux références :
+Le champ est purement informatif : il n'a aucun effet sur la conversion, il
+permet à un consommateur du catalogue d'avertir avant que l'utilisateur active
+deux fois la même chose.
 
-- **[AdguardTeam/AdguardFilters](https://github.com/AdguardTeam/AdguardFilters)** —
-  les 88 filtres du registre sont présents, moins les 2 dépréciés (`#14`
-  Annoyances, remplacé par `#18`–`#22` ; `#15` DNS filter, remplacé par le
-  registre Hostlists). Les registres `safari`, `ios`, `android`, `mac`,
-  `windows`, `firefox` et `ublock` n'exposent aucun filtre supplémentaire :
-  les 19 identifiants propres à `mac` sont tous marqués `(Obsolete)`.
-- **[uBlock Origin `assets.json`](https://github.com/gorhill/uBlock/blob/master/assets/assets.json)** —
-  les 71 listes sont couvertes, soit par l'équivalent AdGuard (comparaison par
-  `! Title:` réel, pas par URL : AdGuard remiroite la plupart d'entre elles),
-  soit par une entrée `extra` ajoutée pour les 14 absentes.
-- **[FilterLists.com](https://filterlists.com/)** — annuaire indépendant de
-  ~2 300 listes, disponible en registre optionnel pour la longue traîne.
+```bash
+make redundancy          # annote sources.json
+make redundancy-report   # affiche sans rien ecrire
+```
 
----
+## Sélection
+
+Activer une partie du catalogue ne demande pas de toucher au fichier :
+
+```bash
+python3 fetch_filters.py --group ublock adguard easylist
+python3 convert_webkit.py --only AdGuard-Base EasyList
+```
+
+Pour retirer durablement une liste, mettre `"enabled": false` sur son entrée :
+elle reste documentée dans `sources.json` et se réactive d'un mot.
+
+Une liste dont le rendement WebKit est négligeable n'est pas publiée même si
+elle est activée — voir `unpublished[]` dans le catalogue de sortie.
+
+## Provenance
+
+Chaque URL a été vérifiée individuellement : réponse HTTP 200, contenu de
+filtre effectif, pas de page HTML. Toutes pointent le domaine du mainteneur.
+
+| Hôte | Listes |
+|---|---:|
+| `filters.adtidy.org` | 22 — dépôt d'AdGuard pour ses propres filtres |
+| `raw.githubusercontent.com` | 17 |
+| `easylist-downloads.adblockplus.org` | 14 |
+| `ublockorigin.github.io` | 8 |
+| `easylist.to` | 4 |
+| autres domaines de mainteneurs | 7 |
+
+Ce qui n'y figure pas est délibéré : les listes tierces qu'AdGuard redistribue
+sans que leur mainteneur publie d'URL brute stable ont été écartées plutôt que
+tirées d'un miroir, et jsDelivr a été remplacé par les dépôts qu'il servait.
 
 ## Arborescence
 
 ```
 fetch_filters.py        étape 1
 convert_webkit.py       étape 2
-sources.json            registres + sources supplémentaires + sélection
+sources.json            catalogue explicite: groupes -> listes -> URL
 Makefile                update / convert / check / verify / probe
 tools/                  sondes Swift du compilateur WebKit (macOS)
 filters/                listes brutes + index.json (état, ETag, sha256)
 webkit-rules/           Webkit-<Nom>.json + index.json (catalogue de sortie)
-extended-rules/         Extended-<Nom>.json (regles a injection, hors WebKit)
+webkit-rules/extended/  Extended-<Nom>.json (regles a injection, hors WebKit)
 reports/                rapport par liste + CONVERSION.md
 .github/workflows/      mise à jour quotidienne automatique
 ```
 
-`filters/*.txt`, `webkit-rules/*.json` et `extended-rules/*.json` sont ignorés
-par git sur `main` : le premier est un cache régénérable en ~20 s, les deux
-autres sont publiés sur `dist`.
+`filters/*.txt` et `webkit-rules/` sont ignorés par git sur `main` : le
+premier est un cache régénérable en ~20 s, le second est publié sur `dist`.
 
 ---
 
@@ -318,8 +412,8 @@ pipeline chaque jour à 04:17 UTC (et à chaque modification des scripts ou de
 `sources.json`). Il pousse ensuite :
 
 - sur **`main`** : `filters/index.json` et `reports/` — quelques centaines de Ko ;
-- sur **`dist`** : les fichiers `Webkit-*.json` à la racine, les
-  `Extended-*.json` sous `extended/`, via une branche orpheline
+- sur **`dist`** : le contenu de `webkit-rules/` tel quel — `Webkit-*.json` à
+  la racine, `Extended-*.json` sous `extended/` — via une branche orpheline
   **force-pushée** à chaque exécution. Un seul commit, pas d'historique : le
   dépôt garde une taille constante malgré les ~360 Mo régénérés quotidiennement.
 

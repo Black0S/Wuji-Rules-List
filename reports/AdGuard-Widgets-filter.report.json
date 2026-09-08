@@ -1,54 +1,63 @@
 {
+  "id": "adguard-widgets",
   "source_file": "AdGuard-Widgets-filter.txt",
   "source_name": "AdGuard Widgets filter",
+  "source_sha256": "a77497d633009fee2754e80a97ffc6958704096e0063f0236930c77c6e93d4d8",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Widgets filter",
   "source_version": "2.0.14.85",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/22.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:52:39+00:00",
+  "converted_at": "2026-09-08T13:20:58+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 2953,
   "rules_in": 2665,
-  "rules_out": 1806,
-  "coverage_pct": 92.2,
+  "rules_out": 1814,
+  "coverage_pct": 92.53,
   "breakdown": {
     "block": 801,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 970,
-    "css_selectors": 1622,
+    "css_display_none": 978,
+    "css_selectors": 1631,
     "ignore_previous_rules": 34
   },
-  "skipped_total": 206,
+  "skipped_total": 197,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 139,
-    "injection de style / scriptlet (#$#)": 37,
+    "injection de style / scriptlet (#$#)": 38,
     "JavaScript / scriptlet (#%#)": 13,
-    "modificateur non supporte: $path": 11,
     "injection de style etendue (#$?#)": 3,
+    "$path sous forme de regex": 1,
     "modificateur non supporte: $redirect": 1,
     "injection de style (non supportee)": 1,
     "modificateur non supporte: $removeparam": 1
   },
   "notes": {
+    "$path traduit en if-top-url": 9,
     "modificateur sans effet sous WebKit: $important": 3,
     "doublon fusionne": 2
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Widgets-filter.json",
-      "rules": 1806,
-      "bytes": 292752
+      "rules": 1814,
+      "bytes": 299910
     }
   ],
+  "rules_emitted": 1814,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-AdGuard-Widgets-filter.json",
-    "total": 193,
+    "file": "extended/Extended-AdGuard-Widgets-filter.json",
+    "total": 194,
     "counts": {
       "scriptlets": 13,
       "procedural": 140,
-      "styles": 40,
+      "styles": 41,
       "html": 0,
       "raw_js": 0
     }

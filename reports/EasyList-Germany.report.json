@@ -1,32 +1,39 @@
 {
+  "id": "easylist-germany",
   "source_file": "EasyList-Germany.txt",
   "source_name": "EasyList Germany",
+  "source_sha256": "6b2da07206b17dcc96430d92991c4445f2f656204b21226808920a286d82b326",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
   "source_title": "EasyList Germany",
-  "source_version": "2.0.17.72",
-  "source_url": "https://filters.adtidy.org/extension/chromium/filters/107.txt",
+  "source_version": "202609072332",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistgermany.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:53:25+00:00",
+  "converted_at": "2026-09-08T13:21:04+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 6018,
-  "rules_in": 5957,
-  "rules_out": 3886,
-  "coverage_pct": 97.4,
+  "lines_total": 6020,
+  "rules_in": 5970,
+  "rules_out": 3887,
+  "coverage_pct": 97.2,
   "breakdown": {
-    "block": 2149,
+    "block": 2150,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 1574,
     "css_selectors": 3491,
     "ignore_previous_rules": 162
   },
-  "skipped_total": 121,
+  "skipped_total": 133,
   "skipped_reasons": {
-    "selecteur CSS etendu (#?#)": 112,
-    "modificateur non supporte: $redirect": 4,
+    "selecteur CSS etendu (#?#)": 121,
+    "modificateur inconnu: $rewrite": 4,
     "regex hors du sous-ensemble WebKit": 3,
+    "modificateur non supporte: $genericblock": 2,
     "modificateur non supporte: $csp": 1,
-    "injection de style etendue (#$?#)": 1
+    "pseudo-classe CSS etendue": 1,
+    "injection de style (non supportee)": 1
   },
   "notes": {
     "alternation eclatee en 2 regles": 1,
@@ -35,17 +42,20 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-Germany.json",
-      "rules": 3886,
-      "bytes": 620010
+      "rules": 3887,
+      "bytes": 620145
     }
   ],
+  "rules_emitted": 3887,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-EasyList-Germany.json",
-    "total": 113,
+    "file": "extended/Extended-EasyList-Germany.json",
+    "total": 123,
     "counts": {
       "scriptlets": 0,
-      "procedural": 112,
-      "styles": 1,
+      "procedural": 123,
+      "styles": 0,
       "html": 0,
       "raw_js": 0
     }

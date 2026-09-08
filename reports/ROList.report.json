@@ -1,23 +1,28 @@
 {
+  "id": "rolist",
   "source_file": "ROList.txt",
   "source_name": "ROList",
+  "source_sha256": "06dd2e4d5ecaf8f89311bc8280f527eaaaf4d2102203aac283f67af807d7abf5",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "http://creativecommons.org/licenses/by/3.0/",
   "source_title": "ROList",
-  "source_version": "2.0.1.57",
-  "source_url": "https://filters.adtidy.org/extension/chromium/filters/114.txt",
+  "source_version": "202609072332",
+  "source_url": "https://easylist-downloads.adblockplus.org/rolist.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:56:22+00:00",
+  "converted_at": "2026-09-08T13:23:25+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 603,
-  "rules_in": 580,
-  "rules_out": 412,
-  "coverage_pct": 96.9,
+  "lines_total": 608,
+  "rules_in": 585,
+  "rules_out": 413,
+  "coverage_pct": 96.24,
   "breakdown": {
     "block": 285,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 113,
-    "css_selectors": 264,
+    "css_display_none": 114,
+    "css_selectors": 265,
     "ignore_previous_rules": 13
   },
   "skipped_total": 12,
@@ -25,15 +30,19 @@
     "domaine cosmetique non exprimable (joker de TLD)": 12
   },
   "notes": {
-    "domaine ignore (joker) dans une regle cosmetique": 12
+    "domaine ignore (joker) dans une regle cosmetique": 12,
+    "doublon fusionne": 4
   },
   "outputs": [
     {
       "file": "Webkit-ROList.json",
-      "rules": 412,
-      "bytes": 63405
+      "rules": 413,
+      "bytes": 63532
     }
   ],
+  "rules_emitted": 413,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
     "file": null,
     "total": 0,

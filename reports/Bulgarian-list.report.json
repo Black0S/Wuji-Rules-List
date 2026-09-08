@@ -1,23 +1,28 @@
 {
+  "id": "bulgarian",
   "source_file": "Bulgarian-list.txt",
   "source_name": "Bulgarian list",
-  "source_title": "Bulgarian list",
-  "source_version": "2.0.0.44",
-  "source_url": "https://filters.adtidy.org/extension/chromium/filters/103.txt",
+  "source_sha256": "cd001c6f13207bd6292735efb385344ee682ba7965b40acc02a32bdbe08579a4",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
+  "source_title": "Bulgarian adblock list",
+  "source_version": "",
+  "source_url": "https://stanev.org/abp/adblock_bg.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:52:40+00:00",
+  "converted_at": "2026-09-08T13:20:58+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 1174,
-  "rules_in": 1149,
-  "rules_out": 892,
+  "lines_total": 1168,
+  "rules_in": 1150,
+  "rules_out": 893,
   "coverage_pct": 100.0,
   "breakdown": {
     "block": 687,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 186,
-    "css_selectors": 444,
+    "css_display_none": 187,
+    "css_selectors": 445,
     "ignore_previous_rules": 18
   },
   "skipped_total": 0,
@@ -26,10 +31,13 @@
   "outputs": [
     {
       "file": "Webkit-Bulgarian-list.json",
-      "rules": 892,
-      "bytes": 125484
+      "rules": 893,
+      "bytes": 125615
     }
   ],
+  "rules_emitted": 893,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
     "file": null,
     "total": 0,

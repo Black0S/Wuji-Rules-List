@@ -1,6 +1,6 @@
 PY ?= python3
 
-.PHONY: all update convert clean recommended check
+.PHONY: all update convert clean recommended check test verify probe redundancy
 
 all: update convert
 
@@ -13,11 +13,15 @@ recommended:                  ## Uniquement les listes "recommended" d'AdGuard
 convert:                      ## Convertit filters/ -> webkit-rules/
 	$(PY) convert_webkit.py
 
-check:                        ## Verifie que tous les JSON produits sont bien formes
-	@$(PY) -c "import json,glob,sys; \
-	fs=sorted(glob.glob('webkit-rules/*.json')); \
+test:                         ## Non-regression du convertisseur (portable)
+	$(PY) tests.py
+
+check: test                   ## Tests + controle structurel des fichiers produits
+	@$(PY) -c "import json,glob; \
+	fs=sorted(glob.glob('webkit-rules/*.json')+glob.glob('webkit-rules/extended/*.json')); \
 	[json.load(open(f)) for f in fs]; \
-	print('%d fichiers JSON valides' % len(fs))"
+	print('%d fichiers JSON bien formes' % len(fs))"
+	$(PY) tools/validate.py
 
 verify:                       ## macOS uniquement: compile chaque fichier avec le WebKit systeme
 	@command -v swift >/dev/null || { echo "swift introuvable (macOS + Command Line Tools requis)"; exit 1; }
@@ -27,8 +31,14 @@ verify:                       ## macOS uniquement: compile chaque fichier avec l
 probe:                        ## macOS uniquement: sonde les contraintes reelles de WebKit
 	swift tools/wk_probe.swift
 
+redundancy:                   ## Annote sources.json avec le recouvrement entre listes
+	$(PY) tools/redundancy.py
+
+redundancy-report:            ## Affiche le recouvrement sans rien ecrire
+	$(PY) tools/redundancy.py --dry-run
+
 catalog:                      ## Affiche le catalogue sans rien telecharger
 	$(PY) fetch_filters.py --list
 
 clean:
-	rm -rf webkit-rules/*.json reports/*.json reports/*.md
+	rm -rf webkit-rules/*.json webkit-rules/extended reports/*.json reports/*.md

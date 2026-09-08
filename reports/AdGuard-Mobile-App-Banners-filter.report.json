@@ -1,52 +1,61 @@
 {
+  "id": "adguard-mobile-app-banners",
   "source_file": "AdGuard-Mobile-App-Banners-filter.txt",
   "source_name": "AdGuard Mobile App Banners filter",
+  "source_sha256": "ee8ea6c1fcfd129fb413d47e4d9caa02dbe8dc3996c9b73d83f8d5a762960a10",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Mobile App Banners filter",
   "source_version": "2.0.31.93",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/20.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:52:01+00:00",
+  "converted_at": "2026-09-08T13:20:17+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 4426,
   "rules_in": 4148,
-  "rules_out": 2341,
-  "coverage_pct": 78.59,
+  "rules_out": 2345,
+  "coverage_pct": 78.71,
   "breakdown": {
     "block": 150,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 2183,
-    "css_selectors": 3103,
+    "css_display_none": 2187,
+    "css_selectors": 3108,
     "ignore_previous_rules": 7
   },
-  "skipped_total": 885,
+  "skipped_total": 880,
   "skipped_reasons": {
-    "injection de style / scriptlet (#$#)": 402,
-    "selecteur CSS etendu (#?#)": 226,
-    "JavaScript / scriptlet (#%#)": 223,
+    "injection de style / scriptlet (#$#)": 405,
+    "selecteur CSS etendu (#?#)": 228,
+    "JavaScript / scriptlet (#%#)": 224,
     "injection de style etendue (#$?#)": 19,
-    "modificateur non supporte: $path": 11,
-    "$domain inexprimable (regex ou joker)": 1,
+    "prefixe cosmetique sans chemin": 1,
     "modificateur non supporte: $removeparam": 1,
     "injection de style (non supportee)": 1,
     "ancre `|` en milieu de motif": 1
   },
-  "notes": {},
+  "notes": {
+    "$path traduit en if-top-url": 5
+  },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Mobile-App-Banners-filter.json",
-      "rules": 2341,
-      "bytes": 490570
+      "rules": 2345,
+      "bytes": 508360
     }
   ],
+  "rules_emitted": 2345,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-AdGuard-Mobile-App-Banners-filter.json",
-    "total": 862,
+    "file": "extended/Extended-AdGuard-Mobile-App-Banners-filter.json",
+    "total": 868,
     "counts": {
-      "scriptlets": 214,
-      "procedural": 227,
-      "styles": 421,
+      "scriptlets": 215,
+      "procedural": 229,
+      "styles": 424,
       "html": 0,
       "raw_js": 9
     }

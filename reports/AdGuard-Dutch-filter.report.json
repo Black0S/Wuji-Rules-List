@@ -1,11 +1,16 @@
 {
+  "id": "adguard-dutch",
   "source_file": "AdGuard-Dutch-filter.txt",
   "source_name": "AdGuard Dutch filter",
+  "source_sha256": "fcedb385f0dc9b5d226c06ed4c8d5a4abac39d597b0020c19ba0a42e605838c7",
+  "source_group": "AdGuard (langues)",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Dutch filter",
   "source_version": "2.0.9.44",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/8.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:51:58+00:00",
+  "converted_at": "2026-09-08T13:20:13+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 2182,
@@ -42,8 +47,11 @@
       "bytes": 191237
     }
   ],
+  "rules_emitted": 1240,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-AdGuard-Dutch-filter.json",
+    "file": "extended/Extended-AdGuard-Dutch-filter.json",
     "total": 99,
     "counts": {
       "scriptlets": 34,

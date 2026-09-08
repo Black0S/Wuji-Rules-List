@@ -1,11 +1,16 @@
 {
+  "id": "filter-unblocking-search-ads-and-self-promotion",
   "source_file": "Filter-unblocking-search-ads-and-self-promotion.txt",
   "source_name": "Filter unblocking search ads and self-promotion",
+  "source_sha256": "9cf5b7d047c485c9d19dafdbcd430fe9d3ffaaa66746ee33e8fb66a5ae8f2578",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "Filter unblocking search ads and self-promotion",
   "source_version": "2.0.3.99",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/10.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:53:47+00:00",
+  "converted_at": "2026-09-08T13:21:25+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 392,
@@ -20,13 +25,12 @@
     "css_selectors": 4,
     "ignore_previous_rules": 11
   },
-  "skipped_total": 57,
+  "skipped_total": 55,
   "skipped_reasons": {
     "selecteur CSS etendu (#@?#)": 45,
     "exception d'injection de style": 4,
     "exception d'injection de style etendue": 3,
-    "exception de scriptlet": 3,
-    "modificateur non supporte: $path": 2
+    "exception de scriptlet": 3
   },
   "notes": {},
   "outputs": [
@@ -36,8 +40,11 @@
       "bytes": 7355
     }
   ],
+  "rules_emitted": 14,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-Filter-unblocking-search-ads-and-self-promotion.json",
+    "file": "extended/Extended-Filter-unblocking-search-ads-and-self-promotion.json",
     "total": 55,
     "counts": {
       "scriptlets": 3,

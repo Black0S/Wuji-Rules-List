@@ -1,56 +1,59 @@
 {
+  "id": "fanboy-annoyances",
   "source_file": "Fanboy-s-Annoyances.txt",
   "source_name": "Fanboy's Annoyances",
-  "source_title": "Fanboy's Annoyances",
-  "source_version": "2.1.66.97",
-  "source_url": "https://filters.adtidy.org/extension/chromium/filters/122.txt",
+  "source_sha256": "876a0d5ea0a7c5ca55e7db62831e9515ba1161745ce29757ed0a64ce41f66b2a",
+  "source_group": "Fanboy",
+  "source_homepage": "https://www.fanboy.co.nz",
+  "source_license": "",
+  "source_title": "Fanboy's Annoyance List",
+  "source_version": "202609072335",
+  "source_url": "https://easylist.to/easylist/fanboy-annoyance.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:53:46+00:00",
+  "converted_at": "2026-09-08T13:21:25+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 60294,
-  "rules_in": 57302,
-  "rules_out": 18090,
-  "coverage_pct": 86.37,
+  "lines_total": 50490,
+  "rules_in": 49111,
+  "rules_out": 17221,
+  "coverage_pct": 98.01,
   "breakdown": {
-    "block": 3592,
+    "block": 3561,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 13945,
-    "css_selectors": 45350,
+    "css_display_none": 13107,
+    "css_selectors": 44019,
     "ignore_previous_rules": 552
   },
-  "skipped_total": 6800,
+  "skipped_total": 400,
   "skipped_reasons": {
-    "JavaScript / scriptlet (#%#)": 5439,
-    "injection de style / scriptlet (#$#)": 934,
-    "selecteur CSS etendu (#?#)": 411,
-    "injection de style etendue (#$?#)": 9,
-    "modificateur non supporte: $path": 4,
+    "selecteur CSS etendu (#?#)": 396,
     "regle cosmetique entierement exceptee": 2,
-    "injection de style (non supportee)": 1
+    "injection de style (non supportee)": 1,
+    "injection de style / scriptlet (#$#)": 1
   },
   "notes": {
-    "doublon fusionne": 573,
-    "modificateur sans effet sous WebKit: $important": 2,
-    "domaine ignore (joker) dans une regle cosmetique": 2
+    "doublon fusionne": 109
   },
   "outputs": [
     {
       "file": "Webkit-Fanboy-s-Annoyances.json",
-      "rules": 18090,
-      "bytes": 3523249
+      "rules": 17221,
+      "bytes": 3320412
     }
   ],
+  "rules_emitted": 17221,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-Fanboy-s-Annoyances.json",
-    "total": 6794,
+    "file": "extended/Extended-Fanboy-s-Annoyances.json",
+    "total": 397,
     "counts": {
-      "scriptlets": 5439,
-      "procedural": 412,
-      "styles": 943,
+      "scriptlets": 0,
+      "procedural": 397,
+      "styles": 0,
       "html": 0,
-      "raw_js": 0
+      "raw_js": 1
     }
   }
 }

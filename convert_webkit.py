@@ -35,7 +35,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_IN = os.path.join(ROOT, "filters")
 DEFAULT_OUT = os.path.join(ROOT, "webkit-rules")
 DEFAULT_REPORTS = os.path.join(ROOT, "reports")
-DEFAULT_EXTENDED = os.path.join(ROOT, "extended-rules")
+DEFAULT_EXTENDED = os.path.join(ROOT, "webkit-rules", "extended")
+EXT_SUBDIR = "extended"
 PREFIX = "Webkit-"
 EXT_PREFIX = "Extended-"
 
@@ -103,17 +104,40 @@ MODIFIER_ALIASES = {
 UNSUPPORTED_MODIFIERS = {
     "csp", "redirect", "redirect-rule", "removeparam", "removeheader", "replace",
     "hls", "jsonprune", "permissions", "referrerpolicy", "method", "to", "header",
-    "app", "network", "extension", "stealth", "denyallow", "webrtc", "empty",
+    "app", "network", "extension", "stealth", "webrtc", "empty",
     "mp4", "inline-script", "inline-font", "genericblock", "generichide",
     "elemhide", "jsinject", "content", "urlblock", "badfilter", "specifichide",
     "strict-first-party", "strict-third-party", "cookie", "stealth-mode",
-    "ctag", "dnsrewrite", "dnstype", "client", "path", "url", "urlskip",
+    "ctag", "dnstype", "client", "path", "url", "urlskip",
     "uritransform", "strict3p", "strict1p", "reason", "ipaddress", "cname",
     "webrtc", "websocket-request", "match-case-value",
 }
 
 # Modificateurs sans effet cote WebKit mais inoffensifs: on garde la regle.
 IGNORED_MODIFIERS = {"important", "all", "not-important"}
+
+# Cibles de $dnsrewrite qui signifient "bloquer" et non "rediriger": une regle
+# qui reecrit un domaine vers l'adresse de blocage d'un resolveur est un
+# blocage, et se traduit fidelement en `block` cote WebKit.
+DNS_BLOCK_TARGETS = frozenset((
+    "", "0.0.0.0", "::", "127.0.0.1", "::1", "nxdomain", "refused",
+    "ad-block.dns.adguard.com", "block.dns.adguard.com",
+))
+
+
+def dnsrewrite_is_block(value):
+    """Vrai si la valeur de $dnsrewrite equivaut a un blocage."""
+    v = (value or "").strip().lower().rstrip(".")
+    if v in DNS_BLOCK_TARGETS:
+        return True
+    # Formes etendues: NOERROR;A;0.0.0.0 / NXDOMAIN;; / ...
+    parts = [x.strip() for x in v.split(";") if x.strip()]
+    if parts and parts[0] in ("nxdomain", "refused"):
+        return True
+    if len(parts) == 3 and parts[0] == "noerror" and parts[2] in ("0.0.0.0", "::"):
+        return True
+    return False
+
 
 # Pseudo-classes etendues (AdGuard / uBO) non comprises par le moteur CSS
 # du content blocker.
@@ -127,6 +151,9 @@ EXTENDED_CSS_TOKENS = (
 # Constructions regex hors du sous-ensemble accepte par WebKit.
 BAD_REGEX_TOKENS = ("{", "}", "(?", "\\d", "\\w", "\\s", "\\D", "\\W", "\\S",
                     "\\b", "\\B", "*?", "+?", "??", "|", "\\1", "\\2", "\\3")
+
+# Prefixe de modificateurs des regles cosmetiques AdGuard: [$path=/x]dom##sel
+COSMETIC_PREFIX = re.compile(r"^\[\$([^\]]+)\](.*)$", re.S)
 
 COSMETIC_MARKERS = ["#@$?#", "#@$#", "#@?#", "#@%#", "#@#",
                     "#$?#", "#$#", "#?#", "#%#", "##"]
@@ -633,7 +660,7 @@ def parse_bare_args(inner):
 
 class Converter(object):
 
-    def __init__(self, legacy=False, document_policy="guard", allow_has=False,
+    def __init__(self, legacy=False, document_policy="guard", allow_has=True,
                  css_group_size=250, keep_extended=True):
         self.legacy = legacy
         self.types_map = RESOURCE_TYPES_LEGACY if legacy else RESOURCE_TYPES_MODERN
@@ -648,6 +675,7 @@ class Converter(object):
 
     def reset(self):
         self.blocks = []            # blocages "sous-ressource"
+        self.atomic = []            # (debut, longueur) a ne pas couper au decoupage
         self.doc_blocks = []        # blocages visant explicitement le document
         self.cookie_rules = []
         self.css = {}               # trigger_key -> {"trigger":..., "selectors":[...]}
@@ -699,7 +727,7 @@ class Converter(object):
             parsed = self.split_cosmetic(line)
             if not parsed:
                 continue
-            domains, marker, body = parsed
+            domains, marker, body = parsed[0], parsed[1], parsed[2]
             if marker != "#@#":
                 continue
             inc, _, _ = parse_domain_option(domains.replace(",", "|"))
@@ -709,6 +737,11 @@ class Converter(object):
 
     @staticmethod
     def split_cosmetic(line):
+        # `[$path=/x]domaine##selecteur` : le prefixe porte des modificateurs.
+        prefix = ""
+        m = COSMETIC_PREFIX.match(line)
+        if m:
+            prefix, line = m.group(1), m.group(2)
         best = None
         for marker in COSMETIC_MARKERS:
             pos = line.find(marker)
@@ -726,7 +759,7 @@ class Converter(object):
         # Le champ domaines d'une regle cosmetique ne contient jamais / $ ou espace.
         if re.search(r"[/$\s\"']", domains):
             return None
-        return domains, marker, body
+        return domains, marker, body, prefix
 
     # -- validation d'un selecteur CSS -------------------------------------- #
 
@@ -826,6 +859,7 @@ class Converter(object):
         child_frame_only = False
         cookie_only = False
         elemhide_exception = False
+        denyallow = []
 
         for mod in mods:
             neg = mod.startswith("~")
@@ -871,6 +905,15 @@ class Converter(object):
                 (exc_types if neg else inc_types).append(name)
             elif name in IGNORED_MODIFIERS:
                 self.note("modificateur sans effet sous WebKit: $%s" % name)
+            elif name == "denyallow":
+                d_inc, d_exc, _ = parse_domain_option(value)
+                if d_exc or not d_inc:
+                    raise Unsupported("$denyallow inexprimable")
+                denyallow = [d[1:] for d in d_inc]
+            elif name == "dnsrewrite":
+                if not dnsrewrite_is_block(value):
+                    raise Unsupported("$dnsrewrite vers une cible de redirection")
+                self.note("$dnsrewrite vers une adresse de blocage: traite en blocage")
             elif name == "badfilter":
                 raise Unsupported("directive $badfilter (retractation appliquee)")
             elif name in UNSUPPORTED_MODIFIERS:
@@ -930,6 +973,21 @@ class Converter(object):
                 self.emit(bucket, t, dict(action))
             if len(url_filters) > 1:
                 self.note("alternation eclatee en %d regles" % len(url_filters))
+            if denyallow:
+                start = len(bucket) - len(url_filters)
+                # `$denyallow=a|b` = bloquer sauf vers ces domaines. On place les
+                # exceptions JUSTE APRES le blocage: `ignore-previous-rules`
+                # n'annule que ce qui precede, donc les regles suivantes du
+                # fichier continuent de s'appliquer.
+                for dom in denyallow:
+                    t = dict(trigger)
+                    t["url-filter"] = ANCHOR_DOMAIN + "".join(
+                        ("\\" + c if c in REGEX_ESCAPE else c) for c in dom) + SEP_END
+                    self.emit(bucket, t, {"type": "ignore-previous-rules"})
+                if bucket is self.blocks:
+                    self.atomic.append((start, len(bucket) - start))
+                self.note("$denyallow: %d exception(s) emises apres le blocage"
+                          % len(denyallow))
 
         if exception:
             if elemhide_exception or (document_intent and not inc_types):
@@ -961,7 +1019,7 @@ class Converter(object):
 
     # -- regles cosmetiques ------------------------------------------------- #
 
-    def capture_extended(self, domains, marker, body):
+    def capture_extended(self, domains, marker, body, prefix=""):
         """Consigne une regle non convertible en WebKit mais exploitable par un
         moteur a injection (extension). Ne modifie pas le comptage: la regle
         reste ecartee de la sortie WebKit."""
@@ -970,6 +1028,8 @@ class Converter(object):
         inc, exc, _ = parse_domain_option(domains.replace(",", "|"))
         scope = {"domains": sorted(set(d[1:] for d in inc)),
                  "excluded": sorted(set(d[1:] for d in exc))}
+        if prefix:
+            scope["modifiers"] = prefix
         exception = "@" in marker
 
         m = SCRIPTLET_AG.match(body.strip())
@@ -1013,9 +1073,22 @@ class Converter(object):
             self.extended["procedural"].append(dict(
                 scope, selector=body.strip(), exception=exception))
 
-    def convert_cosmetic(self, domains, marker, body):
+    @staticmethod
+    def path_to_top_url(domain, path):
+        """`[$path=/x]dom##sel` -> une regex `if-top-url` couvrant domaine+chemin.
+
+        WebKit n'accepte qu'une condition par trigger: encoder le domaine dans
+        la regex du top-url permet d'exprimer les deux a la fois.
+        """
+        head = ANCHOR_DOMAIN + "".join(
+            ("\\" + c if c in REGEX_ESCAPE else c) for c in domain) if domain \
+            else r"^[htpsw]+://[^/]*"
+        tail = "".join(("\\" + c if c in REGEX_ESCAPE else c) for c in path)
+        return head + tail
+
+    def convert_cosmetic(self, domains, marker, body, prefix=""):
         if marker != "##":
-            self.capture_extended(domains, marker, body)
+            self.capture_extended(domains, marker, body, prefix)
             raise Unsupported({
                 "#@#": "exception cosmetique (traitee en amont)",
                 "#?#": "selecteur CSS etendu (#?#)",
@@ -1043,6 +1116,29 @@ class Converter(object):
             if domains and not inc and not exc:
                 raise Unsupported("domaine cosmetique non exprimable (joker de TLD)")
 
+        # Prefixe [$path=...] : exprimable via if-top-url, qui compte pour une
+        # seule condition et peut donc porter domaine et chemin ensemble.
+        path = None
+        if prefix:
+            for mod in split_modifiers(prefix):
+                nm, _, val = mod.partition("=")
+                nm = nm.strip().lower()
+                if nm == "path":
+                    path = val.strip()
+                elif nm == "domain":
+                    i2, e2, _ = parse_domain_option(val)
+                    inc.extend(i2); exc.extend(e2)
+                else:
+                    raise Unsupported("modificateur cosmetique [$%s]" % nm)
+            if path is None:
+                raise Unsupported("prefixe cosmetique sans chemin")
+            if not path.startswith("/") or (path.endswith("/") and len(path) > 1
+                                            and path.count("/") > 1 and
+                                            re.search(r"[\\^$*+?()\[\]{}|]", path)):
+                raise Unsupported("$path sous forme de regex")
+            if exc:
+                raise Unsupported("$path avec exclusion de domaine")
+
         excepted = self._css_exceptions.get(selector, set())
         if excepted:
             if inc:
@@ -1051,6 +1147,18 @@ class Converter(object):
                     raise Unsupported("regle cosmetique entierement exceptee")
             else:
                 exc = sorted(set(exc) | excepted)
+
+        if path is not None:
+            tops = [self.path_to_top_url(d[1:], path) for d in sorted(set(inc))] \
+                   or [self.path_to_top_url("", path)]
+            trigger = {"url-filter": ".*", "if-top-url": tops}
+            key = json.dumps(trigger, sort_keys=True, separators=(",", ":"))
+            slot = self.css.setdefault(key, {"trigger": trigger, "selectors": []})
+            if selector not in slot["selectors"]:
+                slot["selectors"].append(selector)
+                self.counts["converted"] += 1
+                self.note("$path traduit en if-top-url")
+            return
 
         trigger = {"url-filter": ".*"}
         if inc and exc:
@@ -1105,10 +1213,10 @@ class Converter(object):
             try:
                 cosmetic = self.split_cosmetic(line)
                 if cosmetic:
-                    domains, marker, body = cosmetic
+                    domains, marker, body, prefix = cosmetic
                     if marker == "#@#":
                         continue  # deja pris en compte en passe 1
-                    self.convert_cosmetic(domains, marker, body)
+                    self.convert_cosmetic(domains, marker, body, prefix)
                 else:
                     if line.startswith("#"):
                         self.counts["comments"] += 1
@@ -1226,7 +1334,17 @@ def convert_file(path, meta, args):
     total = len(body) + len(tail)
     outputs = []
 
-    if total == 0:
+    # Une liste qui n'a presque rien produit n'a pas sa place au catalogue:
+    # la proposer invite a un clic sans effet (ex. AdGuard URL Tracking, tout
+    # en $removeparam, 1 regle sur 2 638).
+    floor = max(args.min_rules, int(conv.counts["total"] * args.min_yield))
+    publishable = total > 0 and (conv.counts["total"] < 100 or total >= floor)
+    unpublished_reason = None
+    if not publishable:
+        unpublished_reason = ("rendement nul ou negligeable (%d regles pour %d entrees)"
+                              % (total, conv.counts["total"]))
+        chunks = []
+    elif total == 0:
         chunks = []
     elif total <= args.max_rules:
         chunks = [body + tail]
@@ -1236,7 +1354,21 @@ def convert_file(path, meta, args):
         room = args.max_rules - len(tail)
         if room < 1000:
             raise RuntimeError("trop d'exceptions pour decouper (%d)" % len(tail))
-        chunks = [body[i:i + room] + tail for i in range(0, len(body), room)]
+        # Un blocage $denyallow et ses exceptions forment un tout: les separer
+        # entre deux fichiers laisserait le blocage s'appliquer sans ses
+        # exemptions, donc du sur-blocage. On recule la coupe au debut du groupe.
+        starts = {a for a, _ in conv.atomic}
+        inside = {}
+        for a, ln in conv.atomic:
+            for k in range(a + 1, a + ln):
+                inside[k] = a
+        chunks, i = [], 0
+        while i < len(body):
+            j = min(i + room, len(body))
+            if j < len(body) and j in inside:
+                j = max(inside[j], i + 1)
+            chunks.append(body[i:j] + tail)
+            i = j
 
     for idx, chunk in enumerate(chunks, 1):
         name = PREFIX + base + (".json" if len(chunks) == 1 else "-%d.json" % idx)
@@ -1251,7 +1383,7 @@ def convert_file(path, meta, args):
     ext_total = sum(v for k, v in ext_counts.items() if k != "raw_js")
     ext_file = None
     if args.extended and ext_total and not args.dry_run:
-        ext_file = EXT_PREFIX + base + ".json"
+        ext_file = "%s/%s%s.json" % (EXT_SUBDIR, EXT_PREFIX, base)
         payload = {
             "source_file": os.path.basename(path),
             "name": (meta or {}).get("name", base),
@@ -1266,14 +1398,19 @@ def convert_file(path, meta, args):
             "styles": ext["styles"],
             "html": ext["html"],
         }
-        with open(os.path.join(args.extended_out, ext_file), "w",
-                  encoding="utf-8") as fh:
+        with open(os.path.join(args.extended_out, os.path.basename(ext_file)),
+                  "w", encoding="utf-8") as fh:
             json.dump(payload, fh, separators=(",", ":"), ensure_ascii=False)
             fh.write("\n")
 
     report = {
+        "id": (meta or {}).get("id", base),
         "source_file": os.path.basename(path),
         "source_name": (meta or {}).get("name", base),
+        "source_sha256": (meta or {}).get("sha256", ""),
+        "source_group": (meta or {}).get("group", ""),
+        "source_homepage": (meta or {}).get("homepage", ""),
+        "source_license": (meta or {}).get("license", ""),
         "source_title": (meta or {}).get("title", ""),
         "source_version": (meta or {}).get("version", ""),
         "source_url": (meta or {}).get("url", ""),
@@ -1299,6 +1436,9 @@ def convert_file(path, meta, args):
                                        key=lambda kv: -kv[1])),
         "notes": dict(sorted(conv.notes.items(), key=lambda kv: -kv[1])),
         "outputs": outputs,
+        "rules_emitted": sum(o["rules"] for o in outputs),
+        "published": publishable,
+        "unpublished_reason": unpublished_reason,
         "extended": {"file": ext_file, "total": ext_total, "counts": ext_counts},
     }
     return report
@@ -1313,7 +1453,7 @@ def main():
                     help="dossier de sortie (defaut: webkit-rules/)")
     ap.add_argument("--reports", default=DEFAULT_REPORTS, help="dossier des rapports")
     ap.add_argument("--extended-out", default=DEFAULT_EXTENDED,
-                    help="dossier des regles a injection (defaut: extended-rules/)")
+                    help="dossier des regles a injection (defaut: webkit-rules/extended/)")
     ap.add_argument("--no-extended", dest="extended", action="store_false", default=True,
                     help="ne pas produire les fichiers Extended-*.json")
     ap.add_argument("--only", nargs="+", metavar="MOTIF",
@@ -1328,6 +1468,10 @@ def main():
                          "WebKit); ce drapeau le desactive pour viser Safari < 16.4")
     ap.add_argument("--css-group-size", type=int, default=250,
                     help="selecteurs regroupes par regle css-display-none")
+    ap.add_argument("--min-rules", type=int, default=10,
+                    help="plancher absolu de regles pour publier une liste")
+    ap.add_argument("--min-yield", type=float, default=0.01,
+                    help="rendement minimal (regles produites / entrees lues)")
     ap.add_argument("--max-rules", type=int, default=WEBKIT_MAX_RULES,
                     help="regles max par fichier avant decoupage (defaut: 150000)")
     ap.add_argument("--pretty", action="store_true", help="JSON indente")
@@ -1354,6 +1498,11 @@ def main():
     reports = []
     for path in files:
         meta = index_meta.get(os.path.basename(path), {})
+        if meta.get("duplicate_of"):
+            if not args.quiet:
+                print("  . %-44s doublon de %s" % (os.path.basename(path)[:44],
+                                                   meta["duplicate_of"]))
+            continue
         try:
             rep = convert_file(path, meta, args)
         except Exception as e:  # noqa: BLE001
@@ -1375,26 +1524,50 @@ def main():
     if not reports:
         return 1
 
+    published = [r for r in reports if r["published"]]
     catalog = {
         "generated_at": now_iso(),
         "generator": "convert_webkit.py",
         "profile": reports[0]["profile"],
+        "schema": 2,
+        "note": ("Les chemins de `files[].file` et de `extended_file` sont "
+                 "relatifs a la racine de ce catalogue. `rules_unique` compte "
+                 "les regles distinctes; `rules_emitted` les additionne par "
+                 "fichier et inclut donc les exceptions repliquees dans chaque "
+                 "tranche d'une liste decoupee."),
         "totals": {
-            "lists": len(reports),
-            "files": sum(len(r["outputs"]) for r in reports),
-            "rules_in": sum(r["rules_in"] for r in reports),
-            "rules_out": sum(r["rules_out"] for r in reports),
+            "lists": len(published),
+            "lists_unpublished": len(reports) - len(published),
+            "files": sum(len(r["outputs"]) for r in published),
+            "rules_in": sum(r["rules_in"] for r in published),
+            "rules_unique": sum(r["rules_out"] for r in published),
+            "rules_emitted": sum(r["rules_emitted"] for r in published),
             "skipped": sum(r["skipped_total"] for r in reports),
             "extended": sum(r["extended"]["total"] for r in reports),
         },
         "lists": [{
+            "id": r["id"],
             "name": r["source_name"],
             "source": r["source_file"],
+            "source_sha256": r["source_sha256"],
             "version": r["source_version"],
+            "group": r["source_group"],
+            "homepage": r["source_homepage"],
+            "license": r["source_license"],
+            "converted_at": r["converted_at"],
+            "rules_in": r["rules_in"],
+            "rules_unique": r["rules_out"],
+            "rules_emitted": r["rules_emitted"],
+            "skipped": r["skipped_total"],
             "coverage_pct": r["coverage_pct"],
             "files": r["outputs"],
             "extended_file": r["extended"]["file"],
-        } for r in reports],
+        } for r in published],
+        "unpublished": [{
+            "id": r["id"], "name": r["source_name"], "source": r["source_file"],
+            "rules_in": r["rules_in"], "rules_unique": r["rules_out"],
+            "reason": r["unpublished_reason"],
+        } for r in reports if not r["published"]],
     }
     # Purge des fichiers d'une execution precedente qui n'ont plus de source
     # (liste retiree du catalogue, ou decoupage devenu plus court). Un fichier
@@ -1403,10 +1576,19 @@ def main():
     # des autres listes sont legitimement absents de `reports`.
     full_run = not args.only
     if args.extended and full_run and not args.dry_run:
-        keep_ext = {r["extended"]["file"] for r in reports if r["extended"]["file"]}
+        keep_ext = {os.path.basename(r["extended"]["file"])
+                    for r in reports if r["extended"]["file"]}
         for f in os.listdir(args.extended_out):
             if f.startswith(EXT_PREFIX) and f.endswith(".json") and f not in keep_ext:
                 os.remove(os.path.join(args.extended_out, f))
+
+    # Rapports d'une liste retiree du catalogue: meme logique que pour les
+    # sorties, ils ne doivent pas survivre a leur source.
+    if full_run and not args.dry_run:
+        keep_rep = {os.path.splitext(r["source_file"])[0] + ".report.json" for r in reports}
+        for f in os.listdir(args.reports):
+            if f.endswith(".report.json") and f not in keep_rep:
+                os.remove(os.path.join(args.reports, f))
 
     produced = {o["file"] for r in reports for o in r["outputs"]}
     stale = [f for f in os.listdir(args.out)
@@ -1425,8 +1607,13 @@ def main():
 
     t = catalog["totals"]
     print("\n%s" % ("-" * 60))
-    print("%d listes -> %d fichiers WebKit | %d regles retenues / %d entrees | %d ecartees"
-          % (t["lists"], t["files"], t["rules_out"], t["rules_in"], t["skipped"]))
+    print("%d listes -> %d fichiers WebKit | %d regles distinctes (%d emises) "
+          "/ %d entrees | %d ecartees"
+          % (t["lists"], t["files"], t["rules_unique"], t["rules_emitted"],
+             t["rules_in"], t["skipped"]))
+    if t["lists_unpublished"]:
+        print("%d liste(s) non publiee(s) pour rendement nul (voir index.json)"
+              % t["lists_unpublished"])
     if t.get("extended"):
         print("%d regles a injection consignees dans %s"
               % (t["extended"], args.extended_out))

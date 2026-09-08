@@ -30,6 +30,7 @@ import time
 import unicodedata
 import urllib.error
 import urllib.request
+from urllib.parse import urljoin
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -97,6 +98,127 @@ def atomic_write_bytes(path, data):
 
 
 HEADER_RE = re.compile(r"^!\s*([A-Za-z][A-Za-z ]{1,24}?)\s*:\s*(.+?)\s*$")
+INCLUDE_RE = re.compile(r"^!#include\s+(\S+)\s*$", re.I)
+IF_RE = re.compile(r"^!#if\s+(.+?)\s*$", re.I)
+ELSE_RE = re.compile(r"^!#else\s*$", re.I)
+ENDIF_RE = re.compile(r"^!#endif\s*$", re.I)
+
+# Environnement cible: un content blocker Safari. C'est ce que produit aussi
+# AdGuard pour Safari, d'ou `adguard_ext_safari`. Toute autre capacite
+# (scriptlets uBO, filtrage HTML, feuilles de style utilisateur) est absente.
+PREPROC_TRUE = frozenset(("env_safari", "adguard_ext_safari", "adguard"))
+
+
+def eval_preproc(expr, env=PREPROC_TRUE):
+    """Evalue une condition `!#if` d'uBlock Origin: identifiants, ! && || ()."""
+    tokens = re.findall(r"\(|\)|&&|\|\||!|[A-Za-z_][A-Za-z0-9_]*", expr)
+    pos = [0]
+
+    def peek():
+        return tokens[pos[0]] if pos[0] < len(tokens) else None
+
+    def take():
+        t = peek()
+        pos[0] += 1
+        return t
+
+    def primary():
+        t = take()
+        if t == "!":
+            return not primary()
+        if t == "(":
+            v = expression()
+            if peek() == ")":
+                take()
+            return v
+        if t is None:
+            return False
+        return t in env
+
+    def conjunction():
+        v = primary()
+        while peek() == "&&":
+            take()
+            v = primary() and v
+        return v
+
+    def expression():
+        v = conjunction()
+        while peek() == "||":
+            take()
+            v = conjunction() or v
+        return v
+
+    try:
+        return expression()
+    except Exception:  # noqa: BLE001
+        return True     # condition incomprise: on garde plutot que de perdre
+
+
+def apply_preprocessor(text):
+    """Ne conserve que les branches `!#if` valables pour la cible WebKit."""
+    if "!#if" not in text:
+        return text, 0
+    out, stack, dropped = [], [], 0
+    for line in text.splitlines():
+        st = line.strip()
+        m = IF_RE.match(st)
+        if m:
+            active = all(s[0] for s in stack) and eval_preproc(m.group(1))
+            stack.append([eval_preproc(m.group(1)), active])
+            continue
+        if ELSE_RE.match(st) and stack:
+            stack[-1][0] = not stack[-1][0]
+            continue
+        if ENDIF_RE.match(st) and stack:
+            stack.pop()
+            continue
+        if all(s[0] for s in stack):
+            out.append(line)
+        else:
+            if st and not st.startswith("!"):
+                dropped += 1
+    return "\n".join(out), dropped
+PREPROC_RE = re.compile(r"^!#(if|else|endif|safari_cb_affinity)\b", re.I)
+
+
+def resolve_includes(text, base_url, timeout, depth=0, seen=None, log_fn=None):
+    """Assemble les listes-manifestes (`!#include chemin`) d'uBlock Origin.
+
+    Sans cela, `uBlock filters - Annoyances` ou `RU AdList for uBO` arrivent
+    vides: ce ne sont que des sommaires.
+    """
+    if "!#include" not in text:
+        return text, 0
+    if depth >= 5:
+        return text, 0
+    seen = seen if seen is not None else set()
+
+    out, count = [], 0
+    for line in text.splitlines():
+        m = INCLUDE_RE.match(line.strip())
+        if not m:
+            out.append(line)
+            continue
+        target = urljoin(base_url, m.group(1))
+        if target in seen:
+            out.append("! [include ignore, cycle] " + m.group(1))
+            continue
+        seen.add(target)
+        try:
+            status, body, _ = http_get(target, timeout=timeout, retries=2)
+            if status != 200 or not body:
+                raise RuntimeError("status %s" % status)
+            sub = body.decode("utf-8", errors="replace")
+        except Exception as e:  # noqa: BLE001
+            out.append("! [include echoue: %s] %s" % (e, m.group(1)))
+            continue
+        sub, nested = resolve_includes(sub, target, timeout, depth + 1, seen, log_fn)
+        count += 1 + nested
+        out.append("! >>> include: %s" % m.group(1))
+        out.append(sub)
+        out.append("! <<< fin include: %s" % m.group(1))
+    return "\n".join(out), count
 
 
 def parse_header(text, max_lines=60):
@@ -118,14 +240,22 @@ def parse_header(text, max_lines=60):
 
 
 def count_rules(text):
-    """Compte les lignes utiles (ni vides, ni commentaires)."""
+    """Compte les lignes utiles et les hache.
+
+    Le hachage porte sur les seules regles: deux listes peuvent differer par
+    leur en-tete tout en livrant exactement le meme contenu (ex. uBO
+    annoyances.txt, simple enveloppe autour de annoyances-others.txt).
+    """
     n = 0
+    h = hashlib.sha256()
     for line in text.splitlines():
         s = line.strip()
         if not s or s[0] in "!#" or s.startswith("["):
             continue
         n += 1
-    return n
+        h.update(s.encode("utf-8"))
+        h.update(b"\n")
+    return n, h.hexdigest()
 
 
 # --------------------------------------------------------------------------- #
@@ -133,116 +263,30 @@ def count_rules(text):
 # --------------------------------------------------------------------------- #
 
 def load_config(path):
-    with open(path, "r", encoding="utf-8") as fh:
-        return json.load(fh)
+    """Charge sources.json en signalant clairement une erreur de syntaxe.
 
-
-def discover_adguard(registry_url, timeout, quiet=False, id_prefix="adguard"):
-    """Lit un registre AdGuard (extension ou hostlists DNS) et le normalise.
-
-    Les deux registres partagent le meme schema: groups / tags / filters.
+    Le fichier est fait pour etre edite a la main: une virgule orpheline doit
+    donner un message lisible, pas une trace Python.
     """
-    log("  registre %s: %s" % (id_prefix, registry_url), quiet)
-    status, body, _ = http_get(registry_url, timeout=timeout)
-    if status != 200 or not body:
-        raise RuntimeError("registre inaccessible (status %s)" % status)
-    data = json.loads(body.decode("utf-8"))
-
-    groups = {g["groupId"]: g["groupName"] for g in data.get("groups", [])}
-    tags = {t["tagId"]: t["keyword"] for t in data.get("tags", [])}
-
-    out = []
-    for f in data.get("filters", []):
-        keywords = [tags.get(t, "") for t in f.get("tags", [])]
-        keywords = [k for k in keywords if k]
-        out.append({
-            "id": "%s-%s" % (id_prefix, f["filterId"]),
-            "registry_id": f["filterId"],
-            "name": f["name"],
-            "description": f.get("description", ""),
-            "url": f.get("downloadUrl") or f.get("subscriptionUrl"),
-            "homepage": f.get("homepage", ""),
-            "group": groups.get(f.get("groupId"), "Other"),
-            "tags": keywords,
-            "languages": f.get("languages", []),
-            "deprecated": bool(f.get("deprecated")),
-            "expires": int(f.get("expires") or 86400),
-            "registry_version": f.get("version", ""),
-            "format": "adblock",
-            "origin": "adguard-registry",
-        })
-    return out
-
-
-# Syntaxes FilterLists convertibles par ce pipeline.
-FILTERLISTS_SYNTAXES = {
-    1: "hosts",     # Hosts (localhost IPv4)
-    2: "hosts",     # Domains
-    3: "adblock",   # Adblock Plus
-    4: "adblock",   # uBlock Origin Static
-    6: "adblock",   # AdGuard
-    14: "hosts",    # Non-localhost hosts (IPv4)
-}
-
-
-def discover_filterlists(reg, timeout, jobs, quiet=False):
-    """Annuaire FilterLists.com. Necessite un appel de detail par liste."""
-    index_url = reg.get("url", "https://api.filterlists.com/lists")
-    log("  registre filterlists: %s" % index_url, quiet)
-    status, body, _ = http_get(index_url, timeout=timeout)
-    if status != 200 or not body:
-        raise RuntimeError("annuaire inaccessible (status %s)" % status)
-    listing = json.loads(body.decode("utf-8"))
-
-    allowed = set(reg.get("syntaxes") or FILTERLISTS_SYNTAXES.keys())
-    wanted = [x for x in listing
-              if set(x.get("syntaxIds") or []) & allowed]
-    limit = reg.get("max_lists")
-    if limit:
-        wanted = wanted[:int(limit)]
-    log("  %d listes retenues sur %d, recuperation des URL..."
-        % (len(wanted), len(listing)), quiet)
-
-    detail_url = index_url.rstrip("/") + "/%d"
-
-    def detail(item):
-        try:
-            st, bd, _ = http_get(detail_url % item["id"], timeout=timeout, retries=2)
-            if st != 200 or not bd:
-                return None
-            return json.loads(bd.decode("utf-8"))
-        except Exception:  # noqa: BLE001
-            return None
-
-    out = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max(jobs, 12)) as pool:
-        for d in pool.map(detail, wanted):
-            if not d:
-                continue
-            urls = sorted(d.get("viewUrls") or [],
-                          key=lambda v: (v.get("primariness", 9),
-                                         v.get("segmentNumber", 9)))
-            if not urls:
-                continue
-            syntax = next((FILTERLISTS_SYNTAXES[s] for s in (d.get("syntaxIds") or [])
-                           if s in FILTERLISTS_SYNTAXES), "adblock")
-            out.append({
-                "id": "fl-%s" % d["id"],
-                "registry_id": None,
-                "name": d["name"],
-                "description": (d.get("description") or "")[:300],
-                "url": urls[0]["url"],
-                "homepage": d.get("homeUrl") or "",
-                "group": "FilterLists",
-                "tags": [],
-                "languages": [],
-                "deprecated": False,
-                "expires": 86400,
-                "registry_version": "",
-                "format": syntax,
-                "origin": "filterlists",
-            })
-    return out
+    with open(path, "r", encoding="utf-8") as fh:
+        raw = fh.read()
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError as e:
+        lines = raw.split("\n")
+        lo, hi = max(0, e.lineno - 3), min(len(lines), e.lineno + 2)
+        sys.stderr.write("\nErreur de syntaxe dans %s, ligne %d colonne %d : %s\n\n"
+                         % (path, e.lineno, e.colno, e.msg))
+        for i in range(lo, hi):
+            mark = ">>" if i == e.lineno - 1 else "  "
+            sys.stderr.write("%s %4d | %s\n" % (mark, i + 1, lines[i]))
+        if "Expecting" in e.msg and e.lineno > 1:
+            prev = lines[e.lineno - 2].rstrip()
+            if prev.endswith(","):
+                sys.stderr.write("\nIndice: virgule en trop a la fin de la ligne %d.\n"
+                                 % (e.lineno - 1))
+        sys.stderr.write("\n")
+        raise SystemExit(2)
 
 
 def _url_key(url):
@@ -252,87 +296,64 @@ def _url_key(url):
 
 
 def build_catalog(cfg, args, quiet=False):
-    catalog = []
+    """Deplie sources.json: groupes -> listes, avec heritage du `base` et des
+    `defaults`. Aucune decouverte automatique: ce que declare le fichier est
+    exactement ce qui sera telecharge."""
+    defaults = cfg.get("defaults", {})
+    catalog, seen_ids, seen_urls = [], set(), set()
 
-    if not args.no_discover:
-        for reg in cfg.get("registries", []):
-            if not reg.get("enabled", True):
+    for grp in cfg.get("groups", []):
+        if not grp.get("enabled", True):
+            continue
+        base = grp.get("base", "")
+        for item in grp.get("lists", []):
+            if not item.get("enabled", defaults.get("enabled", True)):
                 continue
-            kind = reg.get("type")
-            try:
-                if kind in ("adguard-registry", "adguard-hostlists"):
-                    catalog.extend(discover_adguard(
-                        reg["url"], args.timeout, quiet,
-                        id_prefix=reg.get("id", "adguard")))
-                elif kind == "filterlists":
-                    catalog.extend(discover_filterlists(
-                        reg, args.timeout, args.jobs, quiet))
-                else:
-                    log("  ! type de registre inconnu, ignore: %s" % kind, quiet)
-            except Exception as e:  # noqa: BLE001
-                log("  ! decouverte %s echouee: %s" % (reg.get("id"), e), quiet)
+            url = item.get("url") or (base + item["file"] if item.get("file") else "")
+            if not url:
+                log("  ! %s: ni url ni file, ignoree" % item.get("id"), quiet)
+                continue
+            sid = item["id"]
+            if sid in seen_ids:
+                log("  ! identifiant en double, ignore: %s" % sid, quiet)
+                continue
+            ukey = _url_key(url)
+            if ukey in seen_urls:
+                log("  ! URL en double, ignoree: %s" % sid, quiet)
+                continue
+            seen_ids.add(sid)
+            seen_urls.add(ukey)
+            catalog.append({
+                "id": sid,
+                "name": item["name"],
+                "description": item.get("note", ""),
+                "url": url,
+                "mirror_url": "",
+                "source_kind": "officiel",
+                "homepage": item.get("homepage", grp.get("homepage", "")),
+                "group": grp.get("maintainer", grp["id"]),
+                "group_id": grp["id"],
+                "tags": item.get("tags", []),
+                "languages": item.get("languages", []),
+                "expires": int(item.get("expires", defaults.get("expires", 86400))),
+                "format": item.get("format", defaults.get("format", "adblock")),
+                "registry_version": "",
+            })
 
-    for extra in cfg.get("extra", []):
-        if not extra.get("enabled", True):
-            continue
-        catalog.append({
-            "id": extra["id"],
-            "registry_id": None,
-            "name": extra["name"],
-            "description": extra.get("comment", ""),
-            "url": extra["url"],
-            "homepage": extra.get("homepage", ""),
-            "group": extra.get("group", "Other"),
-            "tags": extra.get("tags", []),
-            "languages": [],
-            "deprecated": False,
-            "expires": int(extra.get("expires") or 86400),
-            "registry_version": "",
-            "format": extra.get("format", "adblock"),
-            "origin": "extra",
-        })
-
-    sel = cfg.get("selection", {})
-    excl_tags = set(sel.get("exclude_tags", []))
-    excl_groups = set(sel.get("exclude_groups", []))
-    excl_ids = set(str(x) for x in sel.get("exclude_ids", []))
-    incl_ids = set(str(x) for x in sel.get("include_ids", []))
-    only_reco = args.recommended or sel.get("only_recommended", False)
-    keep_deprecated = args.deprecated or sel.get("include_deprecated", False)
-
+    # Filtres de ligne de commande
     kept = []
-    seen_urls = set()
     for src in catalog:
-        if not src.get("url"):
-            continue
-        ukey = _url_key(src["url"])
-        if ukey in seen_urls:
-            continue
-        seen_urls.add(ukey)
-        if src["deprecated"] and not keep_deprecated:
-            continue
-        if excl_tags & set(src["tags"]):
-            continue
-        if src["group"] in excl_groups:
-            continue
-        if src["id"] in excl_ids or str(src.get("registry_id")) in excl_ids:
-            continue
-        if incl_ids and not (src["id"] in incl_ids or str(src.get("registry_id")) in incl_ids):
-            continue
-        if only_reco and "recommended" not in src["tags"] and src["origin"] != "extra":
-            continue
-        if args.group and src["group"].lower() not in [g.lower() for g in args.group]:
-            continue
-        if args.tag and not (set(args.tag) & set(src["tags"])):
-            continue
+        if args.group:
+            wanted = [w.lower() for w in args.group]
+            if src["group_id"].lower() not in wanted and src["group"].lower() not in wanted:
+                continue
         if args.only:
-            needles = [n.lower() for n in args.only]
             hay = ("%s %s" % (src["id"], src["name"])).lower()
-            if not any(n in hay for n in needles):
+            if not any(n.lower() in hay for n in args.only):
                 continue
         kept.append(src)
 
-    # Slug + resolution des collisions de noms de fichier.
+    # Slug de fichier, avec resolution des collisions.
     seen = {}
     for src in kept:
         slug = slugify(src["name"])
@@ -341,10 +362,7 @@ def build_catalog(cfg, args, quiet=False):
         seen[slug] = True
         src["slug"] = slug
         src["file"] = slug + ".txt"
-
-    kept.sort(key=lambda s: (s["group"], s["name"].lower()))
     return kept
-
 
 # --------------------------------------------------------------------------- #
 # Telechargement
@@ -372,7 +390,7 @@ def fetch_one(src, out_dir, state, args):
 
     etag = None if args.force else prev.get("etag")
     lastmod = None if args.force else prev.get("last_modified")
-    if not exists:
+    if not exists or prev.get("includes"):
         etag = lastmod = None
 
     try:
@@ -380,10 +398,23 @@ def fetch_one(src, out_dir, state, args):
             src["url"], timeout=args.timeout, etag=etag,
             last_modified=lastmod, retries=args.retries)
     except Exception as e:  # noqa: BLE001
-        entry.update(prev)
-        entry["status"] = "failed"
-        entry["error"] = str(e)
-        return entry
+        fallback = src.get("mirror_url")
+        if fallback:
+            try:
+                status, body, headers = http_get(
+                    fallback, timeout=args.timeout, retries=args.retries)
+                entry["source_kind"] = "miroir (repli)"
+                entry["fallback_reason"] = str(e)
+            except Exception as e2:  # noqa: BLE001
+                entry.update(prev)
+                entry["status"] = "failed"
+                entry["error"] = "%s ; repli: %s" % (e, e2)
+                return entry
+        else:
+            entry.update(prev)
+            entry["status"] = "failed"
+            entry["error"] = str(e)
+            return entry
 
     if status == 304:
         entry.update(prev)
@@ -393,6 +424,12 @@ def fetch_one(src, out_dir, state, args):
         return entry
 
     text = body.decode("utf-8", errors="replace")
+    included = preproc_dropped = 0
+    if "!#include" in text:
+        text, included = resolve_includes(text, src["url"], args.timeout)
+    text, preproc_dropped = apply_preprocessor(text)
+    if included or preproc_dropped:
+        body = text.encode("utf-8")
     if len(text.strip()) < 32:
         entry.update(prev)
         entry["status"] = "failed"
@@ -405,18 +442,22 @@ def fetch_one(src, out_dir, state, args):
         atomic_write_bytes(path, body)
 
     meta = parse_header(text)
+    n_rules, rules_hash = count_rules(text)
     entry.update({
         "etag": headers.get("ETag"),
         "last_modified": headers.get("Last-Modified"),
         "sha256": digest,
         "bytes": len(body),
         "lines": text.count("\n") + 1,
-        "rules": count_rules(text),
+        "rules": n_rules,
+        "rules_sha256": rules_hash,
         "title": meta.get("title", src["name"]),
         "version": meta.get("version", src.get("registry_version", "")),
         "list_updated": meta.get("timeupdated") or meta.get("last_modified", ""),
         "license": meta.get("license", ""),
         "fetched_at": now_iso(),
+        "includes": included,
+        "preproc_dropped": preproc_dropped,
         "status": "updated" if changed else "unchanged",
     })
     entry.pop("error", None)
@@ -431,14 +472,9 @@ def main():
     ap.add_argument("--only", nargs="+", metavar="MOTIF",
                     help="ne garder que les listes dont l'id/nom contient un de ces motifs")
     ap.add_argument("--group", nargs="+", metavar="GROUPE",
-                    help='filtre par groupe ("Ad blocking", Privacy, Annoyances, Security, ...)')
-    ap.add_argument("--tag", nargs="+", metavar="TAG",
-                    help="filtre par tag AdGuard (recommended, purpose:ads, lang:fr, ...)")
-    ap.add_argument("--recommended", action="store_true",
-                    help="uniquement les listes taguees 'recommended'")
-    ap.add_argument("--deprecated", action="store_true", help="inclure les listes depreciees")
-    ap.add_argument("--no-discover", action="store_true",
-                    help="ne pas interroger le registre AdGuard (sources.json 'extra' seulement)")
+                    help="filtre par groupe: ublock, adguard, adguard-dns, adguard-lang, "
+                         "easylist, easylist-lang, fanboy, dandelion, hagezi, dns, "
+                         "security, regional, other")
     ap.add_argument("--force", action="store_true", help="ignorer cache HTTP et fraicheur")
     ap.add_argument("--max-age", type=int, default=86400,
                     help="age max en secondes avant re-verification (defaut: 86400)")
@@ -497,6 +533,29 @@ def main():
                 entry.get("error", "%s regles" % entry.get("rules", "?"))), args.quiet)
 
     ordered = {s["id"]: results[s["id"]] for s in catalog}
+
+    # Un slug qui change (renommage amont, desambiguisation) laisse un .txt
+    # orphelin que le convertisseur reprendrait comme une liste fantome.
+    if not (args.only or args.group or args.dry_run):
+        declared = {e["file"] for e in ordered.values() if e.get("file")}
+        for name in os.listdir(args.out):
+            if name.endswith(".txt") and name not in declared:
+                os.remove(os.path.join(args.out, name))
+                log("  - fichier orphelin supprime: %s" % name, args.quiet)
+
+    # Deux sources d'URL differentes peuvent livrer un contenu identique
+    # (ex. uBO annoyances.txt n'inclut que annoyances-others.txt). On garde la
+    # premiere et on marque les autres, pour ne pas convertir deux fois.
+    by_hash = {}
+    for sid, e in ordered.items():
+        h = e.get("rules_sha256")
+        if not h or e.get("status") == "failed":
+            continue
+        if h in by_hash:
+            e["duplicate_of"] = by_hash[h]
+        else:
+            by_hash[h] = sid
+            e.pop("duplicate_of", None)
     counts = {}
     for e in ordered.values():
         counts[e["status"]] = counts.get(e["status"], 0) + 1

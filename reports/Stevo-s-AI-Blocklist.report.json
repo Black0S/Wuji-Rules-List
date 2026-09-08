@@ -1,34 +1,38 @@
 {
+  "id": "stevo-ai",
   "source_file": "Stevo-s-AI-Blocklist.txt",
   "source_name": "Stevo's AI Blocklist",
+  "source_sha256": "61cd2968bc764336a048cd579ab6853df55d9d075afefd8d226bbe1c50b0fc7e",
+  "source_group": "Stevo's AI Blocklist",
+  "source_homepage": "https://github.com/Stevoisiak/Stevos-AI-Blocklist",
+  "source_license": "",
   "source_title": "Stevo's AI Blocklist",
-  "source_version": "2.0.1.77",
-  "source_url": "https://filters.adtidy.org/extension/chromium/filters/260.txt",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/Stevoisiak/Stevos-AI-Blocklist/main/GenAI-Blocklist.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:56:51+00:00",
+  "converted_at": "2026-09-08T13:23:28+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 5088,
-  "rules_in": 1642,
-  "rules_out": 576,
-  "coverage_pct": 90.13,
+  "lines_total": 5850,
+  "rules_in": 1657,
+  "rules_out": 577,
+  "coverage_pct": 89.5,
   "breakdown": {
-    "block": 83,
+    "block": 84,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 492,
-    "css_selectors": 1397,
+    "css_selectors": 1399,
     "ignore_previous_rules": 0
   },
-  "skipped_total": 160,
+  "skipped_total": 170,
   "skipped_reasons": {
-    "selecteur CSS etendu (#?#)": 71,
-    "JavaScript / scriptlet (#%#)": 51,
-    "injection de style / scriptlet (#$#)": 20,
-    "injection de style etendue (#$?#)": 13,
+    "pseudo-classe CSS etendue": 102,
+    "scriptlet ou filtrage HTML": 39,
+    "JavaScript / scriptlet (#%#)": 23,
+    "selecteur CSS vide ou trop long": 3,
     "injection de style (non supportee)": 2,
-    "exception d'injection de style etendue": 2,
-    "selecteur CSS vide ou trop long": 1
+    "modificateur non supporte: $uritransform": 1
   },
   "notes": {
     "doublon fusionne": 2
@@ -36,17 +40,20 @@
   "outputs": [
     {
       "file": "Webkit-Stevo-s-AI-Blocklist.json",
-      "rules": 576,
-      "bytes": 167437
+      "rules": 577,
+      "bytes": 167804
     }
   ],
+  "rules_emitted": 577,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-Stevo-s-AI-Blocklist.json",
-    "total": 160,
+    "file": "extended/Extended-Stevo-s-AI-Blocklist.json",
+    "total": 169,
     "counts": {
-      "scriptlets": 51,
-      "procedural": 74,
-      "styles": 35,
+      "scriptlets": 62,
+      "procedural": 107,
+      "styles": 0,
       "html": 0,
       "raw_js": 0
     }

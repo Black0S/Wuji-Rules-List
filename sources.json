@@ -1,210 +1,675 @@
 {
-  "$comment": "Catalogue des sources. `registries` = decouverte automatique (AdGuard extension, AdGuard hostlists DNS, FilterLists.com). `extra` = ajouts manuels. `selection` = filtres globaux. Voir README.md.",
-  "registries": [
+  "$comment": "Catalogue explicite: une entree par liste, URL complete du depot de son propre mainteneur. Aucun miroir, aucun CDN tiers, aucune decouverte automatique, aucune URL de base a reconstituer. Pour ajouter une liste: choisir le groupe et ajouter {id, name, url}. `enabled: false` desactive sans supprimer. `format` vaut adblock (defaut) ou hosts.",
+  "defaults": {
+    "format": "adblock",
+    "expires": 86400,
+    "enabled": true
+  },
+  "groups": [
+    {
+      "id": "ublock",
+      "maintainer": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "lists": [
+        {
+          "id": "ublock-origin-annoyances",
+          "name": "uBlock Origin - Annoyances",
+          "url": "https://ublockorigin.github.io/uAssets/filters/annoyances.txt"
+        },
+        {
+          "id": "ublock-origin-badware-risks",
+          "name": "uBlock Origin - Badware risks",
+          "url": "https://ublockorigin.github.io/uAssets/filters/badware.txt",
+          "covered_by": [
+            {
+              "id": "hagezi-normal",
+              "name": "HaGeZi's Normal Blocklist",
+              "pct": 68
+            }
+          ]
+        },
+        {
+          "id": "ublock-origin-block-outsider-intrusion-into-lan",
+          "name": "uBlock Origin - Block Outsider Intrusion into LAN",
+          "url": "https://ublockorigin.github.io/uAssets/filters/lan-block.txt"
+        },
+        {
+          "id": "ublock-origin-cookie-notices",
+          "name": "uBlock Origin - Cookie Notices",
+          "url": "https://ublockorigin.github.io/uAssets/filters/annoyances-cookies.txt"
+        },
+        {
+          "id": "ublock-origin",
+          "name": "uBlock Origin - Filters",
+          "url": "https://ublockorigin.github.io/uAssets/filters/filters.txt"
+        },
+        {
+          "id": "ublock-origin-privacy",
+          "name": "uBlock Origin - Privacy",
+          "url": "https://ublockorigin.github.io/uAssets/filters/privacy.txt"
+        },
+        {
+          "id": "ublock-origin-quick-fixes",
+          "name": "uBlock Origin - Quick Fixes",
+          "url": "https://ublockorigin.github.io/uAssets/filters/quick-fixes.txt"
+        },
+        {
+          "id": "ublock-origin-unbreak",
+          "name": "uBlock Origin - Unbreak",
+          "url": "https://ublockorigin.github.io/uAssets/filters/unbreak.txt"
+        }
+      ]
+    },
     {
       "id": "adguard",
-      "type": "adguard-registry",
-      "url": "https://filters.adtidy.org/extension/chromium/filters.json",
-      "enabled": true,
-      "comment": "Registre extension AdGuard: 88 listes (AdGuard + EasyList/EasyPrivacy/Fanboy/uBO/Peter Lowe/...)"
+      "maintainer": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "lists": [
+        {
+          "id": "adguard-base",
+          "name": "AdGuard Base filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/2.txt",
+          "covered_by": [
+            {
+              "id": "adguard-dns",
+              "name": "AdGuard DNS filter",
+              "pct": 78
+            },
+            {
+              "id": "easylist",
+              "name": "EasyList",
+              "pct": 75
+            },
+            {
+              "id": "hagezi-normal",
+              "name": "HaGeZi's Normal Blocklist",
+              "pct": 75
+            }
+          ]
+        },
+        {
+          "id": "adguard-cookie-notices",
+          "name": "AdGuard Cookie Notices filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/18.txt"
+        },
+        {
+          "id": "adguard-experimental",
+          "name": "AdGuard Experimental filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/5.txt",
+          "covered_by": [
+            {
+              "id": "adguard-turkish",
+              "name": "AdGuard Turkish filter",
+              "pct": 50
+            }
+          ]
+        },
+        {
+          "id": "adguard-mail-tracking-protection",
+          "name": "AdGuard Mail Tracking Protection filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/25.txt"
+        },
+        {
+          "id": "adguard-mobile-ads",
+          "name": "AdGuard Mobile Ads filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/11.txt",
+          "covered_by": [
+            {
+              "id": "adguard-dns",
+              "name": "AdGuard DNS filter",
+              "pct": 68
+            },
+            {
+              "id": "hagezi-normal",
+              "name": "HaGeZi's Normal Blocklist",
+              "pct": 51
+            }
+          ]
+        },
+        {
+          "id": "adguard-mobile-app-banners",
+          "name": "AdGuard Mobile App Banners filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/20.txt"
+        },
+        {
+          "id": "adguard-other-annoyances",
+          "name": "AdGuard Other Annoyances filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/21.txt"
+        },
+        {
+          "id": "adguard-popups",
+          "name": "AdGuard Popups filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/19.txt"
+        },
+        {
+          "id": "adguard-social-media",
+          "name": "AdGuard Social Media filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/4.txt"
+        },
+        {
+          "id": "adguard-tracking-protection",
+          "name": "AdGuard Tracking Protection filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/3.txt"
+        },
+        {
+          "id": "adguard-widgets",
+          "name": "AdGuard Widgets filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/22.txt"
+        },
+        {
+          "id": "filter-unblocking-search-ads-and-self-promotion",
+          "name": "Filter unblocking search ads and self-promotion",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/10.txt"
+        }
+      ]
     },
     {
       "id": "adguard-dns",
-      "type": "adguard-hostlists",
-      "url": "https://adguardteam.github.io/HostlistsRegistry/assets/filters.json",
-      "enabled": true,
-      "comment": "Registre Hostlists AdGuard: 64 blocklists DNS (OISD, HaGeZi, 1Hosts, StevenBlack, anti-AD...). Purement domaines: conversion WebKit ~100%."
+      "maintainer": "AdGuard DNS",
+      "homepage": "https://github.com/AdguardTeam/AdGuardSDNSFilter",
+      "lists": [
+        {
+          "id": "adguard-dns",
+          "name": "AdGuard DNS filter",
+          "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+          "covered_by": [
+            {
+              "id": "adguard-tracking-protection",
+              "name": "AdGuard Tracking Protection filter",
+              "pct": 60
+            }
+          ]
+        },
+        {
+          "id": "adguard-dns-popup-hosts",
+          "name": "AdGuard DNS Popup Hosts filter",
+          "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/adguard_popup_filter.txt",
+          "covered_by": [
+            {
+              "id": "adguard-dns",
+              "name": "AdGuard DNS filter",
+              "pct": 86
+            },
+            {
+              "id": "adguard-base",
+              "name": "AdGuard Base filter",
+              "pct": 85
+            },
+            {
+              "id": "hagezi-normal",
+              "name": "HaGeZi's Normal Blocklist",
+              "pct": 83
+            }
+          ]
+        }
+      ]
     },
     {
-      "id": "filterlists",
-      "type": "filterlists",
-      "url": "https://api.filterlists.com/lists",
-      "enabled": false,
-      "syntaxes": [
-        1,
-        2,
-        3,
-        4,
-        6,
-        14
-      ],
-      "max_lists": 0,
-      "comment": "Annuaire independant FilterLists.com: ~2300 listes, longue traine de qualite inegale. Un appel de detail par liste (~3 min). Mettre enabled=true pour l'activer, max_lists>0 pour plafonner."
+      "id": "adguard-lang",
+      "maintainer": "AdGuard (langues)",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "lists": [
+        {
+          "id": "adguard-chinese",
+          "name": "AdGuard Chinese filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/224.txt",
+          "covered_by": [
+            {
+              "id": "easylist-china",
+              "name": "EasyList China",
+              "pct": 94
+            },
+            {
+              "id": "adguard-dns",
+              "name": "AdGuard DNS filter",
+              "pct": 51
+            }
+          ]
+        },
+        {
+          "id": "adguard-dutch",
+          "name": "AdGuard Dutch filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/8.txt",
+          "covered_by": [
+            {
+              "id": "easylist-dutch",
+              "name": "EasyList Dutch",
+              "pct": 88
+            }
+          ]
+        },
+        {
+          "id": "adguard-french",
+          "name": "AdGuard French filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/16.txt",
+          "covered_by": [
+            {
+              "id": "liste-fr",
+              "name": "Liste FR",
+              "pct": 99
+            }
+          ]
+        },
+        {
+          "id": "adguard-german",
+          "name": "AdGuard German filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/6.txt",
+          "covered_by": [
+            {
+              "id": "easylist-germany",
+              "name": "EasyList Germany",
+              "pct": 84
+            }
+          ]
+        },
+        {
+          "id": "adguard-japanese",
+          "name": "AdGuard Japanese filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/7.txt"
+        },
+        {
+          "id": "adguard-russian",
+          "name": "AdGuard Russian filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/1.txt",
+          "covered_by": [
+            {
+              "id": "adguard-ukrainian",
+              "name": "AdGuard Ukrainian filter",
+              "pct": 53
+            }
+          ]
+        },
+        {
+          "id": "adguard-spanish-portuguese",
+          "name": "AdGuard Spanish/Portuguese filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/9.txt"
+        },
+        {
+          "id": "adguard-turkish",
+          "name": "AdGuard Turkish filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/13.txt"
+        },
+        {
+          "id": "adguard-ukrainian",
+          "name": "AdGuard Ukrainian filter",
+          "url": "https://filters.adtidy.org/extension/chromium/filters/23.txt",
+          "covered_by": [
+            {
+              "id": "adguard-russian",
+              "name": "AdGuard Russian filter",
+              "pct": 91
+            },
+            {
+              "id": "adguard-dns",
+              "name": "AdGuard DNS filter",
+              "pct": 57
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "easylist",
+      "maintainer": "EasyList",
+      "homepage": "https://github.com/easylist/easylist",
+      "lists": [
+        {
+          "id": "adblock-warning-removal",
+          "name": "Adblock Warning Removal List",
+          "url": "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
+          "covered_by": [
+            {
+              "id": "ru-adlist-for-ubo",
+              "name": "RU AdList for uBO",
+              "pct": 100
+            },
+            {
+              "id": "hagezi-normal",
+              "name": "HaGeZi's Normal Blocklist",
+              "pct": 84
+            },
+            {
+              "id": "adguard-dns",
+              "name": "AdGuard DNS filter",
+              "pct": 83
+            }
+          ]
+        },
+        {
+          "id": "easylist",
+          "name": "EasyList",
+          "url": "https://easylist.to/easylist/easylist.txt",
+          "covered_by": [
+            {
+              "id": "adguard-base",
+              "name": "AdGuard Base filter",
+              "pct": 100
+            },
+            {
+              "id": "adguard-dns",
+              "name": "AdGuard DNS filter",
+              "pct": 91
+            },
+            {
+              "id": "hagezi-normal",
+              "name": "HaGeZi's Normal Blocklist",
+              "pct": 90
+            }
+          ]
+        },
+        {
+          "id": "easylist-cookie",
+          "name": "EasyList Cookie List",
+          "url": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+          "covered_by": [
+            {
+              "id": "fanboy-annoyances",
+              "name": "Fanboy's Annoyances",
+              "pct": 100
+            }
+          ]
+        },
+        {
+          "id": "easyprivacy",
+          "name": "EasyPrivacy",
+          "url": "https://easylist.to/easylist/easyprivacy.txt",
+          "covered_by": [
+            {
+              "id": "adguard-dns",
+              "name": "AdGuard DNS filter",
+              "pct": 57
+            },
+            {
+              "id": "adguard-tracking-protection",
+              "name": "AdGuard Tracking Protection filter",
+              "pct": 55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "easylist-lang",
+      "maintainer": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "lists": [
+        {
+          "id": "bulgarian",
+          "name": "Bulgarian list",
+          "url": "https://stanev.org/abp/adblock_bg.txt"
+        },
+        {
+          "id": "easylist-china",
+          "name": "EasyList China",
+          "url": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
+          "covered_by": [
+            {
+              "id": "adguard-chinese",
+              "name": "AdGuard Chinese filter",
+              "pct": 100
+            },
+            {
+              "id": "adguard-dns",
+              "name": "AdGuard DNS filter",
+              "pct": 53
+            },
+            {
+              "id": "hagezi-normal",
+              "name": "HaGeZi's Normal Blocklist",
+              "pct": 50
+            }
+          ]
+        },
+        {
+          "id": "easylist-czech-and-slovak",
+          "name": "EasyList Czech and Slovak",
+          "url": "https://easylist-downloads.adblockplus.org/easylistczechslovak.txt"
+        },
+        {
+          "id": "easylist-dutch",
+          "name": "EasyList Dutch",
+          "url": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
+          "covered_by": [
+            {
+              "id": "adguard-dutch",
+              "name": "AdGuard Dutch filter",
+              "pct": 100
+            }
+          ]
+        },
+        {
+          "id": "easylist-germany",
+          "name": "EasyList Germany",
+          "url": "https://easylist-downloads.adblockplus.org/easylistgermany.txt",
+          "covered_by": [
+            {
+              "id": "adguard-german",
+              "name": "AdGuard German filter",
+              "pct": 100
+            }
+          ]
+        },
+        {
+          "id": "easylist-hebrew",
+          "name": "EasyList Hebrew",
+          "url": "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt",
+          "covered_by": [
+            {
+              "id": "adguard-dns",
+              "name": "AdGuard DNS filter",
+              "pct": 51
+            }
+          ]
+        },
+        {
+          "id": "easylist-italy",
+          "name": "EasyList Italy",
+          "url": "https://easylist-downloads.adblockplus.org/easylistitaly.txt"
+        },
+        {
+          "id": "easylist-lithuania",
+          "name": "EasyList Lithuania",
+          "url": "https://easylist-downloads.adblockplus.org/easylistlithuania.txt"
+        },
+        {
+          "id": "easylist-polish",
+          "name": "EasyList Polish",
+          "url": "https://easylist-downloads.adblockplus.org/easylistpolish.txt"
+        },
+        {
+          "id": "easylist-portuguese",
+          "name": "EasyList Portuguese",
+          "url": "https://easylist-downloads.adblockplus.org/easylistportuguese.txt"
+        },
+        {
+          "id": "easylist-spanish",
+          "name": "EasyList Spanish",
+          "url": "https://easylist-downloads.adblockplus.org/easylistspanish.txt"
+        },
+        {
+          "id": "indianlist",
+          "name": "IndianList",
+          "url": "https://easylist-downloads.adblockplus.org/indianlist.txt"
+        },
+        {
+          "id": "latvian",
+          "name": "Latvian List",
+          "url": "https://raw.githubusercontent.com/Latvian-List/adblock-latvian/master/lists/latvian-list.txt"
+        },
+        {
+          "id": "liste-ar",
+          "name": "Liste AR",
+          "url": "https://easylist-downloads.adblockplus.org/Liste_AR.txt"
+        },
+        {
+          "id": "liste-fr",
+          "name": "Liste FR",
+          "url": "https://easylist-downloads.adblockplus.org/liste_fr.txt",
+          "covered_by": [
+            {
+              "id": "adguard-french",
+              "name": "AdGuard French filter",
+              "pct": 100
+            }
+          ]
+        },
+        {
+          "id": "rolist",
+          "name": "ROList",
+          "url": "https://easylist-downloads.adblockplus.org/rolist.txt"
+        },
+        {
+          "id": "ru-adlist-for-ubo",
+          "name": "RU AdList for uBO",
+          "url": "https://raw.githubusercontent.com/easylist/ruadlist/master/RuAdList-uBO.txt"
+        }
+      ]
+    },
+    {
+      "id": "fanboy",
+      "maintainer": "Fanboy",
+      "homepage": "https://www.fanboy.co.nz",
+      "lists": [
+        {
+          "id": "fanboy-annoyances",
+          "name": "Fanboy's Annoyances",
+          "url": "https://easylist.to/easylist/fanboy-annoyance.txt"
+        },
+        {
+          "id": "fanboy-anti-facebook",
+          "name": "Fanboy's Anti-Facebook List",
+          "url": "https://secure.fanboy.co.nz/fanboy-antifacebook.txt"
+        },
+        {
+          "id": "fanboy-anti-thirdparty-fonts",
+          "name": "Fanboy's Anti-thirdparty Fonts",
+          "url": "https://fanboy.co.nz/fanboy-antifonts.txt"
+        },
+        {
+          "id": "fanboy-social-blocking",
+          "name": "Fanboy's Social Blocking List",
+          "url": "https://easylist.to/easylist/fanboy-social.txt",
+          "covered_by": [
+            {
+              "id": "fanboy-annoyances",
+              "name": "Fanboy's Annoyances",
+              "pct": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dandelion",
+      "maintainer": "Dandelion Sprout",
+      "homepage": "https://github.com/DandelionSprout/adfilt",
+      "lists": [
+        {
+          "id": "dandelion-sprout-anti-push-notifications",
+          "name": "Dandelion Sprout's Anti Push Notifications",
+          "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt",
+          "covered_by": [
+            {
+              "id": "adguard-popups",
+              "name": "AdGuard Popups filter",
+              "pct": 65
+            }
+          ]
+        },
+        {
+          "id": "dandelion-sprout-anti-malware",
+          "name": "Dandelion Sprout's Anti-Malware List",
+          "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareAdGuardHome.txt"
+        }
+      ]
+    },
+    {
+      "id": "hagezi",
+      "maintainer": "HaGeZi",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "lists": [
+        {
+          "id": "hagezi-allowlist-referral",
+          "name": "HaGeZi's Allowlist Referral",
+          "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral.txt"
+        },
+        {
+          "id": "hagezi-anti-piracy",
+          "name": "HaGeZi's Anti-Piracy Blocklist",
+          "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/anti.piracy.txt"
+        },
+        {
+          "id": "hagezi-badware-hoster",
+          "name": "HaGeZi's Badware Hoster Blocklist",
+          "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt"
+        },
+        {
+          "id": "hagezi-dns-rebind-protection",
+          "name": "HaGeZi's DNS Rebind Protection",
+          "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adguard/dns-rebind-protection.txt"
+        },
+        {
+          "id": "hagezi-dyndns",
+          "name": "HaGeZi's DynDNS Blocklist",
+          "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt"
+        },
+        {
+          "id": "hagezi-encrypted-dns-vpn-tor-proxy-bypass",
+          "name": "HaGeZi's Encrypted DNS/VPN/TOR/Proxy Bypass",
+          "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/doh-vpn-proxy-bypass.txt"
+        },
+        {
+          "id": "hagezi-gambling",
+          "name": "HaGeZi's Gambling Blocklist",
+          "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/gambling.txt"
+        },
+        {
+          "id": "hagezi-normal",
+          "name": "HaGeZi's Normal Blocklist",
+          "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt"
+        },
+        {
+          "id": "hagezi-the-world-most-abused-tlds",
+          "name": "HaGeZi's The World's Most Abused TLDs",
+          "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt"
+        },
+        {
+          "id": "hagezi-url-shortener",
+          "name": "HaGeZi's URL Shortener Blocklist",
+          "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/urlshortener.txt"
+        }
+      ]
+    },
+    {
+      "id": "phishing-army",
+      "maintainer": "Phishing Army",
+      "homepage": "https://phishing.army/",
+      "lists": [
+        {
+          "id": "phishing-army",
+          "name": "Phishing Army",
+          "url": "https://phishing.army/download/phishing_army_blocklist_extended.txt"
+        }
+      ]
+    },
+    {
+      "id": "stevo-ai",
+      "maintainer": "Stevo's AI Blocklist",
+      "homepage": "https://github.com/Stevoisiak/Stevos-AI-Blocklist",
+      "lists": [
+        {
+          "id": "stevo-ai",
+          "name": "Stevo's AI Blocklist",
+          "url": "https://raw.githubusercontent.com/Stevoisiak/Stevos-AI-Blocklist/main/GenAI-Blocklist.txt"
+        },
+        {
+          "id": "stevo-ai-extra",
+          "name": "Stevo's AI Blocklist (Extra)",
+          "url": "https://raw.githubusercontent.com/Stevoisiak/Stevos-AI-Blocklist/main/GenAI-Blocklist-Extra.txt",
+          "note": "Ccomplimentary list to the primary AI Blocklist."
+        }
+      ]
     }
   ],
-  "selection": {
-    "include_deprecated": false,
-    "exclude_tags": [
-      "obsolete"
-    ],
-    "exclude_groups": [],
-    "exclude_ids": [
-      "adguard-dns-49",
-      "adguard-dns-51",
-      "adguard-dns-48",
-      "adguard-dns-27",
-      "adguard-dns-70",
-      "adguard-dns-44"
-    ],
-    "include_ids": [],
-    "only_recommended": false,
-    "_comment_exclude_ids": "Mega-listes DNS (HaGeZi Ultimate/Pro++/Pro, OISD Big, 1Hosts Xtra, Threat Intelligence Feeds): plusieurs centaines de milliers de domaines chacune. Retirer un id d'ici pour l'inclure."
-  },
-  "extra": [
-    {
-      "id": "ubo-filters",
-      "name": "uBlock Origin - Filters",
-      "url": "https://ublockorigin.github.io/uAssets/filters/filters.txt",
-      "group": "Ad blocking",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "ubo-privacy",
-      "name": "uBlock Origin - Privacy",
-      "url": "https://ublockorigin.github.io/uAssets/filters/privacy.txt",
-      "group": "Privacy",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "ubo-quick-fixes",
-      "name": "uBlock Origin - Quick Fixes",
-      "url": "https://ublockorigin.github.io/uAssets/filters/quick-fixes.txt",
-      "group": "Other",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "ubo-annoyances-others",
-      "name": "uBlock Origin - Annoyances Others",
-      "url": "https://ublockorigin.github.io/uAssets/filters/annoyances-others.txt",
-      "group": "Annoyances",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "adguard-mobile-safari",
-      "name": "AdGuard Safari Mobile",
-      "url": "https://filters.adtidy.org/ios/filters/2_optimized.txt",
-      "group": "Ad blocking",
-      "format": "adblock",
-      "enabled": false,
-      "comment": "Variante deja optimisee par AdGuard pour iOS. Desactivee: doublon de AdGuard Base."
-    },
-    {
-      "id": "ubo-unbreak",
-      "name": "uBlock Origin - Unbreak",
-      "url": "https://ublockorigin.github.io/uAssets/filters/unbreak.txt",
-      "group": "Other",
-      "format": "adblock",
-      "enabled": true,
-      "comment": "Corrige les sur-blocages des listes uBO: a garder avec ublock-filters."
-    },
-    {
-      "id": "ubo-annoyances",
-      "name": "uBlock Origin - Annoyances",
-      "url": "https://ublockorigin.github.io/uAssets/filters/annoyances.txt",
-      "group": "Annoyances",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "ubo-cookies",
-      "name": "uBlock Origin - Cookie Notices",
-      "url": "https://ublockorigin.github.io/uAssets/filters/annoyances-cookies.txt",
-      "group": "Annoyances",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "ubo-badware",
-      "name": "uBlock Origin - Badware risks",
-      "url": "https://ublockorigin.github.io/uAssets/filters/badware.txt",
-      "group": "Security",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "ubo-lan-block",
-      "name": "uBlock Origin - Block Outsider Intrusion into LAN",
-      "url": "https://ublockorigin.github.io/uAssets/filters/lan-block.txt",
-      "group": "Privacy",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "ubo-experimental",
-      "name": "uBlock Origin - Experimental",
-      "url": "https://ublockorigin.github.io/uAssets/filters/experimental.txt",
-      "group": "Other",
-      "format": "adblock",
-      "enabled": false,
-      "comment": "Filtres experimentaux, casse possible. Desactive par defaut."
-    },
-    {
-      "id": "easylist-annoyances",
-      "name": "EasyList - Annoyances",
-      "url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-annoyances.txt",
-      "group": "Annoyances",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "easylist-chat",
-      "name": "EasyList - Chat Widgets",
-      "url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-chat.txt",
-      "group": "Annoyances",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "easylist-newsletters",
-      "name": "EasyList - Newsletter Notices",
-      "url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-newsletters.txt",
-      "group": "Annoyances",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "easylist-notifications",
-      "name": "EasyList - Notifications",
-      "url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-notifications.txt",
-      "group": "Annoyances",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "easylist-ai",
-      "name": "EasyList - Anti AI Suggestions",
-      "url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-ai.txt",
-      "group": "Annoyances",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "ruadlist-ubo",
-      "name": "RU AdList for uBO",
-      "url": "https://raw.githubusercontent.com/easylist/ruadlist/master/RuAdList-uBO.txt",
-      "group": "Language-specific",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "albania-list",
-      "name": "Adblock List for Albania and Kosovo",
-      "url": "https://raw.githubusercontent.com/AnXh3L0/blocklist/master/albanian-easylist-addition/Albania.txt",
-      "group": "Language-specific",
-      "format": "adblock",
-      "enabled": true
-    },
-    {
-      "id": "slovenian-list",
-      "name": "Slovenian List",
-      "url": "https://raw.githubusercontent.com/betterwebleon/slovenian-list/master/filters.txt",
-      "group": "Language-specific",
-      "format": "adblock",
-      "enabled": true
-    }
-  ]
+  "$comment_covered_by": "`covered_by` est calcule par tools/redundancy.py: part des regles de blocage de cette liste deja presentes dans une autre du catalogue. 100 signifie que la liste n'apporte rien de plus. Un content blocker Safari ne compile que 150 000 regles: activer deux listes qui se recouvrent gaspille ce budget. Champ informatif, sans effet sur la conversion."
 }

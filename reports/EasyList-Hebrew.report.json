@@ -1,36 +1,41 @@
 {
+  "id": "easylist-hebrew",
   "source_file": "EasyList-Hebrew.txt",
   "source_name": "EasyList Hebrew",
+  "source_sha256": "51cd69f4521d94c2daa4b02f0a2787343b42047548e3f4019d20620ab7e25f17",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
   "source_title": "EasyList Hebrew",
-  "source_version": "2.0.6.46",
-  "source_url": "https://filters.adtidy.org/extension/chromium/filters/108.txt",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:53:25+00:00",
+  "converted_at": "2026-09-08T13:21:04+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 1771,
-  "rules_in": 1473,
-  "rules_out": 717,
-  "coverage_pct": 90.97,
+  "lines_total": 1777,
+  "rules_in": 1483,
+  "rules_out": 718,
+  "coverage_pct": 90.42,
   "breakdown": {
-    "block": 291,
+    "block": 292,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 260,
     "css_selectors": 884,
     "ignore_previous_rules": 165
   },
-  "skipped_total": 101,
+  "skipped_total": 108,
   "skipped_reasons": {
-    "JavaScript / scriptlet (#%#)": 41,
+    "scriptlet ou filtrage HTML": 46,
     "modificateur non supporte: $redirect": 33,
-    "regex hors du sous-ensemble WebKit": 10,
-    "selecteur CSS etendu (#?#)": 8,
+    "regex hors du sous-ensemble WebKit": 11,
+    "pseudo-classe CSS etendue": 10,
     "directive $badfilter (retractation appliquee)": 3,
-    "injection de style / scriptlet (#$#)": 3,
+    "selecteur CSS etendu (#?#)": 2,
     "modificateur non supporte: $csp": 1,
-    "modificateur non supporte: $redirect-rule": 1,
-    "injection de style etendue (#$?#)": 1
+    "modificateur non supporte: $webrtc": 1,
+    "modificateur non supporte: $redirect-rule": 1
   },
   "notes": {
     "modificateur sans effet sous WebKit: $important": 16,
@@ -40,18 +45,21 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-Hebrew.json",
-      "rules": 717,
-      "bytes": 141149
+      "rules": 718,
+      "bytes": 141300
     }
   ],
+  "rules_emitted": 718,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-EasyList-Hebrew.json",
-    "total": 53,
+    "file": "extended/Extended-EasyList-Hebrew.json",
+    "total": 58,
     "counts": {
       "scriptlets": 41,
-      "procedural": 8,
-      "styles": 4,
-      "html": 0,
+      "procedural": 12,
+      "styles": 0,
+      "html": 5,
       "raw_js": 0
     }
   }

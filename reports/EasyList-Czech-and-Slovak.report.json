@@ -1,36 +1,34 @@
 {
+  "id": "easylist-czech-and-slovak",
   "source_file": "EasyList-Czech-and-Slovak.txt",
   "source_name": "EasyList Czech and Slovak",
+  "source_sha256": "abe5251651ff93dcbbd3b4f157c4bb4e495c2132fe8f92037d4aabd4f739db2e",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "CC-BY-SA v4.0",
   "source_title": "EasyList Czech and Slovak",
-  "source_version": "2.0.3.34",
-  "source_url": "https://filters.adtidy.org/extension/chromium/filters/105.txt",
+  "source_version": "202609072332",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistczechslovak.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:53:25+00:00",
+  "converted_at": "2026-09-08T13:21:03+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 778,
-  "rules_in": 715,
-  "rules_out": 419,
-  "coverage_pct": 83.5,
+  "lines_total": 677,
+  "rules_in": 616,
+  "rules_out": 409,
+  "coverage_pct": 95.13,
   "breakdown": {
-    "block": 210,
-    "block_document": 1,
+    "block": 207,
+    "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 175,
-    "css_selectors": 354,
-    "ignore_previous_rules": 32
+    "css_display_none": 174,
+    "css_selectors": 352,
+    "ignore_previous_rules": 27
   },
-  "skipped_total": 107,
+  "skipped_total": 19,
   "skipped_reasons": {
-    "JavaScript / scriptlet (#%#)": 48,
-    "selecteur CSS etendu (#?#)": 27,
-    "injection de style / scriptlet (#$#)": 20,
-    "modificateur non supporte: $redirect": 5,
-    "modificateur non supporte: $csp": 2,
-    "modificateur non supporte: $redirect-rule": 2,
-    "directive $badfilter (retractation appliquee)": 1,
-    "injection de style etendue (#$?#)": 1,
-    "selecteur CSS etendu (#@?#)": 1
+    "selecteur CSS etendu (#?#)": 17,
+    "injection de style / scriptlet (#$#)": 2
   },
   "notes": {
     "modificateur sans effet sous WebKit: $important": 1
@@ -38,19 +36,22 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-Czech-and-Slovak.json",
-      "rules": 419,
-      "bytes": 58355
+      "rules": 409,
+      "bytes": 56885
     }
   ],
+  "rules_emitted": 409,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-EasyList-Czech-and-Slovak.json",
-    "total": 97,
+    "file": "extended/Extended-EasyList-Czech-and-Slovak.json",
+    "total": 17,
     "counts": {
-      "scriptlets": 48,
-      "procedural": 28,
-      "styles": 21,
+      "scriptlets": 0,
+      "procedural": 17,
+      "styles": 0,
       "html": 0,
-      "raw_js": 0
+      "raw_js": 2
     }
   }
 }

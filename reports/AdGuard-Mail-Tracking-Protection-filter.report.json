@@ -1,11 +1,16 @@
 {
+  "id": "adguard-mail-tracking-protection",
   "source_file": "AdGuard-Mail-Tracking-Protection-filter.txt",
   "source_name": "AdGuard Mail Tracking Protection filter",
+  "source_sha256": "cad103c4276a82a66b737e0a41301b94e34d4f68bf443d43eeeb66b204c9528b",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Mail Tracking Protection filter",
   "source_version": "2.0.0.9",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/25.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:52:00+00:00",
+  "converted_at": "2026-09-08T13:20:17+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 849,
@@ -30,6 +35,9 @@
       "bytes": 56053
     }
   ],
+  "rules_emitted": 506,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
     "file": null,
     "total": 0,

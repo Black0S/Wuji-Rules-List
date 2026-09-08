@@ -1,11 +1,16 @@
 {
+  "id": "adguard-ukrainian",
   "source_file": "AdGuard-Ukrainian-filter.txt",
   "source_name": "AdGuard Ukrainian filter",
+  "source_sha256": "b14dd8fc4b696075780d8c615fe99bed6c4bc4ff13a3ef3b0bf94aab4881a610",
+  "source_group": "AdGuard (langues)",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Ukrainian filter",
   "source_version": "2.0.9.23",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/23.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:52:39+00:00",
+  "converted_at": "2026-09-08T13:20:58+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 6017,
@@ -24,17 +29,17 @@
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 119,
     "injection de style / scriptlet (#$#)": 67,
-    "JavaScript / scriptlet (#%#)": 39,
+    "JavaScript / scriptlet (#%#)": 40,
     "modificateur non supporte: $redirect": 18,
     "regex hors du sous-ensemble WebKit": 11,
     "injection de style etendue (#$?#)": 11,
-    "$domain inexprimable (regex ou joker)": 3,
+    "modificateur inconnu: $_____": 3,
     "modificateur non supporte: $removeparam": 3,
     "modificateur non supporte: $redirect-rule": 2,
-    "modificateur non supporte: $denyallow": 2,
     "regle cosmetique entierement exceptee": 2,
+    "$domain inexprimable (regex ou joker)": 1,
     "ancre `|` en milieu de motif": 1,
-    "modificateur inconnu: $_____": 1
+    "prefixe cosmetique sans chemin": 1
   },
   "notes": {
     "modificateur sans effet sous WebKit: $all": 30,
@@ -51,11 +56,14 @@
       "bytes": 538514
     }
   ],
+  "rules_emitted": 3986,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
-    "file": "Extended-AdGuard-Ukrainian-filter.json",
-    "total": 235,
+    "file": "extended/Extended-AdGuard-Ukrainian-filter.json",
+    "total": 236,
     "counts": {
-      "scriptlets": 38,
+      "scriptlets": 39,
       "procedural": 119,
       "styles": 78,
       "html": 0,

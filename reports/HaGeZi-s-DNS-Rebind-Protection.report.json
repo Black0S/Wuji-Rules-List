@@ -1,14 +1,19 @@
 {
+  "id": "hagezi-dns-rebind-protection",
   "source_file": "HaGeZi-s-DNS-Rebind-Protection.txt",
   "source_name": "HaGeZi's DNS Rebind Protection",
+  "source_sha256": "dd78447d10527cf141ed692c7ea179e0599602fafdaac5f23b650065f4d9e703",
+  "source_group": "HaGeZi",
+  "source_homepage": "https://github.com/hagezi/dns-blocklists",
+  "source_license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
   "source_title": "HaGeZi's DNS Rebind Protection",
-  "source_version": "1.0.0.7",
-  "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_71.txt",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adguard/dns-rebind-protection.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T08:53:54+00:00",
+  "converted_at": "2026-09-08T13:21:33+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 26,
+  "lines_total": 40,
   "rules_in": 17,
   "rules_out": 13,
   "coverage_pct": 70.59,
@@ -34,6 +39,9 @@
       "bytes": 1228
     }
   ],
+  "rules_emitted": 13,
+  "published": true,
+  "unpublished_reason": null,
   "extended": {
     "file": null,
     "total": 0,
