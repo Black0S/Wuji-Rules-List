@@ -5,19 +5,19 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/annoyances-cookies.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:34:24+00:00",
+  "converted_at": "2026-09-08T08:56:59+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 5743,
-  "rules_in": 2381,
-  "rules_out": 144,
-  "coverage_pct": 6.38,
+  "rules_in": 2380,
+  "rules_out": 143,
+  "coverage_pct": 6.34,
   "breakdown": {
     "block": 19,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 89,
-    "css_selectors": 98,
+    "css_display_none": 88,
+    "css_selectors": 97,
     "ignore_previous_rules": 35
   },
   "skipped_total": 2218,
@@ -34,8 +34,8 @@
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Cookie-Notices.json",
-      "rules": 144,
-      "bytes": 57121
+      "rules": 143,
+      "bytes": 56977
     }
   ],
   "extended": {

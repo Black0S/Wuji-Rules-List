@@ -2,30 +2,30 @@
   "source_file": "AdGuard-Base-filter.txt",
   "source_name": "AdGuard Base filter",
   "source_title": "AdGuard Base filter",
-  "source_version": "2.4.88.74",
+  "source_version": "2.4.88.93",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/2.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:29:49+00:00",
+  "converted_at": "2026-09-08T08:51:32+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 149850,
-  "rules_in": 133953,
-  "rules_out": 89166,
-  "coverage_pct": 88.72,
+  "lines_total": 150164,
+  "rules_in": 134260,
+  "rules_out": 89469,
+  "coverage_pct": 88.75,
   "breakdown": {
-    "block": 69059,
+    "block": 69359,
     "block_document": 628,
     "block_cookies": 0,
-    "css_display_none": 15399,
-    "css_selectors": 45082,
-    "ignore_previous_rules": 4079
+    "css_display_none": 15403,
+    "css_selectors": 45087,
+    "ignore_previous_rules": 4078
   },
-  "skipped_total": 12988,
+  "skipped_total": 12991,
   "skipped_reasons": {
-    "JavaScript / scriptlet (#%#)": 5191,
+    "JavaScript / scriptlet (#%#)": 5192,
     "selecteur CSS etendu (#?#)": 2584,
     "injection de style / scriptlet (#$#)": 1927,
-    "modificateur non supporte: $stealth": 1829,
+    "modificateur non supporte: $stealth": 1831,
     "modificateur non supporte: $redirect": 710,
     "injection de style etendue (#$?#)": 206,
     "regex hors du sous-ensemble WebKit": 129,
@@ -72,15 +72,15 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Base-filter.json",
-      "rules": 89166,
-      "bytes": 14327147
+      "rules": 89469,
+      "bytes": 14361549
     }
   ],
   "extended": {
     "file": "Extended-AdGuard-Base-filter.json",
-    "total": 9693,
+    "total": 9694,
     "counts": {
-      "scriptlets": 4960,
+      "scriptlets": 4961,
       "procedural": 2598,
       "styles": 2135,
       "html": 0,

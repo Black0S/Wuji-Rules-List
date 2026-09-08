@@ -2,22 +2,22 @@
   "source_file": "AdGuard-Other-Annoyances-filter.txt",
   "source_name": "AdGuard Other Annoyances filter",
   "source_title": "AdGuard Other Annoyances filter",
-  "source_version": "2.0.47.96",
+  "source_version": "2.0.47.98",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/21.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:30:14+00:00",
+  "converted_at": "2026-09-08T08:52:01+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 11550,
-  "rules_in": 8430,
-  "rules_out": 4015,
-  "coverage_pct": 72.12,
+  "lines_total": 11555,
+  "rules_in": 8435,
+  "rules_out": 4019,
+  "coverage_pct": 72.14,
   "breakdown": {
-    "block": 554,
+    "block": 556,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 3456,
-    "css_selectors": 5522,
+    "css_display_none": 3458,
+    "css_selectors": 5525,
     "ignore_previous_rules": 4
   },
   "skipped_total": 2358,
@@ -47,8 +47,8 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Other-Annoyances-filter.json",
-      "rules": 4015,
-      "bytes": 808152
+      "rules": 4019,
+      "bytes": 808842
     }
   ],
   "extended": {

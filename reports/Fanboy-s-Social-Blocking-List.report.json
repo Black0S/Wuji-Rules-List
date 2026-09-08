@@ -2,22 +2,22 @@
   "source_file": "Fanboy-s-Social-Blocking-List.txt",
   "source_name": "Fanboy's Social Blocking List",
   "source_title": "Fanboy's Social Blocking List",
-  "source_version": "2.1.68.34",
+  "source_version": "2.1.68.39",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/123.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:31:55+00:00",
+  "converted_at": "2026-09-08T08:53:47+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 14070,
-  "rules_in": 13824,
-  "rules_out": 3292,
+  "lines_total": 14072,
+  "rules_in": 13826,
+  "rules_out": 3294,
   "coverage_pct": 98.76,
   "breakdown": {
     "block": 585,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 2624,
-    "css_selectors": 12985,
+    "css_display_none": 2626,
+    "css_selectors": 12987,
     "ignore_previous_rules": 82
   },
   "skipped_total": 48,
@@ -28,8 +28,8 @@
   "outputs": [
     {
       "file": "Webkit-Fanboy-s-Social-Blocking-List.json",
-      "rules": 3292,
-      "bytes": 694726
+      "rules": 3294,
+      "bytes": 695012
     }
   ],
   "extended": {

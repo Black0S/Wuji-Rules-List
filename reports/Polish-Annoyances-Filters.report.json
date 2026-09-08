@@ -2,22 +2,22 @@
   "source_file": "Polish-Annoyances-Filters.txt",
   "source_name": "Polish Annoyances Filters",
   "source_title": "Polish Annoyances Filters",
-  "source_version": "1.0.39.80",
+  "source_version": "1.0.39.81",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/237.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:33:50+00:00",
+  "converted_at": "2026-09-08T08:56:21+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 13733,
-  "rules_in": 13460,
-  "rules_out": 8574,
-  "coverage_pct": 83.05,
+  "lines_total": 13637,
+  "rules_in": 13364,
+  "rules_out": 8514,
+  "coverage_pct": 82.93,
   "breakdown": {
     "block": 530,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 8009,
-    "css_selectors": 10615,
+    "css_display_none": 7949,
+    "css_selectors": 10519,
     "ignore_previous_rules": 34
   },
   "skipped_total": 2023,
@@ -49,8 +49,8 @@
   "outputs": [
     {
       "file": "Webkit-Polish-Annoyances-Filters.json",
-      "rules": 8574,
-      "bytes": 1431706
+      "rules": 8514,
+      "bytes": 1419880
     }
   ],
   "extended": {

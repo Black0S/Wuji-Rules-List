@@ -2,18 +2,18 @@
   "source_file": "EasyList-Polish.txt",
   "source_name": "EasyList Polish",
   "source_title": "EasyList Polish",
-  "source_version": "2.1.93.35",
+  "source_version": "2.1.93.40",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/246.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:31:39+00:00",
+  "converted_at": "2026-09-08T08:53:26+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 3344,
-  "rules_in": 3294,
-  "rules_out": 2268,
+  "lines_total": 3345,
+  "rules_in": 3295,
+  "rules_out": 2269,
   "coverage_pct": 99.76,
   "breakdown": {
-    "block": 651,
+    "block": 652,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 1597,
@@ -30,8 +30,8 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-Polish.json",
-      "rules": 2268,
-      "bytes": 404843
+      "rules": 2269,
+      "bytes": 405007
     }
   ],
   "extended": {

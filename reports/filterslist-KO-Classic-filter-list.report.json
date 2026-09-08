@@ -2,30 +2,30 @@
   "source_file": "filterslist-KO-Classic-filter-list.txt",
   "source_name": "filterslist-KO Classic filter list",
   "source_title": "filterslist-KO Classic filter list",
-  "source_version": "2.0.25.40",
+  "source_version": "2.0.25.43",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/227.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:34:23+00:00",
+  "converted_at": "2026-09-08T08:56:58+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 4394,
-  "rules_in": 4054,
-  "rules_out": 2238,
+  "lines_total": 4400,
+  "rules_in": 4059,
+  "rules_out": 2242,
   "coverage_pct": 76.3,
   "breakdown": {
-    "block": 1436,
+    "block": 1439,
     "block_document": 13,
     "block_cookies": 0,
-    "css_display_none": 740,
-    "css_selectors": 1596,
+    "css_display_none": 741,
+    "css_selectors": 1597,
     "ignore_previous_rules": 48
   },
-  "skipped_total": 925,
+  "skipped_total": 926,
   "skipped_reasons": {
     "injection de style / scriptlet (#$#)": 233,
     "selecteur CSS etendu (#?#)": 168,
     "JavaScript / scriptlet (#%#)": 160,
-    "$domain inexprimable (regex ou joker)": 146,
+    "$domain inexprimable (regex ou joker)": 147,
     "modificateur non supporte: $path": 102,
     "regex hors du sous-ensemble WebKit": 39,
     "injection de style etendue (#$?#)": 34,
@@ -51,8 +51,8 @@
   "outputs": [
     {
       "file": "Webkit-filterslist-KO-Classic-filter-list.json",
-      "rules": 2238,
-      "bytes": 399997
+      "rules": 2242,
+      "bytes": 400469
     }
   ],
   "extended": {

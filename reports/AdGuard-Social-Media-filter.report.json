@@ -2,22 +2,22 @@
   "source_file": "AdGuard-Social-Media-filter.txt",
   "source_name": "AdGuard Social Media filter",
   "source_title": "AdGuard Social Media filter",
-  "source_version": "2.1.32.8",
+  "source_version": "2.1.32.10",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/4.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:30:16+00:00",
+  "converted_at": "2026-09-08T08:52:04+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 17159,
-  "rules_in": 16317,
-  "rules_out": 10063,
+  "lines_total": 17163,
+  "rules_in": 16321,
+  "rules_out": 10066,
   "coverage_pct": 89.22,
   "breakdown": {
     "block": 478,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 9434,
-    "css_selectors": 13930,
+    "css_display_none": 9437,
+    "css_selectors": 13934,
     "ignore_previous_rules": 150
   },
   "skipped_total": 1475,
@@ -41,8 +41,8 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Social-Media-filter.json",
-      "rules": 10063,
-      "bytes": 1925040
+      "rules": 10066,
+      "bytes": 1925476
     }
   ],
   "extended": {

@@ -2,30 +2,30 @@
   "source_file": "AdGuard-Japanese-filter.txt",
   "source_name": "AdGuard Japanese filter",
   "source_title": "AdGuard Japanese filter",
-  "source_version": "2.0.76.26",
+  "source_version": "2.0.76.28",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/7.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:30:13+00:00",
+  "converted_at": "2026-09-08T08:52:00+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 12790,
-  "rules_in": 12084,
-  "rules_out": 5996,
-  "coverage_pct": 85.57,
+  "lines_total": 12794,
+  "rules_in": 12088,
+  "rules_out": 5999,
+  "coverage_pct": 85.56,
   "breakdown": {
-    "block": 1676,
+    "block": 1677,
     "block_document": 217,
     "block_cookies": 0,
-    "css_display_none": 3819,
-    "css_selectors": 8164,
+    "css_display_none": 3821,
+    "css_selectors": 8166,
     "ignore_previous_rules": 283
   },
-  "skipped_total": 1608,
+  "skipped_total": 1609,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 854,
     "injection de style / scriptlet (#$#)": 339,
     "JavaScript / scriptlet (#%#)": 214,
-    "injection de style etendue (#$?#)": 47,
+    "injection de style etendue (#$?#)": 48,
     "$domain inexprimable (regex ou joker)": 43,
     "modificateur non supporte: $redirect": 40,
     "modificateur non supporte: $path": 40,
@@ -45,17 +45,17 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Japanese-filter.json",
-      "rules": 5996,
-      "bytes": 1104038
+      "rules": 5999,
+      "bytes": 1104508
     }
   ],
   "extended": {
     "file": "Extended-AdGuard-Japanese-filter.json",
-    "total": 1453,
+    "total": 1454,
     "counts": {
       "scriptlets": 213,
       "procedural": 854,
-      "styles": 386,
+      "styles": 387,
       "html": 0,
       "raw_js": 1
     }

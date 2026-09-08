@@ -2,27 +2,27 @@
   "source_file": "Fanboy-s-Annoyances.txt",
   "source_name": "Fanboy's Annoyances",
   "source_title": "Fanboy's Annoyances",
-  "source_version": "2.1.66.94",
+  "source_version": "2.1.66.97",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/122.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:31:54+00:00",
+  "converted_at": "2026-09-08T08:53:46+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 60289,
-  "rules_in": 57297,
-  "rules_out": 18088,
-  "coverage_pct": 86.38,
+  "lines_total": 60294,
+  "rules_in": 57302,
+  "rules_out": 18090,
+  "coverage_pct": 86.37,
   "breakdown": {
     "block": 3592,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 13943,
-    "css_selectors": 45347,
+    "css_display_none": 13945,
+    "css_selectors": 45350,
     "ignore_previous_rules": 552
   },
-  "skipped_total": 6798,
+  "skipped_total": 6800,
   "skipped_reasons": {
-    "JavaScript / scriptlet (#%#)": 5437,
+    "JavaScript / scriptlet (#%#)": 5439,
     "injection de style / scriptlet (#$#)": 934,
     "selecteur CSS etendu (#?#)": 411,
     "injection de style etendue (#$?#)": 9,
@@ -38,15 +38,15 @@
   "outputs": [
     {
       "file": "Webkit-Fanboy-s-Annoyances.json",
-      "rules": 18088,
-      "bytes": 3522911
+      "rules": 18090,
+      "bytes": 3523249
     }
   ],
   "extended": {
     "file": "Extended-Fanboy-s-Annoyances.json",
-    "total": 6792,
+    "total": 6794,
     "counts": {
-      "scriptlets": 5437,
+      "scriptlets": 5439,
       "procedural": 412,
       "styles": 943,
       "html": 0,

@@ -2,18 +2,18 @@
   "source_file": "Dan-Pollock-s-List.txt",
   "source_name": "Dan Pollock's List",
   "source_title": "Dan Pollock's List",
-  "source_version": "1.0.19.69",
+  "source_version": "1.0.19.70",
   "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_4.txt",
   "format": "hosts",
-  "converted_at": "2026-09-07T12:31:32+00:00",
+  "converted_at": "2026-09-08T08:53:16+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 13067,
-  "rules_in": 13057,
-  "rules_out": 13058,
+  "lines_total": 13068,
+  "rules_in": 13058,
+  "rules_out": 13059,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 13057,
+    "block": 13058,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -26,8 +26,8 @@
   "outputs": [
     {
       "file": "Webkit-Dan-Pollock-s-List.json",
-      "rules": 13058,
-      "bytes": 1497236
+      "rules": 13059,
+      "bytes": 1497346
     }
   ],
   "extended": {

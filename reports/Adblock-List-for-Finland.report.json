@@ -2,16 +2,16 @@
   "source_file": "Adblock-List-for-Finland.txt",
   "source_name": "Adblock List for Finland",
   "source_title": "Adblock List for Finland",
-  "source_version": "2.0.12.93",
+  "source_version": "2.0.12.95",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/233.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:30:54+00:00",
+  "converted_at": "2026-09-08T08:52:39+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 1264,
-  "rules_in": 1190,
+  "lines_total": 1263,
+  "rules_in": 1189,
   "rules_out": 584,
-  "coverage_pct": 87.56,
+  "coverage_pct": 87.64,
   "breakdown": {
     "block": 162,
     "block_document": 0,
@@ -20,10 +20,10 @@
     "css_selectors": 851,
     "ignore_previous_rules": 29
   },
-  "skipped_total": 141,
+  "skipped_total": 140,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 65,
-    "injection de style / scriptlet (#$#)": 37,
+    "injection de style / scriptlet (#$#)": 36,
     "JavaScript / scriptlet (#%#)": 17,
     "modificateur non supporte: $redirect": 10,
     "injection de style etendue (#$?#)": 8,
@@ -43,11 +43,11 @@
   ],
   "extended": {
     "file": "Extended-Adblock-List-for-Finland.json",
-    "total": 127,
+    "total": 126,
     "counts": {
       "scriptlets": 17,
       "procedural": 65,
-      "styles": 45,
+      "styles": 44,
       "html": 0,
       "raw_js": 0
     }

@@ -2,18 +2,18 @@
   "source_file": "Phishing-URL-Blocklist.txt",
   "source_name": "Phishing URL Blocklist",
   "source_title": "Phishing URL Blocklist",
-  "source_version": "2.0.17.21",
+  "source_version": "2.0.17.22",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/255.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:33:50+00:00",
+  "converted_at": "2026-09-08T08:56:21+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 132002,
-  "rules_in": 65994,
-  "rules_out": 65989,
+  "lines_total": 132400,
+  "rules_in": 66193,
+  "rules_out": 66188,
   "coverage_pct": 99.99,
   "breakdown": {
-    "block": 65988,
+    "block": 66187,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -26,13 +26,13 @@
     "ancre `|` en milieu de motif": 2
   },
   "notes": {
-    "modificateur sans effet sous WebKit: $all": 65994
+    "modificateur sans effet sous WebKit: $all": 66193
   },
   "outputs": [
     {
       "file": "Webkit-Phishing-URL-Blocklist.json",
-      "rules": 65989,
-      "bytes": 8985071
+      "rules": 66188,
+      "bytes": 9011555
     }
   ],
   "extended": {

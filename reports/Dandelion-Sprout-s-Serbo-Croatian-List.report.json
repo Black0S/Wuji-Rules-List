@@ -2,22 +2,22 @@
   "source_file": "Dandelion-Sprout-s-Serbo-Croatian-List.txt",
   "source_name": "Dandelion Sprout's Serbo-Croatian List",
   "source_title": "Dandelion Sprout's Serbo-Croatian List",
-  "source_version": "2.0.0.79",
+  "source_version": "2.0.0.80",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/252.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:31:36+00:00",
+  "converted_at": "2026-09-08T08:53:21+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 565,
-  "rules_in": 493,
-  "rules_out": 262,
-  "coverage_pct": 95.33,
+  "lines_total": 572,
+  "rules_in": 499,
+  "rules_out": 264,
+  "coverage_pct": 95.39,
   "breakdown": {
-    "block": 92,
+    "block": 93,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 166,
-    "css_selectors": 375,
+    "css_display_none": 167,
+    "css_selectors": 380,
     "ignore_previous_rules": 3
   },
   "skipped_total": 22,
@@ -36,8 +36,8 @@
   "outputs": [
     {
       "file": "Webkit-Dandelion-Sprout-s-Serbo-Croatian-List.json",
-      "rules": 262,
-      "bytes": 45332
+      "rules": 264,
+      "bytes": 45733
     }
   ],
   "extended": {

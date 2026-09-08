@@ -2,28 +2,28 @@
   "source_file": "AdGuard-Popups-filter.txt",
   "source_name": "AdGuard Popups filter",
   "source_title": "AdGuard Popups filter",
-  "source_version": "2.0.82.27",
+  "source_version": "2.0.82.36",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/19.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:30:15+00:00",
+  "converted_at": "2026-09-08T08:52:02+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 23296,
-  "rules_in": 22051,
-  "rules_out": 11736,
+  "lines_total": 23301,
+  "rules_in": 22056,
+  "rules_out": 11739,
   "coverage_pct": 74.12,
   "breakdown": {
     "block": 1481,
     "block_document": 1,
     "block_cookies": 0,
-    "css_display_none": 9614,
-    "css_selectors": 14223,
+    "css_display_none": 9617,
+    "css_selectors": 14226,
     "ignore_previous_rules": 639
   },
-  "skipped_total": 5458,
+  "skipped_total": 5460,
   "skipped_reasons": {
     "injection de style / scriptlet (#$#)": 2797,
-    "JavaScript / scriptlet (#%#)": 1350,
+    "JavaScript / scriptlet (#%#)": 1352,
     "selecteur CSS etendu (#?#)": 1018,
     "injection de style etendue (#$?#)": 163,
     "modificateur non supporte: $redirect": 68,
@@ -47,15 +47,15 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Popups-filter.json",
-      "rules": 11736,
-      "bytes": 2181190
+      "rules": 11739,
+      "bytes": 2181771
     }
   ],
   "extended": {
     "file": "Extended-AdGuard-Popups-filter.json",
-    "total": 5304,
+    "total": 5306,
     "counts": {
-      "scriptlets": 1322,
+      "scriptlets": 1324,
       "procedural": 1022,
       "styles": 2960,
       "html": 0,

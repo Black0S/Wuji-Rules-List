@@ -2,18 +2,18 @@
   "source_file": "AdGuard-Tracking-Protection-filter.txt",
   "source_name": "AdGuard Tracking Protection filter",
   "source_title": "AdGuard Tracking Protection filter",
-  "source_version": "2.1.10.89",
+  "source_version": "2.1.10.91",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/3.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:30:53+00:00",
+  "converted_at": "2026-09-08T08:52:38+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 330897,
-  "rules_in": 327294,
-  "rules_out": 325124,
+  "lines_total": 330899,
+  "rules_in": 327296,
+  "rules_out": 325126,
   "coverage_pct": 99.35,
   "breakdown": {
-    "block": 322711,
+    "block": 322713,
     "block_document": 1,
     "block_cookies": 6,
     "css_display_none": 198,
@@ -59,8 +59,8 @@
     },
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-3.json",
-      "rules": 29538,
-      "bytes": 3576950
+      "rules": 29540,
+      "bytes": 3577198
     }
   ],
   "extended": {

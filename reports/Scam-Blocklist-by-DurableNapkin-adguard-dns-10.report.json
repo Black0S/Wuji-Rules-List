@@ -2,18 +2,18 @@
   "source_file": "Scam-Blocklist-by-DurableNapkin-adguard-dns-10.txt",
   "source_name": "Scam Blocklist by DurableNapkin",
   "source_title": "Scam Blocklist by DurableNapkin",
-  "source_version": "1.0.21.89",
+  "source_version": "1.0.21.90",
   "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_10.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:33:52+00:00",
+  "converted_at": "2026-09-08T08:56:22+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 964,
-  "rules_in": 955,
-  "rules_out": 956,
+  "lines_total": 958,
+  "rules_in": 949,
+  "rules_out": 950,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 955,
+    "block": 949,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -26,8 +26,8 @@
   "outputs": [
     {
       "file": "Webkit-Scam-Blocklist-by-DurableNapkin-adguard-dns-10.json",
-      "rules": 956,
-      "bytes": 105838
+      "rules": 950,
+      "bytes": 105101
     }
   ],
   "extended": {

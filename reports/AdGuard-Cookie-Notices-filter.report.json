@@ -2,28 +2,28 @@
   "source_file": "AdGuard-Cookie-Notices-filter.txt",
   "source_name": "AdGuard Cookie Notices filter",
   "source_title": "AdGuard Cookie Notices filter",
-  "source_version": "2.0.93.78",
+  "source_version": "2.0.93.88",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/18.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:29:51+00:00",
+  "converted_at": "2026-09-08T08:51:35+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 24608,
-  "rules_in": 21585,
-  "rules_out": 11945,
-  "coverage_pct": 65.37,
+  "lines_total": 24624,
+  "rules_in": 21599,
+  "rules_out": 11950,
+  "coverage_pct": 65.36,
   "breakdown": {
-    "block": 1268,
+    "block": 1269,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 9171,
-    "css_selectors": 11338,
+    "css_display_none": 9175,
+    "css_selectors": 11343,
     "ignore_previous_rules": 1505
   },
-  "skipped_total": 6207,
+  "skipped_total": 6213,
   "skipped_reasons": {
-    "injection de style / scriptlet (#$#)": 3077,
-    "JavaScript / scriptlet (#%#)": 2670,
+    "injection de style / scriptlet (#$#)": 3080,
+    "JavaScript / scriptlet (#%#)": 2673,
     "selecteur CSS etendu (#?#)": 310,
     "injection de style etendue (#$?#)": 116,
     "modificateur non supporte: $redirect": 13,
@@ -44,17 +44,17 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Cookie-Notices-filter.json",
-      "rules": 11945,
-      "bytes": 2344709
+      "rules": 11950,
+      "bytes": 2344648
     }
   ],
   "extended": {
     "file": "Extended-AdGuard-Cookie-Notices-filter.json",
-    "total": 6121,
+    "total": 6127,
     "counts": {
-      "scriptlets": 2612,
+      "scriptlets": 2615,
       "procedural": 315,
-      "styles": 3194,
+      "styles": 3197,
       "html": 0,
       "raw_js": 59
     }

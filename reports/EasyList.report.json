@@ -2,23 +2,23 @@
   "source_file": "EasyList.txt",
   "source_name": "EasyList",
   "source_title": "EasyList",
-  "source_version": "2.1.74.31",
+  "source_version": "2.1.74.36",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/101.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:31:46+00:00",
+  "converted_at": "2026-09-08T08:53:34+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 78035,
-  "rules_in": 77786,
-  "rules_out": 58980,
+  "lines_total": 78329,
+  "rules_in": 78080,
+  "rules_out": 59273,
   "coverage_pct": 99.15,
   "breakdown": {
-    "block": 51908,
+    "block": 52201,
     "block_document": 594,
     "block_cookies": 0,
-    "css_display_none": 5722,
-    "css_selectors": 23867,
-    "ignore_previous_rules": 755
+    "css_display_none": 5723,
+    "css_selectors": 23869,
+    "ignore_previous_rules": 754
   },
   "skipped_total": 328,
   "skipped_reasons": {
@@ -40,8 +40,8 @@
   "outputs": [
     {
       "file": "Webkit-EasyList.json",
-      "rules": 58980,
-      "bytes": 7579900
+      "rules": 59273,
+      "bytes": 7612987
     }
   ],
   "extended": {

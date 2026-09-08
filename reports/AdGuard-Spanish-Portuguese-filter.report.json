@@ -2,27 +2,27 @@
   "source_file": "AdGuard-Spanish-Portuguese-filter.txt",
   "source_name": "AdGuard Spanish/Portuguese filter",
   "source_title": "AdGuard Spanish/Portuguese filter",
-  "source_version": "2.0.35.64",
+  "source_version": "2.0.35.65",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/9.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:30:16+00:00",
+  "converted_at": "2026-09-08T08:52:04+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 6606,
-  "rules_in": 5644,
-  "rules_out": 2735,
-  "coverage_pct": 79.34,
+  "lines_total": 6603,
+  "rules_in": 5642,
+  "rules_out": 2734,
+  "coverage_pct": 79.35,
   "breakdown": {
     "block": 844,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 1597,
-    "css_selectors": 3341,
+    "css_display_none": 1596,
+    "css_selectors": 3340,
     "ignore_previous_rules": 293
   },
-  "skipped_total": 1077,
+  "skipped_total": 1076,
   "skipped_reasons": {
-    "JavaScript / scriptlet (#%#)": 583,
+    "JavaScript / scriptlet (#%#)": 582,
     "injection de style / scriptlet (#$#)": 205,
     "selecteur CSS etendu (#?#)": 197,
     "modificateur non supporte: $redirect": 66,
@@ -44,15 +44,15 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Spanish-Portuguese-filter.json",
-      "rules": 2735,
-      "bytes": 524069
+      "rules": 2734,
+      "bytes": 523932
     }
   ],
   "extended": {
     "file": "Extended-AdGuard-Spanish-Portuguese-filter.json",
-    "total": 965,
+    "total": 964,
     "counts": {
-      "scriptlets": 549,
+      "scriptlets": 548,
       "procedural": 198,
       "styles": 218,
       "html": 0,

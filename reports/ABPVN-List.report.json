@@ -2,22 +2,22 @@
   "source_file": "ABPVN-List.txt",
   "source_name": "ABPVN List",
   "source_title": "ABPVN List",
-  "source_version": "2.0.45.58",
+  "source_version": "2.0.45.61",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/214.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:29:35+00:00",
+  "converted_at": "2026-09-08T08:51:18+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 1198,
-  "rules_in": 1164,
-  "rules_out": 717,
-  "coverage_pct": 88.75,
+  "lines_total": 1203,
+  "rules_in": 1169,
+  "rules_out": 720,
+  "coverage_pct": 88.79,
   "breakdown": {
-    "block": 334,
+    "block": 336,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 328,
-    "css_selectors": 645,
+    "css_display_none": 329,
+    "css_selectors": 648,
     "ignore_previous_rules": 54
   },
   "skipped_total": 114,
@@ -33,8 +33,8 @@
   "outputs": [
     {
       "file": "Webkit-ABPVN-List.json",
-      "rules": 717,
-      "bytes": 109951
+      "rules": 720,
+      "bytes": 110483
     }
   ],
   "extended": {

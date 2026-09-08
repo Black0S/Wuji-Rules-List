@@ -2,18 +2,18 @@
   "source_file": "Steven-Black-s-List.txt",
   "source_name": "Steven Black's List",
   "source_title": "Steven Black's List",
-  "source_version": "1.0.16.67",
+  "source_version": "1.0.16.68",
   "source_url": "https://adguardteam.github.io/HostlistsRegistry/assets/filter_33.txt",
   "format": "hosts",
-  "converted_at": "2026-09-07T12:34:18+00:00",
+  "converted_at": "2026-09-08T08:56:51+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 80004,
-  "rules_in": 79994,
-  "rules_out": 79995,
+  "lines_total": 79550,
+  "rules_in": 79540,
+  "rules_out": 79541,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 79994,
+    "block": 79540,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -26,8 +26,8 @@
   "outputs": [
     {
       "file": "Webkit-Steven-Black-s-List.json",
-      "rules": 79995,
-      "bytes": 9251393
+      "rules": 79541,
+      "bytes": 9200557
     }
   ],
   "extended": {

@@ -5,7 +5,7 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-newsletters.txt",
   "format": "adblock",
-  "converted_at": "2026-09-07T12:31:39+00:00",
+  "converted_at": "2026-09-08T08:53:26+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 6508,
@@ -34,7 +34,7 @@
     {
       "file": "Webkit-EasyList-Newsletter-Notices.json",
       "rules": 3372,
-      "bytes": 579000
+      "bytes": 579025
     }
   ],
   "extended": {
