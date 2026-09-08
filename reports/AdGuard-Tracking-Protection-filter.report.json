@@ -2,28 +2,28 @@
   "id": "adguard-tracking-protection",
   "source_file": "AdGuard-Tracking-Protection-filter.txt",
   "source_name": "AdGuard Tracking Protection filter",
-  "source_sha256": "7099413ae08eb60d07dd2dab81b0f78a51eee2e877453b1fc6c71d5517e8ffbf",
+  "source_sha256": "84add52fd558e98753a88ffaa96c3aa60b2f345f3402eda03a64d0663ad916bc",
   "source_group": "AdGuard",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Tracking Protection filter",
-  "source_version": "2.1.10.90",
+  "source_version": "2.1.10.97",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/3.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T13:20:57+00:00",
+  "converted_at": "2026-09-08T15:02:48+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 330899,
-  "rules_in": 327296,
-  "rules_out": 325126,
+  "lines_total": 330912,
+  "rules_in": 327307,
+  "rules_out": 325137,
   "coverage_pct": 99.35,
   "breakdown": {
-    "block": 322713,
+    "block": 322721,
     "block_document": 1,
     "block_cookies": 6,
-    "css_display_none": 198,
-    "css_selectors": 253,
-    "ignore_previous_rules": 2207
+    "css_display_none": 200,
+    "css_selectors": 255,
+    "ignore_previous_rules": 2208
   },
   "skipped_total": 1925,
   "skipped_reasons": {
@@ -54,20 +54,20 @@
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-1.json",
       "rules": 150000,
-      "bytes": 17939864
+      "bytes": 17939933
     },
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-2.json",
       "rules": 150000,
-      "bytes": 17455493
+      "bytes": 17455621
     },
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-3.json",
-      "rules": 29540,
-      "bytes": 3577170
+      "rules": 29553,
+      "bytes": 3578783
     }
   ],
-  "rules_emitted": 329540,
+  "rules_emitted": 329553,
   "published": true,
   "unpublished_reason": null,
   "extended": {

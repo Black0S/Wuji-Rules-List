@@ -10,7 +10,7 @@
   "source_version": "2026.0904.2128.09",
   "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T13:23:09+00:00",
+  "converted_at": "2026-09-08T15:04:13+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 460,

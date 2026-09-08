@@ -2,33 +2,33 @@
   "id": "adguard-popups",
   "source_file": "AdGuard-Popups-filter.txt",
   "source_name": "AdGuard Popups filter",
-  "source_sha256": "2949bf154a351ecaf5312c9414eea743ebbb9a49071270fa4d4acb4350d2712c",
+  "source_sha256": "2fa27aebb2678302e5b6ab61478dbee5df6df37afb3e3b83a2d862384498dcc9",
   "source_group": "AdGuard",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Popups filter",
-  "source_version": "2.0.82.32",
+  "source_version": "2.0.82.42",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/19.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T13:20:19+00:00",
+  "converted_at": "2026-09-08T15:02:20+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 23298,
-  "rules_in": 22053,
-  "rules_out": 11744,
-  "coverage_pct": 74.18,
+  "lines_total": 23320,
+  "rules_in": 22075,
+  "rules_out": 11757,
+  "coverage_pct": 74.19,
   "breakdown": {
-    "block": 1481,
+    "block": 1482,
     "block_document": 1,
     "block_cookies": 0,
-    "css_display_none": 9622,
-    "css_selectors": 14238,
+    "css_display_none": 9634,
+    "css_selectors": 14255,
     "ignore_previous_rules": 639
   },
-  "skipped_total": 5444,
+  "skipped_total": 5448,
   "skipped_reasons": {
-    "injection de style / scriptlet (#$#)": 2797,
-    "JavaScript / scriptlet (#%#)": 1367,
+    "injection de style / scriptlet (#$#)": 2800,
+    "JavaScript / scriptlet (#%#)": 1368,
     "selecteur CSS etendu (#?#)": 1022,
     "injection de style etendue (#$?#)": 163,
     "modificateur non supporte: $redirect": 68,
@@ -53,20 +53,20 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Popups-filter.json",
-      "rules": 11744,
-      "bytes": 2200385
+      "rules": 11757,
+      "bytes": 2205783
     }
   ],
-  "rules_emitted": 11744,
+  "rules_emitted": 11757,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-AdGuard-Popups-filter.json",
-    "total": 5325,
+    "total": 5329,
     "counts": {
-      "scriptlets": 1339,
+      "scriptlets": 1340,
       "procedural": 1026,
-      "styles": 2960,
+      "styles": 2963,
       "html": 0,
       "raw_js": 28
     }

@@ -2,27 +2,27 @@
   "id": "adguard-chinese",
   "source_file": "AdGuard-Chinese-filter.txt",
   "source_name": "AdGuard Chinese filter",
-  "source_sha256": "088fc0c9ba85eff83730edf36577e40f1b9081435c915a154a63ed750146443a",
+  "source_sha256": "ba07225624e919afd289cb5b543f2e61c2ef42e3d96c5a94fae7a8d67ca91350",
   "source_group": "AdGuard (langues)",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Chinese filter",
-  "source_version": "2.1.64.92",
+  "source_version": "2.1.64.98",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/224.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T13:19:47+00:00",
+  "converted_at": "2026-09-08T15:01:55+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 23181,
-  "rules_in": 22401,
-  "rules_out": 16157,
-  "coverage_pct": 95.46,
+  "lines_total": 23193,
+  "rules_in": 22413,
+  "rules_out": 16168,
+  "coverage_pct": 95.47,
   "breakdown": {
-    "block": 12298,
+    "block": 12308,
     "block_document": 2,
     "block_cookies": 0,
-    "css_display_none": 2789,
-    "css_selectors": 8018,
+    "css_display_none": 2790,
+    "css_selectors": 8020,
     "ignore_previous_rules": 1067
   },
   "skipped_total": 854,
@@ -63,11 +63,11 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Chinese-filter.json",
-      "rules": 16157,
-      "bytes": 2081869
+      "rules": 16168,
+      "bytes": 2083110
     }
   ],
-  "rules_emitted": 16157,
+  "rules_emitted": 16168,
   "published": true,
   "unpublished_reason": null,
   "extended": {

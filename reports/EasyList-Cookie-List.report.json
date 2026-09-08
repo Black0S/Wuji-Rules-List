@@ -2,7 +2,7 @@
   "id": "easylist-cookie",
   "source_file": "EasyList-Cookie-List.txt",
   "source_name": "EasyList Cookie List",
-  "source_sha256": "454665ad6cc564cada1b5673cd486e1ec65c372efa005f3a4c959744b7738278",
+  "source_sha256": "52b1fd1617ab49689b35e4810561d967601d608a9fcd0df19f667661057f73db",
   "source_group": "EasyList",
   "source_homepage": "https://github.com/easylist/easylist",
   "source_license": "http://creativecommons.org/licenses/by/3.0/",
@@ -10,19 +10,19 @@
   "source_version": "",
   "source_url": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T13:21:03+00:00",
+  "converted_at": "2026-09-08T15:02:54+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 29033,
-  "rules_in": 27955,
-  "rules_out": 9419,
+  "lines_total": 29034,
+  "rules_in": 27956,
+  "rules_out": 9420,
   "coverage_pct": 89.46,
   "breakdown": {
     "block": 1678,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 7312,
-    "css_selectors": 22902,
+    "css_display_none": 7313,
+    "css_selectors": 22903,
     "ignore_previous_rules": 428
   },
   "skipped_total": 2665,
@@ -40,11 +40,11 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-Cookie-List.json",
-      "rules": 9419,
-      "bytes": 1880149
+      "rules": 9420,
+      "bytes": 1880281
     }
   ],
-  "rules_emitted": 9419,
+  "rules_emitted": 9420,
   "published": true,
   "unpublished_reason": null,
   "extended": {

@@ -2,7 +2,7 @@
   "id": "ublock-origin",
   "source_file": "uBlock-Origin-Filters.txt",
   "source_name": "uBlock Origin - Filters",
-  "source_sha256": "d4e79a9d78e8fccfa28aba8f55adbd89b37032ee048b2badf6670faff9b866ef",
+  "source_sha256": "4790056843e6eb6cfdc3d62c3083bae5f1af32526189f3d91ec3668bf52a1694",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,20 +10,20 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/filters.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T13:23:32+00:00",
+  "converted_at": "2026-09-08T15:04:29+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 40983,
-  "rules_in": 22966,
-  "rules_out": 9428,
+  "lines_total": 40985,
+  "rules_in": 22968,
+  "rules_out": 9430,
   "coverage_pct": 52.93,
   "breakdown": {
     "block": 4512,
     "block_document": 54,
     "block_cookies": 0,
-    "css_display_none": 3088,
-    "css_selectors": 5816,
-    "ignore_previous_rules": 1773
+    "css_display_none": 3089,
+    "css_selectors": 5817,
+    "ignore_previous_rules": 1774
   },
   "skipped_total": 12010,
   "skipped_reasons": {
@@ -93,11 +93,11 @@
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Filters.json",
-      "rules": 9428,
-      "bytes": 5171873
+      "rules": 9430,
+      "bytes": 5172158
     }
   ],
-  "rules_emitted": 9428,
+  "rules_emitted": 9430,
   "published": true,
   "unpublished_reason": null,
   "extended": {

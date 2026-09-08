@@ -2,7 +2,7 @@
   "id": "ru-adlist-for-ubo",
   "source_file": "RU-AdList-for-uBO.txt",
   "source_name": "RU AdList for uBO",
-  "source_sha256": "e08a8d8898e2d54602153a2f2f2b400f08525947a80e98d52aebb65cbb3f7400",
+  "source_sha256": "952880dcbe076339c2fa8b29c96ad83b589b8ae494698e7e0266b14d58c27f9d",
   "source_group": "EasyList (regions)",
   "source_homepage": "https://github.com/easylist",
   "source_license": "",
@@ -10,19 +10,19 @@
   "source_version": "",
   "source_url": "https://raw.githubusercontent.com/easylist/ruadlist/master/RuAdList-uBO.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T13:23:28+00:00",
+  "converted_at": "2026-09-08T15:04:26+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 33083,
   "rules_in": 32065,
-  "rules_out": 23544,
+  "rules_out": 23545,
   "coverage_pct": 90.71,
   "breakdown": {
-    "block": 17189,
+    "block": 17190,
     "block_document": 28,
     "block_cookies": 0,
     "css_display_none": 5338,
-    "css_selectors": 10881,
+    "css_selectors": 10880,
     "ignore_previous_rules": 988
   },
   "skipped_total": 2789,
@@ -54,11 +54,11 @@
   "outputs": [
     {
       "file": "Webkit-RU-AdList-for-uBO.json",
-      "rules": 23544,
-      "bytes": 3404407
+      "rules": 23545,
+      "bytes": 3404519
     }
   ],
-  "rules_emitted": 23544,
+  "rules_emitted": 23545,
   "published": true,
   "unpublished_reason": null,
   "extended": {
