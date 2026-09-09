@@ -2,20 +2,20 @@
   "id": "liste-ar",
   "source_file": "Liste-AR.txt",
   "source_name": "Liste AR",
-  "source_sha256": "15715ab93759c58534f4446bf5267ef6ee088148212108ae002399bc51177b04",
+  "source_sha256": "02f7878b038f41fb083da8142f3a99052c4d2572065ae360d50b7fd156583d21",
   "source_group": "EasyList (regions)",
   "source_homepage": "https://github.com/easylist",
   "source_license": "",
   "source_title": "Liste AR",
-  "source_version": "202609081451",
+  "source_version": "202609090842",
   "source_url": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T15:04:15+00:00",
+  "converted_at": "2026-09-09T09:00:10+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 1668,
-  "rules_in": 1603,
-  "rules_out": 1239,
+  "lines_total": 1666,
+  "rules_in": 1601,
+  "rules_out": 1237,
   "coverage_pct": 99.56,
   "breakdown": {
     "block": 999,
@@ -23,7 +23,7 @@
     "block_cookies": 0,
     "css_display_none": 208,
     "css_selectors": 566,
-    "ignore_previous_rules": 31
+    "ignore_previous_rules": 29
   },
   "skipped_total": 6,
   "skipped_reasons": {
@@ -33,11 +33,11 @@
   "outputs": [
     {
       "file": "Webkit-Liste-AR.json",
-      "rules": 1239,
-      "bytes": 170307
+      "rules": 1237,
+      "bytes": 169801
     }
   ],
-  "rules_emitted": 1239,
+  "rules_emitted": 1237,
   "published": true,
   "unpublished_reason": null,
   "extended": {

@@ -2,7 +2,7 @@
   "id": "ru-adlist-for-ubo",
   "source_file": "RU-AdList-for-uBO.txt",
   "source_name": "RU AdList for uBO",
-  "source_sha256": "952880dcbe076339c2fa8b29c96ad83b589b8ae494698e7e0266b14d58c27f9d",
+  "source_sha256": "ac4ce032a84bb6d734db0323f9c1a6a345859113bc1a7209e8dee73efcad0aa4",
   "source_group": "EasyList (regions)",
   "source_homepage": "https://github.com/easylist",
   "source_license": "",
@@ -10,26 +10,26 @@
   "source_version": "",
   "source_url": "https://raw.githubusercontent.com/easylist/ruadlist/master/RuAdList-uBO.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T15:04:26+00:00",
+  "converted_at": "2026-09-09T09:00:21+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 33083,
-  "rules_in": 32065,
-  "rules_out": 23545,
-  "coverage_pct": 90.71,
+  "lines_total": 33081,
+  "rules_in": 32061,
+  "rules_out": 23544,
+  "coverage_pct": 90.7,
   "breakdown": {
-    "block": 17190,
+    "block": 17188,
     "block_document": 28,
     "block_cookies": 0,
-    "css_display_none": 5338,
-    "css_selectors": 10880,
+    "css_display_none": 5339,
+    "css_selectors": 10876,
     "ignore_previous_rules": 988
   },
-  "skipped_total": 2789,
+  "skipped_total": 2791,
   "skipped_reasons": {
-    "pseudo-classe CSS etendue": 1075,
+    "pseudo-classe CSS etendue": 1076,
     "selecteur CSS etendu (#?#)": 980,
-    "scriptlet ou filtrage HTML": 560,
+    "scriptlet ou filtrage HTML": 561,
     "modificateur non supporte: $csp": 63,
     "domaine cosmetique non exprimable (joker de TLD)": 37,
     "modificateur non supporte: $removeparam": 23,
@@ -54,19 +54,19 @@
   "outputs": [
     {
       "file": "Webkit-RU-AdList-for-uBO.json",
-      "rules": 23545,
-      "bytes": 3404519
+      "rules": 23544,
+      "bytes": 3404366
     }
   ],
-  "rules_emitted": 23545,
+  "rules_emitted": 23544,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-RU-AdList-for-uBO.json",
-    "total": 2615,
+    "total": 2617,
     "counts": {
-      "scriptlets": 559,
-      "procedural": 2055,
+      "scriptlets": 560,
+      "procedural": 2056,
       "styles": 0,
       "html": 1,
       "raw_js": 0

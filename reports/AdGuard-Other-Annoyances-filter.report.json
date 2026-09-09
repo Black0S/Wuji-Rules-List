@@ -2,27 +2,27 @@
   "id": "adguard-other-annoyances",
   "source_file": "AdGuard-Other-Annoyances-filter.txt",
   "source_name": "AdGuard Other Annoyances filter",
-  "source_sha256": "1cf9645636daa096fd08c1c05e78d9540a8db4daff89a704fc458d29d19e57ac",
+  "source_sha256": "d1f401481fef47f6ac8aaf81d8a694cc747c37686cffc81178140626a27480de",
   "source_group": "AdGuard",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Other Annoyances filter",
-  "source_version": "2.0.48.2",
+  "source_version": "2.0.48.4",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/21.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T15:02:19+00:00",
+  "converted_at": "2026-09-09T08:57:37+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 11566,
-  "rules_in": 8443,
-  "rules_out": 4033,
-  "coverage_pct": 72.46,
+  "lines_total": 11568,
+  "rules_in": 8445,
+  "rules_out": 4034,
+  "coverage_pct": 72.47,
   "breakdown": {
     "block": 555,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 3473,
-    "css_selectors": 5559,
+    "css_display_none": 3474,
+    "css_selectors": 5561,
     "ignore_previous_rules": 4
   },
   "skipped_total": 2333,
@@ -53,11 +53,11 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Other-Annoyances-filter.json",
-      "rules": 4033,
-      "bytes": 847094
+      "rules": 4034,
+      "bytes": 847336
     }
   ],
-  "rules_emitted": 4033,
+  "rules_emitted": 4034,
   "published": true,
   "unpublished_reason": null,
   "extended": {

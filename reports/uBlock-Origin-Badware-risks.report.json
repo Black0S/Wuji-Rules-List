@@ -2,7 +2,7 @@
   "id": "ublock-origin-badware-risks",
   "source_file": "uBlock-Origin-Badware-risks.txt",
   "source_name": "uBlock Origin - Badware risks",
-  "source_sha256": "65b5952a8996fc47283c02eb18bc06e5e9e5c643b4dfb7fe1272fab8010b2a72",
+  "source_sha256": "3cff0edcc3fdac73bc3b8fa7e56e2040941b23def1e623ce6978b1348c289f41",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,15 +10,15 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/badware.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T15:04:26+00:00",
+  "converted_at": "2026-09-09T09:00:22+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 6466,
-  "rules_in": 4362,
-  "rules_out": 3942,
+  "lines_total": 6471,
+  "rules_in": 4364,
+  "rules_out": 3944,
   "coverage_pct": 91.93,
   "breakdown": {
-    "block": 1583,
+    "block": 1585,
     "block_document": 2334,
     "block_cookies": 0,
     "css_display_none": 23,
@@ -43,7 +43,7 @@
     "modificateur non supporte: $header": 1
   },
   "notes": {
-    "modificateur sans effet sous WebKit: $all": 1357,
+    "modificateur sans effet sous WebKit: $all": 1358,
     "doublon fusionne": 8,
     "domaine ignore (joker) dans une regle cosmetique": 3,
     "domaine ignore (joker ou regex dans $domain)": 1
@@ -51,11 +51,11 @@
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Badware-risks.json",
-      "rules": 3942,
-      "bytes": 517162
+      "rules": 3944,
+      "bytes": 517378
     }
   ],
-  "rules_emitted": 3942,
+  "rules_emitted": 3944,
   "published": true,
   "unpublished_reason": null,
   "extended": {

@@ -2,23 +2,23 @@
   "id": "adguard-tracking-protection",
   "source_file": "AdGuard-Tracking-Protection-filter.txt",
   "source_name": "AdGuard Tracking Protection filter",
-  "source_sha256": "84add52fd558e98753a88ffaa96c3aa60b2f345f3402eda03a64d0663ad916bc",
+  "source_sha256": "3b08d6dd006b6c505c8138dbb65b4b02b312a22def865eb41e354289912da08b",
   "source_group": "AdGuard",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Tracking Protection filter",
-  "source_version": "2.1.10.97",
+  "source_version": "2.1.11.1",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/3.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T15:02:48+00:00",
+  "converted_at": "2026-09-09T08:58:09+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 330912,
-  "rules_in": 327307,
-  "rules_out": 325137,
+  "lines_total": 330916,
+  "rules_in": 327310,
+  "rules_out": 325140,
   "coverage_pct": 99.35,
   "breakdown": {
-    "block": 322721,
+    "block": 322724,
     "block_document": 1,
     "block_cookies": 6,
     "css_display_none": 200,
@@ -54,20 +54,20 @@
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-1.json",
       "rules": 150000,
-      "bytes": 17939933
+      "bytes": 17939953
     },
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-2.json",
       "rules": 150000,
-      "bytes": 17455621
+      "bytes": 17455638
     },
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-3.json",
-      "rules": 29553,
-      "bytes": 3578783
+      "rules": 29556,
+      "bytes": 3579147
     }
   ],
-  "rules_emitted": 329553,
+  "rules_emitted": 329556,
   "published": true,
   "unpublished_reason": null,
   "extended": {

@@ -10,7 +10,7 @@
   "source_version": "2026.0908.0851.24",
   "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/doh-vpn-proxy-bypass.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T15:03:17+00:00",
+  "converted_at": "2026-09-09T08:58:55+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 16386,

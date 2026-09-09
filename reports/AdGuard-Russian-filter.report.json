@@ -2,15 +2,15 @@
   "id": "adguard-russian",
   "source_file": "AdGuard-Russian-filter.txt",
   "source_name": "AdGuard Russian filter",
-  "source_sha256": "c5d702dd67c08f80c6253cf35478411ef435da5a8191b137480d6f783e56d558",
+  "source_sha256": "3bdbab38d8eee81d87ec3d41b421522ee4b0976e81fe02898b1bb609a31b1855",
   "source_group": "AdGuard (langues)",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Russian filter",
-  "source_version": "2.1.8.46",
+  "source_version": "2.1.8.47",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/1.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T15:02:21+00:00",
+  "converted_at": "2026-09-09T08:57:39+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 19789,
@@ -68,7 +68,7 @@
     {
       "file": "Webkit-AdGuard-Russian-filter.json",
       "rules": 10294,
-      "bytes": 1669324
+      "bytes": 1669339
     }
   ],
   "rules_emitted": 10294,

@@ -2,7 +2,7 @@
   "id": "ublock-origin-annoyances",
   "source_file": "uBlock-Origin-Annoyances.txt",
   "source_name": "uBlock Origin - Annoyances",
-  "source_sha256": "db2375507533a575456c48c8acc1b03c1ffbe7e9d419819d95b6e6bc1938c0a8",
+  "source_sha256": "0278fe3d5079abbadef7b9ec2a4bb0ae90564c9eca5aa7f96fc5ad08e68eac4b",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,11 +10,11 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/annoyances.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T15:04:26+00:00",
+  "converted_at": "2026-09-09T09:00:21+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 8004,
-  "rules_in": 3517,
+  "lines_total": 8007,
+  "rules_in": 3518,
   "rules_out": 587,
   "coverage_pct": 19.87,
   "breakdown": {
@@ -25,9 +25,9 @@
     "css_selectors": 463,
     "ignore_previous_rules": 100
   },
-  "skipped_total": 2794,
+  "skipped_total": 2795,
   "skipped_reasons": {
-    "scriptlet ou filtrage HTML": 2117,
+    "scriptlet ou filtrage HTML": 2118,
     "pseudo-classe CSS etendue": 606,
     "modificateur non supporte: $redirect-rule": 24,
     "modificateur non supporte: $redirect": 22,
@@ -58,9 +58,9 @@
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-uBlock-Origin-Annoyances.json",
-    "total": 2726,
+    "total": 2727,
     "counts": {
-      "scriptlets": 2085,
+      "scriptlets": 2086,
       "procedural": 609,
       "styles": 0,
       "html": 32,

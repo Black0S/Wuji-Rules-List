@@ -2,33 +2,33 @@
   "id": "adguard-spanish-portuguese",
   "source_file": "AdGuard-Spanish-Portuguese-filter.txt",
   "source_name": "AdGuard Spanish/Portuguese filter",
-  "source_sha256": "5ca86698958a54adc46d9c10df5106ad250c0d7007b4f1c2831e4473d77cc8df",
+  "source_sha256": "4f9a486f06b1ef5427d6a5d166d6f8f461dff8054d3bb4ce33a1e3f0381dfbfe",
   "source_group": "AdGuard (langues)",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Spanish/Portuguese filter",
-  "source_version": "2.0.35.65",
+  "source_version": "2.0.35.68",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/9.txt",
   "format": "adblock",
-  "converted_at": "2026-09-08T15:02:22+00:00",
+  "converted_at": "2026-09-09T08:57:40+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 6603,
-  "rules_in": 5642,
-  "rules_out": 2734,
+  "lines_total": 6612,
+  "rules_in": 5651,
+  "rules_out": 2736,
   "coverage_pct": 79.35,
   "breakdown": {
     "block": 844,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 1596,
-    "css_selectors": 3340,
+    "css_display_none": 1598,
+    "css_selectors": 3347,
     "ignore_previous_rules": 293
   },
-  "skipped_total": 1076,
+  "skipped_total": 1078,
   "skipped_reasons": {
-    "JavaScript / scriptlet (#%#)": 582,
-    "injection de style / scriptlet (#$#)": 205,
+    "JavaScript / scriptlet (#%#)": 583,
+    "injection de style / scriptlet (#$#)": 206,
     "selecteur CSS etendu (#?#)": 198,
     "modificateur non supporte: $redirect": 66,
     "injection de style etendue (#$?#)": 13,
@@ -47,20 +47,20 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Spanish-Portuguese-filter.json",
-      "rules": 2734,
-      "bytes": 523932
+      "rules": 2736,
+      "bytes": 524322
     }
   ],
-  "rules_emitted": 2734,
+  "rules_emitted": 2736,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-AdGuard-Spanish-Portuguese-filter.json",
-    "total": 965,
+    "total": 967,
     "counts": {
-      "scriptlets": 548,
+      "scriptlets": 549,
       "procedural": 199,
-      "styles": 218,
+      "styles": 219,
       "html": 0,
       "raw_js": 34
     }
