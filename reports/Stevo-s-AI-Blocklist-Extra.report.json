@@ -2,7 +2,7 @@
   "id": "stevo-ai-extra",
   "source_file": "Stevo-s-AI-Blocklist-Extra.txt",
   "source_name": "Stevo's AI Blocklist (Extra)",
-  "source_sha256": "f11ec2ba80ceca85e4ed2125a39e61994294c62d5a721c61de8a937537517853",
+  "source_sha256": "59b1ab6436e546ff50434768968ab02d4358c8d5dd6c3d56313d52e7583a8e0f",
   "source_group": "Stevo's AI Blocklist",
   "source_homepage": "https://github.com/Stevoisiak/Stevos-AI-Blocklist",
   "source_license": "",
@@ -10,13 +10,13 @@
   "source_version": "",
   "source_url": "https://raw.githubusercontent.com/Stevoisiak/Stevos-AI-Blocklist/main/GenAI-Blocklist-Extra.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T09:00:21+00:00",
+  "converted_at": "2026-09-10T08:58:51+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 892,
-  "rules_in": 205,
+  "lines_total": 896,
+  "rules_in": 208,
   "rules_out": 92,
-  "coverage_pct": 84.88,
+  "coverage_pct": 83.65,
   "breakdown": {
     "block": 10,
     "block_document": 0,
@@ -25,12 +25,12 @@
     "css_selectors": 164,
     "ignore_previous_rules": 0
   },
-  "skipped_total": 31,
+  "skipped_total": 34,
   "skipped_reasons": {
     "pseudo-classe CSS etendue": 20,
     "selecteur CSS vide ou trop long": 8,
-    "scriptlet ou filtrage HTML": 2,
-    "JavaScript / scriptlet (#%#)": 1
+    "JavaScript / scriptlet (#%#)": 4,
+    "scriptlet ou filtrage HTML": 2
   },
   "notes": {},
   "outputs": [
@@ -45,9 +45,9 @@
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-Stevo-s-AI-Blocklist-Extra.json",
-    "total": 31,
+    "total": 34,
     "counts": {
-      "scriptlets": 3,
+      "scriptlets": 6,
       "procedural": 28,
       "styles": 0,
       "html": 0,

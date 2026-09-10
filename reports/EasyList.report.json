@@ -2,27 +2,27 @@
   "id": "easylist",
   "source_file": "EasyList.txt",
   "source_name": "EasyList",
-  "source_sha256": "48db359c0946fab0c7716e251e044ddd166c2c75b71528957ea7d2625edb671f",
+  "source_sha256": "3416e9c7e2c3cd79df83193aab4cd27755f16fe26962b06ede2bc7da97e6e6bc",
   "source_group": "EasyList",
   "source_homepage": "https://github.com/easylist/easylist",
   "source_license": "",
   "source_title": "EasyList",
-  "source_version": "202609090839",
+  "source_version": "202609100844",
   "source_url": "https://easylist.to/easylist/easylist.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T08:58:27+00:00",
+  "converted_at": "2026-09-10T08:57:32+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 78828,
-  "rules_in": 78549,
-  "rules_out": 59691,
-  "coverage_pct": 99.1,
+  "lines_total": 79203,
+  "rules_in": 78924,
+  "rules_out": 60062,
+  "coverage_pct": 99.11,
   "breakdown": {
-    "block": 52615,
+    "block": 52982,
     "block_document": 594,
     "block_cookies": 0,
-    "css_display_none": 5726,
-    "css_selectors": 23879,
+    "css_display_none": 5730,
+    "css_selectors": 23887,
     "ignore_previous_rules": 755
   },
   "skipped_total": 372,
@@ -46,11 +46,11 @@
   "outputs": [
     {
       "file": "Webkit-EasyList.json",
-      "rules": 59691,
-      "bytes": 7661477
+      "rules": 60062,
+      "bytes": 7703927
     }
   ],
-  "rules_emitted": 59691,
+  "rules_emitted": 60062,
   "published": true,
   "unpublished_reason": null,
   "extended": {

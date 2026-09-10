@@ -2,33 +2,33 @@
   "id": "adguard-mobile-app-banners",
   "source_file": "AdGuard-Mobile-App-Banners-filter.txt",
   "source_name": "AdGuard Mobile App Banners filter",
-  "source_sha256": "cf5f8b3b55b4b70bb18251d5c7b0f6c2915f7a3b374c71f6b2728c8f652a45c6",
+  "source_sha256": "56fe029430b280fa5547397778a292a40790fdacc7484f72f46b1243c06be8e2",
   "source_group": "AdGuard",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Mobile App Banners filter",
-  "source_version": "2.0.31.95",
+  "source_version": "2.0.31.98",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/20.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T08:57:37+00:00",
+  "converted_at": "2026-09-10T08:56:45+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 4427,
-  "rules_in": 4149,
+  "lines_total": 4429,
+  "rules_in": 4151,
   "rules_out": 2346,
-  "coverage_pct": 78.72,
+  "coverage_pct": 78.7,
   "breakdown": {
     "block": 150,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 2188,
-    "css_selectors": 3109,
+    "css_selectors": 3110,
     "ignore_previous_rules": 7
   },
-  "skipped_total": 880,
+  "skipped_total": 881,
   "skipped_reasons": {
     "injection de style / scriptlet (#$#)": 405,
-    "selecteur CSS etendu (#?#)": 228,
+    "selecteur CSS etendu (#?#)": 229,
     "JavaScript / scriptlet (#%#)": 224,
     "injection de style etendue (#$?#)": 19,
     "prefixe cosmetique sans chemin": 1,
@@ -43,7 +43,7 @@
     {
       "file": "Webkit-AdGuard-Mobile-App-Banners-filter.json",
       "rules": 2346,
-      "bytes": 508500
+      "bytes": 508604
     }
   ],
   "rules_emitted": 2346,
@@ -51,10 +51,10 @@
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-AdGuard-Mobile-App-Banners-filter.json",
-    "total": 868,
+    "total": 869,
     "counts": {
       "scriptlets": 215,
-      "procedural": 229,
+      "procedural": 230,
       "styles": 424,
       "html": 0,
       "raw_js": 9

@@ -2,23 +2,23 @@
   "id": "hagezi-the-world-most-abused-tlds",
   "source_file": "HaGeZi-s-The-World-s-Most-Abused-TLDs.txt",
   "source_name": "HaGeZi's The World's Most Abused TLDs",
-  "source_sha256": "3db2d8fecaee245a973086745af5f495b73dd77cd8f51c76478298490574425e",
+  "source_sha256": "a028be2d9c5c5785d7ed664dc1869db8294123582319742b2999aaaa1ec85ce2",
   "source_group": "HaGeZi",
   "source_homepage": "https://github.com/hagezi/dns-blocklists",
   "source_license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
   "source_title": "HaGeZi's The World's Most Abused TLDs",
-  "source_version": "2026.0904.2128.09",
+  "source_version": "2026.0908.2345.05",
   "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T09:00:08+00:00",
+  "converted_at": "2026-09-10T08:58:40+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 460,
   "rules_in": 445,
-  "rules_out": 1462,
-  "coverage_pct": 328.31,
+  "rules_out": 1463,
+  "coverage_pct": 328.54,
   "breakdown": {
-    "block": 1461,
+    "block": 1462,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -49,7 +49,7 @@
     "$denyallow: 14 exception(s) emises apres le blocage": 1,
     "$denyallow: 27 exception(s) emises apres le blocage": 1,
     "$denyallow: 17 exception(s) emises apres le blocage": 1,
-    "$denyallow: 34 exception(s) emises apres le blocage": 1,
+    "$denyallow: 35 exception(s) emises apres le blocage": 1,
     "$denyallow: 30 exception(s) emises apres le blocage": 1,
     "$denyallow: 38 exception(s) emises apres le blocage": 1,
     "$denyallow: 32 exception(s) emises apres le blocage": 1,
@@ -58,11 +58,11 @@
   "outputs": [
     {
       "file": "Webkit-HaGeZi-s-The-World-s-Most-Abused-TLDs.json",
-      "rules": 1462,
-      "bytes": 172019
+      "rules": 1463,
+      "bytes": 172142
     }
   ],
-  "rules_emitted": 1462,
+  "rules_emitted": 1463,
   "published": true,
   "unpublished_reason": null,
   "extended": {

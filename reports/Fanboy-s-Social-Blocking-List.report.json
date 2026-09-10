@@ -2,27 +2,27 @@
   "id": "fanboy-social-blocking",
   "source_file": "Fanboy-s-Social-Blocking-List.txt",
   "source_name": "Fanboy's Social Blocking List",
-  "source_sha256": "144d6353aa00597b5f536eac797dbc29c163fa4c43cb7bd34ba6eaad9c78144f",
+  "source_sha256": "86675570c862edff62323679acdd9f8e2ee9df4857cd1119079f1ab2b20acb92",
   "source_group": "Fanboy",
   "source_homepage": "https://www.fanboy.co.nz",
   "source_license": "",
   "source_title": "Fanboy's Social Blocking List",
-  "source_version": "202609090852",
+  "source_version": "202609100844",
   "source_url": "https://easylist.to/easylist/fanboy-social.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T08:58:45+00:00",
+  "converted_at": "2026-09-10T08:57:43+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 14062,
-  "rules_in": 13825,
-  "rules_out": 3293,
+  "lines_total": 14069,
+  "rules_in": 13832,
+  "rules_out": 3298,
   "coverage_pct": 98.76,
   "breakdown": {
     "block": 585,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 2626,
-    "css_selectors": 12987,
+    "css_display_none": 2631,
+    "css_selectors": 12994,
     "ignore_previous_rules": 81
   },
   "skipped_total": 48,
@@ -33,11 +33,11 @@
   "outputs": [
     {
       "file": "Webkit-Fanboy-s-Social-Blocking-List.json",
-      "rules": 3293,
-      "bytes": 694885
+      "rules": 3298,
+      "bytes": 695831
     }
   ],
-  "rules_emitted": 3293,
+  "rules_emitted": 3298,
   "published": true,
   "unpublished_reason": null,
   "extended": {

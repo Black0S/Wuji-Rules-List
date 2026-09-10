@@ -2,27 +2,27 @@
   "id": "adguard-japanese",
   "source_file": "AdGuard-Japanese-filter.txt",
   "source_name": "AdGuard Japanese filter",
-  "source_sha256": "bc7fb42186041ade0e0a00b865651867359c55b46392228d31cbbe82e1d35dfd",
+  "source_sha256": "397df1fc614a246e3f256d92f8896f0575f3873845d436fc9a188c7f601bc184",
   "source_group": "AdGuard (langues)",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Japanese filter",
-  "source_version": "2.0.76.34",
+  "source_version": "2.0.76.37",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/7.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T08:57:36+00:00",
+  "converted_at": "2026-09-10T08:56:45+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 12806,
-  "rules_in": 12100,
-  "rules_out": 6023,
+  "lines_total": 12807,
+  "rules_in": 12101,
+  "rules_out": 6024,
   "coverage_pct": 85.8,
   "breakdown": {
     "block": 1682,
     "block_document": 217,
     "block_cookies": 0,
-    "css_display_none": 3840,
-    "css_selectors": 8200,
+    "css_display_none": 3841,
+    "css_selectors": 8201,
     "ignore_previous_rules": 283
   },
   "skipped_total": 1581,
@@ -52,11 +52,11 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Japanese-filter.json",
-      "rules": 6023,
-      "bytes": 1110180
+      "rules": 6024,
+      "bytes": 1110266
     }
   ],
-  "rules_emitted": 6023,
+  "rules_emitted": 6024,
   "published": true,
   "unpublished_reason": null,
   "extended": {

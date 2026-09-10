@@ -2,23 +2,23 @@
   "id": "easyprivacy",
   "source_file": "EasyPrivacy.txt",
   "source_name": "EasyPrivacy",
-  "source_sha256": "89b99d09e5c6ff7255e165499961d746337e6673ba8165da73221e7d8768929f",
+  "source_sha256": "6f8dbdf956e74bd027bb5f1a2e93b92e29aaa300b42c623db061556de8c7bcd9",
   "source_group": "EasyList",
   "source_homepage": "https://github.com/easylist/easylist",
   "source_license": "",
   "source_title": "EasyPrivacy",
-  "source_version": "202609090852",
+  "source_version": "202609100844",
   "source_url": "https://easylist.to/easylist/easyprivacy.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T08:58:37+00:00",
+  "converted_at": "2026-09-10T08:57:39+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 56802,
-  "rules_in": 56031,
-  "rules_out": 55957,
+  "lines_total": 56808,
+  "rules_in": 56037,
+  "rules_out": 55963,
   "coverage_pct": 99.87,
   "breakdown": {
-    "block": 55116,
+    "block": 55122,
     "block_document": 1,
     "block_cookies": 0,
     "css_display_none": 1,
@@ -44,11 +44,11 @@
   "outputs": [
     {
       "file": "Webkit-EasyPrivacy.json",
-      "rules": 55957,
-      "bytes": 6629343
+      "rules": 55963,
+      "bytes": 6630035
     }
   ],
-  "rules_emitted": 55957,
+  "rules_emitted": 55963,
   "published": true,
   "unpublished_reason": null,
   "extended": {

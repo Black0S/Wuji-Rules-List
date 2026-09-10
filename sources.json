@@ -222,7 +222,7 @@
             {
               "id": "adguard-dns",
               "name": "AdGuard DNS filter",
-              "pct": 51
+              "pct": 52
             }
           ]
         },

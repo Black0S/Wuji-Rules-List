@@ -2,27 +2,27 @@
   "id": "adguard-german",
   "source_file": "AdGuard-German-filter.txt",
   "source_name": "AdGuard German filter",
-  "source_sha256": "2e96b4921d051e759013c6ca73f0871ec0cd6cb045c9e30a7b616e9bee180d29",
+  "source_sha256": "b94ed61214e72b020439c7667aa73526dcb246e44ccf64a7ef98266023b9a560",
   "source_group": "AdGuard (langues)",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard German filter",
-  "source_version": "2.0.53.37",
+  "source_version": "2.0.53.39",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/6.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T08:57:35+00:00",
+  "converted_at": "2026-09-10T08:56:44+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 12258,
   "rules_in": 11255,
   "rules_out": 5708,
-  "coverage_pct": 88.8,
+  "coverage_pct": 88.77,
   "breakdown": {
     "block": 2574,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 2633,
-    "css_selectors": 6920,
+    "css_selectors": 6917,
     "ignore_previous_rules": 500
   },
   "skipped_total": 1027,
@@ -30,9 +30,9 @@
     "selecteur CSS etendu (#?#)": 600,
     "JavaScript / scriptlet (#%#)": 188,
     "injection de style / scriptlet (#$#)": 153,
-    "modificateur non supporte: $redirect": 31,
+    "modificateur non supporte: $redirect": 29,
     "injection de style etendue (#$?#)": 20,
-    "regex hors du sous-ensemble WebKit": 11,
+    "regex hors du sous-ensemble WebKit": 13,
     "directive $badfilter (retractation appliquee)": 7,
     "selecteur CSS etendu (#@?#)": 5,
     "regle cosmetique entierement exceptee": 5,
@@ -43,7 +43,7 @@
     "modificateur non supporte: $csp": 1
   },
   "notes": {
-    "doublon fusionne": 110,
+    "doublon fusionne": 113,
     "modificateur sans effet sous WebKit: $important": 10,
     "$path traduit en if-top-url": 4,
     "alternation eclatee en 2 regles": 1,
@@ -53,7 +53,7 @@
     {
       "file": "Webkit-AdGuard-German-filter.json",
       "rules": 5708,
-      "bytes": 989801
+      "bytes": 989631
     }
   ],
   "rules_emitted": 5708,

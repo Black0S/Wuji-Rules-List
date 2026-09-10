@@ -2,7 +2,7 @@
   "id": "ublock-origin",
   "source_file": "uBlock-Origin-Filters.txt",
   "source_name": "uBlock Origin - Filters",
-  "source_sha256": "6ac5bb849af5e98e5f249749e700caf99c8e41e4684111a97cf7e600914d8f51",
+  "source_sha256": "6c155407790f257250bdf7d226d089163123adeedebca7a5f69829a37789f746",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,11 +10,11 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/filters.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T09:00:24+00:00",
+  "converted_at": "2026-09-10T08:58:54+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 41000,
-  "rules_in": 22977,
+  "lines_total": 41003,
+  "rules_in": 22978,
   "rules_out": 9434,
   "coverage_pct": 52.93,
   "breakdown": {
@@ -25,9 +25,9 @@
     "css_selectors": 5819,
     "ignore_previous_rules": 1774
   },
-  "skipped_total": 12014,
+  "skipped_total": 12015,
   "skipped_reasons": {
-    "scriptlet ou filtrage HTML": 9450,
+    "scriptlet ou filtrage HTML": 9451,
     "pseudo-classe CSS etendue": 1097,
     "modificateur non supporte: $redirect": 622,
     "modificateur non supporte: $redirect-rule": 374,
@@ -94,7 +94,7 @@
     {
       "file": "Webkit-uBlock-Origin-Filters.json",
       "rules": 9434,
-      "bytes": 5172688
+      "bytes": 5172685
     }
   ],
   "rules_emitted": 9434,
@@ -102,9 +102,9 @@
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-uBlock-Origin-Filters.json",
-    "total": 10569,
+    "total": 10570,
     "counts": {
-      "scriptlets": 9320,
+      "scriptlets": 9321,
       "procedural": 1118,
       "styles": 0,
       "html": 131,

@@ -10,7 +10,7 @@
   "source_version": "2026.0901.0748.50",
   "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T08:58:53+00:00",
+  "converted_at": "2026-09-10T08:57:47+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
   "lines_total": 1252,

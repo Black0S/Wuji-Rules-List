@@ -2,18 +2,18 @@
   "id": "adguard-russian",
   "source_file": "AdGuard-Russian-filter.txt",
   "source_name": "AdGuard Russian filter",
-  "source_sha256": "3bdbab38d8eee81d87ec3d41b421522ee4b0976e81fe02898b1bb609a31b1855",
+  "source_sha256": "e6233ec8dcb1afb48c392010794339552a5cb3ff3fc8d50863c60071b98599cd",
   "source_group": "AdGuard (langues)",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Russian filter",
-  "source_version": "2.1.8.47",
+  "source_version": "2.1.8.51",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/1.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T08:57:39+00:00",
+  "converted_at": "2026-09-10T08:56:48+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 19789,
+  "lines_total": 19790,
   "rules_in": 17331,
   "rules_out": 10294,
   "coverage_pct": 87.4,
@@ -22,14 +22,14 @@
     "block_document": 3,
     "block_cookies": 0,
     "css_display_none": 4060,
-    "css_selectors": 8914,
+    "css_selectors": 8915,
     "ignore_previous_rules": 682
   },
-  "skipped_total": 2053,
+  "skipped_total": 2052,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 842,
     "injection de style / scriptlet (#$#)": 690,
-    "JavaScript / scriptlet (#%#)": 319,
+    "JavaScript / scriptlet (#%#)": 318,
     "modificateur non supporte: $redirect": 73,
     "injection de style etendue (#$?#)": 67,
     "regex hors du sous-ensemble WebKit": 24,
@@ -68,7 +68,7 @@
     {
       "file": "Webkit-AdGuard-Russian-filter.json",
       "rules": 10294,
-      "bytes": 1669339
+      "bytes": 1669471
     }
   ],
   "rules_emitted": 10294,
@@ -76,9 +76,9 @@
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-AdGuard-Russian-filter.json",
-    "total": 1898,
+    "total": 1897,
     "counts": {
-      "scriptlets": 298,
+      "scriptlets": 297,
       "procedural": 843,
       "styles": 757,
       "html": 0,

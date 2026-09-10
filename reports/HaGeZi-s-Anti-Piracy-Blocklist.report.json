@@ -2,23 +2,23 @@
   "id": "hagezi-anti-piracy",
   "source_file": "HaGeZi-s-Anti-Piracy-Blocklist.txt",
   "source_name": "HaGeZi's Anti-Piracy Blocklist",
-  "source_sha256": "1a0d206b5acec1337d61afc026393309cc37d590f0d25043834ef81b0831859b",
+  "source_sha256": "62d66694f62488f64d7accfb7f5592f0ceb05902d4520b501a11b08987e94ff9",
   "source_group": "HaGeZi",
   "source_homepage": "https://github.com/hagezi/dns-blocklists",
   "source_license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
   "source_title": "HaGeZi's Anti-Piracy - blocks piracy sites!",
-  "source_version": "2026.0908.0840.59",
+  "source_version": "2026.0909.0845.04",
   "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/anti.piracy.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T08:58:52+00:00",
+  "converted_at": "2026-09-10T08:57:47+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 48887,
-  "rules_in": 48874,
-  "rules_out": 48875,
+  "lines_total": 49032,
+  "rules_in": 49019,
+  "rules_out": 49020,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 48874,
+    "block": 49019,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -31,11 +31,11 @@
   "outputs": [
     {
       "file": "Webkit-HaGeZi-s-Anti-Piracy-Blocklist.json",
-      "rules": 48875,
-      "bytes": 5542010
+      "rules": 49020,
+      "bytes": 5557772
     }
   ],
-  "rules_emitted": 48875,
+  "rules_emitted": 49020,
   "published": true,
   "unpublished_reason": null,
   "extended": {

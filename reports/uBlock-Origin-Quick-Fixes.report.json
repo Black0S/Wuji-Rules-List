@@ -2,7 +2,7 @@
   "id": "ublock-origin-quick-fixes",
   "source_file": "uBlock-Origin-Quick-Fixes.txt",
   "source_name": "uBlock Origin - Quick Fixes",
-  "source_sha256": "b3c84d701eb250efa7201d70dd4c5b5bdb350492c60d78390705b0c67f6aa8c1",
+  "source_sha256": "e5f3cdaa0cb8b4722bb7179395560a54a2e10afd9233aaaf6f81cc574195c095",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,24 +10,24 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/quick-fixes.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T09:00:25+00:00",
+  "converted_at": "2026-09-10T08:58:54+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 464,
-  "rules_in": 291,
-  "rules_out": 75,
-  "coverage_pct": 36.43,
+  "lines_total": 468,
+  "rules_in": 296,
+  "rules_out": 76,
+  "coverage_pct": 36.82,
   "breakdown": {
-    "block": 41,
+    "block": 42,
     "block_document": 5,
     "block_cookies": 0,
     "css_display_none": 13,
-    "css_selectors": 45,
+    "css_selectors": 47,
     "ignore_previous_rules": 15
   },
-  "skipped_total": 202,
+  "skipped_total": 204,
   "skipped_reasons": {
-    "scriptlet ou filtrage HTML": 153,
+    "scriptlet ou filtrage HTML": 155,
     "pseudo-classe CSS etendue": 17,
     "modificateur non supporte: $redirect": 10,
     "directive $badfilter (retractation appliquee)": 5,
@@ -49,18 +49,18 @@
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Quick-Fixes.json",
-      "rules": 75,
-      "bytes": 95586
+      "rules": 76,
+      "bytes": 95757
     }
   ],
-  "rules_emitted": 75,
+  "rules_emitted": 76,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-uBlock-Origin-Quick-Fixes.json",
-    "total": 171,
+    "total": 173,
     "counts": {
-      "scriptlets": 150,
+      "scriptlets": 152,
       "procedural": 18,
       "styles": 0,
       "html": 3,

@@ -2,27 +2,27 @@
   "id": "adguard-french",
   "source_file": "AdGuard-French-filter.txt",
   "source_name": "AdGuard French filter",
-  "source_sha256": "ac0308941de10cef07787707e266408a66fc6b25a427a25a262cf7e1fe3758cf",
+  "source_sha256": "9d089afd2f965510e3976ced5936431b478b1ddb65150a4f28f05b1d04e2ec5f",
   "source_group": "AdGuard (langues)",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard French filter",
-  "source_version": "2.0.57.67",
+  "source_version": "2.0.57.70",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/16.txt",
   "format": "adblock",
-  "converted_at": "2026-09-09T08:57:34+00:00",
+  "converted_at": "2026-09-10T08:56:44+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 16427,
-  "rules_in": 15456,
-  "rules_out": 11759,
-  "coverage_pct": 94.26,
+  "lines_total": 16459,
+  "rules_in": 15488,
+  "rules_out": 11791,
+  "coverage_pct": 94.27,
   "breakdown": {
-    "block": 10000,
+    "block": 10031,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 1226,
-    "css_selectors": 4037,
+    "css_display_none": 1227,
+    "css_selectors": 4038,
     "ignore_previous_rules": 532
   },
   "skipped_total": 716,
@@ -49,11 +49,11 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-French-filter.json",
-      "rules": 11759,
-      "bytes": 1641192
+      "rules": 11791,
+      "bytes": 1644847
     }
   ],
-  "rules_emitted": 11759,
+  "rules_emitted": 11791,
   "published": true,
   "unpublished_reason": null,
   "extended": {
