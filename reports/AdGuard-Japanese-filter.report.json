@@ -2,35 +2,35 @@
   "id": "adguard-japanese",
   "source_file": "AdGuard-Japanese-filter.txt",
   "source_name": "AdGuard Japanese filter",
-  "source_sha256": "77c6fff1ca7a3dd2b4548e802646a48d9d6486482e2bc9abf8dc11fa6cd1834c",
+  "source_sha256": "69053fcf047240921634b21b06181ef3dab085bb99a49a4fc365ac0be98d6c4a",
   "source_group": "AdGuard (langues)",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Japanese filter",
-  "source_version": "2.0.76.43",
+  "source_version": "2.0.76.27",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/7.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:54:55+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:17:39+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 12813,
-  "rules_in": 12106,
-  "rules_out": 6026,
-  "coverage_pct": 85.78,
+  "lines_total": 12793,
+  "rules_in": 12087,
+  "rules_out": 6018,
+  "coverage_pct": 85.81,
   "breakdown": {
     "block": 1682,
     "block_document": 217,
     "block_cookies": 0,
-    "css_display_none": 3843,
-    "css_selectors": 8202,
+    "css_display_none": 3835,
+    "css_selectors": 8190,
     "ignore_previous_rules": 283
   },
-  "skipped_total": 1584,
+  "skipped_total": 1578,
   "skipped_reasons": {
-    "selecteur CSS etendu (#?#)": 858,
-    "injection de style / scriptlet (#$#)": 344,
+    "selecteur CSS etendu (#?#)": 856,
+    "injection de style / scriptlet (#$#)": 342,
     "JavaScript / scriptlet (#%#)": 214,
-    "injection de style etendue (#$?#)": 51,
+    "injection de style etendue (#$?#)": 49,
     "$domain inexprimable (regex ou joker)": 43,
     "modificateur non supporte: $redirect": 40,
     "regex hors du sous-ensemble WebKit": 16,
@@ -44,28 +44,30 @@
   "notes": {
     "modificateur sans effet sous WebKit: $all": 28,
     "$path traduit en if-top-url": 25,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 16,
     "modificateur sans effet sous WebKit: $important": 5,
     "domaine ignore (joker ou regex dans $domain)": 4,
     "$denyallow: 4 exception(s) emises apres le blocage": 1,
-    "alternation eclatee en 2 regles": 1
+    "alternation eclatee en 2 regles": 1,
+    "unless-domain abandonne (incompatible avec if-frame-url)": 1
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Japanese-filter.json",
-      "rules": 6026,
-      "bytes": 1110548
+      "rules": 6018,
+      "bytes": 1092222
     }
   ],
-  "rules_emitted": 6026,
+  "rules_emitted": 6018,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-AdGuard-Japanese-filter.json",
-    "total": 1467,
+    "total": 1461,
     "counts": {
       "scriptlets": 213,
-      "procedural": 858,
-      "styles": 396,
+      "procedural": 856,
+      "styles": 392,
       "html": 0,
       "raw_js": 1
     }

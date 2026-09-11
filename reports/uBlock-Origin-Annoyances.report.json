@@ -2,7 +2,7 @@
   "id": "ublock-origin-annoyances",
   "source_file": "uBlock-Origin-Annoyances.txt",
   "source_name": "uBlock Origin - Annoyances",
-  "source_sha256": "2bd418d7ad60e0bb86e01e4bb6b2cfe479db09446f973879549f5a486f11df53",
+  "source_sha256": "db2375507533a575456c48c8acc1b03c1ffbe7e9d419819d95b6e6bc1938c0a8",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,13 +10,13 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/annoyances.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:57:27+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:20:28+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 8011,
-  "rules_in": 3520,
+  "lines_total": 8004,
+  "rules_in": 3517,
   "rules_out": 587,
-  "coverage_pct": 19.86,
+  "coverage_pct": 19.87,
   "breakdown": {
     "block": 136,
     "block_document": 0,
@@ -25,9 +25,9 @@
     "css_selectors": 463,
     "ignore_previous_rules": 100
   },
-  "skipped_total": 2797,
+  "skipped_total": 2794,
   "skipped_reasons": {
-    "scriptlet ou filtrage HTML": 2120,
+    "scriptlet ou filtrage HTML": 2117,
     "pseudo-classe CSS etendue": 606,
     "modificateur non supporte: $redirect-rule": 24,
     "modificateur non supporte: $redirect": 22,
@@ -43,6 +43,7 @@
     "injection de style (non supportee)": 1
   },
   "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 16,
     "modificateur sans effet sous WebKit: $important": 2,
     "modificateur sans effet sous WebKit: $all": 1
   },
@@ -50,7 +51,7 @@
     {
       "file": "Webkit-uBlock-Origin-Annoyances.json",
       "rules": 587,
-      "bytes": 106038
+      "bytes": 92050
     }
   ],
   "rules_emitted": 587,
@@ -58,9 +59,9 @@
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-uBlock-Origin-Annoyances.json",
-    "total": 2729,
+    "total": 2726,
     "counts": {
-      "scriptlets": 2088,
+      "scriptlets": 2085,
       "procedural": 609,
       "styles": 0,
       "html": 32,

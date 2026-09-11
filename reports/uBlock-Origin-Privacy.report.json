@@ -2,7 +2,7 @@
   "id": "ublock-origin-privacy",
   "source_file": "uBlock-Origin-Privacy.txt",
   "source_name": "uBlock Origin - Privacy",
-  "source_sha256": "d5dbdf5cf1b2b73aad72ed7032f8cff2dc8decfe81048f208330d0a146612525",
+  "source_sha256": "9a3f2531b5bd773622acea973e904ab5e98742a9c10b717eb90475461f994989",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,31 +10,30 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/privacy.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:57:31+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:20:31+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 3463,
-  "rules_in": 1798,
-  "rules_out": 927,
-  "coverage_pct": 51.61,
+  "lines_total": 3460,
+  "rules_in": 1797,
+  "rules_out": 933,
+  "coverage_pct": 51.98,
   "breakdown": {
-    "block": 907,
+    "block": 913,
     "block_document": 5,
     "block_cookies": 0,
     "css_display_none": 11,
     "css_selectors": 13,
     "ignore_previous_rules": 3
   },
-  "skipped_total": 870,
+  "skipped_total": 863,
   "skipped_reasons": {
     "scriptlet ou filtrage HTML": 332,
     "modificateur non supporte: $removeparam": 212,
     "modificateur non supporte: $urlskip": 197,
-    "modificateur non supporte: $redirect": 38,
+    "modificateur non supporte: $redirect": 39,
     "modificateur non supporte: $to": 23,
     "modificateur non supporte: $csp": 18,
     "modificateur non supporte: $uritransform": 9,
-    "modificateur non supporte: $method": 8,
     "directive $badfilter (retractation appliquee)": 6,
     "regex hors du sous-ensemble WebKit": 6,
     "modificateur non supporte: $strict3p": 5,
@@ -48,16 +47,18 @@
     "modificateur non supporte: $replace": 1
   },
   "notes": {
-    "modificateur sans effet sous WebKit: $important": 17
+    "modificateur sans effet sous WebKit: $important": 17,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 1,
+    "$domain traduit en if-frame-url (Safari 26+)": 1
   },
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Privacy.json",
-      "rules": 927,
-      "bytes": 118371
+      "rules": 933,
+      "bytes": 113625
     }
   ],
-  "rules_emitted": 927,
+  "rules_emitted": 933,
   "published": true,
   "unpublished_reason": null,
   "extended": {

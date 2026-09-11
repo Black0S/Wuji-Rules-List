@@ -83,9 +83,9 @@ check("alternation eclatee", len(rules_of(b)) == 2, str(len(rules_of(b))))
 c, _, _ = convert("/(a|b)+/")
 check("alternation sous quantificateur refusee", bool(c.skipped))
 
-c, b, _ = convert("flixscans.*##.pub")
+c, b, _ = convert("flixscans.*##.pub", safari_version=15)
 doms = rules_of(b, "css-display-none")[0]["trigger"]["if-domain"]
-check("joker de TLD etendu", len(doms) > 20, str(len(doms)))
+check("joker de TLD etendu (Safari < 26)", len(doms) > 20, str(len(doms)))
 
 c, b, _ = convert("||p.com^$dnsrewrite=ad-block.dns.adguard.com")
 check("$dnsrewrite bloquant -> block", len(rules_of(b)) == 1)
@@ -102,8 +102,64 @@ check("denyallow: blocage puis exceptions", kinds[:4] ==
       ["block", "ignore-previous-rules", "ignore-previous-rules", "block"], str(kinds[:4]))
 check("denyallow: groupe atomique", c.atomic and c.atomic[0][1] == 3, str(c.atomic))
 
+# l'exception ne doit lever le blocage que pour ce qui correspond AUSSI au motif
+check("denyallow: motif combine au domaine",
+      cw.denyallow_patterns("cdn.com", "/banner.png")
+      == ["||cdn.com/banner.png", "||cdn.com/*/banner.png"],
+      str(cw.denyallow_patterns("cdn.com", "/banner.png")))
+check("denyallow: motif generique -> domaine entier",
+      cw.denyallow_patterns("cdn.com", "*") == ["||cdn.com^"])
+check("denyallow: motif deja ancre -> repli sur le domaine",
+      cw.denyallow_patterns("cdn.com", "||autre.com/x") == ["||cdn.com^"])
+c, b, _ = convert("/banner.png$image,denyallow=cdn.com,domain=site.org")
+exc = [r["trigger"]["url-filter"] for r in b if r["action"]["type"] == "ignore-previous-rules"
+       and r["trigger"]["url-filter"] != ".*"]
+check("denyallow: exceptions portent le chemin", exc and all("banner" in e for e in exc), str(exc))
+c, _, _ = convert("*$script,denyallow=y.com")
+check("denyallow generique sans $domain refuse",
+      any("generique sans $domain" in k for k in c.skipped))
+c, b, _ = convert("||ubuntu.org^$denyallow=autre.com")
+check("denyallow sur motif ancre accepte sans $domain", bool(rules_of(b)), str(c.skipped))
+
 c, b, _ = convert(["||ads.com^$third-party", "||ads.com^$third-party,badfilter"])
 check("$badfilter applique", not rules_of(b))
+
+# --- profil Safari 26 : if-frame-url et request-method ----------------------
+c, b, _ = convert("flixscans.*##.pub")
+t = rules_of(b, "css-display-none")[0]["trigger"]
+check("joker de TLD -> if-frame-url", "if-frame-url" in t and "flixscans" in t["if-frame-url"][0],
+      json.dumps(t)[:90])
+
+c, b, _ = convert("flixscans.*##.pub", safari_version=15)
+t = rules_of(b, "css-display-none")[0]["trigger"]
+check("Safari 15: repli sur l'expansion de TLD",
+      "if-domain" in t and len(t["if-domain"]) > 20, json.dumps(t)[:70])
+
+c, b, _ = convert(r"||b.com^$domain=/^ads[0-9]+\.com$/")
+t = rules_of(b)[0]["trigger"]
+check("$domain=/regex/ -> if-frame-url", "if-frame-url" in t)
+check("regex de domaine: $ final remplace", not t["if-frame-url"][0].endswith("$"),
+      t["if-frame-url"][0])
+
+check("alternation dans $domain eclatee",
+      len(cw.domain_to_frame_regex("/bad(a|b)/")) == 2)
+check("regex de domaine non supportee ignoree",
+      cw.domain_to_frame_regex("/im{2}possible/") == [])
+
+c, b, _ = convert("||a.com^$method=get")
+check("$method -> request-method", rules_of(b)[0]["trigger"].get("request-method") == "get")
+c, _, _ = convert("||a.com^$method=~get")
+check("$method negatif refuse", bool(c.skipped))
+c, _, _ = convert("||a.com^$method=get", safari_version=15)
+check("$method refuse sous Safari 26", bool(c.skipped))
+
+for line in ("flixscans.*##.pub", r"||b.com^$domain=/^ads\.com$/"):
+    c, b, t = convert(line)
+    for r in b + t:
+        n = sum(1 for k in ("if-domain", "unless-domain", "if-top-url",
+                            "unless-top-url", "if-frame-url", "unless-frame-url")
+                if k in r["trigger"])
+        check("if-frame-url compte comme condition unique", n <= 1, line)
 
 # --- cosmetique --------------------------------------------------------------
 c, b, _ = convert("site.com##div:has(> .ad)")

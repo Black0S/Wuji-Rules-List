@@ -2,28 +2,28 @@
   "id": "easylist",
   "source_file": "EasyList.txt",
   "source_name": "EasyList",
-  "source_sha256": "6974a010ffe035906d0e868f4f0a57d381945c1088a39e989eae61d6b65a790e",
+  "source_sha256": "22395d2b0d1ea8a9ab4841248276dcee6b7a7889dd5656e3dc7c0b788b7d4a22",
   "source_group": "EasyList",
   "source_homepage": "https://github.com/easylist/easylist",
   "source_license": "",
   "source_title": "EasyList",
-  "source_version": "202609110847",
+  "source_version": "202609072335",
   "source_url": "https://easylist.to/easylist/easylist.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:55:46+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:18:30+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 79544,
-  "rules_in": 79265,
-  "rules_out": 60403,
-  "coverage_pct": 99.11,
+  "lines_total": 78347,
+  "rules_in": 78068,
+  "rules_out": 59213,
+  "coverage_pct": 99.1,
   "breakdown": {
-    "block": 53322,
+    "block": 52137,
     "block_document": 594,
     "block_cookies": 0,
-    "css_display_none": 5730,
-    "css_selectors": 23887,
-    "ignore_previous_rules": 756
+    "css_display_none": 5726,
+    "css_selectors": 23876,
+    "ignore_previous_rules": 755
   },
   "skipped_total": 372,
   "skipped_reasons": {
@@ -39,18 +39,20 @@
     "domaine cosmetique non exprimable (joker de TLD)": 2
   },
   "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 283,
     "domaine ignore (joker) dans une regle cosmetique": 2,
     "doublon fusionne": 1,
-    "alternation eclatee en 4 regles": 1
+    "alternation eclatee en 4 regles": 1,
+    "unless-domain abandonne (incompatible avec if-frame-url)": 1
   },
   "outputs": [
     {
       "file": "Webkit-EasyList.json",
-      "rules": 60403,
-      "bytes": 7742558
+      "rules": 59213,
+      "bytes": 7489916
     }
   ],
-  "rules_emitted": 60403,
+  "rules_emitted": 59213,
   "published": true,
   "unpublished_reason": null,
   "extended": {

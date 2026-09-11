@@ -2,7 +2,7 @@
   "id": "ublock-origin-unbreak",
   "source_file": "uBlock-Origin-Unbreak.txt",
   "source_name": "uBlock Origin - Unbreak",
-  "source_sha256": "27fc34365097f1e46a3627838edfbad6ae0a5b025ebf1fcbc13bd596a134455c",
+  "source_sha256": "2228c7b073a6bbc9cbeecfd03e5e69ee529d90ecf9c0cd7517aab4abb8def832",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,20 +10,20 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/unbreak.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:57:31+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:20:31+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 5980,
-  "rules_in": 2529,
-  "rules_out": 1392,
-  "coverage_pct": 56.03,
+  "lines_total": 5981,
+  "rules_in": 2530,
+  "rules_out": 1393,
+  "coverage_pct": 56.05,
   "breakdown": {
     "block": 148,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 60,
     "css_selectors": 86,
-    "ignore_previous_rules": 1183
+    "ignore_previous_rules": 1184
   },
   "skipped_total": 973,
   "skipped_reasons": {
@@ -39,23 +39,24 @@
     "modificateur inconnu: $rewrite": 2,
     "modificateur non supporte: $to": 2,
     "modificateur non supporte: $strict1p": 2,
-    "modificateur non supporte: $method": 1,
+    "modificateur non supporte: $uritransform": 1,
     "modificateur non supporte: $inline-script": 1,
     "modificateur non supporte: $permissions": 1,
     "modificateur non supporte: $replace": 1
   },
   "notes": {
     "modificateur sans effet sous WebKit: $important": 73,
+    "$domain traduit en if-frame-url (Safari 26+)": 17,
     "modificateur sans effet sous WebKit: $all": 1
   },
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Unbreak.json",
-      "rules": 1392,
-      "bytes": 322877
+      "rules": 1393,
+      "bytes": 269764
     }
   ],
-  "rules_emitted": 1392,
+  "rules_emitted": 1393,
   "published": true,
   "unpublished_reason": null,
   "extended": {

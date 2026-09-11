@@ -2,7 +2,7 @@
   "id": "ublock-origin-badware-risks",
   "source_file": "uBlock-Origin-Badware-risks.txt",
   "source_name": "uBlock Origin - Badware risks",
-  "source_sha256": "fd93cd4c328af002af8246d8ea21f1242e90b9b1a47082ea98996d8420c95f70",
+  "source_sha256": "65b5952a8996fc47283c02eb18bc06e5e9e5c643b4dfb7fe1272fab8010b2a72",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,30 +10,29 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/badware.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:57:28+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:20:28+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 6478,
-  "rules_in": 4368,
-  "rules_out": 3946,
-  "coverage_pct": 91.9,
+  "lines_total": 6466,
+  "rules_in": 4362,
+  "rules_out": 3943,
+  "coverage_pct": 91.95,
   "breakdown": {
-    "block": 1587,
-    "block_document": 2334,
+    "block": 1583,
+    "block_document": 2335,
     "block_cookies": 0,
     "css_display_none": 23,
     "css_selectors": 92,
     "ignore_previous_rules": 1
   },
-  "skipped_total": 346,
+  "skipped_total": 343,
   "skipped_reasons": {
-    "modificateur non supporte: $to": 246,
+    "modificateur non supporte: $to": 252,
     "modificateur non supporte: $ipaddress": 27,
     "scriptlet ou filtrage HTML": 19,
     "pseudo-classe CSS etendue": 14,
     "regex hors du sous-ensemble WebKit": 12,
-    "modificateur non supporte: $reason": 8,
-    "modificateur non supporte: $method": 7,
+    "modificateur non supporte: $reason": 6,
     "modificateur non supporte: $strict1p": 4,
     "domaine cosmetique non exprimable (joker de TLD)": 3,
     "modificateur non supporte: $strict3p": 2,
@@ -43,7 +42,7 @@
     "modificateur non supporte: $header": 1
   },
   "notes": {
-    "modificateur sans effet sous WebKit: $all": 1359,
+    "modificateur sans effet sous WebKit: $all": 1357,
     "doublon fusionne": 8,
     "domaine ignore (joker) dans une regle cosmetique": 3,
     "domaine ignore (joker ou regex dans $domain)": 1
@@ -51,11 +50,11 @@
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Badware-risks.json",
-      "rules": 3946,
-      "bytes": 517616
+      "rules": 3943,
+      "bytes": 517289
     }
   ],
-  "rules_emitted": 3946,
+  "rules_emitted": 3943,
   "published": true,
   "unpublished_reason": null,
   "extended": {

@@ -2,7 +2,7 @@
   "id": "easylist-cookie",
   "source_file": "EasyList-Cookie-List.txt",
   "source_name": "EasyList Cookie List",
-  "source_sha256": "fa0822f2832d0a4ef4c3d8f044ce786d73273432472c6540f2ef15c7b7a069fa",
+  "source_sha256": "454665ad6cc564cada1b5673cd486e1ec65c372efa005f3a4c959744b7738278",
   "source_group": "EasyList",
   "source_homepage": "https://github.com/easylist/easylist",
   "source_license": "http://creativecommons.org/licenses/by/3.0/",
@@ -10,49 +10,52 @@
   "source_version": "",
   "source_url": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:55:38+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:18:22+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 29040,
-  "rules_in": 27961,
-  "rules_out": 9425,
+  "lines_total": 29033,
+  "rules_in": 27955,
+  "rules_out": 9419,
   "coverage_pct": 89.46,
   "breakdown": {
     "block": 1678,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 7318,
-    "css_selectors": 22907,
+    "css_display_none": 7312,
+    "css_selectors": 22902,
     "ignore_previous_rules": 428
   },
-  "skipped_total": 2666,
+  "skipped_total": 2665,
   "skipped_reasons": {
     "scriptlet ou filtrage HTML": 2445,
-    "pseudo-classe CSS etendue": 160,
+    "pseudo-classe CSS etendue": 159,
     "selecteur CSS etendu (#?#)": 57,
     "regle cosmetique entierement exceptee": 2,
     "injection de style (non supportee)": 2
   },
   "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 25,
+    "$domain traduit en if-frame-url (Safari 26+)": 4,
     "doublon fusionne": 2,
+    "unless-domain abandonne (incompatible avec if-frame-url)": 1,
     "modificateur sans effet sous WebKit: $important": 1
   },
   "outputs": [
     {
       "file": "Webkit-EasyList-Cookie-List.json",
-      "rules": 9425,
-      "bytes": 1881026
+      "rules": 9419,
+      "bytes": 1867639
     }
   ],
-  "rules_emitted": 9425,
+  "rules_emitted": 9419,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-EasyList-Cookie-List.json",
-    "total": 2664,
+    "total": 2663,
     "counts": {
       "scriptlets": 2445,
-      "procedural": 219,
+      "procedural": 218,
       "styles": 0,
       "html": 0,
       "raw_js": 0

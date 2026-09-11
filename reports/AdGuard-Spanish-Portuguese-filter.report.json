@@ -2,33 +2,33 @@
   "id": "adguard-spanish-portuguese",
   "source_file": "AdGuard-Spanish-Portuguese-filter.txt",
   "source_name": "AdGuard Spanish/Portuguese filter",
-  "source_sha256": "31e8a4ca4120775c29dd36941c444b1d7558f0b8f3a62eb7cbc946a19471027a",
+  "source_sha256": "5ca86698958a54adc46d9c10df5106ad250c0d7007b4f1c2831e4473d77cc8df",
   "source_group": "AdGuard (langues)",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Spanish/Portuguese filter",
-  "source_version": "2.0.35.72",
+  "source_version": "2.0.35.65",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/9.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:55:00+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:17:42+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 6626,
-  "rules_in": 5664,
-  "rules_out": 2741,
-  "coverage_pct": 79.33,
+  "lines_total": 6603,
+  "rules_in": 5642,
+  "rules_out": 2734,
+  "coverage_pct": 79.35,
   "breakdown": {
-    "block": 846,
+    "block": 844,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 1601,
-    "css_selectors": 3354,
+    "css_display_none": 1596,
+    "css_selectors": 3340,
     "ignore_previous_rules": 293
   },
-  "skipped_total": 1082,
+  "skipped_total": 1076,
   "skipped_reasons": {
-    "JavaScript / scriptlet (#%#)": 586,
-    "injection de style / scriptlet (#$#)": 207,
+    "JavaScript / scriptlet (#%#)": 582,
+    "injection de style / scriptlet (#$#)": 205,
     "selecteur CSS etendu (#?#)": 198,
     "modificateur non supporte: $redirect": 66,
     "injection de style etendue (#$?#)": 13,
@@ -40,6 +40,8 @@
     "caractere de controle dans le selecteur": 1
   },
   "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 28,
+    "$domain traduit en if-frame-url (Safari 26+)": 8,
     "modificateur sans effet sous WebKit: $important": 4,
     "modificateur sans effet sous WebKit: $all": 3,
     "doublon fusionne": 3
@@ -47,20 +49,20 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Spanish-Portuguese-filter.json",
-      "rules": 2741,
-      "bytes": 525072
+      "rules": 2734,
+      "bytes": 452631
     }
   ],
-  "rules_emitted": 2741,
+  "rules_emitted": 2734,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-AdGuard-Spanish-Portuguese-filter.json",
-    "total": 971,
+    "total": 965,
     "counts": {
-      "scriptlets": 552,
+      "scriptlets": 548,
       "procedural": 199,
-      "styles": 220,
+      "styles": 218,
       "html": 0,
       "raw_js": 34
     }

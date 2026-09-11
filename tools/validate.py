@@ -20,13 +20,17 @@ import sys
 
 TRIGGER_KEYS = frozenset((
     "url-filter", "url-filter-is-case-sensitive", "if-domain", "unless-domain",
-    "if-top-url", "unless-top-url", "resource-type", "load-type", "load-context"))
+    "if-top-url", "unless-top-url", "if-frame-url", "unless-frame-url",
+    "resource-type", "load-type", "load-context", "request-method"))
 ACTIONS = frozenset((
     "block", "block-cookies", "css-display-none", "ignore-previous-rules", "make-https"))
 RESOURCE = frozenset((
     "document", "image", "style-sheet", "script", "font", "media", "popup",
     "raw", "svg-document", "fetch", "websocket", "ping", "other"))
-CONDITIONS = ("if-domain", "unless-domain", "if-top-url", "unless-top-url")
+CONDITIONS = ("if-domain", "unless-domain", "if-top-url", "unless-top-url",
+              "if-frame-url", "unless-frame-url")
+HTTP_METHODS = frozenset((
+    "get", "head", "options", "trace", "put", "delete", "post", "patch", "connect"))
 BAD_REGEX = ("{", "}", "(?", "\\d", "\\w", "\\s", "\\D", "\\W", "\\S",
              "\\b", "\\B", "*?", "+?", "??", "|")
 WEBKIT_MAX_RULES = 150000
@@ -96,7 +100,7 @@ def check_file(path, errors):
             for dom in trigger.get(key, ()):
                 if not dom.isascii() or dom != dom.lower():
                     fail("domaine non normalise"); break
-        for key in ("if-top-url", "unless-top-url"):
+        for key in ("if-top-url", "unless-top-url", "if-frame-url", "unless-frame-url"):
             for rx in trigger.get(key, ()):
                 if not rx or not rx.isascii() or misplaced_anchor(rx) \
                         or any(t in rx for t in BAD_REGEX):
@@ -110,6 +114,9 @@ def check_file(path, errors):
         lc = trigger.get("load-context")
         if lc and not {"top-frame", "child-frame"}.issuperset(lc):
             fail("load-context invalide")
+        rm = trigger.get("request-method")
+        if rm is not None and rm not in HTTP_METHODS:
+            fail("request-method invalide")
         kind = action.get("type")
         if kind not in ACTIONS:
             fail("action invalide")

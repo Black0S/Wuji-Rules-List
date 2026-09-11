@@ -12,9 +12,9 @@ sources.json ──> fetch_filters.py ──> filters/ ──> convert_webkit.py
 |---|---|
 | Listes au catalogue | **71** dans 11 groupes, toutes publiées |
 | Fichiers WebKit générés | **79** |
-| Règles WebKit | **1 856 029** distinctes (1 860 656 émises) |
+| Règles WebKit | **1 855 568** distinctes (1 860 197 émises) |
 | Entrées sources analysées | **2 104 242** |
-| Entrées non convertibles | **68 437** (détail dans `reports/CONVERSION.md`) |
+| Entrées non convertibles | **68 482** (détail dans `reports/CONVERSION.md`) |
 | Règles consignées pour un moteur à injection | **58 675** (`webkit-rules/extended/`) |
 
 > Publié sur la branche **`dist`**, réécrite à chaque exécution, après
@@ -119,6 +119,7 @@ JSON produit ne peut faire échouer la compilation Safari.
 ```bash
 python3 convert_webkit.py
 python3 convert_webkit.py --only AdGuard-Base --pretty
+python3 convert_webkit.py --safari-version 15   # cible une version anterieure
 python3 convert_webkit.py --legacy               # profil WebKit ancien
 python3 convert_webkit.py --no-has               # exclure :has() (Safari < 16.4)
 ```
@@ -148,7 +149,9 @@ qui seraient sinon perdues.
 | `règle$badfilter` | **rétractation appliquée** : la règle visée est retirée de la sortie |
 | `$dnsrewrite=` vers une adresse de blocage | traduit en `block` (réécrire vers le trou noir d'un résolveur *est* un blocage) |
 | `[$path=/x]domaine##sélecteur` | `if-top-url` encodant domaine **et** chemin — une seule condition, comme l'exige WebKit |
-| `$denyallow=a\|b` | le blocage, suivi d'une exception par domaine placée **juste après** lui |
+| `$denyallow=a\|b` | le blocage, suivi d'exceptions combinant chaque domaine **au motif d'origine**, placées juste après lui |
+| `exemple.*` (tout TLD), `$domain=/regex/` | `if-frame-url` — Safari 26+ ; sinon repli sur l'expansion de ~115 TLD |
+| `$method=get` | `request-method` — Safari 26+ ; une seule méthode, négation non supportée |
 | `\d` `\w` `\s` | réécrits en `[0-9]`, `[a-zA-Z0-9_]`, `[ ]` (synonymes exacts) |
 | `/(a\|b)/` alternation | éclatée en N règles distinctes (WebKit ne sait pas faire de disjonction) |
 | `exemple.*` joker de TLD | étendu vers ~115 extensions réellement rencontrées |
@@ -310,6 +313,21 @@ ignoré, une seule règle fautive rend **tout le fichier** inutilisable dans
 Safari. C'est ce qui rend `make verify` nécessaire.
 
 ---
+
+## Version de Safari visée
+
+`--safari-version` (défaut **26**) gouverne les capacités récentes du moteur,
+toutes établies par `tools/wk_probe.swift` sur le compilateur réel :
+
+| Capacité | Sans elle |
+|---|---|
+| `if-frame-url` / `unless-frame-url` | `exemple.*` retombe sur l'expansion de ~115 TLD, `$domain=/regex/` est perdu |
+| `request-method` | `$method` est écarté |
+
+Sur ce catalogue, viser 26 traduit **3 546** jokers de TLD et **410** `$domain`
+en regex exactes, et fait passer de 3 188 à 451 le nombre de règles portant un
+tableau de plus de 50 domaines. En contrepartie, la sortie exige Safari 26+ :
+`--safari-version 15` couvre plus large au prix de ces règles.
 
 ## Redondance : le champ `covered_by`
 

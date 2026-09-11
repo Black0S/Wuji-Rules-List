@@ -10,8 +10,8 @@
   "source_version": "2.0.9.23",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/23.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:55:33+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:18:16+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
   "lines_total": 6017,
   "rules_in": 5478,
@@ -43,6 +43,7 @@
   },
   "notes": {
     "modificateur sans effet sous WebKit: $all": 30,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 9,
     "doublon fusionne": 4,
     "alternation eclatee en 3 regles": 3,
     "alternation eclatee en 6 regles": 1,
@@ -53,7 +54,7 @@
     {
       "file": "Webkit-AdGuard-Ukrainian-filter.json",
       "rules": 3986,
-      "bytes": 538514
+      "bytes": 532411
     }
   ],
   "rules_emitted": 3986,

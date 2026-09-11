@@ -2,7 +2,7 @@
   "id": "phishing-army",
   "source_file": "Phishing-Army.txt",
   "source_name": "Phishing Army",
-  "source_sha256": "344b0cf69891617d610ce0fb6805819913b764aa5ab2fb663064e47b34be8faf",
+  "source_sha256": "1b7639388bed413984f513849b4c0bf4325235073058a46752c7d5c571566722",
   "source_group": "Phishing Army",
   "source_homepage": "https://phishing.army/",
   "source_license": "",
@@ -10,15 +10,15 @@
   "source_version": "",
   "source_url": "https://phishing.army/download/phishing_army_blocklist_extended.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:57:25+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:20:25+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 155350,
-  "rules_in": 155337,
-  "rules_out": 155338,
+  "lines_total": 156857,
+  "rules_in": 156844,
+  "rules_out": 156845,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 155337,
+    "block": 156844,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -32,15 +32,15 @@
     {
       "file": "Webkit-Phishing-Army-1.json",
       "rules": 150000,
-      "bytes": 11747884
+      "bytes": 11751121
     },
     {
       "file": "Webkit-Phishing-Army-2.json",
-      "rules": 5338,
-      "bytes": 400589
+      "rules": 6845,
+      "bytes": 520977
     }
   ],
-  "rules_emitted": 155338,
+  "rules_emitted": 156845,
   "published": true,
   "unpublished_reason": null,
   "extended": {

@@ -2,23 +2,23 @@
   "id": "hagezi-normal",
   "source_file": "HaGeZi-s-Normal-Blocklist.txt",
   "source_name": "HaGeZi's Normal Blocklist",
-  "source_sha256": "e14d60d57c4826aaf5d8685532a5afb40a92c94a153e1514ff5923db125f840c",
+  "source_sha256": "4cba846c0f97023af9b5ff22dcf2652bc6c684bd16b999dbaf13aa974649dada",
   "source_group": "HaGeZi",
   "source_homepage": "https://github.com/hagezi/dns-blocklists",
   "source_license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
   "source_title": "HaGeZi's Multi NORMAL - all-round protection",
-  "source_version": "2026.0910.0824.30",
+  "source_version": "2026.0907.0805.53",
   "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:57:14+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:20:12+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 181655,
-  "rules_in": 181641,
-  "rules_out": 181642,
+  "lines_total": 191653,
+  "rules_in": 191639,
+  "rules_out": 191640,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 181641,
+    "block": 191639,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -32,15 +32,15 @@
     {
       "file": "Webkit-HaGeZi-s-Normal-Blocklist-1.json",
       "rules": 150000,
-      "bytes": 17145111
+      "bytes": 17304908
     },
     {
       "file": "Webkit-HaGeZi-s-Normal-Blocklist-2.json",
-      "rules": 31642,
-      "bytes": 3513073
+      "rules": 41640,
+      "bytes": 4626813
     }
   ],
-  "rules_emitted": 181642,
+  "rules_emitted": 191640,
   "published": true,
   "unpublished_reason": null,
   "extended": {

@@ -2,28 +2,28 @@
   "id": "adguard-widgets",
   "source_file": "AdGuard-Widgets-filter.txt",
   "source_name": "AdGuard Widgets filter",
-  "source_sha256": "b4ae217388afd55e8adef3e999a92bf8df7141ad86447c7a8417b730d09393b1",
+  "source_sha256": "a77497d633009fee2754e80a97ffc6958704096e0063f0236930c77c6e93d4d8",
   "source_group": "AdGuard",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Widgets filter",
-  "source_version": "2.0.14.88",
+  "source_version": "2.0.14.85",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/22.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:55:33+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:18:16+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 2957,
-  "rules_in": 2667,
-  "rules_out": 1816,
-  "coverage_pct": 92.54,
+  "lines_total": 2953,
+  "rules_in": 2665,
+  "rules_out": 1814,
+  "coverage_pct": 92.53,
   "breakdown": {
-    "block": 802,
+    "block": 801,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 978,
     "css_selectors": 1631,
-    "ignore_previous_rules": 35
+    "ignore_previous_rules": 34
   },
   "skipped_total": 197,
   "skipped_reasons": {
@@ -38,17 +38,18 @@
   },
   "notes": {
     "$path traduit en if-top-url": 9,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 3,
     "modificateur sans effet sous WebKit: $important": 3,
     "doublon fusionne": 2
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Widgets-filter.json",
-      "rules": 1816,
-      "bytes": 300335
+      "rules": 1814,
+      "bytes": 290656
     }
   ],
-  "rules_emitted": 1816,
+  "rules_emitted": 1814,
   "published": true,
   "unpublished_reason": null,
   "extended": {

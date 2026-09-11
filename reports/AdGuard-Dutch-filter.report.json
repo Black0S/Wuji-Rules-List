@@ -10,8 +10,8 @@
   "source_version": "2.0.9.44",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/8.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:54:51+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:17:36+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
   "lines_total": 2182,
   "rules_in": 1967,
@@ -38,13 +38,14 @@
   },
   "notes": {
     "doublon fusionne": 29,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 2,
     "modificateur sans effet sous WebKit: $important": 2
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Dutch-filter.json",
       "rules": 1240,
-      "bytes": 191237
+      "bytes": 189173
     }
   ],
   "rules_emitted": 1240,

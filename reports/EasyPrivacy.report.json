@@ -2,30 +2,30 @@
   "id": "easyprivacy",
   "source_file": "EasyPrivacy.txt",
   "source_name": "EasyPrivacy",
-  "source_sha256": "069bbb89b1f308538065f7606cdb07a11b54439ababd7a2603e56bd3e24b52d4",
+  "source_sha256": "473aca651201ae910fcdc45cd7b3ff20de439209b4de9d77b27f9b61415fc926",
   "source_group": "EasyList",
   "source_homepage": "https://github.com/easylist/easylist",
   "source_license": "",
   "source_title": "EasyPrivacy",
-  "source_version": "202609110840",
+  "source_version": "202609072335",
   "source_url": "https://easylist.to/easylist/easyprivacy.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:55:53+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:18:37+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 56812,
-  "rules_in": 56041,
-  "rules_out": 55967,
+  "lines_total": 56797,
+  "rules_in": 56026,
+  "rules_out": 55953,
   "coverage_pct": 99.87,
   "breakdown": {
-    "block": 55126,
+    "block": 55112,
     "block_document": 1,
     "block_cookies": 0,
     "css_display_none": 1,
     "css_selectors": 2,
     "ignore_previous_rules": 838
   },
-  "skipped_total": 72,
+  "skipped_total": 71,
   "skipped_reasons": {
     "scriptlet ou filtrage HTML": 29,
     "modificateur non supporte: $redirect": 27,
@@ -33,22 +33,22 @@
     "pseudo-classe CSS etendue": 4,
     "modificateur non supporte: $csp": 2,
     "modificateur inconnu: $rewrite": 1,
-    "modificateur non supporte: $method": 1,
     "modificateur non supporte: $redirect-rule": 1
   },
   "notes": {
     "modificateur sans effet sous WebKit: $important": 10,
     "doublon fusionne": 2,
-    "domaine ignore (joker ou regex dans $domain)": 2
+    "domaine ignore (joker ou regex dans $domain)": 2,
+    "$domain traduit en if-frame-url (Safari 26+)": 1
   },
   "outputs": [
     {
       "file": "Webkit-EasyPrivacy.json",
-      "rules": 55967,
-      "bytes": 6630489
+      "rules": 55953,
+      "bytes": 6627667
     }
   ],
-  "rules_emitted": 55967,
+  "rules_emitted": 55953,
   "published": true,
   "unpublished_reason": null,
   "extended": {

@@ -2,30 +2,30 @@
   "id": "adguard-social-media",
   "source_file": "AdGuard-Social-Media-filter.txt",
   "source_name": "AdGuard Social Media filter",
-  "source_sha256": "98268320900a2f99327ee18a47b2c42d5295af0905ccdaf3c4f52658620e7079",
+  "source_sha256": "72542f59b8c7ad497d3f80fdb0eea356d3d99fa49cbfa9e8780fb6788162859b",
   "source_group": "AdGuard",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Social Media filter",
-  "source_version": "2.1.32.31",
+  "source_version": "2.1.32.10",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/4.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:54:59+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:17:42+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 17179,
-  "rules_in": 16337,
-  "rules_out": 10075,
-  "coverage_pct": 89.24,
+  "lines_total": 17163,
+  "rules_in": 16321,
+  "rules_out": 10065,
+  "coverage_pct": 89.22,
   "breakdown": {
     "block": 478,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 9446,
-    "css_selectors": 13951,
+    "css_display_none": 9436,
+    "css_selectors": 13933,
     "ignore_previous_rules": 150
   },
-  "skipped_total": 1474,
+  "skipped_total": 1476,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 1155,
     "injection de style / scriptlet (#$#)": 238,
@@ -33,24 +33,27 @@
     "injection de style etendue (#$?#)": 10,
     "prefixe cosmetique sans chemin": 5,
     "injection de style (non supportee)": 3,
+    "domaine cosmetique non exprimable (joker de TLD)": 3,
     "regle cosmetique entierement exceptee": 2,
     "regex hors du sous-ensemble WebKit": 1,
-    "domaine cosmetique non exprimable (joker de TLD)": 1,
     "modificateur non supporte: $redirect": 1
   },
   "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 123,
     "doublon fusionne": 2,
+    "$domain traduit en if-frame-url (Safari 26+)": 2,
     "$path traduit en if-top-url": 1,
+    "unless-domain abandonne (incompatible avec if-frame-url)": 1,
     "domaine ignore (joker) dans une regle cosmetique": 1
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-Social-Media-filter.json",
-      "rules": 10075,
-      "bytes": 1931319
+      "rules": 10065,
+      "bytes": 1775442
     }
   ],
-  "rules_emitted": 10075,
+  "rules_emitted": 10065,
   "published": true,
   "unpublished_reason": null,
   "extended": {

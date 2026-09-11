@@ -2,27 +2,27 @@
   "id": "adguard-mobile-ads",
   "source_file": "AdGuard-Mobile-Ads-filter.txt",
   "source_name": "AdGuard Mobile Ads filter",
-  "source_sha256": "0906d2556633d693fb84f889eecc95e70d02cb269fa184998952c533546e3c3f",
+  "source_sha256": "224bdff74c8e50b2aee6c3fd97b47ef7a2ee8a06c76097461236654c5fbc886e",
   "source_group": "AdGuard",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Mobile Ads filter",
-  "source_version": "2.0.71.90",
+  "source_version": "2.0.71.79",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/11.txt",
   "format": "adblock",
-  "converted_at": "2026-09-11T08:54:55+00:00",
-  "profile": "modern (Safari 15+)",
+  "converted_at": "2026-09-10T20:17:39+00:00",
+  "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 9080,
-  "rules_in": 7906,
-  "rules_out": 4603,
-  "coverage_pct": 86.35,
+  "lines_total": 9066,
+  "rules_in": 7892,
+  "rules_out": 4595,
+  "coverage_pct": 86.33,
   "breakdown": {
     "block": 1361,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 3090,
-    "css_selectors": 5315,
+    "css_display_none": 3082,
+    "css_selectors": 5301,
     "ignore_previous_rules": 151
   },
   "skipped_total": 1034,
@@ -39,6 +39,7 @@
     "modificateur non supporte: $replace": 1
   },
   "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 121,
     "$path traduit en if-top-url": 9,
     "alternation eclatee en 2 regles": 1,
     "domaine ignore (joker) dans une regle cosmetique": 1,
@@ -47,11 +48,11 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Mobile-Ads-filter.json",
-      "rules": 4603,
-      "bytes": 914342
+      "rules": 4595,
+      "bytes": 768957
     }
   ],
-  "rules_emitted": 4603,
+  "rules_emitted": 4595,
   "published": true,
   "unpublished_reason": null,
   "extended": {

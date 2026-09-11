@@ -119,6 +119,10 @@ IGNORED_MODIFIERS = {"important", "all", "not-important"}
 # Cibles de $dnsrewrite qui signifient "bloquer" et non "rediriger": une regle
 # qui reecrit un domaine vers l'adresse de blocage d'un resolveur est un
 # blocage, et se traduit fidelement en `block` cote WebKit.
+# Valeurs acceptees par `request-method` (Safari 26+), etablies par la sonde.
+HTTP_METHODS = frozenset((
+    "get", "head", "options", "trace", "put", "delete", "post", "patch", "connect"))
+
 DNS_BLOCK_TARGETS = frozenset((
     "", "0.0.0.0", "::", "127.0.0.1", "::1", "nxdomain", "refused",
     "ad-block.dns.adguard.com", "block.dns.adguard.com",
@@ -561,20 +565,74 @@ def normalize_domain(d, expand_tld=True):
     return ["*" + d]
 
 
-def parse_domain_option(value):
+def esc_regex(text):
+    return "".join(("\\" + c if c in REGEX_ESCAPE else c) for c in text)
+
+
+def domain_to_frame_regex(raw):
+    """Liste de regex `if-frame-url` couvrant un domaine, un joker ou une regex.
+
+    Renvoie une liste car une alternation dans `$domain=/re/` est eclatee en
+    plusieurs regex (WebKit ne sait pas faire de disjonction).
+
+    Safari 26+ accepte `if-frame-url`/`unless-frame-url`, ce qui exprime
+    exactement ce que `if-domain` ne sait pas dire: `exemple.*` (tout TLD) et
+    `$domain=/regex/`. Verifie sur le compilateur (voir tools/wk_probe.swift).
+    """
+    d = raw.strip().lower().rstrip(".")
+    if not d:
+        return []
+    if d.startswith("/") and d.endswith("/") and len(d) > 2:
+        # `^` et `$` de la regex de domaine bornent le NOM D'HOTE; dans une
+        # URL de frame il reste le port et le chemin apres, donc on les retire.
+        inner = d[1:-1].lstrip("^")
+        if inner.endswith("$") and not inner.endswith("\\$"):
+            inner = inner[:-1] + SEP_END
+        try:
+            return [ANCHOR_DOMAIN + v for v in validate_raw_regex(inner)]
+        except Unsupported:
+            return []
+    if d.endswith(".*"):
+        base = d[:-2]
+        if not base or "*" in base:
+            return []
+        if any(ord(c) > 127 for c in base):
+            try:
+                base = base.encode("idna").decode("ascii")
+            except Exception:  # noqa: BLE001
+                return []
+        return [ANCHOR_DOMAIN + esc_regex(base) + "\\."]
+    if "*" in d or any(ord(c) > 127 for c in d):
+        try:
+            d = d.encode("idna").decode("ascii")
+        except Exception:  # noqa: BLE001
+            return []
+        if "*" in d:
+            return []
+    if not DOMAIN_OK.match(d):
+        return []
+    return [ANCHOR_DOMAIN + esc_regex(d) + SEP_END]
+
+
+def parse_domain_option(value, frame_ok=False):
     """`a.com|~b.com` -> (inclus, exclus, nb_ignores)."""
-    inc, exc, dropped = [], [], 0
+    inc, exc, dropped, specials = [], [], 0, []
     for raw in value.split("|"):
         raw = raw.strip()
         if not raw:
             continue
         neg = raw.startswith("~")
-        doms = normalize_domain(raw[1:] if neg else raw)
+        body = raw[1:] if neg else raw
+        is_special = body.endswith(".*") or (body.startswith("/") and body.endswith("/"))
+        if frame_ok and is_special:
+            specials.append((neg, body))
+            continue
+        doms = normalize_domain(body)
         if not doms:
             dropped += 1
             continue
         (exc if neg else inc).extend(doms)
-    return inc, exc, dropped
+    return inc, exc, dropped, specials
 
 
 # --------------------------------------------------------------------------- #
@@ -658,10 +716,33 @@ def parse_bare_args(inner):
     return [a for a in args if a != ""] or [""]
 
 
+def denyallow_patterns(domain, pattern):
+    """Motifs d'exception pour `$denyallow=domaine`.
+
+    L'exception ne doit lever le blocage que pour les requetes vers ce domaine
+    **qui correspondent aussi au motif d'origine**. Exempter le domaine entier
+    laisserait passer des requetes que la regle doit bloquer.
+
+    `/banner.png$denyallow=cdn.com` donne donc `||cdn.com/banner.png` et
+    `||cdn.com/*/banner.png`, et non `||cdn.com^`.
+    """
+    core = pattern.strip()
+    # Motif deja ancre sur un hote: le combiner avec un autre hote n'a pas de
+    # sens, on retombe sur l'exemption du domaine.
+    if core.startswith("|") or not core or core.strip("*") in ("", "^"):
+        return ["||%s^" % domain]
+    core = core.lstrip("*")
+    if not core:
+        return ["||%s^" % domain]
+    if not core.startswith("/"):
+        core = "/*" + core
+    return ["||%s%s" % (domain, core), "||%s/*%s" % (domain, core)]
+
+
 class Converter(object):
 
     def __init__(self, legacy=False, document_policy="guard", allow_has=True,
-                 css_group_size=250, keep_extended=True):
+                 css_group_size=250, keep_extended=True, safari_version=26):
         self.legacy = legacy
         self.types_map = RESOURCE_TYPES_LEGACY if legacy else RESOURCE_TYPES_MODERN
         self.all_types = ALL_TYPES_LEGACY if legacy else ALL_TYPES_MODERN
@@ -671,6 +752,9 @@ class Converter(object):
         self.allow_has = allow_has
         self.css_group_size = css_group_size
         self.keep_extended = keep_extended
+        self.safari_version = 14 if legacy else safari_version
+        # if-frame-url / unless-frame-url et request-method: Safari 26+.
+        self.frame_url_ok = self.safari_version >= 26
         self.reset()
 
     def reset(self):
@@ -730,7 +814,7 @@ class Converter(object):
             domains, marker, body = parsed[0], parsed[1], parsed[2]
             if marker != "#@#":
                 continue
-            inc, _, _ = parse_domain_option(domains.replace(",", "|"))
+            inc, _, _, _ = parse_domain_option(domains.replace(",", "|"))
             self._css_exceptions.setdefault(body.strip(), set()).update(inc)
 
     # -- decoupage cosmetique ----------------------------------------------- #
@@ -783,8 +867,10 @@ class Converter(object):
 
     VALID_TRIGGER_KEYS = frozenset((
         "url-filter", "url-filter-is-case-sensitive", "if-domain", "unless-domain",
-        "if-top-url", "unless-top-url", "resource-type", "load-type", "load-context"))
-    CONDITION_KEYS = ("if-domain", "unless-domain", "if-top-url", "unless-top-url")
+        "if-top-url", "unless-top-url", "if-frame-url", "unless-frame-url",
+        "resource-type", "load-type", "load-context", "request-method"))
+    CONDITION_KEYS = ("if-domain", "unless-domain", "if-top-url", "unless-top-url",
+                      "if-frame-url", "unless-frame-url")
     VALID_ACTIONS = frozenset((
         "block", "block-cookies", "css-display-none", "ignore-previous-rules",
         "make-https"))
@@ -815,7 +901,7 @@ class Converter(object):
             for dom in trigger.get(key, []):
                 if dom != dom.lower() or any(ord(c) > 127 for c in dom):
                     raise Unsupported("domaine non normalise")
-        for key in ("if-top-url", "unless-top-url"):
+        for key in ("if-top-url", "unless-top-url", "if-frame-url", "unless-frame-url"):
             for rx in trigger.get(key, []):
                 if (not rx or any(ord(c) > 127 for c in rx)
                         or any(tok in rx for tok in BAD_REGEX_TOKENS)
@@ -827,6 +913,9 @@ class Converter(object):
             raise Unsupported("load-type invalide")
         if set(trigger.get("load-context", [])) - {"top-frame", "child-frame"}:
             raise Unsupported("load-context invalide")
+        rm = trigger.get("request-method")
+        if rm is not None and rm not in HTTP_METHODS:
+            raise Unsupported("request-method invalide")
         if action.get("type") not in self.VALID_ACTIONS:
             raise Unsupported("action invalide")
 
@@ -860,6 +949,8 @@ class Converter(object):
         cookie_only = False
         elemhide_exception = False
         denyallow = []
+        specials = []
+        request_method = None
 
         for mod in mods:
             neg = mod.startswith("~")
@@ -870,7 +961,8 @@ class Converter(object):
             name = MODIFIER_ALIASES.get(name.strip().lower(), name.strip().lower())
 
             if name == "domain":
-                inc, exc, dropped = parse_domain_option(value)
+                inc, exc, dropped, sp = parse_domain_option(value, self.frame_url_ok)
+                specials.extend(sp)
                 if dropped and not inc and not exc:
                     # Ex. $domain=/regex/ : la portee est inexprimable. Garder la
                     # regle l'appliquerait partout au lieu d'un seul site.
@@ -905,8 +997,17 @@ class Converter(object):
                 (exc_types if neg else inc_types).append(name)
             elif name in IGNORED_MODIFIERS:
                 self.note("modificateur sans effet sous WebKit: $%s" % name)
+            elif name == "method":
+                if neg:
+                    raise Unsupported("$method negatif non supporte")
+                vals = [v.strip().lower() for v in value.split("|") if v.strip()]
+                if len(vals) != 1 or vals[0] not in HTTP_METHODS:
+                    raise Unsupported("$method: une seule methode HTTP connue")
+                if not self.frame_url_ok:
+                    raise Unsupported("$method demande Safari 26+")
+                request_method = vals[0]
             elif name == "denyallow":
-                d_inc, d_exc, _ = parse_domain_option(value)
+                d_inc, d_exc, _, _ = parse_domain_option(value)
                 if d_exc or not d_inc:
                     raise Unsupported("$denyallow inexprimable")
                 denyallow = [d[1:] for d in d_inc]
@@ -926,6 +1027,13 @@ class Converter(object):
         if exception and (elemhide_exception or inc_types == ["document"]):
             elemhide_exception = True
             inc_types = [t for t in inc_types if t != "document"]
+
+        if denyallow and not if_dom and pattern.strip().strip("*") in ("", "^", "|"):
+            # Un motif generique sans $domain ferait porter le blocage sur tout
+            # le web. En revanche `||exemple.org^$denyallow=...` est deja borne
+            # par son motif: la reference refuse les deux, nous seulement le
+            # premier.
+            raise Unsupported("$denyallow generique sans $domain")
 
         url_filters = pattern_to_url_filter(pattern)
 
@@ -958,9 +1066,32 @@ class Converter(object):
         if load_type:
             trigger["load-type"] = [load_type]
 
-        if if_dom and unless_dom:
+        if request_method:
+            trigger["request-method"] = request_method
+
+        if specials:
+            # Un joker de TLD ou une regex de domaine impose if-frame-url; les
+            # domaines simples du meme jeu y sont convertis aussi, WebKit
+            # n'acceptant qu'une seule condition par trigger.
+            pos, neg_ = [], []
+            for is_neg, raw in specials:
+                (neg_ if is_neg else pos).extend(domain_to_frame_regex(raw))
+            for d in if_dom:
+                pos.extend(domain_to_frame_regex(d[1:]))
+            for d in unless_dom:
+                neg_.extend(domain_to_frame_regex(d[1:]))
+            if pos and neg_:
+                raise Unsupported("$domain melange inclusions et exclusions")
+            if pos:
+                trigger["if-frame-url"] = sorted(set(pos))
+            elif neg_:
+                trigger["unless-frame-url"] = sorted(set(neg_))
+            else:
+                raise Unsupported("$domain inexprimable (regex ou joker)")
+            self.note("$domain traduit en if-frame-url (Safari 26+)")
+        elif if_dom and unless_dom:
             raise Unsupported("$domain melange inclusions et exclusions")
-        if if_dom:
+        elif if_dom:
             trigger["if-domain"] = sorted(set(if_dom))
         elif unless_dom:
             trigger["unless-domain"] = sorted(set(unless_dom))
@@ -980,10 +1111,11 @@ class Converter(object):
                 # n'annule que ce qui precede, donc les regles suivantes du
                 # fichier continuent de s'appliquer.
                 for dom in denyallow:
-                    t = dict(trigger)
-                    t["url-filter"] = ANCHOR_DOMAIN + "".join(
-                        ("\\" + c if c in REGEX_ESCAPE else c) for c in dom) + SEP_END
-                    self.emit(bucket, t, {"type": "ignore-previous-rules"})
+                    for pat in denyallow_patterns(dom, pattern):
+                        for uf in pattern_to_url_filter(pat):
+                            t = dict(trigger)
+                            t["url-filter"] = uf
+                            self.emit(bucket, t, {"type": "ignore-previous-rules"})
                 if bucket is self.blocks:
                     self.atomic.append((start, len(bucket) - start))
                 self.note("$denyallow: %d exception(s) emises apres le blocage"
@@ -1025,7 +1157,7 @@ class Converter(object):
         reste ecartee de la sortie WebKit."""
         if not self.keep_extended:
             return
-        inc, exc, _ = parse_domain_option(domains.replace(",", "|"))
+        inc, exc, _, _ = parse_domain_option(domains.replace(",", "|"))
         scope = {"domains": sorted(set(d[1:] for d in inc)),
                  "excluded": sorted(set(d[1:] for d in exc))}
         if prefix:
@@ -1110,7 +1242,8 @@ class Converter(object):
         except Unsupported:
             self.capture_extended(domains, marker, body)
             raise
-        inc, exc, dropped = parse_domain_option(domains.replace(",", "|"))
+        inc, exc, dropped, specials = parse_domain_option(
+            domains.replace(",", "|"), self.frame_url_ok)
         if dropped:
             self.note("domaine ignore (joker) dans une regle cosmetique")
             if domains and not inc and not exc:
@@ -1126,7 +1259,8 @@ class Converter(object):
                 if nm == "path":
                     path = val.strip()
                 elif nm == "domain":
-                    i2, e2, _ = parse_domain_option(val)
+                    i2, e2, _, s2 = parse_domain_option(val, self.frame_url_ok)
+                    specials.extend(s2)
                     inc.extend(i2); exc.extend(e2)
                 else:
                     raise Unsupported("modificateur cosmetique [$%s]" % nm)
@@ -1161,7 +1295,23 @@ class Converter(object):
             return
 
         trigger = {"url-filter": ".*"}
-        if inc and exc:
+        if specials:
+            # Joker de TLD (`exemple.*`) ou regex de domaine: exprimables via
+            # if-frame-url sous Safari 26+, ou l'expansion de TLD n'est qu'une
+            # approximation. Les domaines simples y sont convertis aussi.
+            pos = []
+            for is_neg, raw in specials:
+                if not is_neg:
+                    pos.extend(domain_to_frame_regex(raw))
+            for d in inc:
+                pos.extend(domain_to_frame_regex(d[1:]))
+            if not pos:
+                raise Unsupported("domaine cosmetique non exprimable (joker de TLD)")
+            trigger["if-frame-url"] = sorted(set(pos))
+            if exc:
+                self.note("unless-domain abandonne (incompatible avec if-frame-url)")
+            self.note("joker de TLD traduit en if-frame-url (Safari 26+)")
+        elif inc and exc:
             # WebKit interdit if-domain et unless-domain simultanement.
             trigger["if-domain"] = sorted(set(inc))
             self.note("unless-domain abandonne (incompatible avec if-domain)")
@@ -1327,7 +1477,8 @@ def convert_file(path, meta, args):
 
     conv = Converter(legacy=args.legacy, document_policy=args.document_policy,
                      allow_has=args.allow_has, css_group_size=args.css_group_size,
-                     keep_extended=args.extended)
+                     keep_extended=args.extended,
+                     safari_version=args.safari_version)
     conv.convert_lines(lines, hosts_mode=hosts_mode)
     body, tail = conv.assemble()
 
@@ -1416,7 +1567,7 @@ def convert_file(path, meta, args):
         "source_url": (meta or {}).get("url", ""),
         "format": "hosts" if hosts_mode else "adblock",
         "converted_at": now_iso(),
-        "profile": "legacy" if args.legacy else "modern (Safari 15+)",
+        "profile": "legacy" if args.legacy else "Safari %d+" % args.safari_version,
         "document_policy": conv.document_policy,
         "lines_total": len(lines),
         "rules_in": conv.counts["total"],
@@ -1460,6 +1611,11 @@ def main():
                     help="ne convertir que les fichiers dont le nom contient ces motifs")
     ap.add_argument("--legacy", action="store_true",
                     help="profil WebKit classique (pas de fetch/websocket/ping/load-context)")
+    ap.add_argument("--safari-version", type=int, default=26, metavar="N",
+                    help="version Safari visee (defaut: 26). A partir de 26: "
+                         "if-frame-url/unless-frame-url et request-method. "
+                         "En dessous, les jokers de TLD retombent sur une "
+                         "expansion approchee et $method est ecarte.")
     ap.add_argument("--document-policy", choices=["guard", "enumerate", "allow"],
                     default="guard",
                     help="protection de la navigation principale (defaut: guard)")
