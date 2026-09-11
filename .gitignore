@@ -11,3 +11,4 @@ reports/
 *.tmp
 .DS_Store
 __pycache__/
+.vscode/
