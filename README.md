@@ -462,14 +462,48 @@ retirer la ligne pour les versionner localement aussi.
 
 ---
 
+## Principe : un fichier par liste
+
+Le découpage est **un content blocker par liste du catalogue**, et non des
+bundles par catégorie comme le font les produits finis. C'est un choix assumé :
+la granularité laisse à l'utilisateur un contrôle réel sur ce qu'il active,
+liste par liste, au lieu de cocher « Confidentialité » sans savoir ce qu'il y a
+dedans.
+
+Ce choix a une contrepartie qu'il faut connaître : **une exception ne traverse
+pas les fichiers**. Un `@@` présent dans un fichier ne peut annuler qu'un
+blocage du même fichier. Les listes composées majoritairement d'exceptions sont
+donc inertes si on les charge seules :
+
+| Liste | Exceptions | Effet seule |
+|---|---:|---|
+| HaGeZi's Allowlist Referral | 100 % | aucun |
+| uBlock Origin - Unbreak | 85 % | aucun |
+| Filter unblocking search ads | 79 % | aucun |
+
+Ce sont des listes compagnes : elles existent pour corriger le sur-blocage
+d'une liste parente (`uBlock Origin - Filters` pour `Unbreak`). C'est aussi ce
+que la directive `!#safari_cb_affinity` sert à résoudre chez AdGuard, et
+pourquoi nous la traitons en simple commentaire — elle n'a pas de sens hors
+d'un modèle par catégorie.
+
+---
+
 ## Utiliser un fichier dans Safari
 
 Les fichiers de `webkit-rules/` sont des tableaux JSON de règles, sans
 enveloppe : directement consommables par `SFContentBlockerManager`
 (app iOS/macOS) ou par la clé `content_blockers` d'une Safari Web Extension.
 
-Safari n'active qu'un nombre limité de content blockers simultanés — choisir
-les listes plutôt que toutes les activer.
+La limite documentée par Apple porte sur les **règles**, pas sur le nombre de
+blockers : 150 000 par content blocker. Rien n'interdit d'en enregistrer
+plusieurs — AdGuard en utilise six, ce qui est un choix de conception, non un
+plafond d'Apple. En revanche chaque blocker actif coûte sa compilation et sa
+mémoire, et surtout **une exception ne traverse pas les blockers** : un `@@`
+présent dans un fichier n'annule pas un blocage d'un autre. C'est la raison
+d'être de la directive `!#safari_cb_affinity`, et la raison pour laquelle un
+produit fini regroupe les listes par catégorie plutôt que d'en charger des
+dizaines.
 
 ---
 
