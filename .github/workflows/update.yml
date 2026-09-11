@@ -13,7 +13,7 @@ on:
       - "tools/**"
 
 permissions:
-  contents: write
+  contents: write   # uniquement pour force-push la branche `dist`
 
 concurrency:
   group: update-lists
@@ -51,24 +51,10 @@ jobs:
       - name: Annoter la redondance entre listes
         run: make redundancy
 
-      - name: Identite git
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      # main ne recoit que l'etat des sources et les rapports (~1 Mo).
-      - name: Commit de l'etat sur main
-        run: |
-          git add filters/index.json reports sources.json
-          if git diff --cached --quiet; then
-            echo "Rien a committer sur main."
-          else
-            git commit -m "chore: mise a jour des listes ($(date -u +%Y-%m-%d))"
-            git push
-          fi
-
-      # Les sorties vont sur une branche orpheline reecrite a chaque run :
-      # le depot ne grossit pas avec l'historique des JSON.
+      # main ne recoit plus rien d'automatique: le depot de code reste celui
+      # de l'auteur, et les commits locaux ne divergent jamais du distant.
+      # Tout ce que la machine produit part sur la branche orpheline `dist`,
+      # reecrite a chaque execution.
       - name: Publier sur la branche dist
         run: |
           rm -rf dist-tree
@@ -76,7 +62,13 @@ jobs:
           # webkit-rules/ EST l'arborescence publiee: les chemins de index.json
           # (dont extended/Extended-*.json) sont valables tels quels.
           cp -R webkit-rules/. dist-tree/
+          # Etat des sources, rapports de conversion et catalogue annote: ils
+          # accompagnent les regles au lieu d'etre versionnes sur main.
+          mkdir -p dist-tree/reports
+          cp reports/*.json reports/CONVERSION.md dist-tree/reports/
           cp reports/CONVERSION.md dist-tree/
+          cp filters/index.json dist-tree/filters-index.json
+          cp sources.json dist-tree/sources.json
           cd dist-tree
           git init -q -b dist
           git config user.name  "github-actions[bot]"

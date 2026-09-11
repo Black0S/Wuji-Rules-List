@@ -414,53 +414,55 @@ tools/                  sondes Swift du compilateur WebKit (macOS)
 filters/                listes brutes + index.json (état, ETag, sha256)
 webkit-rules/           Webkit-<Nom>.json + index.json (catalogue de sortie)
 webkit-rules/extended/  Extended-<Nom>.json (regles a injection, hors WebKit)
-reports/                rapport par liste + CONVERSION.md
+reports/                rapport par liste + CONVERSION.md (non versionnes)
 .github/workflows/      mise à jour quotidienne automatique
 ```
 
-`filters/*.txt` et `webkit-rules/` sont ignorés par git sur `main` : le
-premier est un cache régénérable en ~20 s, le second est publié sur `dist`.
+`main` ne versionne que le code, `sources.json` et la documentation — onze
+fichiers. `filters/`, `webkit-rules/` et `reports/` sont ignorés par git et
+publiés sur `dist`.
 
 ---
 
 ## Automatisation et branche `dist`
 
 [`.github/workflows/update.yml`](.github/workflows/update.yml) rejoue le
-pipeline chaque jour à 04:17 UTC (et à chaque modification des scripts ou de
-`sources.json`). Il pousse ensuite :
+pipeline chaque jour à 04:17 UTC, et à chaque modification des scripts, de
+`sources.json` ou de `tools/`.
 
-- sur **`main`** : `filters/index.json` et `reports/` — quelques centaines de Ko ;
-- sur **`dist`** : le contenu de `webkit-rules/` tel quel — `Webkit-*.json` à
-  la racine, `Extended-*.json` sous `extended/` — via une branche orpheline
-  **force-pushée** à chaque exécution. Un seul commit, pas d'historique : le
-  dépôt garde une taille constante malgré les ~360 Mo régénérés quotidiennement.
+**La CI ne commite rien sur `main`.** Tout ce que la machine produit part sur
+la branche orpheline **`dist`**, force-pushée à chaque exécution : un seul
+commit, pas d'historique, taille constante. C'est ce qui garantit que `main`
+reste le dépôt de l'auteur et ne diverge jamais du distant.
 
-Le job tourne sur **`macos-latest`** — nécessaire pour que `make verify`
-compile chaque fichier avec le WebKit du système avant publication. Rien n'est
-poussé sur `dist` si un seul fichier est rejeté. Les runners macOS sont
-gratuits sur les dépôts publics ; en contrepartie leur file d'attente peut être
-plus longue que celle d'ubuntu.
+`dist` contient :
 
-Les fichiers sont donc consommables directement, avec des URL stables :
+```
+Webkit-<Nom>.json          les regles, a la racine
+extended/                  les regles a injection
+index.json                 le catalogue de sortie
+reports/                   un rapport par liste + CONVERSION.md
+filters-index.json         l'etat des sources (ETag, sha256, versions)
+sources.json               copie du catalogue, annotee `covered_by`
+```
+
+URL stables :
 
 ```
 https://raw.githubusercontent.com/Black0S/Wuji-Rules-List/dist/index.json
 https://raw.githubusercontent.com/Black0S/Wuji-Rules-List/dist/Webkit-AdGuard-Base-filter.json
 ```
 
-Deux prérequis côté GitHub :
+Le job tourne sur **`macos-latest`** : `make verify` compile chaque fichier
+avec le WebKit du système avant publication, et rien n'est poussé si un seul
+est rejeté. Les runners macOS sont gratuits sur les dépôts publics.
 
-1. *Settings → Actions → General → Workflow permissions* → **Read and write
-   permissions**. Le jeton par défaut des dépôts récents est en lecture seule et
-   le `permissions:` du workflow ne peut pas dépasser ce plafond : sans ce
-   réglage, le `git push` échoue.
-2. GitHub désactive un workflow planifié après 60 jours sans activité sur le
-   dépôt. Si le mail « workflow disabled » arrive, un clic le réactive.
+Prérequis côté GitHub : *Settings → Actions → General → Workflow permissions* →
+**Read and write permissions**, sans quoi le force-push sur `dist` échoue.
 
-`webkit-rules/*.json` est ignoré par git sur `main` (voir `.gitignore`) :
-retirer la ligne pour les versionner localement aussi.
-
----
+> `covered_by` dans le `sources.json` de `main` n'est pas rafraîchi par la CI,
+> puisqu'elle n'y écrit plus. Lancer `make redundancy` localement pour le
+> mettre à jour ; la copie publiée sur `dist` est, elle, toujours à jour.
 
 ## Principe : un fichier par liste
 

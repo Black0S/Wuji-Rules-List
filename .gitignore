@@ -1,9 +1,12 @@
-# Listes brutes : pur cache, regenerable en ~20 s via fetch_filters.py.
+# Listes brutes : pur cache, regenerable en ~1 min via fetch_filters.py.
 filters/*.txt
 
-# Sorties : publiees sur la branche orpheline `dist` par la CI, pas sur `main`.
+# Tout ce que la machine produit est publie sur la branche `dist`, jamais
+# versionne sur `main`. C'est ce qui garantit que main ne diverge pas.
+filters/index.json
 webkit-rules/*.json
 webkit-rules/extended/*.json
+reports/
 
 *.tmp
 .DS_Store
