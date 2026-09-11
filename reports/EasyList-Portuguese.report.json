@@ -2,27 +2,27 @@
   "id": "easylist-portuguese",
   "source_file": "EasyList-Portuguese.txt",
   "source_name": "EasyList Portuguese",
-  "source_sha256": "6cd0c36de0df331a8c539e378667c2b65b84455a73a66ecce737b8b3635abcb6",
+  "source_sha256": "f795b66b0a35381987466c3e38ed9d73e18f9f0542c2e63044b80583f746eb59",
   "source_group": "EasyList (regions)",
   "source_homepage": "https://github.com/easylist",
   "source_license": "",
   "source_title": "EasyList Portuguese",
-  "source_version": "202609072332",
+  "source_version": "202609111012",
   "source_url": "https://easylist-downloads.adblockplus.org/easylistportuguese.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:18:23+00:00",
+  "converted_at": "2026-09-11T10:24:43+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 1721,
-  "rules_in": 1658,
-  "rules_out": 962,
-  "coverage_pct": 98.37,
+  "lines_total": 1729,
+  "rules_in": 1666,
+  "rules_out": 963,
+  "coverage_pct": 98.38,
   "breakdown": {
     "block": 309,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 625,
-    "css_selectors": 1295,
+    "css_display_none": 626,
+    "css_selectors": 1303,
     "ignore_previous_rules": 27
   },
   "skipped_total": 31,
@@ -37,11 +37,11 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-Portuguese.json",
-      "rules": 962,
-      "bytes": 153609
+      "rules": 963,
+      "bytes": 154023
     }
   ],
-  "rules_emitted": 962,
+  "rules_emitted": 963,
   "published": true,
   "unpublished_reason": null,
   "extended": {

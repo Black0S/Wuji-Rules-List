@@ -2,33 +2,33 @@
   "id": "adguard-cookie-notices",
   "source_file": "AdGuard-Cookie-Notices-filter.txt",
   "source_name": "AdGuard Cookie Notices filter",
-  "source_sha256": "1f1c0b32822488289206c085910a49e270b40acf3f56e1a513882ff310348d05",
+  "source_sha256": "c3bc2753e8cdec3b5dbe60faa91916cfbd5d55fa560ffa6b2443021efbbc8135",
   "source_group": "AdGuard",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Cookie Notices filter",
-  "source_version": "2.0.93.83",
+  "source_version": "2.0.94.21",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/18.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:17:13+00:00",
+  "converted_at": "2026-09-11T10:23:59+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 24618,
-  "rules_in": 21593,
-  "rules_out": 11946,
-  "coverage_pct": 65.36,
+  "lines_total": 24678,
+  "rules_in": 21648,
+  "rules_out": 11977,
+  "coverage_pct": 65.35,
   "breakdown": {
-    "block": 1269,
+    "block": 1272,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 9171,
-    "css_selectors": 11339,
-    "ignore_previous_rules": 1505
+    "css_display_none": 9198,
+    "css_selectors": 11370,
+    "ignore_previous_rules": 1506
   },
-  "skipped_total": 6211,
+  "skipped_total": 6231,
   "skipped_reasons": {
-    "injection de style / scriptlet (#$#)": 3080,
-    "JavaScript / scriptlet (#%#)": 2675,
+    "injection de style / scriptlet (#$#)": 3089,
+    "JavaScript / scriptlet (#%#)": 2686,
     "selecteur CSS etendu (#?#)": 310,
     "injection de style etendue (#$?#)": 116,
     "modificateur non supporte: $redirect": 13,
@@ -52,20 +52,20 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Cookie-Notices-filter.json",
-      "rules": 11946,
-      "bytes": 2077275
+      "rules": 11977,
+      "bytes": 2083877
     }
   ],
-  "rules_emitted": 11946,
+  "rules_emitted": 11977,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-AdGuard-Cookie-Notices-filter.json",
-    "total": 6129,
+    "total": 6149,
     "counts": {
-      "scriptlets": 2617,
+      "scriptlets": 2628,
       "procedural": 315,
-      "styles": 3197,
+      "styles": 3206,
       "html": 0,
       "raw_js": 59
     }

@@ -2,33 +2,33 @@
   "id": "adguard-popups",
   "source_file": "AdGuard-Popups-filter.txt",
   "source_name": "AdGuard Popups filter",
-  "source_sha256": "2949bf154a351ecaf5312c9414eea743ebbb9a49071270fa4d4acb4350d2712c",
+  "source_sha256": "2cb7e11dc42cebe6c082401db71251bbd0e3a093e304768b220305b46faef3c7",
   "source_group": "AdGuard",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Popups filter",
-  "source_version": "2.0.82.32",
+  "source_version": "2.0.82.72",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/19.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:17:40+00:00",
+  "converted_at": "2026-09-11T10:24:16+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 23298,
-  "rules_in": 22053,
-  "rules_out": 11745,
-  "coverage_pct": 74.18,
+  "lines_total": 23367,
+  "rules_in": 22121,
+  "rules_out": 11780,
+  "coverage_pct": 74.19,
   "breakdown": {
-    "block": 1482,
+    "block": 1483,
     "block_document": 1,
     "block_cookies": 0,
-    "css_display_none": 9622,
-    "css_selectors": 14238,
+    "css_display_none": 9656,
+    "css_selectors": 14289,
     "ignore_previous_rules": 639
   },
-  "skipped_total": 5443,
+  "skipped_total": 5457,
   "skipped_reasons": {
-    "injection de style / scriptlet (#$#)": 2797,
-    "JavaScript / scriptlet (#%#)": 1367,
+    "injection de style / scriptlet (#$#)": 2806,
+    "JavaScript / scriptlet (#%#)": 1372,
     "selecteur CSS etendu (#?#)": 1022,
     "injection de style etendue (#$?#)": 163,
     "modificateur non supporte: $redirect": 68,
@@ -43,9 +43,9 @@
     "modificateur non supporte: $redirect-rule": 1
   },
   "notes": {
-    "joker de TLD traduit en if-frame-url (Safari 26+)": 150,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 152,
     "$path traduit en if-top-url": 14,
-    "doublon fusionne": 12,
+    "doublon fusionne": 13,
     "$domain traduit en if-frame-url (Safari 26+)": 3,
     "unless-domain abandonne (incompatible avec if-domain)": 2,
     "modificateur sans effet sous WebKit: $important": 1,
@@ -55,20 +55,20 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Popups-filter.json",
-      "rules": 11745,
-      "bytes": 1977616
+      "rules": 11780,
+      "bytes": 1984599
     }
   ],
-  "rules_emitted": 11745,
+  "rules_emitted": 11780,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-AdGuard-Popups-filter.json",
-    "total": 5325,
+    "total": 5339,
     "counts": {
-      "scriptlets": 1339,
+      "scriptlets": 1344,
       "procedural": 1026,
-      "styles": 2960,
+      "styles": 2969,
       "html": 0,
       "raw_js": 28
     }

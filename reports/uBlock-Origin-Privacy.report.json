@@ -2,7 +2,7 @@
   "id": "ublock-origin-privacy",
   "source_file": "uBlock-Origin-Privacy.txt",
   "source_name": "uBlock Origin - Privacy",
-  "source_sha256": "9a3f2531b5bd773622acea973e904ab5e98742a9c10b717eb90475461f994989",
+  "source_sha256": "d5dbdf5cf1b2b73aad72ed7032f8cff2dc8decfe81048f208330d0a146612525",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,15 +10,15 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/privacy.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:20:31+00:00",
+  "converted_at": "2026-09-11T10:26:02+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 3460,
-  "rules_in": 1797,
-  "rules_out": 933,
-  "coverage_pct": 51.98,
+  "lines_total": 3463,
+  "rules_in": 1798,
+  "rules_out": 934,
+  "coverage_pct": 52.0,
   "breakdown": {
-    "block": 913,
+    "block": 914,
     "block_document": 5,
     "block_cookies": 0,
     "css_display_none": 11,
@@ -54,11 +54,11 @@
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Privacy.json",
-      "rules": 933,
-      "bytes": 113625
+      "rules": 934,
+      "bytes": 113741
     }
   ],
-  "rules_emitted": 933,
+  "rules_emitted": 934,
   "published": true,
   "unpublished_reason": null,
   "extended": {

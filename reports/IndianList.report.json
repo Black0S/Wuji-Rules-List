@@ -2,32 +2,32 @@
   "id": "indianlist",
   "source_file": "IndianList.txt",
   "source_name": "IndianList",
-  "source_sha256": "e66ddbe47e10bc4c43f386abde613464c3da42c581bb3df106b8d7cc1b53e9a2",
+  "source_sha256": "801c4ce3a69dffad40456b2279b7f20f7707a6e39f9387a2817085b2cfc187f7",
   "source_group": "EasyList (regions)",
   "source_homepage": "https://github.com/easylist",
   "source_license": "",
   "source_title": "IndianList",
-  "source_version": "202609072332",
+  "source_version": "202609111012",
   "source_url": "https://easylist-downloads.adblockplus.org/indianlist.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:20:15+00:00",
+  "converted_at": "2026-09-11T10:25:51+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 10518,
-  "rules_in": 10493,
-  "rules_out": 8975,
-  "coverage_pct": 98.24,
+  "lines_total": 10532,
+  "rules_in": 10507,
+  "rules_out": 8986,
+  "coverage_pct": 98.21,
   "breakdown": {
-    "block": 5250,
+    "block": 5255,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 3642,
-    "css_selectors": 4976,
+    "css_display_none": 3648,
+    "css_selectors": 4982,
     "ignore_previous_rules": 82
   },
-  "skipped_total": 178,
+  "skipped_total": 181,
   "skipped_reasons": {
-    "selecteur CSS etendu (#?#)": 175,
+    "selecteur CSS etendu (#?#)": 178,
     "ancre `|` en milieu de motif": 2,
     "domaine cosmetique non exprimable (joker de TLD)": 1
   },
@@ -37,19 +37,19 @@
   "outputs": [
     {
       "file": "Webkit-IndianList.json",
-      "rules": 8975,
-      "bytes": 1452910
+      "rules": 8986,
+      "bytes": 1454682
     }
   ],
-  "rules_emitted": 8975,
+  "rules_emitted": 8986,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-IndianList.json",
-    "total": 175,
+    "total": 178,
     "counts": {
       "scriptlets": 0,
-      "procedural": 175,
+      "procedural": 178,
       "styles": 0,
       "html": 0,
       "raw_js": 0

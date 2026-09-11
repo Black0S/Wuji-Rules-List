@@ -2,23 +2,23 @@
   "id": "hagezi-badware-hoster",
   "source_file": "HaGeZi-s-Badware-Hoster-Blocklist.txt",
   "source_name": "HaGeZi's Badware Hoster Blocklist",
-  "source_sha256": "68ab5fee35df087f8f20fe644f6eda6d0e8bc70a857ff617bec45a0747300969",
+  "source_sha256": "c7c16fabe86a3f920c6f4cd394a2ea71e6757b9dab5367fe83d15d7a51f9bf4b",
   "source_group": "HaGeZi",
   "source_homepage": "https://github.com/hagezi/dns-blocklists",
   "source_license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
   "source_title": "HaGeZi's Badware Hoster - guards against malicious hosting services!",
-  "source_version": "2026.0901.0748.50",
+  "source_version": "2026.0909.1447.31",
   "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:18:48+00:00",
+  "converted_at": "2026-09-11T10:25:02+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 1252,
-  "rules_in": 1237,
-  "rules_out": 1238,
+  "lines_total": 1251,
+  "rules_in": 1236,
+  "rules_out": 1237,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 1237,
+    "block": 1236,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -31,11 +31,11 @@
   "outputs": [
     {
       "file": "Webkit-HaGeZi-s-Badware-Hoster-Blocklist.json",
-      "rules": 1238,
-      "bytes": 130433
+      "rules": 1237,
+      "bytes": 130328
     }
   ],
-  "rules_emitted": 1238,
+  "rules_emitted": 1237,
   "published": true,
   "unpublished_reason": null,
   "extended": {

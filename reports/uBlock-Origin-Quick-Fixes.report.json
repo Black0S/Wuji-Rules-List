@@ -2,7 +2,7 @@
   "id": "ublock-origin-quick-fixes",
   "source_file": "uBlock-Origin-Quick-Fixes.txt",
   "source_name": "uBlock Origin - Quick Fixes",
-  "source_sha256": "350fd27b949c5d2a92c1c478308bffd0e4182210a7aeed974be0892b1d544005",
+  "source_sha256": "e5f3cdaa0cb8b4722bb7179395560a54a2e10afd9233aaaf6f81cc574195c095",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,24 +10,24 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/quick-fixes.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:20:31+00:00",
+  "converted_at": "2026-09-11T10:26:02+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 460,
-  "rules_in": 288,
-  "rules_out": 44,
-  "coverage_pct": 25.0,
+  "lines_total": 468,
+  "rules_in": 296,
+  "rules_out": 45,
+  "coverage_pct": 26.35,
   "breakdown": {
-    "block": 11,
+    "block": 12,
     "block_document": 5,
     "block_cookies": 0,
     "css_display_none": 13,
-    "css_selectors": 42,
+    "css_selectors": 47,
     "ignore_previous_rules": 14
   },
-  "skipped_total": 204,
+  "skipped_total": 206,
   "skipped_reasons": {
-    "scriptlet ou filtrage HTML": 153,
+    "scriptlet ou filtrage HTML": 155,
     "pseudo-classe CSS etendue": 17,
     "modificateur non supporte: $redirect": 10,
     "directive $badfilter (retractation appliquee)": 6,
@@ -51,21 +51,21 @@
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Quick-Fixes.json",
-      "rules": 44,
-      "bytes": 10898
+      "rules": 45,
+      "bytes": 11316
     }
   ],
-  "rules_emitted": 44,
+  "rules_emitted": 45,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-uBlock-Origin-Quick-Fixes.json",
-    "total": 171,
+    "total": 173,
     "counts": {
-      "scriptlets": 151,
+      "scriptlets": 152,
       "procedural": 18,
       "styles": 0,
-      "html": 2,
+      "html": 3,
       "raw_js": 0
     }
   }

@@ -2,23 +2,23 @@
   "id": "easylist-polish",
   "source_file": "EasyList-Polish.txt",
   "source_name": "EasyList Polish",
-  "source_sha256": "317595d51bb323bdb88ccecd062e22f84afe5ff7297480e948ac6bda7257fc0f",
+  "source_sha256": "5dcb9f51f3b88dc76e6c58150823a75551389c409c3be2e77d91b9a4efb88aaf",
   "source_group": "EasyList (regions)",
   "source_homepage": "https://github.com/easylist",
   "source_license": "",
   "source_title": "EasyList Polish",
-  "source_version": "202609072332",
+  "source_version": "202609111012",
   "source_url": "https://easylist-downloads.adblockplus.org/easylistpolish.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:18:23+00:00",
+  "converted_at": "2026-09-11T10:24:43+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 3339,
-  "rules_in": 3296,
-  "rules_out": 2269,
+  "lines_total": 3342,
+  "rules_in": 3299,
+  "rules_out": 2272,
   "coverage_pct": 99.73,
   "breakdown": {
-    "block": 652,
+    "block": 655,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 1597,
@@ -35,11 +35,11 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-Polish.json",
-      "rules": 2269,
-      "bytes": 405007
+      "rules": 2272,
+      "bytes": 405463
     }
   ],
-  "rules_emitted": 2269,
+  "rules_emitted": 2272,
   "published": true,
   "unpublished_reason": null,
   "extended": {

@@ -2,33 +2,33 @@
   "id": "adguard-tracking-protection",
   "source_file": "AdGuard-Tracking-Protection-filter.txt",
   "source_name": "AdGuard Tracking Protection filter",
-  "source_sha256": "7099413ae08eb60d07dd2dab81b0f78a51eee2e877453b1fc6c71d5517e8ffbf",
+  "source_sha256": "fae3f203fbce662b4ed64f6a6b27fcb3d6dbd3dd9cf84794f014081951c133be",
   "source_group": "AdGuard",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Tracking Protection filter",
-  "source_version": "2.1.10.90",
+  "source_version": "2.1.11.21",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/3.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:18:15+00:00",
+  "converted_at": "2026-09-11T10:24:37+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 330899,
-  "rules_in": 327296,
-  "rules_out": 325130,
+  "lines_total": 330960,
+  "rules_in": 327350,
+  "rules_out": 325176,
   "coverage_pct": 99.35,
   "breakdown": {
-    "block": 322716,
+    "block": 322754,
     "block_document": 1,
     "block_cookies": 6,
-    "css_display_none": 198,
-    "css_selectors": 253,
-    "ignore_previous_rules": 2208
+    "css_display_none": 203,
+    "css_selectors": 259,
+    "ignore_previous_rules": 2211
   },
-  "skipped_total": 1921,
+  "skipped_total": 1928,
   "skipped_reasons": {
-    "$cookie avec valeur / en exception": 1089,
-    "JavaScript / scriptlet (#%#)": 486,
+    "$cookie avec valeur / en exception": 1093,
+    "JavaScript / scriptlet (#%#)": 489,
     "modificateur non supporte: $redirect": 235,
     "selecteur CSS etendu (#?#)": 48,
     "regex hors du sous-ensemble WebKit": 19,
@@ -55,27 +55,27 @@
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-1.json",
       "rules": 150000,
-      "bytes": 17906516
+      "bytes": 17906656
     },
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-2.json",
       "rules": 150000,
-      "bytes": 17422167
+      "bytes": 17422523
     },
     {
       "file": "Webkit-AdGuard-Tracking-Protection-filter-3.json",
-      "rules": 29546,
-      "bytes": 3534401
+      "rules": 29598,
+      "bytes": 3540904
     }
   ],
-  "rules_emitted": 329546,
+  "rules_emitted": 329598,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-AdGuard-Tracking-Protection-filter.json",
-    "total": 532,
+    "total": 535,
     "counts": {
-      "scriptlets": 467,
+      "scriptlets": 470,
       "procedural": 48,
       "styles": 17,
       "html": 0,

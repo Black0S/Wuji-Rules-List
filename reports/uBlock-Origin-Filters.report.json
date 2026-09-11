@@ -2,7 +2,7 @@
   "id": "ublock-origin",
   "source_file": "uBlock-Origin-Filters.txt",
   "source_name": "uBlock Origin - Filters",
-  "source_sha256": "d4e79a9d78e8fccfa28aba8f55adbd89b37032ee048b2badf6670faff9b866ef",
+  "source_sha256": "36d5f0c2b76b1d29415a22c87341621bcd34bd7621fbff88139d1d3b6c1ce5a7",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,26 +10,26 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/filters.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:20:31+00:00",
+  "converted_at": "2026-09-11T10:26:02+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 40983,
-  "rules_in": 22966,
-  "rules_out": 8908,
-  "coverage_pct": 50.66,
+  "lines_total": 41010,
+  "rules_in": 22983,
+  "rules_out": 8914,
+  "coverage_pct": 50.67,
   "breakdown": {
-    "block": 4001,
+    "block": 4006,
     "block_document": 54,
     "block_cookies": 0,
-    "css_display_none": 3088,
-    "css_selectors": 5816,
-    "ignore_previous_rules": 1764
+    "css_display_none": 3090,
+    "css_selectors": 5822,
+    "ignore_previous_rules": 1763
   },
-  "skipped_total": 12086,
+  "skipped_total": 12093,
   "skipped_reasons": {
-    "scriptlet ou filtrage HTML": 9446,
-    "pseudo-classe CSS etendue": 1097,
-    "modificateur non supporte: $redirect": 622,
+    "scriptlet ou filtrage HTML": 9453,
+    "pseudo-classe CSS etendue": 1096,
+    "modificateur non supporte: $redirect": 623,
     "modificateur non supporte: $redirect-rule": 376,
     "regex hors du sous-ensemble WebKit": 107,
     "modificateur non supporte: $to": 89,
@@ -63,7 +63,7 @@
   "notes": {
     "joker de TLD traduit en if-frame-url (Safari 26+)": 894,
     "$domain traduit en if-frame-url (Safari 26+)": 167,
-    "modificateur sans effet sous WebKit: $important": 105,
+    "modificateur sans effet sous WebKit: $important": 106,
     "modificateur sans effet sous WebKit: $all": 96,
     "$denyallow: 1 exception(s) emises apres le blocage": 38,
     "$denyallow: 2 exception(s) emises apres le blocage": 29,
@@ -98,19 +98,19 @@
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Filters.json",
-      "rules": 8908,
-      "bytes": 1721309
+      "rules": 8914,
+      "bytes": 1722597
     }
   ],
-  "rules_emitted": 8908,
+  "rules_emitted": 8914,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-uBlock-Origin-Filters.json",
-    "total": 10565,
+    "total": 10571,
     "counts": {
-      "scriptlets": 9316,
-      "procedural": 1118,
+      "scriptlets": 9323,
+      "procedural": 1117,
       "styles": 0,
       "html": 131,
       "raw_js": 0

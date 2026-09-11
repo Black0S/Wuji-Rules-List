@@ -2,27 +2,27 @@
   "id": "easylist-germany",
   "source_file": "EasyList-Germany.txt",
   "source_name": "EasyList Germany",
-  "source_sha256": "6b2da07206b17dcc96430d92991c4445f2f656204b21226808920a286d82b326",
+  "source_sha256": "f8a0367879b80517ee263a5517709ae08f5dd39c82cdf1e55d775e1da361c84d",
   "source_group": "EasyList (regions)",
   "source_homepage": "https://github.com/easylist",
   "source_license": "",
   "source_title": "EasyList Germany",
-  "source_version": "202609072332",
+  "source_version": "202609111012",
   "source_url": "https://easylist-downloads.adblockplus.org/easylistgermany.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:18:22+00:00",
+  "converted_at": "2026-09-11T10:24:43+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 6020,
-  "rules_in": 5970,
-  "rules_out": 3887,
+  "lines_total": 6022,
+  "rules_in": 5972,
+  "rules_out": 3888,
   "coverage_pct": 97.2,
   "breakdown": {
     "block": 2150,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 1574,
-    "css_selectors": 3491,
+    "css_display_none": 1575,
+    "css_selectors": 3493,
     "ignore_previous_rules": 162
   },
   "skipped_total": 133,
@@ -43,11 +43,11 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-Germany.json",
-      "rules": 3887,
-      "bytes": 600846
+      "rules": 3888,
+      "bytes": 600991
     }
   ],
-  "rules_emitted": 3887,
+  "rules_emitted": 3888,
   "published": true,
   "unpublished_reason": null,
   "extended": {

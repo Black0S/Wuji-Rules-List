@@ -2,19 +2,19 @@
   "id": "easylist-spanish",
   "source_file": "EasyList-Spanish.txt",
   "source_name": "EasyList Spanish",
-  "source_sha256": "f9194c97d87209d91b85fdebb2a63711b48533be682802a9065cdd410952c363",
+  "source_sha256": "04865f556c355125212708bb3e9f7919402c1a32bdd094655156ed387a3434f1",
   "source_group": "EasyList (regions)",
   "source_homepage": "https://github.com/easylist",
   "source_license": "",
   "source_title": "EasyList Spanish",
-  "source_version": "202609072332",
+  "source_version": "202609111012",
   "source_url": "https://easylist-downloads.adblockplus.org/easylistspanish.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:18:23+00:00",
+  "converted_at": "2026-09-11T10:24:43+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 2716,
-  "rules_in": 2645,
+  "lines_total": 2717,
+  "rules_in": 2646,
   "rules_out": 1726,
   "coverage_pct": 98.41,
   "breakdown": {
@@ -22,7 +22,7 @@
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 1027,
-    "css_selectors": 1905,
+    "css_selectors": 1906,
     "ignore_previous_rules": 60
   },
   "skipped_total": 37,
@@ -39,7 +39,7 @@
     {
       "file": "Webkit-EasyList-Spanish.json",
       "rules": 1726,
-      "bytes": 280316
+      "bytes": 280335
     }
   ],
   "rules_emitted": 1726,

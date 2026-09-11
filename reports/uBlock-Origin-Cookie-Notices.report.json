@@ -2,7 +2,7 @@
   "id": "ublock-origin-cookie-notices",
   "source_file": "uBlock-Origin-Cookie-Notices.txt",
   "source_name": "uBlock Origin - Cookie Notices",
-  "source_sha256": "96fcf7112ca0a57ff196afa41e7e8cf17894f629ef8f288e71ad4ea1b5805921",
+  "source_sha256": "fb3f7f9a47d9ef32295d04708af4d0d404396d64fb0cf09709986c20dfda4835",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,24 +10,24 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/annoyances-cookies.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:20:29+00:00",
+  "converted_at": "2026-09-11T10:26:01+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 5702,
-  "rules_in": 2352,
-  "rules_out": 136,
-  "coverage_pct": 6.12,
+  "lines_total": 5712,
+  "rules_in": 2357,
+  "rules_out": 137,
+  "coverage_pct": 6.15,
   "breakdown": {
-    "block": 19,
+    "block": 20,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 82,
     "css_selectors": 91,
     "ignore_previous_rules": 34
   },
-  "skipped_total": 2197,
+  "skipped_total": 2199,
   "skipped_reasons": {
-    "scriptlet ou filtrage HTML": 2147,
+    "scriptlet ou filtrage HTML": 2149,
     "pseudo-classe CSS etendue": 48,
     "directive $badfilter (retractation appliquee)": 2
   },
@@ -39,18 +39,18 @@
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Cookie-Notices.json",
-      "rules": 136,
-      "bytes": 27668
+      "rules": 137,
+      "bytes": 27806
     }
   ],
-  "rules_emitted": 136,
+  "rules_emitted": 137,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-uBlock-Origin-Cookie-Notices.json",
-    "total": 2195,
+    "total": 2197,
     "counts": {
-      "scriptlets": 2147,
+      "scriptlets": 2149,
       "procedural": 48,
       "styles": 0,
       "html": 0,

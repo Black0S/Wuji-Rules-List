@@ -2,35 +2,35 @@
   "id": "adguard-base",
   "source_file": "AdGuard-Base-filter.txt",
   "source_name": "AdGuard Base filter",
-  "source_sha256": "dac651eafb8e9dadfe9c4dbdfb2e8b5c8b0e35a2ab53202f065413a9d47aa16d",
+  "source_sha256": "931b77208e23d99566eea293e6ac42c16c06d669d7be843e0b04dbe2ec3279aa",
   "source_group": "AdGuard",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Base filter",
-  "source_version": "2.4.88.84",
+  "source_version": "2.4.89.66",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/2.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:17:10+00:00",
+  "converted_at": "2026-09-11T10:23:58+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 150019,
-  "rules_in": 134118,
-  "rules_out": 89380,
-  "coverage_pct": 88.78,
+  "lines_total": 151319,
+  "rules_in": 135404,
+  "rules_out": 90626,
+  "coverage_pct": 88.87,
   "breakdown": {
-    "block": 69266,
+    "block": 70483,
     "block_document": 628,
     "block_cookies": 0,
-    "css_display_none": 15407,
-    "css_selectors": 45094,
-    "ignore_previous_rules": 4078
+    "css_display_none": 15435,
+    "css_selectors": 45143,
+    "ignore_previous_rules": 4079
   },
-  "skipped_total": 12971,
+  "skipped_total": 12985,
   "skipped_reasons": {
-    "JavaScript / scriptlet (#%#)": 5207,
+    "JavaScript / scriptlet (#%#)": 5215,
     "selecteur CSS etendu (#?#)": 2586,
-    "injection de style / scriptlet (#$#)": 1933,
-    "modificateur non supporte: $stealth": 1830,
+    "injection de style / scriptlet (#$#)": 1934,
+    "modificateur non supporte: $stealth": 1835,
     "modificateur non supporte: $redirect": 710,
     "injection de style etendue (#$?#)": 208,
     "regex hors du sous-ensemble WebKit": 129,
@@ -61,9 +61,9 @@
     "$domain melange inclusions et exclusions": 1
   },
   "notes": {
-    "joker de TLD traduit en if-frame-url (Safari 26+)": 918,
-    "doublon fusionne": 774,
-    "modificateur sans effet sous WebKit: $all": 284,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 919,
+    "doublon fusionne": 779,
+    "modificateur sans effet sous WebKit: $all": 286,
     "modificateur sans effet sous WebKit: $important": 95,
     "$domain traduit en if-frame-url (Safari 26+)": 84,
     "domaine ignore (joker) dans une regle cosmetique": 13,
@@ -87,22 +87,22 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Base-filter.json",
-      "rules": 89380,
-      "bytes": 12464587
+      "rules": 90626,
+      "bytes": 12607844
     }
   ],
-  "rules_emitted": 89380,
+  "rules_emitted": 90626,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-AdGuard-Base-filter.json",
-    "total": 9720,
+    "total": 9728,
     "counts": {
-      "scriptlets": 4976,
+      "scriptlets": 4983,
       "procedural": 2601,
-      "styles": 2143,
+      "styles": 2144,
       "html": 0,
-      "raw_js": 244
+      "raw_js": 245
     }
   }
 }

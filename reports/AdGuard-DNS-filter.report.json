@@ -2,7 +2,7 @@
   "id": "adguard-dns",
   "source_file": "AdGuard-DNS-filter.txt",
   "source_name": "AdGuard DNS filter",
-  "source_sha256": "0ce0eda05e4726c4bfb9d0807bc0587ab734bf398ea1732e3ca192546238adb0",
+  "source_sha256": "f98f537d29ecaa2679a3dddcb277fa792b4bd922294acd8ec730542ed9287076",
   "source_group": "AdGuard DNS",
   "source_homepage": "https://github.com/AdguardTeam/AdGuardSDNSFilter",
   "source_license": "https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE",
@@ -10,20 +10,20 @@
   "source_version": "",
   "source_url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:17:36+00:00",
+  "converted_at": "2026-09-11T10:24:13+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 178594,
-  "rules_in": 176987,
-  "rules_out": 176988,
+  "lines_total": 179900,
+  "rules_in": 178292,
+  "rules_out": 178293,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 176774,
+    "block": 178078,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
     "css_selectors": 0,
-    "ignore_previous_rules": 213
+    "ignore_previous_rules": 214
   },
   "skipped_total": 17,
   "skipped_reasons": {
@@ -42,15 +42,15 @@
     {
       "file": "Webkit-AdGuard-DNS-filter-1.json",
       "rules": 150000,
-      "bytes": 17595769
+      "bytes": 17587078
     },
     {
       "file": "Webkit-AdGuard-DNS-filter-2.json",
-      "rules": 27201,
-      "bytes": 3066261
+      "rules": 28507,
+      "bytes": 3222545
     }
   ],
-  "rules_emitted": 177201,
+  "rules_emitted": 178507,
   "published": true,
   "unpublished_reason": null,
   "extended": {

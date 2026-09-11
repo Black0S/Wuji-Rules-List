@@ -2,7 +2,7 @@
   "id": "adguard-dns-popup-hosts",
   "source_file": "AdGuard-DNS-Popup-Hosts-filter.txt",
   "source_name": "AdGuard DNS Popup Hosts filter",
-  "source_sha256": "5cbcf0bd01b32c5a44c95cfb64955504d8f0c3507be413d13d2740e5d7f1a57d",
+  "source_sha256": "604b9cdb84d30a1197925597cecba5aa64563d9f59e498b10e13f4d8f3ed7e07",
   "source_group": "AdGuard DNS",
   "source_homepage": "https://github.com/AdguardTeam/AdGuardSDNSFilter",
   "source_license": "https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE",
@@ -10,15 +10,15 @@
   "source_version": "",
   "source_url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/adguard_popup_filter.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:17:13+00:00",
+  "converted_at": "2026-09-11T10:23:59+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 1073,
-  "rules_in": 1064,
-  "rules_out": 1065,
+  "lines_total": 1074,
+  "rules_in": 1065,
+  "rules_out": 1066,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 1064,
+    "block": 1065,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -28,16 +28,16 @@
   "skipped_total": 0,
   "skipped_reasons": {},
   "notes": {
-    "$dnsrewrite vers une adresse de blocage: traite en blocage": 1064
+    "$dnsrewrite vers une adresse de blocage: traite en blocage": 1065
   },
   "outputs": [
     {
       "file": "Webkit-AdGuard-DNS-Popup-Hosts-filter.json",
-      "rules": 1065,
-      "bytes": 116786
+      "rules": 1066,
+      "bytes": 116894
     }
   ],
-  "rules_emitted": 1065,
+  "rules_emitted": 1066,
   "published": true,
   "unpublished_reason": null,
   "extended": {

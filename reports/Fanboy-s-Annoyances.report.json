@@ -2,27 +2,27 @@
   "id": "fanboy-annoyances",
   "source_file": "Fanboy-s-Annoyances.txt",
   "source_name": "Fanboy's Annoyances",
-  "source_sha256": "876a0d5ea0a7c5ca55e7db62831e9515ba1161745ce29757ed0a64ce41f66b2a",
+  "source_sha256": "6be09205cd4bb29a294d57a5c2223a0f098a3973aa3d0caffd091acf444d5b62",
   "source_group": "Fanboy",
   "source_homepage": "https://www.fanboy.co.nz",
   "source_license": "",
   "source_title": "Fanboy's Annoyance List",
-  "source_version": "202609072335",
+  "source_version": "202609111013",
   "source_url": "https://easylist.to/easylist/fanboy-annoyance.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T20:18:41+00:00",
+  "converted_at": "2026-09-11T10:24:58+00:00",
   "profile": "Safari 26+",
   "document_policy": "guard",
-  "lines_total": 50490,
-  "rules_in": 49111,
-  "rules_out": 17222,
+  "lines_total": 50502,
+  "rules_in": 49123,
+  "rules_out": 17233,
   "coverage_pct": 98.01,
   "breakdown": {
     "block": 3561,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 13108,
-    "css_selectors": 44019,
+    "css_display_none": 13119,
+    "css_selectors": 44031,
     "ignore_previous_rules": 552
   },
   "skipped_total": 400,
@@ -41,11 +41,11 @@
   "outputs": [
     {
       "file": "Webkit-Fanboy-s-Annoyances.json",
-      "rules": 17222,
-      "bytes": 3295264
+      "rules": 17233,
+      "bytes": 3297099
     }
   ],
-  "rules_emitted": 17222,
+  "rules_emitted": 17233,
   "published": true,
   "unpublished_reason": null,
   "extended": {
