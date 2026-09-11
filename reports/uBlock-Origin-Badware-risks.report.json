@@ -2,7 +2,7 @@
   "id": "ublock-origin-badware-risks",
   "source_file": "uBlock-Origin-Badware-risks.txt",
   "source_name": "uBlock Origin - Badware risks",
-  "source_sha256": "b70fed1e2a6a3c98d149bc66a7b37fc1e6d3210489ef468ac13412910f2e7193",
+  "source_sha256": "fd93cd4c328af002af8246d8ea21f1242e90b9b1a47082ea98996d8420c95f70",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,15 +10,15 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/badware.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T08:58:52+00:00",
+  "converted_at": "2026-09-11T08:57:28+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 6476,
-  "rules_in": 4366,
-  "rules_out": 3944,
-  "coverage_pct": 91.89,
+  "lines_total": 6478,
+  "rules_in": 4368,
+  "rules_out": 3946,
+  "coverage_pct": 91.9,
   "breakdown": {
-    "block": 1585,
+    "block": 1587,
     "block_document": 2334,
     "block_cookies": 0,
     "css_display_none": 23,
@@ -51,11 +51,11 @@
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Badware-risks.json",
-      "rules": 3944,
-      "bytes": 517378
+      "rules": 3946,
+      "bytes": 517616
     }
   ],
-  "rules_emitted": 3944,
+  "rules_emitted": 3946,
   "published": true,
   "unpublished_reason": null,
   "extended": {

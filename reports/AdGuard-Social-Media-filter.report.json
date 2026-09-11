@@ -2,27 +2,27 @@
   "id": "adguard-social-media",
   "source_file": "AdGuard-Social-Media-filter.txt",
   "source_name": "AdGuard Social Media filter",
-  "source_sha256": "9f61208a183a603aebf427093b84fffe689775f77ef898fe01781f4c38528be6",
+  "source_sha256": "98268320900a2f99327ee18a47b2c42d5295af0905ccdaf3c4f52658620e7079",
   "source_group": "AdGuard",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Social Media filter",
-  "source_version": "2.1.32.22",
+  "source_version": "2.1.32.31",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/4.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T08:56:48+00:00",
+  "converted_at": "2026-09-11T08:54:59+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 17172,
-  "rules_in": 16330,
-  "rules_out": 10072,
-  "coverage_pct": 89.23,
+  "lines_total": 17179,
+  "rules_in": 16337,
+  "rules_out": 10075,
+  "coverage_pct": 89.24,
   "breakdown": {
     "block": 478,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 9443,
-    "css_selectors": 13944,
+    "css_display_none": 9446,
+    "css_selectors": 13951,
     "ignore_previous_rules": 150
   },
   "skipped_total": 1474,
@@ -46,11 +46,11 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Social-Media-filter.json",
-      "rules": 10072,
-      "bytes": 1930573
+      "rules": 10075,
+      "bytes": 1931319
     }
   ],
-  "rules_emitted": 10072,
+  "rules_emitted": 10075,
   "published": true,
   "unpublished_reason": null,
   "extended": {

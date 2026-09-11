@@ -2,27 +2,27 @@
   "id": "adguard-german",
   "source_file": "AdGuard-German-filter.txt",
   "source_name": "AdGuard German filter",
-  "source_sha256": "b94ed61214e72b020439c7667aa73526dcb246e44ccf64a7ef98266023b9a560",
+  "source_sha256": "b2713e64bd0ab857b3b2b3edcbb28ae1513e93000173dfe036fedc3ab1903941",
   "source_group": "AdGuard (langues)",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard German filter",
-  "source_version": "2.0.53.39",
+  "source_version": "2.0.53.42",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/6.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T08:56:44+00:00",
+  "converted_at": "2026-09-11T08:54:54+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 12258,
-  "rules_in": 11255,
-  "rules_out": 5708,
+  "lines_total": 12262,
+  "rules_in": 11259,
+  "rules_out": 5709,
   "coverage_pct": 88.77,
   "breakdown": {
     "block": 2574,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 2633,
-    "css_selectors": 6917,
+    "css_display_none": 2634,
+    "css_selectors": 6921,
     "ignore_previous_rules": 500
   },
   "skipped_total": 1027,
@@ -52,11 +52,11 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-German-filter.json",
-      "rules": 5708,
-      "bytes": 989631
+      "rules": 5709,
+      "bytes": 989931
     }
   ],
-  "rules_emitted": 5708,
+  "rules_emitted": 5709,
   "published": true,
   "unpublished_reason": null,
   "extended": {

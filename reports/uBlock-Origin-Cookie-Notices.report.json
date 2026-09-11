@@ -2,7 +2,7 @@
   "id": "ublock-origin-cookie-notices",
   "source_file": "uBlock-Origin-Cookie-Notices.txt",
   "source_name": "uBlock Origin - Cookie Notices",
-  "source_sha256": "78b7fdfedfbac6788107b6da63f1a2c471f984f8eec3220bcdc8c3a663f5aba6",
+  "source_sha256": "fb3f7f9a47d9ef32295d04708af4d0d404396d64fb0cf09709986c20dfda4835",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,13 +10,13 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/annoyances-cookies.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T08:58:52+00:00",
+  "converted_at": "2026-09-11T08:57:28+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 5704,
-  "rules_in": 2353,
+  "lines_total": 5712,
+  "rules_in": 2357,
   "rules_out": 137,
-  "coverage_pct": 6.16,
+  "coverage_pct": 6.15,
   "breakdown": {
     "block": 20,
     "block_document": 0,
@@ -25,9 +25,9 @@
     "css_selectors": 91,
     "ignore_previous_rules": 34
   },
-  "skipped_total": 2197,
+  "skipped_total": 2199,
   "skipped_reasons": {
-    "scriptlet ou filtrage HTML": 2147,
+    "scriptlet ou filtrage HTML": 2149,
     "pseudo-classe CSS etendue": 48,
     "directive $badfilter (retractation appliquee)": 2
   },
@@ -46,9 +46,9 @@
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-uBlock-Origin-Cookie-Notices.json",
-    "total": 2195,
+    "total": 2197,
     "counts": {
-      "scriptlets": 2147,
+      "scriptlets": 2149,
       "procedural": 48,
       "styles": 0,
       "html": 0,

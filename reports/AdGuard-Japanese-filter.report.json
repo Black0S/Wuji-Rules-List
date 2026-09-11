@@ -2,35 +2,35 @@
   "id": "adguard-japanese",
   "source_file": "AdGuard-Japanese-filter.txt",
   "source_name": "AdGuard Japanese filter",
-  "source_sha256": "397df1fc614a246e3f256d92f8896f0575f3873845d436fc9a188c7f601bc184",
+  "source_sha256": "77c6fff1ca7a3dd2b4548e802646a48d9d6486482e2bc9abf8dc11fa6cd1834c",
   "source_group": "AdGuard (langues)",
   "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
   "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
   "source_title": "AdGuard Japanese filter",
-  "source_version": "2.0.76.37",
+  "source_version": "2.0.76.43",
   "source_url": "https://filters.adtidy.org/extension/chromium/filters/7.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T08:56:45+00:00",
+  "converted_at": "2026-09-11T08:54:55+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 12807,
-  "rules_in": 12101,
-  "rules_out": 6024,
-  "coverage_pct": 85.8,
+  "lines_total": 12813,
+  "rules_in": 12106,
+  "rules_out": 6026,
+  "coverage_pct": 85.78,
   "breakdown": {
     "block": 1682,
     "block_document": 217,
     "block_cookies": 0,
-    "css_display_none": 3841,
-    "css_selectors": 8201,
+    "css_display_none": 3843,
+    "css_selectors": 8202,
     "ignore_previous_rules": 283
   },
-  "skipped_total": 1581,
+  "skipped_total": 1584,
   "skipped_reasons": {
     "selecteur CSS etendu (#?#)": 858,
-    "injection de style / scriptlet (#$#)": 342,
+    "injection de style / scriptlet (#$#)": 344,
     "JavaScript / scriptlet (#%#)": 214,
-    "injection de style etendue (#$?#)": 50,
+    "injection de style etendue (#$?#)": 51,
     "$domain inexprimable (regex ou joker)": 43,
     "modificateur non supporte: $redirect": 40,
     "regex hors du sous-ensemble WebKit": 16,
@@ -52,20 +52,20 @@
   "outputs": [
     {
       "file": "Webkit-AdGuard-Japanese-filter.json",
-      "rules": 6024,
-      "bytes": 1110266
+      "rules": 6026,
+      "bytes": 1110548
     }
   ],
-  "rules_emitted": 6024,
+  "rules_emitted": 6026,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-AdGuard-Japanese-filter.json",
-    "total": 1464,
+    "total": 1467,
     "counts": {
       "scriptlets": 213,
       "procedural": 858,
-      "styles": 393,
+      "styles": 396,
       "html": 0,
       "raw_js": 1
     }

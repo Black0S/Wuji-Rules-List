@@ -2,27 +2,27 @@
   "id": "easylist-china",
   "source_file": "EasyList-China.txt",
   "source_name": "EasyList China",
-  "source_sha256": "8c76e3989a4dd15e46b9619d2218adbfb368265402b0b7f4a83d73769a778a34",
+  "source_sha256": "fc439bfca1bd830d48ee2f19b6157e2062b6d874c804ff3bc23d78e49be90f33",
   "source_group": "EasyList (regions)",
   "source_homepage": "https://github.com/easylist",
   "source_license": "https://easylist.to/pages/licence.html",
   "source_title": "EasyList China",
-  "source_version": "202609100842",
+  "source_version": "202609110842",
   "source_url": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T08:57:22+00:00",
+  "converted_at": "2026-09-11T08:55:37+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 19510,
-  "rules_in": 19402,
-  "rules_out": 14661,
+  "lines_total": 19523,
+  "rules_in": 19415,
+  "rules_out": 14673,
   "coverage_pct": 98.09,
   "breakdown": {
-    "block": 11466,
+    "block": 11477,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 2217,
-    "css_selectors": 6588,
+    "css_display_none": 2218,
+    "css_selectors": 6590,
     "ignore_previous_rules": 977
   },
   "skipped_total": 195,
@@ -41,11 +41,11 @@
   "outputs": [
     {
       "file": "Webkit-EasyList-China.json",
-      "rules": 14661,
-      "bytes": 1809894
+      "rules": 14673,
+      "bytes": 1811204
     }
   ],
-  "rules_emitted": 14661,
+  "rules_emitted": 14673,
   "published": true,
   "unpublished_reason": null,
   "extended": {

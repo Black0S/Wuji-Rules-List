@@ -2,23 +2,23 @@
   "id": "hagezi-gambling",
   "source_file": "HaGeZi-s-Gambling-Blocklist.txt",
   "source_name": "HaGeZi's Gambling Blocklist",
-  "source_sha256": "89947f9bb952cecafdf9ffd0b782aa1bada0f88ce6b2d587dd545e86a4e26780",
+  "source_sha256": "5c3b7e185ff60205e06c11e1de08800705ae221b64530085d2c2bf49045d47c7",
   "source_group": "HaGeZi",
   "source_homepage": "https://github.com/hagezi/dns-blocklists",
   "source_license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
   "source_title": "HaGeZi's Gambling - blocks gambling content!",
-  "source_version": "2026.0909.0839.12",
+  "source_version": "2026.0910.0852.54",
   "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/gambling.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T08:58:25+00:00",
+  "converted_at": "2026-09-11T08:56:55+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 420474,
-  "rules_in": 420461,
-  "rules_out": 420462,
+  "lines_total": 412283,
+  "rules_in": 412270,
+  "rules_out": 412271,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 420461,
+    "block": 412270,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -32,20 +32,20 @@
     {
       "file": "Webkit-HaGeZi-s-Gambling-Blocklist-1.json",
       "rules": 150000,
-      "bytes": 16388627
+      "bytes": 16382026
     },
     {
       "file": "Webkit-HaGeZi-s-Gambling-Blocklist-2.json",
       "rules": 150000,
-      "bytes": 16710498
+      "bytes": 16698305
     },
     {
       "file": "Webkit-HaGeZi-s-Gambling-Blocklist-3.json",
-      "rules": 120462,
-      "bytes": 13404723
+      "rules": 112271,
+      "bytes": 12484225
     }
   ],
-  "rules_emitted": 420462,
+  "rules_emitted": 412271,
   "published": true,
   "unpublished_reason": null,
   "extended": {

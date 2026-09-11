@@ -2,23 +2,23 @@
   "id": "hagezi-url-shortener",
   "source_file": "HaGeZi-s-URL-Shortener-Blocklist.txt",
   "source_name": "HaGeZi's URL Shortener Blocklist",
-  "source_sha256": "4f58ce110be8ce1869d1c8fc73be16cf179a90adca9b0fb3e949cae93ac961dd",
+  "source_sha256": "bc7d8c32cb8efbbc7759b86f359e39b634a68478cd796eb8b3bc9e39b82d5285",
   "source_group": "HaGeZi",
   "source_homepage": "https://github.com/hagezi/dns-blocklists",
   "source_license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
   "source_title": "HaGeZi's URL Shortener - blocks link shorteners!",
-  "source_version": "2026.0909.0724.40",
+  "source_version": "2026.0910.0729.23",
   "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/urlshortener.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T08:58:41+00:00",
+  "converted_at": "2026-09-11T08:57:15+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 9944,
-  "rules_in": 9932,
-  "rules_out": 9933,
+  "lines_total": 9915,
+  "rules_in": 9903,
+  "rules_out": 9904,
   "coverage_pct": 100.0,
   "breakdown": {
-    "block": 9932,
+    "block": 9903,
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 0,
@@ -31,11 +31,11 @@
   "outputs": [
     {
       "file": "Webkit-HaGeZi-s-URL-Shortener-Blocklist.json",
-      "rules": 9933,
-      "bytes": 1045796
+      "rules": 9904,
+      "bytes": 1042706
     }
   ],
-  "rules_emitted": 9933,
+  "rules_emitted": 9904,
   "published": true,
   "unpublished_reason": null,
   "extended": {

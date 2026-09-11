@@ -24,7 +24,7 @@
             {
               "id": "hagezi-normal",
               "name": "HaGeZi's Normal Blocklist",
-              "pct": 68
+              "pct": 67
             }
           ]
         },
@@ -73,7 +73,7 @@
             {
               "id": "adguard-dns",
               "name": "AdGuard DNS filter",
-              "pct": 78
+              "pct": 79
             },
             {
               "id": "easylist",
@@ -198,7 +198,7 @@
             {
               "id": "hagezi-normal",
               "name": "HaGeZi's Normal Blocklist",
-              "pct": 83
+              "pct": 84
             }
           ]
         }

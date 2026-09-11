@@ -2,7 +2,7 @@
   "id": "stevo-ai-extra",
   "source_file": "Stevo-s-AI-Blocklist-Extra.txt",
   "source_name": "Stevo's AI Blocklist (Extra)",
-  "source_sha256": "59b1ab6436e546ff50434768968ab02d4358c8d5dd6c3d56313d52e7583a8e0f",
+  "source_sha256": "8480060073afe004ec77d07a779ac2998ea614ffb7b901923556e83ac157f175",
   "source_group": "Stevo's AI Blocklist",
   "source_homepage": "https://github.com/Stevoisiak/Stevos-AI-Blocklist",
   "source_license": "",
@@ -10,19 +10,19 @@
   "source_version": "",
   "source_url": "https://raw.githubusercontent.com/Stevoisiak/Stevos-AI-Blocklist/main/GenAI-Blocklist-Extra.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T08:58:51+00:00",
+  "converted_at": "2026-09-11T08:57:27+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 896,
-  "rules_in": 208,
-  "rules_out": 92,
-  "coverage_pct": 83.65,
+  "lines_total": 911,
+  "rules_in": 212,
+  "rules_out": 94,
+  "coverage_pct": 83.96,
   "breakdown": {
     "block": 10,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 81,
-    "css_selectors": 164,
+    "css_display_none": 83,
+    "css_selectors": 168,
     "ignore_previous_rules": 0
   },
   "skipped_total": 34,
@@ -36,11 +36,11 @@
   "outputs": [
     {
       "file": "Webkit-Stevo-s-AI-Blocklist-Extra.json",
-      "rules": 92,
-      "bytes": 23001
+      "rules": 94,
+      "bytes": 23508
     }
   ],
-  "rules_emitted": 92,
+  "rules_emitted": 94,
   "published": true,
   "unpublished_reason": null,
   "extended": {

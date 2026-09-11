@@ -2,7 +2,7 @@
   "id": "easylist-cookie",
   "source_file": "EasyList-Cookie-List.txt",
   "source_name": "EasyList Cookie List",
-  "source_sha256": "5bf9c474ac88fd31e26099fee44de27e8ce6293bd34a5d73bbf7d7e726a2036f",
+  "source_sha256": "fa0822f2832d0a4ef4c3d8f044ce786d73273432472c6540f2ef15c7b7a069fa",
   "source_group": "EasyList",
   "source_homepage": "https://github.com/easylist/easylist",
   "source_license": "http://creativecommons.org/licenses/by/3.0/",
@@ -10,10 +10,10 @@
   "source_version": "",
   "source_url": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T08:57:24+00:00",
+  "converted_at": "2026-09-11T08:55:38+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 29039,
+  "lines_total": 29040,
   "rules_in": 27961,
   "rules_out": 9425,
   "coverage_pct": 89.46,
@@ -22,13 +22,13 @@
     "block_document": 0,
     "block_cookies": 0,
     "css_display_none": 7318,
-    "css_selectors": 22908,
+    "css_selectors": 22907,
     "ignore_previous_rules": 428
   },
-  "skipped_total": 2665,
+  "skipped_total": 2666,
   "skipped_reasons": {
     "scriptlet ou filtrage HTML": 2445,
-    "pseudo-classe CSS etendue": 159,
+    "pseudo-classe CSS etendue": 160,
     "selecteur CSS etendu (#?#)": 57,
     "regle cosmetique entierement exceptee": 2,
     "injection de style (non supportee)": 2
@@ -41,7 +41,7 @@
     {
       "file": "Webkit-EasyList-Cookie-List.json",
       "rules": 9425,
-      "bytes": 1881067
+      "bytes": 1881026
     }
   ],
   "rules_emitted": 9425,
@@ -49,10 +49,10 @@
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-EasyList-Cookie-List.json",
-    "total": 2663,
+    "total": 2664,
     "counts": {
       "scriptlets": 2445,
-      "procedural": 218,
+      "procedural": 219,
       "styles": 0,
       "html": 0,
       "raw_js": 0

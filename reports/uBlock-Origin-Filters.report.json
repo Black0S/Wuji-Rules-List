@@ -2,7 +2,7 @@
   "id": "ublock-origin",
   "source_file": "uBlock-Origin-Filters.txt",
   "source_name": "uBlock Origin - Filters",
-  "source_sha256": "6c155407790f257250bdf7d226d089163123adeedebca7a5f69829a37789f746",
+  "source_sha256": "ac1cc190e5d12d459b0e51e6b9c8062ab12be579480c14859871ef080b138566",
   "source_group": "uBlock Origin",
   "source_homepage": "https://github.com/uBlockOrigin/uAssets",
   "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
@@ -10,25 +10,25 @@
   "source_version": "",
   "source_url": "https://ublockorigin.github.io/uAssets/filters/filters.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T08:58:54+00:00",
+  "converted_at": "2026-09-11T08:57:31+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 41003,
-  "rules_in": 22978,
-  "rules_out": 9434,
+  "lines_total": 41007,
+  "rules_in": 22981,
+  "rules_out": 9433,
   "coverage_pct": 52.93,
   "breakdown": {
-    "block": 4515,
+    "block": 4516,
     "block_document": 54,
     "block_cookies": 0,
     "css_display_none": 3090,
-    "css_selectors": 5819,
-    "ignore_previous_rules": 1774
+    "css_selectors": 5822,
+    "ignore_previous_rules": 1772
   },
-  "skipped_total": 12015,
+  "skipped_total": 12016,
   "skipped_reasons": {
-    "scriptlet ou filtrage HTML": 9451,
-    "pseudo-classe CSS etendue": 1097,
+    "scriptlet ou filtrage HTML": 9453,
+    "pseudo-classe CSS etendue": 1096,
     "modificateur non supporte: $redirect": 622,
     "modificateur non supporte: $redirect-rule": 374,
     "regex hors du sous-ensemble WebKit": 106,
@@ -93,19 +93,19 @@
   "outputs": [
     {
       "file": "Webkit-uBlock-Origin-Filters.json",
-      "rules": 9434,
-      "bytes": 5172685
+      "rules": 9433,
+      "bytes": 5172669
     }
   ],
-  "rules_emitted": 9434,
+  "rules_emitted": 9433,
   "published": true,
   "unpublished_reason": null,
   "extended": {
     "file": "extended/Extended-uBlock-Origin-Filters.json",
-    "total": 10570,
+    "total": 10571,
     "counts": {
-      "scriptlets": 9321,
-      "procedural": 1118,
+      "scriptlets": 9323,
+      "procedural": 1117,
       "styles": 0,
       "html": 131,
       "raw_js": 0

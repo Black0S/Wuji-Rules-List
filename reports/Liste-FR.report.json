@@ -2,27 +2,27 @@
   "id": "liste-fr",
   "source_file": "Liste-FR.txt",
   "source_name": "Liste FR",
-  "source_sha256": "9ed708107484fa9872ac651b0da2461657a88ac6f20872d30504ff18438728d3",
+  "source_sha256": "6054cb7db7304dbbc92d0b6ea1698db5122aae62333dc708a192dc1888735ee5",
   "source_group": "EasyList (regions)",
   "source_homepage": "https://github.com/easylist",
   "source_license": "",
   "source_title": "Liste FR",
-  "source_version": "202609100842",
+  "source_version": "202609110842",
   "source_url": "https://easylist-downloads.adblockplus.org/liste_fr.txt",
   "format": "adblock",
-  "converted_at": "2026-09-10T08:58:43+00:00",
+  "converted_at": "2026-09-11T08:57:18+00:00",
   "profile": "modern (Safari 15+)",
   "document_policy": "guard",
-  "lines_total": 13800,
-  "rules_in": 13685,
-  "rules_out": 11066,
+  "lines_total": 13826,
+  "rules_in": 13711,
+  "rules_out": 11092,
   "coverage_pct": 99.01,
   "breakdown": {
-    "block": 9961,
+    "block": 9986,
     "block_document": 0,
     "block_cookies": 0,
-    "css_display_none": 947,
-    "css_selectors": 3431,
+    "css_display_none": 948,
+    "css_selectors": 3432,
     "ignore_previous_rules": 157
   },
   "skipped_total": 132,
@@ -40,11 +40,11 @@
   "outputs": [
     {
       "file": "Webkit-Liste-FR.json",
-      "rules": 11066,
-      "bytes": 1447410
+      "rules": 11092,
+      "bytes": 1450263
     }
   ],
-  "rules_emitted": 11066,
+  "rules_emitted": 11092,
   "published": true,
   "unpublished_reason": null,
   "extended": {
