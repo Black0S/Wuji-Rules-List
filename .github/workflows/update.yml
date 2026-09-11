@@ -11,6 +11,7 @@ on:
       - "convert_webkit.py"
       - "sources.json"
       - "tools/**"
+      - ".github/workflows/**"
 
 permissions:
   contents: write   # uniquement pour force-push la branche `dist`
