@@ -1,0 +1,82 @@
+{
+  "id": "adguard-turkish",
+  "source_file": "AdGuard-Turkish-filter.txt",
+  "source_name": "AdGuard Turkish filter",
+  "source_sha256": "bb25580b719ba58de957f136e0469649401caf0d8e2c03130e6824fa477fcffa",
+  "source_group": "AdGuard (langues)",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Turkish filter",
+  "source_version": "2.0.67.98",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/13.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:38:38+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 7559,
+  "rules_in": 6404,
+  "rules_out": 3238,
+  "coverage_pct": 80.76,
+  "breakdown": {
+    "block": 1557,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1574,
+    "css_selectors": 3509,
+    "ignore_previous_rules": 106
+  },
+  "skipped_total": 1229,
+  "skipped_reasons": {
+    "JavaScript / scriptlet (#%#)": 357,
+    "injection de style / scriptlet (#$#)": 334,
+    "prefixe cosmetique sans chemin": 286,
+    "selecteur CSS etendu (#?#)": 118,
+    "injection de style etendue (#$?#)": 51,
+    "modificateur non supporte: $redirect": 36,
+    "$domain inexprimable (regex ou joker)": 30,
+    "domaine cosmetique non exprimable (joker de TLD)": 7,
+    "modificateur inconnu: $_____": 3,
+    "regex hors du sous-ensemble WebKit": 3,
+    "modificateur non supporte: $redirect-rule": 1,
+    "regle cosmetique entierement exceptee": 1,
+    "caractere de controle dans le selecteur": 1,
+    "modificateur non supporte: $url": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 140,
+    "$domain traduit en if-frame-url (Safari 26+)": 42,
+    "domaine ignore (joker) dans une regle cosmetique": 7,
+    "alternation eclatee en 2 regles": 6,
+    "modificateur sans effet sous WebKit: $all": 5,
+    "alternation eclatee en 4 regles": 2,
+    "$denyallow: 3 exception(s) emises apres le blocage": 1,
+    "modificateur sans effet sous WebKit: $important": 1,
+    "alternation eclatee en 7 regles": 1,
+    "alternation eclatee en 21 regles": 1,
+    "alternation eclatee en 10 regles": 1,
+    "alternation eclatee en 6 regles": 1,
+    "alternation eclatee en 3 regles": 1,
+    "doublon fusionne": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Turkish-filter.json",
+      "rules": 3238,
+      "bytes": 559743
+    }
+  ],
+  "rules_emitted": 3238,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Turkish-filter.json",
+    "total": 847,
+    "counts": {
+      "scriptlets": 343,
+      "procedural": 119,
+      "styles": 385,
+      "html": 0,
+      "raw_js": 14
+    }
+  }
+}

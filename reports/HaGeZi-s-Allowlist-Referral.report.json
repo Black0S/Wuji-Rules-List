@@ -1,0 +1,52 @@
+{
+  "id": "hagezi-allowlist-referral",
+  "source_file": "HaGeZi-s-Allowlist-Referral.txt",
+  "source_name": "HaGeZi's Allowlist Referral",
+  "source_sha256": "6731787e4295c278e47964ec11c253369ff78cbfdf63c5920a5213e13a57e2a6",
+  "source_group": "HaGeZi",
+  "source_homepage": "https://github.com/hagezi/dns-blocklists",
+  "source_license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+  "source_title": "HaGeZi's Allowlist Referral",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:39:03+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 941,
+  "rules_in": 932,
+  "rules_out": 932,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 0,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 932
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-HaGeZi-s-Allowlist-Referral.json",
+      "rules": 932,
+      "bytes": 120094
+    }
+  ],
+  "rules_emitted": 932,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

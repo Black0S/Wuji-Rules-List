@@ -1,0 +1,66 @@
+{
+  "id": "adguard-widgets",
+  "source_file": "AdGuard-Widgets-filter.txt",
+  "source_name": "AdGuard Widgets filter",
+  "source_sha256": "3f6c2be8b4f2a9fcdce65dbba2febd8885c2053456a3ae2877fd0e538fe4e3f4",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Widgets filter",
+  "source_version": "2.0.14.90",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/22.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:38:38+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 2960,
+  "rules_in": 2670,
+  "rules_out": 1818,
+  "coverage_pct": 92.55,
+  "breakdown": {
+    "block": 802,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 980,
+    "css_selectors": 1634,
+    "ignore_previous_rules": 35
+  },
+  "skipped_total": 197,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 139,
+    "injection de style / scriptlet (#$#)": 38,
+    "JavaScript / scriptlet (#%#)": 13,
+    "injection de style etendue (#$?#)": 3,
+    "$path sous forme de regex": 1,
+    "modificateur non supporte: $redirect": 1,
+    "injection de style (non supportee)": 1,
+    "modificateur non supporte: $removeparam": 1
+  },
+  "notes": {
+    "$path traduit en if-top-url": 9,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 3,
+    "modificateur sans effet sous WebKit: $important": 3,
+    "doublon fusionne": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Widgets-filter.json",
+      "rules": 1818,
+      "bytes": 291380
+    }
+  ],
+  "rules_emitted": 1818,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Widgets-filter.json",
+    "total": 194,
+    "counts": {
+      "scriptlets": 13,
+      "procedural": 140,
+      "styles": 41,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

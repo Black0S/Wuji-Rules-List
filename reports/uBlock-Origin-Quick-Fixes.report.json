@@ -1,0 +1,72 @@
+{
+  "id": "ublock-origin-quick-fixes",
+  "source_file": "uBlock-Origin-Quick-Fixes.txt",
+  "source_name": "uBlock Origin - Quick Fixes",
+  "source_sha256": "0fb4652424297877276b703983d8e480c2866c52c604cd68fe5b0f27dcb5ac97",
+  "source_group": "uBlock Origin",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+  "source_title": "uBlock₀ filters – Quick fixes",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/quick-fixes.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:40:31+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 473,
+  "rules_in": 301,
+  "rules_out": 46,
+  "coverage_pct": 26.25,
+  "breakdown": {
+    "block": 13,
+    "block_document": 5,
+    "block_cookies": 0,
+    "css_display_none": 13,
+    "css_selectors": 47,
+    "ignore_previous_rules": 14
+  },
+  "skipped_total": 210,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 158,
+    "pseudo-classe CSS etendue": 18,
+    "modificateur non supporte: $redirect": 10,
+    "directive $badfilter (retractation appliquee)": 6,
+    "modificateur non supporte: $redirect-rule": 4,
+    "modificateur non supporte: $replace": 3,
+    "modificateur non supporte: $header": 3,
+    "regex hors du sous-ensemble WebKit": 2,
+    "ancre `|` en milieu de motif": 2,
+    "$denyallow generique sans $domain": 1,
+    "modificateur non supporte: $strict3p": 1,
+    "erreur de parsing (KeyError)": 1,
+    "injection de style (non supportee)": 1
+  },
+  "notes": {
+    "$domain traduit en if-frame-url (Safari 26+)": 10,
+    "modificateur sans effet sous WebKit: $important": 6,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 1,
+    "$denyallow: 1 exception(s) emises apres le blocage": 1,
+    "modificateur sans effet sous WebKit: $all": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-Origin-Quick-Fixes.json",
+      "rules": 46,
+      "bytes": 11433
+    }
+  ],
+  "rules_emitted": 46,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-uBlock-Origin-Quick-Fixes.json",
+    "total": 177,
+    "counts": {
+      "scriptlets": 153,
+      "procedural": 19,
+      "styles": 0,
+      "html": 5,
+      "raw_js": 0
+    }
+  }
+}

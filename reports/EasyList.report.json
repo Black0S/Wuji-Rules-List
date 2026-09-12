@@ -1,0 +1,69 @@
+{
+  "id": "easylist",
+  "source_file": "EasyList.txt",
+  "source_name": "EasyList",
+  "source_sha256": "f231ccb4578c37326fa3482cb98806885cb45772f59af3eb8b9f256723d83620",
+  "source_group": "EasyList",
+  "source_homepage": "https://github.com/easylist/easylist",
+  "source_license": "",
+  "source_title": "EasyList",
+  "source_version": "202609120828",
+  "source_url": "https://easylist.to/easylist/easylist.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:38:53+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 79890,
+  "rules_in": 79611,
+  "rules_out": 60746,
+  "coverage_pct": 99.11,
+  "breakdown": {
+    "block": 53661,
+    "block_document": 594,
+    "block_cookies": 0,
+    "css_display_none": 5734,
+    "css_selectors": 23893,
+    "ignore_previous_rules": 756
+  },
+  "skipped_total": 372,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 289,
+    "injection de style (non supportee)": 40,
+    "regex hors du sous-ensemble WebKit": 18,
+    "modificateur inconnu: $rewrite": 7,
+    "pseudo-classe CSS etendue": 6,
+    "ancre `|` en milieu de motif": 3,
+    "modificateur non supporte: $csp": 3,
+    "$domain inexprimable (regex ou joker)": 2,
+    "expansion d'alternation trop large": 2,
+    "domaine cosmetique non exprimable (joker de TLD)": 2
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 284,
+    "domaine ignore (joker) dans une regle cosmetique": 2,
+    "doublon fusionne": 1,
+    "alternation eclatee en 4 regles": 1,
+    "unless-domain abandonne (incompatible avec if-frame-url)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList.json",
+      "rules": 60746,
+      "bytes": 7664130
+    }
+  ],
+  "rules_emitted": 60746,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList.json",
+    "total": 335,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 335,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

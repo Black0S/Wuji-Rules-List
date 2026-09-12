@@ -1,0 +1,59 @@
+{
+  "id": "easylist-spanish",
+  "source_file": "EasyList-Spanish.txt",
+  "source_name": "EasyList Spanish",
+  "source_sha256": "9cf2ae356a9279aa46ae2b75c1822630416c067a1b8e5de236ac04c169eb3350",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
+  "source_title": "EasyList Spanish",
+  "source_version": "202609120821",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistspanish.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:38:44+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 2717,
+  "rules_in": 2646,
+  "rules_out": 1726,
+  "coverage_pct": 98.41,
+  "breakdown": {
+    "block": 638,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1027,
+    "css_selectors": 1906,
+    "ignore_previous_rules": 60
+  },
+  "skipped_total": 37,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 28,
+    "regex hors du sous-ensemble WebKit": 7,
+    "pseudo-classe CSS etendue": 2
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 4,
+    "alternation eclatee en 8 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Spanish.json",
+      "rules": 1726,
+      "bytes": 280335
+    }
+  ],
+  "rules_emitted": 1726,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Spanish.json",
+    "total": 30,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 30,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

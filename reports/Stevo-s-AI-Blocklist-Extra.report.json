@@ -1,0 +1,59 @@
+{
+  "id": "stevo-ai-extra",
+  "source_file": "Stevo-s-AI-Blocklist-Extra.txt",
+  "source_name": "Stevo's AI Blocklist (Extra)",
+  "source_sha256": "cc2aa4a03760af882ca735da9987ef7a00fc8b8dbbd948461d86d637101bd87c",
+  "source_group": "Stevo's AI Blocklist",
+  "source_homepage": "https://github.com/Stevoisiak/Stevos-AI-Blocklist",
+  "source_license": "",
+  "source_title": "Stevo's AI Blocklist (Extra)",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/Stevoisiak/Stevos-AI-Blocklist/main/GenAI-Blocklist-Extra.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:40:28+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 919,
+  "rules_in": 214,
+  "rules_out": 95,
+  "coverage_pct": 84.11,
+  "breakdown": {
+    "block": 10,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 84,
+    "css_selectors": 170,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 34,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 20,
+    "selecteur CSS vide ou trop long": 8,
+    "JavaScript / scriptlet (#%#)": 4,
+    "scriptlet ou filtrage HTML": 2
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 3
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Stevo-s-AI-Blocklist-Extra.json",
+      "rules": 95,
+      "bytes": 21668
+    }
+  ],
+  "rules_emitted": 95,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-Stevo-s-AI-Blocklist-Extra.json",
+    "total": 34,
+    "counts": {
+      "scriptlets": 6,
+      "procedural": 28,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

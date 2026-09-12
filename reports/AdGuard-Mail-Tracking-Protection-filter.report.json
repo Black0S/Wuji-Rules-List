@@ -1,0 +1,52 @@
+{
+  "id": "adguard-mail-tracking-protection",
+  "source_file": "AdGuard-Mail-Tracking-Protection-filter.txt",
+  "source_name": "AdGuard Mail Tracking Protection filter",
+  "source_sha256": "cad103c4276a82a66b737e0a41301b94e34d4f68bf443d43eeeb66b204c9528b",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Mail Tracking Protection filter",
+  "source_version": "2.0.0.9",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/25.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:38:06+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 849,
+  "rules_in": 505,
+  "rules_out": 506,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 504,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 1
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Mail-Tracking-Protection-filter.json",
+      "rules": 506,
+      "bytes": 56053
+    }
+  ],
+  "rules_emitted": 506,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

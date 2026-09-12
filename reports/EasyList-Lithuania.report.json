@@ -1,0 +1,58 @@
+{
+  "id": "easylist-lithuania",
+  "source_file": "EasyList-Lithuania.txt",
+  "source_name": "EasyList Lithuania",
+  "source_sha256": "f96712f2047f70ba8f29e226e5e26f509a0f9cf62ffce4231a5a2ac114710eac",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
+  "source_title": "EasyList Lithuania",
+  "source_version": "202609120821",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistlithuania.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:38:43+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1200,
+  "rules_in": 1169,
+  "rules_out": 858,
+  "coverage_pct": 97.69,
+  "breakdown": {
+    "block": 491,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 306,
+    "css_selectors": 591,
+    "ignore_previous_rules": 60
+  },
+  "skipped_total": 27,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 11,
+    "selecteur CSS etendu (#?#)": 9,
+    "pseudo-classe CSS etendue": 3,
+    "modificateur non supporte: $redirect": 2,
+    "regex hors du sous-ensemble WebKit": 2
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Lithuania.json",
+      "rules": 858,
+      "bytes": 126093
+    }
+  ],
+  "rules_emitted": 858,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Lithuania.json",
+    "total": 23,
+    "counts": {
+      "scriptlets": 11,
+      "procedural": 12,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

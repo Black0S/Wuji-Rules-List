@@ -1,0 +1,58 @@
+{
+  "id": "adguard-experimental",
+  "source_file": "AdGuard-Experimental-filter.txt",
+  "source_name": "AdGuard Experimental filter",
+  "source_sha256": "7965a36f256d63ea1232ed8ef0884b54b061c74b8c0e6ef952d9c7ba02decd8e",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Experimental filter",
+  "source_version": "2.0.2.2",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/5.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:38:03+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 239,
+  "rules_in": 18,
+  "rules_out": 7,
+  "coverage_pct": 38.89,
+  "breakdown": {
+    "block": 4,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 2,
+    "css_selectors": 3,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 11,
+  "skipped_reasons": {
+    "JavaScript / scriptlet (#%#)": 3,
+    "injection de style / scriptlet (#$#)": 3,
+    "exception de scriptlet": 2,
+    "selecteur CSS etendu (#?#)": 2,
+    "injection de style etendue (#$?#)": 1
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Experimental-filter.json",
+      "rules": 7,
+      "bytes": 945
+    }
+  ],
+  "rules_emitted": 7,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Experimental-filter.json",
+    "total": 6,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 2,
+      "styles": 4,
+      "html": 0,
+      "raw_js": 5
+    }
+  }
+}

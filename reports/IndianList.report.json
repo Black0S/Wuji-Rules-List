@@ -1,0 +1,58 @@
+{
+  "id": "indianlist",
+  "source_file": "IndianList.txt",
+  "source_name": "IndianList",
+  "source_sha256": "6cfbe431ab70c2cbd8c4f7a07dd7aed28660c8b8293d057057941099cc6a4b89",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
+  "source_title": "IndianList",
+  "source_version": "202609120821",
+  "source_url": "https://easylist-downloads.adblockplus.org/indianlist.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:40:17+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 10539,
+  "rules_in": 10514,
+  "rules_out": 8993,
+  "coverage_pct": 98.21,
+  "breakdown": {
+    "block": 5258,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 3652,
+    "css_selectors": 4986,
+    "ignore_previous_rules": 82
+  },
+  "skipped_total": 181,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 178,
+    "ancre `|` en milieu de motif": 2,
+    "domaine cosmetique non exprimable (joker de TLD)": 1
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-IndianList.json",
+      "rules": 8993,
+      "bytes": 1455767
+    }
+  ],
+  "rules_emitted": 8993,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-IndianList.json",
+    "total": 178,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 178,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

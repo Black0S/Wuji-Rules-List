@@ -1,0 +1,74 @@
+{
+  "id": "adguard-german",
+  "source_file": "AdGuard-German-filter.txt",
+  "source_name": "AdGuard German filter",
+  "source_sha256": "3e12750a7df23ee912282514505919d0f565a915c2e250fc0346d67048dce7a1",
+  "source_group": "AdGuard (langues)",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard German filter",
+  "source_version": "2.0.53.43",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/6.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:38:05+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 12263,
+  "rules_in": 11260,
+  "rules_out": 5709,
+  "coverage_pct": 88.77,
+  "breakdown": {
+    "block": 2574,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 2634,
+    "css_selectors": 6921,
+    "ignore_previous_rules": 500
+  },
+  "skipped_total": 1028,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 601,
+    "JavaScript / scriptlet (#%#)": 188,
+    "injection de style / scriptlet (#$#)": 153,
+    "modificateur non supporte: $redirect": 29,
+    "injection de style etendue (#$?#)": 20,
+    "regex hors du sous-ensemble WebKit": 13,
+    "directive $badfilter (retractation appliquee)": 7,
+    "selecteur CSS etendu (#@?#)": 5,
+    "regle cosmetique entierement exceptee": 5,
+    "injection de style (non supportee)": 2,
+    "exception de scriptlet": 2,
+    "$path sous forme de regex": 1,
+    "retiree par $badfilter (retractation amont)": 1,
+    "modificateur non supporte: $csp": 1
+  },
+  "notes": {
+    "doublon fusionne": 113,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 52,
+    "modificateur sans effet sous WebKit: $important": 10,
+    "$path traduit en if-top-url": 4,
+    "alternation eclatee en 2 regles": 1,
+    "alternation eclatee en 10 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-German-filter.json",
+      "rules": 5709,
+      "bytes": 962573
+    }
+  ],
+  "rules_emitted": 5709,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-German-filter.json",
+    "total": 957,
+    "counts": {
+      "scriptlets": 176,
+      "procedural": 608,
+      "styles": 173,
+      "html": 0,
+      "raw_js": 14
+    }
+  }
+}

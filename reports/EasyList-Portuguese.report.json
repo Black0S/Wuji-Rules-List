@@ -1,0 +1,58 @@
+{
+  "id": "easylist-portuguese",
+  "source_file": "EasyList-Portuguese.txt",
+  "source_name": "EasyList Portuguese",
+  "source_sha256": "57afdf7d0fc084f170256a32d6961b034c7a2f89c72fbf4a211d222648ce883f",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
+  "source_title": "EasyList Portuguese",
+  "source_version": "202609120821",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistportuguese.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:38:44+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1729,
+  "rules_in": 1666,
+  "rules_out": 963,
+  "coverage_pct": 98.38,
+  "breakdown": {
+    "block": 309,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 626,
+    "css_selectors": 1303,
+    "ignore_previous_rules": 27
+  },
+  "skipped_total": 31,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 27,
+    "regex hors du sous-ensemble WebKit": 3,
+    "injection de style (non supportee)": 1
+  },
+  "notes": {
+    "alternation eclatee en 12 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Portuguese.json",
+      "rules": 963,
+      "bytes": 154023
+    }
+  ],
+  "rules_emitted": 963,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Portuguese.json",
+    "total": 28,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 28,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

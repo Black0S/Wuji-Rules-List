@@ -1,0 +1,56 @@
+{
+  "id": "fanboy-social-blocking",
+  "source_file": "Fanboy-s-Social-Blocking-List.txt",
+  "source_name": "Fanboy's Social Blocking List",
+  "source_sha256": "d0dc90de6774e06de85b4b4866acba3420313f5582c0a00ce8505a22abcab931",
+  "source_group": "Fanboy",
+  "source_homepage": "https://www.fanboy.co.nz",
+  "source_license": "",
+  "source_title": "Fanboy's Social Blocking List",
+  "source_version": "202609120828",
+  "source_url": "https://easylist.to/easylist/fanboy-social.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:39:03+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 14070,
+  "rules_in": 13833,
+  "rules_out": 3299,
+  "coverage_pct": 98.76,
+  "breakdown": {
+    "block": 585,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 2632,
+    "css_selectors": 12995,
+    "ignore_previous_rules": 81
+  },
+  "skipped_total": 48,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 48
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Fanboy-s-Social-Blocking-List.json",
+      "rules": 3299,
+      "bytes": 691754
+    }
+  ],
+  "rules_emitted": 3299,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-Fanboy-s-Social-Blocking-List.json",
+    "total": 48,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 48,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

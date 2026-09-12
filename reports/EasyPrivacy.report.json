@@ -1,0 +1,65 @@
+{
+  "id": "easyprivacy",
+  "source_file": "EasyPrivacy.txt",
+  "source_name": "EasyPrivacy",
+  "source_sha256": "00034792428a642b356be816667b040b66e26a6b965c3bbd4e2195e31879a711",
+  "source_group": "EasyList",
+  "source_homepage": "https://github.com/easylist/easylist",
+  "source_license": "",
+  "source_title": "EasyPrivacy",
+  "source_version": "202609120811",
+  "source_url": "https://easylist.to/easylist/easyprivacy.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:38:59+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 56819,
+  "rules_in": 56048,
+  "rules_out": 55975,
+  "coverage_pct": 99.87,
+  "breakdown": {
+    "block": 55134,
+    "block_document": 1,
+    "block_cookies": 0,
+    "css_display_none": 1,
+    "css_selectors": 2,
+    "ignore_previous_rules": 838
+  },
+  "skipped_total": 71,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 29,
+    "modificateur non supporte: $redirect": 27,
+    "regex hors du sous-ensemble WebKit": 7,
+    "pseudo-classe CSS etendue": 4,
+    "modificateur non supporte: $csp": 2,
+    "modificateur inconnu: $rewrite": 1,
+    "modificateur non supporte: $redirect-rule": 1
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $important": 10,
+    "doublon fusionne": 2,
+    "domaine ignore (joker ou regex dans $domain)": 2,
+    "$domain traduit en if-frame-url (Safari 26+)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyPrivacy.json",
+      "rules": 55975,
+      "bytes": 6630247
+    }
+  ],
+  "rules_emitted": 55975,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyPrivacy.json",
+    "total": 33,
+    "counts": {
+      "scriptlets": 28,
+      "procedural": 4,
+      "styles": 0,
+      "html": 1,
+      "raw_js": 0
+    }
+  }
+}

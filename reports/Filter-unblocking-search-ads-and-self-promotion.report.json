@@ -1,0 +1,60 @@
+{
+  "id": "filter-unblocking-search-ads-and-self-promotion",
+  "source_file": "Filter-unblocking-search-ads-and-self-promotion.txt",
+  "source_name": "Filter unblocking search ads and self-promotion",
+  "source_sha256": "9cf5b7d047c485c9d19dafdbcd430fe9d3ffaaa66746ee33e8fb66a5ae8f2578",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "Filter unblocking search ads and self-promotion",
+  "source_version": "2.0.3.99",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/10.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:39:03+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 392,
+  "rules_in": 247,
+  "rules_out": 14,
+  "coverage_pct": 6.07,
+  "breakdown": {
+    "block": 0,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 3,
+    "css_selectors": 4,
+    "ignore_previous_rules": 11
+  },
+  "skipped_total": 55,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#@?#)": 45,
+    "exception d'injection de style": 4,
+    "exception d'injection de style etendue": 3,
+    "exception de scriptlet": 3
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 2,
+    "$domain traduit en if-frame-url (Safari 26+)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Filter-unblocking-search-ads-and-self-promotion.json",
+      "rules": 14,
+      "bytes": 2581
+    }
+  ],
+  "rules_emitted": 14,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-Filter-unblocking-search-ads-and-self-promotion.json",
+    "total": 55,
+    "counts": {
+      "scriptlets": 3,
+      "procedural": 45,
+      "styles": 7,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "dandelion-sprout-anti-push-notifications",
+  "source_file": "Dandelion-Sprout-s-Anti-Push-Notifications.txt",
+  "source_name": "Dandelion Sprout's Anti Push Notifications",
+  "source_sha256": "5bb6bcf7a8791d907f9bb3b5e1f665a8799c2061163edbe2ec8cbb3e0569393d",
+  "source_group": "Dandelion Sprout",
+  "source_homepage": "https://github.com/DandelionSprout/adfilt",
+  "source_license": "",
+  "source_title": "Dandelion Sprout's AdGuard Home Compilation List - Web Push Notifications",
+  "source_version": "05May2026v1-Beta",
+  "source_url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/AdGuard%20Home%20Compilation%20List/AdGuardHomeCompilationList-Notifications.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:38:40+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 526,
+  "rules_in": 480,
+  "rules_out": 481,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 480,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-Dandelion-Sprout-s-Anti-Push-Notifications.json",
+      "rules": 481,
+      "bytes": 51261
+    }
+  ],
+  "rules_emitted": 481,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

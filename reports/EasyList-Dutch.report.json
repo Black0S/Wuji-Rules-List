@@ -1,0 +1,59 @@
+{
+  "id": "easylist-dutch",
+  "source_file": "EasyList-Dutch.txt",
+  "source_name": "EasyList Dutch",
+  "source_sha256": "813021473fc8ebd475edf7e4dba2b7a08c9d5e88a8c73563a2ccacd3394c6ee3",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
+  "source_title": "EasyList Dutch",
+  "source_version": "202609120821",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistdutch.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-12T08:38:43+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1576,
+  "rules_in": 1527,
+  "rules_out": 1080,
+  "coverage_pct": 96.73,
+  "breakdown": {
+    "block": 445,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 608,
+    "css_selectors": 1006,
+    "ignore_previous_rules": 26
+  },
+  "skipped_total": 36,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 33,
+    "modificateur inconnu: $rewrite": 1,
+    "regex hors du sous-ensemble WebKit": 1,
+    "pseudo-classe CSS etendue": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Dutch.json",
+      "rules": 1080,
+      "bytes": 159861
+    }
+  ],
+  "rules_emitted": 1080,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Dutch.json",
+    "total": 34,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 34,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}
