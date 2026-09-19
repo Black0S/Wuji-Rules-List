@@ -1,0 +1,56 @@
+{
+  "id": "adblock-warning-removal",
+  "source_file": "Adblock-Warning-Removal-List.txt",
+  "source_name": "Adblock Warning Removal List",
+  "source_sha256": "407ff3b5e78112b5f79fbc3b94211e21325e48763f9a19bb80dd664ec88fc78b",
+  "source_group": "EasyList",
+  "source_homepage": "https://github.com/easylist/easylist",
+  "source_license": "",
+  "source_title": "Adblock Warning Removal List",
+  "source_version": "202609190842",
+  "source_url": "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:39+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 3028,
+  "rules_in": 2974,
+  "rules_out": 2777,
+  "coverage_pct": 98.96,
+  "breakdown": {
+    "block": 2461,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 245,
+    "css_selectors": 412,
+    "ignore_previous_rules": 70
+  },
+  "skipped_total": 3,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 3
+  },
+  "notes": {
+    "doublon fusionne": 5
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Adblock-Warning-Removal-List.json",
+      "rules": 2777,
+      "bytes": 324812
+    }
+  ],
+  "rules_emitted": 2777,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-Adblock-Warning-Removal-List.json",
+    "total": 26,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 26,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

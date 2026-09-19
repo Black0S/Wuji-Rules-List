@@ -1,0 +1,52 @@
+{
+  "id": "hagezi-encrypted-dns-vpn-tor-proxy-bypass",
+  "source_file": "HaGeZi-s-Encrypted-DNS-VPN-TOR-Proxy-Bypass.txt",
+  "source_name": "HaGeZi's Encrypted DNS/VPN/TOR/Proxy Bypass",
+  "source_sha256": "44fbe58c2913a9c811a9a05346f6a78a6a50c68c8f305b9b8186dccf21f01d39",
+  "source_group": "HaGeZi",
+  "source_homepage": "https://github.com/hagezi/dns-blocklists",
+  "source_license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+  "source_title": "HaGeZi's Encrypted DNS/VPN/Tor/Proxy Bypass - stop people from sneaking around your DNS!",
+  "source_version": "2026.0918.0913.06",
+  "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/doh-vpn-proxy-bypass.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:45+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 16446,
+  "rules_in": 16432,
+  "rules_out": 16433,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 16432,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-HaGeZi-s-Encrypted-DNS-VPN-TOR-Proxy-Bypass.json",
+      "rules": 16433,
+      "bytes": 1853857
+    }
+  ],
+  "rules_emitted": 16433,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

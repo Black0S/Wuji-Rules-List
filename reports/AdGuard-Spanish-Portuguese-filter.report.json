@@ -1,0 +1,70 @@
+{
+  "id": "adguard-spanish-portuguese",
+  "source_file": "AdGuard-Spanish-Portuguese-filter.txt",
+  "source_name": "AdGuard Spanish/Portuguese filter",
+  "source_sha256": "1266ffcae843afb4e53a688c3d8775374b5ded36a1b234c6686ea755e1157f5d",
+  "source_group": "AdGuard (langues)",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Spanish/Portuguese filter",
+  "source_version": "2.0.35.79",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/9.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:38+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 6650,
+  "rules_in": 5685,
+  "rules_out": 2813,
+  "coverage_pct": 80.39,
+  "breakdown": {
+    "block": 913,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1606,
+    "css_selectors": 3364,
+    "ignore_previous_rules": 293
+  },
+  "skipped_total": 1019,
+  "skipped_reasons": {
+    "JavaScript / scriptlet (#%#)": 590,
+    "injection de style / scriptlet (#$#)": 207,
+    "selecteur CSS etendu (#?#)": 198,
+    "injection de style etendue (#$?#)": 13,
+    "modificateur non supporte: $redirect-rule": 6,
+    "modificateur inconnu: $_____": 2,
+    "regle cosmetique entierement exceptee": 1,
+    "directive $badfilter (retractation appliquee)": 1,
+    "caractere de controle dans le selecteur": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 66,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 28,
+    "modificateur sans effet sous WebKit: $important": 15,
+    "$domain traduit en if-frame-url (Safari 26+)": 8,
+    "doublon fusionne": 4,
+    "modificateur sans effet sous WebKit: $all": 3
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Spanish-Portuguese-filter.json",
+      "rules": 2813,
+      "bytes": 467859
+    }
+  ],
+  "rules_emitted": 2813,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Spanish-Portuguese-filter.json",
+    "total": 1137,
+    "counts": {
+      "scriptlets": 556,
+      "procedural": 291,
+      "styles": 218,
+      "html": 0,
+      "raw_js": 36,
+      "redirects": 72
+    }
+  }
+}

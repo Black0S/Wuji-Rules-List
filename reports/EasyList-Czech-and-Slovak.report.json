@@ -1,0 +1,57 @@
+{
+  "id": "easylist-czech-and-slovak",
+  "source_file": "EasyList-Czech-and-Slovak.txt",
+  "source_name": "EasyList Czech and Slovak",
+  "source_sha256": "2021ec98e17d824c3a5d4507a16c9d75b72ab083d61c6b2fb4027b82bdd6b8f7",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "CC-BY-SA v4.0",
+  "source_title": "EasyList Czech and Slovak",
+  "source_version": "202609190842",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistczechslovak.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:40+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 683,
+  "rules_in": 622,
+  "rules_out": 410,
+  "coverage_pct": 95.18,
+  "breakdown": {
+    "block": 207,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 175,
+    "css_selectors": 358,
+    "ignore_previous_rules": 27
+  },
+  "skipped_total": 19,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 17,
+    "injection de style / scriptlet (#$#)": 2
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $important": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Czech-and-Slovak.json",
+      "rules": 410,
+      "bytes": 57151
+    }
+  ],
+  "rules_emitted": 410,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Czech-and-Slovak.json",
+    "total": 28,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 28,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 2
+    }
+  }
+}

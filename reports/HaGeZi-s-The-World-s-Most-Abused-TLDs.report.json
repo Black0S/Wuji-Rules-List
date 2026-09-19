@@ -1,0 +1,81 @@
+{
+  "id": "hagezi-the-world-most-abused-tlds",
+  "source_file": "HaGeZi-s-The-World-s-Most-Abused-TLDs.txt",
+  "source_name": "HaGeZi's The World's Most Abused TLDs",
+  "source_sha256": "e1726ec7719d1c7850f03f891b1d5c0a15178d66839ecdbf7ae0332a8a820c09",
+  "source_group": "HaGeZi",
+  "source_homepage": "https://github.com/hagezi/dns-blocklists",
+  "source_license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+  "source_title": "HaGeZi's The World's Most Abused TLDs",
+  "source_version": "2026.0917.0933.19",
+  "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:48+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 460,
+  "rules_in": 445,
+  "rules_out": 1470,
+  "coverage_pct": 330.11,
+  "breakdown": {
+    "block": 1469,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {
+    "$denyallow: 1 exception(s) emises apres le blocage": 53,
+    "$denyallow: 2 exception(s) emises apres le blocage": 26,
+    "$denyallow: 3 exception(s) emises apres le blocage": 16,
+    "$denyallow: 4 exception(s) emises apres le blocage": 14,
+    "$denyallow: 6 exception(s) emises apres le blocage": 10,
+    "$denyallow: 5 exception(s) emises apres le blocage": 7,
+    "$denyallow: 10 exception(s) emises apres le blocage": 6,
+    "$denyallow: 12 exception(s) emises apres le blocage": 4,
+    "$denyallow: 7 exception(s) emises apres le blocage": 4,
+    "$denyallow: 8 exception(s) emises apres le blocage": 3,
+    "$denyallow: 9 exception(s) emises apres le blocage": 3,
+    "$denyallow: 13 exception(s) emises apres le blocage": 2,
+    "$denyallow: 11 exception(s) emises apres le blocage": 1,
+    "$denyallow: 41 exception(s) emises apres le blocage": 1,
+    "$denyallow: 53 exception(s) emises apres le blocage": 1,
+    "$denyallow: 25 exception(s) emises apres le blocage": 1,
+    "$denyallow: 16 exception(s) emises apres le blocage": 1,
+    "$denyallow: 14 exception(s) emises apres le blocage": 1,
+    "$denyallow: 27 exception(s) emises apres le blocage": 1,
+    "$denyallow: 17 exception(s) emises apres le blocage": 1,
+    "$denyallow: 35 exception(s) emises apres le blocage": 1,
+    "$denyallow: 61 exception(s) emises apres le blocage": 1,
+    "$denyallow: 30 exception(s) emises apres le blocage": 1,
+    "$denyallow: 38 exception(s) emises apres le blocage": 1,
+    "$denyallow: 32 exception(s) emises apres le blocage": 1,
+    "$denyallow: 24 exception(s) emises apres le blocage": 1,
+    "$denyallow: 60 exception(s) emises apres le blocage": 1,
+    "$denyallow: 23 exception(s) emises apres le blocage": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-HaGeZi-s-The-World-s-Most-Abused-TLDs.json",
+      "rules": 1470,
+      "bytes": 173005
+    }
+  ],
+  "rules_emitted": 1470,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

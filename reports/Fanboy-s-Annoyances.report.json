@@ -1,0 +1,63 @@
+{
+  "id": "fanboy-annoyances",
+  "source_file": "Fanboy-s-Annoyances.txt",
+  "source_name": "Fanboy's Annoyances",
+  "source_sha256": "2ca7805538b3665a7f65c77c9ddb472745a27c12feb6970ad0ab2b066b173fde",
+  "source_group": "Fanboy",
+  "source_homepage": "https://www.fanboy.co.nz",
+  "source_license": "",
+  "source_title": "Fanboy's Annoyance List",
+  "source_version": "202609190842",
+  "source_url": "https://easylist.to/easylist/fanboy-annoyance.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:45+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 50542,
+  "rules_in": 49160,
+  "rules_out": 17265,
+  "coverage_pct": 98.01,
+  "breakdown": {
+    "block": 3564,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 13147,
+    "css_selectors": 44064,
+    "ignore_previous_rules": 553
+  },
+  "skipped_total": 400,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 395,
+    "regle cosmetique entierement exceptee": 2,
+    "injection de style (non supportee)": 1,
+    "joker de TLD avec exclusion": 1,
+    "injection de style / scriptlet (#$#)": 1
+  },
+  "notes": {
+    "doublon fusionne": 109,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 39,
+    "$domain traduit en if-frame-url (Safari 26+)": 4,
+    "vers l'annexe: joker de TLD avec exclusion": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Fanboy-s-Annoyances.json",
+      "rules": 17265,
+      "bytes": 3304600
+    }
+  ],
+  "rules_emitted": 17265,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-Fanboy-s-Annoyances.json",
+    "total": 867,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 867,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 1
+    }
+  }
+}

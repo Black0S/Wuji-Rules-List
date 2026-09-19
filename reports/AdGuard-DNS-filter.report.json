@@ -1,0 +1,68 @@
+{
+  "id": "adguard-dns",
+  "source_file": "AdGuard-DNS-filter.txt",
+  "source_name": "AdGuard DNS filter",
+  "source_sha256": "7494818a17d3dc662fb25d0aa202d865e44c212711bba5a462adf5c663e3a407",
+  "source_group": "AdGuard DNS",
+  "source_homepage": "https://github.com/AdguardTeam/AdGuardSDNSFilter",
+  "source_license": "https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE",
+  "source_title": "AdGuard DNS filter",
+  "source_version": "",
+  "source_url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:40+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 182375,
+  "rules_in": 180773,
+  "rules_out": 180790,
+  "coverage_pct": 100.01,
+  "breakdown": {
+    "block": 180575,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 214
+  },
+  "skipped_total": 9,
+  "skipped_reasons": {
+    "directive $badfilter (retractation appliquee)": 5,
+    "repetition de `.` trop longue pour WebKit": 3,
+    "retiree par $badfilter (retractation amont)": 1
+  },
+  "notes": {
+    "alternation eclatee en 2 regles": 8,
+    "modificateur sans effet sous WebKit: $important": 5,
+    "alternation eclatee en 6 regles": 1,
+    "doublon fusionne": 1,
+    "alternation eclatee en 7 regles": 1,
+    "alternation eclatee en 8 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-DNS-filter-1.json",
+      "rules": 150000,
+      "bytes": 17561497
+    },
+    {
+      "file": "Webkit-AdGuard-DNS-filter-2.json",
+      "rules": 31004,
+      "bytes": 3534521
+    }
+  ],
+  "rules_emitted": 181004,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

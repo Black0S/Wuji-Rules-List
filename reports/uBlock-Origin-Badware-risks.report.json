@@ -1,0 +1,70 @@
+{
+  "id": "ublock-origin-badware-risks",
+  "source_file": "uBlock-Origin-Badware-risks.txt",
+  "source_name": "uBlock Origin - Badware risks",
+  "source_sha256": "719fc4f1a5ccd33ae80c004033ab844a2b478beb6d826fa16b74fbbea37a27d5",
+  "source_group": "uBlock Origin",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+  "source_title": "uBlock₀ filters – Badware risks",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/badware.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:51+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 6378,
+  "rules_in": 4277,
+  "rules_out": 3861,
+  "coverage_pct": 91.91,
+  "breakdown": {
+    "block": 1547,
+    "block_document": 2286,
+    "block_cookies": 0,
+    "css_display_none": 26,
+    "css_selectors": 97,
+    "ignore_previous_rules": 1
+  },
+  "skipped_total": 338,
+  "skipped_reasons": {
+    "modificateur non supporte: $to": 251,
+    "modificateur non supporte: $ipaddress": 27,
+    "scriptlet ou filtrage HTML": 22,
+    "pseudo-classe CSS etendue": 14,
+    "modificateur non supporte: $reason": 11,
+    "modificateur non supporte: $strict1p": 4,
+    "regex hors du sous-ensemble WebKit": 3,
+    "modificateur non supporte: $strict3p": 2,
+    "repetition trop longue une fois developpee": 1,
+    "accolade litterale (refusee par le parseur WebKit)": 1,
+    "modificateur non supporte: $header": 1,
+    "assertion de regex (lookahead / lookbehind)": 1
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $all": 1313,
+    "doublon fusionne": 8,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-Origin-Badware-risks.json",
+      "rules": 3861,
+      "bytes": 510241
+    }
+  ],
+  "rules_emitted": 3861,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-uBlock-Origin-Badware-risks.json",
+    "total": 37,
+    "counts": {
+      "scriptlets": 22,
+      "procedural": 14,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 1
+    }
+  }
+}

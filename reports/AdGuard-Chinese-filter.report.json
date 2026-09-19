@@ -1,0 +1,92 @@
+{
+  "id": "adguard-chinese",
+  "source_file": "AdGuard-Chinese-filter.txt",
+  "source_name": "AdGuard Chinese filter",
+  "source_sha256": "5266efa8a4ffdeb96b2f61dcc5f00e72f2a73c9d1389b8664b07ce97154b5f02",
+  "source_group": "AdGuard (langues)",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Chinese filter",
+  "source_version": "2.1.65.59",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/224.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:35+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 22813,
+  "rules_in": 22033,
+  "rules_out": 15916,
+  "coverage_pct": 95.84,
+  "breakdown": {
+    "block": 12062,
+    "block_document": 2,
+    "block_cookies": 0,
+    "css_display_none": 2785,
+    "css_selectors": 7987,
+    "ignore_previous_rules": 1066
+  },
+  "skipped_total": 787,
+  "skipped_reasons": {
+    "JavaScript / scriptlet (#%#)": 290,
+    "selecteur CSS etendu (#?#)": 290,
+    "injection de style / scriptlet (#$#)": 123,
+    "injection de style etendue (#$?#)": 21,
+    "modificateur non supporte: $csp": 15,
+    "directive $badfilter (retractation appliquee)": 11,
+    "modificateur non supporte: $genericblock": 8,
+    "prefixe cosmetique sans chemin": 5,
+    "selecteur CSS etendu (#@?#)": 4,
+    "modificateur non supporte: $removeparam": 4,
+    "retiree par $badfilter (retractation amont)": 4,
+    "inclusions et exclusions de domaine": 4,
+    "modificateur inconnu: $_____": 3,
+    "regle cosmetique entierement exceptee": 2,
+    "modificateur non supporte: $stealth": 1,
+    "assertion de regex (lookahead / lookbehind)": 1,
+    "$domain melange inclusions et exclusions": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 53,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 19,
+    "modificateur sans effet sous WebKit: $important": 19,
+    "$denyallow: 1 exception(s) emises apres le blocage": 7,
+    "vers l'annexe: prefixe cosmetique sans chemin": 5,
+    "vers l'annexe: inclusions et exclusions de domaine": 4,
+    "modificateur sans effet sous WebKit: $all": 3,
+    "$denyallow: 2 exception(s) emises apres le blocage": 3,
+    "doublon fusionne": 3,
+    "$domain traduit en if-frame-url (Safari 26+)": 2,
+    "alternation eclatee en 20 regles": 1,
+    "alternation eclatee en 7 regles": 1,
+    "$denyallow: 3 exception(s) emises apres le blocage": 1,
+    "$denyallow: 76 exception(s) emises apres le blocage": 1,
+    "alternation eclatee en 6 regles": 1,
+    "alternation eclatee en 2 regles": 1,
+    "$denyallow: 4 exception(s) emises apres le blocage": 1,
+    "$domain abandonne (une seule condition par trigger)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Chinese-filter.json",
+      "rules": 15916,
+      "bytes": 2063164
+    }
+  ],
+  "rules_emitted": 15916,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Chinese-filter.json",
+    "total": 1053,
+    "counts": {
+      "scriptlets": 280,
+      "procedural": 557,
+      "styles": 144,
+      "html": 0,
+      "raw_js": 10,
+      "redirects": 53,
+      "csp": 15,
+      "removeparams": 4
+    }
+  }
+}

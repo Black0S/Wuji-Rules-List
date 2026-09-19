@@ -1,0 +1,83 @@
+{
+  "id": "adguard-popups",
+  "source_file": "AdGuard-Popups-filter.txt",
+  "source_name": "AdGuard Popups filter",
+  "source_sha256": "53362761db7744ebf2716c7bced81ddc84894462c088597a842d4f5e6d7e5005",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Popups filter",
+  "source_version": "2.0.83.43",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/19.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:37+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 23485,
+  "rules_in": 22233,
+  "rules_out": 11907,
+  "coverage_pct": 74.54,
+  "breakdown": {
+    "block": 1557,
+    "block_document": 1,
+    "block_cookies": 0,
+    "css_display_none": 9709,
+    "css_selectors": 14376,
+    "ignore_previous_rules": 639
+  },
+  "skipped_total": 5408,
+  "skipped_reasons": {
+    "injection de style / scriptlet (#$#)": 2810,
+    "JavaScript / scriptlet (#%#)": 1380,
+    "selecteur CSS etendu (#?#)": 1023,
+    "injection de style etendue (#$?#)": 163,
+    "modificateur non supporte: $permissions": 8,
+    "$path sous forme de regex ou de joker": 7,
+    "injection de style (non supportee)": 4,
+    "$cookie avec valeur / en exception": 3,
+    "modificateur non supporte: $removeparam": 2,
+    "inclusions et exclusions de domaine": 2,
+    "prefixe cosmetique sans chemin": 2,
+    "directive $badfilter (retractation appliquee)": 1,
+    "modificateur non supporte: $redirect-rule": 1,
+    "modificateur non supporte: $redirect": 1,
+    "joker de TLD avec exclusion": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 151,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 67,
+    "modificateur sans effet sous WebKit: $important": 29,
+    "doublon fusionne": 13,
+    "$path traduit en if-top-url": 10,
+    "vers l'annexe: $path sous forme de regex ou de joker": 7,
+    "$domain traduit en if-frame-url (Safari 26+)": 4,
+    "vers l'annexe: inclusions et exclusions de domaine": 2,
+    "vers l'annexe: prefixe cosmetique sans chemin": 2,
+    "alternation eclatee en 3 regles": 1,
+    "vers l'annexe: joker de TLD avec exclusion": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Popups-filter.json",
+      "rules": 11907,
+      "bytes": 2011980
+    }
+  ],
+  "rules_emitted": 11907,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Popups-filter.json",
+    "total": 5679,
+    "counts": {
+      "scriptlets": 1352,
+      "procedural": 1280,
+      "styles": 2973,
+      "html": 0,
+      "raw_js": 28,
+      "redirects": 69,
+      "cookies": 3,
+      "removeparams": 2
+    }
+  }
+}

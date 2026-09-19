@@ -1,0 +1,69 @@
+{
+  "id": "easylist-hebrew",
+  "source_file": "EasyList-Hebrew.txt",
+  "source_name": "EasyList Hebrew",
+  "source_sha256": "00d7d9fe2b199cd9e58e3f82fd052159ee883963ae38ca93bd0a969d5f810e05",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
+  "source_title": "EasyList Hebrew",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:40+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1799,
+  "rules_in": 1504,
+  "rules_out": 762,
+  "coverage_pct": 93.02,
+  "breakdown": {
+    "block": 330,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 263,
+    "css_selectors": 901,
+    "ignore_previous_rules": 168
+  },
+  "skipped_total": 74,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 46,
+    "assertion de regex (lookahead / lookbehind)": 10,
+    "pseudo-classe CSS etendue": 10,
+    "directive $badfilter (retractation appliquee)": 3,
+    "selecteur CSS etendu (#?#)": 2,
+    "modificateur non supporte: $csp": 1,
+    "modificateur non supporte: $webrtc": 1,
+    "modificateur non supporte: $redirect-rule": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 33,
+    "modificateur sans effet sous WebKit: $important": 29,
+    "doublon fusionne": 10,
+    "alternation eclatee en 2 regles": 2,
+    "alternation eclatee en 4 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Hebrew.json",
+      "rules": 762,
+      "bytes": 151507
+    }
+  ],
+  "rules_emitted": 762,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Hebrew.json",
+    "total": 119,
+    "counts": {
+      "scriptlets": 41,
+      "procedural": 36,
+      "styles": 0,
+      "html": 7,
+      "raw_js": 0,
+      "csp": 1,
+      "redirects": 34
+    }
+  }
+}

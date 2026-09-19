@@ -1,0 +1,72 @@
+{
+  "id": "adguard-mobile-ads",
+  "source_file": "AdGuard-Mobile-Ads-filter.txt",
+  "source_name": "AdGuard Mobile Ads filter",
+  "source_sha256": "969bc2ac2f2f2b1febbe1af6fe90a87a8c7c9b62a04b2285dca1c931cb137359",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Mobile Ads filter",
+  "source_version": "2.0.72.11",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/11.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:36+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 9100,
+  "rules_in": 7926,
+  "rules_out": 4641,
+  "coverage_pct": 86.73,
+  "breakdown": {
+    "block": 1391,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 3098,
+    "css_selectors": 5332,
+    "ignore_previous_rules": 151
+  },
+  "skipped_total": 1008,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 480,
+    "injection de style / scriptlet (#$#)": 351,
+    "JavaScript / scriptlet (#%#)": 130,
+    "injection de style etendue (#$?#)": 41,
+    "$cookie avec valeur / en exception": 2,
+    "exception d'injection de style": 1,
+    "assertion de regex (lookahead / lookbehind)": 1,
+    "$path sous forme de regex ou de joker": 1,
+    "modificateur non supporte: $replace": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 123,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 19,
+    "$path traduit en if-top-url": 8,
+    "modificateur sans effet sous WebKit: $important": 7,
+    "alternation eclatee en 2 regles": 3,
+    "doublon fusionne": 1,
+    "vers l'annexe: $path sous forme de regex ou de joker": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Mobile-Ads-filter.json",
+      "rules": 4641,
+      "bytes": 778388
+    }
+  ],
+  "rules_emitted": 4641,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Mobile-Ads-filter.json",
+    "total": 1051,
+    "counts": {
+      "scriptlets": 128,
+      "procedural": 527,
+      "styles": 375,
+      "html": 0,
+      "raw_js": 20,
+      "redirects": 19,
+      "cookies": 2
+    }
+  }
+}

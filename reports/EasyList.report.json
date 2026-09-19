@@ -1,0 +1,71 @@
+{
+  "id": "easylist",
+  "source_file": "EasyList.txt",
+  "source_name": "EasyList",
+  "source_sha256": "e96883ed5f0d5a021bf854534693d6908f660708a967de9243e307ee9fe5e0fa",
+  "source_group": "EasyList",
+  "source_homepage": "https://github.com/easylist/easylist",
+  "source_license": "",
+  "source_title": "EasyList",
+  "source_version": "202609190842",
+  "source_url": "https://easylist.to/easylist/easylist.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:43+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 82369,
+  "rules_in": 82090,
+  "rules_out": 63245,
+  "coverage_pct": 99.17,
+  "breakdown": {
+    "block": 56155,
+    "block_document": 594,
+    "block_cookies": 0,
+    "css_display_none": 5738,
+    "css_selectors": 23899,
+    "ignore_previous_rules": 757
+  },
+  "skipped_total": 358,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 286,
+    "injection de style (non supportee)": 40,
+    "repetition de `.` trop longue pour WebKit": 9,
+    "modificateur inconnu: $rewrite": 7,
+    "pseudo-classe CSS etendue": 6,
+    "ancre `|` en milieu de motif": 3,
+    "modificateur non supporte: $csp": 3,
+    "expansion d'alternation trop large": 2,
+    "joker de TLD avec exclusion": 1,
+    "$domain inexprimable (regex ou joker)": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 283,
+    "doublon fusionne": 1,
+    "alternation eclatee en 2 regles": 1,
+    "alternation eclatee en 4 regles": 1,
+    "alternation eclatee en 8 regles": 1,
+    "vers l'annexe: joker de TLD avec exclusion": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList.json",
+      "rules": 63245,
+      "bytes": 7966011
+    }
+  ],
+  "rules_emitted": 63245,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList.json",
+    "total": 673,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 630,
+      "styles": 40,
+      "html": 0,
+      "raw_js": 0,
+      "csp": 3
+    }
+  }
+}

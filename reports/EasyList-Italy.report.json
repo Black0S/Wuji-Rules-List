@@ -1,0 +1,57 @@
+{
+  "id": "easylist-italy",
+  "source_file": "EasyList-Italy.txt",
+  "source_name": "EasyList Italy",
+  "source_sha256": "98a7309ea43a5431ec191365e28e7fdcb9e93523ac2c29058aef39d64d96b825",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
+  "source_title": "EasyList Italy",
+  "source_version": "202609190842",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:40+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 4255,
+  "rules_in": 4205,
+  "rules_out": 2844,
+  "coverage_pct": 99.52,
+  "breakdown": {
+    "block": 1083,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1671,
+    "css_selectors": 3013,
+    "ignore_previous_rules": 89
+  },
+  "skipped_total": 26,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 26
+  },
+  "notes": {
+    "alternation eclatee en 8 regles": 1,
+    "alternation eclatee en 9 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Italy.json",
+      "rules": 2844,
+      "bytes": 446513
+    }
+  ],
+  "rules_emitted": 2844,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Italy.json",
+    "total": 35,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 35,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

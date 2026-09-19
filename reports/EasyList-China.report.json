@@ -1,0 +1,63 @@
+{
+  "id": "easylist-china",
+  "source_file": "EasyList-China.txt",
+  "source_name": "EasyList China",
+  "source_sha256": "ddc053284b01395a01c1c8871dec3ff93e3e9c696556f923a4388c6e0d2ed6ef",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "https://easylist.to/pages/licence.html",
+  "source_title": "EasyList China",
+  "source_version": "202609190842",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:40+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 19103,
+  "rules_in": 18995,
+  "rules_out": 14289,
+  "coverage_pct": 98.05,
+  "breakdown": {
+    "block": 11104,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 2208,
+    "css_selectors": 6544,
+    "ignore_previous_rules": 976
+  },
+  "skipped_total": 196,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 158,
+    "modificateur non supporte: $csp": 14,
+    "modificateur inconnu: $rewrite": 11,
+    "modificateur non supporte: $genericblock": 8,
+    "inclusions et exclusions de domaine": 4,
+    "$domain melange inclusions et exclusions": 1
+  },
+  "notes": {
+    "vers l'annexe: inclusions et exclusions de domaine": 4,
+    "$domain abandonne (une seule condition par trigger)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-China.json",
+      "rules": 14289,
+      "bytes": 1772824
+    }
+  ],
+  "rules_emitted": 14289,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-China.json",
+    "total": 351,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 337,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "csp": 14
+    }
+  }
+}

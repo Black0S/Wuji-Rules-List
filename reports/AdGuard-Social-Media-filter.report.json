@@ -1,0 +1,73 @@
+{
+  "id": "adguard-social-media",
+  "source_file": "AdGuard-Social-Media-filter.txt",
+  "source_name": "AdGuard Social Media filter",
+  "source_sha256": "a29d31e98606f40a7e18c7e08a34da5d81776dacac55c1b4c461d3ae23d62838",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Social Media filter",
+  "source_version": "2.1.32.78",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/4.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-19T08:52:38+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 17221,
+  "rules_in": 16379,
+  "rules_out": 10102,
+  "coverage_pct": 89.27,
+  "breakdown": {
+    "block": 478,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 9473,
+    "css_selectors": 13993,
+    "ignore_previous_rules": 150
+  },
+  "skipped_total": 1474,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 1154,
+    "injection de style / scriptlet (#$#)": 238,
+    "JavaScript / scriptlet (#%#)": 58,
+    "injection de style etendue (#$?#)": 10,
+    "prefixe cosmetique sans chemin": 5,
+    "injection de style (non supportee)": 3,
+    "regle cosmetique entierement exceptee": 2,
+    "domaine cosmetique non exprimable (joker de TLD)": 2,
+    "assertion de regex (lookahead / lookbehind)": 1,
+    "joker de TLD avec exclusion": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 122,
+    "vers l'annexe: prefixe cosmetique sans chemin": 5,
+    "doublon fusionne": 2,
+    "vers l'annexe: domaine cosmetique non exprimable (joker de TLD)": 2,
+    "$domain traduit en if-frame-url (Safari 26+)": 2,
+    "$path traduit en if-top-url": 1,
+    "vers l'annexe: joker de TLD avec exclusion": 1,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Social-Media-filter.json",
+      "rules": 10102,
+      "bytes": 1783072
+    }
+  ],
+  "rules_emitted": 10102,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Social-Media-filter.json",
+    "total": 1751,
+    "counts": {
+      "scriptlets": 56,
+      "procedural": 1447,
+      "styles": 247,
+      "html": 0,
+      "raw_js": 3,
+      "redirects": 1
+    }
+  }
+}

@@ -1,0 +1,1764 @@
+{
+  "generated_at": "2026-09-19T08:52:56+00:00",
+  "generator": "convert_webkit.py",
+  "profile": "Safari 26+",
+  "schema": 2,
+  "note": "Les chemins de `files[].file` et de `extended_file` sont relatifs a la racine de ce catalogue. `rules_unique` compte les regles distinctes; `rules_emitted` les additionne par fichier et inclut donc les exceptions repliquees dans chaque tranche d'une liste decoupee.",
+  "totals": {
+    "lists": 71,
+    "lists_unpublished": 0,
+    "files": 79,
+    "rules_in": 2167687,
+    "rules_unique": 1922012,
+    "rules_emitted": 1926660,
+    "skipped": 65938,
+    "extended": 70950
+  },
+  "lists": [
+    {
+      "id": "adguard-base",
+      "name": "AdGuard Base filter",
+      "source": "AdGuard-Base-filter.txt",
+      "source_sha256": "824573cf6aee92756bc149ddaa3505a3adf5f62f83b5e3ab660f94b52fbe13c7",
+      "version": "2.4.91.52",
+      "group": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:39+00:00",
+      "rules_in": 138350,
+      "rules_unique": 94385,
+      "rules_emitted": 94385,
+      "skipped": 12218,
+      "coverage_pct": 89.72,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Base-filter.json",
+          "rules": 94385,
+          "bytes": 13203804
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Base-filter.json"
+    },
+    {
+      "id": "adguard-chinese",
+      "name": "AdGuard Chinese filter",
+      "source": "AdGuard-Chinese-filter.txt",
+      "source_sha256": "5266efa8a4ffdeb96b2f61dcc5f00e72f2a73c9d1389b8664b07ce97154b5f02",
+      "version": "2.1.65.59",
+      "group": "AdGuard (langues)",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:35+00:00",
+      "rules_in": 22033,
+      "rules_unique": 15916,
+      "rules_emitted": 15916,
+      "skipped": 787,
+      "coverage_pct": 95.84,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Chinese-filter.json",
+          "rules": 15916,
+          "bytes": 2063164
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Chinese-filter.json"
+    },
+    {
+      "id": "adguard-cookie-notices",
+      "name": "AdGuard Cookie Notices filter",
+      "source": "AdGuard-Cookie-Notices-filter.txt",
+      "source_sha256": "f2af0a17b60b59ee2ac01306acf95a525202790463957554afcc8dd165a78011",
+      "version": "2.0.94.88",
+      "group": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:35+00:00",
+      "rules_in": 21720,
+      "rules_unique": 12040,
+      "rules_emitted": 12040,
+      "skipped": 6240,
+      "coverage_pct": 65.43,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Cookie-Notices-filter.json",
+          "rules": 12040,
+          "bytes": 2097097
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Cookie-Notices-filter.json"
+    },
+    {
+      "id": "adguard-dns-popup-hosts",
+      "name": "AdGuard DNS Popup Hosts filter",
+      "source": "AdGuard-DNS-Popup-Hosts-filter.txt",
+      "source_sha256": "d6fc08b9da717a72a5ddfe3bfa3c0a26942e3fb6a9ee6771a0b414d20220cb6f",
+      "version": "",
+      "group": "AdGuard DNS",
+      "homepage": "https://github.com/AdguardTeam/AdGuardSDNSFilter",
+      "license": "https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:35+00:00",
+      "rules_in": 1068,
+      "rules_unique": 1069,
+      "rules_emitted": 1069,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-DNS-Popup-Hosts-filter.json",
+          "rules": 1069,
+          "bytes": 117216
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "adguard-dns",
+      "name": "AdGuard DNS filter",
+      "source": "AdGuard-DNS-filter.txt",
+      "source_sha256": "7494818a17d3dc662fb25d0aa202d865e44c212711bba5a462adf5c663e3a407",
+      "version": "",
+      "group": "AdGuard DNS",
+      "homepage": "https://github.com/AdguardTeam/AdGuardSDNSFilter",
+      "license": "https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:40+00:00",
+      "rules_in": 180773,
+      "rules_unique": 180790,
+      "rules_emitted": 181004,
+      "skipped": 9,
+      "coverage_pct": 100.01,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-DNS-filter-1.json",
+          "rules": 150000,
+          "bytes": 17561497
+        },
+        {
+          "file": "Webkit-AdGuard-DNS-filter-2.json",
+          "rules": 31004,
+          "bytes": 3534521
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "adguard-dutch",
+      "name": "AdGuard Dutch filter",
+      "source": "AdGuard-Dutch-filter.txt",
+      "source_sha256": "fcedb385f0dc9b5d226c06ed4c8d5a4abac39d597b0020c19ba0a42e605838c7",
+      "version": "2.0.9.44",
+      "group": "AdGuard (langues)",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:35+00:00",
+      "rules_in": 1967,
+      "rules_unique": 1255,
+      "rules_emitted": 1255,
+      "skipped": 102,
+      "coverage_pct": 92.12,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Dutch-filter.json",
+          "rules": 1255,
+          "bytes": 193522
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Dutch-filter.json"
+    },
+    {
+      "id": "adguard-experimental",
+      "name": "AdGuard Experimental filter",
+      "source": "AdGuard-Experimental-filter.txt",
+      "source_sha256": "7965a36f256d63ea1232ed8ef0884b54b061c74b8c0e6ef952d9c7ba02decd8e",
+      "version": "2.0.2.2",
+      "group": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:35+00:00",
+      "rules_in": 18,
+      "rules_unique": 7,
+      "rules_emitted": 7,
+      "skipped": 11,
+      "coverage_pct": 38.89,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Experimental-filter.json",
+          "rules": 7,
+          "bytes": 945
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Experimental-filter.json"
+    },
+    {
+      "id": "adguard-french",
+      "name": "AdGuard French filter",
+      "source": "AdGuard-French-filter.txt",
+      "source_sha256": "72831179f7f588da95d584fea672dc65e68954736f17857c5ffd8434ecc7d6a5",
+      "version": "2.0.57.78",
+      "group": "AdGuard (langues)",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:35+00:00",
+      "rules_in": 15625,
+      "rules_unique": 11986,
+      "rules_emitted": 11986,
+      "skipped": 657,
+      "coverage_pct": 94.71,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-French-filter.json",
+          "rules": 11986,
+          "bytes": 1595646
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-French-filter.json"
+    },
+    {
+      "id": "adguard-german",
+      "name": "AdGuard German filter",
+      "source": "AdGuard-German-filter.txt",
+      "source_sha256": "1231d690ba7773114a2869343699ac7fdead35692884b3bf697e54056b57dc4e",
+      "version": "2.0.53.69",
+      "group": "AdGuard (langues)",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:36+00:00",
+      "rules_in": 11279,
+      "rules_unique": 5762,
+      "rules_emitted": 5762,
+      "skipped": 986,
+      "coverage_pct": 89.23,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-German-filter.json",
+          "rules": 5762,
+          "bytes": 984295
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-German-filter.json"
+    },
+    {
+      "id": "adguard-japanese",
+      "name": "AdGuard Japanese filter",
+      "source": "AdGuard-Japanese-filter.txt",
+      "source_sha256": "539f26bde36fa19fbe914f232719763ae52c083bcec219056740d2d79af1d5c2",
+      "version": "2.0.76.67",
+      "group": "AdGuard (langues)",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:36+00:00",
+      "rules_in": 12058,
+      "rules_unique": 6091,
+      "rules_emitted": 6091,
+      "skipped": 1488,
+      "coverage_pct": 86.66,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Japanese-filter.json",
+          "rules": 6091,
+          "bytes": 1111601
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Japanese-filter.json"
+    },
+    {
+      "id": "adguard-mail-tracking-protection",
+      "name": "AdGuard Mail Tracking Protection filter",
+      "source": "AdGuard-Mail-Tracking-Protection-filter.txt",
+      "source_sha256": "cad103c4276a82a66b737e0a41301b94e34d4f68bf443d43eeeb66b204c9528b",
+      "version": "2.0.0.9",
+      "group": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:36+00:00",
+      "rules_in": 505,
+      "rules_unique": 506,
+      "rules_emitted": 506,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Mail-Tracking-Protection-filter.json",
+          "rules": 506,
+          "bytes": 56053
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "adguard-mobile-ads",
+      "name": "AdGuard Mobile Ads filter",
+      "source": "AdGuard-Mobile-Ads-filter.txt",
+      "source_sha256": "969bc2ac2f2f2b1febbe1af6fe90a87a8c7c9b62a04b2285dca1c931cb137359",
+      "version": "2.0.72.11",
+      "group": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:36+00:00",
+      "rules_in": 7926,
+      "rules_unique": 4641,
+      "rules_emitted": 4641,
+      "skipped": 1008,
+      "coverage_pct": 86.73,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Mobile-Ads-filter.json",
+          "rules": 4641,
+          "bytes": 778388
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Mobile-Ads-filter.json"
+    },
+    {
+      "id": "adguard-mobile-app-banners",
+      "name": "AdGuard Mobile App Banners filter",
+      "source": "AdGuard-Mobile-App-Banners-filter.txt",
+      "source_sha256": "ab80ecb4fdb4f63f98a7821e2cb7bbec7186d23037c1695ebda13c7e09c4044b",
+      "version": "2.0.32.20",
+      "group": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:36+00:00",
+      "rules_in": 4170,
+      "rules_unique": 2352,
+      "rules_emitted": 2352,
+      "skipped": 886,
+      "coverage_pct": 78.68,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Mobile-App-Banners-filter.json",
+          "rules": 2352,
+          "bytes": 394421
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Mobile-App-Banners-filter.json"
+    },
+    {
+      "id": "adguard-other-annoyances",
+      "name": "AdGuard Other Annoyances filter",
+      "source": "AdGuard-Other-Annoyances-filter.txt",
+      "source_sha256": "7c0fb281eb758ce7767f60d6a3d4e459d8f9c2292ea6f1413cf7aadf584015bd",
+      "version": "2.0.48.48",
+      "group": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:36+00:00",
+      "rules_in": 8487,
+      "rules_unique": 4049,
+      "rules_emitted": 4049,
+      "skipped": 2358,
+      "coverage_pct": 72.31,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Other-Annoyances-filter.json",
+          "rules": 4049,
+          "bytes": 692154
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Other-Annoyances-filter.json"
+    },
+    {
+      "id": "adguard-popups",
+      "name": "AdGuard Popups filter",
+      "source": "AdGuard-Popups-filter.txt",
+      "source_sha256": "53362761db7744ebf2716c7bced81ddc84894462c088597a842d4f5e6d7e5005",
+      "version": "2.0.83.43",
+      "group": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:37+00:00",
+      "rules_in": 22233,
+      "rules_unique": 11907,
+      "rules_emitted": 11907,
+      "skipped": 5408,
+      "coverage_pct": 74.54,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Popups-filter.json",
+          "rules": 11907,
+          "bytes": 2011980
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Popups-filter.json"
+    },
+    {
+      "id": "adguard-russian",
+      "name": "AdGuard Russian filter",
+      "source": "AdGuard-Russian-filter.txt",
+      "source_sha256": "f64681e7e78db92dd02c2887779debd03f61a0606da0359f52434ae111024c3b",
+      "version": "2.1.8.69",
+      "group": "AdGuard (langues)",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:38+00:00",
+      "rules_in": 17349,
+      "rules_unique": 10396,
+      "rules_emitted": 10396,
+      "skipped": 1991,
+      "coverage_pct": 87.8,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Russian-filter.json",
+          "rules": 10396,
+          "bytes": 1594034
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Russian-filter.json"
+    },
+    {
+      "id": "adguard-social-media",
+      "name": "AdGuard Social Media filter",
+      "source": "AdGuard-Social-Media-filter.txt",
+      "source_sha256": "a29d31e98606f40a7e18c7e08a34da5d81776dacac55c1b4c461d3ae23d62838",
+      "version": "2.1.32.78",
+      "group": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:38+00:00",
+      "rules_in": 16379,
+      "rules_unique": 10102,
+      "rules_emitted": 10102,
+      "skipped": 1474,
+      "coverage_pct": 89.27,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Social-Media-filter.json",
+          "rules": 10102,
+          "bytes": 1783072
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Social-Media-filter.json"
+    },
+    {
+      "id": "adguard-spanish-portuguese",
+      "name": "AdGuard Spanish/Portuguese filter",
+      "source": "AdGuard-Spanish-Portuguese-filter.txt",
+      "source_sha256": "1266ffcae843afb4e53a688c3d8775374b5ded36a1b234c6686ea755e1157f5d",
+      "version": "2.0.35.79",
+      "group": "AdGuard (langues)",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:38+00:00",
+      "rules_in": 5685,
+      "rules_unique": 2813,
+      "rules_emitted": 2813,
+      "skipped": 1019,
+      "coverage_pct": 80.39,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Spanish-Portuguese-filter.json",
+          "rules": 2813,
+          "bytes": 467859
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Spanish-Portuguese-filter.json"
+    },
+    {
+      "id": "adguard-tracking-protection",
+      "name": "AdGuard Tracking Protection filter",
+      "source": "AdGuard-Tracking-Protection-filter.txt",
+      "source_sha256": "890ece3b5feb6525426bf1dcfbf37e6519f4e3687641b1290c91b3433ca6f147",
+      "version": "2.1.11.85",
+      "group": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:48+00:00",
+      "rules_in": 327450,
+      "rules_unique": 325508,
+      "rules_emitted": 329942,
+      "skipped": 1697,
+      "coverage_pct": 99.42,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Tracking-Protection-filter-1.json",
+          "rules": 150000,
+          "bytes": 17906871
+        },
+        {
+          "file": "Webkit-AdGuard-Tracking-Protection-filter-2.json",
+          "rules": 150000,
+          "bytes": 17423073
+        },
+        {
+          "file": "Webkit-AdGuard-Tracking-Protection-filter-3.json",
+          "rules": 29942,
+          "bytes": 3595301
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Tracking-Protection-filter.json"
+    },
+    {
+      "id": "adguard-turkish",
+      "name": "AdGuard Turkish filter",
+      "source": "AdGuard-Turkish-filter.txt",
+      "source_sha256": "8fecdffe4b0fd76f4ca0e4662f2d40dca74e3a5af39176a9d9d04b51617f9f5b",
+      "version": "2.0.68.24",
+      "group": "AdGuard (langues)",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:39+00:00",
+      "rules_in": 6438,
+      "rules_unique": 3291,
+      "rules_emitted": 3291,
+      "skipped": 1201,
+      "coverage_pct": 81.3,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Turkish-filter.json",
+          "rules": 3291,
+          "bytes": 570695
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Turkish-filter.json"
+    },
+    {
+      "id": "adguard-ukrainian",
+      "name": "AdGuard Ukrainian filter",
+      "source": "AdGuard-Ukrainian-filter.txt",
+      "source_sha256": "12c3c47b47e8a50fcc46652d56d5f36b96b73d114c25e2144ecdd6e6acf41da6",
+      "version": "2.0.9.27",
+      "group": "AdGuard (langues)",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:39+00:00",
+      "rules_in": 5480,
+      "rules_unique": 4027,
+      "rules_emitted": 4027,
+      "skipped": 253,
+      "coverage_pct": 95.57,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Ukrainian-filter.json",
+          "rules": 4027,
+          "bytes": 563251
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Ukrainian-filter.json"
+    },
+    {
+      "id": "adguard-widgets",
+      "name": "AdGuard Widgets filter",
+      "source": "AdGuard-Widgets-filter.txt",
+      "source_sha256": "8a0ca2d61d591250dc51ba6d2dda9335efc5d5de5098b06fdb2bb501caf16f92",
+      "version": "2.0.14.98",
+      "group": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:39+00:00",
+      "rules_in": 2678,
+      "rules_unique": 1827,
+      "rules_emitted": 1827,
+      "skipped": 197,
+      "coverage_pct": 92.57,
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Widgets-filter.json",
+          "rules": 1827,
+          "bytes": 292811
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Widgets-filter.json"
+    },
+    {
+      "id": "adblock-warning-removal",
+      "name": "Adblock Warning Removal List",
+      "source": "Adblock-Warning-Removal-List.txt",
+      "source_sha256": "407ff3b5e78112b5f79fbc3b94211e21325e48763f9a19bb80dd664ec88fc78b",
+      "version": "202609190842",
+      "group": "EasyList",
+      "homepage": "https://github.com/easylist/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:39+00:00",
+      "rules_in": 2974,
+      "rules_unique": 2777,
+      "rules_emitted": 2777,
+      "skipped": 3,
+      "coverage_pct": 98.96,
+      "files": [
+        {
+          "file": "Webkit-Adblock-Warning-Removal-List.json",
+          "rules": 2777,
+          "bytes": 324812
+        }
+      ],
+      "extended_file": "extended/Extended-Adblock-Warning-Removal-List.json"
+    },
+    {
+      "id": "bulgarian",
+      "name": "Bulgarian list",
+      "source": "Bulgarian-list.txt",
+      "source_sha256": "cd001c6f13207bd6292735efb385344ee682ba7965b40acc02a32bdbe08579a4",
+      "version": "",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:39+00:00",
+      "rules_in": 1150,
+      "rules_unique": 893,
+      "rules_emitted": 893,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-Bulgarian-list.json",
+          "rules": 893,
+          "bytes": 125615
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "dandelion-sprout-anti-malware",
+      "name": "Dandelion Sprout's Anti-Malware List",
+      "source": "Dandelion-Sprout-s-Anti-Malware-List.txt",
+      "source_sha256": "025cfd3cde6202012c8acff19057788f43c0d7d039d463ce15d9a825af36122b",
+      "version": "",
+      "group": "Dandelion Sprout",
+      "homepage": "https://github.com/DandelionSprout/adfilt",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:40+00:00",
+      "rules_in": 12647,
+      "rules_unique": 12867,
+      "rules_emitted": 12867,
+      "skipped": 23,
+      "coverage_pct": 101.73,
+      "files": [
+        {
+          "file": "Webkit-Dandelion-Sprout-s-Anti-Malware-List.json",
+          "rules": 12867,
+          "bytes": 1431764
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "dandelion-sprout-anti-push-notifications",
+      "name": "Dandelion Sprout's Anti Push Notifications",
+      "source": "Dandelion-Sprout-s-Anti-Push-Notifications.txt",
+      "source_sha256": "5bb6bcf7a8791d907f9bb3b5e1f665a8799c2061163edbe2ec8cbb3e0569393d",
+      "version": "05May2026v1-Beta",
+      "group": "Dandelion Sprout",
+      "homepage": "https://github.com/DandelionSprout/adfilt",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:40+00:00",
+      "rules_in": 480,
+      "rules_unique": 481,
+      "rules_emitted": 481,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-Dandelion-Sprout-s-Anti-Push-Notifications.json",
+          "rules": 481,
+          "bytes": 51261
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "easylist-china",
+      "name": "EasyList China",
+      "source": "EasyList-China.txt",
+      "source_sha256": "ddc053284b01395a01c1c8871dec3ff93e3e9c696556f923a4388c6e0d2ed6ef",
+      "version": "202609190842",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "https://easylist.to/pages/licence.html",
+      "converted_at": "2026-09-19T08:52:40+00:00",
+      "rules_in": 18995,
+      "rules_unique": 14289,
+      "rules_emitted": 14289,
+      "skipped": 196,
+      "coverage_pct": 98.05,
+      "files": [
+        {
+          "file": "Webkit-EasyList-China.json",
+          "rules": 14289,
+          "bytes": 1772824
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-China.json"
+    },
+    {
+      "id": "easylist-cookie",
+      "name": "EasyList Cookie List",
+      "source": "EasyList-Cookie-List.txt",
+      "source_sha256": "b758a2f2db5196a6e82189b3e2dae14f9e7a4c1403b8b7a993f973397669c6df",
+      "version": "",
+      "group": "EasyList",
+      "homepage": "https://github.com/easylist/easylist",
+      "license": "http://creativecommons.org/licenses/by/3.0/",
+      "converted_at": "2026-09-19T08:52:41+00:00",
+      "rules_in": 27989,
+      "rules_unique": 9444,
+      "rules_emitted": 9444,
+      "skipped": 2673,
+      "coverage_pct": 89.44,
+      "files": [
+        {
+          "file": "Webkit-EasyList-Cookie-List.json",
+          "rules": 9444,
+          "bytes": 1873773
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Cookie-List.json"
+    },
+    {
+      "id": "easylist-czech-and-slovak",
+      "name": "EasyList Czech and Slovak",
+      "source": "EasyList-Czech-and-Slovak.txt",
+      "source_sha256": "2021ec98e17d824c3a5d4507a16c9d75b72ab083d61c6b2fb4027b82bdd6b8f7",
+      "version": "202609190842",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "CC-BY-SA v4.0",
+      "converted_at": "2026-09-19T08:52:40+00:00",
+      "rules_in": 622,
+      "rules_unique": 410,
+      "rules_emitted": 410,
+      "skipped": 19,
+      "coverage_pct": 95.18,
+      "files": [
+        {
+          "file": "Webkit-EasyList-Czech-and-Slovak.json",
+          "rules": 410,
+          "bytes": 57151
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Czech-and-Slovak.json"
+    },
+    {
+      "id": "easylist-dutch",
+      "name": "EasyList Dutch",
+      "source": "EasyList-Dutch.txt",
+      "source_sha256": "3c28545f6175e2bf3926cc5fdb97b032da1b822f62a865525362d2f3be77e91d",
+      "version": "202609190842",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:40+00:00",
+      "rules_in": 1527,
+      "rules_unique": 1088,
+      "rules_emitted": 1088,
+      "skipped": 35,
+      "coverage_pct": 97.25,
+      "files": [
+        {
+          "file": "Webkit-EasyList-Dutch.json",
+          "rules": 1088,
+          "bytes": 162866
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Dutch.json"
+    },
+    {
+      "id": "easylist-germany",
+      "name": "EasyList Germany",
+      "source": "EasyList-Germany.txt",
+      "source_sha256": "3177d676b0f00dd77f7191c24945adc579ef88b1dd89ba43760a168ff73fa0be",
+      "version": "202609190842",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:40+00:00",
+      "rules_in": 5977,
+      "rules_unique": 3897,
+      "rules_emitted": 3897,
+      "skipped": 130,
+      "coverage_pct": 97.37,
+      "files": [
+        {
+          "file": "Webkit-EasyList-Germany.json",
+          "rules": 3897,
+          "bytes": 609152
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Germany.json"
+    },
+    {
+      "id": "easylist-hebrew",
+      "name": "EasyList Hebrew",
+      "source": "EasyList-Hebrew.txt",
+      "source_sha256": "00d7d9fe2b199cd9e58e3f82fd052159ee883963ae38ca93bd0a969d5f810e05",
+      "version": "",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:40+00:00",
+      "rules_in": 1504,
+      "rules_unique": 762,
+      "rules_emitted": 762,
+      "skipped": 74,
+      "coverage_pct": 93.02,
+      "files": [
+        {
+          "file": "Webkit-EasyList-Hebrew.json",
+          "rules": 762,
+          "bytes": 151507
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Hebrew.json"
+    },
+    {
+      "id": "easylist-italy",
+      "name": "EasyList Italy",
+      "source": "EasyList-Italy.txt",
+      "source_sha256": "98a7309ea43a5431ec191365e28e7fdcb9e93523ac2c29058aef39d64d96b825",
+      "version": "202609190842",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:40+00:00",
+      "rules_in": 4205,
+      "rules_unique": 2844,
+      "rules_emitted": 2844,
+      "skipped": 26,
+      "coverage_pct": 99.52,
+      "files": [
+        {
+          "file": "Webkit-EasyList-Italy.json",
+          "rules": 2844,
+          "bytes": 446513
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Italy.json"
+    },
+    {
+      "id": "easylist-lithuania",
+      "name": "EasyList Lithuania",
+      "source": "EasyList-Lithuania.txt",
+      "source_sha256": "0b4d3b8966e9a30f9d7a61e4898bbb49a159bc80e43a185990999fd6c2c5e7b0",
+      "version": "202609190842",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:40+00:00",
+      "rules_in": 1169,
+      "rules_unique": 862,
+      "rules_emitted": 862,
+      "skipped": 23,
+      "coverage_pct": 98.03,
+      "files": [
+        {
+          "file": "Webkit-EasyList-Lithuania.json",
+          "rules": 862,
+          "bytes": 126732
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Lithuania.json"
+    },
+    {
+      "id": "easylist-polish",
+      "name": "EasyList Polish",
+      "source": "EasyList-Polish.txt",
+      "source_sha256": "efc77e6e607cd1504038b291b5e5b83720e347bc5379c420f081fde3660ba51b",
+      "version": "202609190842",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:41+00:00",
+      "rules_in": 3306,
+      "rules_unique": 2279,
+      "rules_emitted": 2279,
+      "skipped": 9,
+      "coverage_pct": 99.73,
+      "files": [
+        {
+          "file": "Webkit-EasyList-Polish.json",
+          "rules": 2279,
+          "bytes": 406519
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Polish.json"
+    },
+    {
+      "id": "easylist-portuguese",
+      "name": "EasyList Portuguese",
+      "source": "EasyList-Portuguese.txt",
+      "source_sha256": "04b49c8b0e68a34bdbea5cdbef5cc62ef31d0332b8d1bd10ee37da02f1aee4ee",
+      "version": "202609190842",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:41+00:00",
+      "rules_in": 1666,
+      "rules_unique": 973,
+      "rules_emitted": 973,
+      "skipped": 28,
+      "coverage_pct": 98.98,
+      "files": [
+        {
+          "file": "Webkit-EasyList-Portuguese.json",
+          "rules": 973,
+          "bytes": 158261
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Portuguese.json"
+    },
+    {
+      "id": "easylist-spanish",
+      "name": "EasyList Spanish",
+      "source": "EasyList-Spanish.txt",
+      "source_sha256": "65a11f66b168e33f976006f7175383f16123b964f1391d94504f602236908ddc",
+      "version": "202609190842",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:41+00:00",
+      "rules_in": 2646,
+      "rules_unique": 1744,
+      "rules_emitted": 1744,
+      "skipped": 30,
+      "coverage_pct": 99.09,
+      "files": [
+        {
+          "file": "Webkit-EasyList-Spanish.json",
+          "rules": 1744,
+          "bytes": 290050
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Spanish.json"
+    },
+    {
+      "id": "easylist",
+      "name": "EasyList",
+      "source": "EasyList.txt",
+      "source_sha256": "e96883ed5f0d5a021bf854534693d6908f660708a967de9243e307ee9fe5e0fa",
+      "version": "202609190842",
+      "group": "EasyList",
+      "homepage": "https://github.com/easylist/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:43+00:00",
+      "rules_in": 82090,
+      "rules_unique": 63245,
+      "rules_emitted": 63245,
+      "skipped": 358,
+      "coverage_pct": 99.17,
+      "files": [
+        {
+          "file": "Webkit-EasyList.json",
+          "rules": 63245,
+          "bytes": 7966011
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList.json"
+    },
+    {
+      "id": "easyprivacy",
+      "name": "EasyPrivacy",
+      "source": "EasyPrivacy.txt",
+      "source_sha256": "37adb6c8b77a2a4abcbf0166fed075a03df40977e33eafd054f57dcd0a2e6674",
+      "version": "202609190846",
+      "group": "EasyList",
+      "homepage": "https://github.com/easylist/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:42+00:00",
+      "rules_in": 56121,
+      "rules_unique": 56083,
+      "rules_emitted": 56083,
+      "skipped": 37,
+      "coverage_pct": 99.93,
+      "files": [
+        {
+          "file": "Webkit-EasyPrivacy.json",
+          "rules": 56083,
+          "bytes": 6645136
+        }
+      ],
+      "extended_file": "extended/Extended-EasyPrivacy.json"
+    },
+    {
+      "id": "fanboy-annoyances",
+      "name": "Fanboy's Annoyances",
+      "source": "Fanboy-s-Annoyances.txt",
+      "source_sha256": "2ca7805538b3665a7f65c77c9ddb472745a27c12feb6970ad0ab2b066b173fde",
+      "version": "202609190842",
+      "group": "Fanboy",
+      "homepage": "https://www.fanboy.co.nz",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:45+00:00",
+      "rules_in": 49160,
+      "rules_unique": 17265,
+      "rules_emitted": 17265,
+      "skipped": 400,
+      "coverage_pct": 98.01,
+      "files": [
+        {
+          "file": "Webkit-Fanboy-s-Annoyances.json",
+          "rules": 17265,
+          "bytes": 3304600
+        }
+      ],
+      "extended_file": "extended/Extended-Fanboy-s-Annoyances.json"
+    },
+    {
+      "id": "fanboy-anti-facebook",
+      "name": "Fanboy's Anti-Facebook List",
+      "source": "Fanboy-s-Anti-Facebook-List.txt",
+      "source_sha256": "9adafa78d18a2d51395ca36d9a51343ffcd81cb12997a9dce3bc7d8db6df9112",
+      "version": "",
+      "group": "Fanboy",
+      "homepage": "https://www.fanboy.co.nz",
+      "license": "http://creativecommons.org/licenses/by/3.0/",
+      "converted_at": "2026-09-19T08:52:43+00:00",
+      "rules_in": 69,
+      "rules_unique": 70,
+      "rules_emitted": 70,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-Fanboy-s-Anti-Facebook-List.json",
+          "rules": 70,
+          "bytes": 11465
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "fanboy-anti-thirdparty-fonts",
+      "name": "Fanboy's Anti-thirdparty Fonts",
+      "source": "Fanboy-s-Anti-thirdparty-Fonts.txt",
+      "source_sha256": "816af36b0ba6b41de2d6ad32fbfdad4929763687b694efeb7d238da8c1ad17d9",
+      "version": "",
+      "group": "Fanboy",
+      "homepage": "https://www.fanboy.co.nz",
+      "license": "http://creativecommons.org/licenses/by/3.0/",
+      "converted_at": "2026-09-19T08:52:43+00:00",
+      "rules_in": 58,
+      "rules_unique": 59,
+      "rules_emitted": 59,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-Fanboy-s-Anti-thirdparty-Fonts.json",
+          "rules": 59,
+          "bytes": 9604
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "fanboy-social-blocking",
+      "name": "Fanboy's Social Blocking List",
+      "source": "Fanboy-s-Social-Blocking-List.txt",
+      "source_sha256": "1e0a2c7d6fa94dbd136ffd591c491701dce012b133180216e04c2ec2113fea13",
+      "version": "202609190850",
+      "group": "Fanboy",
+      "homepage": "https://www.fanboy.co.nz",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:43+00:00",
+      "rules_in": 13840,
+      "rules_unique": 3303,
+      "rules_emitted": 3303,
+      "skipped": 48,
+      "coverage_pct": 98.76,
+      "files": [
+        {
+          "file": "Webkit-Fanboy-s-Social-Blocking-List.json",
+          "rules": 3303,
+          "bytes": 692477
+        }
+      ],
+      "extended_file": "extended/Extended-Fanboy-s-Social-Blocking-List.json"
+    },
+    {
+      "id": "filter-unblocking-search-ads-and-self-promotion",
+      "name": "Filter unblocking search ads and self-promotion",
+      "source": "Filter-unblocking-search-ads-and-self-promotion.txt",
+      "source_sha256": "9cf5b7d047c485c9d19dafdbcd430fe9d3ffaaa66746ee33e8fb66a5ae8f2578",
+      "version": "2.0.3.99",
+      "group": "AdGuard",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:43+00:00",
+      "rules_in": 247,
+      "rules_unique": 14,
+      "rules_emitted": 14,
+      "skipped": 55,
+      "coverage_pct": 6.07,
+      "files": [
+        {
+          "file": "Webkit-Filter-unblocking-search-ads-and-self-promotion.json",
+          "rules": 14,
+          "bytes": 2581
+        }
+      ],
+      "extended_file": "extended/Extended-Filter-unblocking-search-ads-and-self-promotion.json"
+    },
+    {
+      "id": "hagezi-allowlist-referral",
+      "name": "HaGeZi's Allowlist Referral",
+      "source": "HaGeZi-s-Allowlist-Referral.txt",
+      "source_sha256": "17b75b1d19040a8ca4adb7cfdcbbe76cf3417964a2eda191f3976dc9ca3b3449",
+      "version": "",
+      "group": "HaGeZi",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "converted_at": "2026-09-19T08:52:43+00:00",
+      "rules_in": 934,
+      "rules_unique": 934,
+      "rules_emitted": 934,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-HaGeZi-s-Allowlist-Referral.json",
+          "rules": 934,
+          "bytes": 120356
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "hagezi-anti-piracy",
+      "name": "HaGeZi's Anti-Piracy Blocklist",
+      "source": "HaGeZi-s-Anti-Piracy-Blocklist.txt",
+      "source_sha256": "db434b0c3e420815b1f371c1a6a4d8cffb8e9b535a7f30e5b16e7e391afbf65e",
+      "version": "2026.0918.0903.02",
+      "group": "HaGeZi",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "converted_at": "2026-09-19T08:52:44+00:00",
+      "rules_in": 51171,
+      "rules_unique": 51172,
+      "rules_emitted": 51172,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-HaGeZi-s-Anti-Piracy-Blocklist.json",
+          "rules": 51172,
+          "bytes": 5806010
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "hagezi-badware-hoster",
+      "name": "HaGeZi's Badware Hoster Blocklist",
+      "source": "HaGeZi-s-Badware-Hoster-Blocklist.txt",
+      "source_sha256": "85c4d0b39999ac43d6854660877d7df788ec3d7f1af599f0edb13f4b7664e59e",
+      "version": "2026.0915.2251.54",
+      "group": "HaGeZi",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "converted_at": "2026-09-19T08:52:44+00:00",
+      "rules_in": 1237,
+      "rules_unique": 1238,
+      "rules_emitted": 1238,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-HaGeZi-s-Badware-Hoster-Blocklist.json",
+          "rules": 1238,
+          "bytes": 130431
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "hagezi-dns-rebind-protection",
+      "name": "HaGeZi's DNS Rebind Protection",
+      "source": "HaGeZi-s-DNS-Rebind-Protection.txt",
+      "source_sha256": "dd78447d10527cf141ed692c7ea179e0599602fafdaac5f23b650065f4d9e703",
+      "version": "",
+      "group": "HaGeZi",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "converted_at": "2026-09-19T08:52:44+00:00",
+      "rules_in": 17,
+      "rules_unique": 22,
+      "rules_emitted": 22,
+      "skipped": 0,
+      "coverage_pct": 123.53,
+      "files": [
+        {
+          "file": "Webkit-HaGeZi-s-DNS-Rebind-Protection.json",
+          "rules": 22,
+          "bytes": 2219
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "hagezi-dyndns",
+      "name": "HaGeZi's DynDNS Blocklist",
+      "source": "HaGeZi-s-DynDNS-Blocklist.txt",
+      "source_sha256": "e66a32e0cdd70bc8fca16e61b302720b2b888d9899664a600c0d3b03899957ee",
+      "version": "2026.0916.2345.29",
+      "group": "HaGeZi",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "converted_at": "2026-09-19T08:52:44+00:00",
+      "rules_in": 1537,
+      "rules_unique": 1538,
+      "rules_emitted": 1538,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-HaGeZi-s-DynDNS-Blocklist.json",
+          "rules": 1538,
+          "bytes": 164363
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "hagezi-encrypted-dns-vpn-tor-proxy-bypass",
+      "name": "HaGeZi's Encrypted DNS/VPN/TOR/Proxy Bypass",
+      "source": "HaGeZi-s-Encrypted-DNS-VPN-TOR-Proxy-Bypass.txt",
+      "source_sha256": "44fbe58c2913a9c811a9a05346f6a78a6a50c68c8f305b9b8186dccf21f01d39",
+      "version": "2026.0918.0913.06",
+      "group": "HaGeZi",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "converted_at": "2026-09-19T08:52:45+00:00",
+      "rules_in": 16432,
+      "rules_unique": 16433,
+      "rules_emitted": 16433,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-HaGeZi-s-Encrypted-DNS-VPN-TOR-Proxy-Bypass.json",
+          "rules": 16433,
+          "bytes": 1853857
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "hagezi-gambling",
+      "name": "HaGeZi's Gambling Blocklist",
+      "source": "HaGeZi-s-Gambling-Blocklist.txt",
+      "source_sha256": "60e4bfef2ab60c7da7e80e9dc58c5a46e8c347f72e24f49f3fa056ad4eaa5e51",
+      "version": "2026.0918.0856.39",
+      "group": "HaGeZi",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "converted_at": "2026-09-19T08:52:56+00:00",
+      "rules_in": 516980,
+      "rules_unique": 516981,
+      "rules_emitted": 516981,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-HaGeZi-s-Gambling-Blocklist-1.json",
+          "rules": 150000,
+          "bytes": 16403954
+        },
+        {
+          "file": "Webkit-HaGeZi-s-Gambling-Blocklist-2.json",
+          "rules": 150000,
+          "bytes": 16762047
+        },
+        {
+          "file": "Webkit-HaGeZi-s-Gambling-Blocklist-3.json",
+          "rules": 150000,
+          "bytes": 16823964
+        },
+        {
+          "file": "Webkit-HaGeZi-s-Gambling-Blocklist-4.json",
+          "rules": 66981,
+          "bytes": 7457218
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "hagezi-normal",
+      "name": "HaGeZi's Normal Blocklist",
+      "source": "HaGeZi-s-Normal-Blocklist.txt",
+      "source_sha256": "65d823a957ced217638ae7c1656b55038fa05b47c6f3fed5b4dc7c04f09a03ab",
+      "version": "2026.0918.0828.28",
+      "group": "HaGeZi",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "converted_at": "2026-09-19T08:52:50+00:00",
+      "rules_in": 199045,
+      "rules_unique": 199046,
+      "rules_emitted": 199046,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-HaGeZi-s-Normal-Blocklist-1.json",
+          "rules": 150000,
+          "bytes": 17406662
+        },
+        {
+          "file": "Webkit-HaGeZi-s-Normal-Blocklist-2.json",
+          "rules": 49046,
+          "bytes": 5446209
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "hagezi-the-world-most-abused-tlds",
+      "name": "HaGeZi's The World's Most Abused TLDs",
+      "source": "HaGeZi-s-The-World-s-Most-Abused-TLDs.txt",
+      "source_sha256": "e1726ec7719d1c7850f03f891b1d5c0a15178d66839ecdbf7ae0332a8a820c09",
+      "version": "2026.0917.0933.19",
+      "group": "HaGeZi",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "converted_at": "2026-09-19T08:52:48+00:00",
+      "rules_in": 445,
+      "rules_unique": 1470,
+      "rules_emitted": 1470,
+      "skipped": 0,
+      "coverage_pct": 330.11,
+      "files": [
+        {
+          "file": "Webkit-HaGeZi-s-The-World-s-Most-Abused-TLDs.json",
+          "rules": 1470,
+          "bytes": 173005
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "hagezi-url-shortener",
+      "name": "HaGeZi's URL Shortener Blocklist",
+      "source": "HaGeZi-s-URL-Shortener-Blocklist.txt",
+      "source_sha256": "fe2cadd07dae79757dbb52eb3b23daec577431e9d7be7c7ed077ec613bcb99bc",
+      "version": "2026.0918.0731.40",
+      "group": "HaGeZi",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "converted_at": "2026-09-19T08:52:48+00:00",
+      "rules_in": 9965,
+      "rules_unique": 9966,
+      "rules_emitted": 9966,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-HaGeZi-s-URL-Shortener-Blocklist.json",
+          "rules": 9966,
+          "bytes": 1049255
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "indianlist",
+      "name": "IndianList",
+      "source": "IndianList.txt",
+      "source_sha256": "98e6bafa6da94dd55cf5d8e8d923cd8146142317f8814afb341d4fce148e7117",
+      "version": "202609190842",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:49+00:00",
+      "rules_in": 10526,
+      "rules_unique": 9006,
+      "rules_emitted": 9006,
+      "skipped": 180,
+      "coverage_pct": 98.22,
+      "files": [
+        {
+          "file": "Webkit-IndianList.json",
+          "rules": 9006,
+          "bytes": 1457870
+        }
+      ],
+      "extended_file": "extended/Extended-IndianList.json"
+    },
+    {
+      "id": "latvian",
+      "name": "Latvian List",
+      "source": "Latvian-List.txt",
+      "source_sha256": "976330ff32923dd0e23f48c07a878f946e6faa5be52c07922be5ca8c87a56021",
+      "version": "202605140759",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:49+00:00",
+      "rules_in": 430,
+      "rules_unique": 271,
+      "rules_emitted": 271,
+      "skipped": 9,
+      "coverage_pct": 96.28,
+      "files": [
+        {
+          "file": "Webkit-Latvian-List.json",
+          "rules": 271,
+          "bytes": 38917
+        }
+      ],
+      "extended_file": "extended/Extended-Latvian-List.json"
+    },
+    {
+      "id": "liste-ar",
+      "name": "Liste AR",
+      "source": "Liste-AR.txt",
+      "source_sha256": "7d3c67237118cbe2097843eba6a33a335fb189c4c7a813678a73017b02f71062",
+      "version": "202609190842",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:49+00:00",
+      "rules_in": 1601,
+      "rules_unique": 1237,
+      "rules_emitted": 1237,
+      "skipped": 6,
+      "coverage_pct": 99.56,
+      "files": [
+        {
+          "file": "Webkit-Liste-AR.json",
+          "rules": 1237,
+          "bytes": 169801
+        }
+      ],
+      "extended_file": "extended/Extended-Liste-AR.json"
+    },
+    {
+      "id": "liste-fr",
+      "name": "Liste FR",
+      "source": "Liste-FR.txt",
+      "source_sha256": "bdc1dd4308fa2a1e73307bf143d4da619765db5a7b68ee4373e528370f061592",
+      "version": "202609190842",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:49+00:00",
+      "rules_in": 13818,
+      "rules_unique": 11201,
+      "rules_emitted": 11201,
+      "skipped": 130,
+      "coverage_pct": 99.03,
+      "files": [
+        {
+          "file": "Webkit-Liste-FR.json",
+          "rules": 11201,
+          "bytes": 1451558
+        }
+      ],
+      "extended_file": "extended/Extended-Liste-FR.json"
+    },
+    {
+      "id": "phishing-army",
+      "name": "Phishing Army",
+      "source": "Phishing-Army.txt",
+      "source_sha256": "b7ec905de655c8cf2e9291d8fe889edb39716314a87b5f20df46dfc09b365f03",
+      "version": "",
+      "group": "Phishing Army",
+      "homepage": "https://phishing.army/",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:52+00:00",
+      "rules_in": 152858,
+      "rules_unique": 152859,
+      "rules_emitted": 152859,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "files": [
+        {
+          "file": "Webkit-Phishing-Army-1.json",
+          "rules": 150000,
+          "bytes": 11739538
+        },
+        {
+          "file": "Webkit-Phishing-Army-2.json",
+          "rules": 2859,
+          "bytes": 211883
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "rolist",
+      "name": "ROList",
+      "source": "ROList.txt",
+      "source_sha256": "41b035428a31ac8c6dde8adfafb2431985d5d5c88c25f3e9761592f9c6226f27",
+      "version": "202609190842",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "http://creativecommons.org/licenses/by/3.0/",
+      "converted_at": "2026-09-19T08:52:50+00:00",
+      "rules_in": 585,
+      "rules_unique": 415,
+      "rules_emitted": 415,
+      "skipped": 0,
+      "coverage_pct": 98.29,
+      "files": [
+        {
+          "file": "Webkit-ROList.json",
+          "rules": 415,
+          "bytes": 64027
+        }
+      ],
+      "extended_file": "extended/Extended-ROList.json"
+    },
+    {
+      "id": "ru-adlist-for-ubo",
+      "name": "RU AdList for uBO",
+      "source": "RU-AdList-for-uBO.txt",
+      "source_sha256": "3d2846c0c23034613ce309ca5ec37220178994cf123d38069e92b7bd78bd35b5",
+      "version": "",
+      "group": "EasyList (regions)",
+      "homepage": "https://github.com/easylist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:51+00:00",
+      "rules_in": 32106,
+      "rules_unique": 23601,
+      "rules_emitted": 23601,
+      "skipped": 2774,
+      "coverage_pct": 90.79,
+      "files": [
+        {
+          "file": "Webkit-RU-AdList-for-uBO.json",
+          "rules": 23601,
+          "bytes": 3360008
+        }
+      ],
+      "extended_file": "extended/Extended-RU-AdList-for-uBO.json"
+    },
+    {
+      "id": "stevo-ai-extra",
+      "name": "Stevo's AI Blocklist (Extra)",
+      "source": "Stevo-s-AI-Blocklist-Extra.txt",
+      "source_sha256": "319040d5b4885be38578cea04f4cf85d03e7c57412564e816d577616bdb99db5",
+      "version": "",
+      "group": "Stevo's AI Blocklist",
+      "homepage": "https://github.com/Stevoisiak/Stevos-AI-Blocklist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:51+00:00",
+      "rules_in": 231,
+      "rules_unique": 101,
+      "rules_emitted": 101,
+      "skipped": 33,
+      "coverage_pct": 85.71,
+      "files": [
+        {
+          "file": "Webkit-Stevo-s-AI-Blocklist-Extra.json",
+          "rules": 101,
+          "bytes": 24288
+        }
+      ],
+      "extended_file": "extended/Extended-Stevo-s-AI-Blocklist-Extra.json"
+    },
+    {
+      "id": "stevo-ai",
+      "name": "Stevo's AI Blocklist",
+      "source": "Stevo-s-AI-Blocklist.txt",
+      "source_sha256": "6f20fc4acdb86bee775550e0b45013b376e117d46b7f5fe16bca6a894a04c4e7",
+      "version": "",
+      "group": "Stevo's AI Blocklist",
+      "homepage": "https://github.com/Stevoisiak/Stevos-AI-Blocklist",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:51+00:00",
+      "rules_in": 1719,
+      "rules_unique": 604,
+      "rules_emitted": 604,
+      "skipped": 180,
+      "coverage_pct": 89.3,
+      "files": [
+        {
+          "file": "Webkit-Stevo-s-AI-Blocklist.json",
+          "rules": 604,
+          "bytes": 160902
+        }
+      ],
+      "extended_file": "extended/Extended-Stevo-s-AI-Blocklist.json"
+    },
+    {
+      "id": "ublock-origin-annoyances",
+      "name": "uBlock Origin - Annoyances",
+      "source": "uBlock-Origin-Annoyances.txt",
+      "source_sha256": "72fbff96e26f15e558289f9c82b3e4aa7af4f921646202e752575dd7b4cf3d8d",
+      "version": "",
+      "group": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:51+00:00",
+      "rules_in": 3521,
+      "rules_unique": 609,
+      "rules_emitted": 609,
+      "skipped": 2776,
+      "coverage_pct": 20.48,
+      "files": [
+        {
+          "file": "Webkit-uBlock-Origin-Annoyances.json",
+          "rules": 609,
+          "bytes": 96099
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-Origin-Annoyances.json"
+    },
+    {
+      "id": "ublock-origin-badware-risks",
+      "name": "uBlock Origin - Badware risks",
+      "source": "uBlock-Origin-Badware-risks.txt",
+      "source_sha256": "719fc4f1a5ccd33ae80c004033ab844a2b478beb6d826fa16b74fbbea37a27d5",
+      "version": "",
+      "group": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:51+00:00",
+      "rules_in": 4277,
+      "rules_unique": 3861,
+      "rules_emitted": 3861,
+      "skipped": 338,
+      "coverage_pct": 91.91,
+      "files": [
+        {
+          "file": "Webkit-uBlock-Origin-Badware-risks.json",
+          "rules": 3861,
+          "bytes": 510241
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-Origin-Badware-risks.json"
+    },
+    {
+      "id": "ublock-origin-block-outsider-intrusion-into-lan",
+      "name": "uBlock Origin - Block Outsider Intrusion into LAN",
+      "source": "uBlock-Origin-Block-Outsider-Intrusion-into-LAN.txt",
+      "source_sha256": "328e63df0e233f18d61284f53a71a8c646076f66264a3957183b736ae7bcad13",
+      "version": "",
+      "group": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "",
+      "converted_at": "2026-09-19T08:52:51+00:00",
+      "rules_in": 94,
+      "rules_unique": 96,
+      "rules_emitted": 96,
+      "skipped": 5,
+      "coverage_pct": 101.06,
+      "files": [
+        {
+          "file": "Webkit-uBlock-Origin-Block-Outsider-Intrusion-into-LAN.json",
+          "rules": 96,
+          "bytes": 18868
+        }
+      ],
+      "extended_file": null
+    },
+    {
+      "id": "ublock-origin-cookie-notices",
+      "name": "uBlock Origin - Cookie Notices",
+      "source": "uBlock-Origin-Cookie-Notices.txt",
+      "source_sha256": "b91fa7edbbf3d11a0d18bdb5a2d17db79d2f32c1ac87d69c6db7070f1bc8934a",
+      "version": "",
+      "group": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:51+00:00",
+      "rules_in": 2360,
+      "rules_unique": 139,
+      "rules_emitted": 139,
+      "skipped": 2200,
+      "coverage_pct": 6.23,
+      "files": [
+        {
+          "file": "Webkit-uBlock-Origin-Cookie-Notices.json",
+          "rules": 139,
+          "bytes": 28105
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-Origin-Cookie-Notices.json"
+    },
+    {
+      "id": "ublock-origin",
+      "name": "uBlock Origin - Filters",
+      "source": "uBlock-Origin-Filters.txt",
+      "source_sha256": "13171e78b60d75fabf79366b26e23f538cc01900be7779bee45c265ad4aaaf7b",
+      "version": "",
+      "group": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:52+00:00",
+      "rules_in": 23031,
+      "rules_unique": 10143,
+      "rules_emitted": 10143,
+      "skipped": 11378,
+      "coverage_pct": 55.91,
+      "files": [
+        {
+          "file": "Webkit-uBlock-Origin-Filters.json",
+          "rules": 10143,
+          "bytes": 1998868
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-Origin-Filters.json"
+    },
+    {
+      "id": "ublock-origin-privacy",
+      "name": "uBlock Origin - Privacy",
+      "source": "uBlock-Origin-Privacy.txt",
+      "source_sha256": "ab91da5c9b2d0e94d3a4d2a106319446515cb276bbfd5842ee9ee943ee0e6663",
+      "version": "",
+      "group": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:52+00:00",
+      "rules_in": 1803,
+      "rules_unique": 980,
+      "rules_emitted": 980,
+      "skipped": 826,
+      "coverage_pct": 54.41,
+      "files": [
+        {
+          "file": "Webkit-uBlock-Origin-Privacy.json",
+          "rules": 980,
+          "bytes": 123032
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-Origin-Privacy.json"
+    },
+    {
+      "id": "ublock-origin-quick-fixes",
+      "name": "uBlock Origin - Quick Fixes",
+      "source": "uBlock-Origin-Quick-Fixes.txt",
+      "source_sha256": "7e19c8ce022b45dd968cc45b135a44c2ed5d0fed288ea4434361dd7dfc805db4",
+      "version": "",
+      "group": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:52+00:00",
+      "rules_in": 315,
+      "rules_unique": 92,
+      "rules_emitted": 92,
+      "skipped": 202,
+      "coverage_pct": 43.17,
+      "files": [
+        {
+          "file": "Webkit-uBlock-Origin-Quick-Fixes.json",
+          "rules": 92,
+          "bytes": 23282
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-Origin-Quick-Fixes.json"
+    },
+    {
+      "id": "ublock-origin-unbreak",
+      "name": "uBlock Origin - Unbreak",
+      "source": "uBlock-Origin-Unbreak.txt",
+      "source_sha256": "4eb0725713748a3fffa7166c2c5512c0d8420e9e44f0496d019369be1d2a74a0",
+      "version": "",
+      "group": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-09-19T08:52:52+00:00",
+      "rules_in": 2536,
+      "rules_unique": 1628,
+      "rules_emitted": 1628,
+      "skipped": 744,
+      "coverage_pct": 65.18,
+      "files": [
+        {
+          "file": "Webkit-uBlock-Origin-Unbreak.json",
+          "rules": 1628,
+          "bytes": 312735
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-Origin-Unbreak.json"
+    }
+  ],
+  "unpublished": []
+}
