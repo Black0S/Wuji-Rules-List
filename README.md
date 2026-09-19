@@ -12,10 +12,10 @@ sources.json ──> fetch_filters.py ──> filters/ ──> convert_webkit.py
 |---|---|
 | Listes au catalogue | **71** dans 11 groupes, toutes publiées |
 | Fichiers WebKit générés | **79** |
-| Règles WebKit | **1 855 568** distinctes (1 860 197 émises) |
-| Entrées sources analysées | **2 104 242** |
-| Entrées non convertibles | **68 482** (détail dans `reports/CONVERSION.md`) |
-| Règles consignées pour un moteur à injection | **58 675** (`webkit-rules/extended/`) |
+| Règles WebKit | **1 922 045** distinctes (1 926 693 émises) |
+| Entrées sources analysées | **2 167 687** |
+| Entrées non convertibles en WebKit | **65 912** (détail dans `reports/CONVERSION.md`) |
+| Règles appliquées par Wuji hors WebKit | **70 949** (`webkit-rules/extended/`) |
 
 > Publié sur la branche **`dist`**, réécrite à chaque exécution, après
 > compilation effective par le WebKit du système — `main` ne contient que les
@@ -119,6 +119,7 @@ JSON produit ne peut faire échouer la compilation Safari.
 ```bash
 python3 convert_webkit.py
 python3 convert_webkit.py --only AdGuard-Base --pretty
+python3 convert_webkit.py --jobs 1               # une liste a la fois (defaut: 6 en parallele, ~26 s)
 python3 convert_webkit.py --safari-version 15   # cible une version anterieure
 python3 convert_webkit.py --legacy               # profil WebKit ancien
 python3 convert_webkit.py --no-has               # exclure :has() (Safari < 16.4)
@@ -152,9 +153,14 @@ qui seraient sinon perdues.
 | `$denyallow=a\|b` | le blocage, suivi d'exceptions combinant chaque domaine **au motif d'origine**, placées juste après lui |
 | `exemple.*` (tout TLD), `$domain=/regex/` | `if-frame-url` — Safari 26+ ; sinon repli sur l'expansion de ~115 TLD |
 | `$method=get` | `request-method` — Safari 26+ ; une seule méthode, négation non supportée |
-| `\d` `\w` `\s` | réécrits en `[0-9]`, `[a-zA-Z0-9_]`, `[ ]` (synonymes exacts) |
-| `/(a\|b)/` alternation | éclatée en N règles distinctes (WebKit ne sait pas faire de disjonction) |
+| `\d` `\w` `\s` `\D` `\W` `\S` | réécrits en classes explicites (synonymes exacts) ; `[\s\S]` devient `.` |
+| `x{n}` `x{n,}` `x{n,m}` | n copies de `x`, puis `x*` ou m−n copies de `x?` — exact, vérifié dans WebKit |
+| `(?:…)`, `*?` `+?` `??` | groupe capturant, quantificateur gourmand : mêmes URL visées |
+| `/(a\|b)/` alternation | éclatée en N règles distinctes (WebKit ne sait pas faire de disjonction) ; une ancre restée dans son groupe (`(?:^\|\.)`, `(?:$\|\?)`) en est sortie |
 | `exemple.*` joker de TLD | étendu vers ~115 extensions réellement rencontrées |
+| `ru##sel` (TLD seul), `site.com>>##sel` | `if-domain: ["*ru"]`, `["*site.com"]` — la portée était perdue |
+| `$redirect=ressource` | **`block`** — chez uBO, `$redirect` implique le blocage ; le substitut est rejoué par Wuji |
+| `#@#sel` sans domaine | le sélecteur est retiré de la liste |
 | format `hosts` (`0.0.0.0 x.com`) | détecté automatiquement, converti en blocage de domaine |
 
 Alias reconnus : `$xhr`, `$css`, `$frame`, `$doc`, `$from`, `$3p`, `$1p`,
@@ -164,11 +170,18 @@ Alias reconnus : `$xhr`, `$css`, `$frame`, `$doc`, `$from`, `$3p`, `$1p`,
 
 Scriptlets (`#%#`, `##+js()`), injection de style (`#$#`), CSS étendu
 (`#?#`, `:has-text()`, `:xpath()`, `:upward()`, `:matches-css`…), filtrage HTML
-(`$$`), `$csp`, `$redirect`, `$removeparam`, `$removeheader`, `$replace`,
-`$permissions`, `$stealth`, `$denyallow`, `$badfilter`, `$app`, `$path`,
-`$urlskip`, regex hors du sous-ensemble WebKit (`{n,m}`, `(?=)`, `\d`, `\w`,
-alternation `|`, rétro-références), jokers de TLD (`exemple.*`), et `$domain`
-mélangeant inclusions et exclusions (interdit par WebKit).
+(`$$`), `$csp`, `$redirect-rule`, `$removeparam`, `$cookie=nom`, `$removeheader`,
+`$replace`, `$permissions`, `$stealth`, `$app`, `$urlskip`, regex hors du
+sous-ensemble WebKit (assertions `(?=)` `\b`, rétro-références, répétitions trop
+longues une fois développées), et `$domain` mélangeant inclusions et exclusions
+(interdit par WebKit). Une règle cosmétique que WebKit ne sait pas borner —
+inclusions et exclusions de domaine, `[$path=/re/]`, `[$domain=/re/]` — part
+dans l'annexe avec sa portée exacte au lieu d'être élargie.
+
+**`redirect` et `transform` compilent mais n'agissent pas.** Mesuré dans un
+WKWebView : la requête part intacte. Ces actions ne valent que pour une
+extension Safari ; `$redirect` devient donc un blocage, et le reste passe par
+l'annexe.
 
 Ces exclusions sont **structurelles** : WebKit n'expose ni exécution de script,
 ni réécriture de requête, ni moteur CSS étendu. Le détail chiffré par liste est
@@ -243,32 +256,37 @@ expose séparément plutôt que d'en choisir un.
 
 Ce qui ne peut pas devenir une règle WebKit n'est plus simplement compté puis
 jeté. Chaque liste produit un `webkit-rules/extended/Extended-<Nom>.json` qui consigne,
-sous forme structurée, les règles qu'un moteur à injection — c'est-à-dire une
-Safari Web Extension — saurait appliquer :
+sous forme structurée, les règles que Wuji applique dans la page :
 
 ```json
 {"name":"set-constant","args":["urlAds",""],"domains":["mphimtv.my"],
  "excluded":[],"syntax":"adguard","exception":false}
 ```
 
-Quatre familles, **69 874 entrées** au total :
+Neuf familles, **70 949 entrées** au total (listes du 19 septembre 2026) :
 
-| Famille | Nombre | Mécanisme requis |
+| Famille | Nombre | Ce que Wuji en fait |
 |---|---:|---|
-| `scriptlets` | 29 842 | monde principal pour ~40 % d'entre eux, monde isolé pour le reste |
-| `styles` (injection `#$#`) | 24 439 | CSS arbitraire, monde isolé |
-| `procedural` (`:has-text()`, `:xpath()`…) | 15 474 | inspection DOM, monde isolé |
-| `html` (filtrage `$$`) | 119 | réécriture de la réponse |
+| `scriptlets` (`+js()`, `#%#//scriptlet`) | 30 591 | primitives nommées, monde de la page |
+| `procedural` (`:has-text()`, `:xpath()`…, et les `#@#`) | 22 751 | moteur cosmétique, monde isolé |
+| `styles` (`#$#`, et `##sel { décl }` d'ABP) | 12 496 | feuille de style ou moteur |
+| `redirects` (`$redirect`, `$redirect-rule`) | 3 000 | substitut posé, `error` changé en `load` |
+| `cookies` (`$cookie=nom`) | 1 133 | cookie retiré du magasin après la page |
+| `removeparams` (`$removeparam`) | 316 | paramètre retiré de l'adresse ouverte |
+| `csp` (`$csp`) | 233 | politique posée en `<meta>` dans `<head>` |
+| `urlskips` (`$urlskip`) | 227 | redirection sautée |
+| `html` (`##^`) | 202 | élément retiré, script vidé avant exécution |
 
-Le JavaScript libre (539 occurrences) est compté mais **pas** consigné : ce
+**La portée est gardée telle que la liste l'écrit** : hôte, TLD seul (`ru`),
+joker (`exemple.*`, sans expansion) ou regex (`/^www\.x[0-9]+\.com$/`), plus une
+condition de page (`page`, regex sur l'adresse) pour `[$path=…]` et `[$url=…]`.
+Une portée illisible fait écarter la règle : **jamais elle ne devient
+générique**. Les valeurs par défaut (`excluded` vide, `exception` faux) ne sont
+pas écrites : 22 Mo d'annexes sont passés à 9,5 Mo.
+
+Le JavaScript libre (609 occurrences) est compté mais **pas** consigné : ce
 n'est pas une primitive nommée, le réutiliser reviendrait à exécuter du code
-arbitraire sans audit possible.
-
-Ces fichiers **ne sont pas chargeables par Safari**. Ils ne changent ni
-l'architecture ni les performances du content blocker ; ils existent pour que
-les données soient prêtes et à jour le jour où une extension les consomme, et
-pour rendre les rapports auditables plutôt que purement comptables.
-`--no-extended` les désactive.
+arbitraire sans audit possible. `--no-extended` désactive les annexes.
 
 ---
 

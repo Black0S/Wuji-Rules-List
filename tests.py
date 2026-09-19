@@ -67,8 +67,9 @@ for line in ("@@||site.com^$document,domain=a.com", "[$path=/x]a.com##.y",
                 if k in r["trigger"])
         check("une seule condition par trigger", n <= 1, line)
 
-c, _, _ = convert("/ad{2,3}s/")
-check("{n,m} refuse", bool(c.skipped))
+c, b, _ = convert("/ad{2,3}s/")
+check("{n,m} developpe exactement", rules_of(b)[0]["trigger"]["url-filter"] == "addd?s",
+      str(b))
 c, _, _ = convert("/a(?=b)/")
 check("lookahead refuse", bool(c.skipped))
 c, _, _ = convert("/a^b/")
@@ -143,8 +144,10 @@ check("regex de domaine: $ final remplace", not t["if-frame-url"][0].endswith("$
 
 check("alternation dans $domain eclatee",
       len(cw.domain_to_frame_regex("/bad(a|b)/")) == 2)
-check("regex de domaine non supportee ignoree",
-      cw.domain_to_frame_regex("/im{2}possible/") == [])
+check("regex de domaine a repetition developpee",
+      cw.domain_to_frame_regex("/im{2}possible/")[0].endswith("immpossible"))
+check("regex de domaine avec assertion ignoree",
+      cw.domain_to_frame_regex("/a(?=b)/") == [])
 
 c, b, _ = convert("||a.com^$method=get")
 check("$method -> request-method", rules_of(b)[0]["trigger"].get("request-method") == "get")
@@ -209,6 +212,121 @@ c, _, _ = convert(["www.youtube.com##+js(trusted-replace-xhr-response, /x/, , /p
 check("argument vide jusque dans l'annexe",
       c.extended["scriptlets"][-1]["args"] == ["/x/", "", "/player/"], repr(c.extended["scriptlets"][-1]))
 
+# --- regex: traduction exacte vers le sous-ensemble WebKit --------------------
+def rx(r):
+    try:
+        return cw.validate_raw_regex(r)
+    except cw.Unsupported as e:
+        return str(e)
+
+check("(?:) -> ()", rx(r"a(?:b)c") == ["a(b)c"], str(rx(r"a(?:b)c")))
+check("paresseux -> gourmand", rx(r"a.*?b+?c??") == ["a.*b+c?"], str(rx(r"a.*?b+?c??")))
+check("{n} sur une classe", rx(r"[0-9a-f]{3}\.js") == ["[0-9a-f][0-9a-f][0-9a-f]\\.js"],
+      str(rx(r"[0-9a-f]{3}\.js")))
+check("{n,} -> n copies puis *", rx(r"x{2,}") == ["xxx*"])
+check(".{100,} refuse (fige WebKit)", "trop longue" in rx(r"a\..{100,}"))
+check("{0,2} -> optionnels", rx(r"x{0,2}") == ["x?x?"])
+check("{n} sur un groupe", rx(r"(ab){2}") == ["(ab)(ab)"])
+check("\\D hors classe", rx(r"a\Db") == ["a[^0-9]b"])
+check("\\D dans une classe refuse", "classe" in rx(r"[\D-]"))
+check("lookahead refuse", "assertion" in rx(r"a(?=b)"))
+check("alternation non capturante eclatee", rx(r"\.(?:com|net)/") == ["\\.(com)/", "\\.(net)/"],
+      str(rx(r"\.(?:com|net)/")))
+check("[\\s\\S] -> .", rx(r"a[\s\S]*b") == ["a.*b"], str(rx(r"a[\s\S]*b")))
+check("ancre $ sortie de son groupe", rx(r"\.(js|j$)") == ["\\.(js)", "\\.(j)$"], str(rx(r"\.(js|j$)")))
+check("ancre ^ sortie de son groupe", rx(r"(?:^|\.)x/")[0] == "^x/", str(rx(r"(?:^|\.)x/")))
+check("parentheses d'une classe gardees", rx(r"a[0-9()]+\.") == ["a[0-9()]+\\."],
+      str(rx(r"a[0-9()]+\.")))
+check("groupe vide retire", rx(r"a(?:$|\?)") == ["a$", "a(\\?)"], str(rx(r"a(?:$|\?)")))
+check("modificateurs: virgule apres une regex",
+      cw.split_modifiers("domain=/re{1,2}/,script,3p") == ["domain=/re{1,2}/", "script", "3p"])
+check("$domain: regex a alternation non coupee",
+      cw.extended_scope.split_pipes("a.com|/(x|y)\\.com/|~b.com") == ["a.com", "/(x|y)\\.com/", "~b.com"])
+c, b, _ = convert("*$script,3p,denyallow=cloudflare.com,domain=animesa.*")
+bl = rules_of(b)
+check("$denyallow borne par un joker de TLD", bl and "if-frame-url" in bl[0]["trigger"]
+      and any(r["action"]["type"] == "ignore-previous-rules" for r in b), str(b)[:300])
+# --- domaines: TLD seul et `>>` ----------------------------------------------
+c, b, _ = convert("ru##.pub-ru")
+css = rules_of(b, "css-display-none")
+check("TLD seul garde sa portee", css and css[0]["trigger"].get("if-domain") == ["*ru"], str(b))
+c, b, _ = convert("site.com>>##.pub")
+css = rules_of(b, "css-display-none")
+check("uBO site>> lu comme site", css and css[0]["trigger"].get("if-domain") == ["*site.com"], str(b))
+
+# --- annexe: portee exacte, jamais generique ---------------------------------
+def ext(lines):
+    c = cw.Converter()
+    c.convert_lines(lines if isinstance(lines, list) else [lines])
+    return c.extended
+
+e = ext("exemple.*##+js(set, a, 1)")
+check("annexe: joker garde tel quel", e["scriptlets"][0]["domains"] == ["exemple.*"], str(e["scriptlets"]))
+e = ext("ru##div:has-text(pub)")
+check("annexe: TLD seul borne la regle", e["procedural"][0]["domains"] == ["ru"], str(e["procedural"]))
+e = ext("/^foo[0-9]+\\.com$/##div:has-text(pub)")
+check("annexe: regex de domaine gardee", e["procedural"][0]["domains"] == ["/^foo[0-9]+\\.com$/"],
+      str(e["procedural"]))
+e = ext("*.bad##div:has-text(pub)")
+check("annexe: portee illisible -> ecartee, pas generique", e["procedural"] == [], str(e["procedural"]))
+e = ext("[$path=/news]site.com##div:has-text(pub)")
+p = e["procedural"][0].get("page", "")
+import re as _re
+check("annexe: $path en condition de page",
+      _re.search(p, "https://site.com/news/1") and not _re.search(p, "https://site.com/sport"), p)
+e = ext("[$path]site.com#%#//scriptlet('set-constant', 'a', '1')")
+p = e["scriptlets"][0].get("page", "")
+check("annexe: [$path] seul = accueil",
+      _re.search(p, "https://site.com/") and not _re.search(p, "https://site.com/x"), p)
+e = ext("[$domain=/tv[0-9]+\\.com/]##.ad")
+check("annexe: [$domain=/re/] garde", e["procedural"] and e["procedural"][0]["domains"] == ["/tv[0-9]+\\.com/"],
+      str(e))
+
+# --- injection de style -----------------------------------------------------
+e = ext("site.com##.nav.sticky {top:0px;}")
+check("## sel {decl} -> style", e["styles"] and e["styles"][0]["declarations"] == "top:0px;"
+      and e["procedural"] == [], str(e))
+e = ext('site.com#$#div[data-x="{a}"] { display: none !important; }')
+check("accolade entre guillemets n'est pas une declaration",
+      e["styles"] and e["styles"][0]["selector"] == 'div[data-x="{a}"]', str(e["styles"]))
+e = ext("site.com##[data-t=\"x\"] {remove:true;}")
+check("{remove:true} garde", e["styles"] and "remove" in e["styles"][0]["declarations"], str(e))
+
+# --- exceptions: elles atteignent l'annexe -----------------------------------
+e = ext(["site.com##+js(set, a, 1)", "site.com#@#+js(set, a, 1)"])
+check("#@#+js consigne en exception",
+      any(s["exception"] and s["name"] == "set" for s in e["scriptlets"]), str(e["scriptlets"]))
+e = ext(["site.com#@#+js()"])
+check("#@#+js() leve tout", e["scriptlets"] and e["scriptlets"][0]["name"] == ""
+      and e["scriptlets"][0]["exception"], str(e["scriptlets"]))
+e = ext(["site.com#@#div:has-text(x)"])
+check("#@# procedural consigne", e["procedural"] and e["procedural"][0]["exception"], str(e))
+c, b, _ = convert(["##.pub", "#@#.pub"])
+check("#@# sans domaine retire le selecteur partout", not rules_of(b, "css-display-none"), str(b))
+c, b, _ = convert(["a.com,~x.a.com##.pub"])
+check("inclusion + exclusion -> annexe, pas de masquage sur l'exclu",
+      not rules_of(b, "css-display-none") and c.extended["procedural"][0]["excluded"] == ["x.a.com"], str(b))
+
+
+# --- reseau: ce que WebKit n'applique pas, consigne pour Wuji ------------------
+e = ext("||site.com^$csp=worker-src 'none'")
+check("$csp consigne pour Wuji", e.get("csp") and e["csp"][0]["policy"] == "worker-src 'none'", str(e.get("csp")))
+e = ext("$csp=script-src 'self',domain=a.com|b.com")
+check("$csp borne par $domain", e["csp"][0]["domains"] == ["a.com", "b.com"], str(e.get("csp")))
+e = ext("||x.com^$redirect=noopjs,script,domain=a.com")
+check("$redirect consigne", e["redirects"][0]["resource"] == "noopjs"
+      and e["redirects"][0]["types"] == ["script"], str(e.get("redirects")))
+c, b, _ = convert("||x.com/ads.js^$script,redirect=noopjs:5")
+check("$redirect devient un blocage", rules_of(b) and rules_of(b)[0]["trigger"]["resource-type"] == ["script"], str(b))
+c, b, _ = convert("||x.com/ads.js^$script,redirect-rule=noopjs")
+check("$redirect-rule ne bloque pas", not rules_of(b), str(b))
+
+e = ext("||disqus.com^$cookie=disqus_unique")
+check("$cookie=nom consigne", e["cookies"][0]["name"] == "disqus_unique", str(e.get("cookies")))
+e = ext("@@||godaddy.com^$cookie=/^_ga_/")
+check("exception $cookie consignee", e["cookies"][0]["exception"], str(e.get("cookies")))
+c, b, _ = convert("||x.com^$cookie")
+check("$cookie nu reste WebKit", rules_of(b, "block-cookies") and not c.extended.get("cookies"), str(b))
 print("%d cas verifies" % CASES[0])
 if FAILURES:
     print("\n%d ECHEC(S) :" % len(FAILURES))

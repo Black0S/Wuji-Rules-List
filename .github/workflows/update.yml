@@ -9,6 +9,8 @@ on:
     paths:                    # rejouer si le pipeline lui-meme change
       - "fetch_filters.py"
       - "convert_webkit.py"
+      - "extended_scope.py"
+      - "extended_network.py"
       - "sources.json"
       - "tools/**"
       - ".github/workflows/**"

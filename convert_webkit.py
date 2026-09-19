@@ -31,6 +31,9 @@ import re
 import sys
 from datetime import datetime, timezone
 
+import extended_network
+import extended_scope
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_IN = os.path.join(ROOT, "filters")
 DEFAULT_OUT = os.path.join(ROOT, "webkit-rules")
@@ -155,9 +158,8 @@ EXTENDED_CSS_TOKENS = (
 # Constructions regex hors du sous-ensemble accepte par WebKit.
 BAD_REGEX_TOKENS = ("{", "}", "(?", "\\d", "\\w", "\\s", "\\D", "\\W", "\\S",
                     "\\b", "\\B", "*?", "+?", "??", "|", "\\1", "\\2", "\\3")
+BAD_REGEX_RE = re.compile("|".join(re.escape(t) for t in BAD_REGEX_TOKENS))
 
-# Prefixe de modificateurs des regles cosmetiques AdGuard: [$path=/x]dom##sel
-COSMETIC_PREFIX = re.compile(r"^\[\$([^\]]+)\](.*)$", re.S)
 
 COSMETIC_MARKERS = ["#@$?#", "#@$#", "#@?#", "#@%#", "#@#",
                     "#$?#", "#$#", "#?#", "#%#", "##"]
@@ -178,6 +180,10 @@ TLD_EXPANSION = (
 
 HOSTS_LINE = re.compile(r"^(?:0\.0\.0\.0|127\.0\.0\.1|::1?|::)[ \t]+(\S+)")
 DOMAIN_OK = re.compile(r"^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+\.?$")
+# `ru##.pub`: un domaine de premier niveau seul designe tous les sites en `.ru`.
+# Refuse, il faisait tomber la portee — et une regle etendue sans portee vaut
+# partout. WebKit accepte `*ru` dans if-domain comme n'importe quel domaine.
+TLD_OK = re.compile(r"^([a-z]{2,63}|xn--[a-z0-9-]{1,59})$")
 
 
 class Unsupported(Exception):
@@ -257,6 +263,187 @@ def rewrite_shorthand(rx):
         out.append(c)
         i += 1
     return "".join(out)
+
+
+# Classes niees: synonymes exacts hors d'une classe. Dans une classe (`[\D-]`)
+# il faudrait une difference d'ensembles, que WebKit n'a pas: refuse.
+NEGATED_SHORTHAND = {"D": "[^0-9]", "W": "[^a-zA-Z0-9_]", "S": "[^ ]"}
+# Au-dela, la regex tient encore mais compile lentement dans l'automate de
+# WebKit: on ne l'emet pas.
+MAX_EXPANDED_REGEX = 1500
+MAX_ANY_REPEAT = 8
+_COUNTED = re.compile(r"\{(\d+)(,(\d*))?\}")
+
+
+def _regex_atom_end(rx, i):
+    """Fin (exclue) de l'atome qui commence en `i`: echappement, classe, groupe
+    ou caractere."""
+    c = rx[i]
+    if c == "\\":
+        return i + 2
+    if c == "[":
+        j = i + 1
+        if j < len(rx) and rx[j] == "^":
+            j += 1
+        if j < len(rx) and rx[j] == "]":
+            j += 1
+        while j < len(rx) and rx[j] != "]":
+            j += 2 if rx[j] == "\\" else 1
+        if j >= len(rx):
+            raise Unsupported("classe non fermee")
+        return j + 1
+    if c == "(":
+        j = _match_paren(rx, i)
+        if j is None:
+            raise Unsupported("parentheses desequilibrees")
+        return j + 1
+    return i + 1
+
+
+def any_char_classes(rx):
+    """`[\\s\\S]` -> `.`. Une URL ne contient jamais d'espace: une classe non
+    niee qui admet `\\S` admet tout caractere d'URL."""
+    out, i = [], 0
+    while i < len(rx):
+        if rx[i] == "\\":
+            out.append(rx[i:i + 2]); i += 2
+            continue
+        if rx[i] == "[":
+            j = _regex_atom_end(rx, i)
+            body = rx[i:j]
+            out.append("." if not body.startswith("[^") and "\\S" in body else body)
+            i = j
+            continue
+        out.append(rx[i]); i += 1
+    return "".join(out)
+
+
+def anchors_out_of_groups(rx):
+    """`(^)a` -> `^a`, `a(b$)` -> `a(b)$`, `a($)` -> `a$`.
+
+    Une alternation eclatee laisse l'ancre dans son groupe — `(?:^|\\.)x` donne
+    `(^)x` —, ce que WebKit refuse; sortie du groupe, elle dit la meme chose."""
+    changed = True
+    while changed:
+        changed = False
+        if rx.startswith("(^"):
+            j = _match_paren(rx, 0)
+            if j is not None:
+                rx = "^(" + rx[2:]
+                changed = True
+        if rx.endswith("$)") and not rx.endswith("\\$)"):
+            i = len(rx) - 1
+            # le groupe qui se ferme en dernier doit s'ouvrir quelque part
+            depth, k = 0, i
+            while k >= 0:
+                if rx[k] == ")":
+                    depth += 1
+                elif rx[k] == "(" and (k == 0 or rx[k - 1] != "\\"):
+                    depth -= 1
+                    if depth == 0:
+                        break
+                k -= 1
+            if k >= 0 and _match_paren(rx, k) == i:
+                rx = rx[:i - 1] + ")$"
+                changed = True
+        rx = _drop_empty_groups(rx)
+    return rx
+
+
+def _drop_empty_groups(rx):
+    """Retire `()` hors des classes: `[()]` garde ses parentheses."""
+    out, i = [], 0
+    while i < len(rx):
+        c = rx[i]
+        if c == "\\":
+            out.append(rx[i:i + 2]); i += 2
+        elif c == "[":
+            j = _regex_atom_end(rx, i)
+            out.append(rx[i:j]); i = j
+        elif rx.startswith("()", i) and rx[i + 2:i + 3] not in ("*", "+", "?", "{"):
+            i += 2
+        else:
+            out.append(c); i += 1
+    return "".join(out)
+
+
+def rewrite_regex_syntax(rx):
+    """Ramene une regex uBO / AdGuard au sous-ensemble de WebKit, a sens egal.
+
+    - `(?:x)` -> `(x)`: ne pas capturer ne change pas ce qui correspond.
+    - `x*?` -> `x*`: paresseux ou non, une regex trouve une correspondance dans
+      exactement les memes URL; seule la sous-chaine retenue differe, et WebKit
+      ne retient rien.
+    - `x{n,m}` -> n copies de `x` puis m-n copies de `x?`; `x{n,}` -> n copies
+      puis `x*`. Exact, simplement plus long.
+    - `\\D` `\\W` `\\S` -> classes niees equivalentes.
+
+    Les assertions (`(?=`, `(?!`, `\\b`) et les references arriere n'ont pas
+    d'equivalent: la regle reste ecartee.
+    """
+    out = []           # atomes deja traduits, quantificateur compris
+    i = 0
+    while i < len(rx):
+        c = rx[i]
+        if c == "\\" and i + 1 < len(rx) and rx[i + 1] in NEGATED_SHORTHAND:
+            out.append(NEGATED_SHORTHAND[rx[i + 1]])
+            i += 2
+            continue
+        if c == "[":
+            j = _regex_atom_end(rx, i)
+            if re.search(r"\\[DWS]", rx[i:j]):
+                raise Unsupported("classe niee dans une classe")
+            out.append(rx[i:j])
+            i = j
+            continue
+        if c == "(":
+            j = _regex_atom_end(rx, i)
+            inner = rx[i + 1:j - 1]
+            if inner.startswith("?:"):
+                inner = inner[2:]
+            elif inner.startswith("?"):
+                raise Unsupported("assertion de regex (lookahead / lookbehind)")
+            out.append("(" + rewrite_regex_syntax(inner) + ")")
+            i = j
+            continue
+        if c in "*+?" and out and out[-1] != "|":
+            out[-1] += c
+            i += 1
+            if i < len(rx) and rx[i] == "?":
+                i += 1                      # paresseux -> gourmand
+            continue
+        if c == "{":
+            m = _COUNTED.match(rx, i)
+            if not m or not out or out[-1] in ("|", "^"):
+                raise Unsupported("accolade hors repetition")
+            atom = out.pop()
+            n, hi = int(m.group(1)), m.group(3)
+            # **`.{100,}` fige le compilateur de WebKit.** Mesure: neuf regles
+            # d'EasyList de cette forme faisaient passer la compilation de la
+            # liste de 3 s a plus de dix minutes. Une classe bornee se developpe
+            # sans peine; le joker `.` repete, non.
+            if atom == "." and max(n, int(hi or 0)) > MAX_ANY_REPEAT:
+                raise Unsupported("repetition de `.` trop longue pour WebKit")
+            if m.group(2) is None:
+                rep = atom * n
+            elif hi == "":
+                rep = atom * n + atom + "*"
+            elif int(hi) < n:
+                raise Unsupported("repetition {n,m} inversee")
+            else:
+                rep = atom * n + (atom + "?") * (int(hi) - n)
+            out.append(rep)
+            i = m.end()
+            if i < len(rx) and rx[i] == "?":
+                i += 1
+            continue
+        j = _regex_atom_end(rx, i)
+        out.append(rx[i:j])
+        i = j
+    res = "".join(out)
+    if len(res) > MAX_EXPANDED_REGEX:
+        raise Unsupported("repetition trop longue une fois developpee")
+    return res
 
 
 def _split_top_level(text, sep="|"):
@@ -389,8 +576,8 @@ def validate_raw_regex(rx):
         raise Unsupported("regex vide")
     if any(ord(c) > 127 for c in rx):
         raise Unsupported("regex non-ASCII")
-    rx = rewrite_shorthand(rx)
-    variants = expand_alternations(rx)
+    rx = rewrite_regex_syntax(rewrite_shorthand(any_char_classes(rx)))
+    variants = [anchors_out_of_groups(v) for v in expand_alternations(rx)]
     out = []
     for v in variants:
         if any(t in v for t in BAD_REGEX_TOKENS):
@@ -405,6 +592,9 @@ def validate_raw_regex(rx):
     return out
 
 
+PLAIN_DOMAIN = re.compile(r"^\|\|([a-z0-9][a-z0-9.-]*[a-z0-9])\^$")
+
+
 def pattern_to_url_filter(pattern):
     """Traduit un motif adblock en liste d'`url-filter` WebKit (1, ou N si
     l'alternation d'une regex a du etre eclatee). Leve Unsupported."""
@@ -414,6 +604,12 @@ def pattern_to_url_filter(pattern):
 
     if len(pattern) > 2 and pattern.startswith("/") and pattern.endswith("/"):
         return validate_raw_regex(pattern[1:-1])
+
+    # **Le cas de neuf regles sur dix**: `||domaine^`. Traduit sans passer par
+    # la boucle generale ni par `re` — c'etait la moitie du temps de conversion.
+    m = PLAIN_DOMAIN.match(pattern)
+    if m:
+        return [ANCHOR_DOMAIN + m.group(1).replace(".", "\\.") + SEP_END]
 
     pattern = idna_normalize(pattern)
     if any(ord(c) > 127 for c in pattern):
@@ -460,10 +656,9 @@ def pattern_to_url_filter(pattern):
         rx = rx[2:]
     if not rx:
         return [".*"]
-    try:
-        re.compile(rx)
-    except re.error:
-        raise Unsupported("regex generee invalide")
+    # Pas de `re.compile` ici: chaque caractere special du motif a ete echappe,
+    # la regex est valide par construction. Seules les regex ecrites par la
+    # liste (`/.../`) sont verifiees — dans validate_raw_regex.
     return [rx]
 
 
@@ -503,34 +698,7 @@ def split_options(text):
     return text[:idx], text[idx + 1:]
 
 
-def split_modifiers(opts):
-    """Decoupe sur les virgules hors valeurs entre parentheses/regex."""
-    parts, buf, depth, in_re = [], [], 0, False
-    i = 0
-    while i < len(opts):
-        c = opts[i]
-        if c == "\\":
-            buf.append(c)
-            if i + 1 < len(opts):
-                i += 1
-                buf.append(opts[i])
-            i += 1
-            continue
-        if c == "/" and buf and buf[-1] == "=":
-            in_re = not in_re
-        elif c == "(":
-            depth += 1
-        elif c == ")":
-            depth = max(0, depth - 1)
-        if c == "," and depth == 0 and not in_re:
-            parts.append("".join(buf))
-            buf = []
-        else:
-            buf.append(c)
-        i += 1
-    if buf:
-        parts.append("".join(buf))
-    return [p.strip() for p in parts if p.strip()]
+split_modifiers = extended_scope.split_modifiers
 
 
 def normalize_domain(d, expand_tld=True):
@@ -560,7 +728,7 @@ def normalize_domain(d, expand_tld=True):
             d = d.encode("idna").decode("ascii")
         except Exception:  # noqa: BLE001
             return []
-    if not DOMAIN_OK.match(d):
+    if not DOMAIN_OK.match(d) and not TLD_OK.match(d):
         return []
     return ["*" + d]
 
@@ -609,7 +777,7 @@ def domain_to_frame_regex(raw):
             return []
         if "*" in d:
             return []
-    if not DOMAIN_OK.match(d):
+    if not DOMAIN_OK.match(d) and not TLD_OK.match(d):
         return []
     return [ANCHOR_DOMAIN + esc_regex(d) + SEP_END]
 
@@ -617,12 +785,16 @@ def domain_to_frame_regex(raw):
 def parse_domain_option(value, frame_ok=False):
     """`a.com|~b.com` -> (inclus, exclus, nb_ignores)."""
     inc, exc, dropped, specials = [], [], 0, []
-    for raw in value.split("|"):
+    for raw in extended_scope.split_pipes(value):
         raw = raw.strip()
         if not raw:
             continue
         neg = raw.startswith("~")
         body = raw[1:] if neg else raw
+        # uBO `exemple.com>>`: le site et tous les cadres qu'il ouvre. Nos regles
+        # suivent deja le document de chaque cadre: le site seul suffit.
+        if body.endswith(">>"):
+            body = body[:-2]
         is_special = body.endswith(".*") or (body.startswith("/") and body.endswith("/"))
         if frame_ok and is_special:
             specials.append((neg, body))
@@ -787,6 +959,7 @@ class Converter(object):
         self.extended = {"scriptlets": [], "procedural": [], "styles": [],
                          "html": [], "raw_js": 0}
         self._css_exceptions = {}
+        self._css_global_exceptions = set()
         self._badfilters = set()
         self._seen = set()
 
@@ -830,7 +1003,11 @@ class Converter(object):
             domains, marker, body = parsed[0], parsed[1], parsed[2]
             if marker != "#@#":
                 continue
-            inc, _, _, _ = parse_domain_option(domains.replace(",", "|"))
+            if parsed[3]:
+                continue    # `[$path=...]#@#`: une exception bornee a un chemin
+            inc, exc, _, _ = parse_domain_option(domains.replace(",", "|"))
+            if not domains.strip():
+                self._css_global_exceptions.add(body.strip())
             self._css_exceptions.setdefault(body.strip(), set()).update(inc)
 
     # -- decoupage cosmetique ----------------------------------------------- #
@@ -839,9 +1016,17 @@ class Converter(object):
     def split_cosmetic(line):
         # `[$path=/x]domaine##selecteur` : le prefixe porte des modificateurs.
         prefix = ""
-        m = COSMETIC_PREFIX.match(line)
-        if m:
-            prefix, line = m.group(1), m.group(2)
+        if line.startswith("[$"):
+            # Le prefixe se ferme au premier `]` apres lequel la ligne est une
+            # regle cosmetique: une regex de domaine (`[$domain=/tv[0-9]+/]`)
+            # porte ses propres crochets.
+            pos = line.find("]")
+            while pos != -1:
+                rest = Converter.split_cosmetic(line[pos + 1:])
+                if rest and not rest[3]:
+                    return rest[0], rest[1], rest[2], line[2:pos]
+                pos = line.find("]", pos + 1)
+            return None
         best = None
         for marker in COSMETIC_MARKERS:
             pos = line.find(marker)
@@ -856,8 +1041,9 @@ class Converter(object):
         body = line[pos + len(marker):]
         if not body:
             return None
-        # Le champ domaines d'une regle cosmetique ne contient jamais / $ ou espace.
-        if re.search(r"[/$\s\"']", domains):
+        # Le champ domaines d'une regle cosmetique ne contient jamais / $ ou
+        # espace — sauf une regex de domaine uBO, `/^www\.x[0-9]+\.com$/##sel`.
+        if re.search(r"[/$\s\"']", domains) and not re.match(r"^~?/\S+/$", domains):
             return None
         return domains, marker, body, prefix
 
@@ -901,7 +1087,7 @@ class Converter(object):
             raise Unsupported("url-filter manquant")
         if any(ord(c) > 127 for c in uf):
             raise Unsupported("url-filter non-ASCII")
-        if any(tok in uf for tok in BAD_REGEX_TOKENS):
+        if BAD_REGEX_RE.search(uf):
             raise Unsupported("regex hors du sous-ensemble WebKit")
         if misplaced_anchor(uf):
             raise Unsupported("ancre `^` ou `$` mal placee")
@@ -955,6 +1141,16 @@ class Converter(object):
 
         pattern, opts = split_options(line)
         mods = split_modifiers(opts) if opts else []
+        if self.keep_extended:
+            family, _ = extended_network.capture(self.extended, pattern, mods, exception)
+        else:
+            family, _ = extended_network.family_of(mods)
+        if family == "redirect" and not exception:
+            # uBO: `$redirect` implique le blocage. WebKit bloque; Wuji rejoue le
+            # substitut dans la page (voir extended_network).
+            mods = [m for m in mods
+                    if m.lstrip("~").split("=", 1)[0].strip().lower() != "redirect"]
+            self.note("$redirect traduit en blocage (substitut rejoue par Wuji)")
 
         inc_types, exc_types = [], []
         if_dom, unless_dom = [], []
@@ -1044,7 +1240,9 @@ class Converter(object):
             elemhide_exception = True
             inc_types = [t for t in inc_types if t != "document"]
 
-        if denyallow and not if_dom and pattern.strip().strip("*") in ("", "^", "|"):
+        # `domain=site.*` borne aussi la regle: il part en if-frame-url (specials).
+        if denyallow and not if_dom and not any(not n for n, _ in specials) \
+                and pattern.strip().strip("*") in ("", "^", "|"):
             # Un motif generique sans $domain ferait porter le blocage sur tout
             # le web. En revanche `||exemple.org^$denyallow=...` est deja borne
             # par son motif: la reference refuse les deux, nous seulement le
@@ -1168,58 +1366,63 @@ class Converter(object):
     # -- regles cosmetiques ------------------------------------------------- #
 
     def capture_extended(self, domains, marker, body, prefix=""):
-        """Consigne une regle non convertible en WebKit mais exploitable par un
-        moteur a injection (extension). Ne modifie pas le comptage: la regle
-        reste ecartee de la sortie WebKit."""
+        """Consigne une regle non convertible en WebKit mais exploitable par
+        Wuji. Ne modifie pas le comptage: la regle reste ecartee de la sortie
+        WebKit. Rend False si la portee est inexprimable — la regle n'est alors
+        consignee nulle part plutot que de valoir partout."""
         if not self.keep_extended:
-            return
-        inc, exc, _, _ = parse_domain_option(domains.replace(",", "|"))
-        scope = {"domains": sorted(set(d[1:] for d in inc)),
-                 "excluded": sorted(set(d[1:] for d in exc))}
-        if prefix:
-            scope["modifiers"] = prefix
+            return False
+        try:
+            portee = extended_scope.scope(domains, prefix)
+        except extended_scope.ScopeError as e:
+            self.note("annexe: %s" % e)
+            return False
         exception = "@" in marker
+        body = body.strip()
 
-        m = SCRIPTLET_AG.match(body.strip())
+        m = SCRIPTLET_AG.match(body)
         if marker in ("#%#", "#@%#") and m:
             args = parse_quoted_args(m.group(1))
-            if args:
+            if args or exception:
                 self.extended["scriptlets"].append(dict(
-                    scope, name=args[0], args=args[1:],
+                    portee, name=args[0] if args else "", args=args[1:],
                     syntax="adguard", exception=exception))
-            return
+            return True
         if marker in ("#%#", "#@%#"):
-            self.extended["raw_js"] += 1     # JS libre: non reutilisable tel quel
-            return
+            self.extended["raw_js"] += 1     # JS libre: jamais execute
+            return False
 
-        m = SCRIPTLET_UBO.match(body.strip())
+        m = SCRIPTLET_UBO.match(body)
         if m:
-            args = parse_bare_args(m.group(1))
-            if args and args[0]:
+            args = [a for a in parse_bare_args(m.group(1))] if m.group(1).strip() else []
+            # `#@#+js()` sans nom: toutes les primitives du site sont levees.
+            if (args and args[0]) or (exception and not args):
                 self.extended["scriptlets"].append(dict(
-                    scope, name=args[0], args=args[1:],
+                    portee, name=args[0] if args else "", args=args[1:],
                     syntax="ubo", exception=exception))
-            return
+                return True
+            return False
 
         if body.startswith("^"):
-            self.extended["html"].append(dict(scope, expression=body[1:],
+            self.extended["html"].append(dict(portee, expression=body[1:],
                                               exception=exception))
-            return
+            return True
 
+        # `#$#sel { decl }` (AdGuard) et `##sel { decl }` (injection CSS
+        # d'ABP): une declaration, pas un selecteur.
+        style = extended_scope.split_style(body)
+        if style:
+            self.extended["styles"].append(dict(
+                portee, selector=style[0], declarations=style[1],
+                extended=("?" in marker), exception=exception))
+            return True
         if marker in ("#$#", "#$?#", "#@$#", "#@$?#"):
-            if "{" in body and body.rstrip().endswith("}"):
-                sel, decl = body.split("{", 1)
-                self.extended["styles"].append(dict(
-                    scope, selector=sel.strip(),
-                    declarations=decl.rstrip().rstrip("}").strip(),
-                    extended=("?" in marker), exception=exception))
-            else:
-                self.extended["raw_js"] += 1
-            return
+            self.extended["raw_js"] += 1
+            return False
 
-        if marker in ("#?#", "#@?#") or marker == "##":
-            self.extended["procedural"].append(dict(
-                scope, selector=body.strip(), exception=exception))
+        self.extended["procedural"].append(dict(
+            portee, selector=body, exception=exception))
+        return True
 
     @staticmethod
     def path_to_top_url(domain, path):
@@ -1250,20 +1453,31 @@ class Converter(object):
             }.get(marker, "syntaxe cosmetique non supportee"))
 
         if body.startswith("+js(") or body.startswith("^"):
-            self.capture_extended(domains, marker, body)
+            self.capture_extended(domains, marker, body, prefix)
             raise Unsupported("scriptlet ou filtrage HTML")
 
         try:
             selector = self.valid_selector(body)
         except Unsupported:
-            self.capture_extended(domains, marker, body)
+            self.capture_extended(domains, marker, body, prefix)
             raise
+        if selector in self._css_global_exceptions:
+            raise Unsupported("regle cosmetique exceptee partout")
+
+        def to_extended(reason):
+            # Ce que WebKit ne sait pas borner, Wuji le borne: la regle part
+            # dans l'annexe avec sa portee exacte au lieu d'etre perdue ou
+            # elargie.
+            if self.capture_extended(domains, marker, body, prefix):
+                self.note("vers l'annexe: %s" % reason)
+            return Unsupported(reason)
+
         inc, exc, dropped, specials = parse_domain_option(
             domains.replace(",", "|"), self.frame_url_ok)
         if dropped:
             self.note("domaine ignore (joker) dans une regle cosmetique")
-            if domains and not inc and not exc:
-                raise Unsupported("domaine cosmetique non exprimable (joker de TLD)")
+            if domains and not inc and not exc and not specials:
+                raise to_extended("domaine cosmetique non exprimable (joker de TLD)")
 
         # Prefixe [$path=...] : exprimable via if-top-url, qui compte pour une
         # seule condition et peut donc porter domaine et chemin ensemble.
@@ -1279,15 +1493,14 @@ class Converter(object):
                     specials.extend(s2)
                     inc.extend(i2); exc.extend(e2)
                 else:
-                    raise Unsupported("modificateur cosmetique [$%s]" % nm)
+                    raise to_extended("modificateur cosmetique [$%s]" % nm)
             if path is None:
-                raise Unsupported("prefixe cosmetique sans chemin")
-            if not path.startswith("/") or (path.endswith("/") and len(path) > 1
-                                            and path.count("/") > 1 and
-                                            re.search(r"[\\^$*+?()\[\]{}|]", path)):
-                raise Unsupported("$path sous forme de regex")
+                raise to_extended("prefixe cosmetique sans chemin")
+            if specials or not path.startswith("/") or \
+                    re.search(r"[\\^$*+?()\[\]{}|]", path):
+                raise to_extended("$path sous forme de regex ou de joker")
             if exc:
-                raise Unsupported("$path avec exclusion de domaine")
+                raise to_extended("$path avec exclusion de domaine")
 
         excepted = self._css_exceptions.get(selector, set())
         if excepted:
@@ -1322,15 +1535,16 @@ class Converter(object):
             for d in inc:
                 pos.extend(domain_to_frame_regex(d[1:]))
             if not pos:
-                raise Unsupported("domaine cosmetique non exprimable (joker de TLD)")
-            trigger["if-frame-url"] = sorted(set(pos))
+                raise to_extended("domaine cosmetique non exprimable (joker de TLD)")
             if exc:
-                self.note("unless-domain abandonne (incompatible avec if-frame-url)")
+                # WebKit n'a qu'une condition: l'exclusion serait perdue et la
+                # regle masquerait la ou la liste l'interdit.
+                raise to_extended("joker de TLD avec exclusion")
+            trigger["if-frame-url"] = sorted(set(pos))
             self.note("joker de TLD traduit en if-frame-url (Safari 26+)")
         elif inc and exc:
             # WebKit interdit if-domain et unless-domain simultanement.
-            trigger["if-domain"] = sorted(set(inc))
-            self.note("unless-domain abandonne (incompatible avec if-domain)")
+            raise to_extended("inclusions et exclusions de domaine")
         elif inc:
             trigger["if-domain"] = sorted(set(inc))
         elif exc:
@@ -1381,7 +1595,11 @@ class Converter(object):
                 if cosmetic:
                     domains, marker, body, prefix = cosmetic
                     if marker == "#@#":
-                        continue  # deja pris en compte en passe 1
+                        # Deja applique a la sortie WebKit en passe 1; l'annexe
+                        # le recoit aussi: les regles qu'elle porte — et celles
+                        # des autres listes — doivent le respecter.
+                        self.capture_extended(domains, marker, body, prefix)
+                        continue
                     self.convert_cosmetic(domains, marker, body, prefix)
                 else:
                     if line.startswith("#"):
@@ -1483,6 +1701,19 @@ def write_json(path, rules, pretty):
     os.replace(tmp, path)
 
 
+def _convert_job(job):
+    path, meta, args = job
+    try:
+        return convert_file(path, meta, args), None
+    except Exception as e:  # noqa: BLE001
+        return None, e
+
+
+def compact_entry(rule):
+    return {k: v for k, v in rule.items()
+            if not (v is False or (k == "excluded" and not v))}
+
+
 def convert_file(path, meta, args):
     base = os.path.splitext(os.path.basename(path))[0]
     with open(path, "r", encoding="utf-8", errors="replace") as fh:
@@ -1556,15 +1787,17 @@ def convert_file(path, meta, args):
             "name": (meta or {}).get("name", base),
             "version": (meta or {}).get("version", ""),
             "generated_at": now_iso(),
-            "note": ("Regles non exprimables en Content Blocker WebKit mais "
-                     "exploitables par un moteur a injection (Safari Web "
-                     "Extension). Non chargeables telles quelles par Safari."),
+            "note": ("Regles que le format WebKit ne sait pas porter, lues et "
+                     "appliquees par Wuji dans la page. Non chargeables telles "
+                     "quelles par Safari."),
             "counts": ext_counts,
-            "scriptlets": ext["scriptlets"],
-            "procedural": ext["procedural"],
-            "styles": ext["styles"],
-            "html": ext["html"],
         }
+        # Les valeurs par defaut ne s'ecrivent pas: `excluded` vide, `exception`
+        # faux, `extended` faux. Le lecteur de Wuji les suppose — un quart du
+        # poids des annexes, sans une information de moins.
+        for key, rules in ext.items():
+            if isinstance(rules, list):
+                payload[key] = [compact_entry(r) for r in rules]
         with open(os.path.join(args.extended_out, os.path.basename(ext_file)),
                   "w", encoding="utf-8") as fh:
             json.dump(payload, fh, separators=(",", ":"), ensure_ascii=False)
@@ -1649,6 +1882,8 @@ def main():
     ap.add_argument("--pretty", action="store_true", help="JSON indente")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--jobs", type=int, default=min(os.cpu_count() or 1, 6),
+                    help="listes converties en parallele (defaut: coeurs, 6 au plus)")
     args = ap.parse_args()
 
     files = sorted(glob.glob(os.path.join(args.in_dir, "*.txt")))
@@ -1668,6 +1903,7 @@ def main():
     index_meta = read_index(args.in_dir)
 
     reports = []
+    todo = []
     for path in files:
         meta = index_meta.get(os.path.basename(path), {})
         if meta.get("duplicate_of"):
@@ -1675,10 +1911,20 @@ def main():
                 print("  . %-44s doublon de %s" % (os.path.basename(path)[:44],
                                                    meta["duplicate_of"]))
             continue
-        try:
-            rep = convert_file(path, meta, args)
-        except Exception as e:  # noqa: BLE001
-            print("  x %-46s %s" % (os.path.basename(path)[:46], e), file=sys.stderr)
+        todo.append((path, meta, args))
+    # **Une liste par processus.** Les listes sont independantes — chacune ecrit
+    # ses propres fichiers — et la conversion est du Python pur: un seul coeur
+    # faisait tout le travail. L'ordre des resultats reste celui des fichiers.
+    jobs = max(1, min(args.jobs, len(todo)))
+    if jobs > 1:
+        from concurrent.futures import ProcessPoolExecutor
+        pool = ProcessPoolExecutor(max_workers=jobs)
+        results = pool.map(_convert_job, todo, chunksize=1)
+    else:
+        pool, results = None, map(_convert_job, todo)
+    for (path, _, _), (rep, err) in zip(todo, results):
+        if err:
+            print("  x %-46s %s" % (os.path.basename(path)[:46], err), file=sys.stderr)
             continue
         reports.append(rep)
         if not args.dry_run:
@@ -1693,6 +1939,8 @@ def main():
                 rep["coverage_pct"],
                 "" if len(rep["outputs"]) == 1 else "[%d fichiers]" % len(rep["outputs"])))
 
+    if pool:
+        pool.shutdown()
     if not reports:
         return 1
 
