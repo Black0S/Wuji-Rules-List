@@ -194,6 +194,21 @@ try:
 except cw.Unsupported:
     CASES[0] += 1
 
+# --- arguments des primitives uBO --------------------------------------------
+# Un argument vide garde sa place : le jeter decalait l'adresse en texte de remplacement,
+# et la regle YouTube la plus importante s'appliquait a toutes les requetes.
+args = cw.parse_bare_args(r'trusted-replace-xhr-response, /"adPlacements.*?"\}{2\,4}\]\,/, , /\/player/')
+check("argument vide garde sa place", args == ["trusted-replace-xhr-response",
+      '/"adPlacements.*?"\\}{2,4}\\],/', "", "/\\/player/"], repr(args))
+args = cw.parse_bare_args("json-prune-fetch-response, adPlacements adSlots, , propsToMatch, /player?")
+check("propsToMatch reste une paire nom/valeur", args[2:] == ["", "propsToMatch", "/player?"], repr(args))
+check("virgule echappee rendue", cw.parse_bare_args(r'rmnt, script, window\,"fetch"')[2] == 'window,"fetch"')
+check("virgule finale sans argument", cw.parse_bare_args("set, a.b, false, ") == ["set", "a.b", "false"])
+check("primitive sans argument", cw.parse_bare_args("nowoif") == ["nowoif"])
+c, _, _ = convert(["www.youtube.com##+js(trusted-replace-xhr-response, /x/, , /player/)"])
+check("argument vide jusque dans l'annexe",
+      c.extended["scriptlets"][-1]["args"] == ["/x/", "", "/player/"], repr(c.extended["scriptlets"][-1]))
+
 print("%d cas verifies" % CASES[0])
 if FAILURES:
     print("\n%d ECHEC(S) :" % len(FAILURES))

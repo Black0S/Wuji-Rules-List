@@ -701,19 +701,35 @@ def parse_quoted_args(inner):
 
 
 def parse_bare_args(inner):
-    """Arguments d'un ##+js(...) uBO: virgules non echappees, sans quotes."""
+    """Arguments d'un ##+js(...) uBO: virgules non echappees, sans quotes.
+
+    **Un argument vide garde sa place.** Chez uBO les arguments sont positionnels :
+    `trusted-replace-xhr-response, /motif/, , /url/` veut dire « remplacer par rien, sur
+    cette adresse ». Les jeter decalait le suivant : l'adresse devenait le texte de
+    remplacement et la regle s'appliquait a toutes les requetes — c'est ce qui laissait
+    passer les publicites de YouTube. Seules les virgules finales ne font pas d'argument.
+
+    `\\,` est une virgule dans l'argument, et uBO la rend telle : on la rend aussi. Les
+    autres echappements restent, ils appartiennent a l'expression qui les porte.
+    """
     args, buf, esc = [], [], False
     for ch in inner:
         if esc:
+            if ch != ",":
+                buf.append("\\")
             buf.append(ch); esc = False; continue
         if ch == "\\":
-            esc = True; buf.append(ch); continue
+            esc = True; continue
         if ch == ",":
             args.append("".join(buf).strip()); buf = []
             continue
         buf.append(ch)
+    if esc:
+        buf.append("\\")
     args.append("".join(buf).strip())
-    return [a for a in args if a != ""] or [""]
+    while len(args) > 1 and args[-1] == "":
+        args.pop()
+    return args
 
 
 def denyallow_patterns(domain, pattern):
