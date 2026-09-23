@@ -172,6 +172,16 @@ check(":has-text() ecarte", bool(c.skipped))
 c, _, _ = convert("site.com#%#//scriptlet('set-constant','a','b')")
 check("scriptlet consigne", len(c.extended["scriptlets"]) == 1)
 
+# Filtrage HTML: un selecteur se consigne, une directive d'en-tete non. Wuji
+# recrit le document avant analyse, mais ne recrit aucune en-tete — la
+# consigner y mettrait un selecteur qui ne peut rien designer, et un selecteur
+# suffit a faire demarrer l'observateur de mutations de la page.
+c, _, _ = convert("site.com##^script:has-text(pub)")
+check("filtrage HTML consigne", [h["expression"] for h in c.extended["html"]]
+      == ["script:has-text(pub)"], repr(c.extended["html"]))
+c, _, _ = convert("site.com##^responseheader(location)")
+check("##^responseheader() ecarte", not c.extended["html"], repr(c.extended["html"]))
+
 # --- garde document et format hosts -----------------------------------------
 c, b, _ = convert("||pub.com^")
 guard = [r for r in b if r["action"]["type"] == "ignore-previous-rules"

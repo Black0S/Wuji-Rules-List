@@ -1404,7 +1404,16 @@ class Converter(object):
             return False
 
         if body.startswith("^"):
-            self.extended["html"].append(dict(portee, expression=body[1:],
+            expression = body[1:].strip()
+            # `##^responseheader(nom)` n'est pas un selecteur: uBO s'en sert pour
+            # retirer une en-tete de la reponse. WebKit n'en recrit aucune, et
+            # Wuji ne va chercher lui-meme que le document principal. Consigne,
+            # l'expression deviendrait un selecteur mort — et un selecteur suffit
+            # a faire demarrer l'observateur de mutations de la page.
+            if expression.startswith("responseheader("):
+                self.note("annexe: ##^responseheader() sans effet dans WebKit")
+                return False
+            self.extended["html"].append(dict(portee, expression=expression,
                                               exception=exception))
             return True
 
