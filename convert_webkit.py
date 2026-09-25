@@ -1853,6 +1853,19 @@ def convert_file(path, meta, args):
     return report
 
 
+def capabilities_of(report):
+    """Ce qu'une liste apporte reellement, par famille."""
+    b = report.get("breakdown") or {}
+    e = (report.get("extended") or {}).get("counts") or {}
+    return {
+        "network": b.get("block", 0) + b.get("block_document", 0)
+                   + b.get("block_cookies", 0),
+        "cosmetic": b.get("css_display_none", 0),
+        "procedural": e.get("procedural", 0) + e.get("html", 0),
+        "styles": e.get("styles", 0),
+        "scriptlets": e.get("scriptlets", 0),
+        "redirects": e.get("redirects", 0),
+    }
 def main():
     ap = argparse.ArgumentParser(
         description="Convertit les listes adblock en Content Blocker JSON WebKit.")
@@ -1989,6 +2002,16 @@ def main():
             "rules_emitted": r["rules_emitted"],
             "skipped": r["skipped_total"],
             "coverage_pct": r["coverage_pct"],
+            # Ce que la liste sait faire, et pas seulement combien elle pese.
+            #
+            # **Une liste de domaines ne masque rien.** Dix-huit des listes du
+            # catalogue n'apportent aucune regle cosmetique ni aucune primitive:
+            # ce sont des listes de domaines, tres efficaces contre les regies
+            # tierces, aveugles a un encart servi par le site lui-meme. Cocher
+            # les plus grosses pouvait donc bloquer quatre cent mille domaines
+            # et laisser une page couverte de publicite. Le catalogue le dit
+            # maintenant, liste par liste, et Wuji l'affiche.
+            "capabilities": capabilities_of(r),
             "files": r["outputs"],
             "extended_file": r["extended"]["file"],
         } for r in published],
