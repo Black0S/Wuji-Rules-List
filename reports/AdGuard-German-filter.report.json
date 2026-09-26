@@ -1,0 +1,78 @@
+{
+  "id": "adguard-german",
+  "source_file": "AdGuard-German-filter.txt",
+  "source_name": "AdGuard German filter",
+  "source_sha256": "bcf60e647dfee89492463a6d3646eb8195609ba1ea52eb1f1ef22cab47dd7aeb",
+  "source_group": "AdGuard (langues)",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard German filter",
+  "source_version": "2.0.53.88",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/6.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:19:52+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 12305,
+  "rules_in": 11300,
+  "rules_out": 5764,
+  "coverage_pct": 89.22,
+  "breakdown": {
+    "block": 2617,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 2643,
+    "css_selectors": 6962,
+    "ignore_previous_rules": 503
+  },
+  "skipped_total": 989,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 602,
+    "JavaScript / scriptlet (#%#)": 188,
+    "injection de style / scriptlet (#$#)": 154,
+    "injection de style etendue (#$?#)": 20,
+    "directive $badfilter (retractation appliquee)": 7,
+    "selecteur CSS etendu (#@?#)": 5,
+    "regle cosmetique entierement exceptee": 5,
+    "injection de style (non supportee)": 2,
+    "exception de scriptlet": 2,
+    "repetition trop longue une fois developpee": 1,
+    "$path sous forme de regex ou de joker": 1,
+    "retiree par $badfilter (retractation amont)": 1,
+    "modificateur non supporte: $csp": 1
+  },
+  "notes": {
+    "doublon fusionne": 112,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 52,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 30,
+    "modificateur sans effet sous WebKit: $important": 21,
+    "$path traduit en if-top-url": 4,
+    "vers l'annexe: $path sous forme de regex ou de joker": 1,
+    "alternation eclatee en 8 regles": 1,
+    "alternation eclatee en 2 regles": 1,
+    "alternation eclatee en 10 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-German-filter.json",
+      "rules": 5764,
+      "bytes": 985607
+    }
+  ],
+  "rules_emitted": 5764,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-German-filter.json",
+    "total": 1125,
+    "counts": {
+      "scriptlets": 176,
+      "procedural": 744,
+      "styles": 174,
+      "html": 0,
+      "raw_js": 14,
+      "redirects": 30,
+      "csp": 1
+    }
+  }
+}

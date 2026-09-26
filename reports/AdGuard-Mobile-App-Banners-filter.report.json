@@ -1,0 +1,68 @@
+{
+  "id": "adguard-mobile-app-banners",
+  "source_file": "AdGuard-Mobile-App-Banners-filter.txt",
+  "source_name": "AdGuard Mobile App Banners filter",
+  "source_sha256": "d42556a5f75412835e729d322ae2d2f9892b7acb39b677731665dc40330b16ce",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Mobile App Banners filter",
+  "source_version": "2.0.32.37",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/20.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:19:53+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 4460,
+  "rules_in": 4181,
+  "rules_out": 2359,
+  "coverage_pct": 78.67,
+  "breakdown": {
+    "block": 151,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 2200,
+    "css_selectors": 3131,
+    "ignore_previous_rules": 7
+  },
+  "skipped_total": 889,
+  "skipped_reasons": {
+    "injection de style / scriptlet (#$#)": 405,
+    "selecteur CSS etendu (#?#)": 232,
+    "JavaScript / scriptlet (#%#)": 225,
+    "injection de style etendue (#$?#)": 19,
+    "$path sous forme de regex ou de joker": 4,
+    "prefixe cosmetique sans chemin": 1,
+    "modificateur non supporte: $removeparam": 1,
+    "injection de style (non supportee)": 1,
+    "ancre `|` en milieu de motif": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 72,
+    "vers l'annexe: $path sous forme de regex ou de joker": 4,
+    "vers l'annexe: prefixe cosmetique sans chemin": 1,
+    "$path traduit en if-top-url": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Mobile-App-Banners-filter.json",
+      "rules": 2359,
+      "bytes": 395541
+    }
+  ],
+  "rules_emitted": 2359,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Mobile-App-Banners-filter.json",
+    "total": 881,
+    "counts": {
+      "scriptlets": 216,
+      "procedural": 241,
+      "styles": 423,
+      "html": 0,
+      "raw_js": 10,
+      "removeparams": 1
+    }
+  }
+}

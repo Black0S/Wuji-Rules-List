@@ -1,0 +1,79 @@
+{
+  "id": "adguard-other-annoyances",
+  "source_file": "AdGuard-Other-Annoyances-filter.txt",
+  "source_name": "AdGuard Other Annoyances filter",
+  "source_sha256": "ad856c430e8bfe865ae982e5b4b083cad8334fbb2c9e48d28a6d4d8df29b7b91",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Other Annoyances filter",
+  "source_version": "2.0.48.68",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/21.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:19:53+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 11629,
+  "rules_in": 8504,
+  "rules_out": 4057,
+  "coverage_pct": 72.35,
+  "breakdown": {
+    "block": 556,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 3496,
+    "css_selectors": 5593,
+    "ignore_previous_rules": 4
+  },
+  "skipped_total": 2359,
+  "skipped_reasons": {
+    "JavaScript / scriptlet (#%#)": 1063,
+    "injection de style / scriptlet (#$#)": 733,
+    "selecteur CSS etendu (#?#)": 471,
+    "injection de style etendue (#$?#)": 50,
+    "$path sous forme de regex ou de joker": 24,
+    "inclusions et exclusions de domaine": 5,
+    "$cookie avec valeur / en exception": 3,
+    "modificateur non supporte: $removeparam": 3,
+    "prefixe cosmetique sans chemin": 2,
+    "injection de style (non supportee)": 2,
+    "modificateur non supporte: $removeheader": 2,
+    "directive $badfilter (retractation appliquee)": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 104,
+    "vers l'annexe: $path sous forme de regex ou de joker": 24,
+    "$path traduit en if-top-url": 9,
+    "doublon fusionne": 6,
+    "modificateur sans effet sous WebKit: $important": 5,
+    "vers l'annexe: inclusions et exclusions de domaine": 5,
+    "vers l'annexe: prefixe cosmetique sans chemin": 2,
+    "alternation eclatee en 8 regles": 1,
+    "alternation eclatee en 6 regles": 1,
+    "alternation eclatee en 4 regles": 1,
+    "$domain traduit en if-frame-url (Safari 26+)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Other-Annoyances-filter.json",
+      "rules": 4057,
+      "bytes": 693720
+    }
+  ],
+  "rules_emitted": 4057,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Other-Annoyances-filter.json",
+    "total": 2289,
+    "counts": {
+      "scriptlets": 997,
+      "procedural": 505,
+      "styles": 781,
+      "html": 0,
+      "raw_js": 68,
+      "cookies": 3,
+      "removeparams": 3
+    }
+  }
+}

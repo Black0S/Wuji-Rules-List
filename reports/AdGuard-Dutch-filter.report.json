@@ -1,0 +1,66 @@
+{
+  "id": "adguard-dutch",
+  "source_file": "AdGuard-Dutch-filter.txt",
+  "source_name": "AdGuard Dutch filter",
+  "source_sha256": "fdf0d0160769012ca4476d0195a6974fec079cd44504a57d9e3294363782a50f",
+  "source_group": "AdGuard (langues)",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Dutch filter",
+  "source_version": "2.0.9.45",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/8.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:19:51+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 2183,
+  "rules_in": 1968,
+  "rules_out": 1255,
+  "coverage_pct": 92.12,
+  "breakdown": {
+    "block": 523,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 676,
+    "css_selectors": 1235,
+    "ignore_previous_rules": 55
+  },
+  "skipped_total": 102,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 50,
+    "JavaScript / scriptlet (#%#)": 36,
+    "injection de style / scriptlet (#$#)": 12,
+    "injection de style etendue (#$?#)": 2,
+    "regle cosmetique entierement exceptee": 1,
+    "selecteur CSS etendu (#@?#)": 1
+  },
+  "notes": {
+    "doublon fusionne": 29,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 7,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 2,
+    "modificateur sans effet sous WebKit: $important": 2,
+    "alternation eclatee en 8 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Dutch-filter.json",
+      "rules": 1255,
+      "bytes": 193605
+    }
+  ],
+  "rules_emitted": 1255,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Dutch-filter.json",
+    "total": 137,
+    "counts": {
+      "scriptlets": 34,
+      "procedural": 82,
+      "styles": 14,
+      "html": 0,
+      "raw_js": 2,
+      "redirects": 7
+    }
+  }
+}

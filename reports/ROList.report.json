@@ -1,0 +1,54 @@
+{
+  "id": "rolist",
+  "source_file": "ROList.txt",
+  "source_name": "ROList",
+  "source_sha256": "c5148d3f8bcbfb7ee5b1a446bfce056ff1c3a6a1bb6ca18de11ad17ce9a427ed",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "http://creativecommons.org/licenses/by/3.0/",
+  "source_title": "ROList",
+  "source_version": "202609260912",
+  "source_url": "https://easylist-downloads.adblockplus.org/rolist.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:20:06+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 608,
+  "rules_in": 585,
+  "rules_out": 415,
+  "coverage_pct": 98.29,
+  "breakdown": {
+    "block": 285,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 116,
+    "css_selectors": 277,
+    "ignore_previous_rules": 13
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {
+    "doublon fusionne": 4
+  },
+  "outputs": [
+    {
+      "file": "Webkit-ROList.json",
+      "rules": 415,
+      "bytes": 64027
+    }
+  ],
+  "rules_emitted": 415,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-ROList.json",
+    "total": 6,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 6,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

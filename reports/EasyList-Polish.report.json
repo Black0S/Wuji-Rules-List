@@ -1,0 +1,56 @@
+{
+  "id": "easylist-polish",
+  "source_file": "EasyList-Polish.txt",
+  "source_name": "EasyList Polish",
+  "source_sha256": "5f6a4955685a5aa000f65dff2779d2fe419ce481360005e40b87d282d367a445",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
+  "source_title": "EasyList Polish",
+  "source_version": "202609260912",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistpolish.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:19:57+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 3353,
+  "rules_in": 3310,
+  "rules_out": 2283,
+  "coverage_pct": 99.73,
+  "breakdown": {
+    "block": 666,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1597,
+    "css_selectors": 2616,
+    "ignore_previous_rules": 19
+  },
+  "skipped_total": 9,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 9
+  },
+  "notes": {
+    "domaine ignore (joker) dans une regle cosmetique": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Polish.json",
+      "rules": 2283,
+      "bytes": 407149
+    }
+  ],
+  "rules_emitted": 2283,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Polish.json",
+    "total": 9,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 9,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

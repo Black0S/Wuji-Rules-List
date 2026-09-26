@@ -1,0 +1,52 @@
+{
+  "id": "hagezi-dyndns",
+  "source_file": "HaGeZi-s-DynDNS-Blocklist.txt",
+  "source_name": "HaGeZi's DynDNS Blocklist",
+  "source_sha256": "0a53959de60845ecf0b1047a7c08a95619b2ce347c59f85ea818afc72cf3b17d",
+  "source_group": "HaGeZi",
+  "source_homepage": "https://github.com/hagezi/dns-blocklists",
+  "source_license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+  "source_title": "HaGeZi's DynDNS - guards against dynamic DNS abuse!",
+  "source_version": "2026.0924.2349.25",
+  "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:20:01+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1551,
+  "rules_in": 1538,
+  "rules_out": 1539,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 1538,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-HaGeZi-s-DynDNS-Blocklist.json",
+      "rules": 1539,
+      "bytes": 164465
+    }
+  ],
+  "rules_emitted": 1539,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

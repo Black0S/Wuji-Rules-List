@@ -1,0 +1,80 @@
+{
+  "id": "ublock-origin-privacy",
+  "source_file": "uBlock-Origin-Privacy.txt",
+  "source_name": "uBlock Origin - Privacy",
+  "source_sha256": "9588c478bd5009c9a887d0d439dc9ae242039c23e775e1c96cd45d43d8a6fe34",
+  "source_group": "uBlock Origin",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+  "source_title": "uBlock filters – Privacy",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/privacy.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:20:08+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 3483,
+  "rules_in": 1808,
+  "rules_out": 983,
+  "coverage_pct": 54.48,
+  "breakdown": {
+    "block": 963,
+    "block_document": 5,
+    "block_cookies": 0,
+    "css_display_none": 11,
+    "css_selectors": 14,
+    "ignore_previous_rules": 3
+  },
+  "skipped_total": 827,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 335,
+    "modificateur non supporte: $removeparam": 212,
+    "modificateur non supporte: $urlskip": 201,
+    "modificateur non supporte: $to": 26,
+    "modificateur non supporte: $csp": 18,
+    "modificateur non supporte: $uritransform": 8,
+    "directive $badfilter (retractation appliquee)": 6,
+    "modificateur non supporte: $strict3p": 5,
+    "modificateur non supporte: $reason": 5,
+    "pseudo-classe CSS etendue": 3,
+    "modificateur non supporte: $strict1p": 2,
+    "modificateur non supporte: $header": 2,
+    "modificateur non supporte: $redirect-rule": 1,
+    "assertion de regex (lookahead / lookbehind)": 1,
+    "$domain melange inclusions et exclusions": 1,
+    "modificateur non supporte: $replace": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 40,
+    "modificateur sans effet sous WebKit: $important": 28,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 1,
+    "$domain traduit en if-frame-url (Safari 26+)": 1,
+    "alternation eclatee en 5 regles": 1,
+    "annexe: ##^responseheader() sans effet dans WebKit": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-Origin-Privacy.json",
+      "rules": 983,
+      "bytes": 123372
+    }
+  ],
+  "rules_emitted": 983,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-uBlock-Origin-Privacy.json",
+    "total": 793,
+    "counts": {
+      "scriptlets": 329,
+      "procedural": 3,
+      "styles": 0,
+      "html": 5,
+      "raw_js": 0,
+      "redirects": 37,
+      "removeparams": 202,
+      "urlskips": 199,
+      "csp": 18
+    }
+  }
+}

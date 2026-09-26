@@ -1,0 +1,80 @@
+{
+  "id": "ru-adlist-for-ubo",
+  "source_file": "RU-AdList-for-uBO.txt",
+  "source_name": "RU AdList for uBO",
+  "source_sha256": "15c1ca24f02d063b8a65b4e380f586fdd9d655a98b95c16a984df0282c534c25",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
+  "source_title": "RU AdList for uBO only",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/easylist/ruadlist/master/RuAdList-uBO.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:20:07+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 33175,
+  "rules_in": 32164,
+  "rules_out": 23627,
+  "coverage_pct": 90.75,
+  "breakdown": {
+    "block": 17258,
+    "block_document": 28,
+    "block_cookies": 0,
+    "css_display_none": 5352,
+    "css_selectors": 10916,
+    "ignore_previous_rules": 988
+  },
+  "skipped_total": 2792,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 1085,
+    "selecteur CSS etendu (#?#)": 989,
+    "scriptlet ou filtrage HTML": 573,
+    "modificateur non supporte: $csp": 64,
+    "inclusions et exclusions de domaine": 32,
+    "modificateur non supporte: $removeparam": 24,
+    "directive $badfilter (retractation appliquee)": 7,
+    "retiree par $badfilter (retractation amont)": 6,
+    "$domain melange inclusions et exclusions": 4,
+    "regle cosmetique entierement exceptee": 4,
+    "assertion de regex (lookahead / lookbehind)": 1,
+    "modificateur non supporte: $reason": 1,
+    "modificateur inconnu: $responseheader": 1,
+    "modificateur non supporte: $empty": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 150,
+    "vers l'annexe: inclusions et exclusions de domaine": 32,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 20,
+    "modificateur sans effet sous WebKit: $important": 8,
+    "doublon fusionne": 7,
+    "alternation eclatee en 3 regles": 2,
+    "annexe: ##^responseheader() sans effet dans WebKit": 2,
+    "alternation eclatee en 8 regles": 1,
+    "$domain abandonne (une seule condition par trigger)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-RU-AdList-for-uBO.json",
+      "rules": 23627,
+      "bytes": 3367728
+    }
+  ],
+  "rules_emitted": 23627,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-RU-AdList-for-uBO.json",
+    "total": 2971,
+    "counts": {
+      "scriptlets": 573,
+      "procedural": 2290,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "csp": 64,
+      "removeparams": 24,
+      "redirects": 20
+    }
+  }
+}

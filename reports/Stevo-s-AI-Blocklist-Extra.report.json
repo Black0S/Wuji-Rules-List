@@ -1,0 +1,60 @@
+{
+  "id": "stevo-ai-extra",
+  "source_file": "Stevo-s-AI-Blocklist-Extra.txt",
+  "source_name": "Stevo's AI Blocklist (Extra)",
+  "source_sha256": "42bbd3932535210e2b53893d9f72439eb61f23b283464272b09f35c1db235af9",
+  "source_group": "Stevo's AI Blocklist",
+  "source_homepage": "https://github.com/Stevoisiak/Stevos-AI-Blocklist",
+  "source_license": "",
+  "source_title": "Stevo's AI Blocklist (Extra)",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/Stevoisiak/Stevos-AI-Blocklist/main/GenAI-Blocklist-Extra.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:20:07+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1025,
+  "rules_in": 236,
+  "rules_out": 104,
+  "coverage_pct": 85.59,
+  "breakdown": {
+    "block": 12,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 91,
+    "css_selectors": 190,
+    "ignore_previous_rules": 0
+  },
+  "skipped_total": 34,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 21,
+    "selecteur CSS vide ou trop long": 8,
+    "scriptlet ou filtrage HTML": 3,
+    "injection de style (non supportee)": 1,
+    "JavaScript / scriptlet (#%#)": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 3
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Stevo-s-AI-Blocklist-Extra.json",
+      "rules": 104,
+      "bytes": 24848
+    }
+  ],
+  "rules_emitted": 104,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-Stevo-s-AI-Blocklist-Extra.json",
+    "total": 34,
+    "counts": {
+      "scriptlets": 4,
+      "procedural": 29,
+      "styles": 1,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

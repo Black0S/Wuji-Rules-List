@@ -1,0 +1,54 @@
+{
+  "id": "hagezi-dns-rebind-protection",
+  "source_file": "HaGeZi-s-DNS-Rebind-Protection.txt",
+  "source_name": "HaGeZi's DNS Rebind Protection",
+  "source_sha256": "dd78447d10527cf141ed692c7ea179e0599602fafdaac5f23b650065f4d9e703",
+  "source_group": "HaGeZi",
+  "source_homepage": "https://github.com/hagezi/dns-blocklists",
+  "source_license": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+  "source_title": "HaGeZi's DNS Rebind Protection",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adguard/dns-rebind-protection.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:20:01+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 40,
+  "rules_in": 17,
+  "rules_out": 22,
+  "coverage_pct": 123.53,
+  "breakdown": {
+    "block": 17,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 4
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {
+    "alternation eclatee en 3 regles": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-HaGeZi-s-DNS-Rebind-Protection.json",
+      "rules": 22,
+      "bytes": 2219
+    }
+  ],
+  "rules_emitted": 22,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "easylist-cookie",
+  "source_file": "EasyList-Cookie-List.txt",
+  "source_name": "EasyList Cookie List",
+  "source_sha256": "d28c69853566a9c3d76e542b8c678f2df2b1e4b54920df98312b728a8b53805d",
+  "source_group": "EasyList",
+  "source_homepage": "https://github.com/easylist/easylist",
+  "source_license": "http://creativecommons.org/licenses/by/3.0/",
+  "source_title": "Easylist Cookie List",
+  "source_version": "",
+  "source_url": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:19:57+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 29143,
+  "rules_in": 28057,
+  "rules_out": 9501,
+  "coverage_pct": 89.44,
+  "breakdown": {
+    "block": 1678,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 7393,
+    "css_selectors": 22986,
+    "ignore_previous_rules": 429
+  },
+  "skipped_total": 2682,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 2458,
+    "pseudo-classe CSS etendue": 162,
+    "selecteur CSS etendu (#?#)": 57,
+    "regle cosmetique entierement exceptee": 2,
+    "injection de style (non supportee)": 2,
+    "joker de TLD avec exclusion": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 26,
+    "$domain traduit en if-frame-url (Safari 26+)": 4,
+    "doublon fusionne": 2,
+    "vers l'annexe: joker de TLD avec exclusion": 1,
+    "modificateur sans effet sous WebKit: $important": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Cookie-List.json",
+      "rules": 9501,
+      "bytes": 1884441
+    }
+  ],
+  "rules_emitted": 9501,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Cookie-List.json",
+    "total": 2960,
+    "counts": {
+      "scriptlets": 2458,
+      "procedural": 500,
+      "styles": 2,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

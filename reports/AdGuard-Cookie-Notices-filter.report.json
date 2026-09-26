@@ -1,0 +1,75 @@
+{
+  "id": "adguard-cookie-notices",
+  "source_file": "AdGuard-Cookie-Notices-filter.txt",
+  "source_name": "AdGuard Cookie Notices filter",
+  "source_sha256": "41d0df192a6f895c220b595a595ecaa70fb31d5f0f16d695858e94e7c43e6388",
+  "source_group": "AdGuard",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Cookie Notices filter",
+  "source_version": "2.0.95.34",
+  "source_url": "https://filters.adtidy.org/extension/chromium/filters/18.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:19:51+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 24828,
+  "rules_in": 21769,
+  "rules_out": 12065,
+  "coverage_pct": 65.4,
+  "breakdown": {
+    "block": 1298,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 9247,
+    "css_selectors": 11421,
+    "ignore_previous_rules": 1519
+  },
+  "skipped_total": 6256,
+  "skipped_reasons": {
+    "injection de style / scriptlet (#$#)": 3100,
+    "JavaScript / scriptlet (#%#)": 2712,
+    "selecteur CSS etendu (#?#)": 312,
+    "injection de style etendue (#$?#)": 116,
+    "injection de style (non supportee)": 5,
+    "regle cosmetique entierement exceptee": 4,
+    "joker de TLD avec exclusion": 2,
+    "$path sous forme de regex ou de joker": 1,
+    "repetition de `.` trop longue pour WebKit": 1,
+    "inclusions et exclusions de domaine": 1,
+    "exception d'injection de style": 1,
+    "exception de scriptlet": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 147,
+    "modificateur sans effet sous WebKit: $important": 22,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 13,
+    "$domain traduit en if-frame-url (Safari 26+)": 12,
+    "doublon fusionne": 3,
+    "vers l'annexe: joker de TLD avec exclusion": 2,
+    "vers l'annexe: $path sous forme de regex ou de joker": 1,
+    "vers l'annexe: inclusions et exclusions de domaine": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Cookie-Notices-filter.json",
+      "rules": 12065,
+      "bytes": 2104989
+    }
+  ],
+  "rules_emitted": 12065,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Cookie-Notices-filter.json",
+    "total": 7477,
+    "counts": {
+      "scriptlets": 2654,
+      "procedural": 1593,
+      "styles": 3217,
+      "html": 0,
+      "raw_js": 59,
+      "redirects": 13
+    }
+  }
+}

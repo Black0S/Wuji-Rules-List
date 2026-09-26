@@ -1,0 +1,58 @@
+{
+  "id": "ublock-origin-block-outsider-intrusion-into-lan",
+  "source_file": "uBlock-Origin-Block-Outsider-Intrusion-into-LAN.txt",
+  "source_name": "uBlock Origin - Block Outsider Intrusion into LAN",
+  "source_sha256": "328e63df0e233f18d61284f53a71a8c646076f66264a3957183b736ae7bcad13",
+  "source_group": "uBlock Origin",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "",
+  "source_title": "uBlock Origin - Block Outsider Intrusion into LAN",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/lan-block.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:20:07+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 179,
+  "rules_in": 94,
+  "rules_out": 96,
+  "coverage_pct": 101.06,
+  "breakdown": {
+    "block": 72,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 23
+  },
+  "skipped_total": 5,
+  "skipped_reasons": {
+    "regex hors du sous-ensemble WebKit": 5
+  },
+  "notes": {
+    "domaine ignore (joker ou regex dans $domain)": 71,
+    "alternation eclatee en 2 regles": 2,
+    "alternation eclatee en 5 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-Origin-Block-Outsider-Intrusion-into-LAN.json",
+      "rules": 96,
+      "bytes": 18868
+    }
+  ],
+  "rules_emitted": 96,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    }
+  }
+}

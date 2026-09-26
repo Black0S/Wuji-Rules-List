@@ -1,0 +1,65 @@
+{
+  "id": "easylist-germany",
+  "source_file": "EasyList-Germany.txt",
+  "source_name": "EasyList Germany",
+  "source_sha256": "c63e28730459aeda08965f4dfd8e7eb9eb1f4254e814bc06a1f5be50ab166173",
+  "source_group": "EasyList (regions)",
+  "source_homepage": "https://github.com/easylist",
+  "source_license": "",
+  "source_title": "EasyList Germany",
+  "source_version": "202609260912",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistgermany.txt",
+  "format": "adblock",
+  "converted_at": "2026-09-26T09:19:57+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 6038,
+  "rules_in": 5988,
+  "rules_out": 3894,
+  "coverage_pct": 97.36,
+  "breakdown": {
+    "block": 2156,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1575,
+    "css_selectors": 3512,
+    "ignore_previous_rules": 162
+  },
+  "skipped_total": 131,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 122,
+    "modificateur inconnu: $rewrite": 4,
+    "modificateur non supporte: $genericblock": 2,
+    "modificateur non supporte: $csp": 1,
+    "pseudo-classe CSS etendue": 1,
+    "injection de style (non supportee)": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 39,
+    "alternation eclatee en 8 regles": 1,
+    "alternation eclatee en 2 regles": 1,
+    "alternation eclatee en 10 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Germany.json",
+      "rules": 3894,
+      "bytes": 609382
+    }
+  ],
+  "rules_emitted": 3894,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Germany.json",
+    "total": 169,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 167,
+      "styles": 1,
+      "html": 0,
+      "raw_js": 0,
+      "csp": 1
+    }
+  }
+}
