@@ -116,6 +116,14 @@ UNSUPPORTED_MODIFIERS = {
     "webrtc", "websocket-request", "match-case-value",
 }
 
+# Exceptions qui ne levent qu'une partie du filtrage d'une page. Chacune a sa
+# traduction propre (voir Converter.convert_partial_exception): les confondre
+# avec `$document` desactivait la liste entiere sur le site — `@@||www.youtube.com^
+# $generichide` y laissait passer toutes les publicites qu'AdGuard Base masque
+# pourtant nommement.
+PARTIAL_EXCEPTIONS = {"generichide", "elemhide", "specifichide", "urlblock",
+                      "jsinject", "content", "extension"}
+
 # Modificateurs sans effet cote WebKit mais inoffensifs: on garde la regle.
 IGNORED_MODIFIERS = {"important", "all", "not-important"}
 
@@ -953,6 +961,10 @@ class Converter(object):
         self.css = {}               # trigger_key -> {"trigger":..., "selectors":[...]}
         self.exceptions = []
         self.doc_exceptions = []
+        self.generic_hide_exceptions = []   # $generichide: suit la cosmetique generique
+        self.urlblock_exceptions = []       # $urlblock: suit les blocages reseau
+        self.specific_hide_domains = set()  # $specifichide: retires des if-domain
+        self.body_atomic = []
         self.skipped = {}
         self.notes = {}
         self.counts = {"total": 0, "comments": 0, "converted": 0, "skipped": 0}
@@ -1159,7 +1171,7 @@ class Converter(object):
         document_intent = False
         child_frame_only = False
         cookie_only = False
-        elemhide_exception = False
+        partial = set()
         denyallow = []
         specials = []
         request_method = None
@@ -1202,9 +1214,8 @@ class Converter(object):
                 else:
                     inc_types.append("subdocument")
                     child_frame_only = True
-            elif name in ("elemhide", "generichide", "specifichide", "content",
-                          "jsinject", "urlblock", "extension") and exception:
-                elemhide_exception = True
+            elif name in PARTIAL_EXCEPTIONS and exception:
+                partial.add(name)
             elif name in self.types_map:
                 (exc_types if neg else inc_types).append(name)
             elif name in IGNORED_MODIFIERS:
@@ -1236,9 +1247,9 @@ class Converter(object):
 
         # En syntaxe adblock, `@@...$document` desactive le filtrage sur toute
         # la page, pas seulement sur la requete du document.
-        if exception and (elemhide_exception or inc_types == ["document"]):
-            elemhide_exception = True
-            inc_types = [t for t in inc_types if t != "document"]
+        whole_page = exception and inc_types == ["document"]
+        if whole_page:
+            inc_types = []
 
         # `domain=site.*` borne aussi la regle: il part en if-frame-url (specials).
         if denyallow and not if_dom and not any(not n for n, _ in specials) \
@@ -1336,7 +1347,7 @@ class Converter(object):
                           % len(denyallow))
 
         if exception:
-            if elemhide_exception or (document_intent and not inc_types):
+            if whole_page or partial:
                 # Exception de page entiere. WebKit n'accepte qu'une seule
                 # condition par trigger: on choisit la plus specifique.
                 top = {"url-filter": ".*"}
@@ -1350,8 +1361,11 @@ class Converter(object):
                     top["unless-domain"] = trigger["unless-domain"]
                 else:
                     raise Unsupported("exception globale sans portee")
-                self.emit(self.doc_exceptions, top,
-                          {"type": "ignore-previous-rules"})
+                if whole_page:
+                    self.emit(self.doc_exceptions, top,
+                              {"type": "ignore-previous-rules"})
+                else:
+                    self.convert_partial_exception(partial, top, pattern, if_dom)
             else:
                 emit_all(self.exceptions, {"type": "ignore-previous-rules"})
             return
@@ -1626,18 +1640,78 @@ class Converter(object):
 
     # -- assemblage --------------------------------------------------------- #
 
-    def build_css_rules(self):
+    @staticmethod
+    def is_generic_css(trigger):
+        """Generique = sans site designe: ni if-domain, ni if-frame-url, ni
+        if-top-url. Une exclusion (`~site##.pub`) reste generique."""
+        return not any(k in trigger for k in ("if-domain", "if-frame-url", "if-top-url"))
+
+    def build_css_rules(self, generic):
         rules = []
         for slot in self.css.values():
+            trigger = slot["trigger"]
+            if self.is_generic_css(trigger) != generic:
+                continue
+            if not generic and "if-domain" in trigger and self.specific_hide_domains:
+                kept = [d for d in trigger["if-domain"] if not self.hides_specific(d)]
+                if not kept:
+                    self.note("$specifichide: regle cosmetique levee sur son site")
+                    continue
+                if len(kept) != len(trigger["if-domain"]):
+                    trigger = dict(trigger, **{"if-domain": kept})
             sels = slot["selectors"]
             for i in range(0, len(sels), self.css_group_size):
                 chunk = sels[i:i + self.css_group_size]
                 rules.append({
-                    "trigger": slot["trigger"],
+                    "trigger": trigger,
                     "action": {"type": "css-display-none",
                                "selector": ", ".join(chunk)},
                 })
         return rules
+
+    def hides_specific(self, domain):
+        """`*sous.site.com` est leve par un `$specifichide` sur `*site.com`."""
+        nu = domain.lstrip("*")
+        return any(nu == s or nu.endswith("." + s) for s in self.specific_hide_domains)
+
+    def convert_partial_exception(self, partial, top, pattern, if_dom):
+        """Une exception qui ne leve qu'une partie du filtrage de la page.
+
+        **L'ordre fait la portee.** `ignore-previous-rules` annule tout ce qui
+        le precede dans le fichier, pour les chargements qu'il designe. Mesure
+        sur le WebKit systeme (tools/wk_generichide.swift):
+
+          · la cosmetique generique vient **en tete** de fichier, suivie de ses
+            exceptions `$generichide` — elles n'ont rien d'autre a annuler;
+          · ces exceptions restent **sans resource-type**: restreintes a
+            `document`, WebKit ne les applique pas aux regles `css-display-none`,
+            qui ne passent pas par le chargement du document;
+          · le garde de navigation, lui restreint a `document`, n'annule donc pas
+            la cosmetique qui le precede.
+
+        `$specifichide` ne s'exprime pas par l'ordre — il faudrait annuler la
+        cosmetique propre au site sans annuler la generique qui la precede: le
+        site est retire des `if-domain` a l'assemblage, ce qui revient au meme.
+        """
+        effective = False
+        if partial & {"generichide", "elemhide"}:
+            self.emit(self.generic_hide_exceptions, top, {"type": "ignore-previous-rules"})
+            effective = True
+        if partial & {"specifichide", "elemhide"}:
+            m = re.match(r"^\|\|([a-z0-9.-]+)\^?$", pattern.strip())
+            hosts = [m.group(1)] if m else \
+                ([d.lstrip("*") for d in if_dom] if pattern.strip() in ("", "*") else [])
+            if hosts:
+                self.specific_hide_domains.update(hosts)
+                effective = True
+            else:
+                self.note("$specifichide sur un chemin: non exprimable, ignore")
+        if "urlblock" in partial:
+            self.emit(self.urlblock_exceptions, top, {"type": "ignore-previous-rules"})
+            effective = True
+        if not effective:
+            raise Unsupported("exception $%s sans effet sous WebKit"
+                              % "/".join(sorted(partial)))
 
     def document_guard(self):
         """Empeche les regles generiques de bloquer la navigation principale.
@@ -1654,13 +1728,24 @@ class Converter(object):
         }
 
     def assemble(self):
-        """Ordre = semantique: WebKit applique les regles dans l'ordre du tableau."""
-        out = list(self.blocks)
-        if self.document_policy == "guard" and out:
+        """Ordre = semantique: WebKit applique les regles dans l'ordre du tableau.
+
+        La cosmetique generique et ses exceptions `$generichide` ouvrent le
+        fichier, d'un seul tenant: une exception n'agit que dans le fichier de
+        ce qu'elle excepte, et le decoupage ne doit pas les separer.
+        """
+        out = self.build_css_rules(generic=True) + list(self.generic_hide_exceptions)
+        head = len(out)
+        out.extend(self.blocks)
+        if self.document_policy == "guard" and self.blocks:
             out.append(self.document_guard())
         out.extend(self.doc_blocks)
         out.extend(self.cookie_rules)
-        out.extend(self.build_css_rules())
+        out.extend(self.urlblock_exceptions)
+        out.extend(self.build_css_rules(generic=False))
+        self.body_atomic = [(a + head, ln) for a, ln in self.atomic]
+        if head:
+            self.body_atomic.append((0, head))
         tail = list(self.exceptions) + list(self.doc_exceptions)
         return out, tail
 
@@ -1764,9 +1849,8 @@ def convert_file(path, meta, args):
         # Un blocage $denyallow et ses exceptions forment un tout: les separer
         # entre deux fichiers laisserait le blocage s'appliquer sans ses
         # exemptions, donc du sur-blocage. On recule la coupe au debut du groupe.
-        starts = {a for a, _ in conv.atomic}
         inside = {}
-        for a, ln in conv.atomic:
+        for a, ln in conv.body_atomic:
             for k in range(a + 1, a + ln):
                 inside[k] = a
         chunks, i = [], 0
@@ -1836,9 +1920,12 @@ def convert_file(path, meta, args):
             "block": len(conv.blocks),
             "block_document": len(conv.doc_blocks),
             "block_cookies": len(conv.cookie_rules),
-            "css_display_none": len(conv.build_css_rules()),
+            "css_display_none": sum(1 for r in body if r["action"]["type"] == "css-display-none"),
             "css_selectors": sum(len(s["selectors"]) for s in conv.css.values()),
             "ignore_previous_rules": len(tail),
+            "generichide": len(conv.generic_hide_exceptions),
+            "specifichide_domains": len(conv.specific_hide_domains),
+            "urlblock": len(conv.urlblock_exceptions),
         },
         "skipped_total": conv.counts["skipped"],
         "skipped_reasons": dict(sorted(conv.skipped.items(),

@@ -193,6 +193,55 @@ c.convert_lines(["0.0.0.0 tracker.test", "127.0.0.1 localhost"], hosts_mode=True
 b, _ = c.assemble()
 check("format hosts", len(rules_of(b)) == 1)
 
+# --- exceptions partielles: chacune ne leve que sa part ---------------------
+# `@@||www.youtube.com^$generichide` (AdGuard Base) levait la liste entiere sur
+# YouTube: publicites nommees et blocages reseau compris.
+def kinds(body):
+    return [r["action"]["type"] for r in body]
+
+c, b, t = convert(["##.pub", "||pub.com^", "site.com##.promo", "@@||site.com^$generichide"])
+k = kinds(b)
+check("$generichide: generique en tete puis son exception",
+      k[:2] == ["css-display-none", "ignore-previous-rules"], str(k))
+check("$generichide: l'exception precede les blocages",
+      k.index("ignore-previous-rules") < k.index("block"), str(k))
+ex = b[1]["trigger"]
+check("$generichide: exception sans resource-type (sinon inoperante sur le CSS)",
+      "resource-type" not in ex and "if-top-url" in ex, str(ex))
+check("$generichide: la cosmetique du site suit, intacte",
+      b[-1]["action"]["type"] == "css-display-none"
+      and b[-1]["trigger"].get("if-domain") == ["*site.com"], str(b[-1]))
+check("$generichide: rien dans la queue", not t, str(t))
+
+c, b, t = convert(["##.pub", "@@*$ghide,domain=a.com|b.com"])
+check("$ghide,domain=: exception portee par if-domain",
+      b[1]["trigger"].get("if-domain") == ["*a.com", "*b.com"], str(b[1]))
+
+c, b, _ = convert(["site.com,autre.com##.promo", "sous.site.com##.x", "@@||site.com^$specifichide"])
+doms = [r["trigger"].get("if-domain") for r in rules_of(b, "css-display-none")]
+check("$specifichide: le site est retire des if-domain", doms == [["*autre.com"]], str(doms))
+check("$specifichide: aucune exception emise", not rules_of(b, "ignore-previous-rules"))
+
+c, b, _ = convert(["##.pub", "site.com##.promo", "@@||site.com^$elemhide"])
+doms = [r["trigger"].get("if-domain") for r in rules_of(b, "css-display-none")]
+check("$elemhide: generique leve et specifique retire",
+      doms == [None] and kinds(b)[1] == "ignore-previous-rules", str(b))
+
+c, b, t = convert(["||pub.com^", "site.com##.promo", "@@||site.com^$urlblock"])
+k = kinds(b)
+check("$urlblock: exception apres les blocages, avant la cosmetique du site",
+      k.index("block") < len(k) - 2 and k[-2] == "ignore-previous-rules"
+      and k[-1] == "css-display-none", str(k))
+
+c, b, t = convert(["||pub.com^", "@@||site.com^$jsinject"])
+check("$jsinject: sans effet WebKit, ne leve plus rien",
+      not rules_of(b + t, "ignore-previous-rules")[1:] and
+      any("sans effet" in r for r in c.skipped), str(c.skipped))
+
+c, b, t = convert(["||pub.com^", "@@||site.com^$document"])
+check("$document: toujours la page entiere, en queue",
+      len(rules_of(t, "ignore-previous-rules")) == 1, str(t))
+
 # --- decoupage des options ---------------------------------------------------
 pat, opts = cw.split_options(r"/re\.gif/$domain=/site[0-9]\.com/")
 check("regex dans une valeur de modificateur", pat == r"/re\.gif/" and opts.startswith("domain="),

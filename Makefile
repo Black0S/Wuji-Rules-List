@@ -30,6 +30,7 @@ verify:                       ## macOS uniquement: compile chaque fichier avec l
 
 probe:                        ## macOS uniquement: sonde les contraintes reelles de WebKit
 	swift tools/wk_probe.swift
+	swift tools/wk_generichide.swift
 
 redundancy:                   ## Annote sources.json avec le recouvrement entre listes
 	$(PY) tools/redundancy.py
