@@ -10,12 +10,12 @@ sources.json ──> fetch_filters.py ──> filters/ ──> convert_webkit.py
 
 | | |
 |---|---|
-| Listes au catalogue | **71** dans 11 groupes, toutes publiées |
-| Fichiers WebKit générés | **79** |
-| Règles WebKit | **1 922 045** distinctes (1 926 693 émises) |
-| Entrées sources analysées | **2 167 687** |
-| Entrées non convertibles en WebKit | **65 912** (détail dans `reports/CONVERSION.md`) |
-| Règles appliquées par Wuji hors WebKit | **70 949** (`webkit-rules/extended/`) |
+| Listes au catalogue | **70** — celles d'uBlock Origin, dans ses 7 groupes ; 68 publiées |
+| Fichiers WebKit générés | **68** |
+| Règles WebKit | **467 719** distinctes |
+| Entrées sources analysées | **652 835** |
+| Entrées non convertibles en WebKit | **57 295** (détail dans `reports/CONVERSION.md`) |
+| Règles appliquées par Wuji hors WebKit | **63 090** (`webkit-rules/extended/`) |
 
 > Publié sur la branche **`dist`**, réécrite à chaque exécution, après
 > compilation effective par le WebKit du système — `main` ne contient que les
@@ -42,39 +42,42 @@ Aucune dépendance : Python 3.7+, bibliothèque standard uniquement.
 
 ## Étape 1 — `fetch_filters.py`
 
-Le catalogue est **explicite** : une entrée par liste dans `sources.json`, avec
-l'URL complète du dépôt de son propre mainteneur. Aucune découverte
-automatique, aucun registre interrogé, aucun miroir, aucun CDN tiers — rien qui
-puisse changer sous les pieds sans apparaître dans un diff.
+Le catalogue est **celui d'uBlock Origin**, et lui seul : ses listes, ses adresses,
+ses groupes, tels que son `assets/assets.json` les publie. `sources.json` en est
+tiré par `tools/ubo_catalog.py` — on ne l'édite pas à la main, on relance le
+script.
 
-| Groupe | Mainteneur | Listes |
+**Pourquoi.** Le dépôt proposait cent soixante listes de quinze mainteneurs,
+écrites dans trois dialectes : celui d'uBO, celui d'AdGuard, celui des fichiers
+hosts. Chaque dialecte demandait sa traduction, et chaque traduction ses écarts.
+Le catalogue d'uBO est le plus suivi, et toutes ses listes s'écrivent dans la
+syntaxe d'uBO — celles d'AdGuard comprises, qu'uBO prend dans la version
+qu'AdGuard compile pour lui (`filters.adtidy.org/extension/ublock/`). Wuji
+exécute leurs scriptlets avec le code d'uBO : une seule écriture de bout en bout.
+
+| Groupe | Libellé | Listes |
 |---|---|---:|
-| `ublock` | uBlock Origin | 8 |
-| `adguard` | AdGuard | 13 |
-| `adguard-dns` | AdGuard DNS | 2 |
-| `adguard-lang` | AdGuard (langues) | 9 |
-| `easylist` | EasyList | 4 |
-| `easylist-lang` | EasyList (regions) | 17 |
-| `fanboy` | Fanboy | 4 |
-| `dandelion` | Dandelion Sprout | 2 |
-| `hagezi` | HaGeZi | 10 |
-| `phishing-army` | Phishing Army | 1 |
-| `stevo-ai` | Stevo's AI Blocklist | 2 |
+| `default` | uBlock Origin | 6 |
+| `ads` | Publicités | 3 |
+| `privacy` | Confidentialité | 3 |
+| `malware` | Sites malveillants | 2 |
+| `multipurpose` | Polyvalentes | 2 |
+| `annoyances` | Nuisances | 16 |
+| `regions` | Régions | 38 |
 
-**Ajouter une liste** — choisir le groupe, écrire trois champs :
-
-```json
-{ "id": "mon-id", "name": "Nom affiché", "url": "https://…/liste.txt" }
+```bash
+python3 tools/ubo_catalog.py              # catalogue d'uBO en ligne -> sources.json
+python3 tools/ubo_catalog.py assets.json  # depuis une copie locale
 ```
 
-`"enabled": false` la désactive sans la supprimer ; `"format": "hosts"` pour un
-fichier hosts (la détection reste de toute façon automatique) ; `"note"` pour
-un commentaire. Les identifiants sont lisibles et servent de clé stable dans
-les index et les rapports.
+**Les identifiants restent stables.** Une liste qui existait déjà sous un autre
+nom le garde (`adguard-base` est l'AdGuard – Ads d'uBO, `ublock-origin` ses
+filtres) : une installation existante passe à la version d'uBO par une simple
+mise à jour. Les autres prennent `ubo-<clé>`. `ubo` porte la clé de la liste
+chez uBO, et `tags: ["ubo-default"]` celles qu'uBO active d'office.
 
-Le fichier étant fait pour être édité à la main, une erreur de syntaxe est
-signalée avec sa ligne, son contexte et un indice — une virgule en trop après
-la dernière entrée d'un tableau est le cas le plus fréquent.
+Une erreur de syntaxe dans `sources.json` reste signalée avec sa ligne, son
+contexte et un indice, si l'on y touche malgré tout.
 
 **Listes-manifestes.** Les directives `!#include` d'uBlock Origin sont résolues
 récursivement : sans cela, `uBlock filters – Annoyances` ou `RU AdList for uBO`
@@ -97,8 +100,8 @@ HTTP 304 et n'est pas retéléchargée ; une liste encore dans sa fenêtre
 
 ```bash
 python3 fetch_filters.py --list                  # afficher le catalogue
-python3 fetch_filters.py --group ublock adguard  # un ou plusieurs groupes
-python3 fetch_filters.py --only easylist hagezi  # par motif sur id/nom
+python3 fetch_filters.py --group default ads      # un ou plusieurs groupes
+python3 fetch_filters.py --only easylist adguard # par motif sur id/nom
 python3 fetch_filters.py --force                 # ignorer cache et fraîcheur
 ```
 
@@ -393,7 +396,7 @@ make redundancy-report   # affiche sans rien ecrire
 Activer une partie du catalogue ne demande pas de toucher au fichier :
 
 ```bash
-python3 fetch_filters.py --group ublock adguard easylist
+python3 fetch_filters.py --group default ads privacy
 python3 convert_webkit.py --only AdGuard-Base EasyList
 ```
 
