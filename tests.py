@@ -386,6 +386,25 @@ e = ext("@@||godaddy.com^$cookie=/^_ga_/")
 check("exception $cookie consignee", e["cookies"][0]["exception"], str(e.get("cookies")))
 c, b, _ = convert("||x.com^$cookie")
 check("$cookie nu reste WebKit", rules_of(b, "block-cookies") and not c.extended.get("cookies"), str(b))
+
+# `$replace` sur des reponses lues par la page -> les parades d'uBO qui le font.
+e = ext('||youtube.com/youtubei/v1/get_watch?$xhr,1p,replace=/"adPlacements"/"no_ads"/')
+check("$replace $xhr 1p -> deux parades", [s["name"] for s in e["scriptlets"]]
+      == ["trusted-replace-fetch-response", "trusted-replace-xhr-response"]
+      and e["scriptlets"][0]["args"] == ['/"adPlacements"/', '"no_ads"', "youtube.com/youtubei/v1/get_watch?"]
+      and e["scriptlets"][0]["domains"] == ["youtube.com"], str(e.get("scriptlets")))
+for regle, pourquoi in [("||x.com/api$xhr,replace=/a/b/", "page d'origine inconnue"),
+                        ("||x.com/a*b$xhr,1p,replace=/a/b/", "joker dans l'adresse"),
+                        ("||x.com/doc$1p,replace=/a/b/", "pas seulement $xhr"),
+                        ("@@||x.com/api$xhr,1p,replace=/a/b/", "exception")]:
+    check("$replace ecarte: " + pourquoi, not ext(regle).get("scriptlets"), regle)
+e = ext("||x.com/api?$xhr,domain=a.com,replace=/a\\/b/c\\/d/g")
+check("$replace: $domain, drapeaux et barres echappees",
+      e["scriptlets"][0]["domains"] == ["a.com"] and e["scriptlets"][0]["args"][:2] == ["/a\\/b/g", "c/d"],
+      str(e.get("scriptlets")))
+c, b, _ = convert('||youtube.com/youtubei/v1/get_watch?$xhr,1p,replace=/"adSlots"/"no_ads"/')
+check("$replace ne produit rien cote WebKit", not rules_of(b), str(b))
+
 print("%d cas verifies" % CASES[0])
 if FAILURES:
     print("\n%d ECHEC(S) :" % len(FAILURES))

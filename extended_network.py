@@ -23,6 +23,13 @@ Safari. Trois familles de regles en dependaient:
   y bloque les scripts qui suivent) — entree `csp`.
 - `$cookie=nom` retire un cookie precis; WebKit ne sait retirer que tous les
   cookies d'une requete. Wuji les retire de son magasin — entree `cookies`.
+- `$replace=/re/texte/` reecrit le corps d'une reponse; uBO ne le fait que sous
+  Firefox. Quand la regle ne vise que des reponses lues par la page (`$xhr`), sur
+  un site nomme et une adresse litterale, c'est exactement ce que font ses
+  parades `trusted-replace-fetch-response` et `trusted-replace-xhr-response`:
+  elle devient ces deux parades — entree `scriptlets`. C'est ainsi que les
+  listes d'uBO retirent les publicites de `get_watch`, par ou YouTube passe
+  quand on ouvre une video depuis une autre page.
 """
 
 import extended_scope
@@ -39,7 +46,8 @@ TYPES = {
 }
 PARTY = {"third-party", "3p", "first-party", "1p", "strict3p", "strict1p"}
 HARMLESS = {"important", "all", "match-case", "badfilter"}
-FAMILIES = ("redirect", "redirect-rule", "removeparam", "queryprune", "urlskip", "csp", "cookie")
+FAMILIES = ("redirect", "redirect-rule", "removeparam", "queryprune", "urlskip", "csp", "cookie",
+            "replace")
 
 
 def family_of(mods):
@@ -99,6 +107,9 @@ def capture(extended, pattern, mods, exception):
     # raccourcit la vie d'un cookie au lieu de le retirer: rien a quoi le ramener.
     if family == "cookie" and ((not value and not exception) or ";" in value):
         return family, value
+    if family == "replace":
+        extended["scriptlets"].extend(replace_scriptlets(pattern, mods, value, exception))
+        return family, value
     e = entry(pattern, mods, exception)
     if e is None:
         return family, value
@@ -126,3 +137,62 @@ def capture(extended, pattern, mods, exception):
         e["steps"] = value
         extended.setdefault("urlskips", []).append(e)
     return family, value
+
+
+def _slash_parts(value):
+    """`/re/texte/drapeaux` -> [re, texte, drapeaux], les `\\/` laisses dans l'expression."""
+    parts, cur, i = [], "", 1
+    while i < len(value):
+        c = value[i]
+        if c == "\\" and i + 1 < len(value):
+            cur += value[i:i + 2]
+            i += 2
+            continue
+        if c == "/":
+            parts.append(cur)
+            cur = ""
+        else:
+            cur += c
+        i += 1
+    parts.append(cur)
+    return parts
+
+
+def replace_scriptlets(pattern, mods, value, exception):
+    """`||site/chemin?$xhr,1p,replace=/re/texte/` -> les deux parades d'uBO.
+
+    Rien si la regle ne se dit pas exactement ainsi: une exception, un autre
+    type que `$xhr` (un document ou un script ne passent pas par `fetch`), une
+    page d'origine inconnue (ni `1p` ni `$domain`), une adresse qui n'est pas
+    un texte litteral, ou un remplacement illisible."""
+    if exception or not value.startswith("/"):
+        return []
+    parts = _slash_parts(value)
+    if len(parts) != 3 or not parts[0] or set(parts[2]) - set("gimsu"):
+        return []
+    motif = "/%s/%s" % (parts[0], parts[2])
+    texte = parts[1].replace("\\/", "/").replace("\\,", ",")
+    e = entry(pattern, [m for m in mods if m.split("=", 1)[0].strip().lower() != "replace"], False)
+    if e is None or e.get("types") != ["xhr"]:
+        return []
+    adresse = pattern.strip()
+    hote = None
+    if adresse.startswith("||"):
+        adresse = adresse[2:]
+        hote = adresse.split("/", 1)[0]
+    adresse = adresse[:-1] if adresse.endswith("^") else adresse
+    # `propsToMatch` coupe sur les blancs et sur `:` — un texte qui en porte, ou
+    # un joker, ne se relit pas a l'identique.
+    if not adresse or any(c in adresse for c in "*^|: \t"):
+        return []
+    if e["domains"]:
+        portee = {"domains": e["domains"], "excluded": e["excluded"]}
+    elif e.get("party") == "first" and hote and "/" not in hote:
+        try:
+            portee = extended_scope.scope(hote)
+        except extended_scope.ScopeError:
+            return []
+    else:
+        return []
+    return [dict(portee, name=nom, args=[motif, texte, adresse], syntax="ubo", exception=False)
+            for nom in ("trusted-replace-fetch-response", "trusted-replace-xhr-response")]
