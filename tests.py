@@ -11,6 +11,7 @@ etablie empiriquement par tools/wk_probe.swift sur le compilateur de Safari.
 
 import importlib.util
 import json
+import re
 import os
 import sys
 
@@ -38,6 +39,19 @@ def check(name, cond, detail=""):
 
 def rules_of(body, kind="block"):
     return [r for r in body if r["action"]["type"] == kind]
+
+
+def css_domains(rule):
+    """Les sites d'une regle cosmetique, qu'ils soient dans `if-domain` ou dans l'adresse."""
+    t = rule["trigger"]
+    if "if-domain" in t:
+        return t["if-domain"]
+    m = re.match(r"^\^\[htpsw\]\+://(\(\[a-z0-9-\]\+\\\.\)\*)?(.+)\[/:&\?=,;\]$", t.get("url-filter", ""))
+    return [("*" if m.group(1) else "") + m.group(2).replace("\\.", ".")] if m else None
+
+
+def all_css_domains(body):
+    return [d for r in rules_of(body, "css-display-none") for d in (css_domains(r) or [])]
 
 
 # --- traduction des motifs ---------------------------------------------------
@@ -85,7 +99,7 @@ c, _, _ = convert("/(a|b)+/")
 check("alternation sous quantificateur refusee", bool(c.skipped))
 
 c, b, _ = convert("flixscans.*##.pub", safari_version=15)
-doms = rules_of(b, "css-display-none")[0]["trigger"]["if-domain"]
+doms = all_css_domains(b)
 check("joker de TLD etendu (Safari < 26)", len(doms) > 20, str(len(doms)))
 
 c, b, _ = convert("||p.com^$dnsrewrite=ad-block.dns.adguard.com")
@@ -132,9 +146,7 @@ check("joker de TLD -> if-frame-url", "if-frame-url" in t and "flixscans" in t["
       json.dumps(t)[:90])
 
 c, b, _ = convert("flixscans.*##.pub", safari_version=15)
-t = rules_of(b, "css-display-none")[0]["trigger"]
-check("Safari 15: repli sur l'expansion de TLD",
-      "if-domain" in t and len(t["if-domain"]) > 20, json.dumps(t)[:70])
+check("Safari 15: repli sur l'expansion de TLD", len(all_css_domains(b)) > 20, str(b)[:70])
 
 c, b, _ = convert(r"||b.com^$domain=/^ads[0-9]+\.com$/")
 t = rules_of(b)[0]["trigger"]
@@ -210,7 +222,7 @@ check("$generichide: exception sans resource-type (sinon inoperante sur le CSS)"
       "resource-type" not in ex and "if-top-url" in ex, str(ex))
 check("$generichide: la cosmetique du site suit, intacte",
       b[-1]["action"]["type"] == "css-display-none"
-      and b[-1]["trigger"].get("if-domain") == ["*site.com"], str(b[-1]))
+      and css_domains(b[-1]) == ["*site.com"], str(b[-1]))
 check("$generichide: rien dans la queue", not t, str(t))
 
 c, b, t = convert(["##.pub", "@@*$ghide,domain=a.com|b.com"])
@@ -218,12 +230,12 @@ check("$ghide,domain=: exception portee par if-domain",
       b[1]["trigger"].get("if-domain") == ["*a.com", "*b.com"], str(b[1]))
 
 c, b, _ = convert(["site.com,autre.com##.promo", "sous.site.com##.x", "@@||site.com^$specifichide"])
-doms = [r["trigger"].get("if-domain") for r in rules_of(b, "css-display-none")]
+doms = [css_domains(r) for r in rules_of(b, "css-display-none")]
 check("$specifichide: le site est retire des if-domain", doms == [["*autre.com"]], str(doms))
 check("$specifichide: aucune exception emise", not rules_of(b, "ignore-previous-rules"))
 
 c, b, _ = convert(["##.pub", "site.com##.promo", "@@||site.com^$elemhide"])
-doms = [r["trigger"].get("if-domain") for r in rules_of(b, "css-display-none")]
+doms = [css_domains(r) for r in rules_of(b, "css-display-none")]
 check("$elemhide: generique leve et specifique retire",
       doms == [None] and kinds(b)[1] == "ignore-previous-rules", str(b))
 
@@ -308,10 +320,10 @@ check("$denyallow borne par un joker de TLD", bl and "if-frame-url" in bl[0]["tr
 # --- domaines: TLD seul et `>>` ----------------------------------------------
 c, b, _ = convert("ru##.pub-ru")
 css = rules_of(b, "css-display-none")
-check("TLD seul garde sa portee", css and css[0]["trigger"].get("if-domain") == ["*ru"], str(b))
+check("TLD seul garde sa portee", css and css_domains(css[0]) == ["*ru"], str(b))
 c, b, _ = convert("site.com>>##.pub")
 css = rules_of(b, "css-display-none")
-check("uBO site>> lu comme site", css and css[0]["trigger"].get("if-domain") == ["*site.com"], str(b))
+check("uBO site>> lu comme site", css and css_domains(css[0]) == ["*site.com"], str(b))
 
 # --- annexe: portee exacte, jamais generique ---------------------------------
 def ext(lines):
@@ -425,6 +437,22 @@ b = _index_sha(["exemple.fr##+js(set, a, 1)", "||pub.example^"])
 c = _index_sha(["exemple.fr##+js(set, a, 2)", "||pub.example^"])
 check("empreinte d'annexe publiee et stable", a and a[0] and a == b, str((a, b)))
 check("empreinte d'annexe qui suit ses regles", a != c, str((a, c)))
+
+# La cosmetique d'un site passe par l'adresse, une regle par site.
+c, b, _ = convert("a.com,b.fr##.pub")
+css = rules_of(b, "css-display-none")
+check("cosmetique de site: un url-filter par site, sans if-domain",
+      len(css) == 2 and all("if-domain" not in r["trigger"] for r in css)
+      and sorted(all_css_domains(b)) == ["*a.com", "*b.fr"], str(css))
+# Un selecteur generique que WebKit testerait sur chaque element part a l'annexe.
+c, b, _ = convert(["##.ok", "###piege ~ *", "##.panneau > *, .aussi-ok"])
+c.assemble()   # deux assemblages ne doublent rien
+e = c.extended
+sels = ", ".join(r["action"]["selector"] for r in rules_of(b, "css-display-none"))
+check("generique couteux hors du CSS WebKit", "~ *" not in sels and "> *" not in sels
+      and ".ok" in sels and ".aussi-ok" in sels, sels)
+check("generique couteux a l'annexe", sorted(p["selector"] for p in e.get("procedural", []))
+      == ["#piege ~ *", ".panneau > *"], str(e.get("procedural")))
 
 print("%d cas verifies" % CASES[0])
 if FAILURES:

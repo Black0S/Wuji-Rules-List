@@ -214,6 +214,71 @@ SEP_MID = r"[/:&?=,;]?"
 # positif classique `||exemple.com^` matchant `exemple.com.pirate.net`.
 SEP_END = r"[/:&?=,;]"
 
+
+def _rightmost_compound(sel):
+    """Le dernier compose d'un selecteur, et s'il est precede d'un combinateur."""
+    prof, quote, last = 0, None, 0
+    for i, ch in enumerate(sel):
+        if quote:
+            if ch == quote:
+                quote = None
+            continue
+        if ch in "\"'":
+            quote = ch
+        elif ch in "([":
+            prof += 1
+        elif ch in ")]":
+            prof -= 1
+        elif prof == 0 and ch in " >+~":
+            last = i + 1
+    return sel[last:].strip(), sel[:last].strip() != ""
+
+
+def costly_selector(sel):
+    """**Un selecteur que WebKit teste sur chaque element, en remontant l'arbre.** WebKit
+    range un selecteur par son dernier compose — identifiant, classe, balise, attribut. Un
+    dernier compose universel (`*`, `:not(...)` seul) est essaye sur tous les elements de
+    toutes les pages, et avec un combinateur chaque essai remonte les freres ou les
+    ancetres. Mesure: `#cmdTextDisplay ~ *`, generique dans uBlock Badware risks, coutait
+    a lui seul 11 ms par page de 2 000 elements; les 55 autres selecteurs de sa regle, rien."""
+    comp, combined = _rightmost_compound(sel)
+    bare = re.sub(r":[\w-]+(\((?:[^()]|\([^()]*\))*\))?", "", comp)
+    named_attr = "[" in bare
+    bare = re.sub(r"\[[^\]]*\]", "", bare)
+    return bare in ("", "*") and not named_attr and (combined or ":" in comp)
+
+
+def split_selector_list(selector):
+    """`a, b:is(c, d)` -> [`a`, `b:is(c, d)`] — les virgules des parentheses restent."""
+    out, prof, quote, cur = [], 0, None, ""
+    for ch in selector:
+        if quote:
+            cur += ch
+            if ch == quote:
+                quote = None
+            continue
+        if ch in "\"'":
+            quote = ch
+        elif ch in "([":
+            prof += 1
+        elif ch in ")]":
+            prof -= 1
+        if ch == "," and prof == 0:
+            out.append(cur.strip())
+            cur = ""
+            continue
+        cur += ch
+    if cur.strip():
+        out.append(cur.strip())
+    return out
+
+
+def domain_url_filter(domain):
+    """`*site.com` -> l'adresse de ce site et de ses sous-domaines, comme les regles reseau."""
+    if domain.startswith("*"):
+        return ANCHOR_DOMAIN + domain[1:].replace(".", "\\.") + SEP_END
+    return r"^[htpsw]+://" + domain.replace(".", "\\.") + SEP_END
+
 REGEX_ESCAPE = set(".+?()[]{}|^$\\*")
 
 
@@ -969,6 +1034,7 @@ class Converter(object):
         self.skipped = {}
         self.notes = {}
         self.counts = {"total": 0, "comments": 0, "converted": 0, "skipped": 0}
+        self._costly_seen = set()
         self.extended = {"scriptlets": [], "procedural": [], "styles": [],
                          "html": [], "raw_js": 0}
         self._css_exceptions = {}
@@ -1661,13 +1727,46 @@ class Converter(object):
                 if len(kept) != len(trigger["if-domain"]):
                     trigger = dict(trigger, **{"if-domain": kept})
             sels = slot["selectors"]
-            for i in range(0, len(sels), self.css_group_size):
-                chunk = sels[i:i + self.css_group_size]
-                rules.append({
-                    "trigger": trigger,
-                    "action": {"type": "css-display-none",
-                               "selector": ", ".join(chunk)},
-                })
+            if generic:
+                # Les selecteurs qui couteraient a chaque page partent a l'annexe, ou le moteur
+                # de Wuji ne les evalue que si leur amorce existe — voir `costly_selector`.
+                garde = []
+                for sel in sels:
+                    couteux = [x for x in split_selector_list(sel) if costly_selector(x)]
+                    if couteux and self.keep_extended:
+                        for x in couteux:
+                            cle = (x, tuple(trigger.get("unless-domain", [])))
+                            if cle in self._costly_seen:
+                                continue
+                            self._costly_seen.add(cle)
+                            self.extended["procedural"].append(dict(
+                                domains=[], excluded=[d.lstrip("*") for d in trigger.get("unless-domain", [])],
+                                selector=x, exception=False))
+                        reste = [x for x in split_selector_list(sel) if not costly_selector(x)]
+                        if reste:
+                            garde.append(", ".join(reste))
+                        self.note("selecteur generique couteux deplace vers l'annexe")
+                    else:
+                        garde.append(sel)
+                sels = garde
+            # **Un site designe par l'adresse, pas par `if-domain`.** `url-filter: ".*"` rendait
+            # chaque regle candidate sur chaque page, et WebKit verifiait ses domaines une a une:
+            # 5 700 regles d'EasyList, 6 ms par page sur un site qu'aucune ne vise. Le domaine
+            # dans `url-filter`, WebKit le compile en automate comme les regles reseau — cout
+            # nul, mesure. Et c'est le document du cadre qui est designe, comme chez uBO.
+            triggers = [trigger]
+            if (not generic and set(trigger) <= {"url-filter", "if-domain"}
+                    and trigger.get("url-filter", ".*") == ".*"
+                    and all(re.fullmatch(r"\*?[a-z0-9.-]+", d) for d in trigger.get("if-domain", []))):
+                triggers = [{"url-filter": domain_url_filter(d)} for d in trigger["if-domain"]]
+            for t in triggers:
+                for i in range(0, len(sels), self.css_group_size):
+                    chunk = sels[i:i + self.css_group_size]
+                    rules.append({
+                        "trigger": t,
+                        "action": {"type": "css-display-none",
+                                   "selector": ", ".join(chunk)},
+                    })
         return rules
 
     def hides_specific(self, domain):
