@@ -405,6 +405,27 @@ check("$replace: $domain, drapeaux et barres echappees",
 c, b, _ = convert('||youtube.com/youtubei/v1/get_watch?$xhr,1p,replace=/"adSlots"/"no_ads"/')
 check("$replace ne produit rien cote WebKit", not rules_of(b), str(b))
 
+# L'empreinte d'une annexe suit ses regles, pas sa date.
+import tempfile, shutil
+def _index_sha(lignes):
+    d = tempfile.mkdtemp()
+    try:
+        os.makedirs(os.path.join(d, "filters")); open(os.path.join(d, "filters", "X.txt"), "w").write("\n".join(lignes) + "\n")
+        import subprocess
+        subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "convert_webkit.py"),
+                        "--in", os.path.join(d, "filters"), "--out", os.path.join(d, "out"),
+                        "--extended-out", os.path.join(d, "out", "extended"), "--reports", os.path.join(d, "r"),
+                        "--quiet", "--min-rules", "0", "--min-yield", "0"], check=True, capture_output=True)
+        idx = json.load(open(os.path.join(d, "out", "index.json")))
+        return [l.get("extended_sha256") for l in idx["lists"]]
+    finally:
+        shutil.rmtree(d)
+a = _index_sha(["exemple.fr##+js(set, a, 1)", "||pub.example^"])
+b = _index_sha(["exemple.fr##+js(set, a, 1)", "||pub.example^"])
+c = _index_sha(["exemple.fr##+js(set, a, 2)", "||pub.example^"])
+check("empreinte d'annexe publiee et stable", a and a[0] and a == b, str((a, b)))
+check("empreinte d'annexe qui suit ses regles", a != c, str((a, c)))
+
 print("%d cas verifies" % CASES[0])
 if FAILURES:
     print("\n%d ECHEC(S) :" % len(FAILURES))

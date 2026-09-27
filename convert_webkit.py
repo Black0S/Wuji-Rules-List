@@ -25,6 +25,7 @@ Usage:
 
 import argparse
 import glob
+import hashlib
 import json
 import os
 import re
@@ -1873,6 +1874,7 @@ def convert_file(path, meta, args):
     ext_counts = {k: (v if isinstance(v, int) else len(v)) for k, v in ext.items()}
     ext_total = sum(v for k, v in ext_counts.items() if k != "raw_js")
     ext_file = None
+    ext_sha = ""
     if args.extended and ext_total and not args.dry_run:
         ext_file = "%s/%s%s.json" % (EXT_SUBDIR, EXT_PREFIX, base)
         payload = {
@@ -1891,6 +1893,14 @@ def convert_file(path, meta, args):
         for key, rules in ext.items():
             if isinstance(rules, list):
                 payload[key] = [compact_entry(r) for r in rules]
+        # **L'empreinte des regles, pas du fichier.** Wuji ne retelecharge une annexe que si
+        # elle change ; sans empreinte, une amelioration de la conversion qui ne touchait
+        # que l'annexe — la traduction de `$replace` pour `get_watch` — n'arrivait jamais :
+        # la source et le nombre de regles WebKit etaient les memes. La date de generation
+        # en est exclue, sinon toutes les annexes changeraient chaque jour.
+        regles = {k: v for k, v in payload.items() if k not in ("generated_at", "note")}
+        ext_sha = hashlib.sha256(json.dumps(regles, sort_keys=True, separators=(",", ":"),
+                                            ensure_ascii=False).encode("utf-8")).hexdigest()
         with open(os.path.join(args.extended_out, os.path.basename(ext_file)),
                   "w", encoding="utf-8") as fh:
             json.dump(payload, fh, separators=(",", ":"), ensure_ascii=False)
@@ -1935,7 +1945,7 @@ def convert_file(path, meta, args):
         "rules_emitted": sum(o["rules"] for o in outputs),
         "published": publishable,
         "unpublished_reason": unpublished_reason,
-        "extended": {"file": ext_file, "total": ext_total, "counts": ext_counts},
+        "extended": {"file": ext_file, "total": ext_total, "counts": ext_counts, "sha256": ext_sha},
     }
     return report
 
@@ -2101,6 +2111,7 @@ def main():
             "capabilities": capabilities_of(r),
             "files": r["outputs"],
             "extended_file": r["extended"]["file"],
+            "extended_sha256": r["extended"].get("sha256", ""),
         } for r in published],
         "unpublished": [{
             "id": r["id"], "name": r["source_name"], "source": r["source_file"],
