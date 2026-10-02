@@ -87,9 +87,14 @@ def adresse(entree):
     """La premiere adresse en ligne: uBO range apres elle ses copies embarquees."""
     urls = entree.get("contentURL")
     urls = [urls] if isinstance(urls, str) else (urls or [])
+    # En HTTPS seulement : une adresse en clair laisserait n'importe quel reseau traverse reecrire
+    # la liste - et avec elle les scriptlets qu'elle fait executer dans les pages. Une adresse
+    # http:// est demandee en https://, comme le font les hebergeurs de listes.
     for u in urls:
-        if u.startswith("https://") or u.startswith("http://"):
+        if u.startswith("https://"):
             return u
+        if u.startswith("http://"):
+            return "https://" + u[len("http://"):]
     return None
 
 

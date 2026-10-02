@@ -30,7 +30,7 @@ import time
 import unicodedata
 import urllib.error
 import urllib.request
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -74,8 +74,14 @@ def http_get(url, timeout=60, etag=None, last_modified=None, retries=3):
     last_err = None
     for attempt in range(retries):
         try:
+            # HTTPS de bout en bout : urllib suit les redirections, y compris vers http://, et
+            # une liste lue en clair peut etre reecrite par n'importe quel reseau traverse.
+            if not url.startswith("https://"):
+                raise urllib.error.URLError("adresse non chiffree refusee : " + url)
             req = urllib.request.Request(url, headers=headers, method="GET")
             with urllib.request.urlopen(req, timeout=timeout) as resp:
+                if not resp.geturl().startswith("https://"):
+                    raise urllib.error.URLError("redirection non chiffree refusee : " + resp.geturl())
                 return resp.status, resp.read(), dict(resp.headers)
         except urllib.error.HTTPError as e:
             if e.code == 304:
@@ -201,6 +207,11 @@ def resolve_includes(text, base_url, timeout, depth=0, seen=None, log_fn=None):
             out.append(line)
             continue
         target = urljoin(base_url, m.group(1))
+        # Comme uBlock Origin : une liste n'inclut que des sous-listes de sa propre origine.
+        # Une inclusion vers un autre hote ferait entrer une liste que personne n'a choisie.
+        if urlparse(target).netloc != urlparse(base_url).netloc or not target.startswith("https://"):
+            out.append("! [include ignore, autre origine] " + m.group(1))
+            continue
         if target in seen:
             out.append("! [include ignore, cycle] " + m.group(1))
             continue
