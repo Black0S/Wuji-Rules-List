@@ -1,0 +1,63 @@
+{
+  "id": "easylist-lithuania",
+  "source_file": "lt-EasyList-Lithuania.txt",
+  "source_name": "🇱🇹lt: EasyList Lithuania",
+  "source_sha256": "84f3264739af48ca5cb68c05449bb4c803a4c9abd895d32d21b05bb06d48bf00",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/EasyList-Lithuania/easylist_lithuania",
+  "source_license": "",
+  "source_title": "EasyList Lithuania",
+  "source_version": "17June2026v1",
+  "source_url": "https://raw.githubusercontent.com/EasyList-Lithuania/easylist_lithuania/master/easylistlithuania.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-03T16:36:44+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1196,
+  "rules_in": 1169,
+  "rules_out": 905,
+  "coverage_pct": 98.03,
+  "breakdown": {
+    "block": 495,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 349,
+    "css_selectors": 591,
+    "ignore_previous_rules": 49,
+    "generichide": 11,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 23,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 11,
+    "selecteur CSS etendu (#?#)": 9,
+    "pseudo-classe CSS etendue": 3
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-lt-EasyList-Lithuania.json",
+      "rules": 905,
+      "bytes": 138401
+    }
+  ],
+  "rules_emitted": 905,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-lt-EasyList-Lithuania.json",
+    "total": 25,
+    "counts": {
+      "scriptlets": 11,
+      "procedural": 12,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 2
+    },
+    "sha256": "78b0e0e0bc6d7a59e1ab183475a562922a7af9936e28fde8ae733733c8865b6b"
+  }
+}

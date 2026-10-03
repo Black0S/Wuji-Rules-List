@@ -1,0 +1,67 @@
+{
+  "id": "adguard-mobile-app-banners",
+  "source_file": "AdGuard-Mobile-App-Banners.txt",
+  "source_name": "AdGuard – Mobile App Banners",
+  "source_sha256": "c2621abf51b777ca79eae0e75603029364ebee273c2fa426eb9a57bf623e53d0",
+  "source_group": "Nuisances",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Mobile App Banners filter",
+  "source_version": "2.0.32.64",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/20.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-03T16:36:39+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 5627,
+  "rules_in": 5310,
+  "rules_out": 4007,
+  "coverage_pct": 81.53,
+  "breakdown": {
+    "block": 170,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 3829,
+    "css_selectors": 4152,
+    "ignore_previous_rules": 7,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 975,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 745,
+    "scriptlet ou filtrage HTML": 225,
+    "injection de style (non supportee)": 2,
+    "modificateur non supporte: $removeparam": 1,
+    "regle cosmetique entierement exceptee": 1,
+    "ancre `|` en milieu de motif": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 93,
+    "doublon fusionne": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Mobile-App-Banners.json",
+      "rules": 4007,
+      "bytes": 806708
+    }
+  ],
+  "rules_emitted": 4007,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Mobile-App-Banners.json",
+    "total": 977,
+    "counts": {
+      "scriptlets": 225,
+      "procedural": 751,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "removeparams": 1
+    },
+    "sha256": "847423a6b2cb4eff875a0302b2be1433c9bfb76ddbb9f2f1122c118ca6958c98"
+  }
+}

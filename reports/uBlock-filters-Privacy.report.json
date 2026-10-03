@@ -1,0 +1,84 @@
+{
+  "id": "ublock-origin-privacy",
+  "source_file": "uBlock-filters-Privacy.txt",
+  "source_name": "uBlock filters – Privacy",
+  "source_sha256": "ab9d7055631b8c41658d94e0c623faf5ef9481f5a06cf213fa7af8b89c8041b1",
+  "source_group": "uBlock Origin",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+  "source_title": "uBlock filters – Privacy",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/privacy.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-03T16:36:45+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 3499,
+  "rules_in": 1816,
+  "rules_out": 989,
+  "coverage_pct": 54.52,
+  "breakdown": {
+    "block": 968,
+    "block_document": 5,
+    "block_cookies": 0,
+    "css_display_none": 12,
+    "css_selectors": 14,
+    "ignore_previous_rules": 3,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 830,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 337,
+    "modificateur non supporte: $removeparam": 212,
+    "modificateur non supporte: $urlskip": 202,
+    "modificateur non supporte: $to": 26,
+    "modificateur non supporte: $csp": 18,
+    "modificateur non supporte: $uritransform": 8,
+    "directive $badfilter (retractation appliquee)": 6,
+    "modificateur non supporte: $strict3p": 5,
+    "modificateur non supporte: $reason": 5,
+    "pseudo-classe CSS etendue": 3,
+    "modificateur non supporte: $strict1p": 2,
+    "modificateur non supporte: $header": 2,
+    "modificateur non supporte: $redirect-rule": 1,
+    "assertion de regex (lookahead / lookbehind)": 1,
+    "$domain melange inclusions et exclusions": 1,
+    "modificateur non supporte: $replace": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 40,
+    "modificateur sans effet sous WebKit: $important": 28,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 1,
+    "$domain traduit en if-frame-url (Safari 26+)": 1,
+    "alternation eclatee en 5 regles": 1,
+    "annexe: ##^responseheader() sans effet dans WebKit": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-filters-Privacy.json",
+      "rules": 989,
+      "bytes": 124276
+    }
+  ],
+  "rules_emitted": 989,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-uBlock-filters-Privacy.json",
+    "total": 796,
+    "counts": {
+      "scriptlets": 331,
+      "procedural": 3,
+      "styles": 0,
+      "html": 5,
+      "raw_js": 0,
+      "redirects": 37,
+      "removeparams": 202,
+      "urlskips": 200,
+      "csp": 18
+    },
+    "sha256": "bdc9de4f57dc94d29547a4e70caeb174eebd34a01ba5dff5b1eb59f17f8b5ee0"
+  }
+}

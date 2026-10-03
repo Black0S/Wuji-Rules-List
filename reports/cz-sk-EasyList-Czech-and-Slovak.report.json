@@ -1,0 +1,69 @@
+{
+  "id": "easylist-czech-and-slovak",
+  "source_file": "cz-sk-EasyList-Czech-and-Slovak.txt",
+  "source_name": "🇨🇿cz 🇸🇰sk: EasyList Czech and Slovak",
+  "source_sha256": "5df8f3b5b4f31eef1f213dc008afb1b0299456b291a10689d6ea3acad1a83d25",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/tomasko126/easylistczechandslovak",
+  "source_license": "CC-BY-SA v4.0",
+  "source_title": "Easylist Czech and Slovak filter list",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/tomasko126/easylistczechandslovak/master/filters.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-03T16:36:42+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 791,
+  "rules_in": 729,
+  "rules_out": 465,
+  "coverage_pct": 84.22,
+  "breakdown": {
+    "block": 215,
+    "block_document": 1,
+    "block_cookies": 0,
+    "css_display_none": 216,
+    "css_selectors": 366,
+    "ignore_previous_rules": 21,
+    "generichide": 11,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 103,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 48,
+    "pseudo-classe CSS etendue": 31,
+    "selecteur CSS etendu (#?#)": 17,
+    "injection de style / scriptlet (#$#)": 2,
+    "modificateur non supporte: $csp": 2,
+    "modificateur non supporte: $redirect-rule": 2,
+    "directive $badfilter (retractation appliquee)": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 5,
+    "modificateur sans effet sous WebKit: $important": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-cz-sk-EasyList-Czech-and-Slovak.json",
+      "rules": 465,
+      "bytes": 68616
+    }
+  ],
+  "rules_emitted": 465,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-cz-sk-EasyList-Czech-and-Slovak.json",
+    "total": 117,
+    "counts": {
+      "scriptlets": 47,
+      "procedural": 60,
+      "styles": 0,
+      "html": 1,
+      "raw_js": 2,
+      "redirects": 7,
+      "csp": 2
+    },
+    "sha256": "e1cb3a05c094a70c00636258f220febf6dcedda791770ebd69ee185d1e864bdd"
+  }
+}

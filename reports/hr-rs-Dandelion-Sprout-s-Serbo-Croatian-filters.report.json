@@ -1,0 +1,61 @@
+{
+  "id": "ubo-hrv-0",
+  "source_file": "hr-rs-Dandelion-Sprout-s-Serbo-Croatian-filters.txt",
+  "source_name": "🇭🇷hr 🇷🇸rs: Dandelion Sprout's Serbo-Croatian filters",
+  "source_sha256": "fa061291f4cf2b9e069c6adaa200650d1b766f20b0011851f9c812959761b093",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/DandelionSprout/adfilt#readme",
+  "source_license": "",
+  "source_title": "🇭🇷hr 🇷🇸rs: Dandelion Sprout's Serbo-Croatian filters",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/SerboCroatianList.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-03T16:36:43+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 503,
+  "rules_in": 435,
+  "rules_out": 302,
+  "coverage_pct": 97.01,
+  "breakdown": {
+    "block": 91,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 207,
+    "css_selectors": 328,
+    "ignore_previous_rules": 2,
+    "generichide": 1,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 12,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 9,
+    "pseudo-classe CSS etendue": 3
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 5
+  },
+  "outputs": [
+    {
+      "file": "Webkit-hr-rs-Dandelion-Sprout-s-Serbo-Croatian-filters.json",
+      "rules": 302,
+      "bytes": 49293
+    }
+  ],
+  "rules_emitted": 302,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-hr-rs-Dandelion-Sprout-s-Serbo-Croatian-filters.json",
+    "total": 13,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 13,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "8a3d9e310e2ac3f219b2fe31175312743706807cade7b739f75e9f47e9246d6b"
+  }
+}

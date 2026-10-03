@@ -1,0 +1,67 @@
+{
+  "id": "ubo-rou-1",
+  "source_file": "ro-md-Romanian-Ad-ROad-Block-List-Light.txt",
+  "source_name": "🇷🇴ro 🇲🇩md: Romanian Ad (ROad) Block List Light",
+  "source_sha256": "c213e7029e2e91fc224a2ce2a0c2f15a126207f66d6ff2cdbf9364702149d7d6",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/tcptomato/ROad-Block",
+  "source_license": "",
+  "source_title": "ROU: Romanian Ad (ROad) Block List Light",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/tcptomato/ROad-Block/master/road-block-filters-light.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-03T16:36:44+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 2799,
+  "rules_in": 1974,
+  "rules_out": 1149,
+  "coverage_pct": 92.96,
+  "breakdown": {
+    "block": 509,
+    "block_document": 4,
+    "block_cookies": 0,
+    "css_display_none": 568,
+    "css_selectors": 1255,
+    "ignore_previous_rules": 61,
+    "generichide": 6,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 136,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 96,
+    "scriptlet ou filtrage HTML": 36,
+    "modificateur non supporte: $redirect-rule": 4
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 5,
+    "modificateur sans effet sous WebKit: $important": 3,
+    "doublon fusionne": 1,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 1,
+    "$denyallow: 1 exception(s) emises apres le blocage": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-ro-md-Romanian-Ad-ROad-Block-List-Light.json",
+      "rules": 1149,
+      "bytes": 200307
+    }
+  ],
+  "rules_emitted": 1149,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-ro-md-Romanian-Ad-ROad-Block-List-Light.json",
+    "total": 144,
+    "counts": {
+      "scriptlets": 36,
+      "procedural": 99,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 9
+    },
+    "sha256": "16f1e8b9f6541ae5d91ff78d964c6efc7407986ac89485100df214c0e459f053"
+  }
+}
