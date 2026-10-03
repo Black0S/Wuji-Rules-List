@@ -305,7 +305,7 @@ make verify     # compile chacun des fichiers produits, echoue si l'un est rejet
 ```
 
 `make verify` est la barrière de publication en CI : le workflow tourne sur un
-runner macOS et ne pousse sur `dist` que si les 167 fichiers compilent.
+runner macOS et ne pousse sur `dist` que si tous les fichiers compilent.
 
 Contraintes établies par la sonde, et non par la documentation :
 

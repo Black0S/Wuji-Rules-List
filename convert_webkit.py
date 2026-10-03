@@ -315,7 +315,7 @@ SHORTHAND = {"d": ("[0-9]", "0-9"),
 
 
 def rewrite_shorthand(rx):
-    """Remplace \d \w \s par leur classe equivalente, dedans comme dehors."""
+    r"""Remplace \d \w \s par leur classe equivalente, dedans comme dehors."""
     out, i, in_class = [], 0, False
     while i < len(rx):
         c = rx[i]
