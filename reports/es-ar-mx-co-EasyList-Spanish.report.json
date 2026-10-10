@@ -1,0 +1,63 @@
+{
+  "id": "easylist-spanish",
+  "source_file": "es-ar-mx-co-EasyList-Spanish.txt",
+  "source_name": "🇪🇸es 🇦🇷ar 🇲🇽mx 🇨🇴co: EasyList Spanish",
+  "source_sha256": "f75ed34762151dca9503749d1e2731d56ec702ad0bb1ea7d53e97286731f8d6f",
+  "source_group": "Régions",
+  "source_homepage": "https://forums.lanik.us/viewforum.php?f=103",
+  "source_license": "",
+  "source_title": "EasyList Spanish",
+  "source_version": "202610101022",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistspanish.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:00+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 2719,
+  "rules_in": 2648,
+  "rules_out": 2656,
+  "coverage_pct": 99.09,
+  "breakdown": {
+    "block": 656,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1939,
+    "css_selectors": 1908,
+    "ignore_previous_rules": 58,
+    "generichide": 2,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 30,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 28,
+    "pseudo-classe CSS etendue": 2
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 6,
+    "alternation eclatee en 8 regles": 2,
+    "alternation eclatee en 5 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-es-ar-mx-co-EasyList-Spanish.json",
+      "rules": 2656,
+      "bytes": 436247
+    }
+  ],
+  "rules_emitted": 2656,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-es-ar-mx-co-EasyList-Spanish.json",
+    "total": 42,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 42,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "6b04b94273403343436da5d217c56248aaafc299d64e29af41dd0daa301dbfba"
+  }
+}

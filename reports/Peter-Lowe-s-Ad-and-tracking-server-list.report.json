@@ -1,0 +1,56 @@
+{
+  "id": "peter-lowe-adservers",
+  "source_file": "Peter-Lowe-s-Ad-and-tracking-server-list.txt",
+  "source_name": "Peter Lowe’s Ad and tracking server list",
+  "source_sha256": "93af0ee9cc4a211317d41b4abdeffddcb3ddb8c5427a61a008d839244eff548b",
+  "source_group": "Polyvalentes",
+  "source_homepage": "https://pgl.yoyo.org/adservers/",
+  "source_license": "",
+  "source_title": "Peter Lowe’s Ad and tracking server list",
+  "source_version": "",
+  "source_url": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext",
+  "format": "hosts",
+  "converted_at": "2026-10-10T10:34:58+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 3561,
+  "rules_in": 3547,
+  "rules_out": 3548,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 3547,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-Peter-Lowe-s-Ad-and-tracking-server-list.json",
+      "rules": 3548,
+      "bytes": 395326
+    }
+  ],
+  "rules_emitted": 3548,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": ""
+  }
+}

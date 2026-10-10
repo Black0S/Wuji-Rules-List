@@ -1,0 +1,75 @@
+{
+  "id": "adguard-social-media",
+  "source_file": "AdGuard-Social-Widgets.txt",
+  "source_name": "AdGuard – Social Widgets",
+  "source_sha256": "d0351f3fbc6d93905c5507277164ec97cccbf79a63b3a34816fd769f6f07ed42",
+  "source_group": "Nuisances",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Social Media filter",
+  "source_version": "2.1.33.70",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/4.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:34:56+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 17261,
+  "rules_in": 16415,
+  "rules_out": 17401,
+  "coverage_pct": 92.93,
+  "breakdown": {
+    "block": 478,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 16771,
+    "css_selectors": 14626,
+    "ignore_previous_rules": 151,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 874,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 835,
+    "scriptlet ou filtrage HTML": 25,
+    "inclusions et exclusions de domaine": 5,
+    "injection de style (non supportee)": 3,
+    "regle cosmetique entierement exceptee": 2,
+    "domaine cosmetique non exprimable (joker de TLD)": 2,
+    "assertion de regex (lookahead / lookbehind)": 1,
+    "joker de TLD avec exclusion": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 130,
+    "vers l'annexe: inclusions et exclusions de domaine": 5,
+    "doublon fusionne": 2,
+    "vers l'annexe: domaine cosmetique non exprimable (joker de TLD)": 2,
+    "$domain traduit en if-frame-url (Safari 26+)": 2,
+    "vers l'annexe: joker de TLD avec exclusion": 1,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 1,
+    "selecteur generique couteux deplace vers l'annexe": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Social-Widgets.json",
+      "rules": 17401,
+      "bytes": 3049971
+    }
+  ],
+  "rules_emitted": 17401,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Social-Widgets.json",
+    "total": 1157,
+    "counts": {
+      "scriptlets": 25,
+      "procedural": 1131,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 1
+    },
+    "sha256": "63633320a0524a359ef7449d65aa6099963206731ec1a2d9c9665a20a297c7a7"
+  }
+}

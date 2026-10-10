@@ -1,0 +1,59 @@
+{
+  "id": "ubo-svn-0",
+  "source_file": "si-Slovenian-List.txt",
+  "source_name": "🇸🇮si: Slovenian List",
+  "source_sha256": "371924043ec588e9aff7a66c68e30a7088897208bc390295afb2c61a45e8de95",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/betterwebleon/slovenian-list",
+  "source_license": "",
+  "source_title": "Slovenian List",
+  "source_version": "141",
+  "source_url": "https://raw.githubusercontent.com/betterwebleon/slovenian-list/master/filters.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:01+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 530,
+  "rules_in": 506,
+  "rules_out": 323,
+  "coverage_pct": 99.41,
+  "breakdown": {
+    "block": 114,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 193,
+    "css_selectors": 374,
+    "ignore_previous_rules": 15,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 3,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 2,
+    "modificateur non supporte: $inline-script": 1
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-si-Slovenian-List.json",
+      "rules": 323,
+      "bytes": 51033
+    }
+  ],
+  "rules_emitted": 323,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-si-Slovenian-List.json",
+    "total": 2,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 2,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "647a99e992168b22b32dfc45f9275605796eaf92fb43a740f1030127c99226fb"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "ubo-mkd-0",
+  "source_file": "mk-Macedonian-adBlock-Filters.txt",
+  "source_name": "🇲🇰mk: Macedonian adBlock Filters",
+  "source_sha256": "263d5a03b254fb04d7f395c0480f1a6c54e794804575d68b4be970f357a135dc",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/DeepSpaceHarbor/Macedonian-adBlock-Filters",
+  "source_license": "",
+  "source_title": "Macedonian adBlock Filters",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/DeepSpaceHarbor/Macedonian-adBlock-Filters/master/Filters",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:00+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 816,
+  "rules_in": 809,
+  "rules_out": 456,
+  "coverage_pct": 99.63,
+  "breakdown": {
+    "block": 299,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 156,
+    "css_selectors": 507,
+    "ignore_previous_rules": 0,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 2,
+  "skipped_reasons": {
+    "injection de style / scriptlet (#$#)": 2
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-mk-Macedonian-adBlock-Filters.json",
+      "rules": 456,
+      "bytes": 104509
+    }
+  ],
+  "rules_emitted": 456,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-mk-Macedonian-adBlock-Filters.json",
+    "total": 3,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 1,
+      "styles": 2,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "107697aeb1453036aeaf20b16a2234f2382d5e518550416cf621ccf6ca3a4e61"
+  }
+}

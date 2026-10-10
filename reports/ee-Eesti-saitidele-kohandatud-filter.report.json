@@ -1,0 +1,66 @@
+{
+  "id": "ubo-est-0",
+  "source_file": "ee-Eesti-saitidele-kohandatud-filter.txt",
+  "source_name": "🇪🇪ee: Eesti saitidele kohandatud filter",
+  "source_sha256": "3c66cad9e9cec0f998f04b602bbbcb79c3ecf5370fe656af08d67267e6ae9657",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/sander85/uBO-et",
+  "source_license": "CC0 1.0 Universal http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+  "source_title": "Eesti saitidele kohandatud filter / Estonian list for ad blockers",
+  "source_version": "20251113",
+  "source_url": "https://ubo-et.lepik.io/list.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:34:59+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 464,
+  "rules_in": 459,
+  "rules_out": 336,
+  "coverage_pct": 96.08,
+  "breakdown": {
+    "block": 240,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 76,
+    "css_selectors": 182,
+    "ignore_previous_rules": 18,
+    "generichide": 1,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 18,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 6,
+    "injection de style / scriptlet (#$#)": 6,
+    "modificateur non supporte: $removeparam": 2,
+    "selecteur CSS etendu (#?#)": 2,
+    "scriptlet ou filtrage HTML": 1,
+    "inclusions et exclusions de domaine": 1
+  },
+  "notes": {
+    "vers l'annexe: inclusions et exclusions de domaine": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-ee-Eesti-saitidele-kohandatud-filter.json",
+      "rules": 336,
+      "bytes": 46910
+    }
+  ],
+  "rules_emitted": 336,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-ee-Eesti-saitidele-kohandatud-filter.json",
+    "total": 18,
+    "counts": {
+      "scriptlets": 1,
+      "procedural": 9,
+      "styles": 6,
+      "html": 0,
+      "raw_js": 0,
+      "removeparams": 2
+    },
+    "sha256": "b5ce284c9456675eff8fdd8146d0074ea716cf768120d97ad07f09618df4f60e"
+  }
+}

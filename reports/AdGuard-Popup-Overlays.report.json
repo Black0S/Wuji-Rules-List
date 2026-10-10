@@ -1,0 +1,78 @@
+{
+  "id": "adguard-popups",
+  "source_file": "AdGuard-Popup-Overlays.txt",
+  "source_name": "AdGuard – Popup Overlays",
+  "source_sha256": "461a14bc5f0e41e172bf19a4f3024bb0966a83e7e6592689090ddcf56f83e5c4",
+  "source_group": "Nuisances",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Popups filter",
+  "source_version": "2.0.85.0",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/19.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:34:56+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 23437,
+  "rules_in": 22224,
+  "rules_out": 18779,
+  "coverage_pct": 78.76,
+  "breakdown": {
+    "block": 1567,
+    "block_document": 1,
+    "block_cookies": 0,
+    "css_display_none": 16568,
+    "css_selectors": 15294,
+    "ignore_previous_rules": 607,
+    "generichide": 35,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 4474,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 3390,
+    "scriptlet ou filtrage HTML": 1063,
+    "modificateur non supporte: $permissions": 8,
+    "injection de style (non supportee)": 5,
+    "modificateur non supporte: $removeparam": 2,
+    "inclusions et exclusions de domaine": 2,
+    "directive $badfilter (retractation appliquee)": 1,
+    "modificateur non supporte: $redirect-rule": 1,
+    "modificateur non supporte: $redirect": 1,
+    "joker de TLD avec exclusion": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 163,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 67,
+    "modificateur sans effet sous WebKit: $important": 29,
+    "doublon fusionne": 8,
+    "$domain traduit en if-frame-url (Safari 26+)": 4,
+    "vers l'annexe: inclusions et exclusions de domaine": 2,
+    "alternation eclatee en 3 regles": 1,
+    "vers l'annexe: joker de TLD avec exclusion": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Popup-Overlays.json",
+      "rules": 18779,
+      "bytes": 3374280
+    }
+  ],
+  "rules_emitted": 18779,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Popup-Overlays.json",
+    "total": 4772,
+    "counts": {
+      "scriptlets": 1063,
+      "procedural": 3638,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 69,
+      "removeparams": 2
+    },
+    "sha256": "2098d9b45360ae80fc7e4321609d5caf798daf5a7b24aa20ef3a4cc5fd8f7559"
+  }
+}

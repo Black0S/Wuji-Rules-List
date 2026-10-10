@@ -1,0 +1,72 @@
+{
+  "id": "adguard-other-annoyances",
+  "source_file": "AdGuard-Other-Annoyances.txt",
+  "source_name": "AdGuard – Other Annoyances",
+  "source_sha256": "2fbb6d5840fcb7fe74d8ec55cbcd6d0f08e74c04b16cd5e4f86e0bb7dd7ff316",
+  "source_group": "Nuisances",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Other Annoyances filter",
+  "source_version": "2.0.49.11",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/21.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:34:55+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 11495,
+  "rules_in": 8390,
+  "rules_out": 5189,
+  "coverage_pct": 76.94,
+  "breakdown": {
+    "block": 559,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 4625,
+    "css_selectors": 5892,
+    "ignore_previous_rules": 4,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 1949,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 1019,
+    "scriptlet ou filtrage HTML": 916,
+    "inclusions et exclusions de domaine": 5,
+    "injection de style (non supportee)": 5,
+    "modificateur non supporte: $removeparam": 3,
+    "directive $badfilter (retractation appliquee)": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 110,
+    "modificateur sans effet sous WebKit: $important": 5,
+    "vers l'annexe: inclusions et exclusions de domaine": 5,
+    "alternation eclatee en 8 regles": 1,
+    "alternation eclatee en 6 regles": 1,
+    "alternation eclatee en 4 regles": 1,
+    "$domain traduit en if-frame-url (Safari 26+)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Other-Annoyances.json",
+      "rules": 5189,
+      "bytes": 1176560
+    }
+  ],
+  "rules_emitted": 5189,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Other-Annoyances.json",
+    "total": 1949,
+    "counts": {
+      "scriptlets": 916,
+      "procedural": 1030,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "removeparams": 3
+    },
+    "sha256": "6c9346cc5351c0988f9e50acd44fc33ab55deec7836b0a22c8613822a927a2b7"
+  }
+}

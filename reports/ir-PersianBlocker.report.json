@@ -1,0 +1,77 @@
+{
+  "id": "ubo-irn-0",
+  "source_file": "ir-PersianBlocker.txt",
+  "source_name": "🇮🇷ir: PersianBlocker",
+  "source_sha256": "872ae08de707fe3926ef797800c06e611c612d6addba80567286481a6101b5ba",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/MasterKia/PersianBlocker",
+  "source_license": "https://codeberg.org/KhodeKiaa/PersianBlocker/src/branch/main/LICENSE",
+  "source_title": "☀️ PersianBlockerNG ☀️",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/MasterKia/PersianBlocker/main/PersianBlocker.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:00+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 4667,
+  "rules_in": 2772,
+  "rules_out": 1458,
+  "coverage_pct": 69.7,
+  "breakdown": {
+    "block": 904,
+    "block_document": 2,
+    "block_cookies": 3,
+    "css_display_none": 481,
+    "css_selectors": 956,
+    "ignore_previous_rules": 67,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 749,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 496,
+    "scriptlet ou filtrage HTML": 174,
+    "modificateur non supporte: $removeparam": 61,
+    "selecteur CSS vide ou trop long": 9,
+    "modificateur non supporte: $strict3p": 3,
+    "$domain melange inclusions et exclusions": 1,
+    "directive $badfilter (retractation appliquee)": 1,
+    "ancre `^` ou `$` mal placee": 1,
+    "modificateur non supporte: $csp": 1,
+    "modificateur non supporte: $to": 1,
+    "$method: une seule methode HTTP connue": 1
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $all": 62,
+    "doublon fusionne": 40,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 5,
+    "annexe: ##^responseheader() sans effet dans WebKit": 2,
+    "modificateur sans effet sous WebKit: $important": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-ir-PersianBlocker.json",
+      "rules": 1458,
+      "bytes": 226205
+    }
+  ],
+  "rules_emitted": 1458,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-ir-PersianBlocker.json",
+    "total": 792,
+    "counts": {
+      "scriptlets": 154,
+      "procedural": 556,
+      "styles": 0,
+      "html": 18,
+      "raw_js": 0,
+      "removeparams": 58,
+      "redirects": 5,
+      "csp": 1
+    },
+    "sha256": "60406aebf6750f581f372f8a4ad87a781d8e383706f27eb8f2bc5d086b568f74"
+  }
+}

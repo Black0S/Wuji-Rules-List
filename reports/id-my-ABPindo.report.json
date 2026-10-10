@@ -1,0 +1,69 @@
+{
+  "id": "ubo-idn-0",
+  "source_file": "id-my-ABPindo.txt",
+  "source_name": "🇮🇩id 🇲🇾my: ABPindo",
+  "source_sha256": "a95473de880aac98c63aea1fdbdb578c6849d5da0c556298028fb55be4dd3cbb",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/ABPindo/indonesianadblockrules",
+  "source_license": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/LICENSE",
+  "source_title": "ABPindo",
+  "source_version": "202610100036",
+  "source_url": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:00+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 10238,
+  "rules_in": 10181,
+  "rules_out": 5392,
+  "coverage_pct": 99.16,
+  "breakdown": {
+    "block": 4214,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1161,
+    "css_selectors": 5865,
+    "ignore_previous_rules": 4,
+    "generichide": 12,
+    "specifichide_domains": 1,
+    "urlblock": 0
+  },
+  "skipped_total": 75,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 44,
+    "pseudo-classe CSS etendue": 19,
+    "modificateur inconnu: $rewrite": 6,
+    "selecteur CSS etendu (#?#)": 5,
+    "joker de TLD avec exclusion": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 166,
+    "$domain traduit en if-frame-url (Safari 26+)": 8,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 7,
+    "modificateur sans effet sous WebKit: $all": 2,
+    "vers l'annexe: joker de TLD avec exclusion": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-id-my-ABPindo.json",
+      "rules": 5392,
+      "bytes": 894646
+    }
+  ],
+  "rules_emitted": 5392,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-id-my-ABPindo.json",
+    "total": 87,
+    "counts": {
+      "scriptlets": 43,
+      "procedural": 36,
+      "styles": 0,
+      "html": 1,
+      "raw_js": 0,
+      "redirects": 7
+    },
+    "sha256": "2017cd9aa480c028cca4886a085332ebcc749b41ddf257ec6d1fcb1562330c0c"
+  }
+}

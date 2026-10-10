@@ -1,0 +1,82 @@
+{
+  "id": "ublock-origin-quick-fixes",
+  "source_file": "uBlock-filters-Quick-fixes.txt",
+  "source_name": "uBlock filters – Quick fixes",
+  "source_sha256": "fdf81662b91efd7a91c51844f8b4f0a0f4b1ff1465d099a2950a54532d4a9f50",
+  "source_group": "uBlock Origin",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+  "source_title": "uBlock₀ filters – Quick fixes",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/quick-fixes.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:01+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 568,
+  "rules_in": 393,
+  "rules_out": 166,
+  "coverage_pct": 51.65,
+  "breakdown": {
+    "block": 103,
+    "block_document": 5,
+    "block_cookies": 0,
+    "css_display_none": 23,
+    "css_selectors": 61,
+    "ignore_previous_rules": 30,
+    "generichide": 4,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 219,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 165,
+    "pseudo-classe CSS etendue": 27,
+    "directive $badfilter (retractation appliquee)": 5,
+    "modificateur non supporte: $redirect-rule": 4,
+    "modificateur non supporte: $replace": 3,
+    "modificateur non supporte: $header": 3,
+    "modificateur non supporte: $uritransform": 3,
+    "assertion de regex (lookahead / lookbehind)": 2,
+    "ancre `|` en milieu de motif": 2,
+    "injection de style (non supportee)": 2,
+    "modificateur non supporte: $strict3p": 1,
+    "erreur de parsing (KeyError)": 1,
+    "repetition trop longue une fois developpee": 1
+  },
+  "notes": {
+    "$domain traduit en if-frame-url (Safari 26+)": 12,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 8,
+    "modificateur sans effet sous WebKit: $important": 8,
+    "$denyallow: 1 exception(s) emises apres le blocage": 2,
+    "alternation eclatee en 3 regles": 1,
+    "$denyallow: 29 exception(s) emises apres le blocage": 1,
+    "alternation eclatee en 6 regles": 1,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 1,
+    "annexe: portee inexprimable (domaine illisible)": 1,
+    "modificateur sans effet sous WebKit: $all": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-filters-Quick-fixes.json",
+      "rules": 166,
+      "bytes": 37636
+    }
+  ],
+  "rules_emitted": 166,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-uBlock-filters-Quick-fixes.json",
+    "total": 214,
+    "counts": {
+      "scriptlets": 162,
+      "procedural": 37,
+      "styles": 0,
+      "html": 3,
+      "raw_js": 0,
+      "redirects": 12
+    },
+    "sha256": "38d01aa5b7cc2ec0eb929c8bb3f2c124020d8ad6269a15f25ca608be9ad6240e"
+  }
+}

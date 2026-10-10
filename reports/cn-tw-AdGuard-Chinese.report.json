@@ -1,0 +1,91 @@
+{
+  "id": "adguard-chinese",
+  "source_file": "cn-tw-AdGuard-Chinese.txt",
+  "source_name": "🇨🇳cn 🇹🇼tw: AdGuard Chinese (中文)",
+  "source_sha256": "a8238e4779447e8bfba9eb2946014ddee5d5a95e46fe9daeb5b51651b81453ea",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Chinese filter",
+  "source_version": "2.1.67.11",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/224.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:34:59+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 22400,
+  "rules_in": 21619,
+  "rules_out": 16834,
+  "coverage_pct": 96.88,
+  "breakdown": {
+    "block": 12011,
+    "block_document": 2,
+    "block_cookies": 0,
+    "css_display_none": 3754,
+    "css_selectors": 7865,
+    "ignore_previous_rules": 857,
+    "generichide": 209,
+    "specifichide_domains": 4,
+    "urlblock": 0
+  },
+  "skipped_total": 534,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 252,
+    "pseudo-classe CSS etendue": 230,
+    "modificateur non supporte: $csp": 13,
+    "directive $badfilter (retractation appliquee)": 11,
+    "modificateur non supporte: $genericblock": 8,
+    "modificateur non supporte: $removeparam": 4,
+    "inclusions et exclusions de domaine": 4,
+    "modificateur inconnu: $_": 3,
+    "retiree par $badfilter (retractation amont)": 3,
+    "domaine cosmetique non exprimable (joker de TLD)": 2,
+    "regle cosmetique entierement exceptee": 2,
+    "assertion de regex (lookahead / lookbehind)": 1,
+    "$domain melange inclusions et exclusions": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 49,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 22,
+    "modificateur sans effet sous WebKit: $important": 16,
+    "$denyallow: 1 exception(s) emises apres le blocage": 7,
+    "doublon fusionne": 6,
+    "vers l'annexe: inclusions et exclusions de domaine": 4,
+    "modificateur sans effet sous WebKit: $all": 3,
+    "$denyallow: 2 exception(s) emises apres le blocage": 3,
+    "vers l'annexe: domaine cosmetique non exprimable (joker de TLD)": 2,
+    "$domain traduit en if-frame-url (Safari 26+)": 2,
+    "alternation eclatee en 20 regles": 1,
+    "alternation eclatee en 7 regles": 1,
+    "$denyallow: 3 exception(s) emises apres le blocage": 1,
+    "$denyallow: 76 exception(s) emises apres le blocage": 1,
+    "alternation eclatee en 6 regles": 1,
+    "alternation eclatee en 2 regles": 1,
+    "$domain abandonne (une seule condition par trigger)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-cn-tw-AdGuard-Chinese.json",
+      "rules": 16834,
+      "bytes": 2255535
+    }
+  ],
+  "rules_emitted": 16834,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-cn-tw-AdGuard-Chinese.json",
+    "total": 813,
+    "counts": {
+      "scriptlets": 252,
+      "procedural": 495,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 49,
+      "csp": 13,
+      "removeparams": 4
+    },
+    "sha256": "15c4e6ef6a6876c4ae160ffde7d094bc57fe30f6aac542031786f873cb6527c9"
+  }
+}

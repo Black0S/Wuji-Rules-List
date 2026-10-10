@@ -1,0 +1,73 @@
+{
+  "id": "ubo-swe-1",
+  "source_file": "se-Frellwit-s-Swedish-Filter.txt",
+  "source_name": "🇸🇪se: Frellwit's Swedish Filter",
+  "source_sha256": "7813de07e2aff7d9b07a73b334e68cdb466884488e74baab4ed89192fb7891b0",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/lassekongo83/Frellwits-filter-lists",
+  "source_license": "GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE",
+  "source_title": "Frellwit's Swedish Filter",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:01+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 3769,
+  "rules_in": 3757,
+  "rules_out": 3770,
+  "coverage_pct": 87.65,
+  "breakdown": {
+    "block": 1722,
+    "block_document": 1,
+    "block_cookies": 0,
+    "css_display_none": 2024,
+    "css_selectors": 1548,
+    "ignore_previous_rules": 21,
+    "generichide": 1,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 458,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 326,
+    "scriptlet ou filtrage HTML": 110,
+    "modificateur non supporte: $reason": 6,
+    "modificateur non supporte: $removeparam": 5,
+    "modificateur non supporte: $redirect-rule": 4,
+    "modificateur non supporte: $csp": 4,
+    "modificateur non supporte: $empty": 1,
+    "directive $badfilter (retractation appliquee)": 1,
+    "$domain melange inclusions et exclusions": 1
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $all": 13,
+    "modificateur sans effet sous WebKit: $important": 11,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 10
+  },
+  "outputs": [
+    {
+      "file": "Webkit-se-Frellwit-s-Swedish-Filter.json",
+      "rules": 3770,
+      "bytes": 648765
+    }
+  ],
+  "rules_emitted": 3770,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-se-Frellwit-s-Swedish-Filter.json",
+    "total": 465,
+    "counts": {
+      "scriptlets": 92,
+      "procedural": 332,
+      "styles": 0,
+      "html": 18,
+      "raw_js": 0,
+      "removeparams": 5,
+      "redirects": 14,
+      "csp": 4
+    },
+    "sha256": "e9b541750d7a6163dcd49e631ac38eee90da258a364beee52f85501819c5a062"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "ubo-isl-0",
+  "source_file": "is-Icelandic-ABP-List.txt",
+  "source_name": "🇮🇸is: Icelandic ABP List",
+  "source_sha256": "28b1923afa62e4f3f89f7eee776a5075f251b5ed618abb656607294a50e40c6d",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/brave/adblock-lists/issues",
+  "source_license": "",
+  "source_title": "🇮🇸is: Icelandic ABP List",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/brave/adblock-lists/master/custom/is.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:00+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 96,
+  "rules_in": 83,
+  "rules_out": 52,
+  "coverage_pct": 98.8,
+  "breakdown": {
+    "block": 12,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 39,
+    "css_selectors": 70,
+    "ignore_previous_rules": 0,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 1,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 1
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-is-Icelandic-ABP-List.json",
+      "rules": 52,
+      "bytes": 7829
+    }
+  ],
+  "rules_emitted": 52,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-is-Icelandic-ABP-List.json",
+    "total": 1,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 1,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "97083d66d9a2126f9def1aa32f7bd326d18fbbfbb8e0b7a360800dc1d337e6d2"
+  }
+}

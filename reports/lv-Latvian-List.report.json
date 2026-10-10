@@ -1,0 +1,60 @@
+{
+  "id": "latvian",
+  "source_file": "lv-Latvian-List.txt",
+  "source_name": "🇱🇻lv: Latvian List",
+  "source_sha256": "976330ff32923dd0e23f48c07a878f946e6faa5be52c07922be5ca8c87a56021",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/Latvian-List/adblock-latvian",
+  "source_license": "",
+  "source_title": "Latvian List",
+  "source_version": "202605140759",
+  "source_url": "https://raw.githubusercontent.com/Latvian-List/adblock-latvian/master/lists/latvian-list.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:00+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 466,
+  "rules_in": 430,
+  "rules_out": 286,
+  "coverage_pct": 96.28,
+  "breakdown": {
+    "block": 181,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 88,
+    "css_selectors": 217,
+    "ignore_previous_rules": 16,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 9,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 5,
+    "selecteur CSS etendu (#?#)": 3,
+    "pseudo-classe CSS etendue": 1
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-lv-Latvian-List.json",
+      "rules": 286,
+      "bytes": 42512
+    }
+  ],
+  "rules_emitted": 286,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-lv-Latvian-List.json",
+    "total": 16,
+    "counts": {
+      "scriptlets": 5,
+      "procedural": 11,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "200cf414006d7bb8c8c02d663897340918266211b0be3653b3b18c0b045c2951"
+  }
+}

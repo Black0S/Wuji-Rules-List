@@ -1,0 +1,62 @@
+{
+  "id": "ubo-alb-0",
+  "source_file": "al-xk-Adblock-List-for-Albania.txt",
+  "source_name": "🇦🇱al 🇽🇰xk: Adblock List for Albania",
+  "source_sha256": "9424cee466e41d66bacb5e3e1269e27b63a83100ad30f931d1a7b95052945c82",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/AnXh3L0/blocklist",
+  "source_license": "https://unlicense.org/",
+  "source_title": "🇦🇱 🇽🇰 Adblock List for Albania and Kosovo",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/AnXh3L0/blocklist/master/albanian-easylist-addition/Albania.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:34:59+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 557,
+  "rules_in": 305,
+  "rules_out": 144,
+  "coverage_pct": 96.39,
+  "breakdown": {
+    "block": 33,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 108,
+    "css_selectors": 259,
+    "ignore_previous_rules": 2,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 11,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 7,
+    "selecteur CSS etendu (#?#)": 4
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 13,
+    "$domain traduit en if-frame-url (Safari 26+)": 5
+  },
+  "outputs": [
+    {
+      "file": "Webkit-al-xk-Adblock-List-for-Albania.json",
+      "rules": 144,
+      "bytes": 26489
+    }
+  ],
+  "rules_emitted": 144,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-al-xk-Adblock-List-for-Albania.json",
+    "total": 11,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 11,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "7bca251daeef16501b652de668d3ffd2a5ab771dc8d0754cf7340cfe8b4adc38"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "ubo-tha-0",
+  "source_file": "th-EasyList-Thailand.txt",
+  "source_name": "🇹🇭th: EasyList Thailand",
+  "source_sha256": "b61c050dc44483e5392f0cabc2e0ec8790811c62328e15f3e1770cbb66bd02dc",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/easylist-thailand/easylist-thailand",
+  "source_license": "https://github.com/easylist-thailand/easylist-thailand/blob/master/LICENSE",
+  "source_title": "EasyList Thailand",
+  "source_version": "202609022239",
+  "source_url": "https://raw.githubusercontent.com/easylist-thailand/easylist-thailand/master/subscription/easylist-thailand.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:01+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1563,
+  "rules_in": 1341,
+  "rules_out": 974,
+  "coverage_pct": 99.48,
+  "breakdown": {
+    "block": 769,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 203,
+    "css_selectors": 564,
+    "ignore_previous_rules": 1,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 4,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 2,
+    "scriptlet ou filtrage HTML": 2
+  },
+  "notes": {
+    "doublon fusionne": 2,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 2,
+    "domaine ignore (joker ou regex dans $domain)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-th-EasyList-Thailand.json",
+      "rules": 974,
+      "bytes": 125779
+    }
+  ],
+  "rules_emitted": 974,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-th-EasyList-Thailand.json",
+    "total": 7,
+    "counts": {
+      "scriptlets": 2,
+      "procedural": 3,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 2
+    },
+    "sha256": "ff5d52c6e5a6d4bc0fa054aec4b1f8ed37360ea519874517dbd7c6c10813e2b9"
+  }
+}

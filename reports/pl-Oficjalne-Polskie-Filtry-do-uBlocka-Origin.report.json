@@ -1,0 +1,85 @@
+{
+  "id": "ubo-pol-0",
+  "source_file": "pl-Oficjalne-Polskie-Filtry-do-uBlocka-Origin.txt",
+  "source_name": "🇵🇱pl: Oficjalne Polskie Filtry do uBlocka Origin",
+  "source_sha256": "39ce9b0a09dc42d287cd25114bcc2d76b4c3c1ea0292b35a4bb1eadd6df8f365",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/MajkiIT/polish-ads-filter",
+  "source_license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "source_title": "Official Polish Filters for AdBlock, uBlock Origin & AdGuard",
+  "source_version": "2026100901",
+  "source_url": "https://raw.githubusercontent.com/MajkiIT/polish-ads-filter/master/polish-adblock-filters/adblock.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:01+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 6446,
+  "rules_in": 6109,
+  "rules_out": 5758,
+  "coverage_pct": 93.76,
+  "breakdown": {
+    "block": 1012,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 4586,
+    "css_selectors": 4557,
+    "ignore_previous_rules": 155,
+    "generichide": 4,
+    "specifichide_domains": 1,
+    "urlblock": 0
+  },
+  "skipped_total": 371,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 186,
+    "pseudo-classe CSS etendue": 86,
+    "inclusions et exclusions de domaine": 40,
+    "injection de style / scriptlet (#$#)": 19,
+    "classe niee dans une classe": 10,
+    "assertion de regex (lookahead / lookbehind)": 9,
+    "repetition trop longue une fois developpee": 5,
+    "scriptlet ou filtrage HTML": 5,
+    "injection de style (non supportee)": 3,
+    "caractere de controle dans le selecteur": 2,
+    "regle cosmetique entierement exceptee": 1,
+    "$domain melange inclusions et exclusions": 1,
+    "modificateur inconnu: $rewrite": 1,
+    "repetition de `.` trop longue pour WebKit": 1,
+    "directive $badfilter (retractation appliquee)": 1,
+    "JavaScript / scriptlet (#%#)": 1
+  },
+  "notes": {
+    "vers l'annexe: inclusions et exclusions de domaine": 40,
+    "doublon fusionne": 4,
+    "alternation eclatee en 2 regles": 4,
+    "modificateur sans effet sous WebKit: $important": 4,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 3,
+    "alternation eclatee en 5 regles": 2,
+    "alternation eclatee en 3 regles": 2,
+    "alternation eclatee en 6 regles": 1,
+    "alternation eclatee en 4 regles": 1,
+    "$domain traduit en if-frame-url (Safari 26+)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-pl-Oficjalne-Polskie-Filtry-do-uBlocka-Origin.json",
+      "rules": 5758,
+      "bytes": 1045711
+    }
+  ],
+  "rules_emitted": 5758,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-pl-Oficjalne-Polskie-Filtry-do-uBlocka-Origin.json",
+    "total": 375,
+    "counts": {
+      "scriptlets": 7,
+      "procedural": 345,
+      "styles": 20,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 3
+    },
+    "sha256": "4e5197d101d20fcd0e46f1cf8bb8fd987eec1bcf10ea7f1a9273b0e8d079e043"
+  }
+}

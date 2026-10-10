@@ -1,0 +1,67 @@
+{
+  "id": "adguard-dutch",
+  "source_file": "nl-be-AdGuard-Dutch.txt",
+  "source_name": "🇳🇱nl 🇧🇪be: AdGuard Dutch",
+  "source_sha256": "18e7dbbe9e034f717e3f66ba3fe0d20710c5630ef8c0def4af98a974bdee41a2",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Dutch filter",
+  "source_version": "2.0.9.47",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/8.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:00+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 2179,
+  "rules_in": 1963,
+  "rules_out": 1844,
+  "coverage_pct": 92.82,
+  "breakdown": {
+    "block": 523,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1263,
+    "css_selectors": 1242,
+    "ignore_previous_rules": 55,
+    "generichide": 2,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 87,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 58,
+    "scriptlet ou filtrage HTML": 28,
+    "regle cosmetique entierement exceptee": 1
+  },
+  "notes": {
+    "doublon fusionne": 29,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 7,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 2,
+    "modificateur sans effet sous WebKit: $important": 2,
+    "alternation eclatee en 8 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-nl-be-AdGuard-Dutch.json",
+      "rules": 1844,
+      "bytes": 288041
+    }
+  ],
+  "rules_emitted": 1844,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-nl-be-AdGuard-Dutch.json",
+    "total": 125,
+    "counts": {
+      "scriptlets": 28,
+      "procedural": 90,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 7
+    },
+    "sha256": "23b61fdfbe04db96f657a8bf3fb9ade32ffb43180513c4d70b61177c9e377084"
+  }
+}

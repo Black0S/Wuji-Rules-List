@@ -1,0 +1,1 @@
+[{"trigger":{"url-filter":"^[htpsw]+://([a-z0-9-]+\\.)*www\\.youtube\\.com[/:&?=,;]"},"action":{"type":"css-display-none","selector":"#toast:has(> #text-container > yt-formatted-string#text.yt-notification-action-renderer)"}}]

@@ -1,0 +1,83 @@
+{
+  "id": "adguard-japanese",
+  "source_file": "jp-AdGuard-Japanese.txt",
+  "source_name": "🇯🇵jp: AdGuard Japanese",
+  "source_sha256": "1e755fa76c9a67681ddcdb1914dc6015f9d52af8ea15ea4e8f48fed3af73b1d1",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Japanese filter",
+  "source_version": "2.0.77.34",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/7.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:00+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 12846,
+  "rules_in": 12113,
+  "rules_out": 9942,
+  "coverage_pct": 88.57,
+  "breakdown": {
+    "block": 1715,
+    "block_document": 213,
+    "block_cookies": 0,
+    "css_display_none": 7728,
+    "css_selectors": 8515,
+    "ignore_previous_rules": 244,
+    "generichide": 41,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 1258,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 973,
+    "scriptlet ou filtrage HTML": 205,
+    "modificateur non supporte: $to": 50,
+    "modificateur non supporte: $redirect-rule": 9,
+    "assertion de regex (lookahead / lookbehind)": 5,
+    "domaine cosmetique non exprimable (joker de TLD)": 4,
+    "modificateur inconnu: $urltransform": 4,
+    "modificateur non supporte: $removeparam": 2,
+    "modificateur inconnu: $_": 2,
+    "injection de style (non supportee)": 2,
+    "regex hors du sous-ensemble WebKit": 1,
+    "joker de TLD avec exclusion": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 41,
+    "modificateur sans effet sous WebKit: $all": 23,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 18,
+    "modificateur sans effet sous WebKit: $important": 15,
+    "domaine ignore (joker) dans une regle cosmetique": 4,
+    "annexe: portee inexprimable (domaine illisible)": 4,
+    "alternation eclatee en 3 regles": 2,
+    "alternation eclatee en 4 regles": 2,
+    "alternation eclatee en 2 regles": 2,
+    "$denyallow: 4 exception(s) emises apres le blocage": 1,
+    "vers l'annexe: joker de TLD avec exclusion": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-jp-AdGuard-Japanese.json",
+      "rules": 9942,
+      "bytes": 1748380
+    }
+  ],
+  "rules_emitted": 9942,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-jp-AdGuard-Japanese.json",
+    "total": 1376,
+    "counts": {
+      "scriptlets": 205,
+      "procedural": 1119,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 50,
+      "removeparams": 2
+    },
+    "sha256": "7778accd0d44a2a06260bd43814dc2e35381e6b2f2b7e17ec8344830f3667c7b"
+  }
+}

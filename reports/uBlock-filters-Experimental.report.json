@@ -1,0 +1,58 @@
+{
+  "id": "ubo-ublock-experimental",
+  "source_file": "uBlock-filters-Experimental.txt",
+  "source_name": "uBlock filters – Experimental",
+  "source_sha256": "b00220f0462a45701c28aeac3415d3f70cc49e4174983ba2adc933c98b9ef66a",
+  "source_group": "uBlock Origin",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+  "source_title": "uBlock filters – Experimental",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/experimental.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:35:01+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 28,
+  "rules_in": 10,
+  "rules_out": 1,
+  "coverage_pct": 10.0,
+  "breakdown": {
+    "block": 0,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1,
+    "css_selectors": 1,
+    "ignore_previous_rules": 0,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 7,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 7
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-filters-Experimental.json",
+      "rules": 1,
+      "bytes": 227
+    }
+  ],
+  "rules_emitted": 1,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-uBlock-filters-Experimental.json",
+    "total": 9,
+    "counts": {
+      "scriptlets": 9,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "0eb70972f839410791dfa0a1f1b2fadfa3310b47b018962fc774b7894ce334f0"
+  }
+}

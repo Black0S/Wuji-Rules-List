@@ -1,0 +1,71 @@
+{
+  "id": "easyprivacy",
+  "source_file": "EasyPrivacy.txt",
+  "source_name": "EasyPrivacy",
+  "source_sha256": "3ee597080ca24a52a2d059a6a4a2b04443381b28a76ddd24f043c56c63afe1a0",
+  "source_group": "Confidentialité",
+  "source_homepage": "https://easylist.to/",
+  "source_license": "",
+  "source_title": "EasyPrivacy",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easyprivacy.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-10T10:34:58+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 56699,
+  "rules_in": 56272,
+  "rules_out": 56236,
+  "coverage_pct": 99.94,
+  "breakdown": {
+    "block": 55386,
+    "block_document": 1,
+    "block_cookies": 0,
+    "css_display_none": 1,
+    "css_selectors": 2,
+    "ignore_previous_rules": 847,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 35,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 27,
+    "pseudo-classe CSS etendue": 4,
+    "modificateur non supporte: $csp": 2,
+    "modificateur inconnu: $rewrite": 1,
+    "modificateur non supporte: $redirect-rule": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 28,
+    "modificateur sans effet sous WebKit: $important": 8,
+    "doublon fusionne": 2,
+    "domaine ignore (joker ou regex dans $domain)": 2,
+    "$domain traduit en if-frame-url (Safari 26+)": 1,
+    "alternation eclatee en 2 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyPrivacy.json",
+      "rules": 56236,
+      "bytes": 6662778
+    }
+  ],
+  "rules_emitted": 56236,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyPrivacy.json",
+    "total": 62,
+    "counts": {
+      "scriptlets": 27,
+      "procedural": 4,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "csp": 2,
+      "redirects": 29
+    },
+    "sha256": "5b592808dcb1b84eb093aae8c377c325c85dda8670efd66b5057a89dd741e6de"
+  }
+}
