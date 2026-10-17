@@ -1,0 +1,77 @@
+{
+  "id": "adguard-ukrainian",
+  "source_file": "ua-AdGuard-Ukrainian.txt",
+  "source_name": "🇺🇦ua: AdGuard Ukrainian",
+  "source_sha256": "9ce1ff2d6c33c3e407078c3b99c0a3d59348dadbb7c486d38e826c8555865e20",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Ukrainian filter",
+  "source_version": "2.0.9.46",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/23.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-17T08:31:46+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 6055,
+  "rules_in": 5522,
+  "rules_out": 4883,
+  "coverage_pct": 97.32,
+  "breakdown": {
+    "block": 3311,
+    "block_document": 4,
+    "block_cookies": 0,
+    "css_display_none": 1498,
+    "css_selectors": 1990,
+    "ignore_previous_rules": 67,
+    "generichide": 2,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 163,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 117,
+    "scriptlet ou filtrage HTML": 36,
+    "modificateur inconnu: $_": 3,
+    "modificateur non supporte: $removeparam": 3,
+    "repetition trop longue une fois developpee": 2,
+    "ancre `|` en milieu de motif": 1,
+    "assertion de regex (lookahead / lookbehind)": 1
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $all": 30,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 18,
+    "modificateur sans effet sous WebKit: $important": 14,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 7,
+    "doublon fusionne": 4,
+    "alternation eclatee en 5 regles": 3,
+    "alternation eclatee en 3 regles": 3,
+    "alternation eclatee en 6 regles": 1,
+    "alternation eclatee en 2 regles": 1,
+    "alternation eclatee en 8 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-ua-AdGuard-Ukrainian.json",
+      "rules": 4883,
+      "bytes": 709822
+    }
+  ],
+  "rules_emitted": 4883,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-ua-AdGuard-Ukrainian.json",
+    "total": 186,
+    "counts": {
+      "scriptlets": 36,
+      "procedural": 129,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 18,
+      "removeparams": 3
+    },
+    "sha256": "85a011ef6d9c134ceb4a68071a5946f50b5db1b07ee63a077c4526d74f667da1"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "id": "adguard-spanish-portuguese",
+  "source_file": "es-ar-br-pt-AdGuard-Spanish-Portuguese.txt",
+  "source_name": "🇪🇸es 🇦🇷ar 🇧🇷br 🇵🇹pt: AdGuard Spanish/Portuguese",
+  "source_sha256": "d4593ad6a136b7938090415afb6815dc56391e1cca4918edf97c2855c0c927ea",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Spanish/Portuguese filter",
+  "source_version": "2.0.36.8",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/9.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-17T08:31:44+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 6664,
+  "rules_in": 5662,
+  "rules_out": 3684,
+  "coverage_pct": 83.95,
+  "breakdown": {
+    "block": 917,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 2432,
+    "css_selectors": 3502,
+    "ignore_previous_rules": 295,
+    "generichide": 39,
+    "specifichide_domains": 2,
+    "urlblock": 0
+  },
+  "skipped_total": 805,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 503,
+    "pseudo-classe CSS etendue": 291,
+    "modificateur non supporte: $redirect-rule": 6,
+    "modificateur inconnu: $_": 2,
+    "regle cosmetique entierement exceptee": 1,
+    "directive $badfilter (retractation appliquee)": 1,
+    "caractere de controle dans le selecteur": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 65,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 32,
+    "modificateur sans effet sous WebKit: $important": 15,
+    "$domain traduit en if-frame-url (Safari 26+)": 8,
+    "doublon fusionne": 6,
+    "modificateur sans effet sous WebKit: $all": 3,
+    "annexe: portee inexprimable (domaine illisible)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-es-ar-br-pt-AdGuard-Spanish-Portuguese.json",
+      "rules": 3684,
+      "bytes": 632707
+    }
+  ],
+  "rules_emitted": 3684,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-es-ar-br-pt-AdGuard-Spanish-Portuguese.json",
+    "total": 963,
+    "counts": {
+      "scriptlets": 503,
+      "procedural": 389,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 71
+    },
+    "sha256": "3a2ce5ca13c9276686c16881406b5b237bfba0de1c67f2a181dc430d1c6a7069"
+  }
+}

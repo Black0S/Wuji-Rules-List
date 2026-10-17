@@ -1,0 +1,69 @@
+{
+  "id": "easylist-germany",
+  "source_file": "de-ch-at-EasyList-Germany.txt",
+  "source_name": "🇩🇪de 🇨🇭ch 🇦🇹at: EasyList Germany",
+  "source_sha256": "52c015d79e799e5fb44f9806380fa7327c7b798f994adf675120e2c2ece7b249",
+  "source_group": "Régions",
+  "source_homepage": "https://forums.lanik.us/viewforum.php?f=90",
+  "source_license": "",
+  "source_title": "EasyList Germany",
+  "source_version": "202610142112",
+  "source_url": "https://easylist.to/easylistgermany/easylistgermany.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-17T08:31:43+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 6069,
+  "rules_in": 6015,
+  "rules_out": 5461,
+  "coverage_pct": 97.32,
+  "breakdown": {
+    "block": 2155,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 3143,
+    "css_selectors": 3537,
+    "ignore_previous_rules": 127,
+    "generichide": 35,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 134,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 125,
+    "modificateur inconnu: $rewrite": 4,
+    "modificateur non supporte: $genericblock": 2,
+    "modificateur non supporte: $csp": 1,
+    "pseudo-classe CSS etendue": 1,
+    "injection de style (non supportee)": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 39,
+    "alternation eclatee en 8 regles": 1,
+    "alternation eclatee en 2 regles": 1,
+    "alternation eclatee en 10 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-de-ch-at-EasyList-Germany.json",
+      "rules": 5461,
+      "bytes": 876752
+    }
+  ],
+  "rules_emitted": 5461,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-de-ch-at-EasyList-Germany.json",
+    "total": 172,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 170,
+      "styles": 1,
+      "html": 0,
+      "raw_js": 0,
+      "csp": 1
+    },
+    "sha256": "56c2ec6e2a0d47ebabef8b31f61e1ec8513541c655c22ff1c0cf6bf245e8c11b"
+  }
+}

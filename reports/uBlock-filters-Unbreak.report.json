@@ -1,0 +1,81 @@
+{
+  "id": "ublock-origin-unbreak",
+  "source_file": "uBlock-filters-Unbreak.txt",
+  "source_name": "uBlock filters – Unbreak",
+  "source_sha256": "a608e8f6bcc16823476c9d8b07d6ba53c921c607351ab28d091dd5397bad1596",
+  "source_group": "uBlock Origin",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+  "source_title": "uBlock filters – Unbreak",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/unbreak.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-17T08:31:46+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 6009,
+  "rules_in": 2540,
+  "rules_out": 1632,
+  "coverage_pct": 65.2,
+  "breakdown": {
+    "block": 384,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 61,
+    "css_selectors": 86,
+    "ignore_previous_rules": 1175,
+    "generichide": 11,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 744,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 312,
+    "directive $badfilter (retractation appliquee)": 211,
+    "modificateur non supporte: $redirect-rule": 99,
+    "pseudo-classe CSS etendue": 69,
+    "modificateur non supporte: $cname": 27,
+    "modificateur non supporte: $removeparam": 10,
+    "modificateur non supporte: $csp": 3,
+    "selecteur CSS etendu (#@?#)": 2,
+    "modificateur inconnu: $rewrite": 2,
+    "modificateur non supporte: $to": 2,
+    "modificateur non supporte: $strict1p": 2,
+    "modificateur non supporte: $inline-script": 1,
+    "modificateur non supporte: $permissions": 1,
+    "modificateur non supporte: $replace": 1,
+    "$domain melange inclusions et exclusions": 1,
+    "modificateur non supporte: $strict3p": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 238,
+    "modificateur sans effet sous WebKit: $important": 143,
+    "$domain traduit en if-frame-url (Safari 26+)": 17,
+    "modificateur sans effet sous WebKit: $all": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-filters-Unbreak.json",
+      "rules": 1632,
+      "bytes": 315594
+    }
+  ],
+  "rules_emitted": 1632,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-uBlock-filters-Unbreak.json",
+    "total": 872,
+    "counts": {
+      "scriptlets": 301,
+      "procedural": 205,
+      "styles": 0,
+      "html": 17,
+      "raw_js": 0,
+      "removeparams": 10,
+      "redirects": 336,
+      "csp": 3
+    },
+    "sha256": "d204e576f1e929cbdc5edf41682965f5d5b3ecfa3d085f4d23f353de6db4c62e"
+  }
+}
