@@ -1,0 +1,63 @@
+{
+  "id": "ubo-easylist-newsletters",
+  "source_file": "EasyList-Newsletter-Notices.txt",
+  "source_name": "EasyList – Newsletter Notices",
+  "source_sha256": "17c6bb33689d80699f728c31f3f6fef3b5972c7bcaf2cc508d13dde37452dfa7",
+  "source_group": "Nuisances",
+  "source_homepage": "https://easylist.to/",
+  "source_license": "",
+  "source_title": "EasyList – Newsletter Notices",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-newsletters.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-24T08:51:01+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 6547,
+  "rules_in": 6047,
+  "rules_out": 6340,
+  "coverage_pct": 90.52,
+  "breakdown": {
+    "block": 181,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 6149,
+    "css_selectors": 5284,
+    "ignore_previous_rules": 9,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 568,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 237,
+    "selecteur CSS etendu (#?#)": 229,
+    "scriptlet ou filtrage HTML": 102
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 8,
+    "doublon fusionne": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Newsletter-Notices.json",
+      "rules": 6340,
+      "bytes": 1022162
+    }
+  ],
+  "rules_emitted": 6340,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Newsletter-Notices.json",
+    "total": 572,
+    "counts": {
+      "scriptlets": 102,
+      "procedural": 470,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "d6dfb542e2d400aea9f59f9c76504266e67f8346d630897f9d8e11985378a6c9"
+  }
+}

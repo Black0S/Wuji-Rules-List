@@ -1,0 +1,52 @@
+{
+  "id": "ubo-ublock-experimental",
+  "source_file": "uBlock-filters-Experimental.txt",
+  "source_name": "uBlock filters – Experimental",
+  "source_sha256": "f2329873b23fbba987cd2365e67a818085b0f85f858cf96fb42e95fd7e1390d3",
+  "source_group": "uBlock Origin",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+  "source_title": "uBlock filters – Experimental",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/experimental.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-24T08:51:06+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 27,
+  "rules_in": 9,
+  "rules_out": 0,
+  "coverage_pct": 0.0,
+  "breakdown": {
+    "block": 0,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 7,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 7
+  },
+  "notes": {},
+  "outputs": [],
+  "rules_emitted": 0,
+  "published": false,
+  "unpublished_reason": "rendement nul ou negligeable (0 regles pour 9 entrees)",
+  "extended": {
+    "file": "extended/Extended-uBlock-filters-Experimental.json",
+    "total": 9,
+    "counts": {
+      "scriptlets": 9,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "c02759977519d90b3a70bfeb2f738afcda88340adf1ee23c962caa39e2e7d3fb"
+  }
+}

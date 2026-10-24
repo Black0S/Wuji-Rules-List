@@ -1,0 +1,70 @@
+{
+  "id": "ubo-fin-0",
+  "source_file": "fi-Adblock-List-for-Finland.txt",
+  "source_name": "🇫🇮fi: Adblock List for Finland",
+  "source_sha256": "8334c744674fc7fe234532687756f627178114dd3d14e733ff4c43529145f1d6",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/finnish-easylist-addition/finnish-easylist-addition",
+  "source_license": "https://unlicense.org/",
+  "source_title": "Adblock List for Finland",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/finnish-easylist-addition/finnish-easylist-addition/gh-pages/Finland_adb.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-24T08:51:05+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1329,
+  "rules_in": 1213,
+  "rules_out": 899,
+  "coverage_pct": 87.63,
+  "breakdown": {
+    "block": 172,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 697,
+    "css_selectors": 862,
+    "ignore_previous_rules": 27,
+    "generichide": 2,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 142,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 71,
+    "injection de style (non supportee)": 40,
+    "scriptlet ou filtrage HTML": 18,
+    "modificateur inconnu: $rewrite": 7,
+    "pseudo-classe CSS etendue": 5,
+    "modificateur non supporte: $removeparam": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 3,
+    "$domain abandonne (une seule condition par trigger)": 3,
+    "modificateur sans effet sous WebKit: $important": 1,
+    "doublon fusionne": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-fi-Adblock-List-for-Finland.json",
+      "rules": 899,
+      "bytes": 173931
+    }
+  ],
+  "rules_emitted": 899,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-fi-Adblock-List-for-Finland.json",
+    "total": 145,
+    "counts": {
+      "scriptlets": 18,
+      "procedural": 81,
+      "styles": 42,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 3,
+      "removeparams": 1
+    },
+    "sha256": "ee16039fd0a7a0a6d89ca1d7321fa7717be0bfe33f7829788f448d073f61cd40"
+  }
+}

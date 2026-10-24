@@ -1,0 +1,67 @@
+{
+  "id": "adguard-mobile-app-banners",
+  "source_file": "AdGuard-Mobile-App-Banners.txt",
+  "source_name": "AdGuard – Mobile App Banners",
+  "source_sha256": "e9243ab9929c7cb5e28705f5e9f6d7846d020736c88759c0b05e1639f869361f",
+  "source_group": "Nuisances",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Mobile App Banners filter",
+  "source_version": "2.0.33.42",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/20.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-24T08:51:00+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 5735,
+  "rules_in": 5419,
+  "rules_out": 4081,
+  "coverage_pct": 81.34,
+  "breakdown": {
+    "block": 169,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 3904,
+    "css_selectors": 4232,
+    "ignore_previous_rules": 7,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 1003,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 763,
+    "scriptlet ou filtrage HTML": 235,
+    "injection de style (non supportee)": 2,
+    "modificateur non supporte: $removeparam": 1,
+    "regle cosmetique entierement exceptee": 1,
+    "ancre `|` en milieu de motif": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 93,
+    "doublon fusionne": 4
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Mobile-App-Banners.json",
+      "rules": 4081,
+      "bytes": 820717
+    }
+  ],
+  "rules_emitted": 4081,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Mobile-App-Banners.json",
+    "total": 1005,
+    "counts": {
+      "scriptlets": 235,
+      "procedural": 769,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "removeparams": 1
+    },
+    "sha256": "8b95cc28986a87a8f12d2ec6c2d8de8ad7c392e4b62b6ca6c7f575a4b49905dd"
+  }
+}

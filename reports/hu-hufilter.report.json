@@ -1,0 +1,66 @@
+{
+  "id": "ubo-hun-0",
+  "source_file": "hu-hufilter.txt",
+  "source_name": "🇭🇺hu: hufilter",
+  "source_sha256": "dfeb8b3ae9fac81ec92a3fec2dbec40d2753ae51793ff5c6c90d5e735f8a1f76",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/hufilter/hufilter",
+  "source_license": "",
+  "source_title": "Hufilter for uBO",
+  "source_version": "202610231900",
+  "source_url": "https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-ublock.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-24T08:51:05+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 2252,
+  "rules_in": 2016,
+  "rules_out": 946,
+  "coverage_pct": 92.81,
+  "breakdown": {
+    "block": 367,
+    "block_document": 9,
+    "block_cookies": 0,
+    "css_display_none": 553,
+    "css_selectors": 1479,
+    "ignore_previous_rules": 16,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 140,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 69,
+    "pseudo-classe CSS etendue": 43,
+    "selecteur CSS etendu (#?#)": 27,
+    "inclusions et exclusions de domaine": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 2,
+    "vers l'annexe: inclusions et exclusions de domaine": 1,
+    "doublon fusionne": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-hu-hufilter.json",
+      "rules": 946,
+      "bytes": 167998
+    }
+  ],
+  "rules_emitted": 946,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-hu-hufilter.json",
+    "total": 146,
+    "counts": {
+      "scriptlets": 54,
+      "procedural": 75,
+      "styles": 0,
+      "html": 15,
+      "raw_js": 0,
+      "redirects": 2
+    },
+    "sha256": "bdee2e6f833117644acbd219ecea2910a8e21c2d0a4ab965386bd12e14ec8902"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "ublock-origin-unbreak",
+  "source_file": "uBlock-filters-Unbreak.txt",
+  "source_name": "uBlock filters – Unbreak",
+  "source_sha256": "d0480c98087c1fa222a382210f4b6e832e8863dd00a8c18247e0de133fdb183c",
+  "source_group": "uBlock Origin",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+  "source_title": "uBlock filters – Unbreak",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/unbreak.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-24T08:51:06+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 6017,
+  "rules_in": 2546,
+  "rules_out": 1635,
+  "coverage_pct": 65.16,
+  "breakdown": {
+    "block": 385,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 61,
+    "css_selectors": 86,
+    "ignore_previous_rules": 1177,
+    "generichide": 11,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 747,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 316,
+    "directive $badfilter (retractation appliquee)": 211,
+    "modificateur non supporte: $redirect-rule": 98,
+    "pseudo-classe CSS etendue": 69,
+    "modificateur non supporte: $cname": 27,
+    "modificateur non supporte: $removeparam": 10,
+    "modificateur non supporte: $csp": 3,
+    "selecteur CSS etendu (#@?#)": 2,
+    "modificateur inconnu: $rewrite": 2,
+    "modificateur non supporte: $to": 2,
+    "modificateur non supporte: $strict1p": 2,
+    "modificateur non supporte: $inline-script": 1,
+    "modificateur non supporte: $permissions": 1,
+    "modificateur non supporte: $replace": 1,
+    "$domain melange inclusions et exclusions": 1,
+    "modificateur non supporte: $strict3p": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 238,
+    "modificateur sans effet sous WebKit: $important": 143,
+    "$domain traduit en if-frame-url (Safari 26+)": 17,
+    "modificateur sans effet sous WebKit: $all": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-filters-Unbreak.json",
+      "rules": 1635,
+      "bytes": 316158
+    }
+  ],
+  "rules_emitted": 1635,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-uBlock-filters-Unbreak.json",
+    "total": 875,
+    "counts": {
+      "scriptlets": 305,
+      "procedural": 205,
+      "styles": 0,
+      "html": 17,
+      "raw_js": 0,
+      "removeparams": 10,
+      "redirects": 335,
+      "csp": 3
+    },
+    "sha256": "e52bd32b7683fe5455250519d904988d33dbdb7519d55c780807f49011a35009"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "easylist-italy",
+  "source_file": "it-EasyList-Italy.txt",
+  "source_name": "🇮🇹it: EasyList Italy",
+  "source_sha256": "b3ea6a73203105061f88fe10d44750fd31c58527f2438bb68f4de7cfed9adf31",
+  "source_group": "Régions",
+  "source_homepage": "https://forums.lanik.us/viewforum.php?f=96",
+  "source_license": "",
+  "source_title": "EasyList Italy",
+  "source_version": "202610240842",
+  "source_url": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-24T08:51:05+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 4261,
+  "rules_in": 4211,
+  "rules_out": 4893,
+  "coverage_pct": 99.53,
+  "breakdown": {
+    "block": 1083,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 3720,
+    "css_selectors": 3019,
+    "ignore_previous_rules": 89,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 26,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 26
+  },
+  "notes": {
+    "alternation eclatee en 8 regles": 1,
+    "alternation eclatee en 9 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-it-EasyList-Italy.json",
+      "rules": 4893,
+      "bytes": 747628
+    }
+  ],
+  "rules_emitted": 4893,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-it-EasyList-Italy.json",
+    "total": 35,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 35,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "15f93581807f5466aa5cd5a4c192af5c25b0a3b7b559e35dd18ae20e92f4c0d9"
+  }
+}

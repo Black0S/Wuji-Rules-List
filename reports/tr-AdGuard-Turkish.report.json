@@ -1,0 +1,83 @@
+{
+  "id": "adguard-turkish",
+  "source_file": "tr-AdGuard-Turkish.txt",
+  "source_name": "🇹🇷tr: AdGuard Turkish",
+  "source_sha256": "9bd9e6ea2beb02e0022f622c2a1fb8463c7107b3b29b3cf4bca79b235e70d841",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Turkish filter",
+  "source_version": "2.0.69.24",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/13.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-24T08:51:06+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 7934,
+  "rules_in": 6752,
+  "rules_out": 6279,
+  "coverage_pct": 87.38,
+  "breakdown": {
+    "block": 1609,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 4545,
+    "css_selectors": 4167,
+    "ignore_previous_rules": 112,
+    "generichide": 12,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 848,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 457,
+    "scriptlet ou filtrage HTML": 354,
+    "domaine cosmetique non exprimable (joker de TLD)": 27,
+    "modificateur inconnu: $_": 3,
+    "assertion de regex (lookahead / lookbehind)": 2,
+    "$domain inexprimable (regex ou joker)": 2,
+    "modificateur non supporte: $redirect-rule": 1,
+    "regle cosmetique entierement exceptee": 1,
+    "caractere de controle dans le selecteur": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 425,
+    "$domain traduit en if-frame-url (Safari 26+)": 41,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 35,
+    "vers l'annexe: domaine cosmetique non exprimable (joker de TLD)": 27,
+    "modificateur sans effet sous WebKit: $important": 8,
+    "alternation eclatee en 2 regles": 7,
+    "modificateur sans effet sous WebKit: $all": 5,
+    "alternation eclatee en 4 regles": 2,
+    "doublon fusionne": 2,
+    "$denyallow: 3 exception(s) emises apres le blocage": 1,
+    "alternation eclatee en 7 regles": 1,
+    "alternation eclatee en 21 regles": 1,
+    "alternation eclatee en 10 regles": 1,
+    "alternation eclatee en 6 regles": 1,
+    "alternation eclatee en 3 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-tr-AdGuard-Turkish.json",
+      "rules": 6279,
+      "bytes": 1144451
+    }
+  ],
+  "rules_emitted": 6279,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-tr-AdGuard-Turkish.json",
+    "total": 935,
+    "counts": {
+      "scriptlets": 354,
+      "procedural": 545,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 36
+    },
+    "sha256": "23d7fbd06e06ef709807bd8d97860423607123bf47017256bcca24208fecd0a1"
+  }
+}

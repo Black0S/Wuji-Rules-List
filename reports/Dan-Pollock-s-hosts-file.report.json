@@ -1,0 +1,56 @@
+{
+  "id": "ubo-dpollock-0",
+  "source_file": "Dan-Pollock-s-hosts-file.txt",
+  "source_name": "Dan Pollock’s hosts file",
+  "source_sha256": "c0008dab56c7fb0eb849df68aa5b88818b9f0b612fac8bf2eff4090e9120276c",
+  "source_group": "Polyvalentes",
+  "source_homepage": "https://someonewhocares.org/hosts/",
+  "source_license": "",
+  "source_title": "Dan Pollock’s hosts file",
+  "source_version": "",
+  "source_url": "https://someonewhocares.org/hosts/hosts",
+  "format": "hosts",
+  "converted_at": "2026-10-24T08:51:01+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 13297,
+  "rules_in": 12973,
+  "rules_out": 12974,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 12973,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-Dan-Pollock-s-hosts-file.json",
+      "rules": 12974,
+      "bytes": 1487354
+    }
+  ],
+  "rules_emitted": 12974,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": ""
+  }
+}

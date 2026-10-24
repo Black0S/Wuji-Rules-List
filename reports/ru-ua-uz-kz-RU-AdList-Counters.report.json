@@ -1,0 +1,72 @@
+{
+  "id": "ubo-rus-1",
+  "source_file": "ru-ua-uz-kz-RU-AdList-Counters.txt",
+  "source_name": "🇷🇺ru 🇺🇦ua 🇺🇿uz 🇰🇿kz: RU AdList: Counters",
+  "source_sha256": "b24ea5a135b903317e82dc83eb686aae4f5f141c0056e1eaece1f9ec8ec696a6",
+  "source_group": "Régions",
+  "source_homepage": "https://forums.lanik.us/viewforum.php?f=102",
+  "source_license": "",
+  "source_title": "RU AdList: Counters",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/easylist/ruadlist/master/cntblock.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-24T08:51:06+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1918,
+  "rules_in": 1826,
+  "rules_out": 1224,
+  "coverage_pct": 67.25,
+  "breakdown": {
+    "block": 1097,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 58,
+    "css_selectors": 63,
+    "ignore_previous_rules": 65,
+    "generichide": 3,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 595,
+  "skipped_reasons": {
+    "modificateur non supporte: $removeparam": 384,
+    "pseudo-classe CSS etendue": 159,
+    "scriptlet ou filtrage HTML": 37,
+    "selecteur CSS etendu (#?#)": 10,
+    "modificateur non supporte: $empty": 3,
+    "domaine cosmetique non exprimable (joker de TLD)": 1,
+    "directive $badfilter (retractation appliquee)": 1
+  },
+  "notes": {
+    "$domain traduit en if-frame-url (Safari 26+)": 9,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 4,
+    "modificateur sans effet sous WebKit: $important": 3,
+    "vers l'annexe: domaine cosmetique non exprimable (joker de TLD)": 1,
+    "$domain abandonne (une seule condition par trigger)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-ru-ua-uz-kz-RU-AdList-Counters.json",
+      "rules": 1224,
+      "bytes": 163478
+    }
+  ],
+  "rules_emitted": 1224,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-ru-ua-uz-kz-RU-AdList-Counters.json",
+    "total": 598,
+    "counts": {
+      "scriptlets": 36,
+      "procedural": 173,
+      "styles": 0,
+      "html": 1,
+      "raw_js": 0,
+      "redirects": 4,
+      "removeparams": 384
+    },
+    "sha256": "eb16f4b93920b66e46bf9bd595a81ac8483430c846cbcfcff7b01bcbb35dd4dd"
+  }
+}

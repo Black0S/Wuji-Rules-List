@@ -1,0 +1,56 @@
+{
+  "id": "ubo-pol-3",
+  "source_file": "pl-CERT-PL-s-Warning-List.txt",
+  "source_name": "🇵🇱pl: CERT.PL's Warning List",
+  "source_sha256": "603f4aaccff9e2b755e91050ae573acbee9c162a478113e5d8814b54d074dae4",
+  "source_group": "Régions",
+  "source_homepage": "https://cert.pl/lista-ostrzezen/",
+  "source_license": "",
+  "source_title": "CERT.PL's Warning List",
+  "source_version": "202610240850",
+  "source_url": "https://hole.cert.pl/domains/v2/domains_ublock.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-24T08:51:06+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 17868,
+  "rules_in": 17864,
+  "rules_out": 17865,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 17864,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-pl-CERT-PL-s-Warning-List.json",
+      "rules": 17865,
+      "bytes": 1421713
+    }
+  ],
+  "rules_emitted": 17865,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": ""
+  }
+}

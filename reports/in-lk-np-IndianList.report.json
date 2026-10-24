@@ -1,0 +1,59 @@
+{
+  "id": "indianlist",
+  "source_file": "in-lk-np-IndianList.txt",
+  "source_name": "🇮🇳in 🇱🇰lk 🇳🇵np: IndianList",
+  "source_sha256": "43030e12efac72ffc30db97df124a03f7efccf1b314247abd6705f9b4a5d6a13",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/mediumkreation/IndianList",
+  "source_license": "",
+  "source_title": "IndianList",
+  "source_version": "202610240842",
+  "source_url": "https://easylist-downloads.adblockplus.org/indianlist.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-24T08:51:05+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 10636,
+  "rules_in": 10611,
+  "rules_out": 15249,
+  "coverage_pct": 98.19,
+  "breakdown": {
+    "block": 5303,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 9863,
+    "css_selectors": 5034,
+    "ignore_previous_rules": 82,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 185,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 183,
+    "ancre `|` en milieu de motif": 2
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-in-lk-np-IndianList.json",
+      "rules": 15249,
+      "bytes": 2351249
+    }
+  ],
+  "rules_emitted": 15249,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-in-lk-np-IndianList.json",
+    "total": 190,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 190,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "62096d631302c5c669ada98e9df84a6223fd49ee89a2cb1a612948c84931c72c"
+  }
+}
