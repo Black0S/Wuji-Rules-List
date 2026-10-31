@@ -1,0 +1,61 @@
+{
+  "id": "ubo-curben-phishing",
+  "source_file": "Phishing-URL-Blocklist.txt",
+  "source_name": "Phishing URL Blocklist",
+  "source_sha256": "ccb0543a1a65ae6fed1771b934ce1e2f2aa700546a7ac9fd69fbb06afbef2ed5",
+  "source_group": "Sites malveillants",
+  "source_homepage": "https://gitlab.com/malware-filter/phishing-filter#phishing-url-blocklist",
+  "source_license": "https://gitlab.com/malware-filter/phishing-filter#license",
+  "source_title": "Phishing URL Blocklist",
+  "source_version": "",
+  "source_url": "https://malware-filter.gitlab.io/phishing-filter/phishing-filter.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-31T10:21:18+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 49995,
+  "rules_in": 49989,
+  "rules_out": 49984,
+  "coverage_pct": 99.99,
+  "breakdown": {
+    "block": 49983,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 6,
+  "skipped_reasons": {
+    "accolade litterale (refusee par le parseur WebKit)": 4,
+    "ancre `|` en milieu de motif": 2
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $all": 25758
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Phishing-URL-Blocklist.json",
+      "rules": 49984,
+      "bytes": 5942872
+    }
+  ],
+  "rules_emitted": 49984,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": ""
+  }
+}

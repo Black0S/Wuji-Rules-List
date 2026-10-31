@@ -1,0 +1,55 @@
+{
+  "id": "ubo-adguard-spyware-url",
+  "source_file": "AdGuard-uBO-URL-Tracking-Protection.txt",
+  "source_name": "AdGuard/uBO – URL Tracking Protection",
+  "source_sha256": "65a5d30f4692632ac1132eb24b4268f32d7b4bafc14aed274c92446cb15f3425",
+  "source_group": "Confidentialité",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+  "source_title": "AdGuard/uBO – URL Tracking Protection",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/privacy-removeparam.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-31T10:21:12+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 4029,
+  "rules_in": 2718,
+  "rules_out": 3,
+  "coverage_pct": 0.04,
+  "breakdown": {
+    "block": 0,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 3,
+    "css_selectors": 1,
+    "ignore_previous_rules": 0,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 2717,
+  "skipped_reasons": {
+    "modificateur non supporte: $removeparam": 2700,
+    "modificateur non supporte: $to": 16,
+    "modificateur non supporte: $removeheader": 1
+  },
+  "notes": {},
+  "outputs": [],
+  "rules_emitted": 0,
+  "published": false,
+  "unpublished_reason": "rendement nul ou negligeable (3 regles pour 2718 entrees)",
+  "extended": {
+    "file": "extended/Extended-AdGuard-uBO-URL-Tracking-Protection.json",
+    "total": 2628,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "removeparams": 2628
+    },
+    "sha256": "17327399a408e6d350b6eb9be836e991fddede9d7910cc235c83654fbc1fd9f1"
+  }
+}

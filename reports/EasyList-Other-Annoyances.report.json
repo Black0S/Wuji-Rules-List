@@ -1,0 +1,63 @@
+{
+  "id": "ubo-easylist-annoyances",
+  "source_file": "EasyList-Other-Annoyances.txt",
+  "source_name": "EasyList – Other Annoyances",
+  "source_sha256": "ee25445e215f6bc4aefb2d7328ab2af745bf1dcbad7f5bd664ba769abfff42c8",
+  "source_group": "Nuisances",
+  "source_homepage": "https://github.com/easylist/easylist#fanboy-lists",
+  "source_license": "",
+  "source_title": "EasyList – Annoyances",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-annoyances.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-31T10:21:13+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 4319,
+  "rules_in": 4030,
+  "rules_out": 3521,
+  "coverage_pct": 94.24,
+  "breakdown": {
+    "block": 737,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 2764,
+    "css_selectors": 3042,
+    "ignore_previous_rules": 19,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 212,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 100,
+    "pseudo-classe CSS etendue": 60,
+    "selecteur CSS etendu (#?#)": 52
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 9,
+    "doublon fusionne": 4
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Other-Annoyances.json",
+      "rules": 3521,
+      "bytes": 539397
+    }
+  ],
+  "rules_emitted": 3521,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Other-Annoyances.json",
+    "total": 228,
+    "counts": {
+      "scriptlets": 100,
+      "procedural": 128,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "b3f02df9383e279a4a56103302280e83cc67f6dc8a2aeadfac5f9ee0fcd8c750"
+  }
+}

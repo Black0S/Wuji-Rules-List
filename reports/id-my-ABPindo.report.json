@@ -1,0 +1,70 @@
+{
+  "id": "ubo-idn-0",
+  "source_file": "id-my-ABPindo.txt",
+  "source_name": "🇮🇩id 🇲🇾my: ABPindo",
+  "source_sha256": "2ae7089071999c74badb31cb19f214d9c8e3f99ffab83098445d783a8c878e0b",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/ABPindo/indonesianadblockrules",
+  "source_license": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/LICENSE",
+  "source_title": "ABPindo",
+  "source_version": "202610261202",
+  "source_url": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/subscriptions/abpindo.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-31T10:21:19+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 10308,
+  "rules_in": 10255,
+  "rules_out": 5473,
+  "coverage_pct": 99.02,
+  "breakdown": {
+    "block": 4299,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1155,
+    "css_selectors": 5838,
+    "ignore_previous_rules": 6,
+    "generichide": 12,
+    "specifichide_domains": 1,
+    "urlblock": 0
+  },
+  "skipped_total": 89,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 46,
+    "pseudo-classe CSS etendue": 31,
+    "modificateur inconnu: $rewrite": 6,
+    "selecteur CSS etendu (#?#)": 5,
+    "joker de TLD avec exclusion": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 167,
+    "$domain traduit en if-frame-url (Safari 26+)": 8,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 7,
+    "modificateur sans effet sous WebKit: $all": 2,
+    "vers l'annexe: joker de TLD avec exclusion": 1,
+    "$specifichide sur un chemin: non exprimable, ignore": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-id-my-ABPindo.json",
+      "rules": 5473,
+      "bytes": 898754
+    }
+  ],
+  "rules_emitted": 5473,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-id-my-ABPindo.json",
+    "total": 101,
+    "counts": {
+      "scriptlets": 45,
+      "procedural": 48,
+      "styles": 0,
+      "html": 1,
+      "raw_js": 0,
+      "redirects": 7
+    },
+    "sha256": "82cedcd6f8e41b6aefd5c3e013884f57ea861ddb54d30919982602c2809e886d"
+  }
+}

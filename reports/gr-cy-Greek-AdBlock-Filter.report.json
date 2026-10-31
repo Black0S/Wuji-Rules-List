@@ -1,0 +1,64 @@
+{
+  "id": "ubo-grc-0",
+  "source_file": "gr-cy-Greek-AdBlock-Filter.txt",
+  "source_name": "🇬🇷gr 🇨🇾cy: Greek AdBlock Filter",
+  "source_sha256": "e415902d06c0a030c2a46afa8e3d304166b58101f3a39c2289827d0f55b01bad",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/kargig/greek-adblockplus-filter",
+  "source_license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source_title": "Greek AdBlock Filter",
+  "source_version": "2026102600",
+  "source_url": "https://www.void.gr/kargig/void-gr-filters.txt",
+  "format": "adblock",
+  "converted_at": "2026-10-31T10:21:18+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1287,
+  "rules_in": 1267,
+  "rules_out": 680,
+  "coverage_pct": 97.63,
+  "breakdown": {
+    "block": 454,
+    "block_document": 2,
+    "block_cookies": 0,
+    "css_display_none": 207,
+    "css_selectors": 765,
+    "ignore_previous_rules": 15,
+    "generichide": 1,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 23,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 9,
+    "selecteur CSS etendu (#?#)": 7,
+    "scriptlet ou filtrage HTML": 4,
+    "injection de style / scriptlet (#$#)": 2,
+    "injection de style etendue (#$?#)": 1
+  },
+  "notes": {
+    "$specifichide sur un chemin: non exprimable, ignore": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-gr-cy-Greek-AdBlock-Filter.json",
+      "rules": 680,
+      "bytes": 112113
+    }
+  ],
+  "rules_emitted": 680,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-gr-cy-Greek-AdBlock-Filter.json",
+    "total": 30,
+    "counts": {
+      "scriptlets": 4,
+      "procedural": 23,
+      "styles": 3,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "ff78650b2a35f1b5acc68d307e00752746e173171113825ec71338657228d730"
+  }
+}
