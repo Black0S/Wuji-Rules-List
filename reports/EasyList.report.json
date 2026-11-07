@@ -1,0 +1,75 @@
+{
+  "id": "easylist",
+  "source_file": "EasyList.txt",
+  "source_name": "EasyList",
+  "source_sha256": "3c4bd25eeb8f8985f5d5baadc7fcc5d9c704410336f3c2e0fe9a2b3d7e7f9b25",
+  "source_group": "Publicités",
+  "source_homepage": "https://easylist.to/",
+  "source_license": "",
+  "source_title": "EasyList",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-07T11:01:06+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 78663,
+  "rules_in": 78381,
+  "rules_out": 64348,
+  "coverage_pct": 99.11,
+  "breakdown": {
+    "block": 52275,
+    "block_document": 576,
+    "block_cookies": 0,
+    "css_display_none": 10747,
+    "css_selectors": 24082,
+    "ignore_previous_rules": 582,
+    "generichide": 167,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 363,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 290,
+    "injection de style (non supportee)": 40,
+    "repetition de `.` trop longue pour WebKit": 9,
+    "modificateur inconnu: $rewrite": 7,
+    "pseudo-classe CSS etendue": 6,
+    "modificateur non supporte: $csp": 4,
+    "ancre `|` en milieu de motif": 3,
+    "expansion d'alternation trop large": 2,
+    "joker de TLD avec exclusion": 1,
+    "$domain inexprimable (regex ou joker)": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 305,
+    "doublon fusionne": 9,
+    "alternation eclatee en 2 regles": 1,
+    "alternation eclatee en 4 regles": 1,
+    "alternation eclatee en 8 regles": 1,
+    "vers l'annexe: joker de TLD avec exclusion": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList.json",
+      "rules": 64348,
+      "bytes": 8319525
+    }
+  ],
+  "rules_emitted": 64348,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList.json",
+    "total": 679,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 635,
+      "styles": 40,
+      "html": 0,
+      "raw_js": 0,
+      "csp": 4
+    },
+    "sha256": "6af86a6499b81e757a27e9e8874d41114eb1fee808b2a3ad8223f17f4989c023"
+  }
+}

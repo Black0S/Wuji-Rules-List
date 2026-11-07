@@ -1,0 +1,58 @@
+{
+  "id": "urlhaus-online",
+  "source_file": "Online-Malicious-URL-Blocklist.txt",
+  "source_name": "Online Malicious URL Blocklist",
+  "source_sha256": "867a75697f7935c558e87ac896efe8c6cdf25cdebcf1f03ea62c38b9b7924136",
+  "source_group": "Sites malveillants",
+  "source_homepage": "https://gitlab.com/malware-filter/urlhaus-filter#malicious-url-blocklist",
+  "source_license": "https://gitlab.com/malware-filter/urlhaus-filter#license",
+  "source_title": "Online Malicious URL Blocklist (AdGuard)",
+  "source_version": "",
+  "source_url": "https://malware-filter.gitlab.io/urlhaus-filter/urlhaus-filter-ag-online.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-07T11:01:11+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 108981,
+  "rules_in": 108975,
+  "rules_out": 108976,
+  "coverage_pct": 100.0,
+  "breakdown": {
+    "block": 108975,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 0,
+    "css_selectors": 0,
+    "ignore_previous_rules": 0,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 0,
+  "skipped_reasons": {},
+  "notes": {
+    "modificateur sans effet sous WebKit: $all": 108975
+  },
+  "outputs": [
+    {
+      "file": "Webkit-Online-Malicious-URL-Blocklist.json",
+      "rules": 108976,
+      "bytes": 22245235
+    }
+  ],
+  "rules_emitted": 108976,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": null,
+    "total": 0,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 0,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": ""
+  }
+}

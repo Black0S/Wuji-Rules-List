@@ -1,0 +1,2256 @@
+{
+  "generated_at": "2026-11-07T11:01:11+00:00",
+  "generator": "convert_webkit.py",
+  "profile": "Safari 26+",
+  "schema": 2,
+  "note": "Les chemins de `files[].file` et de `extended_file` sont relatifs a la racine de ce catalogue. `rules_unique` compte les regles distinctes; `rules_emitted` les additionne par fichier et inclut donc les exceptions repliquees dans chaque tranche d'une liste decoupee.",
+  "totals": {
+    "lists": 67,
+    "lists_unpublished": 3,
+    "files": 67,
+    "rules_in": 730957,
+    "rules_unique": 638742,
+    "rules_emitted": 638742,
+    "skipped": 57922,
+    "extended": 63779
+  },
+  "lists": [
+    {
+      "id": "adguard-base",
+      "name": "AdGuard – Ads",
+      "source": "AdGuard-Ads.txt",
+      "source_sha256": "7dcf6fd04aea04d42b4288108d2218a260fc4f21049f0e30dff8ffc6e07f86a3",
+      "version": "2.5.2.75",
+      "group": "Publicités",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:04+00:00",
+      "rules_in": 55191,
+      "rules_unique": 42635,
+      "rules_emitted": 42635,
+      "skipped": 7730,
+      "coverage_pct": 84.21,
+      "capabilities": {
+        "network": 19690,
+        "cosmetic": 19386,
+        "procedural": 4221,
+        "styles": 0,
+        "scriptlets": 4368,
+        "redirects": 729
+      },
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Ads.json",
+          "rules": 42635,
+          "bytes": 7649010
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Ads.json",
+      "extended_sha256": "19d5cfa32a95aae00e2d95627ed3b47347ff1207ddb0641a86668d4b6930466f"
+    },
+    {
+      "id": "adguard-cookie-notices",
+      "name": "AdGuard – Cookie Notices",
+      "source": "AdGuard-Cookie-Notices.txt",
+      "source_sha256": "980908959061655efa276a6715694611c84b77ebfcbff173558b95ddfb8259e7",
+      "version": "2.0.98.84",
+      "group": "Nuisances",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:03+00:00",
+      "rules_in": 20689,
+      "rules_unique": 21460,
+      "rules_emitted": 21460,
+      "skipped": 4640,
+      "coverage_pct": 71.23,
+      "capabilities": {
+        "network": 1325,
+        "cosmetic": 18572,
+        "procedural": 4657,
+        "styles": 0,
+        "scriptlets": 1290,
+        "redirects": 13
+      },
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Cookie-Notices.json",
+          "rules": 21460,
+          "bytes": 3699955
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Cookie-Notices.json",
+      "extended_sha256": "a885b2fe8d4221656185a6f7ed57fa9fec98165ce22973622b3d18685d8dcabf"
+    },
+    {
+      "id": "adguard-mobile-ads",
+      "name": "AdGuard – Mobile Ads",
+      "source": "AdGuard-Mobile-Ads.txt",
+      "source_sha256": "4eda13fb6bfa0d724d9dafce902fd7d87f0954e6af990b365abc997077496680",
+      "version": "2.0.73.30",
+      "group": "Publicités",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:03+00:00",
+      "rules_in": 7988,
+      "rules_unique": 7264,
+      "rules_emitted": 7264,
+      "skipped": 679,
+      "coverage_pct": 90.9,
+      "capabilities": {
+        "network": 1401,
+        "cosmetic": 5710,
+        "procedural": 630,
+        "styles": 0,
+        "scriptlets": 95,
+        "redirects": 19
+      },
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Mobile-Ads.json",
+          "rules": 7264,
+          "bytes": 1289819
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Mobile-Ads.json",
+      "extended_sha256": "199669f5af68c93a19dd7da58d90d791d28be0c6c54e305dff07f18fe99c3628"
+    },
+    {
+      "id": "adguard-mobile-app-banners",
+      "name": "AdGuard – Mobile App Banners",
+      "source": "AdGuard-Mobile-App-Banners.txt",
+      "source_sha256": "714f550ededc8bbfec4d14dc2184d93f3c81de30a70cabfbef6c6f29843c69f2",
+      "version": "2.0.33.93",
+      "group": "Nuisances",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:03+00:00",
+      "rules_in": 5485,
+      "rules_unique": 4122,
+      "rules_emitted": 4122,
+      "skipped": 1022,
+      "coverage_pct": 81.24,
+      "capabilities": {
+        "network": 169,
+        "cosmetic": 3945,
+        "procedural": 780,
+        "styles": 0,
+        "scriptlets": 243,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Mobile-App-Banners.json",
+          "rules": 4122,
+          "bytes": 828736
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Mobile-App-Banners.json",
+      "extended_sha256": "7b6a1e6e717ea3f75683eb23f6ccfc91fa1b4e5255f2bc3a15241898da47cd1f"
+    },
+    {
+      "id": "adguard-other-annoyances",
+      "name": "AdGuard – Other Annoyances",
+      "source": "AdGuard-Other-Annoyances.txt",
+      "source_sha256": "a128c45f78b5d1d2909e90b89ed7219a6875e77e06cdc54608a014623ccdd2c1",
+      "version": "2.0.50.1",
+      "group": "Nuisances",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:03+00:00",
+      "rules_in": 8486,
+      "rules_unique": 5232,
+      "rules_emitted": 5232,
+      "skipped": 1966,
+      "coverage_pct": 77.0,
+      "capabilities": {
+        "network": 560,
+        "cosmetic": 4667,
+        "procedural": 1043,
+        "styles": 0,
+        "scriptlets": 920,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Other-Annoyances.json",
+          "rules": 5232,
+          "bytes": 1192538
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Other-Annoyances.json",
+      "extended_sha256": "ed0763570f0a0fa7234a8a1a8f40d2350d8d04386a265473bff09c208f2967c8"
+    },
+    {
+      "id": "adguard-popups",
+      "name": "AdGuard – Popup Overlays",
+      "source": "AdGuard-Popup-Overlays.txt",
+      "source_sha256": "01371eaa01887f9f0c84e917ad124ec15d884183b10661fd37915a8997f50815",
+      "version": "2.0.87.25",
+      "group": "Nuisances",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:04+00:00",
+      "rules_in": 22535,
+      "rules_unique": 19101,
+      "rules_emitted": 19101,
+      "skipped": 4519,
+      "coverage_pct": 78.86,
+      "capabilities": {
+        "network": 1582,
+        "cosmetic": 16876,
+        "procedural": 3670,
+        "styles": 0,
+        "scriptlets": 1076,
+        "redirects": 69
+      },
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Popup-Overlays.json",
+          "rules": 19101,
+          "bytes": 3435266
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Popup-Overlays.json",
+      "extended_sha256": "b9c8c08e18ee721b0eedef1548c0c45ce53c071e903a2615a4df8737ad7e304c"
+    },
+    {
+      "id": "adguard-social-media",
+      "name": "AdGuard – Social Widgets",
+      "source": "AdGuard-Social-Widgets.txt",
+      "source_sha256": "ae6f3e7f792b806691eaee91065841ce1086ced1f498ccd6e0d380d36e197b5e",
+      "version": "2.1.34.92",
+      "group": "Nuisances",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:03+00:00",
+      "rules_in": 16527,
+      "rules_unique": 17523,
+      "rules_emitted": 17523,
+      "skipped": 874,
+      "coverage_pct": 92.97,
+      "capabilities": {
+        "network": 478,
+        "cosmetic": 16893,
+        "procedural": 1133,
+        "styles": 0,
+        "scriptlets": 25,
+        "redirects": 1
+      },
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Social-Widgets.json",
+          "rules": 17523,
+          "bytes": 3072341
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Social-Widgets.json",
+      "extended_sha256": "1482709e5526ba369cc9c3f3746dc71d0df6984d9b23cf065b2cd8658ef19092"
+    },
+    {
+      "id": "adguard-widgets",
+      "name": "AdGuard – Widgets",
+      "source": "AdGuard-Widgets.txt",
+      "source_sha256": "05b7ae4608b4e400ed3697e996147cd5a7be8c530e94f5680bb9eb816b7c118f",
+      "version": "2.0.15.49",
+      "group": "Nuisances",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:04+00:00",
+      "rules_in": 2732,
+      "rules_unique": 2399,
+      "rules_emitted": 2399,
+      "skipped": 143,
+      "coverage_pct": 94.69,
+      "capabilities": {
+        "network": 815,
+        "cosmetic": 1548,
+        "procedural": 133,
+        "styles": 0,
+        "scriptlets": 9,
+        "redirects": 1
+      },
+      "files": [
+        {
+          "file": "Webkit-AdGuard-Widgets.json",
+          "rules": 2399,
+          "bytes": 392608
+        }
+      ],
+      "extended_file": "extended/Extended-AdGuard-Widgets.json",
+      "extended_sha256": "0d92112663648a307ab64fcf4dd3ebb5e6d5b9b804e2748ec940b23ea266aacf"
+    },
+    {
+      "id": "ublock-origin-block-outsider-intrusion-into-lan",
+      "name": "Block Outsider Intrusion into LAN",
+      "source": "Block-Outsider-Intrusion-into-LAN.txt",
+      "source_sha256": "328e63df0e233f18d61284f53a71a8c646076f66264a3957183b736ae7bcad13",
+      "version": "",
+      "group": "Confidentialité",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:04+00:00",
+      "rules_in": 94,
+      "rules_unique": 96,
+      "rules_emitted": 96,
+      "skipped": 5,
+      "coverage_pct": 101.06,
+      "capabilities": {
+        "network": 72,
+        "cosmetic": 0,
+        "procedural": 0,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-Block-Outsider-Intrusion-into-LAN.json",
+          "rules": 96,
+          "bytes": 18868
+        }
+      ],
+      "extended_file": null,
+      "extended_sha256": ""
+    },
+    {
+      "id": "ubo-dpollock-0",
+      "name": "Dan Pollock’s hosts file",
+      "source": "Dan-Pollock-s-hosts-file.txt",
+      "source_sha256": "307f186cfc3ca25ea4ed2569476cd7b6708615de4fb4a7564dbb42bb6fa29f95",
+      "version": "",
+      "group": "Polyvalentes",
+      "homepage": "https://someonewhocares.org/hosts/",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:04+00:00",
+      "rules_in": 12973,
+      "rules_unique": 12974,
+      "rules_emitted": 12974,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "capabilities": {
+        "network": 12973,
+        "cosmetic": 0,
+        "procedural": 0,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-Dan-Pollock-s-hosts-file.json",
+          "rules": 12974,
+          "bytes": 1487354
+        }
+      ],
+      "extended_file": null,
+      "extended_sha256": ""
+    },
+    {
+      "id": "ubo-fanboy-ai-suggestions",
+      "name": "EasyList – AI Widgets",
+      "source": "EasyList-AI-Widgets.txt",
+      "source_sha256": "ad4f0fb656b0dd2d09c05cdf4efd3eaa084dd274ac4282d2bc4692e428f1d9f6",
+      "version": "",
+      "group": "Nuisances",
+      "homepage": "https://github.com/easylist/easylist#fanboy-lists",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:04+00:00",
+      "rules_in": 291,
+      "rules_unique": 184,
+      "rules_emitted": 184,
+      "skipped": 32,
+      "coverage_pct": 89.0,
+      "capabilities": {
+        "network": 30,
+        "cosmetic": 153,
+        "procedural": 32,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-EasyList-AI-Widgets.json",
+          "rules": 184,
+          "bytes": 31913
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-AI-Widgets.json",
+      "extended_sha256": "937a1430b04939cff0f4cf46baf4ded6501c58ffe3d67916a067ae5acd6cc207"
+    },
+    {
+      "id": "ubo-easylist-chat",
+      "name": "EasyList – Chat Widgets",
+      "source": "EasyList-Chat-Widgets.txt",
+      "source_sha256": "877acdd15884b27e8f185f4cb4c1fb7aef07fa2f6dc799168b181905b2ce7910",
+      "version": "",
+      "group": "Nuisances",
+      "homepage": "https://github.com/easylist/easylist#fanboy-lists",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:04+00:00",
+      "rules_in": 288,
+      "rules_unique": 268,
+      "rules_emitted": 268,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "capabilities": {
+        "network": 251,
+        "cosmetic": 16,
+        "procedural": 0,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-EasyList-Chat-Widgets.json",
+          "rules": 268,
+          "bytes": 37046
+        }
+      ],
+      "extended_file": null,
+      "extended_sha256": ""
+    },
+    {
+      "id": "easylist-cookie",
+      "name": "EasyList – Cookie Notices",
+      "source": "EasyList-Cookie-Notices.txt",
+      "source_sha256": "9ff6b4fe2f8540fcd58756b3d6f3ea3286f2f72ec2174b820db103a90013d1bc",
+      "version": "",
+      "group": "Nuisances",
+      "homepage": "https://github.com/easylist/easylist#fanboy-lists",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:05+00:00",
+      "rules_in": 28190,
+      "rules_unique": 22444,
+      "rules_emitted": 22444,
+      "skipped": 2694,
+      "coverage_pct": 89.44,
+      "capabilities": {
+        "network": 1684,
+        "cosmetic": 20329,
+        "procedural": 502,
+        "styles": 2,
+        "scriptlets": 2468,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-EasyList-Cookie-Notices.json",
+          "rules": 22444,
+          "bytes": 3743789
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Cookie-Notices.json",
+      "extended_sha256": "56e0fcd53854c215dea9bac5a592eb8ceaaaf153ddb01b2794aa62aac230d13a"
+    },
+    {
+      "id": "ubo-easylist-newsletters",
+      "name": "EasyList – Newsletter Notices",
+      "source": "EasyList-Newsletter-Notices.txt",
+      "source_sha256": "f99959c090486c0a26e74df55921f4f29d2726e597bc8928196b27f8e71382b2",
+      "version": "",
+      "group": "Nuisances",
+      "homepage": "https://easylist.to/",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:04+00:00",
+      "rules_in": 6078,
+      "rules_unique": 6358,
+      "rules_emitted": 6358,
+      "skipped": 571,
+      "coverage_pct": 90.52,
+      "capabilities": {
+        "network": 182,
+        "cosmetic": 6166,
+        "procedural": 472,
+        "styles": 0,
+        "scriptlets": 103,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-EasyList-Newsletter-Notices.json",
+          "rules": 6358,
+          "bytes": 1025297
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Newsletter-Notices.json",
+      "extended_sha256": "9b0ba393b1543b3f900b9934dca6a3c7d29e51ff07c4ea9a01dd4b25923c4d27"
+    },
+    {
+      "id": "ubo-easylist-notifications",
+      "name": "EasyList – Notifications",
+      "source": "EasyList-Notifications.txt",
+      "source_sha256": "38597e7bfbfe6d489013376a47d65c4182bd42373fd95358c6f5de2169039ddb",
+      "version": "",
+      "group": "Nuisances",
+      "homepage": "https://easylist.to/",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:04+00:00",
+      "rules_in": 1688,
+      "rules_unique": 1786,
+      "rules_emitted": 1786,
+      "skipped": 151,
+      "coverage_pct": 90.34,
+      "capabilities": {
+        "network": 478,
+        "cosmetic": 1290,
+        "procedural": 96,
+        "styles": 0,
+        "scriptlets": 64,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-EasyList-Notifications.json",
+          "rules": 1786,
+          "bytes": 285780
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Notifications.json",
+      "extended_sha256": "5a1678ed8c9166c00398a2d2e20e57edf4c3b5ea9b847f39ac5d49104a6ff737"
+    },
+    {
+      "id": "ubo-easylist-annoyances",
+      "name": "EasyList – Other Annoyances",
+      "source": "EasyList-Other-Annoyances.txt",
+      "source_sha256": "56643cb40ce5d903886671538a5d1700d6e88fc9f12a4d0fe9dede67ebd0ea1e",
+      "version": "",
+      "group": "Nuisances",
+      "homepage": "https://github.com/easylist/easylist#fanboy-lists",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:04+00:00",
+      "rules_in": 4036,
+      "rules_unique": 3524,
+      "rules_emitted": 3524,
+      "skipped": 215,
+      "coverage_pct": 94.18,
+      "capabilities": {
+        "network": 737,
+        "cosmetic": 2767,
+        "procedural": 129,
+        "styles": 0,
+        "scriptlets": 102,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-EasyList-Other-Annoyances.json",
+          "rules": 3524,
+          "bytes": 539880
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Other-Annoyances.json",
+      "extended_sha256": "b828e0133e2fbc15245e50628e0743c61ed3b1d9571ae7e25ff5edc7825bb22f"
+    },
+    {
+      "id": "fanboy-social-blocking",
+      "name": "EasyList – Social Widgets",
+      "source": "EasyList-Social-Widgets.txt",
+      "source_sha256": "3db2ee434c0ec20aed7e8ad670e87bafc84ac67293fe6b8ff2e8b6e2aa6535e8",
+      "version": "",
+      "group": "Nuisances",
+      "homepage": "https://easylist.to/",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:05+00:00",
+      "rules_in": 13917,
+      "rules_unique": 7330,
+      "rules_emitted": 7330,
+      "skipped": 57,
+      "coverage_pct": 98.69,
+      "capabilities": {
+        "network": 586,
+        "cosmetic": 6661,
+        "procedural": 181,
+        "styles": 0,
+        "scriptlets": 1,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-EasyList-Social-Widgets.json",
+          "rules": 7330,
+          "bytes": 1263025
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList-Social-Widgets.json",
+      "extended_sha256": "a0093347c9e79f42b24cddd5bab6530cd365411e90130b503b46082d25dd0489"
+    },
+    {
+      "id": "easylist",
+      "name": "EasyList",
+      "source": "EasyList.txt",
+      "source_sha256": "3c4bd25eeb8f8985f5d5baadc7fcc5d9c704410336f3c2e0fe9a2b3d7e7f9b25",
+      "version": "",
+      "group": "Publicités",
+      "homepage": "https://easylist.to/",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:06+00:00",
+      "rules_in": 78381,
+      "rules_unique": 64348,
+      "rules_emitted": 64348,
+      "skipped": 363,
+      "coverage_pct": 99.11,
+      "capabilities": {
+        "network": 52851,
+        "cosmetic": 10747,
+        "procedural": 635,
+        "styles": 40,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-EasyList.json",
+          "rules": 64348,
+          "bytes": 8319525
+        }
+      ],
+      "extended_file": "extended/Extended-EasyList.json",
+      "extended_sha256": "6af86a6499b81e757a27e9e8874d41114eb1fee808b2a3ad8223f17f4989c023"
+    },
+    {
+      "id": "easyprivacy",
+      "name": "EasyPrivacy",
+      "source": "EasyPrivacy.txt",
+      "source_sha256": "309fd1196076100046ae0d13db4a2853614a74738c38bc7cc5b322879e850092",
+      "version": "",
+      "group": "Confidentialité",
+      "homepage": "https://easylist.to/",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:06+00:00",
+      "rules_in": 56465,
+      "rules_unique": 56427,
+      "rules_emitted": 56427,
+      "skipped": 37,
+      "coverage_pct": 99.93,
+      "capabilities": {
+        "network": 55573,
+        "cosmetic": 1,
+        "procedural": 4,
+        "styles": 0,
+        "scriptlets": 29,
+        "redirects": 30
+      },
+      "files": [
+        {
+          "file": "Webkit-EasyPrivacy.json",
+          "rules": 56427,
+          "bytes": 6684428
+        }
+      ],
+      "extended_file": "extended/Extended-EasyPrivacy.json",
+      "extended_sha256": "9783d3c7c51290fe38e4b4948259fb765966f043ebb2229a8743185cd369c3fa"
+    },
+    {
+      "id": "fanboy-anti-facebook",
+      "name": "Fanboy – Anti-Facebook",
+      "source": "Fanboy-Anti-Facebook.txt",
+      "source_sha256": "9adafa78d18a2d51395ca36d9a51343ffcd81cb12997a9dce3bc7d8db6df9112",
+      "version": "",
+      "group": "Nuisances",
+      "homepage": "https://github.com/ryanbr/fanboy-adblock/issues",
+      "license": "http://creativecommons.org/licenses/by/3.0/",
+      "converted_at": "2026-11-07T11:01:05+00:00",
+      "rules_in": 69,
+      "rules_unique": 70,
+      "rules_emitted": 70,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "capabilities": {
+        "network": 39,
+        "cosmetic": 1,
+        "procedural": 0,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-Fanboy-Anti-Facebook.json",
+          "rules": 70,
+          "bytes": 11465
+        }
+      ],
+      "extended_file": null,
+      "extended_sha256": ""
+    },
+    {
+      "id": "urlhaus-online",
+      "name": "Online Malicious URL Blocklist",
+      "source": "Online-Malicious-URL-Blocklist.txt",
+      "source_sha256": "867a75697f7935c558e87ac896efe8c6cdf25cdebcf1f03ea62c38b9b7924136",
+      "version": "",
+      "group": "Sites malveillants",
+      "homepage": "https://gitlab.com/malware-filter/urlhaus-filter#malicious-url-blocklist",
+      "license": "https://gitlab.com/malware-filter/urlhaus-filter#license",
+      "converted_at": "2026-11-07T11:01:11+00:00",
+      "rules_in": 108975,
+      "rules_unique": 108976,
+      "rules_emitted": 108976,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "capabilities": {
+        "network": 108975,
+        "cosmetic": 0,
+        "procedural": 0,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-Online-Malicious-URL-Blocklist.json",
+          "rules": 108976,
+          "bytes": 22245235
+        }
+      ],
+      "extended_file": null,
+      "extended_sha256": ""
+    },
+    {
+      "id": "peter-lowe-adservers",
+      "name": "Peter Lowe’s Ad and tracking server list",
+      "source": "Peter-Lowe-s-Ad-and-tracking-server-list.txt",
+      "source_sha256": "4f6a67ee8ff6ae63ccecb4e47bab684d53e50a463c34099df1128341a24a2a2d",
+      "version": "",
+      "group": "Polyvalentes",
+      "homepage": "https://pgl.yoyo.org/adservers/",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:06+00:00",
+      "rules_in": 3559,
+      "rules_unique": 3560,
+      "rules_emitted": 3560,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "capabilities": {
+        "network": 3559,
+        "cosmetic": 0,
+        "procedural": 0,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-Peter-Lowe-s-Ad-and-tracking-server-list.json",
+          "rules": 3560,
+          "bytes": 396627
+        }
+      ],
+      "extended_file": null,
+      "extended_sha256": ""
+    },
+    {
+      "id": "ubo-curben-phishing",
+      "name": "Phishing URL Blocklist",
+      "source": "Phishing-URL-Blocklist.txt",
+      "source_sha256": "670215f68475d019d74bbc6f85d255bc2e370308bfa2f0cba15a51e0e4f1f7b2",
+      "version": "",
+      "group": "Sites malveillants",
+      "homepage": "https://gitlab.com/malware-filter/phishing-filter#phishing-url-blocklist",
+      "license": "https://gitlab.com/malware-filter/phishing-filter#license",
+      "converted_at": "2026-11-07T11:01:07+00:00",
+      "rules_in": 46408,
+      "rules_unique": 46403,
+      "rules_emitted": 46403,
+      "skipped": 6,
+      "coverage_pct": 99.99,
+      "capabilities": {
+        "network": 46402,
+        "cosmetic": 0,
+        "procedural": 0,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-Phishing-URL-Blocklist.json",
+          "rules": 46403,
+          "bytes": 5573695
+        }
+      ],
+      "extended_file": null,
+      "extended_sha256": ""
+    },
+    {
+      "id": "ubo-alb-0",
+      "name": "🇦🇱al 🇽🇰xk: Adblock List for Albania",
+      "source": "al-xk-Adblock-List-for-Albania.txt",
+      "source_sha256": "9424cee466e41d66bacb5e3e1269e27b63a83100ad30f931d1a7b95052945c82",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://github.com/AnXh3L0/blocklist",
+      "license": "https://unlicense.org/",
+      "converted_at": "2026-11-07T11:01:06+00:00",
+      "rules_in": 305,
+      "rules_unique": 144,
+      "rules_emitted": 144,
+      "skipped": 11,
+      "coverage_pct": 96.39,
+      "capabilities": {
+        "network": 33,
+        "cosmetic": 108,
+        "procedural": 11,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-al-xk-Adblock-List-for-Albania.json",
+          "rules": 144,
+          "bytes": 26489
+        }
+      ],
+      "extended_file": "extended/Extended-al-xk-Adblock-List-for-Albania.json",
+      "extended_sha256": "7bca251daeef16501b652de668d3ffd2a5ab771dc8d0754cf7340cfe8b4adc38"
+    },
+    {
+      "id": "bulgarian",
+      "name": "🇧🇬bg: Bulgarian Adblock list",
+      "source": "bg-Bulgarian-Adblock-list.txt",
+      "source_sha256": "cd001c6f13207bd6292735efb385344ee682ba7965b40acc02a32bdbe08579a4",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://stanev.org/abp/",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:06+00:00",
+      "rules_in": 1150,
+      "rules_unique": 893,
+      "rules_emitted": 893,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "capabilities": {
+        "network": 687,
+        "cosmetic": 187,
+        "procedural": 0,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-bg-Bulgarian-Adblock-list.json",
+          "rules": 893,
+          "bytes": 129113
+        }
+      ],
+      "extended_file": null,
+      "extended_sha256": ""
+    },
+    {
+      "id": "adguard-chinese",
+      "name": "🇨🇳cn 🇹🇼tw: AdGuard Chinese (中文)",
+      "source": "cn-tw-AdGuard-Chinese.txt",
+      "source_sha256": "0989dc0155bdea6676d89a23de7901923845a4d0f09f0dcf5283195ee41c543a",
+      "version": "2.1.69.10",
+      "group": "Régions",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:07+00:00",
+      "rules_in": 20853,
+      "rules_unique": 16207,
+      "rules_emitted": 16207,
+      "skipped": 537,
+      "coverage_pct": 96.75,
+      "capabilities": {
+        "network": 11487,
+        "cosmetic": 3674,
+        "procedural": 494,
+        "styles": 0,
+        "scriptlets": 254,
+        "redirects": 49
+      },
+      "files": [
+        {
+          "file": "Webkit-cn-tw-AdGuard-Chinese.json",
+          "rules": 16207,
+          "bytes": 2184586
+        }
+      ],
+      "extended_file": "extended/Extended-cn-tw-AdGuard-Chinese.json",
+      "extended_sha256": "c50a1bde872aec7b88a64ce9d236c87c32a94c80500b568aa06261f1586041ea"
+    },
+    {
+      "id": "easylist-czech-and-slovak",
+      "name": "🇨🇿cz 🇸🇰sk: EasyList Czech and Slovak",
+      "source": "cz-sk-EasyList-Czech-and-Slovak.txt",
+      "source_sha256": "f0f4104cf54cb7e6cee7402c8bdde701e675d64cb7a1819be1d31a29f6205229",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://github.com/tomasko126/easylistczechandslovak",
+      "license": "CC-BY-SA v4.0",
+      "converted_at": "2026-11-07T11:01:07+00:00",
+      "rules_in": 731,
+      "rules_unique": 467,
+      "rules_emitted": 467,
+      "skipped": 103,
+      "coverage_pct": 84.27,
+      "capabilities": {
+        "network": 218,
+        "cosmetic": 216,
+        "procedural": 61,
+        "styles": 0,
+        "scriptlets": 47,
+        "redirects": 7
+      },
+      "files": [
+        {
+          "file": "Webkit-cz-sk-EasyList-Czech-and-Slovak.json",
+          "rules": 467,
+          "bytes": 68826
+        }
+      ],
+      "extended_file": "extended/Extended-cz-sk-EasyList-Czech-and-Slovak.json",
+      "extended_sha256": "e1cb3a05c094a70c00636258f220febf6dcedda791770ebd69ee185d1e864bdd"
+    },
+    {
+      "id": "easylist-germany",
+      "name": "🇩🇪de 🇨🇭ch 🇦🇹at: EasyList Germany",
+      "source": "de-ch-at-EasyList-Germany.txt",
+      "source_sha256": "94c69dc03d50df9b309e2e3cfce3346da3897d21d5544d55afa5eb25c5c425f4",
+      "version": "202611061749",
+      "group": "Régions",
+      "homepage": "https://forums.lanik.us/viewforum.php?f=90",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:07+00:00",
+      "rules_in": 6005,
+      "rules_unique": 5463,
+      "rules_emitted": 5463,
+      "skipped": 137,
+      "coverage_pct": 97.27,
+      "capabilities": {
+        "network": 2152,
+        "cosmetic": 3146,
+        "procedural": 172,
+        "styles": 2,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-de-ch-at-EasyList-Germany.json",
+          "rules": 5463,
+          "bytes": 877019
+        }
+      ],
+      "extended_file": "extended/Extended-de-ch-at-EasyList-Germany.json",
+      "extended_sha256": "adfa0bf072eee8ff15ea47387c538e1ed2dca1f07c074a4a753edff091a45016"
+    },
+    {
+      "id": "ubo-est-0",
+      "name": "🇪🇪ee: Eesti saitidele kohandatud filter",
+      "source": "ee-Eesti-saitidele-kohandatud-filter.txt",
+      "source_sha256": "3c66cad9e9cec0f998f04b602bbbcb79c3ecf5370fe656af08d67267e6ae9657",
+      "version": "20251113",
+      "group": "Régions",
+      "homepage": "https://github.com/sander85/uBO-et",
+      "license": "CC0 1.0 Universal http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "converted_at": "2026-11-07T11:01:07+00:00",
+      "rules_in": 459,
+      "rules_unique": 336,
+      "rules_emitted": 336,
+      "skipped": 18,
+      "coverage_pct": 96.08,
+      "capabilities": {
+        "network": 240,
+        "cosmetic": 76,
+        "procedural": 9,
+        "styles": 6,
+        "scriptlets": 1,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-ee-Eesti-saitidele-kohandatud-filter.json",
+          "rules": 336,
+          "bytes": 46910
+        }
+      ],
+      "extended_file": "extended/Extended-ee-Eesti-saitidele-kohandatud-filter.json",
+      "extended_sha256": "b5ce284c9456675eff8fdd8146d0074ea716cf768120d97ad07f09618df4f60e"
+    },
+    {
+      "id": "liste-ar",
+      "name": "🇪🇬eg 🇸🇦sa 🇲🇦ma 🇩🇿dz: Liste AR",
+      "source": "eg-sa-ma-dz-Liste-AR.txt",
+      "source_sha256": "3b39c2a04ea92fc95e6fb03929ce13235f81b5777cf71d0bcdfee60a4cedbb15",
+      "version": "202611071051",
+      "group": "Régions",
+      "homepage": "https://forums.lanik.us/viewforum.php?f=98",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:07+00:00",
+      "rules_in": 1601,
+      "rules_unique": 1325,
+      "rules_emitted": 1325,
+      "skipped": 6,
+      "coverage_pct": 99.56,
+      "capabilities": {
+        "network": 999,
+        "cosmetic": 296,
+        "procedural": 7,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-eg-sa-ma-dz-Liste-AR.json",
+          "rules": 1325,
+          "bytes": 185808
+        }
+      ],
+      "extended_file": "extended/Extended-eg-sa-ma-dz-Liste-AR.json",
+      "extended_sha256": "d4464da9b4d6d6a56e3481e318757f0781249438062af85658f8155fb11d8b57"
+    },
+    {
+      "id": "adguard-spanish-portuguese",
+      "name": "🇪🇸es 🇦🇷ar 🇧🇷br 🇵🇹pt: AdGuard Spanish/Portuguese",
+      "source": "es-ar-br-pt-AdGuard-Spanish-Portuguese.txt",
+      "source_sha256": "aaf81ef31d37c52ac45afc322579cd11e57123c40148f099cda51be6d1794d20",
+      "version": "2.0.36.40",
+      "group": "Régions",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:07+00:00",
+      "rules_in": 5717,
+      "rules_unique": 3706,
+      "rules_emitted": 3706,
+      "skipped": 823,
+      "coverage_pct": 83.79,
+      "capabilities": {
+        "network": 927,
+        "cosmetic": 2444,
+        "procedural": 391,
+        "styles": 0,
+        "scriptlets": 519,
+        "redirects": 71
+      },
+      "files": [
+        {
+          "file": "Webkit-es-ar-br-pt-AdGuard-Spanish-Portuguese.json",
+          "rules": 3706,
+          "bytes": 636431
+        }
+      ],
+      "extended_file": "extended/Extended-es-ar-br-pt-AdGuard-Spanish-Portuguese.json",
+      "extended_sha256": "0d8296ef5ec0ed7842e6a95ca7b8630332981654d0aae580efba36bf8d60b240"
+    },
+    {
+      "id": "easylist-spanish",
+      "name": "🇪🇸es 🇦🇷ar 🇲🇽mx 🇨🇴co: EasyList Spanish",
+      "source": "es-ar-mx-co-EasyList-Spanish.txt",
+      "source_sha256": "bdde0afb29dcc4394f94f1dde6fa163fab854084bbbddf82e33840f501842cdb",
+      "version": "202611071051",
+      "group": "Régions",
+      "homepage": "https://forums.lanik.us/viewforum.php?f=103",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:07+00:00",
+      "rules_in": 2648,
+      "rules_unique": 2656,
+      "rules_emitted": 2656,
+      "skipped": 30,
+      "coverage_pct": 99.09,
+      "capabilities": {
+        "network": 656,
+        "cosmetic": 1939,
+        "procedural": 42,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-es-ar-mx-co-EasyList-Spanish.json",
+          "rules": 2656,
+          "bytes": 436247
+        }
+      ],
+      "extended_file": "extended/Extended-es-ar-mx-co-EasyList-Spanish.json",
+      "extended_sha256": "ba9116472fc6bf31ccf1778fb234ddf556d9035b5becf11b171b53922a52421c"
+    },
+    {
+      "id": "ubo-fin-0",
+      "name": "🇫🇮fi: Adblock List for Finland",
+      "source": "fi-Adblock-List-for-Finland.txt",
+      "source_sha256": "8efa3ed3002d20eba02b23b8195f2fdd1c12ba9ee2ee6fd8e6ba800c1432826a",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://github.com/finnish-easylist-addition/finnish-easylist-addition",
+      "license": "https://unlicense.org/",
+      "converted_at": "2026-11-07T11:01:07+00:00",
+      "rules_in": 1212,
+      "rules_unique": 899,
+      "rules_emitted": 899,
+      "skipped": 141,
+      "coverage_pct": 87.71,
+      "capabilities": {
+        "network": 172,
+        "cosmetic": 697,
+        "procedural": 83,
+        "styles": 39,
+        "scriptlets": 18,
+        "redirects": 3
+      },
+      "files": [
+        {
+          "file": "Webkit-fi-Adblock-List-for-Finland.json",
+          "rules": 899,
+          "bytes": 173931
+        }
+      ],
+      "extended_file": "extended/Extended-fi-Adblock-List-for-Finland.json",
+      "extended_sha256": "018f049228541e1250638e7cdc3b06773fb01ae27ef3d7429d46c1a9be380869"
+    },
+    {
+      "id": "adguard-french",
+      "name": "🇫🇷fr 🇧🇪be 🇨🇦ca: AdGuard Français",
+      "source": "fr-be-ca-AdGuard-Francais.txt",
+      "source_sha256": "d383bfab4da20a24837c8d5c2a8a81a6b55d49129a0b84b8d4b6a571895b51e0",
+      "version": "2.0.58.14",
+      "group": "Régions",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 15966,
+      "rules_unique": 13189,
+      "rules_emitted": 13189,
+      "skipped": 538,
+      "coverage_pct": 95.48,
+      "capabilities": {
+        "network": 10556,
+        "cosmetic": 2098,
+        "procedural": 330,
+        "styles": 0,
+        "scriptlets": 168,
+        "redirects": 55
+      },
+      "files": [
+        {
+          "file": "Webkit-fr-be-ca-AdGuard-Francais.json",
+          "rules": 13189,
+          "bytes": 1784845
+        }
+      ],
+      "extended_file": "extended/Extended-fr-be-ca-AdGuard-Francais.json",
+      "extended_sha256": "98e22c1f341bb8ff6197468ceeb259657aa53028013fbfed128af949b3548eba"
+    },
+    {
+      "id": "ubo-grc-0",
+      "name": "🇬🇷gr 🇨🇾cy: Greek AdBlock Filter",
+      "source": "gr-cy-Greek-AdBlock-Filter.txt",
+      "source_sha256": "e415902d06c0a030c2a46afa8e3d304166b58101f3a39c2289827d0f55b01bad",
+      "version": "2026102600",
+      "group": "Régions",
+      "homepage": "https://github.com/kargig/greek-adblockplus-filter",
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "converted_at": "2026-11-07T11:01:07+00:00",
+      "rules_in": 1267,
+      "rules_unique": 680,
+      "rules_emitted": 680,
+      "skipped": 23,
+      "coverage_pct": 97.63,
+      "capabilities": {
+        "network": 456,
+        "cosmetic": 207,
+        "procedural": 23,
+        "styles": 3,
+        "scriptlets": 4,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-gr-cy-Greek-AdBlock-Filter.json",
+          "rules": 680,
+          "bytes": 112113
+        }
+      ],
+      "extended_file": "extended/Extended-gr-cy-Greek-AdBlock-Filter.json",
+      "extended_sha256": "ff78650b2a35f1b5acc68d307e00752746e173171113825ec71338657228d730"
+    },
+    {
+      "id": "ubo-hrv-0",
+      "name": "🇭🇷hr 🇷🇸rs: Dandelion Sprout's Serbo-Croatian filters",
+      "source": "hr-rs-Dandelion-Sprout-s-Serbo-Croatian-filters.txt",
+      "source_sha256": "77e64f742baf06ad9d192150b607b6a63c0d6f97a095ce5327056576940a45a8",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://github.com/DandelionSprout/adfilt#readme",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:07+00:00",
+      "rules_in": 437,
+      "rules_unique": 303,
+      "rules_emitted": 303,
+      "skipped": 13,
+      "coverage_pct": 96.8,
+      "capabilities": {
+        "network": 91,
+        "cosmetic": 207,
+        "procedural": 13,
+        "styles": 0,
+        "scriptlets": 1,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-hr-rs-Dandelion-Sprout-s-Serbo-Croatian-filters.json",
+          "rules": 303,
+          "bytes": 49444
+        }
+      ],
+      "extended_file": "extended/Extended-hr-rs-Dandelion-Sprout-s-Serbo-Croatian-filters.json",
+      "extended_sha256": "38be0df2a4b6bcaaa5ba8f2166662c9878df5aefafb69e124cac21e944bece8e"
+    },
+    {
+      "id": "ubo-hun-0",
+      "name": "🇭🇺hu: hufilter",
+      "source": "hu-hufilter.txt",
+      "source_sha256": "d4e7f022627de427ee88a073d934b73619b519ee3b357bcff6cdb157ef59e881",
+      "version": "202610250711",
+      "group": "Régions",
+      "homepage": "https://github.com/hufilter/hufilter",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 2017,
+      "rules_unique": 946,
+      "rules_emitted": 946,
+      "skipped": 140,
+      "coverage_pct": 92.81,
+      "capabilities": {
+        "network": 376,
+        "cosmetic": 553,
+        "procedural": 90,
+        "styles": 0,
+        "scriptlets": 54,
+        "redirects": 2
+      },
+      "files": [
+        {
+          "file": "Webkit-hu-hufilter.json",
+          "rules": 946,
+          "bytes": 168022
+        }
+      ],
+      "extended_file": "extended/Extended-hu-hufilter.json",
+      "extended_sha256": "947cb847563a60ff941abfcb049529d556cc324694555b6f52cfa411fb110770"
+    },
+    {
+      "id": "ubo-idn-0",
+      "name": "🇮🇩id 🇲🇾my: ABPindo",
+      "source": "id-my-ABPindo.txt",
+      "source_sha256": "03adb221ec595e7d8932e1a1b552dedc0ec8925233b4fa975b0f14d57ae6d481",
+      "version": "202611062234",
+      "group": "Régions",
+      "homepage": "https://github.com/ABPindo/indonesianadblockrules",
+      "license": "https://raw.githubusercontent.com/ABPindo/indonesianadblockrules/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 10255,
+      "rules_unique": 5473,
+      "rules_emitted": 5473,
+      "skipped": 89,
+      "coverage_pct": 99.02,
+      "capabilities": {
+        "network": 4299,
+        "cosmetic": 1155,
+        "procedural": 49,
+        "styles": 0,
+        "scriptlets": 45,
+        "redirects": 7
+      },
+      "files": [
+        {
+          "file": "Webkit-id-my-ABPindo.json",
+          "rules": 5473,
+          "bytes": 898752
+        }
+      ],
+      "extended_file": "extended/Extended-id-my-ABPindo.json",
+      "extended_sha256": "31f7eebeea04f402a0c4dc1eed462717184ffbdd67a8dbb9e12dc83212c443c0"
+    },
+    {
+      "id": "easylist-hebrew",
+      "name": "🇮🇱il: EasyList Hebrew",
+      "source": "il-EasyList-Hebrew.txt",
+      "source_sha256": "3bba889c3d5106cbe62863db4aba336e300b647a4e3d4fc92103b335baeb9a18",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://github.com/easylist/EasyListHebrew",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 1553,
+      "rules_unique": 952,
+      "rules_emitted": 952,
+      "skipped": 75,
+      "coverage_pct": 93.24,
+      "capabilities": {
+        "network": 329,
+        "cosmetic": 444,
+        "procedural": 44,
+        "styles": 0,
+        "scriptlets": 41,
+        "redirects": 31
+      },
+      "files": [
+        {
+          "file": "Webkit-il-EasyList-Hebrew.json",
+          "rules": 952,
+          "bytes": 198941
+        }
+      ],
+      "extended_file": "extended/Extended-il-EasyList-Hebrew.json",
+      "extended_sha256": "7b030271376e9817486f249eca15136b42ff31f854c76c50dbc671e7d4abe470"
+    },
+    {
+      "id": "indianlist",
+      "name": "🇮🇳in 🇱🇰lk 🇳🇵np: IndianList",
+      "source": "in-lk-np-IndianList.txt",
+      "source_sha256": "1c25850f663b3b37bb08918ba3e8f5187c02ec63385ef3998ef3b9860608d6d0",
+      "version": "202611071051",
+      "group": "Régions",
+      "homepage": "https://github.com/mediumkreation/IndianList",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 10658,
+      "rules_unique": 15342,
+      "rules_emitted": 15342,
+      "skipped": 187,
+      "coverage_pct": 98.18,
+      "capabilities": {
+        "network": 5329,
+        "cosmetic": 9930,
+        "procedural": 192,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-in-lk-np-IndianList.json",
+          "rules": 15342,
+          "bytes": 2365632
+        }
+      ],
+      "extended_file": "extended/Extended-in-lk-np-IndianList.json",
+      "extended_sha256": "9491687249407b83ee798cba2017514676f8ebfe036fbb5e2ec4983c5deef47e"
+    },
+    {
+      "id": "ubo-irn-0",
+      "name": "🇮🇷ir: PersianBlocker",
+      "source": "ir-PersianBlocker.txt",
+      "source_sha256": "872ae08de707fe3926ef797800c06e611c612d6addba80567286481a6101b5ba",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://github.com/MasterKia/PersianBlocker",
+      "license": "https://codeberg.org/KhodeKiaa/PersianBlocker/src/branch/main/LICENSE",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 2772,
+      "rules_unique": 1458,
+      "rules_emitted": 1458,
+      "skipped": 749,
+      "coverage_pct": 69.7,
+      "capabilities": {
+        "network": 909,
+        "cosmetic": 481,
+        "procedural": 574,
+        "styles": 0,
+        "scriptlets": 154,
+        "redirects": 5
+      },
+      "files": [
+        {
+          "file": "Webkit-ir-PersianBlocker.json",
+          "rules": 1458,
+          "bytes": 226205
+        }
+      ],
+      "extended_file": "extended/Extended-ir-PersianBlocker.json",
+      "extended_sha256": "60406aebf6750f581f372f8a4ad87a781d8e383706f27eb8f2bc5d086b568f74"
+    },
+    {
+      "id": "ubo-isl-0",
+      "name": "🇮🇸is: Icelandic ABP List",
+      "source": "is-Icelandic-ABP-List.txt",
+      "source_sha256": "28b1923afa62e4f3f89f7eee776a5075f251b5ed618abb656607294a50e40c6d",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://github.com/brave/adblock-lists/issues",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 83,
+      "rules_unique": 52,
+      "rules_emitted": 52,
+      "skipped": 1,
+      "coverage_pct": 98.8,
+      "capabilities": {
+        "network": 12,
+        "cosmetic": 39,
+        "procedural": 1,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-is-Icelandic-ABP-List.json",
+          "rules": 52,
+          "bytes": 7829
+        }
+      ],
+      "extended_file": "extended/Extended-is-Icelandic-ABP-List.json",
+      "extended_sha256": "97083d66d9a2126f9def1aa32f7bd326d18fbbfbb8e0b7a360800dc1d337e6d2"
+    },
+    {
+      "id": "easylist-italy",
+      "name": "🇮🇹it: EasyList Italy",
+      "source": "it-EasyList-Italy.txt",
+      "source_sha256": "84b85e1c5bb6b619e0469d1e75d95375ae10375750bc5360074c4dfc85e01683",
+      "version": "202611071051",
+      "group": "Régions",
+      "homepage": "https://forums.lanik.us/viewforum.php?f=96",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 4211,
+      "rules_unique": 4893,
+      "rules_emitted": 4893,
+      "skipped": 26,
+      "coverage_pct": 99.53,
+      "capabilities": {
+        "network": 1083,
+        "cosmetic": 3720,
+        "procedural": 35,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-it-EasyList-Italy.json",
+          "rules": 4893,
+          "bytes": 747628
+        }
+      ],
+      "extended_file": "extended/Extended-it-EasyList-Italy.json",
+      "extended_sha256": "0d97ced6f1dd690494bceab7e45ee71b0b52b1b8a4db9ae95e95a5fe191c7709"
+    },
+    {
+      "id": "adguard-japanese",
+      "name": "🇯🇵jp: AdGuard Japanese",
+      "source": "jp-AdGuard-Japanese.txt",
+      "source_sha256": "0710018331a1a18ffcc7e7b7aa53e23afde54d699c5b17cca4b7f579c7c6b795",
+      "version": "2.0.78.27",
+      "group": "Régions",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 12268,
+      "rules_unique": 10067,
+      "rules_emitted": 10067,
+      "skipped": 1266,
+      "coverage_pct": 88.63,
+      "capabilities": {
+        "network": 1948,
+        "cosmetic": 7777,
+        "procedural": 1125,
+        "styles": 0,
+        "scriptlets": 209,
+        "redirects": 50
+      },
+      "files": [
+        {
+          "file": "Webkit-jp-AdGuard-Japanese.json",
+          "rules": 10067,
+          "bytes": 1771265
+        }
+      ],
+      "extended_file": "extended/Extended-jp-AdGuard-Japanese.json",
+      "extended_sha256": "bcd7637396773f998e0f5443eb15131367732bea9fcac81ff8628061d918eaef"
+    },
+    {
+      "id": "easylist-lithuania",
+      "name": "🇱🇹lt: EasyList Lithuania",
+      "source": "lt-EasyList-Lithuania.txt",
+      "source_sha256": "d05b3e9e814e67a9d402d2c46172a87eb8c12d82b29790f7f5fe2a90b22ec9af",
+      "version": "17June2026v1",
+      "group": "Régions",
+      "homepage": "https://github.com/EasyList-Lithuania/easylist_lithuania",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 1170,
+      "rules_unique": 905,
+      "rules_emitted": 905,
+      "skipped": 23,
+      "coverage_pct": 98.03,
+      "capabilities": {
+        "network": 495,
+        "cosmetic": 349,
+        "procedural": 12,
+        "styles": 0,
+        "scriptlets": 11,
+        "redirects": 2
+      },
+      "files": [
+        {
+          "file": "Webkit-lt-EasyList-Lithuania.json",
+          "rules": 905,
+          "bytes": 138437
+        }
+      ],
+      "extended_file": "extended/Extended-lt-EasyList-Lithuania.json",
+      "extended_sha256": "78b0e0e0bc6d7a59e1ab183475a562922a7af9936e28fde8ae733733c8865b6b"
+    },
+    {
+      "id": "latvian",
+      "name": "🇱🇻lv: Latvian List",
+      "source": "lv-Latvian-List.txt",
+      "source_sha256": "976330ff32923dd0e23f48c07a878f946e6faa5be52c07922be5ca8c87a56021",
+      "version": "202605140759",
+      "group": "Régions",
+      "homepage": "https://github.com/Latvian-List/adblock-latvian",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 430,
+      "rules_unique": 286,
+      "rules_emitted": 286,
+      "skipped": 9,
+      "coverage_pct": 96.28,
+      "capabilities": {
+        "network": 181,
+        "cosmetic": 88,
+        "procedural": 11,
+        "styles": 0,
+        "scriptlets": 5,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-lv-Latvian-List.json",
+          "rules": 286,
+          "bytes": 42512
+        }
+      ],
+      "extended_file": "extended/Extended-lv-Latvian-List.json",
+      "extended_sha256": "200cf414006d7bb8c8c02d663897340918266211b0be3653b3b18c0b045c2951"
+    },
+    {
+      "id": "ubo-mkd-0",
+      "name": "🇲🇰mk: Macedonian adBlock Filters",
+      "source": "mk-Macedonian-adBlock-Filters.txt",
+      "source_sha256": "263d5a03b254fb04d7f395c0480f1a6c54e794804575d68b4be970f357a135dc",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://github.com/DeepSpaceHarbor/Macedonian-adBlock-Filters",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 809,
+      "rules_unique": 456,
+      "rules_emitted": 456,
+      "skipped": 2,
+      "coverage_pct": 99.63,
+      "capabilities": {
+        "network": 299,
+        "cosmetic": 156,
+        "procedural": 1,
+        "styles": 2,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-mk-Macedonian-adBlock-Filters.json",
+          "rules": 456,
+          "bytes": 104509
+        }
+      ],
+      "extended_file": "extended/Extended-mk-Macedonian-adBlock-Filters.json",
+      "extended_sha256": "107697aeb1453036aeaf20b16a2234f2382d5e518550416cf621ccf6ca3a4e61"
+    },
+    {
+      "id": "adguard-dutch",
+      "name": "🇳🇱nl 🇧🇪be: AdGuard Dutch",
+      "source": "nl-be-AdGuard-Dutch.txt",
+      "source_sha256": "e6909b3b24565b51caf15d607d67e10794a8f2f0c067f4e697859874680ac9bb",
+      "version": "2.0.9.51",
+      "group": "Régions",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 1967,
+      "rules_unique": 1844,
+      "rules_emitted": 1844,
+      "skipped": 87,
+      "coverage_pct": 92.78,
+      "capabilities": {
+        "network": 523,
+        "cosmetic": 1263,
+        "procedural": 90,
+        "styles": 0,
+        "scriptlets": 28,
+        "redirects": 7
+      },
+      "files": [
+        {
+          "file": "Webkit-nl-be-AdGuard-Dutch.json",
+          "rules": 1844,
+          "bytes": 288141
+        }
+      ],
+      "extended_file": "extended/Extended-nl-be-AdGuard-Dutch.json",
+      "extended_sha256": "f71a35ece36b100f3dda800cbadac637f5be168c1f36bf2b8ec9af29607640ba"
+    },
+    {
+      "id": "ubo-nor-0",
+      "name": "🇳🇴no 🇩🇰dk 🇮🇸is: Dandelion Sprouts nordiske filtre",
+      "source": "no-dk-is-Dandelion-Sprouts-nordiske-filtre.txt",
+      "source_sha256": "7dd8a34325353ae6f9b078641c8e9df480aeb255af62740a4572d065fb3bdc08",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://github.com/DandelionSprout/adfilt",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 3025,
+      "rules_unique": 1928,
+      "rules_emitted": 1928,
+      "skipped": 214,
+      "coverage_pct": 92.2,
+      "capabilities": {
+        "network": 947,
+        "cosmetic": 914,
+        "procedural": 157,
+        "styles": 0,
+        "scriptlets": 34,
+        "redirects": 10
+      },
+      "files": [
+        {
+          "file": "Webkit-no-dk-is-Dandelion-Sprouts-nordiske-filtre.json",
+          "rules": 1928,
+          "bytes": 337235
+        }
+      ],
+      "extended_file": "extended/Extended-no-dk-is-Dandelion-Sprouts-nordiske-filtre.json",
+      "extended_sha256": "1a7826b496fe6c50a8225d41f08d58de8756cd6bb8ee8b261a77057c98d768ef"
+    },
+    {
+      "id": "ubo-pol-3",
+      "name": "🇵🇱pl: CERT.PL's Warning List",
+      "source": "pl-CERT-PL-s-Warning-List.txt",
+      "source_sha256": "c98cb348ad1f2150dc31c16e4d180773e1b0add19c92ef293f340c1dce1e168a",
+      "version": "202611071100",
+      "group": "Régions",
+      "homepage": "https://cert.pl/lista-ostrzezen/",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:09+00:00",
+      "rules_in": 19749,
+      "rules_unique": 19750,
+      "rules_emitted": 19750,
+      "skipped": 0,
+      "coverage_pct": 100.0,
+      "capabilities": {
+        "network": 19749,
+        "cosmetic": 0,
+        "procedural": 0,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-pl-CERT-PL-s-Warning-List.json",
+          "rules": 19750,
+          "bytes": 1559351
+        }
+      ],
+      "extended_file": null,
+      "extended_sha256": ""
+    },
+    {
+      "id": "ubo-pol-0",
+      "name": "🇵🇱pl: Oficjalne Polskie Filtry do uBlocka Origin",
+      "source": "pl-Oficjalne-Polskie-Filtry-do-uBlocka-Origin.txt",
+      "source_sha256": "d5e9df8a520560dc343570fae9500720c594a2fd510afaa49457b326254795f7",
+      "version": "20261012001",
+      "group": "Régions",
+      "homepage": "https://github.com/MajkiIT/polish-ads-filter",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "converted_at": "2026-11-07T11:01:08+00:00",
+      "rules_in": 6112,
+      "rules_unique": 5761,
+      "rules_emitted": 5761,
+      "skipped": 371,
+      "coverage_pct": 93.77,
+      "capabilities": {
+        "network": 1015,
+        "cosmetic": 4586,
+        "procedural": 345,
+        "styles": 20,
+        "scriptlets": 7,
+        "redirects": 3
+      },
+      "files": [
+        {
+          "file": "Webkit-pl-Oficjalne-Polskie-Filtry-do-uBlocka-Origin.json",
+          "rules": 5761,
+          "bytes": 1046064
+        }
+      ],
+      "extended_file": "extended/Extended-pl-Oficjalne-Polskie-Filtry-do-uBlocka-Origin.json",
+      "extended_sha256": "91c1f649ec70958df0ec6057bf81fe13b72e1eba2c270630d41776973f34d975"
+    },
+    {
+      "id": "ubo-rou-1",
+      "name": "🇷🇴ro 🇲🇩md: Romanian Ad (ROad) Block List Light",
+      "source": "ro-md-Romanian-Ad-ROad-Block-List-Light.txt",
+      "source_sha256": "424add65c7883e4ccb3484baeef8e5fa712102c5854c459b48617d5a103de25c",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://github.com/tcptomato/ROad-Block",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:09+00:00",
+      "rules_in": 1986,
+      "rules_unique": 1153,
+      "rules_emitted": 1153,
+      "skipped": 138,
+      "coverage_pct": 92.9,
+      "capabilities": {
+        "network": 514,
+        "cosmetic": 571,
+        "procedural": 99,
+        "styles": 0,
+        "scriptlets": 38,
+        "redirects": 9
+      },
+      "files": [
+        {
+          "file": "Webkit-ro-md-Romanian-Ad-ROad-Block-List-Light.json",
+          "rules": 1153,
+          "bytes": 200970
+        }
+      ],
+      "extended_file": "extended/Extended-ro-md-Romanian-Ad-ROad-Block-List-Light.json",
+      "extended_sha256": "2e9c0301f77a857290f419667745c7c76011b31e9d3f7ea6acd24533a7a8001f"
+    },
+    {
+      "id": "ubo-rus-1",
+      "name": "🇷🇺ru 🇺🇦ua 🇺🇿uz 🇰🇿kz: RU AdList: Counters",
+      "source": "ru-ua-uz-kz-RU-AdList-Counters.txt",
+      "source_sha256": "d4844885ef09a69fc5ceca312926d082585fcf826ff321f25b937ee7cad602e5",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://forums.lanik.us/viewforum.php?f=102",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:09+00:00",
+      "rules_in": 1827,
+      "rules_unique": 1223,
+      "rules_emitted": 1223,
+      "skipped": 595,
+      "coverage_pct": 67.27,
+      "capabilities": {
+        "network": 1096,
+        "cosmetic": 58,
+        "procedural": 174,
+        "styles": 0,
+        "scriptlets": 36,
+        "redirects": 4
+      },
+      "files": [
+        {
+          "file": "Webkit-ru-ua-uz-kz-RU-AdList-Counters.json",
+          "rules": 1223,
+          "bytes": 164090
+        }
+      ],
+      "extended_file": "extended/Extended-ru-ua-uz-kz-RU-AdList-Counters.json",
+      "extended_sha256": "eb16f4b93920b66e46bf9bd595a81ac8483430c846cbcfcff7b01bcbb35dd4dd"
+    },
+    {
+      "id": "ru-adlist-for-ubo",
+      "name": "🇷🇺ru 🇺🇦ua 🇺🇿uz 🇰🇿kz: RU AdList",
+      "source": "ru-ua-uz-kz-RU-AdList.txt",
+      "source_sha256": "acac55ed3a21dd492a02323150572407af4d233c21b04733bba22df5a6179f00",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://forums.lanik.us/viewforum.php?f=102",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:09+00:00",
+      "rules_in": 32302,
+      "rules_unique": 28296,
+      "rules_emitted": 28296,
+      "skipped": 2783,
+      "coverage_pct": 90.82,
+      "capabilities": {
+        "network": 17345,
+        "cosmetic": 9960,
+        "procedural": 2295,
+        "styles": 0,
+        "scriptlets": 564,
+        "redirects": 21
+      },
+      "files": [
+        {
+          "file": "Webkit-ru-ua-uz-kz-RU-AdList.json",
+          "rules": 28296,
+          "bytes": 4163756
+        }
+      ],
+      "extended_file": "extended/Extended-ru-ua-uz-kz-RU-AdList.json",
+      "extended_sha256": "3c9ef5ed04e076847ae0168185279932edeb362de0b723918132b7675f8e8735"
+    },
+    {
+      "id": "ubo-swe-1",
+      "name": "🇸🇪se: Frellwit's Swedish Filter",
+      "source": "se-Frellwit-s-Swedish-Filter.txt",
+      "source_sha256": "8f832ae30c729a9f09653533e392930383e4cd8b47f2f30c421c9a1f8c0543dc",
+      "version": "",
+      "group": "Régions",
+      "homepage": "https://github.com/lassekongo83/Frellwits-filter-lists",
+      "license": "GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:09+00:00",
+      "rules_in": 3790,
+      "rules_unique": 3799,
+      "rules_emitted": 3799,
+      "skipped": 458,
+      "coverage_pct": 87.73,
+      "capabilities": {
+        "network": 1744,
+        "cosmetic": 2031,
+        "procedural": 351,
+        "styles": 0,
+        "scriptlets": 90,
+        "redirects": 14
+      },
+      "files": [
+        {
+          "file": "Webkit-se-Frellwit-s-Swedish-Filter.json",
+          "rules": 3799,
+          "bytes": 653943
+        }
+      ],
+      "extended_file": "extended/Extended-se-Frellwit-s-Swedish-Filter.json",
+      "extended_sha256": "0c93d075a4853233d2122fe03d83b1361eb978a4fa4e60187a2a1605da80659e"
+    },
+    {
+      "id": "ubo-svn-0",
+      "name": "🇸🇮si: Slovenian List",
+      "source": "si-Slovenian-List.txt",
+      "source_sha256": "371924043ec588e9aff7a66c68e30a7088897208bc390295afb2c61a45e8de95",
+      "version": "141",
+      "group": "Régions",
+      "homepage": "https://github.com/betterwebleon/slovenian-list",
+      "license": "",
+      "converted_at": "2026-11-07T11:01:09+00:00",
+      "rules_in": 506,
+      "rules_unique": 323,
+      "rules_emitted": 323,
+      "skipped": 3,
+      "coverage_pct": 99.41,
+      "capabilities": {
+        "network": 114,
+        "cosmetic": 193,
+        "procedural": 2,
+        "styles": 0,
+        "scriptlets": 0,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-si-Slovenian-List.json",
+          "rules": 323,
+          "bytes": 51033
+        }
+      ],
+      "extended_file": "extended/Extended-si-Slovenian-List.json",
+      "extended_sha256": "647a99e992168b22b32dfc45f9275605796eaf92fb43a740f1030127c99226fb"
+    },
+    {
+      "id": "ubo-tha-0",
+      "name": "🇹🇭th: EasyList Thailand",
+      "source": "th-EasyList-Thailand.txt",
+      "source_sha256": "8a093b5258300140f720a37b10e1a913d549523d74d9df6f49170fd209f6e50a",
+      "version": "202610192306",
+      "group": "Régions",
+      "homepage": "https://github.com/easylist-thailand/easylist-thailand",
+      "license": "https://github.com/easylist-thailand/easylist-thailand/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:09+00:00",
+      "rules_in": 1388,
+      "rules_unique": 994,
+      "rules_emitted": 994,
+      "skipped": 4,
+      "coverage_pct": 99.5,
+      "capabilities": {
+        "network": 776,
+        "cosmetic": 216,
+        "procedural": 3,
+        "styles": 0,
+        "scriptlets": 2,
+        "redirects": 2
+      },
+      "files": [
+        {
+          "file": "Webkit-th-EasyList-Thailand.json",
+          "rules": 994,
+          "bytes": 129503
+        }
+      ],
+      "extended_file": "extended/Extended-th-EasyList-Thailand.json",
+      "extended_sha256": "26331fe5ce0cd10743293cba35edf1b3719435ff8a5e855b7aca35ad9c271267"
+    },
+    {
+      "id": "adguard-turkish",
+      "name": "🇹🇷tr: AdGuard Turkish",
+      "source": "tr-AdGuard-Turkish.txt",
+      "source_sha256": "0202dfa358e11b94d04d7b8e867b54927ba5d5a970f5f333f0b63f2c6403ac09",
+      "version": "2.0.69.61",
+      "group": "Régions",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:09+00:00",
+      "rules_in": 6811,
+      "rules_unique": 6320,
+      "rules_emitted": 6320,
+      "skipped": 848,
+      "coverage_pct": 87.49,
+      "capabilities": {
+        "network": 1622,
+        "cosmetic": 4573,
+        "procedural": 545,
+        "styles": 0,
+        "scriptlets": 354,
+        "redirects": 37
+      },
+      "files": [
+        {
+          "file": "Webkit-tr-AdGuard-Turkish.json",
+          "rules": 6320,
+          "bytes": 1152254
+        }
+      ],
+      "extended_file": "extended/Extended-tr-AdGuard-Turkish.json",
+      "extended_sha256": "29d05cceb7611c49de67e9ed28412b009e06cf16b9cb01be11d43b7b02bd97db"
+    },
+    {
+      "id": "ublock-origin",
+      "name": "uBlock filters – Ads",
+      "source": "uBlock-filters-Ads.txt",
+      "source_sha256": "7863404676dcb67cef9fb5b40d0c56d9af606e433850d10df922099b988547ee",
+      "version": "",
+      "group": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:10+00:00",
+      "rules_in": 23539,
+      "rules_unique": 11547,
+      "rules_emitted": 11547,
+      "skipped": 11587,
+      "coverage_pct": 55.98,
+      "capabilities": {
+        "network": 5432,
+        "cosmetic": 4280,
+        "procedural": 1521,
+        "styles": 0,
+        "scriptlets": 9540,
+        "redirects": 1001
+      },
+      "files": [
+        {
+          "file": "Webkit-uBlock-filters-Ads.json",
+          "rules": 11547,
+          "bytes": 2288657
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-filters-Ads.json",
+      "extended_sha256": "2ad94192ca6329234c4001c0389c9e548df916572183343d971e803a0c877d65"
+    },
+    {
+      "id": "ublock-origin-annoyances",
+      "name": "uBlock filters – Annoyances",
+      "source": "uBlock-filters-Annoyances.txt",
+      "source_sha256": "05ce06a17140454e4489b69f7272f1a60132e0f7618b49dfae01e595f373e2d2",
+      "version": "",
+      "group": "Nuisances",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:10+00:00",
+      "rules_in": 3566,
+      "rules_unique": 713,
+      "rules_emitted": 713,
+      "skipped": 2815,
+      "coverage_pct": 20.39,
+      "capabilities": {
+        "network": 158,
+        "cosmetic": 454,
+        "procedural": 667,
+        "styles": 0,
+        "scriptlets": 2126,
+        "redirects": 46
+      },
+      "files": [
+        {
+          "file": "Webkit-uBlock-filters-Annoyances.json",
+          "rules": 713,
+          "bytes": 118890
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-filters-Annoyances.json",
+      "extended_sha256": "4108af5fa84c6e85374e03d0b61d83947fed1c0cf0092b5fe397e8539abf14e1"
+    },
+    {
+      "id": "ublock-origin-badware-risks",
+      "name": "uBlock filters – Badware risks",
+      "source": "uBlock-filters-Badware-risks.txt",
+      "source_sha256": "0f294d4c2ebbee99ff82aadc89091760f1478eef741b5ee6f855a4ecd58b4ee8",
+      "version": "",
+      "group": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:10+00:00",
+      "rules_in": 4872,
+      "rules_unique": 4650,
+      "rules_emitted": 4650,
+      "skipped": 346,
+      "coverage_pct": 92.73,
+      "capabilities": {
+        "network": 4412,
+        "cosmetic": 236,
+        "procedural": 15,
+        "styles": 0,
+        "scriptlets": 24,
+        "redirects": 1
+      },
+      "files": [
+        {
+          "file": "Webkit-uBlock-filters-Badware-risks.json",
+          "rules": 4650,
+          "bytes": 633014
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-filters-Badware-risks.json",
+      "extended_sha256": "a631aa43bb74ff673811d85971eeab505c814249e079f831c9f8f1057046768f"
+    },
+    {
+      "id": "ublock-origin-cookie-notices",
+      "name": "uBlock filters – Cookie Notices",
+      "source": "uBlock-filters-Cookie-Notices.txt",
+      "source_sha256": "ff326a654e93b0bb380fac38d702867ac58190d99064009bc868a158cc8f47c3",
+      "version": "",
+      "group": "Nuisances",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:10+00:00",
+      "rules_in": 2384,
+      "rules_unique": 263,
+      "rules_emitted": 263,
+      "skipped": 2216,
+      "coverage_pct": 6.5,
+      "capabilities": {
+        "network": 25,
+        "cosmetic": 202,
+        "procedural": 62,
+        "styles": 0,
+        "scriptlets": 2165,
+        "redirects": 0
+      },
+      "files": [
+        {
+          "file": "Webkit-uBlock-filters-Cookie-Notices.json",
+          "rules": 263,
+          "bytes": 47030
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-filters-Cookie-Notices.json",
+      "extended_sha256": "7dfb3d60664513913faa4238608f2e20aa65579b2efeaa735091bc2d5f841c74"
+    },
+    {
+      "id": "ublock-origin-privacy",
+      "name": "uBlock filters – Privacy",
+      "source": "uBlock-filters-Privacy.txt",
+      "source_sha256": "1eb6a72d865ffd549fed9c854793cd279c270e8013538bded22d574720aaba75",
+      "version": "",
+      "group": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:10+00:00",
+      "rules_in": 1834,
+      "rules_unique": 1005,
+      "rules_emitted": 1005,
+      "skipped": 832,
+      "coverage_pct": 54.85,
+      "capabilities": {
+        "network": 990,
+        "cosmetic": 12,
+        "procedural": 8,
+        "styles": 0,
+        "scriptlets": 331,
+        "redirects": 37
+      },
+      "files": [
+        {
+          "file": "Webkit-uBlock-filters-Privacy.json",
+          "rules": 1005,
+          "bytes": 126283
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-filters-Privacy.json",
+      "extended_sha256": "7c8350db518e83692a41ed2909d70ca16d12e4c6feb9bc434dfda3f642edcb8c"
+    },
+    {
+      "id": "ublock-origin-quick-fixes",
+      "name": "uBlock filters – Quick fixes",
+      "source": "uBlock-filters-Quick-fixes.txt",
+      "source_sha256": "1b7a32a2d82bddbb6548d5fcf036768157b1366c10a5e28be209bf3724a5bd83",
+      "version": "",
+      "group": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:10+00:00",
+      "rules_in": 405,
+      "rules_unique": 174,
+      "rules_emitted": 174,
+      "skipped": 224,
+      "coverage_pct": 52.1,
+      "capabilities": {
+        "network": 115,
+        "cosmetic": 21,
+        "procedural": 42,
+        "styles": 0,
+        "scriptlets": 163,
+        "redirects": 15
+      },
+      "files": [
+        {
+          "file": "Webkit-uBlock-filters-Quick-fixes.json",
+          "rules": 174,
+          "bytes": 38945
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-filters-Quick-fixes.json",
+      "extended_sha256": "f794d63a69be66463795d3ea376d01b8c65e29bf11b3f48e58974ac87378e27f"
+    },
+    {
+      "id": "ublock-origin-unbreak",
+      "name": "uBlock filters – Unbreak",
+      "source": "uBlock-filters-Unbreak.txt",
+      "source_sha256": "66e097cd151a90469120f3360e27cc6cc3a2258626e3b6f4857f8e8237c9d3be",
+      "version": "",
+      "group": "uBlock Origin",
+      "homepage": "https://github.com/uBlockOrigin/uAssets",
+      "license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:10+00:00",
+      "rules_in": 2551,
+      "rules_unique": 1636,
+      "rules_emitted": 1636,
+      "skipped": 751,
+      "coverage_pct": 65.07,
+      "capabilities": {
+        "network": 384,
+        "cosmetic": 61,
+        "procedural": 222,
+        "styles": 0,
+        "scriptlets": 307,
+        "redirects": 336
+      },
+      "files": [
+        {
+          "file": "Webkit-uBlock-filters-Unbreak.json",
+          "rules": 1636,
+          "bytes": 316481
+        }
+      ],
+      "extended_file": "extended/Extended-uBlock-filters-Unbreak.json",
+      "extended_sha256": "c0ac4d19fc5a1ce92c78c169fc82528f6afffbf37c14399a7ed00d76b1cf45b9"
+    },
+    {
+      "id": "adguard-ukrainian",
+      "name": "🇺🇦ua: AdGuard Ukrainian",
+      "source": "ua-AdGuard-Ukrainian.txt",
+      "source_sha256": "b895152d42166c1903f524f6707c367180d45cebf8693b899c2074ea32fc2b32",
+      "version": "2.0.9.55",
+      "group": "Régions",
+      "homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+      "license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "converted_at": "2026-11-07T11:01:10+00:00",
+      "rules_in": 5533,
+      "rules_unique": 4889,
+      "rules_emitted": 4889,
+      "skipped": 163,
+      "coverage_pct": 97.33,
+      "capabilities": {
+        "network": 3317,
+        "cosmetic": 1502,
+        "procedural": 129,
+        "styles": 0,
+        "scriptlets": 36,
+        "redirects": 18
+      },
+      "files": [
+        {
+          "file": "Webkit-ua-AdGuard-Ukrainian.json",
+          "rules": 4889,
+          "bytes": 710923
+        }
+      ],
+      "extended_file": "extended/Extended-ua-AdGuard-Ukrainian.json",
+      "extended_sha256": "a7cff2a0fffd3b0b14b1a47c30d45c0c327c2128dfbee92189371cb21f585e4a"
+    },
+    {
+      "id": "ubo-vie-1",
+      "name": "🇻🇳vn: ABPVN List",
+      "source": "vn-ABPVN-List.txt",
+      "source_sha256": "176a6e97798cab8262edc50036bd7a3f6a5259bda16916247c7c142cb9f2c849",
+      "version": "20261107172349772",
+      "group": "Régions",
+      "homepage": "https://abpvn.com/",
+      "license": "GPLv3 (https://github.com/abpvn/abpvn/blob/master/LICENSE)",
+      "converted_at": "2026-11-07T11:01:10+00:00",
+      "rules_in": 1188,
+      "rules_unique": 892,
+      "rules_emitted": 892,
+      "skipped": 112,
+      "coverage_pct": 89.14,
+      "capabilities": {
+        "network": 346,
+        "cosmetic": 488,
+        "procedural": 25,
+        "styles": 0,
+        "scriptlets": 92,
+        "redirects": 1
+      },
+      "files": [
+        {
+          "file": "Webkit-vn-ABPVN-List.json",
+          "rules": 892,
+          "bytes": 140483
+        }
+      ],
+      "extended_file": "extended/Extended-vn-ABPVN-List.json",
+      "extended_sha256": "70af0cdd3a3b89b9a5318ac8988ab3367e69d32ffea64c676b355472be581902"
+    }
+  ],
+  "unpublished": [
+    {
+      "id": "ubo-adguard-spyware-url",
+      "name": "AdGuard/uBO – URL Tracking Protection",
+      "source": "AdGuard-uBO-URL-Tracking-Protection.txt",
+      "rules_in": 2718,
+      "rules_unique": 3,
+      "reason": "rendement nul ou negligeable (3 regles pour 2718 entrees)"
+    },
+    {
+      "id": "ubo-kor-1",
+      "name": "🇰🇷kr: 한국어 (Korean)",
+      "source": "kr-Korean.txt",
+      "rules_in": 0,
+      "rules_unique": 0,
+      "reason": "rendement nul ou negligeable (0 regles pour 0 entrees)"
+    },
+    {
+      "id": "ubo-ublock-experimental",
+      "name": "uBlock filters – Experimental",
+      "source": "uBlock-filters-Experimental.txt",
+      "rules_in": 9,
+      "rules_unique": 0,
+      "reason": "rendement nul ou negligeable (0 regles pour 9 entrees)"
+    }
+  ]
+}
