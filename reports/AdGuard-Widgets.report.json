@@ -1,0 +1,69 @@
+{
+  "id": "adguard-widgets",
+  "source_file": "AdGuard-Widgets.txt",
+  "source_name": "AdGuard – Widgets",
+  "source_sha256": "e3358dde7be0835893e3cbbef7494711224d46d720757b1392759c811ee84239",
+  "source_group": "Nuisances",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Widgets filter",
+  "source_version": "2.0.15.54",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/22.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-14T11:25:35+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 3030,
+  "rules_in": 2736,
+  "rules_out": 2403,
+  "coverage_pct": 94.7,
+  "breakdown": {
+    "block": 817,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1550,
+    "css_selectors": 1739,
+    "ignore_previous_rules": 35,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 143,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 132,
+    "scriptlet ou filtrage HTML": 9,
+    "injection de style (non supportee)": 1,
+    "modificateur non supporte: $removeparam": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 4,
+    "modificateur sans effet sous WebKit: $important": 3,
+    "doublon fusionne": 2,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 1,
+    "$domain traduit en if-frame-url (Safari 26+)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Widgets.json",
+      "rules": 2403,
+      "bytes": 393205
+    }
+  ],
+  "rules_emitted": 2403,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Widgets.json",
+    "total": 144,
+    "counts": {
+      "scriptlets": 9,
+      "procedural": 133,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 1,
+      "removeparams": 1
+    },
+    "sha256": "2fe5b000aad06c9c4bbf7ee1ac9a190562de968870d15303354c34ef0e883ea3"
+  }
+}

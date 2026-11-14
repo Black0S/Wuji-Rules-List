@@ -1,0 +1,69 @@
+{
+  "id": "easylist-cookie",
+  "source_file": "EasyList-Cookie-Notices.txt",
+  "source_name": "EasyList – Cookie Notices",
+  "source_sha256": "4bf821f66974d79e3cd142f779603f528c0c5ecd01e122b7944163d92cb76d62",
+  "source_group": "Nuisances",
+  "source_homepage": "https://github.com/easylist/easylist#fanboy-lists",
+  "source_license": "",
+  "source_title": "EasyList – Cookie Notices",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-cookies.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-14T11:25:37+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 29136,
+  "rules_in": 28195,
+  "rules_out": 22403,
+  "coverage_pct": 89.44,
+  "breakdown": {
+    "block": 1685,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 20287,
+    "css_selectors": 23103,
+    "ignore_previous_rules": 428,
+    "generichide": 2,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 2695,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 2468,
+    "pseudo-classe CSS etendue": 164,
+    "selecteur CSS etendu (#?#)": 58,
+    "regle cosmetique entierement exceptee": 2,
+    "injection de style (non supportee)": 2,
+    "joker de TLD avec exclusion": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 28,
+    "$domain traduit en if-frame-url (Safari 26+)": 4,
+    "doublon fusionne": 2,
+    "vers l'annexe: joker de TLD avec exclusion": 1,
+    "modificateur sans effet sous WebKit: $important": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Cookie-Notices.json",
+      "rules": 22403,
+      "bytes": 3740679
+    }
+  ],
+  "rules_emitted": 22403,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Cookie-Notices.json",
+    "total": 2973,
+    "counts": {
+      "scriptlets": 2468,
+      "procedural": 503,
+      "styles": 2,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "56d21d72701e96769e4eefa237b5d9e91ad257cae83f82aefb5adeb828ec978e"
+  }
+}

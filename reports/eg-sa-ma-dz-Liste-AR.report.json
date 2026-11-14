@@ -1,0 +1,58 @@
+{
+  "id": "liste-ar",
+  "source_file": "eg-sa-ma-dz-Liste-AR.txt",
+  "source_name": "🇪🇬eg 🇸🇦sa 🇲🇦ma 🇩🇿dz: Liste AR",
+  "source_sha256": "d88b4336ef02d28ac5829e05971e09b45d8429a813e6d28bbd9ecb90a29dd84f",
+  "source_group": "Régions",
+  "source_homepage": "https://forums.lanik.us/viewforum.php?f=98",
+  "source_license": "",
+  "source_title": "Liste AR",
+  "source_version": "202611141112",
+  "source_url": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-14T11:25:39+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1667,
+  "rules_in": 1602,
+  "rules_out": 1326,
+  "coverage_pct": 99.56,
+  "breakdown": {
+    "block": 1000,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 296,
+    "css_selectors": 566,
+    "ignore_previous_rules": 28,
+    "generichide": 1,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 6,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 6
+  },
+  "notes": {},
+  "outputs": [
+    {
+      "file": "Webkit-eg-sa-ma-dz-Liste-AR.json",
+      "rules": 1326,
+      "bytes": 185955
+    }
+  ],
+  "rules_emitted": 1326,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-eg-sa-ma-dz-Liste-AR.json",
+    "total": 7,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 7,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "f308f27b5479ffb8d4ebb7c97984d8c21aa4234987bfe84f6151890c9cd09dd7"
+  }
+}

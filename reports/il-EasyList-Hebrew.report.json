@@ -1,0 +1,71 @@
+{
+  "id": "easylist-hebrew",
+  "source_file": "il-EasyList-Hebrew.txt",
+  "source_name": "🇮🇱il: EasyList Hebrew",
+  "source_sha256": "ee37743a9002d96d91ba32dea18383cfa8bff1539d9f6ef932e8e7110e60d6fc",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/easylist/EasyListHebrew",
+  "source_license": "",
+  "source_title": "EasyList Hebrew",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/easylist/EasyListHebrew/master/EasyListHebrew.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-14T11:25:40+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1854,
+  "rules_in": 1559,
+  "rules_out": 954,
+  "coverage_pct": 93.26,
+  "breakdown": {
+    "block": 329,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 445,
+    "css_selectors": 946,
+    "ignore_previous_rules": 158,
+    "generichide": 21,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 75,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 46,
+    "pseudo-classe CSS etendue": 12,
+    "assertion de regex (lookahead / lookbehind)": 10,
+    "directive $badfilter (retractation appliquee)": 3,
+    "selecteur CSS etendu (#?#)": 2,
+    "modificateur non supporte: $webrtc": 1,
+    "modificateur non supporte: $redirect-rule": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 30,
+    "modificateur sans effet sous WebKit: $important": 26,
+    "doublon fusionne": 10,
+    "alternation eclatee en 2 regles": 2,
+    "alternation eclatee en 4 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-il-EasyList-Hebrew.json",
+      "rules": 954,
+      "bytes": 199596
+    }
+  ],
+  "rules_emitted": 954,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-il-EasyList-Hebrew.json",
+    "total": 116,
+    "counts": {
+      "scriptlets": 41,
+      "procedural": 39,
+      "styles": 0,
+      "html": 5,
+      "raw_js": 0,
+      "redirects": 31
+    },
+    "sha256": "7b030271376e9817486f249eca15136b42ff31f854c76c50dbc671e7d4abe470"
+  }
+}
