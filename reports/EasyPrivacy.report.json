@@ -1,0 +1,71 @@
+{
+  "id": "easyprivacy",
+  "source_file": "EasyPrivacy.txt",
+  "source_name": "EasyPrivacy",
+  "source_sha256": "9455fefa33164d9a83a2344c3d53cac2a8120ab2f576e7a3d0e0fb5fd5b50d81",
+  "source_group": "Confidentialité",
+  "source_homepage": "https://easylist.to/",
+  "source_license": "",
+  "source_title": "EasyPrivacy",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easyprivacy.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-21T12:35:18+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 57174,
+  "rules_in": 56744,
+  "rules_out": 56700,
+  "coverage_pct": 99.92,
+  "breakdown": {
+    "block": 55844,
+    "block_document": 1,
+    "block_cookies": 0,
+    "css_display_none": 1,
+    "css_selectors": 2,
+    "ignore_previous_rules": 853,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 41,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 33,
+    "pseudo-classe CSS etendue": 4,
+    "modificateur non supporte: $csp": 2,
+    "modificateur inconnu: $rewrite": 1,
+    "modificateur non supporte: $redirect-rule": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 29,
+    "modificateur sans effet sous WebKit: $important": 8,
+    "doublon fusionne": 4,
+    "domaine ignore (joker ou regex dans $domain)": 2,
+    "$domain traduit en if-frame-url (Safari 26+)": 1,
+    "alternation eclatee en 2 regles": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyPrivacy.json",
+      "rules": 56700,
+      "bytes": 6714225
+    }
+  ],
+  "rules_emitted": 56700,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyPrivacy.json",
+    "total": 69,
+    "counts": {
+      "scriptlets": 33,
+      "procedural": 4,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "csp": 2,
+      "redirects": 30
+    },
+    "sha256": "6cd3af94906ece4128e6a7696ab2d9d747efd2bc2ff971fb87af8cc008a2719e"
+  }
+}

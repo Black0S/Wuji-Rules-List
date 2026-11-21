@@ -1,0 +1,77 @@
+{
+  "id": "ublock-origin-badware-risks",
+  "source_file": "uBlock-filters-Badware-risks.txt",
+  "source_name": "uBlock filters – Badware risks",
+  "source_sha256": "94882b18531128d0471d92aa4aa95e1d6ed37da5e50584471aeb16f6b8e64d29",
+  "source_group": "uBlock Origin",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+  "source_title": "uBlock₀ filters – Badware risks",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/badware.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-21T12:35:19+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 7030,
+  "rules_in": 4879,
+  "rules_out": 4663,
+  "coverage_pct": 93.09,
+  "breakdown": {
+    "block": 1555,
+    "block_document": 2882,
+    "block_cookies": 0,
+    "css_display_none": 224,
+    "css_selectors": 104,
+    "ignore_previous_rules": 1,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 341,
+  "skipped_reasons": {
+    "modificateur non supporte: $to": 251,
+    "modificateur non supporte: $ipaddress": 29,
+    "scriptlet ou filtrage HTML": 23,
+    "pseudo-classe CSS etendue": 14,
+    "modificateur non supporte: $reason": 9,
+    "regex hors du sous-ensemble WebKit": 5,
+    "modificateur non supporte: $strict1p": 4,
+    "modificateur non supporte: $strict3p": 2,
+    "repetition trop longue une fois developpee": 1,
+    "accolade litterale (refusee par le parseur WebKit)": 1,
+    "modificateur non supporte: $header": 1,
+    "assertion de regex (lookahead / lookbehind)": 1
+  },
+  "notes": {
+    "modificateur sans effet sous WebKit: $all": 1297,
+    "doublon fusionne": 8,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 1,
+    "alternation eclatee en 4 regles": 1,
+    "alternation eclatee en 10 regles": 1,
+    "selecteur generique couteux deplace vers l'annexe": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-filters-Badware-risks.json",
+      "rules": 4663,
+      "bytes": 633959
+    }
+  ],
+  "rules_emitted": 4663,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-uBlock-filters-Badware-risks.json",
+    "total": 39,
+    "counts": {
+      "scriptlets": 23,
+      "procedural": 15,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 1
+    },
+    "sha256": "fcc744da18c283b8019db97c72fb0a8e59077207f8d9ceddee27fe499ef6dcdb"
+  }
+}

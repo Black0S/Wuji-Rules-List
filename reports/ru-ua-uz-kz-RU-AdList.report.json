@@ -1,0 +1,87 @@
+{
+  "id": "ru-adlist-for-ubo",
+  "source_file": "ru-ua-uz-kz-RU-AdList.txt",
+  "source_name": "🇷🇺ru 🇺🇦ua 🇺🇿uz 🇰🇿kz: RU AdList",
+  "source_sha256": "3e95f1b9b20e769f95e6fefce48c59266238b6fcaa26a96b9914e14218b3ac9f",
+  "source_group": "Régions",
+  "source_homepage": "https://forums.lanik.us/viewforum.php?f=102",
+  "source_license": "",
+  "source_title": "RU AdList for uBO only",
+  "source_version": "",
+  "source_url": "https://raw.githubusercontent.com/easylist/ruadlist/master/RuAdList-uBO.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-21T12:35:20+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 33360,
+  "rules_in": 32343,
+  "rules_out": 28317,
+  "coverage_pct": 90.8,
+  "breakdown": {
+    "block": 17356,
+    "block_document": 2,
+    "block_cookies": 0,
+    "css_display_none": 9969,
+    "css_selectors": 11020,
+    "ignore_previous_rules": 833,
+    "generichide": 156,
+    "specifichide_domains": 2,
+    "urlblock": 0
+  },
+  "skipped_total": 2794,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 1088,
+    "selecteur CSS etendu (#?#)": 998,
+    "scriptlet ou filtrage HTML": 563,
+    "modificateur non supporte: $csp": 63,
+    "inclusions et exclusions de domaine": 32,
+    "modificateur non supporte: $removeparam": 25,
+    "directive $badfilter (retractation appliquee)": 7,
+    "retiree par $badfilter (retractation amont)": 6,
+    "regle cosmetique entierement exceptee": 4,
+    "$domain melange inclusions et exclusions": 3,
+    "accolade litterale (refusee par le parseur WebKit)": 1,
+    "assertion de regex (lookahead / lookbehind)": 1,
+    "modificateur non supporte: $reason": 1,
+    "modificateur inconnu: $responseheader": 1,
+    "modificateur non supporte: $empty": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 162,
+    "vers l'annexe: inclusions et exclusions de domaine": 32,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 21,
+    "modificateur sans effet sous WebKit: $important": 9,
+    "doublon fusionne": 7,
+    "selecteur generique couteux deplace vers l'annexe": 4,
+    "alternation eclatee en 3 regles": 2,
+    "$specifichide sur un chemin: non exprimable, ignore": 2,
+    "alternation eclatee en 8 regles": 1,
+    "$domain abandonne (une seule condition par trigger)": 1,
+    "annexe: ##^responseheader() sans effet dans WebKit": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-ru-ua-uz-kz-RU-AdList.json",
+      "rules": 28317,
+      "bytes": 4167124
+    }
+  ],
+  "rules_emitted": 28317,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-ru-ua-uz-kz-RU-AdList.json",
+    "total": 2979,
+    "counts": {
+      "scriptlets": 564,
+      "procedural": 2306,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "csp": 63,
+      "removeparams": 25,
+      "redirects": 21
+    },
+    "sha256": "2785f60714392c4b041d56c0151070c21400690d913e322cdded190491ea0d7a"
+  }
+}

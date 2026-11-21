@@ -1,0 +1,75 @@
+{
+  "id": "adguard-french",
+  "source_file": "fr-be-ca-AdGuard-Francais.txt",
+  "source_name": "🇫🇷fr 🇧🇪be 🇨🇦ca: AdGuard Français",
+  "source_sha256": "d7c22721132caf557d82255ac36b70591afc97683abf07c927a21a93a7264673",
+  "source_group": "Régions",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard French filter",
+  "source_version": "2.0.58.31",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/16.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-21T12:35:18+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 17092,
+  "rules_in": 16112,
+  "rules_out": 13333,
+  "coverage_pct": 95.51,
+  "breakdown": {
+    "block": 10694,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 2104,
+    "css_selectors": 4160,
+    "ignore_previous_rules": 524,
+    "generichide": 10,
+    "specifichide_domains": 1,
+    "urlblock": 0
+  },
+  "skipped_total": 541,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 172,
+    "scriptlet ou filtrage HTML": 170,
+    "directive $badfilter (retractation appliquee)": 152,
+    "retiree par $badfilter (retractation amont)": 29,
+    "modificateur non supporte: $csp": 10,
+    "modificateur inconnu: $_": 3,
+    "regle cosmetique entierement exceptee": 3,
+    "modificateur non supporte: $redirect-rule": 1,
+    "modificateur non supporte: $removeparam": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 54,
+    "doublon fusionne": 25,
+    "modificateur sans effet sous WebKit: $important": 20,
+    "$domain traduit en if-frame-url (Safari 26+)": 10,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 10
+  },
+  "outputs": [
+    {
+      "file": "Webkit-fr-be-ca-AdGuard-Francais.json",
+      "rules": 13333,
+      "bytes": 1802164
+    }
+  ],
+  "rules_emitted": 13333,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-fr-be-ca-AdGuard-Francais.json",
+    "total": 566,
+    "counts": {
+      "scriptlets": 170,
+      "procedural": 330,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 55,
+      "removeparams": 1,
+      "csp": 10
+    },
+    "sha256": "583f2fdbcb70b266645278b926881b12c9d7de5d4bef3d32943ff9b3e9912498"
+  }
+}

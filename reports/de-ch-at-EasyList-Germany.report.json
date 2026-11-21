@@ -1,0 +1,70 @@
+{
+  "id": "easylist-germany",
+  "source_file": "de-ch-at-EasyList-Germany.txt",
+  "source_name": "🇩🇪de 🇨🇭ch 🇦🇹at: EasyList Germany",
+  "source_sha256": "606c5fd1797fa134f4b514160fb75161a861367d8eecc1b70d6d5566a50423d1",
+  "source_group": "Régions",
+  "source_homepage": "https://forums.lanik.us/viewforum.php?f=90",
+  "source_license": "",
+  "source_title": "EasyList Germany",
+  "source_version": "202611201704",
+  "source_url": "https://easylist.to/easylistgermany/easylistgermany.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-21T12:35:18+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 6101,
+  "rules_in": 6047,
+  "rules_out": 5466,
+  "coverage_pct": 97.21,
+  "breakdown": {
+    "block": 2151,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 3150,
+    "css_selectors": 3563,
+    "ignore_previous_rules": 129,
+    "generichide": 35,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 141,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 127,
+    "injection de style (non supportee)": 6,
+    "modificateur inconnu: $rewrite": 4,
+    "modificateur non supporte: $genericblock": 2,
+    "modificateur non supporte: $csp": 1,
+    "pseudo-classe CSS etendue": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 43,
+    "alternation eclatee en 8 regles": 1,
+    "alternation eclatee en 2 regles": 1,
+    "alternation eclatee en 10 regles": 1,
+    "doublon fusionne": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-de-ch-at-EasyList-Germany.json",
+      "rules": 5466,
+      "bytes": 879249
+    }
+  ],
+  "rules_emitted": 5466,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-de-ch-at-EasyList-Germany.json",
+    "total": 179,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 172,
+      "styles": 6,
+      "html": 0,
+      "raw_js": 0,
+      "csp": 1
+    },
+    "sha256": "8ad1767a80a6c06e6e27465b27948ac351619f813f5c3835f979dafd2d1c6620"
+  }
+}

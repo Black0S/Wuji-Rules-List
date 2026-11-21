@@ -1,0 +1,69 @@
+{
+  "id": "adguard-widgets",
+  "source_file": "AdGuard-Widgets.txt",
+  "source_name": "AdGuard – Widgets",
+  "source_sha256": "d359d24e4d35a849e537a4d44987b442485337484352a98773c1a0e2f2da1c9a",
+  "source_group": "Nuisances",
+  "source_homepage": "https://github.com/AdguardTeam/AdguardFilters#adguard-filters",
+  "source_license": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+  "source_title": "AdGuard Widgets filter",
+  "source_version": "2.0.15.64",
+  "source_url": "https://filters.adtidy.org/extension/ublock/filters/22.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-21T12:35:16+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 3039,
+  "rules_in": 2745,
+  "rules_out": 2410,
+  "coverage_pct": 94.72,
+  "breakdown": {
+    "block": 821,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 1553,
+    "css_selectors": 1744,
+    "ignore_previous_rules": 35,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 143,
+  "skipped_reasons": {
+    "pseudo-classe CSS etendue": 132,
+    "scriptlet ou filtrage HTML": 9,
+    "injection de style (non supportee)": 1,
+    "modificateur non supporte: $removeparam": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 4,
+    "modificateur sans effet sous WebKit: $important": 3,
+    "doublon fusionne": 2,
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 1,
+    "$domain traduit en if-frame-url (Safari 26+)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-AdGuard-Widgets.json",
+      "rules": 2410,
+      "bytes": 394242
+    }
+  ],
+  "rules_emitted": 2410,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-AdGuard-Widgets.json",
+    "total": 144,
+    "counts": {
+      "scriptlets": 9,
+      "procedural": 133,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "redirects": 1,
+      "removeparams": 1
+    },
+    "sha256": "564ef235d80285921b2a5035a700eacfa9ab047de66ddd1e28b82c368cfc7e3c"
+  }
+}

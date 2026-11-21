@@ -1,0 +1,64 @@
+{
+  "id": "ublock-origin-cookie-notices",
+  "source_file": "uBlock-filters-Cookie-Notices.txt",
+  "source_name": "uBlock filters – Cookie Notices",
+  "source_sha256": "64761b3bbb4aeb418d4334503db29f41dcb8c918c9f0360354797b0514dd41d3",
+  "source_group": "Nuisances",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+  "source_title": "uBlock filters – Cookie Notices",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/annoyances-cookies.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-21T12:35:19+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 5762,
+  "rules_in": 2381,
+  "rules_out": 264,
+  "coverage_pct": 6.55,
+  "breakdown": {
+    "block": 25,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 203,
+    "css_selectors": 96,
+    "ignore_previous_rules": 35,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 2212,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 2159,
+    "pseudo-classe CSS etendue": 51,
+    "directive $badfilter (retractation appliquee)": 2
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 8,
+    "modificateur sans effet sous WebKit: $important": 6,
+    "$domain traduit en if-frame-url (Safari 26+)": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-filters-Cookie-Notices.json",
+      "rules": 264,
+      "bytes": 47175
+    }
+  ],
+  "rules_emitted": 264,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-uBlock-filters-Cookie-Notices.json",
+    "total": 2223,
+    "counts": {
+      "scriptlets": 2160,
+      "procedural": 63,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "69f5527bc3a2b65690697821293fae2ba74436f0ee569a7aca74659959831995"
+  }
+}

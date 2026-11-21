@@ -1,0 +1,62 @@
+{
+  "id": "fanboy-social-blocking",
+  "source_file": "EasyList-Social-Widgets.txt",
+  "source_name": "EasyList – Social Widgets",
+  "source_sha256": "5d349ae3f6d0709a8596061a4f8bfea3ee2c26543f211784a641c61ca09bb411",
+  "source_group": "Nuisances",
+  "source_homepage": "https://easylist.to/",
+  "source_license": "",
+  "source_title": "EasyList – Social Widgets",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-social.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-21T12:35:17+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 14100,
+  "rules_in": 13943,
+  "rules_out": 7368,
+  "coverage_pct": 98.69,
+  "breakdown": {
+    "block": 586,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 6699,
+    "css_selectors": 13092,
+    "ignore_previous_rules": 71,
+    "generichide": 11,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 58,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 50,
+    "pseudo-classe CSS etendue": 7,
+    "scriptlet ou filtrage HTML": 1
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-Social-Widgets.json",
+      "rules": 7368,
+      "bytes": 1269144
+    }
+  ],
+  "rules_emitted": 7368,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-Social-Widgets.json",
+    "total": 183,
+    "counts": {
+      "scriptlets": 1,
+      "procedural": 182,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "280840a8f94811d201fe00c6c7f856c41bda9a90b829b6378560eeb0996dc290"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "ublock-origin-annoyances",
+  "source_file": "uBlock-filters-Annoyances.txt",
+  "source_name": "uBlock filters – Annoyances",
+  "source_sha256": "e950b275341e7e255f7977ba8b497ce02c9c5eb0552c57b68e4d58155c312ac3",
+  "source_group": "Nuisances",
+  "source_homepage": "https://github.com/uBlockOrigin/uAssets",
+  "source_license": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+  "source_title": "uBlock₀ filters – Annoyances",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/filters/annoyances.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-21T12:35:19+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 7811,
+  "rules_in": 3418,
+  "rules_out": 701,
+  "coverage_pct": 20.92,
+  "breakdown": {
+    "block": 152,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 450,
+    "css_selectors": 465,
+    "ignore_previous_rules": 24,
+    "generichide": 74,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 2679,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 2048,
+    "pseudo-classe CSS etendue": 582,
+    "modificateur non supporte: $redirect-rule": 24,
+    "modificateur non supporte: $csp": 7,
+    "modificateur non supporte: $uritransform": 5,
+    "modificateur non supporte: $urlskip": 3,
+    "modificateur non supporte: $replace": 3,
+    "modificateur non supporte: $removeparam": 2,
+    "modificateur non supporte: $strict1p": 1,
+    "selecteur CSS etendu (#?#)": 1,
+    "directive $badfilter (retractation appliquee)": 1,
+    "selecteur CSS etendu (#@?#)": 1,
+    "injection de style (non supportee)": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 23,
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 16,
+    "modificateur sans effet sous WebKit: $important": 2
+  },
+  "outputs": [
+    {
+      "file": "Webkit-uBlock-filters-Annoyances.json",
+      "rules": 701,
+      "bytes": 116811
+    }
+  ],
+  "rules_emitted": 701,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-uBlock-filters-Annoyances.json",
+    "total": 2716,
+    "counts": {
+      "scriptlets": 2020,
+      "procedural": 608,
+      "styles": 0,
+      "html": 29,
+      "raw_js": 0,
+      "csp": 7,
+      "urlskips": 3,
+      "redirects": 47,
+      "removeparams": 2
+    },
+    "sha256": "f27a022e3b6c2d76e98a9d9563672315bedca5ccd1c9cfb712a491d731bbf1ba"
+  }
+}

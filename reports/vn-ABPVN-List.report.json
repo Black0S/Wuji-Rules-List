@@ -1,0 +1,67 @@
+{
+  "id": "ubo-vie-1",
+  "source_file": "vn-ABPVN-List.txt",
+  "source_name": "🇻🇳vn: ABPVN List",
+  "source_sha256": "80623e958f4709f114e2b2731839a789033a7ecf72563384c8e80a9e947f864a",
+  "source_group": "Régions",
+  "source_homepage": "https://abpvn.com/",
+  "source_license": "GPLv3 (https://github.com/abpvn/abpvn/blob/master/LICENSE)",
+  "source_title": "ABPVN List | Ublock Origin",
+  "source_version": "20261121112416483",
+  "source_url": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_ublock.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-21T12:35:19+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 1218,
+  "rules_in": 1190,
+  "rules_out": 883,
+  "coverage_pct": 89.08,
+  "breakdown": {
+    "block": 344,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 482,
+    "css_selectors": 660,
+    "ignore_previous_rules": 31,
+    "generichide": 25,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 111,
+  "skipped_reasons": {
+    "scriptlet ou filtrage HTML": 91,
+    "pseudo-classe CSS etendue": 7,
+    "modificateur non supporte: $csp": 6,
+    "modificateur inconnu: $rewrite": 5,
+    "selecteur CSS etendu (#?#)": 1,
+    "regex hors du sous-ensemble WebKit": 1
+  },
+  "notes": {
+    "$redirect traduit en blocage (substitut rejoue par Wuji)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-vn-ABPVN-List.json",
+      "rules": 883,
+      "bytes": 139173
+    }
+  ],
+  "rules_emitted": 883,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-vn-ABPVN-List.json",
+    "total": 125,
+    "counts": {
+      "scriptlets": 91,
+      "procedural": 27,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0,
+      "csp": 6,
+      "redirects": 1
+    },
+    "sha256": "e6f735d0dac30929576759093190b911cc1c47c0021e763bd8baa065d3bb45e8"
+  }
+}

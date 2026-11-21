@@ -1,0 +1,60 @@
+{
+  "id": "ubo-fanboy-ai-suggestions",
+  "source_file": "EasyList-AI-Widgets.txt",
+  "source_name": "EasyList – AI Widgets",
+  "source_sha256": "8a8ce4a352b605f64e30351cdf38b86effa00e64dc0a7765065ef2da2369ef9b",
+  "source_group": "Nuisances",
+  "source_homepage": "https://github.com/easylist/easylist#fanboy-lists",
+  "source_license": "",
+  "source_title": "EasyList – Anti AI Suggestions",
+  "source_version": "",
+  "source_url": "https://ublockorigin.github.io/uAssets/thirdparties/easylist-ai.txt",
+  "format": "adblock",
+  "converted_at": "2026-11-21T12:35:16+00:00",
+  "profile": "Safari 26+",
+  "document_policy": "guard",
+  "lines_total": 315,
+  "rules_in": 296,
+  "rules_out": 188,
+  "coverage_pct": 89.19,
+  "breakdown": {
+    "block": 32,
+    "block_document": 0,
+    "block_cookies": 0,
+    "css_display_none": 155,
+    "css_selectors": 232,
+    "ignore_previous_rules": 0,
+    "generichide": 0,
+    "specifichide_domains": 0,
+    "urlblock": 0
+  },
+  "skipped_total": 32,
+  "skipped_reasons": {
+    "selecteur CSS etendu (#?#)": 32
+  },
+  "notes": {
+    "joker de TLD traduit en if-frame-url (Safari 26+)": 1
+  },
+  "outputs": [
+    {
+      "file": "Webkit-EasyList-AI-Widgets.json",
+      "rules": 188,
+      "bytes": 32600
+    }
+  ],
+  "rules_emitted": 188,
+  "published": true,
+  "unpublished_reason": null,
+  "extended": {
+    "file": "extended/Extended-EasyList-AI-Widgets.json",
+    "total": 32,
+    "counts": {
+      "scriptlets": 0,
+      "procedural": 32,
+      "styles": 0,
+      "html": 0,
+      "raw_js": 0
+    },
+    "sha256": "937a1430b04939cff0f4cf46baf4ded6501c58ffe3d67916a067ae5acd6cc207"
+  }
+}
